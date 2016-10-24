@@ -34,7 +34,8 @@ class Footer extends React.Component {
           </ul>
         </div>
         <div className='footer-buttons'>
-          <button className='btn-primary'>Sign Up Now</button>
+          <button className='btn footer-sign-up-button'>Sign Up Now</button>
+          <a className='app-store' href='#'></a>
         </div>
         </div>
       </div>

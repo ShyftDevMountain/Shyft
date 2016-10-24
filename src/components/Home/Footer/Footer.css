@@ -33,9 +33,32 @@
   display:flex;
 }
 
+.footer-buttons button {
+  width:160px;
+  height:48px;
+  margin-right: 55px;
+}
 
 .footer-title {
   font-weight: bold;
   font-size: 18px;
   padding-bottom: 5px;
+}
+
+.footer-sign-up-button {
+  margin-top:45px;
+  font-size:16px;
+  background-color:#cc0099;
+  border-color:#cc0099;
+  border-radius:10px;
+}
+
+.btn:hover {
+  color:#F3F3F5;
+}
+
+.app-store {
+  background-img:url('https://cdn.lyft.net/brochure/images/apple-store.c9dcada1.svg');
+  width:160px;
+  height:48px;
 }
