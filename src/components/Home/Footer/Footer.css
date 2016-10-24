@@ -1,0 +1,41 @@
+.footer {
+  background-color: #333447;
+  color:#F3F3F5;
+  line-height: 2.5;
+  font-size: 16px;
+}
+
+.footer ul {
+  list-style-type: none;
+  margin:4rem 0;
+}
+
+.footer a {
+  color: #F3F3F5;
+}
+
+.footer a:hover {
+  color: #b30086;
+  text-decoration: underline;
+}
+
+
+.footer-top {
+  display:flex;
+  justify-content: space-between;
+}
+
+.footer-links {
+  display:flex;
+}
+
+.footer-buttons {
+  display:flex;
+}
+
+
+.footer-title {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
