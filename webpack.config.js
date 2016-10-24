@@ -6,9 +6,9 @@ const paths = {
 };
 
 module.exports = {
-    entry: './src/app.jsx',
+    entry: './src/index.js',
     output: {
-        publicPath: '/public/',
+        publicPath: '/dist/',
         filename: 'bundle.js'
     },
     devTool: 'eval-source-map',
@@ -25,10 +25,10 @@ module.exports = {
                 loader: 'style!css'
             },
             {
-                test: /\.less/,
-                include: paths.app,
-                loader: 'style!css!less'
+                test: /\.(jpg|png)$/,
+                loader: 'file',
             }
+
         ]
     }
 };
