@@ -3,11 +3,20 @@
   color:#F3F3F5;
   line-height: 2.5;
   font-size: 16px;
+  width:100%;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+
 }
 
 .footer ul {
   list-style-type: none;
   margin:4rem 0;
+}
+
+.footer-top li {
+  margin-right: 40px;
 }
 
 .footer a {
@@ -29,24 +38,28 @@
   display:flex;
 }
 
-.footer-buttons {
-  display:flex;
-}
-
-.footer-buttons button {
-  width:160px;
-  height:48px;
-  margin-right: 55px;
-}
-
 .footer-title {
   font-weight: bold;
   font-size: 18px;
   padding-bottom: 5px;
 }
 
+.footer-buttons {
+  display:flex;
+  flex-direction: column;
+}
+
+.footer-buttons button {
+  width:160px;
+  height:48px;
+  margin-right:55px;
+  margin-top: 50px;
+  margin-bottom:10px;
+}
+
+
+
 .footer-sign-up-button {
-  margin-top:45px;
   font-size:16px;
   background-color:#cc0099;
   border-color:#cc0099;
@@ -57,8 +70,38 @@
   color:#F3F3F5;
 }
 
-.app-store {
-  background-img:url('https://cdn.lyft.net/brochure/images/apple-store.c9dcada1.svg');
+.footer-store img {
   width:160px;
   height:48px;
+  border-radius:10px;
+  margin-bottom: 10px;
+}
+
+.footer-icons {
+  display:flex;
+  justify-content: center;
+}
+
+.footer-icons ul {
+  display:flex;
+  flex-direction: row;
+  padding-bottom:40px;
+  border-bottom: 1px #F3F3F5 solid;
+}
+
+.logo-circle {
+  height:50px;
+  width:50px;
+  border: #F3F3F5 1.5px solid;
+  border-radius:100%;
+  margin-right:50px;
+}
+
+.footer-creds {
+  display:flex;
+  justify-content: center;
+}
+
+.footer-creds p {
+  margin-right: 17px;
 }
