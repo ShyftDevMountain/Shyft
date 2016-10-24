@@ -1,0 +1,56 @@
+@media (min-width: 768px){
+  .ridesInMinutes .col-md-4 {
+    width: 33.33333333%;
+  }
+}
+
+.ridesInMinutes {
+  font-size: 1.75rem;
+  margin-bottom: 6rem;
+}
+
+.ridesInMinutes h4 h3 h2 h1 {
+  margin-bottom: 1rem;
+}
+
+.ridesInMinutes p {
+  margin-bottom: 2rem;
+  font-weight: 100;
+}
+
+.ridesInMinutes .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ridesInMinutes img {
+  max-height: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro {
+  margin-bottom: 4rem;
+}
+
+.intro h4 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.works h2 {
+  font-size: 3.3rem;
+  margin-bottom: 0rem;
+  font-weight: bold;
+}
+
+.works h3 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-bottom: 2rem;
+}
+
+.steps p {
+  height: 7rem;
+  margin-bottom: 4rem;
+}
