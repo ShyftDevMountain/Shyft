@@ -4,7 +4,7 @@ import './FourWaysToRide.css';
 class FourWaysToRide extends React.Component {
   render () {
     return (
-      <div className='container-fluid' >
+      <div className='container-fluid contentforfourways' >
             <div className='container' >
                   <div className="row m-b-xl">
                         <div className="col-xs-12">
