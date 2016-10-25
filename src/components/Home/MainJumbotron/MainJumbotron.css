@@ -1,0 +1,98 @@
+.MainJumbotron-container {
+    background-image: url('../../../img/heroimg/whyilyft-1-windshield.db7c8d1d.jpg');
+    background-position: 80%;
+    background-size: cover;
+    height: 460px;
+    text-align: center;
+    transition: all .2s ease;
+}
+
+.MainJumbotron-title {
+    padding-top: 200px;
+    font-size: 3.75rem;
+    font-weight: bold;
+    text-shadow: 1px 2px 5px black;
+    color: #F3F3F5;
+    margin-bottom: 20px;
+}
+
+.MainJumbotron-btn {
+    font-size: 1.75rem;
+    padding: 12px 15px;
+    width: 80%;
+    transition: all .2s ease;
+}
+
+.MainJumbotron-btn:hover {
+    background: #ff00bf;
+    border-color: #ff00bf;
+}
+
+.MainJumbotron-btm-banner {
+    background-color: #ff00bf;
+    width: 100%;
+    height: auto;
+    color: #F3F3F5;
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 20px;
+    transition: all .2s ease;
+}
+
+.MainJumbotron-btm-banner-text {
+    display: block;
+    font-size: 2.75rem;
+    font-weight: 400;
+}
+
+.ride-with-lyft-btn {
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 8px 18px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 100;
+    vertical-align: super;
+    margin-left: 0px;
+    transition: all .2s ease;
+}
+
+.ride-with-lyft-btn:hover {
+    cursor: pointer;
+    background-color: #ff4dd2;
+}
+
+@media (min-width: 550px) {
+    .MainJumbotron-btn {
+        width: 290px;
+    }
+
+    .MainJumbotron-title {
+        font-size: 5.25rem;
+        margin-bottom: 10px;
+    }
+
+    .MainJumbotron-btm-banner {
+        height: 60px;
+        padding-bottom: 0px;
+        padding-top: 10px;
+    }
+
+    .MainJumbotron-btm-banner-text {
+        display: inline-block;
+        font-size: 2.75rem;
+        font-weight: 400;
+    }
+
+    .ride-with-lyft-btn {
+        margin-left: 15px;
+        transition: all .2s ease;
+    }
+}
+
+@media (min-width: 992px) {
+    .MainJumbotron-container {
+        height: 500px;
+    }
+}
