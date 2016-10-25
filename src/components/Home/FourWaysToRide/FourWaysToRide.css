@@ -39,6 +39,32 @@
 .pos_r{
     position: relative;
 }
+.radius-circle {
+    border-radius: 50%;
+}
+.pos-ar {
+    position: absolute;
+}
+.bg-pink {
+    background-color: #FF00BF;
+}
+.play {
+    height: 7.4rem;
+    width: 7.4rem;
+    top: 45%;
+    left: 45%;
+    top: calc(50% - 3rem);
+    left: calc(50% - 3rem);
+}
+.arrow {
+      width: 0px;
+    height: 0;
+    border-top: 1.7rem solid transparent;
+    border-bottom: 1.7rem solid transparent;
+    border-left: 3rem solid white;
+    top: calc(50% - 0.9rem);
+    left: calc(50% - 0.3rem);
+}
 /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
   beg css for Four Ways to ride - start with the Title: four ways to ride
 *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -91,6 +117,43 @@ h2  {
     flex-shrink: 0;
     box-sizing: inherit;
 }
+
+.img2 {
+    background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);
+    height: 8rem;
+    width: 11rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+    box-sizing: inherit;
+}
+
+.img3 {
+    background-image: url(https://cdn.lyft.net/brochure/images/lyft-plus.742070a1.svg);
+    height: 8rem;
+    width: 11rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+    box-sizing: inherit;
+}
+
+.img4 {
+    background-image: url(https://cdn.lyft.net/brochure/images/lyft-premier.c0230045.svg);
+    height: 8rem;
+    width: 11rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+    box-sizing: inherit;
+}
+
 .text-thin {
     font-weight: 300;
 }
@@ -146,29 +209,37 @@ a {
   }
 
  }
- 
+
  /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
    2nd media query
  *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 
 @media (min-width: 768px) {
 
-  .container{
-    max-width: 45rem;
-  }
-  .flex-column {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-}
+      .container{
+        max-width: 64rem;
+      }
 
-.m-b-xl {
-  margin-bottom: 4rem;
-}
+      .flex-column {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+      }
 
-.flexer{
-  text-align: left !important;
-}
+    .m-b-xl {
+      margin-bottom: 4rem;
+    }
+
+    .flexer{
+      text-align: left !important;
+      text-align: left !important;
+      margin-left: 32px;
+    }
+
+    .text-xs-center {
+    text-align: center !important;
+    font-size: 3.06rem;
+    }
 
 }
 
@@ -178,7 +249,17 @@ a {
 @media (min-width: 992px) {
 
   .container{
-    max-width: 60rem;
+    max-width: 90rem;
   }
 
- }
+  h3 {
+    font-size: 3.1rem;
+  }
+
+  p {
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 24px;
+  }
+
+}
