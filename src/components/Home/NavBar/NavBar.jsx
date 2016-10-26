@@ -1,6 +1,9 @@
 import React from 'react';
+import {Link} from 'react-router';
+
 import SideMenu from '../SideMenu/SideMenu.jsx'
-import SideMenuBackDrop from '../SideMenuBackDrop/SideMenuBackDrop.jsx'
+import SideMenuBackDrop from '../SideMenuBackDrop/SideMenuBackDrop.jsx';
+import Footer from '../Footer/Footer.jsx';
 import './NavBar.css';
 
 class NavBar extends React.Component {
@@ -87,30 +90,33 @@ class NavBar extends React.Component {
                 <span className="glyphicon glyphicon-menu-hamburger" onClick={this.showMenu}></span>
                 <img src="./src/img/LYFT_LOGO/SVG/white_logo.svg"/>
             </div>
+
         <div onMouseLeave={this.handleHoverLeave}>
             <div id="explore" className="navbar-container">
                 <div className="navbar-left">
                     <div id="logo" className="navbar-logo">
-                        <img src="./src/img/LYFT_LOGO/SVG/white_logo.svg"/>
+                        <Link to="/"><img src="./src/img/LYFT_LOGO/SVG/white_logo.svg"/></Link>
                     </div>
                     <div id="logo2" className="navbar-logo2">
-                        <img src="./src/img/LYFT_LOGO/SVG/lyft_pixel.svg"/>
+                        <Link to="/"><img src="./src/img/LYFT_LOGO/SVG/lyft_pixel.svg"/></Link>
                     </div>
 
                     <ul className="navbar-list">
-                        <li>Cities</li>
-                        <li>Help</li>
+                        <li>
+                            <Link to="/cities">Cities</Link>
+                        </li>
+                        <li><Link to="/">Help</Link></li>
                         <li onMouseEnter={this.handleHover}>Explore<span id="carrot" className="carrot glyphicon glyphicon-menu-down"></span></li>
                     </ul>
                 </div>
                 <div id="navbar-right" className="navbar-right">
                     <div id="navbar-ride-lyftbtn" className="navbar-ride-lyft">Ride with Shyft</div>
                     <div className="navbar-login">
-                        Login
+                        <Link to="/userdashboard">Login</Link>
                     </div>
                 </div>
                 <div id='navbar-signup' className="navbar-signup">
-                    Sign up
+                    <Link to="/userdashboard">Sign up</Link>
                 </div>
             </div>
 
@@ -121,9 +127,10 @@ class NavBar extends React.Component {
                 <div className="navbar-hover-options border-hide">Blog</div>
             </div>
         </div>
+        {this.props.children}
+        <Footer/>
     </div>
     )
-
-}
+  }
 }
 export default NavBar;

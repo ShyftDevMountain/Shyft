@@ -77,6 +77,7 @@ class Footer extends React.Component {
             <li className='list-inline-item'><a href='#'>Privacy</a></li>
           </ul>
         </div>
+        {this.props.children}
     </div>
     )
   }

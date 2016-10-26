@@ -1,5 +1,4 @@
 import React from 'react';
-// import Slider from 'react-slick';
 import './MainJumbotron.css';
 
 class MainJumbotron extends React.Component {
