@@ -5,7 +5,11 @@ var massive = require('massive');
 var config = require('./config')
 var connectionString = 'postgres://postgres:@localhost/shyftdb';
 // var connectionString = config.connectionString;
-var session = require('express-session')
+
+var corsOptions = {
+  origin:'http://localhost:8080'
+}
+
 
 var app = express();
 module.exports = app;
@@ -14,28 +18,38 @@ var massiveInstance = massive.connectSync({connectionString: connectionString});
 
 app.set('db', massiveInstance);
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
-app.use(express.static('../public'));
+app.use(express.static('../src'));
 
-app.use(session({
-  resave: true,
-  saveUninitialized: true,
-  secret: config.sessionSecret
-}))
+
+// maybe we'll use sessions later
+// app.use(session({
+//   resave: true,
+//   saveUninitialized: true,
+//   secret: config.sessionSecret
+// }))
 
 
 
 
 ///Controllers///
-var userCtrl = require('./controllers/passengerCtrl');
+var citiesCtrl = require('./controllers/citiesCtrl.js');
 
 
 
 ///Requests///
 
-var port = config.port;
+
+app.get('/cities', citiesCtrl.getCities);
+
+
+
+var port = 8080;
+
+
+
 app.listen(port, function(){
   console.log('Shyft: Port ' + port + ' is listening.');
 });
