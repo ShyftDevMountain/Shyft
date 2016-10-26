@@ -1,6 +1,7 @@
 import React from 'react';
 import SideMenu from '../SideMenu/SideMenu.jsx'
-import SideMenuBackDrop from '../SideMenuBackDrop/SideMenuBackDrop.jsx'
+import SideMenuBackDrop from '../SideMenuBackDrop/SideMenuBackDrop.jsx';
+import Footer from '../Footer/Footer.jsx';
 import './NavBar.css';
 
 class NavBar extends React.Component {
@@ -121,9 +122,10 @@ class NavBar extends React.Component {
                 <div className="navbar-hover-options border-hide">Blog</div>
             </div>
         </div>
+        {this.props.children}
+        <Footer/>
     </div>
     )
-
-}
+  }
 }
 export default NavBar;

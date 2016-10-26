@@ -1,5 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
+import {Router, Route, hashHistory} from 'react-router';
 
 import './styles.css';
 
@@ -10,11 +11,12 @@ import Footer from './components/Home/Footer/Footer.jsx';
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <NavBar />
-        <HomeComp />
-        <Footer />
-      </div>
+
+      <Router history={hashHistory}>
+        <Route component={NavBar}>
+            <Route path="/" component={HomeComp}/>
+        </Route>
+      </Router>
     )
   }
 }
