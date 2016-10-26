@@ -1,26 +1,26 @@
-.container-fluid {
+.contentforfourways .container-fluid {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   box-sizing: inherit;
 }
-.row {
+.contentforfourways .row {
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
     margin-left: -0.9375rem;
     margin-right: -0.9375rem;
   }
-  .m-b-xl {
+.contentforfourways  .m-b-xl {
     margin-bottom: 2rem;
   }
-  .col-xs-12 {
+  .contentforfourways .col-xs-12 {
     -webkit-box-flex: 0;
     flex: 0 0 100%;
   }
 
-  .container{
+  .contentforfourways .container{
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.9375rem;
@@ -28,32 +28,58 @@
   }
 
 
-  .embedded_video{
+  .contentforfourways .embedded_video{
     box-sizing: inherit;
   }
 
-.full_width{
+.contentforfourways .full_width{
   width: 100%;
 }
 
-.pos_r{
+.contentforfourways .pos_r{
     position: relative;
+}
+.contentforfourways .radius-circle {
+    border-radius: 50%;
+}
+.contentforfourways .pos-ar {
+    position: absolute;
+}
+.contentforfourways .bg-pink {
+    background-color: #FF00BF;
+}
+.contentforfourways .play {
+    height: 7.4rem;
+    width: 7.4rem;
+    top: 45%;
+    left: 45%;
+    top: calc(50% - 3rem);
+    left: calc(50% - 3rem);
+}
+.contentforfourways .arrow {
+      width: 0px;
+    height: 0;
+    border-top: 1.7rem solid transparent;
+    border-bottom: 1.7rem solid transparent;
+    border-left: 3rem solid white;
+    top: calc(50% - 0.9rem);
+    left: calc(50% - 0.3rem);
 }
 /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
   beg css for Four Ways to ride - start with the Title: four ways to ride
 *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.text-xs-center {
+.contentforfourways .text-xs-center {
   text-align: center !important;
   font-size: 2.75rem;
 }
 
 
-.content_for_fourWaysToRide {
+.contentforfourways .content_for_fourWaysToRide {
   display: block;
   box-sizing: inherit;
 }
 
-h2  {
+.contentforfourways h2  {
   font-size: 1.75rem;
     margin-bottom: 1rem;
     font-family: inherit;
@@ -61,26 +87,26 @@ h2  {
     line-height: 1.1;
     color: inherit;
 }
-.align-group-center {
+.contentforfourways .align-group-center {
     -webkit-box-align: center;
     align-items: center;
 }
-.flex {
+.contentforfourways .flex {
     display: -webkit-box;
     display: flex;
 }
-.flex-column {
+.contentforfourways .flex-column {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
 }
-.m-y-l {
+.contentforfourways .m-y-l {
     margin-top: 1.5rem;
 }
-.text-xs-center {
+.contentforfourways .text-xs-center {
     text-align: center !important;
 }
-.img {
+.contentforfourways .img {
     background-image: url(https://cdn.lyft.net/brochure/images/lyft-line.7a1567b4.svg);
     height: 8rem;
     width: 11rem;
@@ -91,19 +117,56 @@ h2  {
     flex-shrink: 0;
     box-sizing: inherit;
 }
-.text-thin {
+
+.contentforfourways .img2 {
+    background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);
+    height: 8rem;
+    width: 11rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+    box-sizing: inherit;
+}
+
+.contentforfourways .img3 {
+    background-image: url(https://cdn.lyft.net/brochure/images/lyft-plus.742070a1.svg);
+    height: 8rem;
+    width: 11rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+    box-sizing: inherit;
+}
+
+.contentforfourways .img4 {
+    background-image: url(https://cdn.lyft.net/brochure/images/lyft-premier.c0230045.svg);
+    height: 8rem;
+    width: 11rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+    box-sizing: inherit;
+}
+
+.contentforfourways .text-thin {
     font-weight: 300;
 }
 
-.m-b-s {
+.contentforfourways .m-b-s {
     margin-bottom: 0.5rem;
 }
 
-h3 {
+.contentforfourways h3 {
     font-size: 2.1rem;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+.contentforfourways h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 1rem;
     font-family: inherit;
     font-weight: 700;
@@ -111,14 +174,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.contentforfourways h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: .5rem;
 }
-.m-b-0 {
+.contentforfourways .m-b-0 {
     margin-bottom: 0;
 }
-p {
+.contentforfourways p {
     margin-top: 0;
     margin-bottom: 1rem;
     display: block;
@@ -131,7 +194,7 @@ p {
 }
 
 
-a {
+.contentforfourways a {
     color: #FF00BF;
     text-decoration: none;
 }
@@ -141,34 +204,42 @@ a {
 *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @media (min-width: 544px) {
 
-  .container{
+  .contentforfourways .container{
     max-width: 34rem;
   }
 
  }
- 
+
  /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
    2nd media query
  *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 
 @media (min-width: 768px) {
 
-  .container{
-    max-width: 45rem;
-  }
-  .flex-column {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-}
+    .contentforfourways  .container{
+        max-width: 64rem;
+      }
 
-.m-b-xl {
-  margin-bottom: 4rem;
-}
+      .contentforfourways .flex-column {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+      }
 
-.flexer{
-  text-align: left !important;
-}
+    .contentforfourways .m-b-xl {
+      margin-bottom: 4rem;
+    }
+
+    .contentforfourways .flexer{
+      text-align: left !important;
+      text-align: left !important;
+      margin-left: 32px;
+    }
+
+    .contentforfourways .text-xs-center {
+    text-align: center !important;
+    font-size: 3.06rem;
+    }
 
 }
 
@@ -177,8 +248,18 @@ a {
 *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @media (min-width: 992px) {
 
-  .container{
-    max-width: 60rem;
+  .contentforfourways .container{
+    max-width: 90rem;
   }
 
- }
+  .contentforfourways h3 {
+    font-size: 3.1rem;
+  }
+
+  .contentforfourways p {
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 24px;
+  }
+
+}
