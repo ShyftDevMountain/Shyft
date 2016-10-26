@@ -7,7 +7,7 @@ var connectionString = 'postgres://postgres:@localhost/shyftdb';
 // var connectionString = config.connectionString;
 
 var corsOptions = {
-  origin:'http://localhost:8080'
+  origin:'http://localhost:8000'
 }
 
 
@@ -46,7 +46,7 @@ app.get('/cities', citiesCtrl.getCities);
 
 
 
-var port = 8080;
+var port = 8000;
 
 
 
