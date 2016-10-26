@@ -52,7 +52,7 @@
   border-radius:10px;
 }
 
-.btn:hover {
+.footer .btn:hover {
   color:#F3F3F5;
 }
 
@@ -63,17 +63,17 @@
   margin-bottom: 10px;
 }
 
-.border-t {
+.footer .border-t {
   border-top: 1px solid #F3F3F5;
   padding-top: 1.5rem;
 }
 
-.x {
+.footer .x {
   display:flex;
   justify-content: center;
 }
 
-.logo-circle {
+.footer .logo-circle {
   height:50px;
   width:50px;
   border: #F3F3F5 1.5px solid;
@@ -82,22 +82,22 @@
   margin-bottom:1.5rem;
 }
 
-.justify-center {
+.footer .justify-center {
   justify-content:center;
 }
 
-.xs-col {
+.footer .xs-col {
   flex: 0 0 100%;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
 }
 
-.justify-between {
+.footer .justify-between {
   justify-content: space-between;
 }
 
 
-.row {
+.footer .row {
   display:flex;
   flex-wrap: wrap;
   margin-left: -0.9375rem;
@@ -111,7 +111,7 @@
       text-align: left;
     }
 
-  .flex-sm {
+  .footer .flex-sm {
     display:flex;
   }
 
@@ -126,26 +126,26 @@
   }
 
 
-  .text-md-right {
+  .footer .text-md-right {
     text-align: right;
   }
 
-  .medium-col {
+  .footer .medium-col {
     flex: 0 0 16.66667%;
   }
 
-   .med-6-col {
+   .footer .med-6-col {
     flex: 0 0 50%;
   }
 
-  .justify-between-md {
+  .footer .justify-between-md {
     justify-content: space-between;
   }
 }
 
 
 @media (min-width: 992px) {
-  .lg-col {
+  .footer .lg-col {
     flex: 0 0 33.33333%;
   }
 }
