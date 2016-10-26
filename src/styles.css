@@ -20,6 +20,16 @@ body {
   color: #333;
 }
 
+a {
+    color: #f3f3f5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff00bf;
+    text-decoration: none;
+}
+
 .btn {
     background: #ff00bf;
     border: 1px solid #ff00bf;
