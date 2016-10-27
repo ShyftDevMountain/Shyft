@@ -25,14 +25,25 @@ getOneCity: function(req, res, next) {
   });
 },
 
-getZips: function(req, res, next) {
+checkZip: function(req, res, next) {
   db.get_zips(function(err, zips) {
+    var id;
     if(err) {
       res.status(500).json(err);
     }
-    else {
-      res.status(200).json(zips);
+    else{
+    for(var i = 0; i < zips.length; i++) {
+      if(req.body.zip_code === zips[i].zip_code) {
+        id = zips[i].id
+      }
     }
+    if(id) {
+      res.status(200).json(id);
+    }
+    else {
+      res.status(200).json('sorry');
+    }
+  }
   });
 }
 
