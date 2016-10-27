@@ -108,17 +108,17 @@ class NavBar extends React.Component {
             <SideMenuBackDrop showMenu={this.state.showBackDrop} hideMenu={this.hideMenu}/>
             <div className="navbar-mobile">
                 <span className="glyphicon glyphicon-menu-hamburger" onClick={this.showMenu}></span>
-                <img src="./src/img/LYFT_LOGO/SVG/white_logo.svg"/>
+                <img src="img/LYFT_LOGO/SVG/white_logo.svg"/>
             </div>
 
         <div onMouseLeave={this.handleHoverLeave}>
             <div id="explore" className="navbar-container">
                 <div className="navbar-left">
                     <div id="logo" className="navbar-logo">
-                        <Link to="/"><img src="./src/img/LYFT_LOGO/SVG/white_logo.svg"/></Link>
+                        <Link to="/"><img src="./img/LYFT_LOGO/SVG/white_logo.svg"/></Link>
                     </div>
                     <div id="logo2" className="navbar-logo2">
-                        <Link to="/"><img src="./src/img/LYFT_LOGO/SVG/lyft_pixel.svg"/></Link>
+                        <Link to="/"><img src="./img/LYFT_LOGO/SVG/lyft_pixel.svg"/></Link>
                     </div>
 
                     <ul className="navbar-list">

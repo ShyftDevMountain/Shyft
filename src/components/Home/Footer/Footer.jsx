@@ -49,10 +49,10 @@ class Footer extends React.Component {
                     <button className='btn footer-sign-up-button'>Sign Up Now</button>
                   </li>
                   <li>
-                      <a className='footer-store' href='apple.com'><img src="./src/img/home/apple-store.svg"/></a>
+                      <a className='footer-store' href='apple.com'><img src="../../img/home/apple-store.svg"/></a>
                   </li>
                   <li>
-                      <a className='footer-store' href='apple.com'><img src="./src/img/home/google-play.png"/></a>
+                      <a className='footer-store' href='apple.com'><img src="../../img/home/google-play.png"/></a>
                   </li>
                 </ul>
               </div>
