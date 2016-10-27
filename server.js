@@ -23,7 +23,6 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/src'));
 
 
-
 // maybe we'll use sessions later
 // app.use(session({
 //   resave: true,
