@@ -15,14 +15,24 @@ class NavBar extends React.Component {
         var navbarDrop = document.getElementById('navbar-drop');
         var rideLyft = document.getElementById('navbar-ride-lyftbtn')
         var signup = document.getElementById('navbar-signup');
+        var signupLink = document.getElementById('signup-link');
         var navbarRight = document.getElementById('navbar-right');
         var carrot = document.getElementById('carrot');
+        var cities = document.getElementById('cities');
+        var help = document.getElementById('help');
+        var ride = document.getElementById('ride');
+        var login = document.getElementById('login');
 
+        cities.classList.add('navbar-link-active');
+        help.classList.add('navbar-link-active');
+        ride.classList.add('navbar-link-active');
+        login.classList.add('navbar-link-active');
         carrot.classList.add('carrot-active');
         explore.classList.remove('navbar-container');
         explore.classList.add('navbar-active');
         rideLyft.classList.add('navbar-ride-lyft-active');
         signup.classList.add('navbar-signup-active');
+        signupLink.classList.add('navbar-pink-link');
         navbarRight.classList.add('navbar-right-active');
         logo.classList.add('navbar-logo-hide');
         logo2.classList.add('navbar-logo-show');
@@ -38,8 +48,13 @@ class NavBar extends React.Component {
         var navbarDrop = document.getElementById('navbar-drop');
         var rideLyft = document.getElementById('navbar-ride-lyftbtn')
         var signup = document.getElementById('navbar-signup');
+        var signupLink = document.getElementById('signup-link');
         var navbarRight = document.getElementById('navbar-right');
         var carrot = document.getElementById('carrot');
+        var cities = document.getElementById('cities');
+        var help = document.getElementById('help');
+        var ride = document.getElementById('ride');
+        var login = document.getElementById('login');
 
         navbarDrop.classList.remove('navbar-hover-container-active');
         setTimeout(function(){
@@ -49,8 +64,13 @@ class NavBar extends React.Component {
             logo2.classList.remove('navbar-logo-show');
             rideLyft.classList.remove('navbar-ride-lyft-active');
             signup.classList.remove('navbar-signup-active');
+            signupLink.classList.remove('navbar-pink-link');
             navbarRight.classList.remove('navbar-right-active');
             carrot.classList.remove('carrot-active');
+            cities.classList.remove('navbar-link-active');
+            help.classList.remove('navbar-link-active');
+            ride.classList.remove('navbar-link-active');
+            login.classList.remove('navbar-link-active');
         }, 300);
     }
 
@@ -103,20 +123,20 @@ class NavBar extends React.Component {
 
                     <ul className="navbar-list">
                         <li>
-                            <Link to="/cities">Cities</Link>
+                            <Link to="/cities" id="cities">Cities</Link>
                         </li>
-                        <li><Link to="/">Help</Link></li>
+                        <li><Link to="/" id="help">Help</Link></li>
                         <li onMouseEnter={this.handleHover}>Explore<span id="carrot" className="carrot glyphicon glyphicon-menu-down"></span></li>
                     </ul>
                 </div>
                 <div id="navbar-right" className="navbar-right">
-                    <div id="navbar-ride-lyftbtn" className="navbar-ride-lyft">Ride with Shyft</div>
+                    <div id="navbar-ride-lyftbtn" className="navbar-ride-lyft"><Link to="/rides" id="ride" className="hover-link-none">Ride with Shyft</Link></div>
                     <div className="navbar-login">
-                        <Link to="/userdashboard">Login</Link>
+                        <Link to="/login" id="login">Login</Link>
                     </div>
                 </div>
                 <div id='navbar-signup' className="navbar-signup">
-                    <Link to="/userdashboard">Sign up</Link>
+                    <Link to="/userdashboard" id="signup-link">Sign up</Link>
                 </div>
             </div>
 

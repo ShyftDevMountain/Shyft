@@ -95,6 +95,10 @@
     z-index: 10;
 }
 
+.navbarlink-active {
+    color: #333;
+}
+
 .navbar-right,
 .navbar-left {
     width: 50%;
@@ -180,8 +184,16 @@
     cursor: pointer;
 }
 
+.navbar-ride-lyft a:hover {
+    color: #f3f3f5;
+}
+
 .navbar-ride-lyft-active {
     border-color: #333;
+}
+
+.navbar-ride-lyft-active a:hover {
+    color: #ff00bf;    
 }
 
 .navbar-ride-lyft-active:hover {
@@ -214,6 +226,14 @@
 .navbar-signup-active {
     right: 0px;
     margin-right: 3%;
+}
+
+.navbar-pink-link {
+    color: #ff00bf;
+}
+
+.navbar-link-active {
+    color: #333;
 }
 
 
