@@ -21,7 +21,7 @@ app.set('db', massiveInstance);
 app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
-app.use(express.static('../src'));
+app.use(express.static(__dirname + '/src'));
 
 
 // maybe we'll use sessions later
