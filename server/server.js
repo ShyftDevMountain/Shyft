@@ -21,7 +21,7 @@ app.set('db', massiveInstance);
 app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
-app.use(express.static('../src'));
+app.use(express.static(__dirname + '/src'));
 
 
 // maybe we'll use sessions later
@@ -43,7 +43,9 @@ var citiesCtrl = require('./controllers/citiesCtrl.js');
 
 
 app.get('/cities', citiesCtrl.getCities);
+app.get('/cityDetails/:id', citiesCtrl.getOneCity);
 
+app.post('/checkZip', citiesCtrl.checkZip);
 
 
 var port = 8000;
