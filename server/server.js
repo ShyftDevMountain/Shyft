@@ -44,7 +44,7 @@ var citiesCtrl = require('./controllers/citiesCtrl.js');
 
 app.get('/cities', citiesCtrl.getCities);
 app.get('/cityDetails/:id', citiesCtrl.getOneCity);
-
+app.get('/checkZips', citiesCtrl.getZips);
 
 
 var port = 8000;

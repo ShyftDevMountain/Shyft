@@ -23,6 +23,17 @@ getOneCity: function(req, res, next) {
       res.status(200).json(cityDetails);
     }
   });
+},
+
+getZips: function(req, res, next) {
+  db.get_zips(function(err, zips) {
+    if(err) {
+      res.status(500).json(err);
+    }
+    else {
+      res.status(200).json(zips);
+    }
+  });
 }
 
 }
