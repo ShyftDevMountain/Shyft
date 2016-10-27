@@ -1,3 +1,6 @@
+*:focus {
+  outline: none;
+}
 .estimateForm {
   background-color: #F3F3F5;
   border-width: 1px;
@@ -14,28 +17,51 @@
   display: block;
   width: 100%;
   color: #333447;
-  background-color: #fff;
   padding: .75rem 1.25rem;
   font-size: 1.8rem;
   line-height: 1.33333;
-  border-color: #E60000;
   padding-left: 2.75rem;
 }
 
-.pickup-input {
+.pickup-input-container .geosuggest__input {
   border-top-right-radius: .5rem;
   border-top-left-radius: .5rem;
-  border: .08333rem solid #ccc;
+  border: .08333rem solid #E60000;
+}
+.geosuggest-container span,
+.geosuggest-container button {
+  display: none;
+}
+
+.geosuggest-suggestions {
+  display: flex;
+  justify-content: center;
+}
+
+.geosuggest__suggests {
+  list-style: none;
+  position: absolute;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  border: .08333rem solid #E60000;
+  background: white;
+  width: 92.5%;
+  padding-left: 25px;
+  margin-top: -1px;
+  border-top: 1px solid white;
+  transition: max-height 0.2s, border 0.2s;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .pickup-icon {
   background-repeat: no-repeat
 }
 
-.dest-input {
+.pickup-destination-container .geosuggest__input {
   border-bottom-right-radius: .5rem;
   border-bottom-left-radius: .5rem;
-  border: .08333rem solid #ccc;
+  border: .08333rem solid #E60000;
 }
 
 .button-getEstimate {

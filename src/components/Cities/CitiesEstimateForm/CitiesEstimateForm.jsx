@@ -1,7 +1,11 @@
 import React from 'react';
+var Geosuggest = require('react-geosuggest-plus');
 
 import './CitiesEstimateForm.css';
 
+const destInput = {
+  background: 'green'
+}
 
 class CitiesEstimateForm extends React.Component {
   render () {
@@ -12,11 +16,17 @@ class CitiesEstimateForm extends React.Component {
             <fieldset>
               <div className='pickup-input-container'>
                 <div className='pickup-icon'></div>
-                <input className='pickup-input' placeholder='Add pickup location' />
+                <Geosuggest
+                  className='pickup-input'
+                  placeholder='Add pickup location'
+                  />
               </div>
               <div className='pickup-destination-container'>
                 <div className='dest-icon'></div>
-                <input className='dest-input' placeholder='Add destination' />
+                <Geosuggest
+                  className='dest-input'
+                  placeholder='Add destination'
+                  />
               </div>
               <button className='button-getEstimate'>Get Estimate</button>
               <div className='estimate'>
