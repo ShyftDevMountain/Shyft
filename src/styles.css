@@ -30,6 +30,12 @@ a:hover {
     text-decoration: none;
 }
 
+a:focus {
+    color: #ff00bf;
+    outline: none;
+    text-decoration: none;
+}
+
 .btn {
     background: #ff00bf;
     border: 1px solid #ff00bf;
