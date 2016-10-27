@@ -1,0 +1,93 @@
+.estimateForm {
+  background-color: #F3F3F5;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: .5rem;
+  border-color: #D8DCE6;
+  padding: 1.5rem;
+  box-sizing: inherit;
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.estimateForm input {
+  display: block;
+  width: 100%;
+  color: #333447;
+  background-color: #fff;
+  padding: .75rem 1.25rem;
+  font-size: 1.8rem;
+  line-height: 1.33333;
+  border-color: #E60000;
+  padding-left: 2.75rem;
+}
+
+.pickup-input {
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  border: .08333rem solid #ccc;
+}
+
+.pickup-icon {
+  background-repeat: no-repeat
+}
+
+.dest-input {
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  border: .08333rem solid #ccc;
+}
+
+.button-getEstimate {
+  padding: .8125rem 1.25rem;
+  background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);
+  background: -o-linear-gradient(top left, #FF00BF, #B80B8C);
+  background: linear-gradient(to bottom right, #FF00BF, #B80B8C);
+  margin-top: 1rem;
+  border: none;
+  display: block;
+  width: 100%;
+  font-size: 1.8srem;
+  line-height: 1.33333;
+  border-radius: .5rem;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+}
+
+.estimate {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+  display: flex;
+  text-align: center!important;
+  font-size: 2.1rem;
+  font-weight: 100;
+  justify-content: center;
+}
+
+.estimate-lyft {
+
+}
+
+.estimate-lyft div {
+  font-size: 1.7rem;
+}
+
+.divider {
+  border-color: #D8DCE6;
+  border-right-width: 1px;
+  border-right-style: solid;
+  margin: 0 15%;
+}
+
+.estimate-plus {
+
+}
+
+.estimate-plus div {
+  font-size: 1.7rem;
+}

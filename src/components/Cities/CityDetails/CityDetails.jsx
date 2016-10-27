@@ -1,13 +1,18 @@
 import React from 'react';
 import {Link} from 'react-router';
 
+import CitiesEstimateForm from  '../CitiesEstimateForm/CitiesEstimateForm.jsx'
+
 import './CityDetails.css';
 
 
 class CityDetails extends React.Component {
   render () {
     return (
-        <div>This is city details!</div>
+        <div>
+          <div>This is city details!</div>
+          <CitiesEstimateForm />
+        </div>
     );
   }
 };
