@@ -1,1 +1,1 @@
-select id, state, img, map_img from cities order by state;
+select id, city from cities order by state;
