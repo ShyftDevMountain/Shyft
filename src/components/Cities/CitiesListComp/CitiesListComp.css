@@ -1,0 +1,25 @@
+
+
+.city-list h2 {
+  margin-top:25px;
+  text-align: center;
+}
+
+.city-links {
+  margin-top:30px;
+  margin-left: 20px;
+}
+
+.city-links ul {
+  list-style-type: none;
+}
+
+.city-links a {
+  color:#FF00BF;
+  text-decoration: none;
+}
+
+.city-links a:hover {
+  color:#b30086;
+  text-decoration: underline;
+}
