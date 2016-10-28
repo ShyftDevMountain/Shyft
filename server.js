@@ -2,7 +2,6 @@ var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var massive = require('massive');
-var config = require('./config')
 var connectionString = 'postgres://postgres:@localhost/shyftdb';
 // var connectionString = config.connectionString;
 
@@ -35,7 +34,7 @@ app.use(express.static(__dirname + '/src'));
 
 
 ///Controllers///
-var citiesCtrl = require('./controllers/citiesCtrl.js');
+var citiesCtrl = require('./server/controllers/citiesCtrl.js');
 
 
 
