@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "start": "webpack-dev-server -d --inline --hot",
     "dev": "webpack-dev-server"
   },
@@ -31,6 +30,8 @@
     "css-loader": "^0.25.0",
     "express": "^4.14.0",
     "massive": "^2.5.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-geosuggest-plus": "^1.17.0",
