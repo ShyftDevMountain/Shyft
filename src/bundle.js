@@ -30036,18 +30036,13 @@
 
 
 	// module
-	exports.push([module.id, ".cities-jumbotron-container .geosuggest-container {\n    width: 310px;\n    margin: 0 auto;\n    border-radius: 7px;\n    border: none;\n} \n\n.cities-jumbotron-container .geosuggest__input {\n    width: 310px;\n    color: #d8dce6;\n    font-style: italic;\n    font-weight: 300;\n    font-size: 1.75rem;\n    padding: 12px 0px 12px 40px;\n    border: 1px solid #d8dce6;\n    border-radius: 7px;\n}\n\n.cities-jumbotron-container .geosuggest__input::-webkit-input-placeholder{\n    color: #d8dce6;\n}\n\n.cities-jumbotron-container {\n    background-image: url(" + __webpack_require__(269) + ");\n    background-size: cover;\n    height: 410px;\n    text-align: center;\n    background-position: top;\n    background-repeat: no-repeat;\n}\n\n.cities-jumbotron-title {\n    padding-top: 140px;\n    font-size: 4.5rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 4px black;\n    color: #F3F3F5;\n    margin-bottom: 5px;\n}\n\n.cities-jumbotron-input-container {\n    position: relative;\n    margin: 0 auto;\n    width: 310px;\n}\n\n.cities-jumbotron-input {\n    border-radius: 7px;\n    padding: 13px 0 13px 40px;\n    border: 1px solid #d8dce6;\n    width: 310px;\n}\n\n.cities-jumbotron-input::-webkit-input-placeholder {\n      color: #d8dce6;\n      font-style: italic;\n      font-weight: 300;\n      font-size: 1.75rem;\n  }\n\n.cities-jumbotron-input-container input,\n.cities-jumbotron-input-container input:focus {\n    color: #d8dce6;\n    outline: none;\n}\n\n.cities-magnify {\n    position: absolute;\n    top: 13px;\n    left: 13px;\n    color: #d8dce6;\n}\n", ""]);
+	exports.push([module.id, ".cities-jumbotron-container .geosuggest-container {\n    width: 310px;\n    margin: 0 auto;\n    border-radius: 7px;\n    border: none;\n}\n\n.cities-jumbotron-container .geosuggest__input {\n    width: 310px;\n    color: #d8dce6;\n    font-style: italic;\n    font-weight: 300;\n    font-size: 1.75rem;\n    padding: 12px 0px 12px 40px;\n    border: 1px solid #d8dce6;\n    border-radius: 7px;\n}\n\n.cities-jumbotron-container .geosuggest__input::-webkit-input-placeholder{\n    color: #d8dce6;\n}\n\n.cities-jumbotron-container {\n    background-image: url('https://www.lyft.com/images/cities/cities-hero.1e733ed9.png');\n    background-size: cover;\n    height: 410px;\n    text-align: center;\n    background-position: top;\n    background-repeat: no-repeat;\n}\n\n.cities-jumbotron-title {\n    padding-top: 140px;\n    font-size: 4.5rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 4px black;\n    color: #F3F3F5;\n    margin-bottom: 5px;\n}\n\n.cities-jumbotron-input-container {\n    position: relative;\n    margin: 0 auto;\n    width: 310px;\n}\n\n.cities-jumbotron-input {\n    border-radius: 7px;\n    padding: 13px 0 13px 40px;\n    border: 1px solid #d8dce6;\n    width: 310px;\n}\n\n.cities-jumbotron-input::-webkit-input-placeholder {\n      color: #d8dce6;\n      font-style: italic;\n      font-weight: 300;\n      font-size: 1.75rem;\n  }\n\n.cities-jumbotron-input-container input,\n.cities-jumbotron-input-container input:focus {\n    color: #d8dce6;\n    outline: none;\n}\n\n.cities-magnify {\n    position: absolute;\n    top: 13px;\n    left: 13px;\n    color: #d8dce6;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 269 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "500b936a703796295d238c87f316a192.png";
-
-/***/ },
+/* 269 */,
 /* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
