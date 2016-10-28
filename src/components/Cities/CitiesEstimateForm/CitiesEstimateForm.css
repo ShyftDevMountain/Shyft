@@ -1,0 +1,119 @@
+*:focus {
+  outline: none;
+}
+.estimateForm {
+  background-color: #F3F3F5;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: .5rem;
+  border-color: #D8DCE6;
+  padding: 1.5rem;
+  box-sizing: inherit;
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.estimateForm input {
+  display: block;
+  width: 100%;
+  color: #333447;
+  padding: .75rem 1.25rem;
+  font-size: 1.8rem;
+  line-height: 1.33333;
+  padding-left: 2.75rem;
+}
+
+.pickup-input-container .geosuggest__input {
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  border: .08333rem solid #E60000;
+}
+.geosuggest-container span,
+.geosuggest-container button {
+  display: none;
+}
+
+.geosuggest-suggestions {
+  display: flex;
+  justify-content: center;
+}
+
+.geosuggest__suggests {
+  list-style: none;
+  position: absolute;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  border: .08333rem solid #E60000;
+  background: white;
+  width: 92.5%;
+  padding-left: 25px;
+  margin-top: -1px;
+  border-top: 1px solid white;
+  transition: max-height 0.2s, border 0.2s;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.pickup-icon {
+  background-repeat: no-repeat
+}
+
+.pickup-destination-container .geosuggest__input {
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  border: .08333rem solid #E60000;
+}
+
+.button-getEstimate {
+  padding: .8125rem 1.25rem;
+  background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);
+  background: -o-linear-gradient(top left, #FF00BF, #B80B8C);
+  background: linear-gradient(to bottom right, #FF00BF, #B80B8C);
+  margin-top: 1rem;
+  border: none;
+  display: block;
+  width: 100%;
+  font-size: 1.8srem;
+  line-height: 1.33333;
+  border-radius: .5rem;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+}
+
+.estimate {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+  display: flex;
+  text-align: center!important;
+  font-size: 2.1rem;
+  font-weight: 100;
+  justify-content: center;
+}
+
+.estimate-lyft {
+
+}
+
+.estimate-lyft div {
+  font-size: 1.7rem;
+}
+
+.divider {
+  border-color: #D8DCE6;
+  border-right-width: 1px;
+  border-right-style: solid;
+  margin: 0 15%;
+}
+
+.estimate-plus {
+
+}
+
+.estimate-plus div {
+  font-size: 1.7rem;
+}

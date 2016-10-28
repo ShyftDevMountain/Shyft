@@ -33,6 +33,7 @@
     "massive": "^2.5.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-geosuggest-plus": "^1.17.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
     "react-slick": "^0.14.5",
