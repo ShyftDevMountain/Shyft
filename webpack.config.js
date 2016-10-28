@@ -9,7 +9,7 @@ module.exports = {
     entry: './src/app.jsx',
     output: {
         publicPath: '/public/',
-        filename: 'bundle.js'
+        filename: './src/bundle.js'
     },
     devTool: 'eval-source-map',
     module: {
