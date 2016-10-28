@@ -34,6 +34,7 @@ class CitiesList extends React.Component {
         <div className='row'>
         <div className='city-links'>
             {cities}
+            <p>test</p>
         </div>
       </div>
       </div>
