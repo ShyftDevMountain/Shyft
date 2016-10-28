@@ -5,7 +5,7 @@ import './CitiesListComp.css';
 class CitiesList extends React.Component {
   render() {
     return (
-      <div class='container-fluid city-list'>
+      <div className='container-fluid city-list'>
         CitiesList Component
       </div>
     )

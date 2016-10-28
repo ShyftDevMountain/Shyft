@@ -74,6 +74,7 @@
 
 	var _CitiesComp2 = _interopRequireDefault(_CitiesComp);
 
+<<<<<<< HEAD
 	var _RidesComp = __webpack_require__(268);
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
@@ -87,6 +88,21 @@
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
 	var _LoginComp = __webpack_require__(282);
+=======
+	var _RidesComp = __webpack_require__(276);
+
+	var _RidesComp2 = _interopRequireDefault(_RidesComp);
+
+	var _UserDashboardComp = __webpack_require__(279);
+
+	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
+
+	var _CityDetails = __webpack_require__(282);
+
+	var _CityDetails2 = _interopRequireDefault(_CityDetails);
+
+	var _LoginComp = __webpack_require__(288);
+>>>>>>> master
 
 	var _LoginComp2 = _interopRequireDefault(_LoginComp);
 
@@ -28601,7 +28617,11 @@
 
 
 	// module
+<<<<<<< HEAD
 	exports.push([module.id, ".MainJumbotron-container {\n    background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n        height: 500px;\n    }\n}\n", ""]);
+=======
+	exports.push([module.id, ".MainJumbotron-container {\n    background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n        height: 500px;\n    }\n}\n", ""]);
+>>>>>>> master
 
 	// exports
 
@@ -29019,12 +29039,33 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+<<<<<<< HEAD
 	__webpack_require__(262);
 
 	var _CityBottomBanner = __webpack_require__(264);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
+=======
+	var _reactDom = __webpack_require__(34);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	__webpack_require__(262);
+
+	var _CitiesJumbotron = __webpack_require__(264);
+
+	var _CitiesJumbotron2 = _interopRequireDefault(_CitiesJumbotron);
+
+	var _CityBottomBanner = __webpack_require__(270);
+
+	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
+
+	var _CitiesListComp = __webpack_require__(273);
+
+	var _CitiesListComp2 = _interopRequireDefault(_CitiesListComp);
+
+>>>>>>> master
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29048,6 +29089,11 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
+<<<<<<< HEAD
+=======
+	                _react2.default.createElement(_CitiesJumbotron2.default, null),
+	                _react2.default.createElement(_CitiesListComp2.default, null),
+>>>>>>> master
 	                _react2.default.createElement(_CityBottomBanner2.default, null)
 	            );
 	        }
@@ -29107,7 +29153,11 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+<<<<<<< HEAD
 	  value: true
+=======
+	    value: true
+>>>>>>> master
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -29116,9 +29166,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+<<<<<<< HEAD
 	var _reactRouter = __webpack_require__(172);
 
 	__webpack_require__(265);
+=======
+	var _reactGeosuggestPlus = __webpack_require__(265);
+
+	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
+
+	__webpack_require__(267);
+>>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29128,6 +29186,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+<<<<<<< HEAD
 	var CityBottomBanner = function (_React$Component) {
 	  _inherits(CityBottomBanner, _React$Component);
 
@@ -29174,16 +29233,69 @@
 	  }]);
 
 	  return CityBottomBanner;
+=======
+	var CitiesJumbotron = function (_React$Component) {
+	    _inherits(CitiesJumbotron, _React$Component);
+
+	    function CitiesJumbotron() {
+	        _classCallCheck(this, CitiesJumbotron);
+
+	        return _possibleConstructorReturn(this, (CitiesJumbotron.__proto__ || Object.getPrototypeOf(CitiesJumbotron)).apply(this, arguments));
+	    }
+
+	    _createClass(CitiesJumbotron, [{
+	        key: 'handleInput',
+	        value: function handleInput() {}
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'cities-jumbotron-container' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'cities-jumbotron-title' },
+	                        'Cities We\'re In'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'cities-jumbotron-input-container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'cities-magnify' },
+	                            _react2.default.createElement(
+	                                'i',
+	                                { className: 'material-icons' },
+	                                'search'
+	                            )
+	                        ),
+	                        _react2.default.createElement(_reactGeosuggestPlus2.default, { placeholder: 'Find by city' })
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return CitiesJumbotron;
+>>>>>>> master
 	}(_react2.default.Component);
 
 	;
 
+<<<<<<< HEAD
 	exports.default = CityBottomBanner;
+=======
+	exports.default = CitiesJumbotron;
+>>>>>>> master
 
 /***/ },
 /* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
@@ -29465,10 +29577,603 @@
 	          'This is city details!'
 	        ),
 	        _react2.default.createElement(_CitiesEstimateForm2.default, null)
+=======
+	/* global google */
+	/* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _GeosuggestItem = __webpack_require__(266);
+
+	var _GeosuggestItem2 = _interopRequireDefault(_GeosuggestItem);
+
+	var Geosuggest = (function (_React$Component) {
+	  _inherits(Geosuggest, _React$Component);
+
+	  function Geosuggest() {
+	    _classCallCheck(this, Geosuggest);
+
+	    _get(Object.getPrototypeOf(Geosuggest.prototype), 'constructor', this).apply(this, arguments);
+
+	    this.state = {
+	      isSuggestsHidden: true,
+	      userInput: this.props.initialValue,
+	      activeSuggest: null,
+	      suggests: [], // google predictions
+	      recents: [] // recent/saved addresses
+	    };
+	  }
+
+	  _createClass(Geosuggest, [{
+	    key: 'componentDidMount',
+
+	    /**
+	     * Called on the client side after component is mounted.
+	     * Google api sdk object will be obtained and cached as a instance property.
+	     * Necessary objects of google api will also be determined and saved.
+	     */
+	    value: function componentDidMount() {
+	      this.setInputValue(this.props.initialValue);
+
+	      var googleMaps = this.props.googleMaps || google && google.maps || this.googleMaps;
+
+	      if (!googleMaps) {
+	        console.error('Google map api was not found in the page.');
+	      } else {
+	        this.googleMaps = googleMaps;
+	      }
+
+	      this.autocompleteService = new googleMaps.places.AutocompleteService();
+	      this.geocoder = new googleMaps.Geocoder();
+	      this._isMounted = true;
+	    }
+
+	    /**
+	     * Change inputValue if prop changes
+	     * @param {Object} props The new props
+	     */
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(props) {
+	      if (this.props.initialValue !== props.initialValue) {
+	        this.setState({ userInput: props.initialValue });
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this._isMounted = false;
+	    }
+
+	    /**
+	     * Method used for setting initial value.
+	     * @param {string} value to set in input
+	     */
+	  }, {
+	    key: 'setInputValue',
+	    value: function setInputValue(value) {
+	      this.setState({
+	        userInput: value
+	      });
+	    }
+
+	    /**
+	     * When the input got changed
+	     */
+	  }, {
+	    key: 'onInputChange',
+	    value: function onInputChange() {
+	      var _this = this;
+
+	      var userInput = this.refs.geosuggestInput.value;
+
+	      this.setState({ userInput: userInput }, function () {
+	        _this.showSuggests();
+	        _this.props.onChange(userInput);
+	      });
+	    }
+
+	    /**
+	     * When the input gets focused
+	     */
+	  }, {
+	    key: 'onFocus',
+	    value: function onFocus() {
+	      this.props.onFocus();
+	      this.showSuggests();
+	    }
+	  }, {
+	    key: 'onClick',
+	    value: function onClick() {
+	      this.props.onClick();
+	    }
+
+	    /**
+	     * Click the clear button
+	     */
+	  }, {
+	    key: 'onClearClick',
+	    value: function onClearClick() {
+	      var _this2 = this;
+
+	      this.clear(function () {
+	        return _this2.refs.geosuggestInput.focus();
+	      });
+	      this.props.onClearClick();
+	    }
+
+	    /**
+	     * Update the value of the user input
+	     * @param {String} value the new value of the user input
+	     */
+	  }, {
+	    key: 'update',
+	    value: function update(value) {
+	      this.setState({ userInput: value });
+	      this.props.onChange(value);
+	    }
+
+	    /*
+	     * Clear the input and close the suggestion pane
+	     * () => this.hideSuggests()
+	     *
+	     */
+	  }, {
+	    key: 'clear',
+	    value: function clear() {
+	      var cb = arguments.length <= 0 || arguments[0] === undefined ? function () {} : arguments[0];
+
+	      this.setState({
+	        userInput: ''
+	      }, cb);
+	    }
+
+	    /**
+	     * Search for new suggests
+	     */
+	  }, {
+	    key: 'searchSuggests',
+	    value: function searchSuggests() {
+	      var _this3 = this;
+
+	      if (!this.state.userInput) {
+	        this.updateSuggests();
+	        return;
+	      }
+
+	      var options = {
+	        input: this.state.userInput
+	      };
+
+	      if (this.props.location) {
+	        options.location = this.props.location;
+	      }
+
+	      if (this.props.radius) {
+	        options.radius = this.props.radius;
+	      }
+
+	      if (this.props.bounds) {
+	        options.bounds = this.props.bounds;
+	      }
+
+	      if (this.props.types) {
+	        options.types = this.props.types;
+	      }
+
+	      if (this.props.country) {
+	        options.componentRestrictions = {
+	          country: this.props.country
+	        };
+	      }
+
+	      this.autocompleteService.getPlacePredictions(options, function (suggestsGoogle) {
+	        _this3.updateSuggests(suggestsGoogle);
+
+	        if (_this3.props.autoActivateFirstSuggest) {
+	          _this3.activateSuggest('next');
+	        }
+	      });
+	    }
+
+	    /**
+	     * Update the suggests
+	     * @param  {Object} suggestsGoogle The new google suggests
+	     */
+	  }, {
+	    key: 'updateSuggests',
+	    value: function updateSuggests(suggestsGoogle) {
+	      var _this4 = this;
+
+	      if (!suggestsGoogle) {
+	        suggestsGoogle = [];
+	      }
+
+	      var suggests = [];
+	      var recents = [];
+	      var regex = new RegExp(this.state.userInput, 'gim');
+	      var skipSuggest = this.props.skipSuggest;
+
+	      var index = 0;
+	      var fixturesLen = this.props.fixtures.length;
+	      var limit = fixturesLen > this.props.recentsLimit ? this.props.recentsLimit : fixturesLen;
+	      // ugh i hate for-loops but seems like i have to
+	      // utilize it here so i can break out
+	      for (; index < fixturesLen; index++) {
+	        var recent = this.props.fixtures[index];
+	        recent.placeId = recent.id;
+	        recent.altLabel = this.props.getRecentLabel(recent);
+	        recents.push(recent);
+	      }
+
+	      suggestsGoogle.forEach(function (suggest) {
+	        if (!skipSuggest(suggest)) {
+	          suggests.push({
+	            label: _this4.props.getSuggestLabel(suggest),
+	            placeId: suggest.place_id
+	          });
+	        }
+	      });
+
+	      this.setState({ suggests: suggests });
+	      this.setState({ recents: recents });
+	    }
+
+	    /**
+	     * When the input gets focused
+	     */
+	  }, {
+	    key: 'showSuggests',
+	    value: function showSuggests() {
+	      this.searchSuggests();
+	      this.setState({ isSuggestsHidden: false });
+	    }
+
+	    /**
+	     * When the input loses focused
+	     */
+	  }, {
+	    key: 'hideSuggests',
+	    value: function hideSuggests() {
+	      var _this5 = this;
+
+	      this.props.onBlur();
+	      setTimeout(function () {
+	        if (_this5._isMounted) {
+	          _this5.setState({ isSuggestsHidden: true });
+	        }
+	      }, 500);
+	    }
+
+	    /**
+	     * When a key gets pressed in the input
+	     * @param  {Event} event The keypress event
+	     */
+	  }, {
+	    key: 'onInputKeyDown',
+	    value: function onInputKeyDown(event) {
+	      switch (event.which) {
+	        case 40:
+	          // DOWN
+	          event.preventDefault();
+	          this.activateSuggest('next');
+	          break;
+	        case 38:
+	          // UP
+	          event.preventDefault();
+	          this.activateSuggest('prev');
+	          break;
+	        case 13:
+	          // ENTER
+	          event.preventDefault();
+	          // If activeSuggest is populated
+	          // then proceed as expected
+	          if (this.state.activeSuggest) {
+	            this.selectSuggest(this.state.activeSuggest);
+	          }
+	          // If the user has inputted text
+	          // AND there are suggestions,
+	          // we'll default to the first suggestion
+	          else if (this.state.userInput && this.state.suggests.length) {
+	              this.selectSuggest(this.state.suggests[0]);
+	            }
+	            // Cascades down to just checking
+	            // if the user has entered text
+	            // We'll just defer to component `onEmptySuggests`
+	            else if (this.state.userInput) {
+	                this.props.onEmptySuggests();
+	              }
+	          break;
+	        case 9:
+	          // TAB
+	          this.selectSuggest(this.state.activeSuggest);
+	          break;
+	        case 27:
+	          // ESC
+	          this.hideSuggests();
+	          break;
+	        default:
+	          break;
+	      }
+	    }
+
+	    /**
+	     * Activate a new suggest
+	     * @param {String} direction The direction in which to activate new suggest
+	     */
+	  }, {
+	    key: 'activateSuggest',
+	    value: function activateSuggest(direction) {
+	      // eslint-disable-line
+	      if (this.state.isSuggestsHidden) {
+	        this.showSuggests();
+	        return;
+	      }
+
+	      var suggestsLength = this.state.suggests.length;
+	      var recentsLength = this.state.recents.length;
+	      var recentsCount = recentsLength > this.props.recentsLimit ? this.props.recentsLimit : recentsLength;
+	      var suggestsCount = recentsCount + suggestsLength - 1,
+	          next = direction === 'next',
+	          newActiveSuggest = null,
+	          newIndex = 0,
+	          i = 0; // eslint-disable-line id-length
+
+	      for (i; i <= suggestsCount; i++) {
+	        if (this.state.suggests[i] === this.state.activeSuggest || this.state.recents[i] === this.state.activeSuggest) {
+	          newIndex = next ? i + 1 : i - 1;
+	        }
+	      }
+
+	      if (!this.state.activeSuggest) {
+	        newIndex = next ? 0 : suggestsCount;
+	      }
+
+	      if (newIndex >= 0 && newIndex <= suggestsCount) {
+	        // if suggests not full but recents is
+	        if (!suggestsLength && recentsCount) {
+	          newActiveSuggest = this.state.recents[newIndex];
+	        } else if (suggestsLength && recentsCount && newIndex >= suggestsLength) {
+	          newActiveSuggest = this.state.recents[newIndex];
+	        } else {
+	          newActiveSuggest = this.state.suggests[newIndex];
+	        }
+	      }
+
+	      this.setState({ activeSuggest: newActiveSuggest });
+	    }
+
+	    /**
+	     * When an item got selected
+	     * @param {GeosuggestItem} suggest The selected suggest item
+	     */
+	  }, {
+	    key: 'selectSuggest',
+	    value: function selectSuggest(suggest) {
+	      if (!suggest) {
+	        suggest = {
+	          label: this.state.userInput
+	        };
+	      }
+
+	      this.setState({
+	        isSuggestsHidden: true,
+	        userInput: suggest.label || suggest.altLabel
+	      });
+
+	      if (suggest.location) {
+	        this.props.onSuggestSelect(suggest);
+	        return;
+	      }
+
+	      this.geocodeSuggest(suggest);
+	    }
+
+	    /**
+	     * Geocode a suggest
+	     * @param  {Object} suggest The suggest
+	     */
+	  }, {
+	    key: 'geocodeSuggest',
+	    value: function geocodeSuggest(suggest) {
+	      var _this6 = this;
+
+	      var searchObject = undefined;
+	      if (suggest.altLabel) {
+	        searchObject = {
+	          address: suggest.altLabel
+	        };
+	      } else if (suggest.placeId) {
+	        searchObject = {
+	          placeId: suggest.placeId
+	        };
+	      }
+	      this.geocoder.geocode(searchObject, function (results, status) {
+	        if (status !== _this6.googleMaps.GeocoderStatus.OK) {
+	          return;
+	        }
+
+	        var gmaps = results[0],
+	            location = gmaps.geometry.location;
+
+	        suggest.gmaps = gmaps;
+	        suggest.location = {
+	          lat: location.lat(),
+	          lng: location.lng()
+	        };
+
+	        _this6.props.onSuggestSelect(suggest);
+	      });
+	    }
+
+	    /**
+	     * Get the recent/saved items for the list
+	     * @return {Array} The recent/saved items
+	     */
+	  }, {
+	    key: 'getRecentItems',
+	    value: function getRecentItems() {
+	      var _this7 = this;
+
+	      return this.state.recents.map(function (suggest, index) {
+	        var isActive = _this7.state.activeSuggest && suggest.placeId === _this7.state.activeSuggest.placeId;
+
+	        // shut off at the recentsLimit
+	        if (index >= _this7.props.recentsLimit) {
+	          return;
+	        }
+
+	        return (// eslint-disable-line no-extra-parens
+	          _react2['default'].createElement(_GeosuggestItem2['default'], {
+	            key: suggest.placeId,
+	            suggest: suggest,
+	            isActive: isActive,
+	            onSuggestSelect: _this7.selectSuggest.bind(_this7) })
+	        );
+	      });
+	    }
+
+	    /**
+	     * Get the suggest items for the list
+	     * @return {Array} The suggestions
+	     */
+	  }, {
+	    key: 'getSuggestItems',
+	    value: function getSuggestItems() {
+	      var _this8 = this;
+
+	      return this.state.suggests.map(function (suggest, index) {
+	        var isActive = _this8.state.activeSuggest && suggest.placeId === _this8.state.activeSuggest.placeId;
+
+	        return (// eslint-disable-line no-extra-parens
+	          _react2['default'].createElement(_GeosuggestItem2['default'], {
+	            key: suggest.placeId,
+	            suggest: suggest,
+	            isActive: isActive,
+	            onSuggestSelect: _this8.selectSuggest.bind(_this8) })
+	        );
+	      });
+	    }
+
+	    /**
+	     * The classes for the suggests list
+	     * @return {String} The classes
+	     */
+	  }, {
+	    key: 'getSuggestsClasses',
+	    value: function getSuggestsClasses() {
+	      var classes = 'geosuggest__suggests';
+
+	      classes += this.state.isSuggestsHidden ? ' geosuggest__suggests--hidden' : '';
+
+	      return classes;
+	    }
+	  }, {
+	    key: 'getContainerClasses',
+	    value: function getContainerClasses() {
+	      var classes = 'geosuggest-window row';
+
+	      classes += this.state.isSuggestsHidden ? ' geosuggest__suggests--hidden hidden' : '';
+
+	      return classes;
+	    }
+
+	    /**
+	     * Render the view
+	     * @return {Function} The React element to render
+	     */
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this9 = this;
+
+	      var suggestionsSection = function suggestionsSection() {};
+	      var recentsSection = function recentsSection() {};
+	      if (!!this.state.suggests.length) {
+	        suggestionsSection = function () {
+	          return _react2['default'].createElement(
+	            'div',
+	            { className: 'geosuggest-suggestions' },
+	            _react2['default'].createElement(
+	              'span',
+	              { className: 'geosuggest-label allcaps' },
+	              'Suggestions'
+	            ),
+	            _react2['default'].createElement(
+	              'ul',
+	              { className: 'geosuggest__suggests' },
+	              _this9.getSuggestItems()
+	            )
+	          );
+	        };
+	      } else if (this.state.userInput) {
+	        suggestionsSection = this.props.noSuggestionsMarkup;
+	      }
+
+	      if (!!this.state.recents.length) {
+	        recentsSection = function () {
+	          return _react2['default'].createElement(
+	            'div',
+	            { className: 'geosuggest-recents' },
+	            _react2['default'].createElement(
+	              'span',
+	              { className: 'geosuggest-label allcaps' },
+	              'Recent Addresses'
+	            ),
+	            _react2['default'].createElement(
+	              'ul',
+	              { className: 'geosuggest__recents' },
+	              _this9.getRecentItems()
+	            )
+	          );
+	        };
+	      }
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: 'geosuggest-container ' + this.props.className },
+	        _react2['default'].createElement('input', {
+	          className: 'geosuggest__input',
+	          ref: 'geosuggestInput',
+	          type: 'text',
+	          value: this.state.userInput,
+	          placeholder: this.props.placeholder,
+	          disabled: this.props.disabled,
+	          onKeyDown: this.onInputKeyDown.bind(this),
+	          onChange: this.onInputChange.bind(this),
+	          onFocus: this.onFocus.bind(this),
+	          onClick: this.onClick.bind(this),
+	          onBlur: this.hideSuggests.bind(this) }),
+	        !!this.state.userInput && _react2['default'].createElement('button', { className: 'icon icon-close geosuggest-clear', onClick: this.onClearClick.bind(this) }),
+	        _react2['default'].createElement(
+	          'div',
+	          { className: this.getContainerClasses() },
+	          suggestionsSection(),
+	          recentsSection()
+	        ),
+	        this.props.showButton && this.props.buttonMarkup()
+>>>>>>> master
 	      );
 	    }
 	  }]);
 
+<<<<<<< HEAD
 	  return CityDetails;
 	}(_react2.default.Component);
 
@@ -29660,6 +30365,89 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global google */
+=======
+	  return Geosuggest;
+	})(_react2['default'].Component);
+
+	Geosuggest.propTypes = {
+	  autoActivateFirstSuggest: _react2['default'].PropTypes.bool,
+	  bounds: _react2['default'].PropTypes.any,
+	  className: _react2['default'].PropTypes.string,
+	  country: _react2['default'].PropTypes.any,
+	  disabled: _react2['default'].PropTypes.bool,
+	  fixtures: _react2['default'].PropTypes.array,
+	  getRecentLabel: _react2['default'].PropTypes.func,
+	  getSuggestLabel: _react2['default'].PropTypes.func,
+	  googleMaps: _react2['default'].PropTypes.any,
+	  initialValue: _react2['default'].PropTypes.string,
+	  location: _react2['default'].PropTypes.any,
+	  onBlur: _react2['default'].PropTypes.func,
+	  onChange: _react2['default'].PropTypes.func,
+	  onClearClick: _react2['default'].PropTypes.func,
+	  onFocus: _react2['default'].PropTypes.func,
+	  onClick: _react2['default'].PropTypes.func,
+	  onSuggestSelect: _react2['default'].PropTypes.func,
+	  placeholder: _react2['default'].PropTypes.string,
+	  radius: _react2['default'].PropTypes.any,
+	  skipSuggest: _react2['default'].PropTypes.func,
+	  types: _react2['default'].PropTypes.any,
+	  recentsLimit: _react2['default'].PropTypes.any,
+	  showButton: _react2['default'].PropTypes.bool,
+	  buttonMarkup: _react2['default'].PropTypes.func
+	};
+
+	Geosuggest.defaultProps = {
+	  fixtures: [],
+	  initialValue: '',
+	  placeholder: 'Search places',
+	  disabled: false,
+	  className: '',
+	  location: null,
+	  radius: null,
+	  bounds: null,
+	  country: null,
+	  types: null,
+	  googleMaps: null,
+	  onSuggestSelect: function onSuggestSelect() {},
+	  onFocus: function onFocus() {},
+	  onBlur: function onBlur() {},
+	  onClick: function onClick() {},
+	  onChange: function onChange() {},
+	  onClearClick: function onClearClick() {},
+	  skipSuggest: function skipSuggest() {},
+	  getRecentLabel: function getRecentLabel(recent) {
+	    return recent.zipcode;
+	  },
+	  getSuggestLabel: function getSuggestLabel(suggest) {
+	    return suggest.description;
+	  },
+	  autoActivateFirstSuggest: false,
+	  recentsLimit: 5,
+	  showButton: false,
+	  buttonMarkup: function buttonMarkup() {
+	    return _react2['default'].createElement(
+	      'button',
+	      null,
+	      'Enter'
+	    );
+	  },
+	  noSuggestionsMarkup: function noSuggestionsMarkup() {},
+	  onEmptySuggests: function onEmptySuggests() {}
+	};
+
+	exports['default'] = Geosuggest;
+	module.exports = exports['default'];
+
+	/**
+	 * Get the initial state
+	 */
+
+
+/***/ },
+/* 266 */
+/***/ function(module, exports, __webpack_require__) {
+
+>>>>>>> master
 	/* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
 	'use strict';
 
@@ -29669,7 +30457,11 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
+<<<<<<< HEAD
 	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+=======
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+>>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -29681,6 +30473,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+<<<<<<< HEAD
 	var _GeosuggestItem = __webpack_require__(279);
 
 	var _GeosuggestItem2 = _interopRequireDefault(_GeosuggestItem);
@@ -30249,10 +31042,609 @@
 	          recentsSection()
 	        ),
 	        this.props.showButton && this.props.buttonMarkup()
+=======
+	var GeosuggestItem = (function (_React$Component) {
+	  _inherits(GeosuggestItem, _React$Component);
+
+	  function GeosuggestItem() {
+	    _classCallCheck(this, GeosuggestItem);
+
+	    _get(Object.getPrototypeOf(GeosuggestItem.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(GeosuggestItem, [{
+	    key: 'handleClick',
+
+	    /**
+	     * When the element gets clicked
+	     * @param  {Event} event The click event
+	     */
+	    value: function handleClick(event) {
+	      event.preventDefault();
+	      this.props.onSuggestSelect(this.props.suggest);
+	    }
+
+	    /**
+	     * The classes for the suggest item
+	     * @return {String} The classes
+	     */
+	  }, {
+	    key: 'getSuggestClasses',
+	    value: function getSuggestClasses() {
+	      var className = this.props.suggest.className;
+	      var classes = 'geosuggest-item';
+
+	      classes += this.props.isActive ? ' geosuggest-item--active' : '';
+	      classes += className ? ' ' + className : '';
+
+	      return classes;
+	    }
+	  }, {
+	    key: 'renderSaved',
+	    value: function renderSaved() {
+	      return _react2['default'].createElement(
+	        'li',
+	        { className: this.getSuggestClasses(), onClick: this.handleClick.bind(this) },
+	        _react2['default'].createElement('span', { className: 'icon icon-house' }),
+	        _react2['default'].createElement(
+	          'strong',
+	          null,
+	          this.props.suggest.firstname,
+	          ' ',
+	          this.props.suggest.lastname
+	        ),
+	        _react2['default'].createElement('br', null),
+	        this.props.suggest.place_name,
+	        this.props.suggest.address1,
+	        this.props.suggest.address2 ? ' ' + this.props.suggest.address2 : '',
+	        ',',
+	        ' ',
+	        this.props.suggest.city,
+	        ', ',
+	        this.props.suggest.state_name
+	      );
+	    }
+	  }, {
+	    key: 'renderGoogle',
+	    value: function renderGoogle() {
+	      return _react2['default'].createElement(
+	        'li',
+	        { className: this.getSuggestClasses(), onClick: this.handleClick.bind(this) },
+	        this.props.suggest.label
+	      );
+	    }
+
+	    /**
+	     * Render the view
+	     * @return {Function} The React element to render
+	     */
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return this.props.suggest.label ? this.renderGoogle() : this.renderSaved();
+	    }
+	  }], [{
+	    key: 'propTypes',
+	    value: {
+	      isActive: _react2['default'].PropTypes.bool,
+	      suggest: _react2['default'].PropTypes.object,
+	      onSuggestSelect: _react2['default'].PropTypes.func
+	    },
+	    enumerable: true
+	  }]);
+
+	  return GeosuggestItem;
+	})(_react2['default'].Component);
+
+	GeosuggestItem.defaultProps = {
+	  isActive: false,
+	  suggest: {
+	    label: ''
+	  },
+	  onSuggestSelect: function onSuggestSelect() {}
+	};
+
+	exports['default'] = GeosuggestItem;
+	module.exports = exports['default'];
+
+
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(268);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CitiesJumbotron.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CitiesJumbotron.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".cities-jumbotron-container .geosuggest-container {\n    width: 310px;\n    margin: 0 auto;\n    border-radius: 7px;\n    border: none;\n}\n\n.cities-jumbotron-container .geosuggest__input {\n    width: 310px;\n    color: #d8dce6;\n    font-style: italic;\n    font-weight: 300;\n    font-size: 1.75rem;\n    padding: 12px 0px 12px 40px;\n    border: 1px solid #d8dce6;\n    border-radius: 7px;\n}\n\n.cities-jumbotron-container .geosuggest__input::-webkit-input-placeholder{\n    color: #d8dce6;\n}\n\n.cities-jumbotron-container {\n    background-image: url('https://www.lyft.com/images/cities/cities-hero.1e733ed9.png');\n    background-size: cover;\n    height: 410px;\n    text-align: center;\n    background-position: top;\n    background-repeat: no-repeat;\n}\n\n.cities-jumbotron-title {\n    padding-top: 140px;\n    font-size: 4.5rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 4px black;\n    color: #F3F3F5;\n    margin-bottom: 5px;\n}\n\n.cities-jumbotron-input-container {\n    position: relative;\n    margin: 0 auto;\n    width: 310px;\n}\n\n.cities-jumbotron-input {\n    border-radius: 7px;\n    padding: 13px 0 13px 40px;\n    border: 1px solid #d8dce6;\n    width: 310px;\n}\n\n.cities-jumbotron-input::-webkit-input-placeholder {\n      color: #d8dce6;\n      font-style: italic;\n      font-weight: 300;\n      font-size: 1.75rem;\n  }\n\n.cities-jumbotron-input-container input,\n.cities-jumbotron-input-container input:focus {\n    color: #d8dce6;\n    outline: none;\n}\n\n.cities-magnify {\n    position: absolute;\n    top: 13px;\n    left: 13px;\n    color: #d8dce6;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 269 */,
+/* 270 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	__webpack_require__(271);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var CityBottomBanner = function (_React$Component) {
+	  _inherits(CityBottomBanner, _React$Component);
+
+	  function CityBottomBanner() {
+	    _classCallCheck(this, CityBottomBanner);
+
+	    return _possibleConstructorReturn(this, (CityBottomBanner.__proto__ || Object.getPrototypeOf(CityBottomBanner)).apply(this, arguments));
+	  }
+
+	  _createClass(CityBottomBanner, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { style: { 'backgroundImage': 'url("./img/cities/car-lyft.svg")', 'backgroundSize': 'cover', 'backgroundRepeat': 'no-repeat' }, className: 'banner main' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container border-t border-moonstone' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row ' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'mb justify-center align-group-center text-xs-center' },
+	                _react2.default.createElement(
+	                  'h2',
+	                  { className: 'h2ForContent' },
+	                  'Make up to $35/hr driving with Lyft.'
+	                ),
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'btn btn-primary btn-lg shrink-0' },
+	                  ' Apply to Drive '
+	                )
+	              )
+	            )
+	          )
+	        )
 	      );
 	    }
 	  }]);
 
+	  return CityBottomBanner;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = CityBottomBanner;
+
+/***/ },
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(272);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CityBottomBanner.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CityBottomBanner.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "/*main container */\n.banner .main {\n\n\n}\n.banner .container {\n    margin-left: auto;\n    margin-right: auto;\n    padding-left: .9375rem;\n    padding-right: .9375rem;\n    height: 179px;\n    width: 100%;\n    margin-top: 201px;\n    padding-top: 1rem;\n\n}\n\n.banner .border-t {\n    border-top-width: 1px;\n    border-top-style: solid;\n}\n.banner .border-moonstone {\n    border-color: #D8DCE6;\n}\n\n.banner .row {\n    display: flex;\n    flex-wrap: wrap;\n    margin-left: -.9375rem;\n    margin-right: -.9375rem;\n}\n\n.banner .col-md-10 .col-md-offset-1 .col-lg-8 .col-lg-offset-2{\n    position: relative;\n    min-height: 1px;\n    padding-left: .9375rem;\n    padding-right: .9375rem;\n}\n.banner .mb {\n  margin-bottom: 2px;\n  margin-top: 1rem;\n}\n\n.banner .justify-center {\n    -webkit-box-pack: center;\n    justify-content: center;\n}\n\n.banner .align-group-center {\n    -webkit-box-align: center;\n    align-items: center;\n}\n\n.banner .text-xs-center {\n    text-align: center!important;\n}\n.banner .h2ForContent {\n    margin-right: 25px;\n    z-index: 15;\n}\n\n/******\nbutton*/\n\n.banner .btn-primary {\n    padding: .8125rem 1.25rem;\n}\n.banner .shrink-0 {\n    flex-shrink: 0;\n}\n.banner .btn-primary {\n    background: -webkit-linear-gradient(top left,#FF00BF,#B80B8C);\n    background: linear-gradient(to bottom right,#FF00BF,#B80B8C);\n    border: none;\n}\n.banner .btn-lg {\n    padding: .75rem 2rem;\n    font-size: 1.125rem;\n    line-height: 1.33333;\n    border-radius: .5rem;\n}\n.banner .btn-primary {\n    color: #fff;\n}\n.banner .btn {\n    display: inline-block;\n    font-weight: 400;\n    text-align: center;\n    white-space: nowrap;\n    vertical-align: middle;\n    cursor: pointer;\n    -webkit-user-select: none;\n    user-select: none;\n    border: .08333rem solid transparent;\n    padding: 1.2rem 4rem;\n  font-size: 1.5rem;\n  line-height: 1.1;\n  border-radius: 0.5rem;;\n    z-index: 14;\n\n}\n\n/*\n******************************************************************************************************************************************************\nfirst media query\n*******************************************************************************************************************************************************/\n@media (min-width: 544px) {\n  .banner .container {\n      max-width: 34rem;\n  }\n  .banner .justify-center {\n      display: flex;\n  }\n}\n/*\n******************************************************************************************************************************************************\n2nd media query\n*******************************************************************************************************************************************************/\n@media (min-width: 768px) {\n.banner .container {\n    max-width: 60rem;\n  }\n\n  .banner .main {\n    margin-bottom: 4rem;\n}\n.banner .justify-center {\n    display: flex;\n}\n\n\n}\n/*\n******************************************************************************************************************************************************\n3nd media query\n*******************************************************************************************************************************************************/\n@media (min-width: 992px) {\n.banner  .container {\n      max-width: 105rem;\n  }\n.banner  .justify-center {\n      display: flex;\n  }\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(274);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var CitiesList = function (_React$Component) {
+	  _inherits(CitiesList, _React$Component);
+
+	  function CitiesList() {
+	    _classCallCheck(this, CitiesList);
+
+	    return _possibleConstructorReturn(this, (CitiesList.__proto__ || Object.getPrototypeOf(CitiesList)).apply(this, arguments));
+	  }
+
+	  _createClass(CitiesList, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container-fluid city-list' },
+	        'CitiesList Component'
+	      );
+	    }
+	  }]);
+
+	  return CitiesList;
+	}(_react2.default.Component);
+
+	exports.default = CitiesList;
+
+/***/ },
+/* 274 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(275);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CitiesListComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CitiesListComp.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 275 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 276 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(277);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Rides = function (_React$Component) {
+	    _inherits(Rides, _React$Component);
+
+	    function Rides() {
+	        _classCallCheck(this, Rides);
+
+	        return _possibleConstructorReturn(this, (Rides.__proto__ || Object.getPrototypeOf(Rides)).apply(this, arguments));
+	    }
+
+	    _createClass(Rides, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                'This is the rides comp!'
+	            );
+	        }
+	    }]);
+
+	    return Rides;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = Rides;
+
+/***/ },
+/* 277 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(278);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 278 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 279 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(280);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var UserDashboardComp = function (_React$Component) {
+	    _inherits(UserDashboardComp, _React$Component);
+
+	    function UserDashboardComp() {
+	        _classCallCheck(this, UserDashboardComp);
+
+	        return _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).apply(this, arguments));
+	    }
+
+	    _createClass(UserDashboardComp, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                'This is userdashboard comp!'
+	            );
+	        }
+	    }]);
+
+	    return UserDashboardComp;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = UserDashboardComp;
+
+/***/ },
+/* 280 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(281);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 281 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 282 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _CitiesEstimateForm = __webpack_require__(283);
+
+	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
+
+	__webpack_require__(286);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var CityDetails = function (_React$Component) {
+	  _inherits(CityDetails, _React$Component);
+
+	  function CityDetails() {
+	    _classCallCheck(this, CityDetails);
+
+	    return _possibleConstructorReturn(this, (CityDetails.__proto__ || Object.getPrototypeOf(CityDetails)).apply(this, arguments));
+	  }
+
+	  _createClass(CityDetails, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          'This is city details!'
+	        ),
+	        _react2.default.createElement(_CitiesEstimateForm2.default, null)
+>>>>>>> master
+	      );
+	    }
+	  }]);
+
+<<<<<<< HEAD
 	  return Geosuggest;
 	})(_react2['default'].Component);
 
@@ -30350,11 +31742,32 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+=======
+	  return CityDetails;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = CityDetails;
+
+/***/ },
+/* 283 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+>>>>>>> master
 
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
+<<<<<<< HEAD
 	var GeosuggestItem = (function (_React$Component) {
 	  _inherits(GeosuggestItem, _React$Component);
 
@@ -30462,12 +31875,171 @@
 
 /***/ },
 /* 280 */
+=======
+	__webpack_require__(284);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Geosuggest = __webpack_require__(265);
+
+	var destInput = {
+	  background: 'green'
+	};
+
+	var CitiesEstimateForm = function (_React$Component) {
+	  _inherits(CitiesEstimateForm, _React$Component);
+
+	  function CitiesEstimateForm() {
+	    _classCallCheck(this, CitiesEstimateForm);
+
+	    return _possibleConstructorReturn(this, (CitiesEstimateForm.__proto__ || Object.getPrototypeOf(CitiesEstimateForm)).apply(this, arguments));
+	  }
+
+	  _createClass(CitiesEstimateForm, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'test'
+	        ),
+	        _react2.default.createElement(
+	          'form',
+	          { className: 'estimateForm' },
+	          _react2.default.createElement(
+	            'fieldset',
+	            null,
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'pickup-input-container' },
+	              _react2.default.createElement('div', { className: 'pickup-icon' }),
+	              _react2.default.createElement(Geosuggest, {
+	                className: 'pickup-input',
+	                placeholder: 'Add pickup location'
+	              })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'pickup-destination-container' },
+	              _react2.default.createElement('div', { className: 'dest-icon' }),
+	              _react2.default.createElement(Geosuggest, {
+	                className: 'dest-input',
+	                placeholder: 'Add destination'
+	              })
+	            ),
+	            _react2.default.createElement(
+	              'button',
+	              { className: 'button-getEstimate' },
+	              'Get Estimate'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'estimate' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'estimate-lyft' },
+	                _react2.default.createElement(
+	                  'span',
+	                  null,
+	                  '$11'
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  null,
+	                  'Lyft'
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'divider' }),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'estimate-plus' },
+	                _react2.default.createElement(
+	                  'span',
+	                  null,
+	                  '$18'
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  null,
+	                  'Plus'
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return CitiesEstimateForm;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = CitiesEstimateForm;
+
+/***/ },
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
+	var content = __webpack_require__(285);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CitiesEstimateForm.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CitiesEstimateForm.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 285 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "*:focus {\n  outline: none;\n}\n.estimateForm {\n  background-color: #F3F3F5;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: .5rem;\n  border-color: #D8DCE6;\n  padding: 1.5rem;\n  box-sizing: inherit;\n  font-size: 1.8rem;\n  line-height: 1.3;\n}\n\n.estimateForm input {\n  display: block;\n  width: 100%;\n  color: #333447;\n  padding: .75rem 1.25rem;\n  font-size: 1.8rem;\n  line-height: 1.33333;\n  padding-left: 2.75rem;\n}\n\n.pickup-input-container .geosuggest__input {\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n.geosuggest-container span,\n.geosuggest-container button {\n  display: none;\n}\n\n.geosuggest-suggestions {\n  display: flex;\n  justify-content: center;\n}\n\n.geosuggest__suggests {\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n  background: white;\n  width: 92.5%;\n  padding-left: 25px;\n  margin-top: -1px;\n  border-top: 1px solid white;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n\n.pickup-icon {\n  background-repeat: no-repeat\n}\n\n.pickup-destination-container .geosuggest__input {\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n\n.button-getEstimate {\n  padding: .8125rem 1.25rem;\n  background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: -o-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: linear-gradient(to bottom right, #FF00BF, #B80B8C);\n  margin-top: 1rem;\n  border: none;\n  display: block;\n  width: 100%;\n  font-size: 1.8srem;\n  line-height: 1.33333;\n  border-radius: .5rem;\n  color: #fff;\n  font-weight: 400;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  user-select: none;\n}\n\n.estimate {\n  margin-top: 1.5rem;\n  margin-bottom: .5rem;\n  display: flex;\n  text-align: center!important;\n  font-size: 2.1rem;\n  font-weight: 100;\n  justify-content: center;\n}\n\n.estimate-lyft {\n\n}\n\n.estimate-lyft div {\n  font-size: 1.7rem;\n}\n\n.divider {\n  border-color: #D8DCE6;\n  border-right-width: 1px;\n  border-right-style: solid;\n  margin: 0 15%;\n}\n\n.estimate-plus {\n\n}\n\n.estimate-plus div {\n  font-size: 1.7rem;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 286 */
+>>>>>>> master
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+<<<<<<< HEAD
 	var content = __webpack_require__(281);
+=======
+	var content = __webpack_require__(287);
+>>>>>>> master
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30487,7 +32059,11 @@
 	}
 
 /***/ },
+<<<<<<< HEAD
 /* 281 */
+=======
+/* 287 */
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30501,7 +32077,11 @@
 
 
 /***/ },
+<<<<<<< HEAD
 /* 282 */
+=======
+/* 288 */
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30516,7 +32096,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+<<<<<<< HEAD
 	__webpack_require__(283);
+=======
+	__webpack_require__(289);
+>>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30536,12 +32120,90 @@
 	    }
 
 	    _createClass(LoginComp, [{
+<<<<<<< HEAD
+=======
+	        key: 'handleClick',
+	        value: function handleClick() {
+	            var loginForm = document.getElementById('loginForm');
+	            loginForm.classList.add('login-form-container-active');
+	        }
+	    }, {
+	        key: 'handleClose',
+	        value: function handleClose() {
+	            var loginForm = document.getElementById('loginForm');
+	            loginForm.classList.remove('login-form-container-active');
+	        }
+	    }, {
+>>>>>>> master
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
 	                null,
+<<<<<<< HEAD
 	                'This is login!'
+=======
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'login-container' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { id: 'loginForm', className: 'login-form-container' },
+	                        _react2.default.createElement('span', { onClick: this.handleClose, className: 'login-close glyphicon glyphicon-remove' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'login-heading' },
+	                            'Log in to Shyft'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'login-input-container' },
+	                            _react2.default.createElement('input', { type: 'text', placeholder: 'Phone number' })
+	                        ),
+	                        _react2.default.createElement(
+	                            'button',
+	                            { type: 'button', className: 'login-button btn btn-primary' },
+	                            'Log In'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'login-or' },
+	                            'or'
+	                        ),
+	                        _react2.default.createElement(
+	                            'button',
+	                            { type: 'button', className: 'login-facebook-btn btn-primary' },
+	                            _react2.default.createElement('i', { className: 'fa fa-facebook-official login-fb-logo', 'aria-hidden': 'true' }),
+	                            'Log in with Facebook'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'login-newtolyft' },
+	                            'New to Lyft?',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'login-signup' },
+	                                'Sign up'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'login-newtolyft' },
+	                            'Need to update your phone number?',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'login-contact' },
+	                                'Contact us'
+	                            )
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { type: 'button', onClick: this.handleClick },
+	                        'click me'
+	                    )
+	                )
+>>>>>>> master
 	            );
 	        }
 	    }]);
@@ -30554,13 +32216,21 @@
 	exports.default = LoginComp;
 
 /***/ },
+<<<<<<< HEAD
 /* 283 */
+=======
+/* 289 */
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
+<<<<<<< HEAD
 	var content = __webpack_require__(284);
+=======
+	var content = __webpack_require__(290);
+>>>>>>> master
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30580,7 +32250,11 @@
 	}
 
 /***/ },
+<<<<<<< HEAD
 /* 284 */
+=======
+/* 290 */
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30588,7 +32262,11 @@
 
 
 	// module
+<<<<<<< HEAD
 	exports.push([module.id, "", ""]);
+=======
+	exports.push([module.id, ".login-container {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    z-index: 100;\n    overflow: hidden;\n}\n\n.login-form-container {\n    text-align: center;\n    margin: 0 auto;\n    transform: translateY(-385px);\n    width: 280px;\n    height: 364px;\n    background: #fff;\n    color: #8f9cb3;\n    font-weight: 300;\n    transition: transform .5s ease;\n}\n\n.login-form-container-active {\n    transform: translateY(185px);\n}\n\n.login-close {\n    position: absolute;\n    right: 5px;\n    top: 5px;\n}\n\n.login-close:hover {\n    text-decoration: underline;\n    cursor: pointer;\n}\n\n.login-heading {\n    margin-bottom: 10px;\n    padding-top: 25px;\n    font-weight: bold;\n    font-size: 2.25rem;\n    color: #333;\n}\n\n.login-input-container {\n    margin-bottom: 20px;\n}\n\n.login-input-container input {\n    padding: 8px 15px;\n    width: 250px;\n    border-radius: 7px;\n    border: 1px solid #d8dce6;\n}\n\n.login-button {\n    width: 250px;\n    font-size: 1.45rem;\n    padding-top: 8px;\n    padding-bottom: 8px;\n    text-transform: uppercase;\n    margin-bottom: 10px;\n}\n\n.login-button:hover {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-button:active,\n.login-button:focus {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-or {\n    color: #333;\n}\n\n.login-facebook-btn {\n    border-radius: 7px;\n    border: none;\n    padding: 8px;\n    font-size: 1.65rem;\n    width: 250px;\n    margin-bottom: 15px;\n}\n\n.login-fb-logo {\n    font-size: 22px;\n    vertical-align: text-bottom;\n    margin-right: 8px;\n}\n\n.login-signup,\n.login-contact {\n    color: #ff00bf;\n    margin-left: 5px;\n}\n\n.login-newtolyft {\n    width: 265px;\n}\n", ""]);
+>>>>>>> master
 
 	// exports
 
