@@ -11,8 +11,8 @@ class CitiesComp extends React.Component{
     render(){
         return (
             <div>
-                <CitiesListComp />
                 <CitiesJumbotron/>
+                <CitiesListComp />
                 <CityBottomBanner />
             </div>
         );
