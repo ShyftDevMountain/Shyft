@@ -1,23 +1,28 @@
 import React from 'react';
-
 import './LoginComp.css';
 
 class LoginComp extends React.Component{
 
-
-    handleClick(){
+    handleLoginClick(){
+        var loginContainer = document.getElementById('loginContainer');
         var loginForm = document.getElementById('loginForm');
+
+        loginContainer.classList.add('login-container-active');
         loginForm.classList.add('login-form-container-active');
     }
 
-    handleClose(){
+    handleLoginClose(){
+        var loginContainer = document.getElementById('loginContainer');
         var loginForm = document.getElementById('loginForm');
+
+        loginContainer.classList.remove('login-container-active');
         loginForm.classList.remove('login-form-container-active');
     }
+
     render(){
         return (
             <div>
-                <div className="login-container">
+                <div id="loginContainer" className="login-container">
                     <div id="loginForm" className="login-form-container">
                         <span onClick={this.handleClose} className="login-close glyphicon glyphicon-remove"></span>
                         <div className="login-heading">Log in to Shyft</div>

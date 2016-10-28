@@ -4,6 +4,7 @@ import {Link} from 'react-router';
 import SideMenu from '../SideMenu/SideMenu.jsx'
 import SideMenuBackDrop from '../SideMenuBackDrop/SideMenuBackDrop.jsx';
 import Footer from '../Footer/Footer.jsx';
+import LoginComp from '../../Login/LoginComp/LoginComp.jsx';
 import './NavBar.css';
 
 class NavBar extends React.Component {
@@ -78,10 +79,10 @@ class NavBar extends React.Component {
       super(props);
       this.state = {
         showMenu: 'sidemenu',
-        showBackDrop: 'SideMenuBackDrop'
+        showBackDrop: 'SideMenuBackDrop',
       }
-      this.hideMenu = this.hideMenu.bind(this)
-      this.showMenu = this.showMenu.bind(this)
+      this.hideMenu = this.hideMenu.bind(this);
+      this.showMenu = this.showMenu.bind(this);
     }
 
     showMenu() {
@@ -99,9 +100,13 @@ class NavBar extends React.Component {
       })
     }
 
+
+
   render() {
     return (
-<div>
+    <div>
+
+        <LoginComp />
 
 
         <SideMenu showMenu={this.state.showMenu}/>
@@ -110,6 +115,7 @@ class NavBar extends React.Component {
                 <span className="glyphicon glyphicon-menu-hamburger" onClick={this.showMenu}></span>
                 <img src="img/LYFT_LOGO/SVG/white_logo.svg"/>
             </div>
+
 
         <div onMouseLeave={this.handleHoverLeave}>
             <div id="explore" className="navbar-container">
@@ -135,7 +141,7 @@ class NavBar extends React.Component {
                         <Link to="/login" id="login">Login</Link>
                     </div>
                 </div>
-                <div id='navbar-signup' className="navbar-signup">
+                <div  id='navbar-signup' className="navbar-signup">
                     <Link to="/userdashboard" id="signup-link">Sign up</Link>
                 </div>
             </div>
@@ -147,8 +153,11 @@ class NavBar extends React.Component {
                 <div className="navbar-hover-options border-hide">Blog</div>
             </div>
         </div>
+
+
         {this.props.children}
         <Footer/>
+
     </div>
     )
   }
