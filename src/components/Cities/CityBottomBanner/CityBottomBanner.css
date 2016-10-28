@@ -1,0 +1,147 @@
+/*main container */
+.main {
+  background-image: url('../../../img/cities/car-lyft.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    height: 179px;
+    width: 100%;
+    margin-top: 201px;
+    padding-top: 1rem;
+
+}
+
+.border-t {
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+.border-moonstone {
+    border-color: #D8DCE6;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -.9375rem;
+    margin-right: -.9375rem;
+}
+
+.col-md-10 .col-md-offset-1 .col-lg-8 .col-lg-offset-2{
+    position: relative;
+    min-height: 1px;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+}
+.mb {
+  margin-bottom: 2px;
+  margin-top: 1rem;
+}
+
+.justify-center {
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.align-group-center {
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.text-xs-center {
+    text-align: center!important;
+}
+.h2ForContent {
+    margin-right: 25px;
+    z-index: 15;
+}
+
+/******
+button*/
+
+.btn-primary {
+    padding: .8125rem 1.25rem;
+}
+.shrink-0 {
+    flex-shrink: 0;
+}
+.btn-primary {
+    background: -webkit-linear-gradient(top left,#FF00BF,#B80B8C);
+    background: linear-gradient(to bottom right,#FF00BF,#B80B8C);
+    border: none;
+}
+.btn-lg {
+    padding: .75rem 2rem;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    border-radius: .5rem;
+}
+.btn-primary {
+    color: #fff;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    border: .08333rem solid transparent;
+    padding: 1.2rem 4rem;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  border-radius: 0.5rem;;
+    z-index: 14;
+
+}
+
+/*
+******************************************************************************************************************************************************
+first media query
+*******************************************************************************************************************************************************/
+@media (min-width: 544px) {
+  .container {
+      max-width: 34rem;
+  }
+  .justify-center {
+      display: flex;
+  }
+}
+/*
+******************************************************************************************************************************************************
+2nd media query
+*******************************************************************************************************************************************************/
+@media (min-width: 768px) {
+.container {
+    max-width: 60rem;
+  }
+
+  .main {
+    margin-bottom: 4rem;
+}
+.justify-center {
+    display: flex;
+}
+
+
+}
+/*
+******************************************************************************************************************************************************
+3nd media query
+*******************************************************************************************************************************************************/
+@media (min-width: 992px) {
+  .container {
+      max-width: 105rem;
+  }
+  .justify-center {
+      display: flex;
+  }
+}
