@@ -74,35 +74,19 @@
 
 	var _CitiesComp2 = _interopRequireDefault(_CitiesComp);
 
-<<<<<<< HEAD
-	var _RidesComp = __webpack_require__(268);
+	var _RidesComp = __webpack_require__(273);
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(271);
+	var _UserDashboardComp = __webpack_require__(276);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(274);
+	var _CityDetails = __webpack_require__(279);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
-	var _LoginComp = __webpack_require__(282);
-=======
-	var _RidesComp = __webpack_require__(276);
-
-	var _RidesComp2 = _interopRequireDefault(_RidesComp);
-
-	var _UserDashboardComp = __webpack_require__(279);
-
-	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
-
-	var _CityDetails = __webpack_require__(282);
-
-	var _CityDetails2 = _interopRequireDefault(_CityDetails);
-
-	var _LoginComp = __webpack_require__(288);
->>>>>>> master
+	var _LoginComp = __webpack_require__(285);
 
 	var _LoginComp2 = _interopRequireDefault(_LoginComp);
 
@@ -28617,11 +28601,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, ".MainJumbotron-container {\n    background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n        height: 500px;\n    }\n}\n", ""]);
-=======
 	exports.push([module.id, ".MainJumbotron-container {\n    background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n        height: 500px;\n    }\n}\n", ""]);
->>>>>>> master
 
 	// exports
 
@@ -29039,14 +29019,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	__webpack_require__(262);
-
-	var _CityBottomBanner = __webpack_require__(264);
-
-	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
-
-=======
 	var _reactDom = __webpack_require__(34);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
@@ -29057,15 +29029,14 @@
 
 	var _CitiesJumbotron2 = _interopRequireDefault(_CitiesJumbotron);
 
-	var _CityBottomBanner = __webpack_require__(270);
+	var _CityBottomBanner = __webpack_require__(269);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesListComp = __webpack_require__(273);
+	var _CitiesListComp = __webpack_require__(272);
 
 	var _CitiesListComp2 = _interopRequireDefault(_CitiesListComp);
 
->>>>>>> master
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29089,11 +29060,8 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-<<<<<<< HEAD
-=======
 	                _react2.default.createElement(_CitiesJumbotron2.default, null),
 	                _react2.default.createElement(_CitiesListComp2.default, null),
->>>>>>> master
 	                _react2.default.createElement(_CityBottomBanner2.default, null)
 	            );
 	        }
@@ -29153,11 +29121,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-<<<<<<< HEAD
-	  value: true
-=======
 	    value: true
->>>>>>> master
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -29166,17 +29130,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _reactRouter = __webpack_require__(172);
-
-	__webpack_require__(265);
-=======
 	var _reactGeosuggestPlus = __webpack_require__(265);
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
 	__webpack_require__(267);
->>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29186,54 +29144,6 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-<<<<<<< HEAD
-	var CityBottomBanner = function (_React$Component) {
-	  _inherits(CityBottomBanner, _React$Component);
-
-	  function CityBottomBanner() {
-	    _classCallCheck(this, CityBottomBanner);
-
-	    return _possibleConstructorReturn(this, (CityBottomBanner.__proto__ || Object.getPrototypeOf(CityBottomBanner)).apply(this, arguments));
-	  }
-
-	  _createClass(CityBottomBanner, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'main' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'container border-t border-moonstone' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'row ' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'mb justify-center align-group-center text-xs-center' },
-	                _react2.default.createElement(
-	                  'h2',
-	                  { className: 'h2ForContent' },
-	                  'Make up to $35/hr driving with Lyft.'
-	                ),
-	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'btn btn-primary btn-lg shrink-0' },
-	                  ' Apply to Drive '
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return CityBottomBanner;
-=======
 	var CitiesJumbotron = function (_React$Component) {
 	    _inherits(CitiesJumbotron, _React$Component);
 
@@ -29280,304 +29190,16 @@
 	    }]);
 
 	    return CitiesJumbotron;
->>>>>>> master
 	}(_react2.default.Component);
 
 	;
 
-<<<<<<< HEAD
-	exports.default = CityBottomBanner;
-=======
 	exports.default = CitiesJumbotron;
->>>>>>> master
 
 /***/ },
 /* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(266);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CityBottomBanner.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CityBottomBanner.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 266 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "/*main container */\n.main {\n  background-image: url(" + __webpack_require__(267) + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n\n\n}\n.container {\n    margin-left: auto;\n    margin-right: auto;\n    padding-left: .9375rem;\n    padding-right: .9375rem;\n    height: 179px;\n    width: 100%;\n    margin-top: 201px;\n    padding-top: 1rem;\n\n}\n\n.border-t {\n    border-top-width: 1px;\n    border-top-style: solid;\n}\n.border-moonstone {\n    border-color: #D8DCE6;\n}\n\n.row {\n    display: flex;\n    flex-wrap: wrap;\n    margin-left: -.9375rem;\n    margin-right: -.9375rem;\n}\n\n.col-md-10 .col-md-offset-1 .col-lg-8 .col-lg-offset-2{\n    position: relative;\n    min-height: 1px;\n    padding-left: .9375rem;\n    padding-right: .9375rem;\n}\n.mb {\n  margin-bottom: 2px;\n  margin-top: 1rem;\n}\n\n.justify-center {\n    -webkit-box-pack: center;\n    justify-content: center;\n}\n\n.align-group-center {\n    -webkit-box-align: center;\n    align-items: center;\n}\n\n.text-xs-center {\n    text-align: center!important;\n}\n.h2ForContent {\n    margin-right: 25px;\n    z-index: 15;\n}\n\n/******\nbutton*/\n\n.btn-primary {\n    padding: .8125rem 1.25rem;\n}\n.shrink-0 {\n    flex-shrink: 0;\n}\n.btn-primary {\n    background: -webkit-linear-gradient(top left,#FF00BF,#B80B8C);\n    background: linear-gradient(to bottom right,#FF00BF,#B80B8C);\n    border: none;\n}\n.btn-lg {\n    padding: .75rem 2rem;\n    font-size: 1.125rem;\n    line-height: 1.33333;\n    border-radius: .5rem;\n}\n.btn-primary {\n    color: #fff;\n}\n.btn {\n    display: inline-block;\n    font-weight: 400;\n    text-align: center;\n    white-space: nowrap;\n    vertical-align: middle;\n    cursor: pointer;\n    -webkit-user-select: none;\n    user-select: none;\n    border: .08333rem solid transparent;\n    padding: 1.2rem 4rem;\n  font-size: 1.5rem;\n  line-height: 1.1;\n  border-radius: 0.5rem;;\n    z-index: 14;\n\n}\n\n/*\n******************************************************************************************************************************************************\nfirst media query\n*******************************************************************************************************************************************************/\n@media (min-width: 544px) {\n  .container {\n      max-width: 34rem;\n  }\n  .justify-center {\n      display: flex;\n  }\n}\n/*\n******************************************************************************************************************************************************\n2nd media query\n*******************************************************************************************************************************************************/\n@media (min-width: 768px) {\n.container {\n    max-width: 60rem;\n  }\n\n  .main {\n    margin-bottom: 4rem;\n}\n.justify-center {\n    display: flex;\n}\n\n\n}\n/*\n******************************************************************************************************************************************************\n3nd media query\n*******************************************************************************************************************************************************/\n@media (min-width: 992px) {\n  .container {\n      max-width: 105rem;\n  }\n  .justify-center {\n      display: flex;\n  }\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 267 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "f7270b591e355cc82bb47c62d3017947.svg";
-
-/***/ },
-/* 268 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(269);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Rides = function (_React$Component) {
-	    _inherits(Rides, _React$Component);
-
-	    function Rides() {
-	        _classCallCheck(this, Rides);
-
-	        return _possibleConstructorReturn(this, (Rides.__proto__ || Object.getPrototypeOf(Rides)).apply(this, arguments));
-	    }
-
-	    _createClass(Rides, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                'This is the rides comp!'
-	            );
-	        }
-	    }]);
-
-	    return Rides;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = Rides;
-
-/***/ },
-/* 269 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(270);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 270 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 271 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(272);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var UserDashboardComp = function (_React$Component) {
-	    _inherits(UserDashboardComp, _React$Component);
-
-	    function UserDashboardComp() {
-	        _classCallCheck(this, UserDashboardComp);
-
-	        return _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).apply(this, arguments));
-	    }
-
-	    _createClass(UserDashboardComp, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                'This is userdashboard comp!'
-	            );
-	        }
-	    }]);
-
-	    return UserDashboardComp;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = UserDashboardComp;
-
-/***/ },
-/* 272 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(273);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 273 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 274 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _CitiesEstimateForm = __webpack_require__(275);
-
-	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
-
-	__webpack_require__(280);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var CityDetails = function (_React$Component) {
-	  _inherits(CityDetails, _React$Component);
-
-	  function CityDetails() {
-	    _classCallCheck(this, CityDetails);
-
-	    return _possibleConstructorReturn(this, (CityDetails.__proto__ || Object.getPrototypeOf(CityDetails)).apply(this, arguments));
-	  }
-
-	  _createClass(CityDetails, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'div',
-	          null,
-	          'This is city details!'
-	        ),
-	        _react2.default.createElement(_CitiesEstimateForm2.default, null)
-=======
 	/* global google */
 	/* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
 	'use strict';
@@ -30168,204 +29790,10 @@
 	          recentsSection()
 	        ),
 	        this.props.showButton && this.props.buttonMarkup()
->>>>>>> master
 	      );
 	    }
 	  }]);
 
-<<<<<<< HEAD
-	  return CityDetails;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = CityDetails;
-
-/***/ },
-/* 275 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(276);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Geosuggest = __webpack_require__(278);
-
-	var destInput = {
-	  background: 'green'
-	};
-
-	var CitiesEstimateForm = function (_React$Component) {
-	  _inherits(CitiesEstimateForm, _React$Component);
-
-	  function CitiesEstimateForm() {
-	    _classCallCheck(this, CitiesEstimateForm);
-
-	    return _possibleConstructorReturn(this, (CitiesEstimateForm.__proto__ || Object.getPrototypeOf(CitiesEstimateForm)).apply(this, arguments));
-	  }
-
-	  _createClass(CitiesEstimateForm, [{
-	    key: 'onSuggestSelectPickup',
-	    value: function onSuggestSelectPickup(pickup) {
-	      console.log(pickup.location);
-	    }
-	  }, {
-	    key: 'onSuggestSelectDest',
-	    value: function onSuggestSelectDest(dest) {
-	      console.log(dest.location);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'test'
-	        ),
-	        _react2.default.createElement(
-	          'form',
-	          { className: 'estimateForm' },
-	          _react2.default.createElement(
-	            'fieldset',
-	            null,
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'pickup-input-container' },
-	              _react2.default.createElement('div', { className: 'pickup-icon' }),
-	              _react2.default.createElement(Geosuggest, {
-	                className: 'pickup-input',
-	                placeholder: 'Add pickup location',
-	                onSuggestSelect: this.onSuggestSelectPickup
-	              })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'pickup-destination-container' },
-	              _react2.default.createElement('div', { className: 'dest-icon' }),
-	              _react2.default.createElement(Geosuggest, {
-	                className: 'dest-input',
-	                placeholder: 'Add destination',
-	                onSuggestSelect: this.onSuggestSelectDest
-	              })
-	            ),
-	            _react2.default.createElement(
-	              'button',
-	              { className: 'button-getEstimate' },
-	              'Get Estimate'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'estimate' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'estimate-lyft' },
-	                _react2.default.createElement(
-	                  'span',
-	                  null,
-	                  '$11'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  'Lyft'
-	                )
-	              ),
-	              _react2.default.createElement('div', { className: 'divider' }),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'estimate-plus' },
-	                _react2.default.createElement(
-	                  'span',
-	                  null,
-	                  '$18'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  'Plus'
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return CitiesEstimateForm;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = CitiesEstimateForm;
-
-/***/ },
-/* 276 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(277);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CitiesEstimateForm.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CitiesEstimateForm.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 277 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "*:focus {\n  outline: none;\n}\n.estimateForm {\n  background-color: #F3F3F5;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: .5rem;\n  border-color: #D8DCE6;\n  padding: 1.5rem;\n  box-sizing: inherit;\n  font-size: 1.8rem;\n  line-height: 1.3;\n}\n\n.estimateForm input {\n  display: block;\n  width: 100%;\n  color: #333447;\n  padding: .75rem 1.25rem;\n  font-size: 1.8rem;\n  line-height: 1.33333;\n  padding-left: 2.75rem;\n}\n\n.pickup-input-container .geosuggest__input {\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n.geosuggest-container span,\n.geosuggest-container button {\n  display: none;\n}\n\n.estimateForm .geosuggest__suggests {\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n  background: white;\n  padding-left: 26px;\n  margin-top: -1px;\n  border-top: 1px solid white;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n  right: 16px;\n  left: 16px;\n}\n.dest-input .geosuggest__suggests {\nmargin-top: -3px;\n}\n\n.pickup-icon {\n  background-repeat: no-repeat\n}\n\n.pickup-destination-container .geosuggest__input {\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n\n.button-getEstimate {\n  padding: .8125rem 1.25rem;\n  background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: -o-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: linear-gradient(to bottom right, #FF00BF, #B80B8C);\n  margin-top: 1rem;\n  border: none;\n  display: block;\n  width: 100%;\n  font-size: 1.8srem;\n  line-height: 1.33333;\n  border-radius: .5rem;\n  color: #fff;\n  font-weight: 400;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  user-select: none;\n}\n\n.estimate {\n  margin-top: 1.5rem;\n  margin-bottom: .5rem;\n  display: flex;\n  text-align: center!important;\n  font-size: 2.1rem;\n  font-weight: 100;\n  justify-content: center;\n}\n\n.estimate-lyft {\n\n}\n\n.estimate-lyft div {\n  font-size: 1.7rem;\n}\n\n.estimateForm .divider {\n  border-color: #D8DCE6;\n  border-right-width: 1px;\n  border-right-style: solid;\n  margin: 0 15%;\n}\n\n.estimate-plus {\n\n}\n\n.estimate-plus div {\n  font-size: 1.7rem;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 278 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* global google */
-=======
 	  return Geosuggest;
 	})(_react2['default'].Component);
 
@@ -30447,7 +29875,6 @@
 /* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
->>>>>>> master
 	/* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
 	'use strict';
 
@@ -30457,11 +29884,7 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-<<<<<<< HEAD
-	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-=======
 	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
->>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -30473,576 +29896,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _GeosuggestItem = __webpack_require__(279);
-
-	var _GeosuggestItem2 = _interopRequireDefault(_GeosuggestItem);
-
-	var Geosuggest = (function (_React$Component) {
-	  _inherits(Geosuggest, _React$Component);
-
-	  function Geosuggest() {
-	    _classCallCheck(this, Geosuggest);
-
-	    _get(Object.getPrototypeOf(Geosuggest.prototype), 'constructor', this).apply(this, arguments);
-
-	    this.state = {
-	      isSuggestsHidden: true,
-	      userInput: this.props.initialValue,
-	      activeSuggest: null,
-	      suggests: [], // google predictions
-	      recents: [] // recent/saved addresses
-	    };
-	  }
-
-	  _createClass(Geosuggest, [{
-	    key: 'componentDidMount',
-
-	    /**
-	     * Called on the client side after component is mounted.
-	     * Google api sdk object will be obtained and cached as a instance property.
-	     * Necessary objects of google api will also be determined and saved.
-	     */
-	    value: function componentDidMount() {
-	      this.setInputValue(this.props.initialValue);
-
-	      var googleMaps = this.props.googleMaps || google && google.maps || this.googleMaps;
-
-	      if (!googleMaps) {
-	        console.error('Google map api was not found in the page.');
-	      } else {
-	        this.googleMaps = googleMaps;
-	      }
-
-	      this.autocompleteService = new googleMaps.places.AutocompleteService();
-	      this.geocoder = new googleMaps.Geocoder();
-	      this._isMounted = true;
-	    }
-
-	    /**
-	     * Change inputValue if prop changes
-	     * @param {Object} props The new props
-	     */
-	  }, {
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(props) {
-	      if (this.props.initialValue !== props.initialValue) {
-	        this.setState({ userInput: props.initialValue });
-	      }
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      this._isMounted = false;
-	    }
-
-	    /**
-	     * Method used for setting initial value.
-	     * @param {string} value to set in input
-	     */
-	  }, {
-	    key: 'setInputValue',
-	    value: function setInputValue(value) {
-	      this.setState({
-	        userInput: value
-	      });
-	    }
-
-	    /**
-	     * When the input got changed
-	     */
-	  }, {
-	    key: 'onInputChange',
-	    value: function onInputChange() {
-	      var _this = this;
-
-	      var userInput = this.refs.geosuggestInput.value;
-
-	      this.setState({ userInput: userInput }, function () {
-	        _this.showSuggests();
-	        _this.props.onChange(userInput);
-	      });
-	    }
-
-	    /**
-	     * When the input gets focused
-	     */
-	  }, {
-	    key: 'onFocus',
-	    value: function onFocus() {
-	      this.props.onFocus();
-	      this.showSuggests();
-	    }
-	  }, {
-	    key: 'onClick',
-	    value: function onClick() {
-	      this.props.onClick();
-	    }
-
-	    /**
-	     * Click the clear button
-	     */
-	  }, {
-	    key: 'onClearClick',
-	    value: function onClearClick() {
-	      var _this2 = this;
-
-	      this.clear(function () {
-	        return _this2.refs.geosuggestInput.focus();
-	      });
-	      this.props.onClearClick();
-	    }
-
-	    /**
-	     * Update the value of the user input
-	     * @param {String} value the new value of the user input
-	     */
-	  }, {
-	    key: 'update',
-	    value: function update(value) {
-	      this.setState({ userInput: value });
-	      this.props.onChange(value);
-	    }
-
-	    /*
-	     * Clear the input and close the suggestion pane
-	     * () => this.hideSuggests()
-	     *
-	     */
-	  }, {
-	    key: 'clear',
-	    value: function clear() {
-	      var cb = arguments.length <= 0 || arguments[0] === undefined ? function () {} : arguments[0];
-
-	      this.setState({
-	        userInput: ''
-	      }, cb);
-	    }
-
-	    /**
-	     * Search for new suggests
-	     */
-	  }, {
-	    key: 'searchSuggests',
-	    value: function searchSuggests() {
-	      var _this3 = this;
-
-	      if (!this.state.userInput) {
-	        this.updateSuggests();
-	        return;
-	      }
-
-	      var options = {
-	        input: this.state.userInput
-	      };
-
-	      if (this.props.location) {
-	        options.location = this.props.location;
-	      }
-
-	      if (this.props.radius) {
-	        options.radius = this.props.radius;
-	      }
-
-	      if (this.props.bounds) {
-	        options.bounds = this.props.bounds;
-	      }
-
-	      if (this.props.types) {
-	        options.types = this.props.types;
-	      }
-
-	      if (this.props.country) {
-	        options.componentRestrictions = {
-	          country: this.props.country
-	        };
-	      }
-
-	      this.autocompleteService.getPlacePredictions(options, function (suggestsGoogle) {
-	        _this3.updateSuggests(suggestsGoogle);
-
-	        if (_this3.props.autoActivateFirstSuggest) {
-	          _this3.activateSuggest('next');
-	        }
-	      });
-	    }
-
-	    /**
-	     * Update the suggests
-	     * @param  {Object} suggestsGoogle The new google suggests
-	     */
-	  }, {
-	    key: 'updateSuggests',
-	    value: function updateSuggests(suggestsGoogle) {
-	      var _this4 = this;
-
-	      if (!suggestsGoogle) {
-	        suggestsGoogle = [];
-	      }
-
-	      var suggests = [];
-	      var recents = [];
-	      var regex = new RegExp(this.state.userInput, 'gim');
-	      var skipSuggest = this.props.skipSuggest;
-
-	      var index = 0;
-	      var fixturesLen = this.props.fixtures.length;
-	      var limit = fixturesLen > this.props.recentsLimit ? this.props.recentsLimit : fixturesLen;
-	      // ugh i hate for-loops but seems like i have to
-	      // utilize it here so i can break out
-	      for (; index < fixturesLen; index++) {
-	        var recent = this.props.fixtures[index];
-	        recent.placeId = recent.id;
-	        recent.altLabel = this.props.getRecentLabel(recent);
-	        recents.push(recent);
-	      }
-
-	      suggestsGoogle.forEach(function (suggest) {
-	        if (!skipSuggest(suggest)) {
-	          suggests.push({
-	            label: _this4.props.getSuggestLabel(suggest),
-	            placeId: suggest.place_id
-	          });
-	        }
-	      });
-
-	      this.setState({ suggests: suggests });
-	      this.setState({ recents: recents });
-	    }
-
-	    /**
-	     * When the input gets focused
-	     */
-	  }, {
-	    key: 'showSuggests',
-	    value: function showSuggests() {
-	      this.searchSuggests();
-	      this.setState({ isSuggestsHidden: false });
-	    }
-
-	    /**
-	     * When the input loses focused
-	     */
-	  }, {
-	    key: 'hideSuggests',
-	    value: function hideSuggests() {
-	      var _this5 = this;
-
-	      this.props.onBlur();
-	      setTimeout(function () {
-	        if (_this5._isMounted) {
-	          _this5.setState({ isSuggestsHidden: true });
-	        }
-	      }, 500);
-	    }
-
-	    /**
-	     * When a key gets pressed in the input
-	     * @param  {Event} event The keypress event
-	     */
-	  }, {
-	    key: 'onInputKeyDown',
-	    value: function onInputKeyDown(event) {
-	      switch (event.which) {
-	        case 40:
-	          // DOWN
-	          event.preventDefault();
-	          this.activateSuggest('next');
-	          break;
-	        case 38:
-	          // UP
-	          event.preventDefault();
-	          this.activateSuggest('prev');
-	          break;
-	        case 13:
-	          // ENTER
-	          event.preventDefault();
-	          // If activeSuggest is populated
-	          // then proceed as expected
-	          if (this.state.activeSuggest) {
-	            this.selectSuggest(this.state.activeSuggest);
-	          }
-	          // If the user has inputted text
-	          // AND there are suggestions,
-	          // we'll default to the first suggestion
-	          else if (this.state.userInput && this.state.suggests.length) {
-	              this.selectSuggest(this.state.suggests[0]);
-	            }
-	            // Cascades down to just checking
-	            // if the user has entered text
-	            // We'll just defer to component `onEmptySuggests`
-	            else if (this.state.userInput) {
-	                this.props.onEmptySuggests();
-	              }
-	          break;
-	        case 9:
-	          // TAB
-	          this.selectSuggest(this.state.activeSuggest);
-	          break;
-	        case 27:
-	          // ESC
-	          this.hideSuggests();
-	          break;
-	        default:
-	          break;
-	      }
-	    }
-
-	    /**
-	     * Activate a new suggest
-	     * @param {String} direction The direction in which to activate new suggest
-	     */
-	  }, {
-	    key: 'activateSuggest',
-	    value: function activateSuggest(direction) {
-	      // eslint-disable-line
-	      if (this.state.isSuggestsHidden) {
-	        this.showSuggests();
-	        return;
-	      }
-
-	      var suggestsLength = this.state.suggests.length;
-	      var recentsLength = this.state.recents.length;
-	      var recentsCount = recentsLength > this.props.recentsLimit ? this.props.recentsLimit : recentsLength;
-	      var suggestsCount = recentsCount + suggestsLength - 1,
-	          next = direction === 'next',
-	          newActiveSuggest = null,
-	          newIndex = 0,
-	          i = 0; // eslint-disable-line id-length
-
-	      for (i; i <= suggestsCount; i++) {
-	        if (this.state.suggests[i] === this.state.activeSuggest || this.state.recents[i] === this.state.activeSuggest) {
-	          newIndex = next ? i + 1 : i - 1;
-	        }
-	      }
-
-	      if (!this.state.activeSuggest) {
-	        newIndex = next ? 0 : suggestsCount;
-	      }
-
-	      if (newIndex >= 0 && newIndex <= suggestsCount) {
-	        // if suggests not full but recents is
-	        if (!suggestsLength && recentsCount) {
-	          newActiveSuggest = this.state.recents[newIndex];
-	        } else if (suggestsLength && recentsCount && newIndex >= suggestsLength) {
-	          newActiveSuggest = this.state.recents[newIndex];
-	        } else {
-	          newActiveSuggest = this.state.suggests[newIndex];
-	        }
-	      }
-
-	      this.setState({ activeSuggest: newActiveSuggest });
-	    }
-
-	    /**
-	     * When an item got selected
-	     * @param {GeosuggestItem} suggest The selected suggest item
-	     */
-	  }, {
-	    key: 'selectSuggest',
-	    value: function selectSuggest(suggest) {
-	      if (!suggest) {
-	        suggest = {
-	          label: this.state.userInput
-	        };
-	      }
-
-	      this.setState({
-	        isSuggestsHidden: true,
-	        userInput: suggest.label || suggest.altLabel
-	      });
-
-	      if (suggest.location) {
-	        this.props.onSuggestSelect(suggest);
-	        return;
-	      }
-
-	      this.geocodeSuggest(suggest);
-	    }
-
-	    /**
-	     * Geocode a suggest
-	     * @param  {Object} suggest The suggest
-	     */
-	  }, {
-	    key: 'geocodeSuggest',
-	    value: function geocodeSuggest(suggest) {
-	      var _this6 = this;
-
-	      var searchObject = undefined;
-	      if (suggest.altLabel) {
-	        searchObject = {
-	          address: suggest.altLabel
-	        };
-	      } else if (suggest.placeId) {
-	        searchObject = {
-	          placeId: suggest.placeId
-	        };
-	      }
-	      this.geocoder.geocode(searchObject, function (results, status) {
-	        if (status !== _this6.googleMaps.GeocoderStatus.OK) {
-	          return;
-	        }
-
-	        var gmaps = results[0],
-	            location = gmaps.geometry.location;
-
-	        suggest.gmaps = gmaps;
-	        suggest.location = {
-	          lat: location.lat(),
-	          lng: location.lng()
-	        };
-
-	        _this6.props.onSuggestSelect(suggest);
-	      });
-	    }
-
-	    /**
-	     * Get the recent/saved items for the list
-	     * @return {Array} The recent/saved items
-	     */
-	  }, {
-	    key: 'getRecentItems',
-	    value: function getRecentItems() {
-	      var _this7 = this;
-
-	      return this.state.recents.map(function (suggest, index) {
-	        var isActive = _this7.state.activeSuggest && suggest.placeId === _this7.state.activeSuggest.placeId;
-
-	        // shut off at the recentsLimit
-	        if (index >= _this7.props.recentsLimit) {
-	          return;
-	        }
-
-	        return (// eslint-disable-line no-extra-parens
-	          _react2['default'].createElement(_GeosuggestItem2['default'], {
-	            key: suggest.placeId,
-	            suggest: suggest,
-	            isActive: isActive,
-	            onSuggestSelect: _this7.selectSuggest.bind(_this7) })
-	        );
-	      });
-	    }
-
-	    /**
-	     * Get the suggest items for the list
-	     * @return {Array} The suggestions
-	     */
-	  }, {
-	    key: 'getSuggestItems',
-	    value: function getSuggestItems() {
-	      var _this8 = this;
-
-	      return this.state.suggests.map(function (suggest, index) {
-	        var isActive = _this8.state.activeSuggest && suggest.placeId === _this8.state.activeSuggest.placeId;
-
-	        return (// eslint-disable-line no-extra-parens
-	          _react2['default'].createElement(_GeosuggestItem2['default'], {
-	            key: suggest.placeId,
-	            suggest: suggest,
-	            isActive: isActive,
-	            onSuggestSelect: _this8.selectSuggest.bind(_this8) })
-	        );
-	      });
-	    }
-
-	    /**
-	     * The classes for the suggests list
-	     * @return {String} The classes
-	     */
-	  }, {
-	    key: 'getSuggestsClasses',
-	    value: function getSuggestsClasses() {
-	      var classes = 'geosuggest__suggests';
-
-	      classes += this.state.isSuggestsHidden ? ' geosuggest__suggests--hidden' : '';
-
-	      return classes;
-	    }
-	  }, {
-	    key: 'getContainerClasses',
-	    value: function getContainerClasses() {
-	      var classes = 'geosuggest-window row';
-
-	      classes += this.state.isSuggestsHidden ? ' geosuggest__suggests--hidden hidden' : '';
-
-	      return classes;
-	    }
-
-	    /**
-	     * Render the view
-	     * @return {Function} The React element to render
-	     */
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this9 = this;
-
-	      var suggestionsSection = function suggestionsSection() {};
-	      var recentsSection = function recentsSection() {};
-	      if (!!this.state.suggests.length) {
-	        suggestionsSection = function () {
-	          return _react2['default'].createElement(
-	            'div',
-	            { className: 'geosuggest-suggestions' },
-	            _react2['default'].createElement(
-	              'span',
-	              { className: 'geosuggest-label allcaps' },
-	              'Suggestions'
-	            ),
-	            _react2['default'].createElement(
-	              'ul',
-	              { className: 'geosuggest__suggests' },
-	              _this9.getSuggestItems()
-	            )
-	          );
-	        };
-	      } else if (this.state.userInput) {
-	        suggestionsSection = this.props.noSuggestionsMarkup;
-	      }
-
-	      if (!!this.state.recents.length) {
-	        recentsSection = function () {
-	          return _react2['default'].createElement(
-	            'div',
-	            { className: 'geosuggest-recents' },
-	            _react2['default'].createElement(
-	              'span',
-	              { className: 'geosuggest-label allcaps' },
-	              'Recent Addresses'
-	            ),
-	            _react2['default'].createElement(
-	              'ul',
-	              { className: 'geosuggest__recents' },
-	              _this9.getRecentItems()
-	            )
-	          );
-	        };
-	      }
-	      return _react2['default'].createElement(
-	        'div',
-	        { className: 'geosuggest-container ' + this.props.className },
-	        _react2['default'].createElement('input', {
-	          className: 'geosuggest__input',
-	          ref: 'geosuggestInput',
-	          type: 'text',
-	          value: this.state.userInput,
-	          placeholder: this.props.placeholder,
-	          disabled: this.props.disabled,
-	          onKeyDown: this.onInputKeyDown.bind(this),
-	          onChange: this.onInputChange.bind(this),
-	          onFocus: this.onFocus.bind(this),
-	          onClick: this.onClick.bind(this),
-	          onBlur: this.hideSuggests.bind(this) }),
-	        !!this.state.userInput && _react2['default'].createElement('button', { className: 'icon icon-close geosuggest-clear', onClick: this.onClearClick.bind(this) }),
-	        _react2['default'].createElement(
-	          'div',
-	          { className: this.getContainerClasses() },
-	          suggestionsSection(),
-	          recentsSection()
-	        ),
-	        this.props.showButton && this.props.buttonMarkup()
-=======
 	var GeosuggestItem = (function (_React$Component) {
 	  _inherits(GeosuggestItem, _React$Component);
 
@@ -31189,8 +30042,7 @@
 
 
 /***/ },
-/* 269 */,
-/* 270 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31207,7 +30059,7 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(271);
+	__webpack_require__(270);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31270,13 +30122,13 @@
 	exports.default = CityBottomBanner;
 
 /***/ },
-/* 271 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(272);
+	var content = __webpack_require__(271);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -31296,7 +30148,7 @@
 	}
 
 /***/ },
-/* 272 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -31310,13 +30162,111 @@
 
 
 /***/ },
-/* 273 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _citiesListService = __webpack_require__(288);
+
+	__webpack_require__(314);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var CitiesList = function (_React$Component) {
+	  _inherits(CitiesList, _React$Component);
+
+	  function CitiesList(props) {
+	    _classCallCheck(this, CitiesList);
+
+	    var _this = _possibleConstructorReturn(this, (CitiesList.__proto__ || Object.getPrototypeOf(CitiesList)).call(this, props));
+
+	    _this.state = {
+	      cities: []
+	    };
+	    return _this;
+	  }
+
+	  _createClass(CitiesList, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this2 = this;
+
+	      console.log((0, _citiesListService.getCities)());
+	      (0, _citiesListService.getCities)().then(function (cities) {
+	        _this2.setState({
+	          cities: cities
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var cities = this.state.cities.map(function (city) {
+	        return _react2.default.createElement(
+	          'ul',
+	          { key: city.id },
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              'a',
+	              { href: '#' },
+	              city.city
+	            )
+	          )
+	        );
+	      });
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container-fluid city-list' },
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Available Shyft Cities'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'city-links' },
+	            cities
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return CitiesList;
+	}(_react2.default.Component);
+
+	exports.default = CitiesList;
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -31335,30 +30285,32 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var CitiesList = function (_React$Component) {
-	  _inherits(CitiesList, _React$Component);
+	var Rides = function (_React$Component) {
+	    _inherits(Rides, _React$Component);
 
-	  function CitiesList() {
-	    _classCallCheck(this, CitiesList);
+	    function Rides() {
+	        _classCallCheck(this, Rides);
 
-	    return _possibleConstructorReturn(this, (CitiesList.__proto__ || Object.getPrototypeOf(CitiesList)).apply(this, arguments));
-	  }
-
-	  _createClass(CitiesList, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'container-fluid city-list' },
-	        'CitiesList Component'
-	      );
+	        return _possibleConstructorReturn(this, (Rides.__proto__ || Object.getPrototypeOf(Rides)).apply(this, arguments));
 	    }
-	  }]);
 
-	  return CitiesList;
+	    _createClass(Rides, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                'This is the rides comp!'
+	            );
+	        }
+	    }]);
+
+	    return Rides;
 	}(_react2.default.Component);
 
-	exports.default = CitiesList;
+	;
+
+	exports.default = Rides;
 
 /***/ },
 /* 274 */
@@ -31376,8 +30328,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CitiesListComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CitiesListComp.css");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -31426,32 +30378,32 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Rides = function (_React$Component) {
-	    _inherits(Rides, _React$Component);
+	var UserDashboardComp = function (_React$Component) {
+	    _inherits(UserDashboardComp, _React$Component);
 
-	    function Rides() {
-	        _classCallCheck(this, Rides);
+	    function UserDashboardComp() {
+	        _classCallCheck(this, UserDashboardComp);
 
-	        return _possibleConstructorReturn(this, (Rides.__proto__ || Object.getPrototypeOf(Rides)).apply(this, arguments));
+	        return _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).apply(this, arguments));
 	    }
 
-	    _createClass(Rides, [{
+	    _createClass(UserDashboardComp, [{
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                'This is the rides comp!'
+	                'This is userdashboard comp!'
 	            );
 	        }
 	    }]);
 
-	    return Rides;
+	    return UserDashboardComp;
 	}(_react2.default.Component);
 
 	;
 
-	exports.default = Rides;
+	exports.default = UserDashboardComp;
 
 /***/ },
 /* 277 */
@@ -31469,8 +30421,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -31500,99 +30452,6 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(280);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var UserDashboardComp = function (_React$Component) {
-	    _inherits(UserDashboardComp, _React$Component);
-
-	    function UserDashboardComp() {
-	        _classCallCheck(this, UserDashboardComp);
-
-	        return _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).apply(this, arguments));
-	    }
-
-	    _createClass(UserDashboardComp, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                'This is userdashboard comp!'
-	            );
-	        }
-	    }]);
-
-	    return UserDashboardComp;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = UserDashboardComp;
-
-/***/ },
-/* 280 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(281);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 281 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 282 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
@@ -31604,11 +30463,11 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	var _CitiesEstimateForm = __webpack_require__(283);
+	var _CitiesEstimateForm = __webpack_require__(280);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	__webpack_require__(286);
+	__webpack_require__(283);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31639,110 +30498,10 @@
 	          'This is city details!'
 	        ),
 	        _react2.default.createElement(_CitiesEstimateForm2.default, null)
->>>>>>> master
 	      );
 	    }
 	  }]);
 
-<<<<<<< HEAD
-	  return Geosuggest;
-	})(_react2['default'].Component);
-
-	Geosuggest.propTypes = {
-	  autoActivateFirstSuggest: _react2['default'].PropTypes.bool,
-	  bounds: _react2['default'].PropTypes.any,
-	  className: _react2['default'].PropTypes.string,
-	  country: _react2['default'].PropTypes.any,
-	  disabled: _react2['default'].PropTypes.bool,
-	  fixtures: _react2['default'].PropTypes.array,
-	  getRecentLabel: _react2['default'].PropTypes.func,
-	  getSuggestLabel: _react2['default'].PropTypes.func,
-	  googleMaps: _react2['default'].PropTypes.any,
-	  initialValue: _react2['default'].PropTypes.string,
-	  location: _react2['default'].PropTypes.any,
-	  onBlur: _react2['default'].PropTypes.func,
-	  onChange: _react2['default'].PropTypes.func,
-	  onClearClick: _react2['default'].PropTypes.func,
-	  onFocus: _react2['default'].PropTypes.func,
-	  onClick: _react2['default'].PropTypes.func,
-	  onSuggestSelect: _react2['default'].PropTypes.func,
-	  placeholder: _react2['default'].PropTypes.string,
-	  radius: _react2['default'].PropTypes.any,
-	  skipSuggest: _react2['default'].PropTypes.func,
-	  types: _react2['default'].PropTypes.any,
-	  recentsLimit: _react2['default'].PropTypes.any,
-	  showButton: _react2['default'].PropTypes.bool,
-	  buttonMarkup: _react2['default'].PropTypes.func
-	};
-
-	Geosuggest.defaultProps = {
-	  fixtures: [],
-	  initialValue: '',
-	  placeholder: 'Search places',
-	  disabled: false,
-	  className: '',
-	  location: null,
-	  radius: null,
-	  bounds: null,
-	  country: null,
-	  types: null,
-	  googleMaps: null,
-	  onSuggestSelect: function onSuggestSelect() {},
-	  onFocus: function onFocus() {},
-	  onBlur: function onBlur() {},
-	  onClick: function onClick() {},
-	  onChange: function onChange() {},
-	  onClearClick: function onClearClick() {},
-	  skipSuggest: function skipSuggest() {},
-	  getRecentLabel: function getRecentLabel(recent) {
-	    return recent.zipcode;
-	  },
-	  getSuggestLabel: function getSuggestLabel(suggest) {
-	    return suggest.description;
-	  },
-	  autoActivateFirstSuggest: false,
-	  recentsLimit: 5,
-	  showButton: false,
-	  buttonMarkup: function buttonMarkup() {
-	    return _react2['default'].createElement(
-	      'button',
-	      null,
-	      'Enter'
-	    );
-	  },
-	  noSuggestionsMarkup: function noSuggestionsMarkup() {},
-	  onEmptySuggests: function onEmptySuggests() {}
-	};
-
-	exports['default'] = Geosuggest;
-	module.exports = exports['default'];
-
-	/**
-	 * Get the initial state
-	 */
-
-
-/***/ },
-/* 279 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-=======
 	  return CityDetails;
 	}(_react2.default.Component);
 
@@ -31751,7 +30510,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 283 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31761,122 +30520,12 @@
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
->>>>>>> master
 
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var GeosuggestItem = (function (_React$Component) {
-	  _inherits(GeosuggestItem, _React$Component);
-
-	  function GeosuggestItem() {
-	    _classCallCheck(this, GeosuggestItem);
-
-	    _get(Object.getPrototypeOf(GeosuggestItem.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(GeosuggestItem, [{
-	    key: 'handleClick',
-
-	    /**
-	     * When the element gets clicked
-	     * @param  {Event} event The click event
-	     */
-	    value: function handleClick(event) {
-	      event.preventDefault();
-	      this.props.onSuggestSelect(this.props.suggest);
-	    }
-
-	    /**
-	     * The classes for the suggest item
-	     * @return {String} The classes
-	     */
-	  }, {
-	    key: 'getSuggestClasses',
-	    value: function getSuggestClasses() {
-	      var className = this.props.suggest.className;
-	      var classes = 'geosuggest-item';
-
-	      classes += this.props.isActive ? ' geosuggest-item--active' : '';
-	      classes += className ? ' ' + className : '';
-
-	      return classes;
-	    }
-	  }, {
-	    key: 'renderSaved',
-	    value: function renderSaved() {
-	      return _react2['default'].createElement(
-	        'li',
-	        { className: this.getSuggestClasses(), onClick: this.handleClick.bind(this) },
-	        _react2['default'].createElement('span', { className: 'icon icon-house' }),
-	        _react2['default'].createElement(
-	          'strong',
-	          null,
-	          this.props.suggest.firstname,
-	          ' ',
-	          this.props.suggest.lastname
-	        ),
-	        _react2['default'].createElement('br', null),
-	        this.props.suggest.place_name,
-	        this.props.suggest.address1,
-	        this.props.suggest.address2 ? ' ' + this.props.suggest.address2 : '',
-	        ',',
-	        ' ',
-	        this.props.suggest.city,
-	        ', ',
-	        this.props.suggest.state_name
-	      );
-	    }
-	  }, {
-	    key: 'renderGoogle',
-	    value: function renderGoogle() {
-	      return _react2['default'].createElement(
-	        'li',
-	        { className: this.getSuggestClasses(), onClick: this.handleClick.bind(this) },
-	        this.props.suggest.label
-	      );
-	    }
-
-	    /**
-	     * Render the view
-	     * @return {Function} The React element to render
-	     */
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return this.props.suggest.label ? this.renderGoogle() : this.renderSaved();
-	    }
-	  }], [{
-	    key: 'propTypes',
-	    value: {
-	      isActive: _react2['default'].PropTypes.bool,
-	      suggest: _react2['default'].PropTypes.object,
-	      onSuggestSelect: _react2['default'].PropTypes.func
-	    },
-	    enumerable: true
-	  }]);
-
-	  return GeosuggestItem;
-	})(_react2['default'].Component);
-
-	GeosuggestItem.defaultProps = {
-	  isActive: false,
-	  suggest: {
-	    label: ''
-	  },
-	  onSuggestSelect: function onSuggestSelect() {}
-	};
-
-	exports['default'] = GeosuggestItem;
-	module.exports = exports['default'];
-
-
-/***/ },
-/* 280 */
-=======
-	__webpack_require__(284);
+	__webpack_require__(281);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31902,6 +30551,16 @@
 	  }
 
 	  _createClass(CitiesEstimateForm, [{
+	    key: 'onSuggestSelectPickup',
+	    value: function onSuggestSelectPickup(pickup) {
+	      console.log(pickup.location);
+	    }
+	  }, {
+	    key: 'onSuggestSelectDest',
+	    value: function onSuggestSelectDest(dest) {
+	      console.log(dest.location);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -31924,7 +30583,8 @@
 	              _react2.default.createElement('div', { className: 'pickup-icon' }),
 	              _react2.default.createElement(Geosuggest, {
 	                className: 'pickup-input',
-	                placeholder: 'Add pickup location'
+	                placeholder: 'Add pickup location',
+	                onSuggestSelect: this.onSuggestSelectPickup
 	              })
 	            ),
 	            _react2.default.createElement(
@@ -31933,7 +30593,8 @@
 	              _react2.default.createElement('div', { className: 'dest-icon' }),
 	              _react2.default.createElement(Geosuggest, {
 	                className: 'dest-input',
-	                placeholder: 'Add destination'
+	                placeholder: 'Add destination',
+	                onSuggestSelect: this.onSuggestSelectDest
 	              })
 	            ),
 	            _react2.default.createElement(
@@ -31988,13 +30649,13 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 284 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(285);
+	var content = __webpack_require__(282);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32014,7 +30675,7 @@
 	}
 
 /***/ },
-/* 285 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32022,24 +30683,19 @@
 
 
 	// module
-	exports.push([module.id, "*:focus {\n  outline: none;\n}\n.estimateForm {\n  background-color: #F3F3F5;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: .5rem;\n  border-color: #D8DCE6;\n  padding: 1.5rem;\n  box-sizing: inherit;\n  font-size: 1.8rem;\n  line-height: 1.3;\n}\n\n.estimateForm input {\n  display: block;\n  width: 100%;\n  color: #333447;\n  padding: .75rem 1.25rem;\n  font-size: 1.8rem;\n  line-height: 1.33333;\n  padding-left: 2.75rem;\n}\n\n.pickup-input-container .geosuggest__input {\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n.geosuggest-container span,\n.geosuggest-container button {\n  display: none;\n}\n\n.geosuggest-suggestions {\n  display: flex;\n  justify-content: center;\n}\n\n.geosuggest__suggests {\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n  background: white;\n  width: 92.5%;\n  padding-left: 25px;\n  margin-top: -1px;\n  border-top: 1px solid white;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n\n.pickup-icon {\n  background-repeat: no-repeat\n}\n\n.pickup-destination-container .geosuggest__input {\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n\n.button-getEstimate {\n  padding: .8125rem 1.25rem;\n  background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: -o-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: linear-gradient(to bottom right, #FF00BF, #B80B8C);\n  margin-top: 1rem;\n  border: none;\n  display: block;\n  width: 100%;\n  font-size: 1.8srem;\n  line-height: 1.33333;\n  border-radius: .5rem;\n  color: #fff;\n  font-weight: 400;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  user-select: none;\n}\n\n.estimate {\n  margin-top: 1.5rem;\n  margin-bottom: .5rem;\n  display: flex;\n  text-align: center!important;\n  font-size: 2.1rem;\n  font-weight: 100;\n  justify-content: center;\n}\n\n.estimate-lyft {\n\n}\n\n.estimate-lyft div {\n  font-size: 1.7rem;\n}\n\n.divider {\n  border-color: #D8DCE6;\n  border-right-width: 1px;\n  border-right-style: solid;\n  margin: 0 15%;\n}\n\n.estimate-plus {\n\n}\n\n.estimate-plus div {\n  font-size: 1.7rem;\n}\n", ""]);
+	exports.push([module.id, "*:focus {\n  outline: none;\n}\n.estimateForm {\n  background-color: #F3F3F5;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: .5rem;\n  border-color: #D8DCE6;\n  padding: 1.5rem;\n  box-sizing: inherit;\n  font-size: 1.8rem;\n  line-height: 1.3;\n}\n\n.estimateForm input {\n  display: block;\n  width: 100%;\n  color: #333447;\n  padding: .75rem 1.25rem;\n  font-size: 1.8rem;\n  line-height: 1.33333;\n  padding-left: 2.75rem;\n}\n\n.pickup-input-container .geosuggest__input {\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n.geosuggest-container span,\n.geosuggest-container button {\n  display: none;\n}\n\n.estimateForm .geosuggest__suggests {\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n  background: white;\n  padding-left: 26px;\n  margin-top: -1px;\n  border-top: 1px solid white;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n  right: 16px;\n  left: 16px;\n}\n.dest-input .geosuggest__suggests {\nmargin-top: -3px;\n}\n\n.pickup-icon {\n  background-repeat: no-repeat\n}\n\n.pickup-destination-container .geosuggest__input {\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n\n.button-getEstimate {\n  padding: .8125rem 1.25rem;\n  background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: -o-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: linear-gradient(to bottom right, #FF00BF, #B80B8C);\n  margin-top: 1rem;\n  border: none;\n  display: block;\n  width: 100%;\n  font-size: 1.8srem;\n  line-height: 1.33333;\n  border-radius: .5rem;\n  color: #fff;\n  font-weight: 400;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  user-select: none;\n}\n\n.estimate {\n  margin-top: 1.5rem;\n  margin-bottom: .5rem;\n  display: flex;\n  text-align: center!important;\n  font-size: 2.1rem;\n  font-weight: 100;\n  justify-content: center;\n}\n\n.estimate-lyft {\n\n}\n\n.estimate-lyft div {\n  font-size: 1.7rem;\n}\n\n.estimateForm .divider {\n  border-color: #D8DCE6;\n  border-right-width: 1px;\n  border-right-style: solid;\n  margin: 0 15%;\n}\n\n.estimate-plus {\n\n}\n\n.estimate-plus div {\n  font-size: 1.7rem;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 286 */
->>>>>>> master
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-<<<<<<< HEAD
-	var content = __webpack_require__(281);
-=======
-	var content = __webpack_require__(287);
->>>>>>> master
+	var content = __webpack_require__(284);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32059,11 +30715,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 281 */
-=======
-/* 287 */
->>>>>>> master
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32077,11 +30729,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 282 */
-=======
-/* 288 */
->>>>>>> master
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32096,11 +30744,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	__webpack_require__(283);
-=======
-	__webpack_require__(289);
->>>>>>> master
+	__webpack_require__(286);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32120,8 +30764,6 @@
 	    }
 
 	    _createClass(LoginComp, [{
-<<<<<<< HEAD
-=======
 	        key: 'handleClick',
 	        value: function handleClick() {
 	            var loginForm = document.getElementById('loginForm');
@@ -32134,15 +30776,11 @@
 	            loginForm.classList.remove('login-form-container-active');
 	        }
 	    }, {
->>>>>>> master
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-<<<<<<< HEAD
-	                'This is login!'
-=======
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'login-container' },
@@ -32203,7 +30841,6 @@
 	                        'click me'
 	                    )
 	                )
->>>>>>> master
 	            );
 	        }
 	    }]);
@@ -32216,21 +30853,13 @@
 	exports.default = LoginComp;
 
 /***/ },
-<<<<<<< HEAD
-/* 283 */
-=======
-/* 289 */
->>>>>>> master
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-<<<<<<< HEAD
-	var content = __webpack_require__(284);
-=======
-	var content = __webpack_require__(290);
->>>>>>> master
+	var content = __webpack_require__(287);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32250,11 +30879,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 284 */
-=======
-/* 290 */
->>>>>>> master
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32262,11 +30887,1551 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "", ""]);
-=======
 	exports.push([module.id, ".login-container {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    z-index: 100;\n    overflow: hidden;\n}\n\n.login-form-container {\n    text-align: center;\n    margin: 0 auto;\n    transform: translateY(-385px);\n    width: 280px;\n    height: 364px;\n    background: #fff;\n    color: #8f9cb3;\n    font-weight: 300;\n    transition: transform .5s ease;\n}\n\n.login-form-container-active {\n    transform: translateY(185px);\n}\n\n.login-close {\n    position: absolute;\n    right: 5px;\n    top: 5px;\n}\n\n.login-close:hover {\n    text-decoration: underline;\n    cursor: pointer;\n}\n\n.login-heading {\n    margin-bottom: 10px;\n    padding-top: 25px;\n    font-weight: bold;\n    font-size: 2.25rem;\n    color: #333;\n}\n\n.login-input-container {\n    margin-bottom: 20px;\n}\n\n.login-input-container input {\n    padding: 8px 15px;\n    width: 250px;\n    border-radius: 7px;\n    border: 1px solid #d8dce6;\n}\n\n.login-button {\n    width: 250px;\n    font-size: 1.45rem;\n    padding-top: 8px;\n    padding-bottom: 8px;\n    text-transform: uppercase;\n    margin-bottom: 10px;\n}\n\n.login-button:hover {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-button:active,\n.login-button:focus {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-or {\n    color: #333;\n}\n\n.login-facebook-btn {\n    border-radius: 7px;\n    border: none;\n    padding: 8px;\n    font-size: 1.65rem;\n    width: 250px;\n    margin-bottom: 15px;\n}\n\n.login-fb-logo {\n    font-size: 22px;\n    vertical-align: text-bottom;\n    margin-right: 8px;\n}\n\n.login-signup,\n.login-contact {\n    color: #ff00bf;\n    margin-left: 5px;\n}\n\n.login-newtolyft {\n    width: 265px;\n}\n", ""]);
->>>>>>> master
+
+	// exports
+
+
+/***/ },
+/* 288 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getCities = getCities;
+
+	var _axios = __webpack_require__(289);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getCities() {
+	  return _axios2.default.get('http://localhost:8000/cities').then(function (res) {
+	    return res.data;
+	  });
+	}
+
+/***/ },
+/* 289 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(290);
+
+/***/ },
+/* 290 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(291);
+	var bind = __webpack_require__(292);
+	var Axios = __webpack_require__(293);
+
+	/**
+	 * Create an instance of Axios
+	 *
+	 * @param {Object} defaultConfig The default config for the instance
+	 * @return {Axios} A new instance of Axios
+	 */
+	function createInstance(defaultConfig) {
+	  var context = new Axios(defaultConfig);
+	  var instance = bind(Axios.prototype.request, context);
+
+	  // Copy axios.prototype to instance
+	  utils.extend(instance, Axios.prototype, context);
+
+	  // Copy context to instance
+	  utils.extend(instance, context);
+
+	  return instance;
+	}
+
+	// Create the default instance to be exported
+	var axios = createInstance();
+
+	// Expose Axios class to allow class inheritance
+	axios.Axios = Axios;
+
+	// Factory for creating new instances
+	axios.create = function create(defaultConfig) {
+	  return createInstance(defaultConfig);
+	};
+
+	// Expose Cancel & CancelToken
+	axios.Cancel = __webpack_require__(311);
+	axios.CancelToken = __webpack_require__(312);
+	axios.isCancel = __webpack_require__(308);
+
+	// Expose all/spread
+	axios.all = function all(promises) {
+	  return Promise.all(promises);
+	};
+	axios.spread = __webpack_require__(313);
+
+	module.exports = axios;
+
+	// Allow use of default import syntax in TypeScript
+	module.exports.default = axios;
+
+
+/***/ },
+/* 291 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var bind = __webpack_require__(292);
+
+	/*global toString:true*/
+
+	// utils is a library of generic helper functions non-specific to axios
+
+	var toString = Object.prototype.toString;
+
+	/**
+	 * Determine if a value is an Array
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an Array, otherwise false
+	 */
+	function isArray(val) {
+	  return toString.call(val) === '[object Array]';
+	}
+
+	/**
+	 * Determine if a value is an ArrayBuffer
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+	 */
+	function isArrayBuffer(val) {
+	  return toString.call(val) === '[object ArrayBuffer]';
+	}
+
+	/**
+	 * Determine if a value is a FormData
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an FormData, otherwise false
+	 */
+	function isFormData(val) {
+	  return (typeof FormData !== 'undefined') && (val instanceof FormData);
+	}
+
+	/**
+	 * Determine if a value is a view on an ArrayBuffer
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+	 */
+	function isArrayBufferView(val) {
+	  var result;
+	  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+	    result = ArrayBuffer.isView(val);
+	  } else {
+	    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+	  }
+	  return result;
+	}
+
+	/**
+	 * Determine if a value is a String
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a String, otherwise false
+	 */
+	function isString(val) {
+	  return typeof val === 'string';
+	}
+
+	/**
+	 * Determine if a value is a Number
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Number, otherwise false
+	 */
+	function isNumber(val) {
+	  return typeof val === 'number';
+	}
+
+	/**
+	 * Determine if a value is undefined
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if the value is undefined, otherwise false
+	 */
+	function isUndefined(val) {
+	  return typeof val === 'undefined';
+	}
+
+	/**
+	 * Determine if a value is an Object
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an Object, otherwise false
+	 */
+	function isObject(val) {
+	  return val !== null && typeof val === 'object';
+	}
+
+	/**
+	 * Determine if a value is a Date
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Date, otherwise false
+	 */
+	function isDate(val) {
+	  return toString.call(val) === '[object Date]';
+	}
+
+	/**
+	 * Determine if a value is a File
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a File, otherwise false
+	 */
+	function isFile(val) {
+	  return toString.call(val) === '[object File]';
+	}
+
+	/**
+	 * Determine if a value is a Blob
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Blob, otherwise false
+	 */
+	function isBlob(val) {
+	  return toString.call(val) === '[object Blob]';
+	}
+
+	/**
+	 * Determine if a value is a Function
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Function, otherwise false
+	 */
+	function isFunction(val) {
+	  return toString.call(val) === '[object Function]';
+	}
+
+	/**
+	 * Determine if a value is a Stream
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Stream, otherwise false
+	 */
+	function isStream(val) {
+	  return isObject(val) && isFunction(val.pipe);
+	}
+
+	/**
+	 * Determine if a value is a URLSearchParams object
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+	 */
+	function isURLSearchParams(val) {
+	  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+	}
+
+	/**
+	 * Trim excess whitespace off the beginning and end of a string
+	 *
+	 * @param {String} str The String to trim
+	 * @returns {String} The String freed of excess whitespace
+	 */
+	function trim(str) {
+	  return str.replace(/^\s*/, '').replace(/\s*$/, '');
+	}
+
+	/**
+	 * Determine if we're running in a standard browser environment
+	 *
+	 * This allows axios to run in a web worker, and react-native.
+	 * Both environments support XMLHttpRequest, but not fully standard globals.
+	 *
+	 * web workers:
+	 *  typeof window -> undefined
+	 *  typeof document -> undefined
+	 *
+	 * react-native:
+	 *  typeof document.createElement -> undefined
+	 */
+	function isStandardBrowserEnv() {
+	  return (
+	    typeof window !== 'undefined' &&
+	    typeof document !== 'undefined' &&
+	    typeof document.createElement === 'function'
+	  );
+	}
+
+	/**
+	 * Iterate over an Array or an Object invoking a function for each item.
+	 *
+	 * If `obj` is an Array callback will be called passing
+	 * the value, index, and complete array for each item.
+	 *
+	 * If 'obj' is an Object callback will be called passing
+	 * the value, key, and complete object for each property.
+	 *
+	 * @param {Object|Array} obj The object to iterate
+	 * @param {Function} fn The callback to invoke for each item
+	 */
+	function forEach(obj, fn) {
+	  // Don't bother if no value provided
+	  if (obj === null || typeof obj === 'undefined') {
+	    return;
+	  }
+
+	  // Force an array if not already something iterable
+	  if (typeof obj !== 'object' && !isArray(obj)) {
+	    /*eslint no-param-reassign:0*/
+	    obj = [obj];
+	  }
+
+	  if (isArray(obj)) {
+	    // Iterate over array values
+	    for (var i = 0, l = obj.length; i < l; i++) {
+	      fn.call(null, obj[i], i, obj);
+	    }
+	  } else {
+	    // Iterate over object keys
+	    for (var key in obj) {
+	      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+	        fn.call(null, obj[key], key, obj);
+	      }
+	    }
+	  }
+	}
+
+	/**
+	 * Accepts varargs expecting each argument to be an object, then
+	 * immutably merges the properties of each object and returns result.
+	 *
+	 * When multiple objects contain the same key the later object in
+	 * the arguments list will take precedence.
+	 *
+	 * Example:
+	 *
+	 * ```js
+	 * var result = merge({foo: 123}, {foo: 456});
+	 * console.log(result.foo); // outputs 456
+	 * ```
+	 *
+	 * @param {Object} obj1 Object to merge
+	 * @returns {Object} Result of all merge properties
+	 */
+	function merge(/* obj1, obj2, obj3, ... */) {
+	  var result = {};
+	  function assignValue(val, key) {
+	    if (typeof result[key] === 'object' && typeof val === 'object') {
+	      result[key] = merge(result[key], val);
+	    } else {
+	      result[key] = val;
+	    }
+	  }
+
+	  for (var i = 0, l = arguments.length; i < l; i++) {
+	    forEach(arguments[i], assignValue);
+	  }
+	  return result;
+	}
+
+	/**
+	 * Extends object a by mutably adding to it the properties of object b.
+	 *
+	 * @param {Object} a The object to be extended
+	 * @param {Object} b The object to copy properties from
+	 * @param {Object} thisArg The object to bind function to
+	 * @return {Object} The resulting value of object a
+	 */
+	function extend(a, b, thisArg) {
+	  forEach(b, function assignValue(val, key) {
+	    if (thisArg && typeof val === 'function') {
+	      a[key] = bind(val, thisArg);
+	    } else {
+	      a[key] = val;
+	    }
+	  });
+	  return a;
+	}
+
+	module.exports = {
+	  isArray: isArray,
+	  isArrayBuffer: isArrayBuffer,
+	  isFormData: isFormData,
+	  isArrayBufferView: isArrayBufferView,
+	  isString: isString,
+	  isNumber: isNumber,
+	  isObject: isObject,
+	  isUndefined: isUndefined,
+	  isDate: isDate,
+	  isFile: isFile,
+	  isBlob: isBlob,
+	  isFunction: isFunction,
+	  isStream: isStream,
+	  isURLSearchParams: isURLSearchParams,
+	  isStandardBrowserEnv: isStandardBrowserEnv,
+	  forEach: forEach,
+	  merge: merge,
+	  extend: extend,
+	  trim: trim
+	};
+
+
+/***/ },
+/* 292 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = function bind(fn, thisArg) {
+	  return function wrap() {
+	    var args = new Array(arguments.length);
+	    for (var i = 0; i < args.length; i++) {
+	      args[i] = arguments[i];
+	    }
+	    return fn.apply(thisArg, args);
+	  };
+	};
+
+
+/***/ },
+/* 293 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var defaults = __webpack_require__(294);
+	var utils = __webpack_require__(291);
+	var InterceptorManager = __webpack_require__(305);
+	var dispatchRequest = __webpack_require__(306);
+	var isAbsoluteURL = __webpack_require__(309);
+	var combineURLs = __webpack_require__(310);
+
+	/**
+	 * Create a new instance of Axios
+	 *
+	 * @param {Object} defaultConfig The default config for the instance
+	 */
+	function Axios(defaultConfig) {
+	  this.defaults = utils.merge(defaults, defaultConfig);
+	  this.interceptors = {
+	    request: new InterceptorManager(),
+	    response: new InterceptorManager()
+	  };
+	}
+
+	/**
+	 * Dispatch a request
+	 *
+	 * @param {Object} config The config specific for this request (merged with this.defaults)
+	 */
+	Axios.prototype.request = function request(config) {
+	  /*eslint no-param-reassign:0*/
+	  // Allow for axios('example/url'[, config]) a la fetch API
+	  if (typeof config === 'string') {
+	    config = utils.merge({
+	      url: arguments[0]
+	    }, arguments[1]);
+	  }
+
+	  config = utils.merge(defaults, this.defaults, { method: 'get' }, config);
+
+	  // Support baseURL config
+	  if (config.baseURL && !isAbsoluteURL(config.url)) {
+	    config.url = combineURLs(config.baseURL, config.url);
+	  }
+
+	  // Hook up interceptors middleware
+	  var chain = [dispatchRequest, undefined];
+	  var promise = Promise.resolve(config);
+
+	  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+	    chain.unshift(interceptor.fulfilled, interceptor.rejected);
+	  });
+
+	  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+	    chain.push(interceptor.fulfilled, interceptor.rejected);
+	  });
+
+	  while (chain.length) {
+	    promise = promise.then(chain.shift(), chain.shift());
+	  }
+
+	  return promise;
+	};
+
+	// Provide aliases for supported request methods
+	utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
+	  /*eslint func-names:0*/
+	  Axios.prototype[method] = function(url, config) {
+	    return this.request(utils.merge(config || {}, {
+	      method: method,
+	      url: url
+	    }));
+	  };
+	});
+
+	utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+	  /*eslint func-names:0*/
+	  Axios.prototype[method] = function(url, data, config) {
+	    return this.request(utils.merge(config || {}, {
+	      method: method,
+	      url: url,
+	      data: data
+	    }));
+	  };
+	});
+
+	module.exports = Axios;
+
+
+/***/ },
+/* 294 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+	var utils = __webpack_require__(291);
+	var normalizeHeaderName = __webpack_require__(295);
+
+	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
+	var DEFAULT_CONTENT_TYPE = {
+	  'Content-Type': 'application/x-www-form-urlencoded'
+	};
+
+	function setContentTypeIfUnset(headers, value) {
+	  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+	    headers['Content-Type'] = value;
+	  }
+	}
+
+	function getDefaultAdapter() {
+	  var adapter;
+	  if (typeof XMLHttpRequest !== 'undefined') {
+	    // For browsers use XHR adapter
+	    adapter = __webpack_require__(296);
+	  } else if (typeof process !== 'undefined') {
+	    // For node use HTTP adapter
+	    adapter = __webpack_require__(296);
+	  }
+	  return adapter;
+	}
+
+	module.exports = {
+	  adapter: getDefaultAdapter(),
+
+	  transformRequest: [function transformRequest(data, headers) {
+	    normalizeHeaderName(headers, 'Content-Type');
+	    if (utils.isFormData(data) ||
+	      utils.isArrayBuffer(data) ||
+	      utils.isStream(data) ||
+	      utils.isFile(data) ||
+	      utils.isBlob(data)
+	    ) {
+	      return data;
+	    }
+	    if (utils.isArrayBufferView(data)) {
+	      return data.buffer;
+	    }
+	    if (utils.isURLSearchParams(data)) {
+	      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+	      return data.toString();
+	    }
+	    if (utils.isObject(data)) {
+	      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+	      return JSON.stringify(data);
+	    }
+	    return data;
+	  }],
+
+	  transformResponse: [function transformResponse(data) {
+	    /*eslint no-param-reassign:0*/
+	    if (typeof data === 'string') {
+	      data = data.replace(PROTECTION_PREFIX, '');
+	      try {
+	        data = JSON.parse(data);
+	      } catch (e) { /* Ignore */ }
+	    }
+	    return data;
+	  }],
+
+	  headers: {
+	    common: {
+	      'Accept': 'application/json, text/plain, */*'
+	    },
+	    patch: utils.merge(DEFAULT_CONTENT_TYPE),
+	    post: utils.merge(DEFAULT_CONTENT_TYPE),
+	    put: utils.merge(DEFAULT_CONTENT_TYPE)
+	  },
+
+	  timeout: 0,
+
+	  xsrfCookieName: 'XSRF-TOKEN',
+	  xsrfHeaderName: 'X-XSRF-TOKEN',
+
+	  maxContentLength: -1,
+
+	  validateStatus: function validateStatus(status) {
+	    return status >= 200 && status < 300;
+	  }
+	};
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ },
+/* 295 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(291);
+
+	module.exports = function normalizeHeaderName(headers, normalizedName) {
+	  utils.forEach(headers, function processHeader(value, name) {
+	    if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+	      headers[normalizedName] = value;
+	      delete headers[name];
+	    }
+	  });
+	};
+
+
+/***/ },
+/* 296 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+	var utils = __webpack_require__(291);
+	var settle = __webpack_require__(297);
+	var buildURL = __webpack_require__(300);
+	var parseHeaders = __webpack_require__(301);
+	var isURLSameOrigin = __webpack_require__(302);
+	var createError = __webpack_require__(298);
+	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(303);
+
+	module.exports = function xhrAdapter(config) {
+	  return new Promise(function dispatchXhrRequest(resolve, reject) {
+	    var requestData = config.data;
+	    var requestHeaders = config.headers;
+
+	    if (utils.isFormData(requestData)) {
+	      delete requestHeaders['Content-Type']; // Let the browser set it
+	    }
+
+	    var request = new XMLHttpRequest();
+	    var loadEvent = 'onreadystatechange';
+	    var xDomain = false;
+
+	    // For IE 8/9 CORS support
+	    // Only supports POST and GET calls and doesn't returns the response headers.
+	    // DON'T do this for testing b/c XMLHttpRequest is mocked, not XDomainRequest.
+	    if (process.env.NODE_ENV !== 'test' &&
+	        typeof window !== 'undefined' &&
+	        window.XDomainRequest && !('withCredentials' in request) &&
+	        !isURLSameOrigin(config.url)) {
+	      request = new window.XDomainRequest();
+	      loadEvent = 'onload';
+	      xDomain = true;
+	      request.onprogress = function handleProgress() {};
+	      request.ontimeout = function handleTimeout() {};
+	    }
+
+	    // HTTP basic authentication
+	    if (config.auth) {
+	      var username = config.auth.username || '';
+	      var password = config.auth.password || '';
+	      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+	    }
+
+	    request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
+
+	    // Set the request timeout in MS
+	    request.timeout = config.timeout;
+
+	    // Listen for ready state
+	    request[loadEvent] = function handleLoad() {
+	      if (!request || (request.readyState !== 4 && !xDomain)) {
+	        return;
+	      }
+
+	      // The request errored out and we didn't get a response, this will be
+	      // handled by onerror instead
+	      // With one exception: request that using file: protocol, most browsers
+	      // will return status as 0 even though it's a successful request
+	      if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+	        return;
+	      }
+
+	      // Prepare the response
+	      var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+	      var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
+	      var response = {
+	        data: responseData,
+	        // IE sends 1223 instead of 204 (https://github.com/mzabriskie/axios/issues/201)
+	        status: request.status === 1223 ? 204 : request.status,
+	        statusText: request.status === 1223 ? 'No Content' : request.statusText,
+	        headers: responseHeaders,
+	        config: config,
+	        request: request
+	      };
+
+	      settle(resolve, reject, response);
+
+	      // Clean up request
+	      request = null;
+	    };
+
+	    // Handle low level network errors
+	    request.onerror = function handleError() {
+	      // Real errors are hidden from us by the browser
+	      // onerror should only fire if it's a network error
+	      reject(createError('Network Error', config));
+
+	      // Clean up request
+	      request = null;
+	    };
+
+	    // Handle timeout
+	    request.ontimeout = function handleTimeout() {
+	      reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED'));
+
+	      // Clean up request
+	      request = null;
+	    };
+
+	    // Add xsrf header
+	    // This is only done if running in a standard browser environment.
+	    // Specifically not if we're in a web worker, or react-native.
+	    if (utils.isStandardBrowserEnv()) {
+	      var cookies = __webpack_require__(304);
+
+	      // Add xsrf header
+	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
+	          cookies.read(config.xsrfCookieName) :
+	          undefined;
+
+	      if (xsrfValue) {
+	        requestHeaders[config.xsrfHeaderName] = xsrfValue;
+	      }
+	    }
+
+	    // Add headers to the request
+	    if ('setRequestHeader' in request) {
+	      utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+	        if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
+	          // Remove Content-Type if data is undefined
+	          delete requestHeaders[key];
+	        } else {
+	          // Otherwise add header to the request
+	          request.setRequestHeader(key, val);
+	        }
+	      });
+	    }
+
+	    // Add withCredentials to request if needed
+	    if (config.withCredentials) {
+	      request.withCredentials = true;
+	    }
+
+	    // Add responseType to request if needed
+	    if (config.responseType) {
+	      try {
+	        request.responseType = config.responseType;
+	      } catch (e) {
+	        if (request.responseType !== 'json') {
+	          throw e;
+	        }
+	      }
+	    }
+
+	    // Handle progress if needed
+	    if (typeof config.onDownloadProgress === 'function') {
+	      request.addEventListener('progress', config.onDownloadProgress);
+	    }
+
+	    // Not all browsers support upload events
+	    if (typeof config.onUploadProgress === 'function' && request.upload) {
+	      request.upload.addEventListener('progress', config.onUploadProgress);
+	    }
+
+	    if (config.cancelToken) {
+	      // Handle cancellation
+	      config.cancelToken.promise.then(function onCanceled(cancel) {
+	        if (!request) {
+	          return;
+	        }
+
+	        request.abort();
+	        reject(cancel);
+	        // Clean up request
+	        request = null;
+	      });
+	    }
+
+	    if (requestData === undefined) {
+	      requestData = null;
+	    }
+
+	    // Send the request
+	    request.send(requestData);
+	  });
+	};
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ },
+/* 297 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var createError = __webpack_require__(298);
+
+	/**
+	 * Resolve or reject a Promise based on response status.
+	 *
+	 * @param {Function} resolve A function that resolves the promise.
+	 * @param {Function} reject A function that rejects the promise.
+	 * @param {object} response The response.
+	 */
+	module.exports = function settle(resolve, reject, response) {
+	  var validateStatus = response.config.validateStatus;
+	  // Note: status is not exposed by XDomainRequest
+	  if (!response.status || !validateStatus || validateStatus(response.status)) {
+	    resolve(response);
+	  } else {
+	    reject(createError(
+	      'Request failed with status code ' + response.status,
+	      response.config,
+	      null,
+	      response
+	    ));
+	  }
+	};
+
+
+/***/ },
+/* 298 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var enhanceError = __webpack_require__(299);
+
+	/**
+	 * Create an Error with the specified message, config, error code, and response.
+	 *
+	 * @param {string} message The error message.
+	 * @param {Object} config The config.
+	 * @param {string} [code] The error code (for example, 'ECONNABORTED').
+	 @ @param {Object} [response] The response.
+	 * @returns {Error} The created error.
+	 */
+	module.exports = function createError(message, config, code, response) {
+	  var error = new Error(message);
+	  return enhanceError(error, config, code, response);
+	};
+
+
+/***/ },
+/* 299 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Update an Error with the specified config, error code, and response.
+	 *
+	 * @param {Error} error The error to update.
+	 * @param {Object} config The config.
+	 * @param {string} [code] The error code (for example, 'ECONNABORTED').
+	 @ @param {Object} [response] The response.
+	 * @returns {Error} The error.
+	 */
+	module.exports = function enhanceError(error, config, code, response) {
+	  error.config = config;
+	  if (code) {
+	    error.code = code;
+	  }
+	  error.response = response;
+	  return error;
+	};
+
+
+/***/ },
+/* 300 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(291);
+
+	function encode(val) {
+	  return encodeURIComponent(val).
+	    replace(/%40/gi, '@').
+	    replace(/%3A/gi, ':').
+	    replace(/%24/g, '$').
+	    replace(/%2C/gi, ',').
+	    replace(/%20/g, '+').
+	    replace(/%5B/gi, '[').
+	    replace(/%5D/gi, ']');
+	}
+
+	/**
+	 * Build a URL by appending params to the end
+	 *
+	 * @param {string} url The base of the url (e.g., http://www.google.com)
+	 * @param {object} [params] The params to be appended
+	 * @returns {string} The formatted url
+	 */
+	module.exports = function buildURL(url, params, paramsSerializer) {
+	  /*eslint no-param-reassign:0*/
+	  if (!params) {
+	    return url;
+	  }
+
+	  var serializedParams;
+	  if (paramsSerializer) {
+	    serializedParams = paramsSerializer(params);
+	  } else if (utils.isURLSearchParams(params)) {
+	    serializedParams = params.toString();
+	  } else {
+	    var parts = [];
+
+	    utils.forEach(params, function serialize(val, key) {
+	      if (val === null || typeof val === 'undefined') {
+	        return;
+	      }
+
+	      if (utils.isArray(val)) {
+	        key = key + '[]';
+	      }
+
+	      if (!utils.isArray(val)) {
+	        val = [val];
+	      }
+
+	      utils.forEach(val, function parseValue(v) {
+	        if (utils.isDate(v)) {
+	          v = v.toISOString();
+	        } else if (utils.isObject(v)) {
+	          v = JSON.stringify(v);
+	        }
+	        parts.push(encode(key) + '=' + encode(v));
+	      });
+	    });
+
+	    serializedParams = parts.join('&');
+	  }
+
+	  if (serializedParams) {
+	    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+	  }
+
+	  return url;
+	};
+
+
+/***/ },
+/* 301 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(291);
+
+	/**
+	 * Parse headers into an object
+	 *
+	 * ```
+	 * Date: Wed, 27 Aug 2014 08:58:49 GMT
+	 * Content-Type: application/json
+	 * Connection: keep-alive
+	 * Transfer-Encoding: chunked
+	 * ```
+	 *
+	 * @param {String} headers Headers needing to be parsed
+	 * @returns {Object} Headers parsed into an object
+	 */
+	module.exports = function parseHeaders(headers) {
+	  var parsed = {};
+	  var key;
+	  var val;
+	  var i;
+
+	  if (!headers) { return parsed; }
+
+	  utils.forEach(headers.split('\n'), function parser(line) {
+	    i = line.indexOf(':');
+	    key = utils.trim(line.substr(0, i)).toLowerCase();
+	    val = utils.trim(line.substr(i + 1));
+
+	    if (key) {
+	      parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+	    }
+	  });
+
+	  return parsed;
+	};
+
+
+/***/ },
+/* 302 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(291);
+
+	module.exports = (
+	  utils.isStandardBrowserEnv() ?
+
+	  // Standard browser envs have full support of the APIs needed to test
+	  // whether the request URL is of the same origin as current location.
+	  (function standardBrowserEnv() {
+	    var msie = /(msie|trident)/i.test(navigator.userAgent);
+	    var urlParsingNode = document.createElement('a');
+	    var originURL;
+
+	    /**
+	    * Parse a URL to discover it's components
+	    *
+	    * @param {String} url The URL to be parsed
+	    * @returns {Object}
+	    */
+	    function resolveURL(url) {
+	      var href = url;
+
+	      if (msie) {
+	        // IE needs attribute set twice to normalize properties
+	        urlParsingNode.setAttribute('href', href);
+	        href = urlParsingNode.href;
+	      }
+
+	      urlParsingNode.setAttribute('href', href);
+
+	      // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+	      return {
+	        href: urlParsingNode.href,
+	        protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+	        host: urlParsingNode.host,
+	        search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+	        hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+	        hostname: urlParsingNode.hostname,
+	        port: urlParsingNode.port,
+	        pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+	                  urlParsingNode.pathname :
+	                  '/' + urlParsingNode.pathname
+	      };
+	    }
+
+	    originURL = resolveURL(window.location.href);
+
+	    /**
+	    * Determine if a URL shares the same origin as the current location
+	    *
+	    * @param {String} requestURL The URL to test
+	    * @returns {boolean} True if URL shares the same origin, otherwise false
+	    */
+	    return function isURLSameOrigin(requestURL) {
+	      var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+	      return (parsed.protocol === originURL.protocol &&
+	            parsed.host === originURL.host);
+	    };
+	  })() :
+
+	  // Non standard browser envs (web workers, react-native) lack needed support.
+	  (function nonStandardBrowserEnv() {
+	    return function isURLSameOrigin() {
+	      return true;
+	    };
+	  })()
+	);
+
+
+/***/ },
+/* 303 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	// btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
+
+	var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+
+	function E() {
+	  this.message = 'String contains an invalid character';
+	}
+	E.prototype = new Error;
+	E.prototype.code = 5;
+	E.prototype.name = 'InvalidCharacterError';
+
+	function btoa(input) {
+	  var str = String(input);
+	  var output = '';
+	  for (
+	    // initialize result and counter
+	    var block, charCode, idx = 0, map = chars;
+	    // if the next str index does not exist:
+	    //   change the mapping table to "="
+	    //   check if d has no fractional digits
+	    str.charAt(idx | 0) || (map = '=', idx % 1);
+	    // "8 - idx % 1 * 8" generates the sequence 2, 4, 6, 8
+	    output += map.charAt(63 & block >> 8 - idx % 1 * 8)
+	  ) {
+	    charCode = str.charCodeAt(idx += 3 / 4);
+	    if (charCode > 0xFF) {
+	      throw new E();
+	    }
+	    block = block << 8 | charCode;
+	  }
+	  return output;
+	}
+
+	module.exports = btoa;
+
+
+/***/ },
+/* 304 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(291);
+
+	module.exports = (
+	  utils.isStandardBrowserEnv() ?
+
+	  // Standard browser envs support document.cookie
+	  (function standardBrowserEnv() {
+	    return {
+	      write: function write(name, value, expires, path, domain, secure) {
+	        var cookie = [];
+	        cookie.push(name + '=' + encodeURIComponent(value));
+
+	        if (utils.isNumber(expires)) {
+	          cookie.push('expires=' + new Date(expires).toGMTString());
+	        }
+
+	        if (utils.isString(path)) {
+	          cookie.push('path=' + path);
+	        }
+
+	        if (utils.isString(domain)) {
+	          cookie.push('domain=' + domain);
+	        }
+
+	        if (secure === true) {
+	          cookie.push('secure');
+	        }
+
+	        document.cookie = cookie.join('; ');
+	      },
+
+	      read: function read(name) {
+	        var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+	        return (match ? decodeURIComponent(match[3]) : null);
+	      },
+
+	      remove: function remove(name) {
+	        this.write(name, '', Date.now() - 86400000);
+	      }
+	    };
+	  })() :
+
+	  // Non standard browser env (web workers, react-native) lack needed support.
+	  (function nonStandardBrowserEnv() {
+	    return {
+	      write: function write() {},
+	      read: function read() { return null; },
+	      remove: function remove() {}
+	    };
+	  })()
+	);
+
+
+/***/ },
+/* 305 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(291);
+
+	function InterceptorManager() {
+	  this.handlers = [];
+	}
+
+	/**
+	 * Add a new interceptor to the stack
+	 *
+	 * @param {Function} fulfilled The function to handle `then` for a `Promise`
+	 * @param {Function} rejected The function to handle `reject` for a `Promise`
+	 *
+	 * @return {Number} An ID used to remove interceptor later
+	 */
+	InterceptorManager.prototype.use = function use(fulfilled, rejected) {
+	  this.handlers.push({
+	    fulfilled: fulfilled,
+	    rejected: rejected
+	  });
+	  return this.handlers.length - 1;
+	};
+
+	/**
+	 * Remove an interceptor from the stack
+	 *
+	 * @param {Number} id The ID that was returned by `use`
+	 */
+	InterceptorManager.prototype.eject = function eject(id) {
+	  if (this.handlers[id]) {
+	    this.handlers[id] = null;
+	  }
+	};
+
+	/**
+	 * Iterate over all the registered interceptors
+	 *
+	 * This method is particularly useful for skipping over any
+	 * interceptors that may have become `null` calling `eject`.
+	 *
+	 * @param {Function} fn The function to call for each interceptor
+	 */
+	InterceptorManager.prototype.forEach = function forEach(fn) {
+	  utils.forEach(this.handlers, function forEachHandler(h) {
+	    if (h !== null) {
+	      fn(h);
+	    }
+	  });
+	};
+
+	module.exports = InterceptorManager;
+
+
+/***/ },
+/* 306 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(291);
+	var transformData = __webpack_require__(307);
+	var isCancel = __webpack_require__(308);
+	var defaults = __webpack_require__(294);
+
+	/**
+	 * Throws a `Cancel` if cancellation has been requested.
+	 */
+	function throwIfCancellationRequested(config) {
+	  if (config.cancelToken) {
+	    config.cancelToken.throwIfRequested();
+	  }
+	}
+
+	/**
+	 * Dispatch a request to the server using the configured adapter.
+	 *
+	 * @param {object} config The config that is to be used for the request
+	 * @returns {Promise} The Promise to be fulfilled
+	 */
+	module.exports = function dispatchRequest(config) {
+	  throwIfCancellationRequested(config);
+
+	  // Ensure headers exist
+	  config.headers = config.headers || {};
+
+	  // Transform request data
+	  config.data = transformData(
+	    config.data,
+	    config.headers,
+	    config.transformRequest
+	  );
+
+	  // Flatten headers
+	  config.headers = utils.merge(
+	    config.headers.common || {},
+	    config.headers[config.method] || {},
+	    config.headers || {}
+	  );
+
+	  utils.forEach(
+	    ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
+	    function cleanHeaderConfig(method) {
+	      delete config.headers[method];
+	    }
+	  );
+
+	  var adapter = config.adapter || defaults.adapter;
+
+	  return adapter(config).then(function onAdapterResolution(response) {
+	    throwIfCancellationRequested(config);
+
+	    // Transform response data
+	    response.data = transformData(
+	      response.data,
+	      response.headers,
+	      config.transformResponse
+	    );
+
+	    return response;
+	  }, function onAdapterRejection(reason) {
+	    if (!isCancel(reason)) {
+	      throwIfCancellationRequested(config);
+
+	      // Transform response data
+	      if (reason && reason.response) {
+	        reason.response.data = transformData(
+	          reason.response.data,
+	          reason.response.headers,
+	          config.transformResponse
+	        );
+	      }
+	    }
+
+	    return Promise.reject(reason);
+	  });
+	};
+
+
+/***/ },
+/* 307 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(291);
+
+	/**
+	 * Transform the data for a request or a response
+	 *
+	 * @param {Object|String} data The data to be transformed
+	 * @param {Array} headers The headers for the request or response
+	 * @param {Array|Function} fns A single function or Array of functions
+	 * @returns {*} The resulting transformed data
+	 */
+	module.exports = function transformData(data, headers, fns) {
+	  /*eslint no-param-reassign:0*/
+	  utils.forEach(fns, function transform(fn) {
+	    data = fn(data, headers);
+	  });
+
+	  return data;
+	};
+
+
+/***/ },
+/* 308 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = function isCancel(value) {
+	  return !!(value && value.__CANCEL__);
+	};
+
+
+/***/ },
+/* 309 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Determines whether the specified URL is absolute
+	 *
+	 * @param {string} url The URL to test
+	 * @returns {boolean} True if the specified URL is absolute, otherwise false
+	 */
+	module.exports = function isAbsoluteURL(url) {
+	  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+	  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+	  // by any combination of letters, digits, plus, period, or hyphen.
+	  return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+	};
+
+
+/***/ },
+/* 310 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Creates a new URL by combining the specified URLs
+	 *
+	 * @param {string} baseURL The base URL
+	 * @param {string} relativeURL The relative URL
+	 * @returns {string} The combined URL
+	 */
+	module.exports = function combineURLs(baseURL, relativeURL) {
+	  return baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '');
+	};
+
+
+/***/ },
+/* 311 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * A `Cancel` is an object that is thrown when an operation is canceled.
+	 *
+	 * @class
+	 * @param {string=} message The message.
+	 */
+	function Cancel(message) {
+	  this.message = message;
+	}
+
+	Cancel.prototype.toString = function toString() {
+	  return 'Cancel' + (this.message ? ': ' + this.message : '');
+	};
+
+	Cancel.prototype.__CANCEL__ = true;
+
+	module.exports = Cancel;
+
+
+/***/ },
+/* 312 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var Cancel = __webpack_require__(311);
+
+	/**
+	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
+	 *
+	 * @class
+	 * @param {Function} executor The executor function.
+	 */
+	function CancelToken(executor) {
+	  if (typeof executor !== 'function') {
+	    throw new TypeError('executor must be a function.');
+	  }
+
+	  var resolvePromise;
+	  this.promise = new Promise(function promiseExecutor(resolve) {
+	    resolvePromise = resolve;
+	  });
+
+	  var token = this;
+	  executor(function cancel(message) {
+	    if (token.reason) {
+	      // Cancellation has already been requested
+	      return;
+	    }
+
+	    token.reason = new Cancel(message);
+	    resolvePromise(token.reason);
+	  });
+	}
+
+	/**
+	 * Throws a `Cancel` if cancellation has been requested.
+	 */
+	CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+	  if (this.reason) {
+	    throw this.reason;
+	  }
+	};
+
+	/**
+	 * Returns an object that contains a new `CancelToken` and a function that, when called,
+	 * cancels the `CancelToken`.
+	 */
+	CancelToken.source = function source() {
+	  var cancel;
+	  var token = new CancelToken(function executor(c) {
+	    cancel = c;
+	  });
+	  return {
+	    token: token,
+	    cancel: cancel
+	  };
+	};
+
+	module.exports = CancelToken;
+
+
+/***/ },
+/* 313 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Syntactic sugar for invoking a function and expanding an array for arguments.
+	 *
+	 * Common use case would be to use `Function.prototype.apply`.
+	 *
+	 *  ```js
+	 *  function f(x, y, z) {}
+	 *  var args = [1, 2, 3];
+	 *  f.apply(null, args);
+	 *  ```
+	 *
+	 * With `spread` this example can be re-written.
+	 *
+	 *  ```js
+	 *  spread(function(x, y, z) {})([1, 2, 3]);
+	 *  ```
+	 *
+	 * @param {Function} callback
+	 * @returns {Function}
+	 */
+	module.exports = function spread(callback) {
+	  return function wrap(arr) {
+	    return callback.apply(null, arr);
+	  };
+	};
+
+
+/***/ },
+/* 314 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(315);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CitiesListComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CitiesListComp.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 315 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n.city-list h2 {\n  margin-top:25px;\n  text-align: center;\n}\n\n.city-links {\n  margin-top:30px;\n  margin-left: 20px;\n}\n\n.city-links ul {\n  list-style-type: none;\n}\n\n.city-links a {\n  color:#FF00BF;\n  text-decoration: none;\n}\n\n.city-links a:hover {\n  color:#b30086;\n  text-decoration: underline;\n}\n", ""]);
 
 	// exports
 
