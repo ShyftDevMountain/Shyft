@@ -26,8 +26,11 @@
 }
 
 .MainJumbotron-btn:hover {
-    background: #ff00bf;
-    border-color: #ff00bf;
+    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));
+}
+
+.MainJumbotron-btn a:hover {
+    color: #f3f3f5;
 }
 
 .MainJumbotron-btm-banner {
@@ -60,9 +63,11 @@
     transition: all .2s ease;
 }
 
-.ride-with-lyft-btn:hover {
+.ride-with-lyft-btn:hover,
+.ride-with-lyft-btn a:hover {
     cursor: pointer;
     background-color: #ff4dd2;
+    color: #f3f3f5;
 }
 
 @media (min-width: 550px) {
