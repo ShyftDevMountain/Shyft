@@ -40,7 +40,6 @@ class Footer extends React.Component {
                       <li><a href='#'>Developers</a></li>
                       <li><a href='#'>Lyft Promo Code</a></li>
                     </ul>
-                    <img src='https://maps.googleapis.com/maps/api/staticmap?center=Washington,DC&zoom=12&size=640x400&key=AIzaSyD1-p2LRZozs7Y-5-pYvh8AMlVSHgeFa9E' />
                   </div>
                 </div>
               </div>

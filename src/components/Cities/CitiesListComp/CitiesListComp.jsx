@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+import './CitiesListComp.css';
 
 class CitiesList extends React.Component {
   render() {
@@ -12,4 +12,4 @@ class CitiesList extends React.Component {
   }
 }
 
-export default CitiesList; 
+export default CitiesList;
