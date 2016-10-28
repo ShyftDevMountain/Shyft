@@ -3,7 +3,7 @@
     margin: 0 auto;
     border-radius: 7px;
     border: none;
-} 
+}
 
 .cities-jumbotron-container .geosuggest__input {
     width: 310px;
@@ -21,7 +21,7 @@
 }
 
 .cities-jumbotron-container {
-    background-image: url('../../../img/citiesimg/cities-hero.1e733ed9.png');
+    background-image: url('https://www.lyft.com/images/cities/cities-hero.1e733ed9.png');
     background-size: cover;
     height: 410px;
     text-align: center;
