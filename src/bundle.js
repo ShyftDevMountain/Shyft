@@ -28214,8 +28214,7 @@
 	                          'Lyft Promo Code'
 	                        )
 	                      )
-	                    ),
-	                    _react2.default.createElement('img', { src: 'https://maps.googleapis.com/maps/api/staticmap?center=Washington,DC&zoom=12&size=640x400&key=AIzaSyD1-p2LRZozs7Y-5-pYvh8AMlVSHgeFa9E' })
+	                    )
 	                  )
 	                )
 	              ),
