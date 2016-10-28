@@ -7,7 +7,7 @@ import './CityBottomBanner.css';
 class CityBottomBanner extends React.Component {
   render () {
     return (
-            <div className='main'>
+            <div style={{'backgroundImage': 'url("./img/cities/car-lyft.svg")', 'backgroundSize':'cover', 'backgroundRepeat':'no-repeat'}} className='banner main'>
               <div className="container border-t border-moonstone">
                   <div className='row '>
                     <div className="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
@@ -20,7 +20,6 @@ class CityBottomBanner extends React.Component {
                   </div>
               </div>
             </div>
-
     );
   }
 };

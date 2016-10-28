@@ -33,25 +33,24 @@
   display: none;
 }
 
-.geosuggest-suggestions {
-  display: flex;
-  justify-content: center;
-}
-
-.geosuggest__suggests {
+.estimateForm .geosuggest__suggests {
   list-style: none;
   position: absolute;
   border-bottom-right-radius: .5rem;
   border-bottom-left-radius: .5rem;
   border: .08333rem solid #E60000;
   background: white;
-  width: 92.5%;
-  padding-left: 25px;
+  padding-left: 26px;
   margin-top: -1px;
   border-top: 1px solid white;
   transition: max-height 0.2s, border 0.2s;
   overflow-x: hidden;
   overflow-y: auto;
+  right: 16px;
+  left: 16px;
+}
+.dest-input .geosuggest__suggests {
+margin-top: -3px;
 }
 
 .pickup-icon {
@@ -103,7 +102,7 @@
   font-size: 1.7rem;
 }
 
-.divider {
+.estimateForm .divider {
   border-color: #D8DCE6;
   border-right-width: 1px;
   border-right-style: solid;

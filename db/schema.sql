@@ -67,7 +67,7 @@ CREATE TABLE cities
   center_lat INT,
   center_long INT,
   map_path TEXT
-)
+);
 
 
 INSERT INTO cities (city, state, img, map_img) VALUES ('Flagstaff', 'Arizona', 'https://www.lyft.com/images/cities/heroes/default.0145a1a8.png', 'https://maps.googleapis.com/maps/api/staticmap?center=Flagstaff,AZ&zoom=10&size=640x400&key=AIzaSyD1-p2LRZozs7Y-5-pYvh8AMlVSHgeFa9E');
@@ -180,7 +180,7 @@ create table zip_codes
   (
     id serial primary key,
     zip_code integer
-  )
+  );
 
 alter table zip_codes add column city_id integer references cities(id);
 
