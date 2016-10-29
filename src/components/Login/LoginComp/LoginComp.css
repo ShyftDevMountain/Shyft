@@ -1,5 +1,5 @@
 .login-container {
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,7 +19,7 @@
     margin: 0 auto;
     transform: translateY(-385px);
     width: 280px;
-    height: 364px;
+    height: 370px;
     background: #fff;
     color: #8f9cb3;
     font-weight: 300;

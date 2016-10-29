@@ -22,12 +22,10 @@ class NavBar extends React.Component {
         var cities = document.getElementById('cities');
         var help = document.getElementById('help');
         var ride = document.getElementById('ride');
-        var login = document.getElementById('login');
 
         cities.classList.add('navbar-link-active');
         help.classList.add('navbar-link-active');
         ride.classList.add('navbar-link-active');
-        login.classList.add('navbar-link-active');
         carrot.classList.add('carrot-active');
         explore.classList.remove('navbar-container');
         explore.classList.add('navbar-active');
@@ -55,7 +53,6 @@ class NavBar extends React.Component {
         var cities = document.getElementById('cities');
         var help = document.getElementById('help');
         var ride = document.getElementById('ride');
-        var login = document.getElementById('login');
 
         navbarDrop.classList.remove('navbar-hover-container-active');
         setTimeout(function(){
@@ -71,7 +68,6 @@ class NavBar extends React.Component {
             cities.classList.remove('navbar-link-active');
             help.classList.remove('navbar-link-active');
             ride.classList.remove('navbar-link-active');
-            login.classList.remove('navbar-link-active');
         }, 300);
     }
 
@@ -80,9 +76,13 @@ class NavBar extends React.Component {
       this.state = {
         showMenu: 'sidemenu',
         showBackDrop: 'SideMenuBackDrop',
+        showLogin: false
       }
       this.hideMenu = this.hideMenu.bind(this);
       this.showMenu = this.showMenu.bind(this);
+      this.loginClick = this.loginClick.bind(this);
+      this.handleLoginClose = this.handleLoginClose.bind(this);
+
     }
 
     showMenu() {
@@ -100,13 +100,23 @@ class NavBar extends React.Component {
       })
     }
 
+    loginClick() {
+        this.setState({
+            showLogin: true
+        })
+    }
+
+    handleLoginClose() {
+        this.setState({
+            showLogin: false
+        })
+    }
 
 
   render() {
     return (
     <div>
 
-        <LoginComp />
 
 
         <SideMenu showMenu={this.state.showMenu}/>
@@ -137,8 +147,9 @@ class NavBar extends React.Component {
                 </div>
                 <div id="navbar-right" className="navbar-right">
                     <div id="navbar-ride-lyftbtn" className="navbar-ride-lyft"><Link to="/rides" id="ride" className="hover-link-none">Ride with Shyft</Link></div>
+                    {this.state.showLogin ? <LoginComp handleLoginClose={this.handleLoginClose}/> : null}
                     <div className="navbar-login">
-                        <Link to="/login" id="login">Login</Link>
+                        <div id="login" onClick={this.loginClick}>Login</div>
                     </div>
                 </div>
                 <div  id='navbar-signup' className="navbar-signup">
