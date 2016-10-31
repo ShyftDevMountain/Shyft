@@ -66,27 +66,27 @@
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
-	var _HomeComp = __webpack_require__(251);
+	var _HomeComp = __webpack_require__(254);
 
 	var _HomeComp2 = _interopRequireDefault(_HomeComp);
 
-	var _CitiesComp = __webpack_require__(261);
+	var _CitiesComp = __webpack_require__(264);
 
 	var _CitiesComp2 = _interopRequireDefault(_CitiesComp);
 
-	var _RidesComp = __webpack_require__(301);
+	var _RidesComp = __webpack_require__(304);
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(304);
+	var _UserDashboardComp = __webpack_require__(307);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(307);
+	var _CityDetails = __webpack_require__(310);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
-	var _LoginComp = __webpack_require__(313);
+	var _LoginComp = __webpack_require__(249);
 
 	var _LoginComp2 = _interopRequireDefault(_LoginComp);
 
@@ -27531,7 +27531,11 @@
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
-	__webpack_require__(249);
+	var _LoginComp = __webpack_require__(249);
+
+	var _LoginComp2 = _interopRequireDefault(_LoginComp);
+
+	__webpack_require__(252);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27559,12 +27563,10 @@
 	            var cities = document.getElementById('cities');
 	            var help = document.getElementById('help');
 	            var ride = document.getElementById('ride');
-	            var login = document.getElementById('login');
 
 	            cities.classList.add('navbar-link-active');
 	            help.classList.add('navbar-link-active');
 	            ride.classList.add('navbar-link-active');
-	            login.classList.add('navbar-link-active');
 	            carrot.classList.add('carrot-active');
 	            explore.classList.remove('navbar-container');
 	            explore.classList.add('navbar-active');
@@ -27593,7 +27595,6 @@
 	            var cities = document.getElementById('cities');
 	            var help = document.getElementById('help');
 	            var ride = document.getElementById('ride');
-	            var login = document.getElementById('login');
 
 	            navbarDrop.classList.remove('navbar-hover-container-active');
 	            setTimeout(function () {
@@ -27609,7 +27610,6 @@
 	                cities.classList.remove('navbar-link-active');
 	                help.classList.remove('navbar-link-active');
 	                ride.classList.remove('navbar-link-active');
-	                login.classList.remove('navbar-link-active');
 	            }, 300);
 	        }
 	    }]);
@@ -27621,10 +27621,14 @@
 
 	        _this.state = {
 	            showMenu: 'sidemenu',
-	            showBackDrop: 'SideMenuBackDrop'
+	            showBackDrop: 'SideMenuBackDrop',
+	            showLogin: false
 	        };
 	        _this.hideMenu = _this.hideMenu.bind(_this);
 	        _this.showMenu = _this.showMenu.bind(_this);
+	        _this.loginClick = _this.loginClick.bind(_this);
+	        _this.handleLoginClose = _this.handleLoginClose.bind(_this);
+
 	        return _this;
 	    }
 
@@ -27643,6 +27647,20 @@
 	            this.setState({
 	                showMenu: 'sidemenu',
 	                showBackDrop: 'SideMenuBackDrop'
+	            });
+	        }
+	    }, {
+	        key: 'loginClick',
+	        value: function loginClick() {
+	            this.setState({
+	                showLogin: true
+	            });
+	        }
+	    }, {
+	        key: 'handleLoginClose',
+	        value: function handleLoginClose() {
+	            this.setState({
+	                showLogin: false
 	            });
 	        }
 	    }, {
@@ -27727,12 +27745,13 @@
 	                                    'Ride with Shyft'
 	                                )
 	                            ),
+	                            this.state.showLogin ? _react2.default.createElement(_LoginComp2.default, { handleLoginClose: this.handleLoginClose }) : null,
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'navbar-login' },
 	                                _react2.default.createElement(
-	                                    _reactRouter.Link,
-	                                    { to: '/login', id: 'login' },
+	                                    'div',
+	                                    { id: 'login', onClick: this.loginClick },
 	                                    'Login'
 	                                )
 	                            )
@@ -28372,10 +28391,180 @@
 /* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(250);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var LoginComp = function (_React$Component) {
+	    _inherits(LoginComp, _React$Component);
+
+	    function LoginComp() {
+	        _classCallCheck(this, LoginComp);
+
+	        return _possibleConstructorReturn(this, (LoginComp.__proto__ || Object.getPrototypeOf(LoginComp)).apply(this, arguments));
+	    }
+
+	    _createClass(LoginComp, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            setTimeout(function () {
+	                var loginForm = document.getElementById('loginForm');
+
+	                loginForm.classList.add('login-form-container-active');
+	            }, 200);
+	        }
+	    }, {
+	        key: 'handleLoginClose',
+	        value: function handleLoginClose() {
+	            var self = this;
+
+	            var loginContainer = document.getElementById('loginContainer');
+	            var loginForm = document.getElementById('loginForm');
+
+	            loginContainer.classList.remove('login-container-active');
+	            loginForm.classList.remove('login-form-container-active');
+	            setTimeout(function () {
+	                self.props.handleLoginClose();
+	            }, 500);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { id: 'loginContainer', className: 'login-container' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { id: 'loginForm', className: 'login-form-container' },
+	                        _react2.default.createElement('span', { onClick: this.handleLoginClose.bind(this), className: 'login-close glyphicon glyphicon-remove' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'login-heading' },
+	                            'Log in to Shyft'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'login-input-container' },
+	                            _react2.default.createElement('input', { type: 'text', placeholder: 'Phone number' })
+	                        ),
+	                        _react2.default.createElement(
+	                            'button',
+	                            { type: 'button', className: 'login-button btn btn-primary' },
+	                            'Log In'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'login-or' },
+	                            'or'
+	                        ),
+	                        _react2.default.createElement(
+	                            'button',
+	                            { type: 'button', onClick: this.handleFbLogin, className: 'login-facebook-btn btn-primary' },
+	                            _react2.default.createElement('i', { className: 'fa fa-facebook-official login-fb-logo', 'aria-hidden': 'true' }),
+	                            'Log in with Facebook'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'login-newtolyft' },
+	                            'New to Lyft?',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'login-signup' },
+	                                'Sign up'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'login-newtolyft' },
+	                            'Need to update your phone number?',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'login-contact' },
+	                                'Contact us'
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return LoginComp;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = LoginComp;
+
+/***/ },
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(250);
+	var content = __webpack_require__(251);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./LoginComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./LoginComp.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 251 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".login-container {\n    display: block;\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    z-index: 100;\n    overflow: hidden;\n}\n\n.login-container-active {\n    display: block;\n}\n\n.login-form-container {\n    text-align: center;\n    margin: 0 auto;\n    transform: translateY(-385px);\n    width: 280px;\n    height: 370px;\n    background: #fff;\n    color: #8f9cb3;\n    font-weight: 300;\n    transition: transform .5s ease;\n}\n\n.login-form-container-active {\n    transform: translateY(185px);\n}\n\n.login-close {\n    position: absolute;\n    right: 5px;\n    top: 5px;\n}\n\n.login-close:hover {\n    text-decoration: underline;\n    cursor: pointer;\n}\n\n.login-heading {\n    margin-bottom: 10px;\n    padding-top: 25px;\n    font-weight: bold;\n    font-size: 2.25rem;\n    color: #333;\n}\n\n.login-input-container {\n    margin-bottom: 20px;\n}\n\n.login-input-container input {\n    padding: 8px 15px;\n    width: 250px;\n    border-radius: 7px;\n    border: 1px solid #d8dce6;\n}\n\n.login-button {\n    width: 250px;\n    font-size: 1.45rem;\n    padding-top: 8px;\n    padding-bottom: 8px;\n    text-transform: uppercase;\n    margin-bottom: 10px;\n}\n\n.login-button:hover {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-button:active,\n.login-button:focus {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-or {\n    color: #333;\n}\n\n.login-facebook-btn {\n    border-radius: 7px;\n    border: none;\n    padding: 8px;\n    font-size: 1.65rem;\n    width: 250px;\n    margin-bottom: 15px;\n}\n\n.login-fb-logo {\n    font-size: 22px;\n    vertical-align: text-bottom;\n    margin-right: 8px;\n}\n\n.login-signup,\n.login-contact {\n    color: #ff00bf;\n    margin-left: 5px;\n}\n\n.login-newtolyft {\n    width: 265px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 252 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(253);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -28395,7 +28584,7 @@
 	}
 
 /***/ },
-/* 250 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -28409,7 +28598,7 @@
 
 
 /***/ },
-/* 251 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28428,15 +28617,15 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _MainJumbotron = __webpack_require__(252);
+	var _MainJumbotron = __webpack_require__(255);
 
 	var _MainJumbotron2 = _interopRequireDefault(_MainJumbotron);
 
-	var _RidesInMinutes = __webpack_require__(255);
+	var _RidesInMinutes = __webpack_require__(258);
 
 	var _RidesInMinutes2 = _interopRequireDefault(_RidesInMinutes);
 
-	var _FourWaysToRide = __webpack_require__(258);
+	var _FourWaysToRide = __webpack_require__(261);
 
 	var _FourWaysToRide2 = _interopRequireDefault(_FourWaysToRide);
 
@@ -28476,7 +28665,7 @@
 	exports.default = HomeComp;
 
 /***/ },
-/* 252 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28493,7 +28682,7 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(253);
+	__webpack_require__(256);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28567,13 +28756,13 @@
 	exports.default = MainJumbotron;
 
 /***/ },
-/* 253 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(254);
+	var content = __webpack_require__(257);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -28593,7 +28782,7 @@
 	}
 
 /***/ },
-/* 254 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -28607,7 +28796,7 @@
 
 
 /***/ },
-/* 255 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28622,7 +28811,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(256);
+	__webpack_require__(259);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28749,13 +28938,13 @@
 	exports.default = RidesInMinutes;
 
 /***/ },
-/* 256 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(257);
+	var content = __webpack_require__(260);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -28775,7 +28964,7 @@
 	}
 
 /***/ },
-/* 257 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -28789,7 +28978,7 @@
 
 
 /***/ },
-/* 258 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28804,7 +28993,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(259);
+	__webpack_require__(262);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28964,13 +29153,13 @@
 	exports.default = FourWaysToRide;
 
 /***/ },
-/* 259 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(260);
+	var content = __webpack_require__(263);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -28990,7 +29179,7 @@
 	}
 
 /***/ },
-/* 260 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -29004,7 +29193,7 @@
 
 
 /***/ },
-/* 261 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29023,17 +29212,17 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	__webpack_require__(262);
+	__webpack_require__(265);
 
-	var _CitiesJumbotron = __webpack_require__(264);
+	var _CitiesJumbotron = __webpack_require__(267);
 
 	var _CitiesJumbotron2 = _interopRequireDefault(_CitiesJumbotron);
 
-	var _CityBottomBanner = __webpack_require__(269);
+	var _CityBottomBanner = __webpack_require__(272);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesListComp = __webpack_require__(272);
+	var _CitiesListComp = __webpack_require__(275);
 
 	var _CitiesListComp2 = _interopRequireDefault(_CitiesListComp);
 
@@ -29075,13 +29264,13 @@
 	exports.default = CitiesComp;
 
 /***/ },
-/* 262 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(263);
+	var content = __webpack_require__(266);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -29101,7 +29290,7 @@
 	}
 
 /***/ },
-/* 263 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -29115,7 +29304,7 @@
 
 
 /***/ },
-/* 264 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29130,11 +29319,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactGeosuggestPlus = __webpack_require__(265);
+	var _reactGeosuggestPlus = __webpack_require__(268);
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	__webpack_require__(267);
+	__webpack_require__(270);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29197,7 +29386,7 @@
 	exports.default = CitiesJumbotron;
 
 /***/ },
-/* 265 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global google */
@@ -29222,7 +29411,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _GeosuggestItem = __webpack_require__(266);
+	var _GeosuggestItem = __webpack_require__(269);
 
 	var _GeosuggestItem2 = _interopRequireDefault(_GeosuggestItem);
 
@@ -29872,7 +30061,7 @@
 
 
 /***/ },
-/* 266 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
@@ -30002,13 +30191,13 @@
 
 
 /***/ },
-/* 267 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(268);
+	var content = __webpack_require__(271);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30028,7 +30217,7 @@
 	}
 
 /***/ },
-/* 268 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30042,7 +30231,7 @@
 
 
 /***/ },
-/* 269 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30059,7 +30248,7 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(270);
+	__webpack_require__(273);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30122,13 +30311,13 @@
 	exports.default = CityBottomBanner;
 
 /***/ },
-/* 270 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(271);
+	var content = __webpack_require__(274);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30148,7 +30337,7 @@
 	}
 
 /***/ },
-/* 271 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30162,7 +30351,7 @@
 
 
 /***/ },
-/* 272 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30177,9 +30366,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _citiesListService = __webpack_require__(273);
+	var _citiesListService = __webpack_require__(276);
 
-	__webpack_require__(299);
+	__webpack_require__(302);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30208,7 +30397,6 @@
 	    value: function componentDidMount() {
 	      var _this2 = this;
 
-	      console.log((0, _citiesListService.getCities)());
 	      (0, _citiesListService.getCities)().then(function (cities) {
 	        _this2.setState({
 	          cities: cities
@@ -30260,7 +30448,7 @@
 	exports.default = CitiesList;
 
 /***/ },
-/* 273 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30270,7 +30458,7 @@
 	});
 	exports.getCities = getCities;
 
-	var _axios = __webpack_require__(274);
+	var _axios = __webpack_require__(277);
 
 	var _axios2 = _interopRequireDefault(_axios);
 
@@ -30283,20 +30471,20 @@
 	}
 
 /***/ },
-/* 274 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(275);
+	module.exports = __webpack_require__(278);
 
 /***/ },
-/* 275 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(276);
-	var bind = __webpack_require__(277);
-	var Axios = __webpack_require__(278);
+	var utils = __webpack_require__(279);
+	var bind = __webpack_require__(280);
+	var Axios = __webpack_require__(281);
 
 	/**
 	 * Create an instance of Axios
@@ -30329,15 +30517,15 @@
 	};
 
 	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(296);
-	axios.CancelToken = __webpack_require__(297);
-	axios.isCancel = __webpack_require__(293);
+	axios.Cancel = __webpack_require__(299);
+	axios.CancelToken = __webpack_require__(300);
+	axios.isCancel = __webpack_require__(296);
 
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(298);
+	axios.spread = __webpack_require__(301);
 
 	module.exports = axios;
 
@@ -30346,12 +30534,12 @@
 
 
 /***/ },
-/* 276 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var bind = __webpack_require__(277);
+	var bind = __webpack_require__(280);
 
 	/*global toString:true*/
 
@@ -30651,7 +30839,7 @@
 
 
 /***/ },
-/* 277 */
+/* 280 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30668,17 +30856,17 @@
 
 
 /***/ },
-/* 278 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var defaults = __webpack_require__(279);
-	var utils = __webpack_require__(276);
-	var InterceptorManager = __webpack_require__(290);
-	var dispatchRequest = __webpack_require__(291);
-	var isAbsoluteURL = __webpack_require__(294);
-	var combineURLs = __webpack_require__(295);
+	var defaults = __webpack_require__(282);
+	var utils = __webpack_require__(279);
+	var InterceptorManager = __webpack_require__(293);
+	var dispatchRequest = __webpack_require__(294);
+	var isAbsoluteURL = __webpack_require__(297);
+	var combineURLs = __webpack_require__(298);
 
 	/**
 	 * Create a new instance of Axios
@@ -30759,13 +30947,13 @@
 
 
 /***/ },
-/* 279 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(276);
-	var normalizeHeaderName = __webpack_require__(280);
+	var utils = __webpack_require__(279);
+	var normalizeHeaderName = __webpack_require__(283);
 
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -30782,10 +30970,10 @@
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(281);
+	    adapter = __webpack_require__(284);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(281);
+	    adapter = __webpack_require__(284);
 	  }
 	  return adapter;
 	}
@@ -30852,12 +31040,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 280 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(276);
+	var utils = __webpack_require__(279);
 
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -30870,18 +31058,18 @@
 
 
 /***/ },
-/* 281 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(276);
-	var settle = __webpack_require__(282);
-	var buildURL = __webpack_require__(285);
-	var parseHeaders = __webpack_require__(286);
-	var isURLSameOrigin = __webpack_require__(287);
-	var createError = __webpack_require__(283);
-	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(288);
+	var utils = __webpack_require__(279);
+	var settle = __webpack_require__(285);
+	var buildURL = __webpack_require__(288);
+	var parseHeaders = __webpack_require__(289);
+	var isURLSameOrigin = __webpack_require__(290);
+	var createError = __webpack_require__(286);
+	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(291);
 
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -30977,7 +31165,7 @@
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(289);
+	      var cookies = __webpack_require__(292);
 
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -31054,12 +31242,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 282 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var createError = __webpack_require__(283);
+	var createError = __webpack_require__(286);
 
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -31085,12 +31273,12 @@
 
 
 /***/ },
-/* 283 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var enhanceError = __webpack_require__(284);
+	var enhanceError = __webpack_require__(287);
 
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -31108,7 +31296,7 @@
 
 
 /***/ },
-/* 284 */
+/* 287 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31133,12 +31321,12 @@
 
 
 /***/ },
-/* 285 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(276);
+	var utils = __webpack_require__(279);
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -31207,12 +31395,12 @@
 
 
 /***/ },
-/* 286 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(276);
+	var utils = __webpack_require__(279);
 
 	/**
 	 * Parse headers into an object
@@ -31250,12 +31438,12 @@
 
 
 /***/ },
-/* 287 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(276);
+	var utils = __webpack_require__(279);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -31324,7 +31512,7 @@
 
 
 /***/ },
-/* 288 */
+/* 291 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31366,12 +31554,12 @@
 
 
 /***/ },
-/* 289 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(276);
+	var utils = __webpack_require__(279);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -31425,12 +31613,12 @@
 
 
 /***/ },
-/* 290 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(276);
+	var utils = __webpack_require__(279);
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -31483,15 +31671,15 @@
 
 
 /***/ },
-/* 291 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(276);
-	var transformData = __webpack_require__(292);
-	var isCancel = __webpack_require__(293);
-	var defaults = __webpack_require__(279);
+	var utils = __webpack_require__(279);
+	var transformData = __webpack_require__(295);
+	var isCancel = __webpack_require__(296);
+	var defaults = __webpack_require__(282);
 
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -31568,12 +31756,12 @@
 
 
 /***/ },
-/* 292 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(276);
+	var utils = __webpack_require__(279);
 
 	/**
 	 * Transform the data for a request or a response
@@ -31594,7 +31782,7 @@
 
 
 /***/ },
-/* 293 */
+/* 296 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31605,7 +31793,7 @@
 
 
 /***/ },
-/* 294 */
+/* 297 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31625,7 +31813,7 @@
 
 
 /***/ },
-/* 295 */
+/* 298 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31643,7 +31831,7 @@
 
 
 /***/ },
-/* 296 */
+/* 299 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31668,12 +31856,12 @@
 
 
 /***/ },
-/* 297 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var Cancel = __webpack_require__(296);
+	var Cancel = __webpack_require__(299);
 
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -31731,7 +31919,7 @@
 
 
 /***/ },
-/* 298 */
+/* 301 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31764,13 +31952,13 @@
 
 
 /***/ },
-/* 299 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(300);
+	var content = __webpack_require__(303);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -31790,7 +31978,7 @@
 	}
 
 /***/ },
-/* 300 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -31804,7 +31992,7 @@
 
 
 /***/ },
-/* 301 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31819,7 +32007,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(302);
+	__webpack_require__(305);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31857,13 +32045,13 @@
 	exports.default = Rides;
 
 /***/ },
-/* 302 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(303);
+	var content = __webpack_require__(306);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -31883,7 +32071,7 @@
 	}
 
 /***/ },
-/* 303 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -31897,7 +32085,7 @@
 
 
 /***/ },
-/* 304 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31912,7 +32100,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(305);
+	__webpack_require__(308);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31950,13 +32138,13 @@
 	exports.default = UserDashboardComp;
 
 /***/ },
-/* 305 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(306);
+	var content = __webpack_require__(309);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -31976,7 +32164,7 @@
 	}
 
 /***/ },
-/* 306 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -31990,7 +32178,7 @@
 
 
 /***/ },
-/* 307 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32007,11 +32195,11 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	var _CitiesEstimateForm = __webpack_require__(308);
+	var _CitiesEstimateForm = __webpack_require__(311);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	__webpack_require__(311);
+	__webpack_require__(314);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32054,7 +32242,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 308 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32069,7 +32257,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(309);
+	__webpack_require__(312);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32079,7 +32267,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Geosuggest = __webpack_require__(265);
+	var Geosuggest = __webpack_require__(268);
 
 	var destInput = {
 	  background: 'green'
@@ -32193,13 +32381,13 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 309 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(310);
+	var content = __webpack_require__(313);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32219,7 +32407,7 @@
 	}
 
 /***/ },
-/* 310 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32233,13 +32421,13 @@
 
 
 /***/ },
-/* 311 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(312);
+	var content = __webpack_require__(315);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32259,170 +32447,6 @@
 	}
 
 /***/ },
-/* 312 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 313 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(314);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var LoginComp = function (_React$Component) {
-	    _inherits(LoginComp, _React$Component);
-
-	    function LoginComp() {
-	        _classCallCheck(this, LoginComp);
-
-	        return _possibleConstructorReturn(this, (LoginComp.__proto__ || Object.getPrototypeOf(LoginComp)).apply(this, arguments));
-	    }
-
-	    _createClass(LoginComp, [{
-	        key: 'handleClick',
-	        value: function handleClick() {
-	            var loginForm = document.getElementById('loginForm');
-	            loginForm.classList.add('login-form-container-active');
-	        }
-	    }, {
-	        key: 'handleClose',
-	        value: function handleClose() {
-	            var loginForm = document.getElementById('loginForm');
-	            loginForm.classList.remove('login-form-container-active');
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'login-container' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { id: 'loginForm', className: 'login-form-container' },
-	                        _react2.default.createElement('span', { onClick: this.handleClose, className: 'login-close glyphicon glyphicon-remove' }),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'login-heading' },
-	                            'Log in to Shyft'
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'login-input-container' },
-	                            _react2.default.createElement('input', { type: 'text', placeholder: 'Phone number' })
-	                        ),
-	                        _react2.default.createElement(
-	                            'button',
-	                            { type: 'button', className: 'login-button btn btn-primary' },
-	                            'Log In'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'login-or' },
-	                            'or'
-	                        ),
-	                        _react2.default.createElement(
-	                            'button',
-	                            { type: 'button', onClick: this.handleFbLogin, className: 'login-facebook-btn btn-primary' },
-	                            _react2.default.createElement('i', { className: 'fa fa-facebook-official login-fb-logo', 'aria-hidden': 'true' }),
-	                            'Log in with Facebook'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'login-newtolyft' },
-	                            'New to Lyft?',
-	                            _react2.default.createElement(
-	                                'span',
-	                                { className: 'login-signup' },
-	                                'Sign up'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'login-newtolyft' },
-	                            'Need to update your phone number?',
-	                            _react2.default.createElement(
-	                                'span',
-	                                { className: 'login-contact' },
-	                                'Contact us'
-	                            )
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'button',
-	                        { type: 'button', onClick: this.handleClick },
-	                        'click me'
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return LoginComp;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = LoginComp;
-
-/***/ },
-/* 314 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(315);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./LoginComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./LoginComp.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
 /* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -32431,7 +32455,7 @@
 
 
 	// module
-	exports.push([module.id, ".login-container {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    z-index: 100;\n    overflow: hidden;\n}\n\n.login-form-container {\n    text-align: center;\n    margin: 0 auto;\n    transform: translateY(-385px);\n    width: 280px;\n    height: 364px;\n    background: #fff;\n    color: #8f9cb3;\n    font-weight: 300;\n    transition: transform .5s ease;\n}\n\n.login-form-container-active {\n    transform: translateY(185px);\n}\n\n.login-close {\n    position: absolute;\n    right: 5px;\n    top: 5px;\n}\n\n.login-close:hover {\n    text-decoration: underline;\n    cursor: pointer;\n}\n\n.login-heading {\n    margin-bottom: 10px;\n    padding-top: 25px;\n    font-weight: bold;\n    font-size: 2.25rem;\n    color: #333;\n}\n\n.login-input-container {\n    margin-bottom: 20px;\n}\n\n.login-input-container input {\n    padding: 8px 15px;\n    width: 250px;\n    border-radius: 7px;\n    border: 1px solid #d8dce6;\n}\n\n.login-button {\n    width: 250px;\n    font-size: 1.45rem;\n    padding-top: 8px;\n    padding-bottom: 8px;\n    text-transform: uppercase;\n    margin-bottom: 10px;\n}\n\n.login-button:hover {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-button:active,\n.login-button:focus {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-or {\n    color: #333;\n}\n\n.login-facebook-btn {\n    border-radius: 7px;\n    border: none;\n    padding: 8px;\n    font-size: 1.65rem;\n    width: 250px;\n    margin-bottom: 15px;\n}\n\n.login-fb-logo {\n    font-size: 22px;\n    vertical-align: text-bottom;\n    margin-right: 8px;\n}\n\n.login-signup,\n.login-contact {\n    color: #ff00bf;\n    margin-left: 5px;\n}\n\n.login-newtolyft {\n    width: 265px;\n}\n", ""]);
+	exports.push([module.id, "", ""]);
 
 	// exports
 
