@@ -32022,11 +32022,6 @@
 	      });
 	    }
 	  }, {
-	    key: 'handleCityClick',
-	    value: function handleCityClick(city) {
-	      return _reactRouter.hashHistory.push('/cities/' + city.id);
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var states = this.state.states.map(function (val, i, arr) {

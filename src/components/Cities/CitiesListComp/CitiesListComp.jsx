@@ -22,9 +22,6 @@ class CitiesList extends React.Component {
     })
   }
 
-  handleCityClick(city) {
-    return hashHistory.push('/cities/' + city.id);
-  }
 
   render() {
     let states = this.state.states.map((val, i, arr) => {
