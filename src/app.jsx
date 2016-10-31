@@ -10,6 +10,7 @@ import HomeComp from './components/Home/HomeComp/HomeComp.jsx';
 import CitiesComp from './components/Cities/CitiesComp/CitiesComp.jsx';
 import RidesComp from './components/Rides/RidesComp/RidesComp.jsx';
 import UserDashboardComp from './components/UserDashboard/UserDashboardComp/UserDashboardComp.jsx';
+import RidesComp from './components/RideWithShyft/RidesComp/RidesComp.jsx';
 import CityDetails from './components/Cities/CityDetails/CityDetails.jsx';
 import LoginComp from './components/Login/LoginComp/LoginComp.jsx';
 
@@ -23,6 +24,7 @@ class App extends React.Component {
             <Route path="/cities" component={CitiesComp}></Route>
             <Route path="/rides" component={RidesComp}></Route>
             <Route path="/userdashboard" component={UserDashboardComp}></Route>
+            <Route path="/rideWithShyft" component={RidesComp}></Route>
             <Route path="/cities/:id" component={CityDetails}></Route>
             <Route path="/login" component={LoginComp}></Route>
         </Route>

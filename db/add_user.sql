@@ -1,1 +1,1 @@
-insert into customer (FB, firstname, lastname) values ($1, $2, $3);
+insert into customer (fb) values ($1);

@@ -66,27 +66,31 @@
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
-	var _HomeComp = __webpack_require__(254);
+	var _HomeComp = __webpack_require__(251);
 
 	var _HomeComp2 = _interopRequireDefault(_HomeComp);
 
-	var _CitiesComp = __webpack_require__(264);
+	var _CitiesComp = __webpack_require__(261);
 
 	var _CitiesComp2 = _interopRequireDefault(_CitiesComp);
 
-	var _RidesComp = __webpack_require__(304);
+	var _RidesComp = __webpack_require__(301);
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(307);
+	var _UserDashboardComp = __webpack_require__(304);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(310);
+	var _rideWithShyft = __webpack_require__(317);
+
+	var _rideWithShyft2 = _interopRequireDefault(_rideWithShyft);
+
+	var _CityDetails = __webpack_require__(307);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
-	var _LoginComp = __webpack_require__(249);
+	var _LoginComp = __webpack_require__(313);
 
 	var _LoginComp2 = _interopRequireDefault(_LoginComp);
 
@@ -120,6 +124,7 @@
 	          _react2.default.createElement(_reactRouter.Route, { path: "/cities", component: _CitiesComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/rides", component: _RidesComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/userdashboard", component: _UserDashboardComp2.default }),
+	          _react2.default.createElement(_reactRouter.Route, { path: "/rideWithShyft", component: _rideWithShyft2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/cities/:id", component: _CityDetails2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/login", component: _LoginComp2.default })
 	        )
@@ -27531,11 +27536,11 @@
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
-	var _LoginComp = __webpack_require__(249);
+	var _LoginComp = __webpack_require__(313);
 
 	var _LoginComp2 = _interopRequireDefault(_LoginComp);
 
-	__webpack_require__(252);
+	__webpack_require__(249);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28391,180 +28396,10 @@
 /* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(250);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var LoginComp = function (_React$Component) {
-	    _inherits(LoginComp, _React$Component);
-
-	    function LoginComp() {
-	        _classCallCheck(this, LoginComp);
-
-	        return _possibleConstructorReturn(this, (LoginComp.__proto__ || Object.getPrototypeOf(LoginComp)).apply(this, arguments));
-	    }
-
-	    _createClass(LoginComp, [{
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            setTimeout(function () {
-	                var loginForm = document.getElementById('loginForm');
-
-	                loginForm.classList.add('login-form-container-active');
-	            }, 200);
-	        }
-	    }, {
-	        key: 'handleLoginClose',
-	        value: function handleLoginClose() {
-	            var self = this;
-
-	            var loginContainer = document.getElementById('loginContainer');
-	            var loginForm = document.getElementById('loginForm');
-
-	            loginContainer.classList.remove('login-container-active');
-	            loginForm.classList.remove('login-form-container-active');
-	            setTimeout(function () {
-	                self.props.handleLoginClose();
-	            }, 500);
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { id: 'loginContainer', className: 'login-container' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { id: 'loginForm', className: 'login-form-container' },
-	                        _react2.default.createElement('span', { onClick: this.handleLoginClose.bind(this), className: 'login-close glyphicon glyphicon-remove' }),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'login-heading' },
-	                            'Log in to Shyft'
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'login-input-container' },
-	                            _react2.default.createElement('input', { type: 'text', placeholder: 'Phone number' })
-	                        ),
-	                        _react2.default.createElement(
-	                            'button',
-	                            { type: 'button', className: 'login-button btn btn-primary' },
-	                            'Log In'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'login-or' },
-	                            'or'
-	                        ),
-	                        _react2.default.createElement(
-	                            'button',
-	                            { type: 'button', onClick: this.handleFbLogin, className: 'login-facebook-btn btn-primary' },
-	                            _react2.default.createElement('i', { className: 'fa fa-facebook-official login-fb-logo', 'aria-hidden': 'true' }),
-	                            'Log in with Facebook'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'login-newtolyft' },
-	                            'New to Lyft?',
-	                            _react2.default.createElement(
-	                                'span',
-	                                { className: 'login-signup' },
-	                                'Sign up'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'login-newtolyft' },
-	                            'Need to update your phone number?',
-	                            _react2.default.createElement(
-	                                'span',
-	                                { className: 'login-contact' },
-	                                'Contact us'
-	                            )
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return LoginComp;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = LoginComp;
-
-/***/ },
-/* 250 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(251);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./LoginComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./LoginComp.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 251 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".login-container {\n    display: block;\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    z-index: 100;\n    overflow: hidden;\n}\n\n.login-container-active {\n    display: block;\n}\n\n.login-form-container {\n    text-align: center;\n    margin: 0 auto;\n    transform: translateY(-385px);\n    width: 280px;\n    height: 370px;\n    background: #fff;\n    color: #8f9cb3;\n    font-weight: 300;\n    transition: transform .5s ease;\n}\n\n.login-form-container-active {\n    transform: translateY(185px);\n}\n\n.login-close {\n    position: absolute;\n    right: 5px;\n    top: 5px;\n}\n\n.login-close:hover {\n    text-decoration: underline;\n    cursor: pointer;\n}\n\n.login-heading {\n    margin-bottom: 10px;\n    padding-top: 25px;\n    font-weight: bold;\n    font-size: 2.25rem;\n    color: #333;\n}\n\n.login-input-container {\n    margin-bottom: 20px;\n}\n\n.login-input-container input {\n    padding: 8px 15px;\n    width: 250px;\n    border-radius: 7px;\n    border: 1px solid #d8dce6;\n}\n\n.login-button {\n    width: 250px;\n    font-size: 1.45rem;\n    padding-top: 8px;\n    padding-bottom: 8px;\n    text-transform: uppercase;\n    margin-bottom: 10px;\n}\n\n.login-button:hover {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-button:active,\n.login-button:focus {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-or {\n    color: #333;\n}\n\n.login-facebook-btn {\n    border-radius: 7px;\n    border: none;\n    padding: 8px;\n    font-size: 1.65rem;\n    width: 250px;\n    margin-bottom: 15px;\n}\n\n.login-fb-logo {\n    font-size: 22px;\n    vertical-align: text-bottom;\n    margin-right: 8px;\n}\n\n.login-signup,\n.login-contact {\n    color: #ff00bf;\n    margin-left: 5px;\n}\n\n.login-newtolyft {\n    width: 265px;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 252 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(253);
+	var content = __webpack_require__(250);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -28584,7 +28419,7 @@
 	}
 
 /***/ },
-/* 253 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -28598,7 +28433,7 @@
 
 
 /***/ },
-/* 254 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28617,15 +28452,15 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _MainJumbotron = __webpack_require__(255);
+	var _MainJumbotron = __webpack_require__(252);
 
 	var _MainJumbotron2 = _interopRequireDefault(_MainJumbotron);
 
-	var _RidesInMinutes = __webpack_require__(258);
+	var _RidesInMinutes = __webpack_require__(255);
 
 	var _RidesInMinutes2 = _interopRequireDefault(_RidesInMinutes);
 
-	var _FourWaysToRide = __webpack_require__(261);
+	var _FourWaysToRide = __webpack_require__(258);
 
 	var _FourWaysToRide2 = _interopRequireDefault(_FourWaysToRide);
 
@@ -28665,7 +28500,7 @@
 	exports.default = HomeComp;
 
 /***/ },
-/* 255 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28682,7 +28517,7 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(256);
+	__webpack_require__(253);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28739,7 +28574,7 @@
 	                        { className: 'ride-with-lyft-btn' },
 	                        _react2.default.createElement(
 	                            _reactRouter.Link,
-	                            { to: '/userdashboard' },
+	                            { to: '/rideWithShyft' },
 	                            'Ride With Lyft'
 	                        )
 	                    )
@@ -28756,13 +28591,13 @@
 	exports.default = MainJumbotron;
 
 /***/ },
-/* 256 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(257);
+	var content = __webpack_require__(254);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -28782,7 +28617,7 @@
 	}
 
 /***/ },
-/* 257 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -28796,7 +28631,7 @@
 
 
 /***/ },
-/* 258 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28811,7 +28646,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(259);
+	__webpack_require__(256);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28938,13 +28773,13 @@
 	exports.default = RidesInMinutes;
 
 /***/ },
-/* 259 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(260);
+	var content = __webpack_require__(257);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -28964,7 +28799,7 @@
 	}
 
 /***/ },
-/* 260 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -28978,7 +28813,7 @@
 
 
 /***/ },
-/* 261 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28993,7 +28828,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(262);
+	__webpack_require__(259);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29153,13 +28988,13 @@
 	exports.default = FourWaysToRide;
 
 /***/ },
-/* 262 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(263);
+	var content = __webpack_require__(260);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -29179,7 +29014,7 @@
 	}
 
 /***/ },
-/* 263 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -29193,7 +29028,7 @@
 
 
 /***/ },
-/* 264 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29212,17 +29047,17 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	__webpack_require__(265);
+	__webpack_require__(262);
 
-	var _CitiesJumbotron = __webpack_require__(267);
+	var _CitiesJumbotron = __webpack_require__(264);
 
 	var _CitiesJumbotron2 = _interopRequireDefault(_CitiesJumbotron);
 
-	var _CityBottomBanner = __webpack_require__(272);
+	var _CityBottomBanner = __webpack_require__(269);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesListComp = __webpack_require__(275);
+	var _CitiesListComp = __webpack_require__(272);
 
 	var _CitiesListComp2 = _interopRequireDefault(_CitiesListComp);
 
@@ -29264,13 +29099,13 @@
 	exports.default = CitiesComp;
 
 /***/ },
-/* 265 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(266);
+	var content = __webpack_require__(263);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -29290,7 +29125,7 @@
 	}
 
 /***/ },
-/* 266 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -29304,7 +29139,7 @@
 
 
 /***/ },
-/* 267 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29319,11 +29154,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactGeosuggestPlus = __webpack_require__(268);
+	var _reactGeosuggestPlus = __webpack_require__(265);
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	__webpack_require__(270);
+	__webpack_require__(267);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29386,7 +29221,7 @@
 	exports.default = CitiesJumbotron;
 
 /***/ },
-/* 268 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global google */
@@ -29411,7 +29246,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _GeosuggestItem = __webpack_require__(269);
+	var _GeosuggestItem = __webpack_require__(266);
 
 	var _GeosuggestItem2 = _interopRequireDefault(_GeosuggestItem);
 
@@ -30061,7 +29896,7 @@
 
 
 /***/ },
-/* 269 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
@@ -30191,13 +30026,13 @@
 
 
 /***/ },
-/* 270 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(271);
+	var content = __webpack_require__(268);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30217,7 +30052,7 @@
 	}
 
 /***/ },
-/* 271 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30231,7 +30066,7 @@
 
 
 /***/ },
-/* 272 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30248,7 +30083,7 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(273);
+	__webpack_require__(270);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30311,13 +30146,13 @@
 	exports.default = CityBottomBanner;
 
 /***/ },
-/* 273 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(274);
+	var content = __webpack_require__(271);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30337,7 +30172,7 @@
 	}
 
 /***/ },
-/* 274 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30351,7 +30186,7 @@
 
 
 /***/ },
-/* 275 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30366,9 +30201,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _citiesListService = __webpack_require__(276);
+	var _citiesListService = __webpack_require__(273);
 
-	__webpack_require__(302);
+	__webpack_require__(299);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30448,7 +30283,7 @@
 	exports.default = CitiesList;
 
 /***/ },
-/* 276 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30458,7 +30293,7 @@
 	});
 	exports.getCities = getCities;
 
-	var _axios = __webpack_require__(277);
+	var _axios = __webpack_require__(274);
 
 	var _axios2 = _interopRequireDefault(_axios);
 
@@ -30471,20 +30306,20 @@
 	}
 
 /***/ },
-/* 277 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(278);
+	module.exports = __webpack_require__(275);
 
 /***/ },
-/* 278 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(279);
-	var bind = __webpack_require__(280);
-	var Axios = __webpack_require__(281);
+	var utils = __webpack_require__(276);
+	var bind = __webpack_require__(277);
+	var Axios = __webpack_require__(278);
 
 	/**
 	 * Create an instance of Axios
@@ -30517,15 +30352,15 @@
 	};
 
 	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(299);
-	axios.CancelToken = __webpack_require__(300);
-	axios.isCancel = __webpack_require__(296);
+	axios.Cancel = __webpack_require__(296);
+	axios.CancelToken = __webpack_require__(297);
+	axios.isCancel = __webpack_require__(293);
 
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(301);
+	axios.spread = __webpack_require__(298);
 
 	module.exports = axios;
 
@@ -30534,12 +30369,12 @@
 
 
 /***/ },
-/* 279 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var bind = __webpack_require__(280);
+	var bind = __webpack_require__(277);
 
 	/*global toString:true*/
 
@@ -30839,7 +30674,7 @@
 
 
 /***/ },
-/* 280 */
+/* 277 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30856,17 +30691,17 @@
 
 
 /***/ },
-/* 281 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var defaults = __webpack_require__(282);
-	var utils = __webpack_require__(279);
-	var InterceptorManager = __webpack_require__(293);
-	var dispatchRequest = __webpack_require__(294);
-	var isAbsoluteURL = __webpack_require__(297);
-	var combineURLs = __webpack_require__(298);
+	var defaults = __webpack_require__(279);
+	var utils = __webpack_require__(276);
+	var InterceptorManager = __webpack_require__(290);
+	var dispatchRequest = __webpack_require__(291);
+	var isAbsoluteURL = __webpack_require__(294);
+	var combineURLs = __webpack_require__(295);
 
 	/**
 	 * Create a new instance of Axios
@@ -30947,13 +30782,13 @@
 
 
 /***/ },
-/* 282 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(279);
-	var normalizeHeaderName = __webpack_require__(283);
+	var utils = __webpack_require__(276);
+	var normalizeHeaderName = __webpack_require__(280);
 
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -30970,10 +30805,10 @@
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(284);
+	    adapter = __webpack_require__(281);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(284);
+	    adapter = __webpack_require__(281);
 	  }
 	  return adapter;
 	}
@@ -31040,12 +30875,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 283 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(279);
+	var utils = __webpack_require__(276);
 
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -31058,18 +30893,18 @@
 
 
 /***/ },
-/* 284 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(279);
-	var settle = __webpack_require__(285);
-	var buildURL = __webpack_require__(288);
-	var parseHeaders = __webpack_require__(289);
-	var isURLSameOrigin = __webpack_require__(290);
-	var createError = __webpack_require__(286);
-	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(291);
+	var utils = __webpack_require__(276);
+	var settle = __webpack_require__(282);
+	var buildURL = __webpack_require__(285);
+	var parseHeaders = __webpack_require__(286);
+	var isURLSameOrigin = __webpack_require__(287);
+	var createError = __webpack_require__(283);
+	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(288);
 
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -31165,7 +31000,7 @@
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(292);
+	      var cookies = __webpack_require__(289);
 
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -31242,12 +31077,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 285 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var createError = __webpack_require__(286);
+	var createError = __webpack_require__(283);
 
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -31273,12 +31108,12 @@
 
 
 /***/ },
-/* 286 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var enhanceError = __webpack_require__(287);
+	var enhanceError = __webpack_require__(284);
 
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -31296,7 +31131,7 @@
 
 
 /***/ },
-/* 287 */
+/* 284 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31321,12 +31156,12 @@
 
 
 /***/ },
-/* 288 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(279);
+	var utils = __webpack_require__(276);
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -31395,12 +31230,12 @@
 
 
 /***/ },
-/* 289 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(279);
+	var utils = __webpack_require__(276);
 
 	/**
 	 * Parse headers into an object
@@ -31438,12 +31273,12 @@
 
 
 /***/ },
-/* 290 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(279);
+	var utils = __webpack_require__(276);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -31512,7 +31347,7 @@
 
 
 /***/ },
-/* 291 */
+/* 288 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31554,12 +31389,12 @@
 
 
 /***/ },
-/* 292 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(279);
+	var utils = __webpack_require__(276);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -31613,12 +31448,12 @@
 
 
 /***/ },
-/* 293 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(279);
+	var utils = __webpack_require__(276);
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -31671,15 +31506,15 @@
 
 
 /***/ },
-/* 294 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(279);
-	var transformData = __webpack_require__(295);
-	var isCancel = __webpack_require__(296);
-	var defaults = __webpack_require__(282);
+	var utils = __webpack_require__(276);
+	var transformData = __webpack_require__(292);
+	var isCancel = __webpack_require__(293);
+	var defaults = __webpack_require__(279);
 
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -31756,12 +31591,12 @@
 
 
 /***/ },
-/* 295 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(279);
+	var utils = __webpack_require__(276);
 
 	/**
 	 * Transform the data for a request or a response
@@ -31782,7 +31617,7 @@
 
 
 /***/ },
-/* 296 */
+/* 293 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31793,7 +31628,7 @@
 
 
 /***/ },
-/* 297 */
+/* 294 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31813,7 +31648,7 @@
 
 
 /***/ },
-/* 298 */
+/* 295 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31831,7 +31666,7 @@
 
 
 /***/ },
-/* 299 */
+/* 296 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31856,12 +31691,12 @@
 
 
 /***/ },
-/* 300 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var Cancel = __webpack_require__(299);
+	var Cancel = __webpack_require__(296);
 
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -31919,7 +31754,7 @@
 
 
 /***/ },
-/* 301 */
+/* 298 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31952,13 +31787,13 @@
 
 
 /***/ },
-/* 302 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(303);
+	var content = __webpack_require__(300);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -31978,7 +31813,7 @@
 	}
 
 /***/ },
-/* 303 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -31992,7 +31827,7 @@
 
 
 /***/ },
-/* 304 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32007,7 +31842,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(305);
+	__webpack_require__(302);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32045,13 +31880,13 @@
 	exports.default = Rides;
 
 /***/ },
-/* 305 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(306);
+	var content = __webpack_require__(303);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32071,7 +31906,7 @@
 	}
 
 /***/ },
-/* 306 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32085,7 +31920,7 @@
 
 
 /***/ },
-/* 307 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32100,7 +31935,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(308);
+	__webpack_require__(305);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32138,13 +31973,13 @@
 	exports.default = UserDashboardComp;
 
 /***/ },
-/* 308 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(309);
+	var content = __webpack_require__(306);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32164,7 +31999,7 @@
 	}
 
 /***/ },
-/* 309 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32178,7 +32013,7 @@
 
 
 /***/ },
-/* 310 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32195,11 +32030,11 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	var _CitiesEstimateForm = __webpack_require__(311);
+	var _CitiesEstimateForm = __webpack_require__(308);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	__webpack_require__(314);
+	__webpack_require__(311);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32242,7 +32077,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 311 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32257,7 +32092,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(312);
+	__webpack_require__(309);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32267,7 +32102,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Geosuggest = __webpack_require__(268);
+	var Geosuggest = __webpack_require__(265);
 
 	var destInput = {
 	  background: 'green'
@@ -32381,13 +32216,13 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 312 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(313);
+	var content = __webpack_require__(310);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32407,7 +32242,7 @@
 	}
 
 /***/ },
-/* 313 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32421,13 +32256,13 @@
 
 
 /***/ },
-/* 314 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(315);
+	var content = __webpack_require__(312);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32447,7 +32282,305 @@
 	}
 
 /***/ },
+/* 312 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 313 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(314);
+
+	var _FaceBookService = __webpack_require__(316);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var LoginComp = function (_React$Component) {
+	    _inherits(LoginComp, _React$Component);
+
+	    function LoginComp(props) {
+	        _classCallCheck(this, LoginComp);
+
+	        var _this = _possibleConstructorReturn(this, (LoginComp.__proto__ || Object.getPrototypeOf(LoginComp)).call(this, props));
+
+	        _this.state = {
+	            FB: []
+	        };
+	        return _this;
+	    }
+
+	    _createClass(LoginComp, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            setTimeout(function () {
+	                var loginForm = document.getElementById('loginForm');
+
+	                loginForm.classList.add('login-form-container-active');
+	            }, 200);
+	        }
+	    }, {
+	        key: 'handleLoginClose',
+	        value: function handleLoginClose() {
+	            var self = this;
+
+	            var loginContainer = document.getElementById('loginContainer');
+	            var loginForm = document.getElementById('loginForm');
+
+	            loginContainer.classList.remove('login-container-active');
+	            loginForm.classList.remove('login-form-container-active');
+	            setTimeout(function () {
+	                self.props.handleLoginClose();
+	            }, 500);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { id: 'loginContainer', className: 'login-container' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { id: 'loginForm', className: 'login-form-container' },
+	                        _react2.default.createElement('span', { onClick: this.handleLoginClose.bind(this), className: 'login-close glyphicon glyphicon-remove' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'login-heading' },
+	                            'Log in to Shyft'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'login-input-container' },
+	                            _react2.default.createElement('input', { type: 'text', placeholder: 'Phone number' })
+	                        ),
+	                        _react2.default.createElement(
+	                            'button',
+	                            { type: 'button', className: 'login-button btn btn-primary' },
+	                            'Log In'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'login-or' },
+	                            'or'
+	                        ),
+	                        _react2.default.createElement(
+	                            'button',
+	                            { type: 'button', className: 'login-facebook-btn btn-primary' },
+	                            _react2.default.createElement('i', { className: 'fa fa-facebook-official login-fb-logo', 'aria-hidden': 'true' }),
+	                            _react2.default.createElement(
+	                                'a',
+	                                { href: '/auth/facebook' },
+	                                'Login with Facebook'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'login-newtolyft' },
+	                            'New to Lyft?',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'login-signup' },
+	                                'Sign up'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'login-newtolyft' },
+	                            'Need to update your phone number?',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'login-contact' },
+	                                'Contact us'
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return LoginComp;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = LoginComp;
+
+/***/ },
+/* 314 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(315);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./LoginComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./LoginComp.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
 /* 315 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".login-container {\n    display: block;\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    z-index: 100;\n    overflow: hidden;\n}\n\n.login-container-active {\n    display: block;\n}\n\n.login-form-container {\n    text-align: center;\n    margin: 0 auto;\n    transform: translateY(-385px);\n    width: 280px;\n    height: 370px;\n    background: #fff;\n    color: #8f9cb3;\n    font-weight: 300;\n    transition: transform .5s ease;\n}\n\n.login-form-container-active {\n    transform: translateY(185px);\n}\n\n.login-close {\n    position: absolute;\n    right: 5px;\n    top: 5px;\n}\n\n.login-close:hover {\n    text-decoration: underline;\n    cursor: pointer;\n}\n\n.login-heading {\n    margin-bottom: 10px;\n    padding-top: 25px;\n    font-weight: bold;\n    font-size: 2.25rem;\n    color: #333;\n}\n\n.login-input-container {\n    margin-bottom: 20px;\n}\n\n.login-input-container input {\n    padding: 8px 15px;\n    width: 250px;\n    border-radius: 7px;\n    border: 1px solid #d8dce6;\n}\n\n.login-button {\n    width: 250px;\n    font-size: 1.45rem;\n    padding-top: 8px;\n    padding-bottom: 8px;\n    text-transform: uppercase;\n    margin-bottom: 10px;\n}\n\n.login-button:hover {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-button:active,\n.login-button:focus {\n    background-color: #e600ac;\n    border-color: #e600ac;\n}\n\n.login-or {\n    color: #333;\n}\n\n.login-facebook-btn {\n    border-radius: 7px;\n    border: none;\n    padding: 8px;\n    font-size: 1.65rem;\n    width: 250px;\n    margin-bottom: 15px;\n}\n\n.login-fb-logo {\n    font-size: 22px;\n    vertical-align: text-bottom;\n    margin-right: 8px;\n}\n\n.login-signup,\n.login-contact {\n    color: #ff00bf;\n    margin-left: 5px;\n}\n\n.login-newtolyft {\n    width: 265px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 316 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getFb = getFb;
+
+	var _axios = __webpack_require__(274);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getFb() {
+	  return _axios2.default.get('/auth/facebook').then(function (res) {
+	    return res.data;
+	  });
+	  console.log(data);
+	}
+
+/***/ },
+/* 317 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(318);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var rideWithShyftComp = function (_React$Component) {
+	    _inherits(rideWithShyftComp, _React$Component);
+
+	    function rideWithShyftComp() {
+	        _classCallCheck(this, rideWithShyftComp);
+
+	        return _possibleConstructorReturn(this, (rideWithShyftComp.__proto__ || Object.getPrototypeOf(rideWithShyftComp)).apply(this, arguments));
+	    }
+
+	    _createClass(rideWithShyftComp, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                'This is rides page comp!'
+	            );
+	        }
+	    }]);
+
+	    return rideWithShyftComp;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = rideWithShyftComp;
+
+/***/ },
+/* 318 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(319);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./rideWithShyft.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./rideWithShyft.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();

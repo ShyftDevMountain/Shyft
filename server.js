@@ -5,6 +5,7 @@ var massive = require('massive');
 var connectionString = 'postgres://postgres:@localhost/shyftdb';
 // var connectionString = config.connectionString;
 var session = require('express-session');
+var db = massive.connectSync({ db : "shyftdb"});
 
 
 // facebook oAuth
@@ -26,7 +27,7 @@ module.exports = app;
 
 var massiveInstance = massive.connectSync({connectionString: connectionString});
 
-app.set('db', massiveInstance);
+app.set('db', db);
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/src'));
@@ -77,14 +78,17 @@ passport.use(new FacebookStrategy({
     clientID: '690120977818625',
     clientSecret: '27892e3ea50e3b10a4890159da63298b',
     callbackURL: "http://localhost:8000/auth/facebook/callback"
+
   },
+
   function(accessToken, refreshToken, profile, done) {
-          // console.log(profile);
+        console.log(profile);
+
           db.find_user([profile.id], function(err, user){
               if (err) return done(err);
 
               if (!user[0]) {
-                db.add_user([profile.id, profile.name.familyName, profile.name.givenName],  function(err, response){
+                db.add_user([profile.id],  function(err, response){
                       if (err) {
                         console.log("*****************", err);
                       }
@@ -98,11 +102,11 @@ passport.use(new FacebookStrategy({
 ));
 
 // direct user to Fb to login
-app.get('/auth/facebook', passport.authenticate('facebook'));
 
+app.get('/auth/facebook',  passport.authenticate('facebook',  { scope: 'public_profile, email'}));
 // Fb oAuth
 // Facebook will redirect the user to this URL after approval.
-app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/', failureRedirect: '/login' }));
+app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/#/userdashboard', failureRedirect: '/userdashboard' }));
 
 var port = 8000;
 app.listen(port, function(){

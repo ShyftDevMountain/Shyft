@@ -1,9 +1,17 @@
 import React from 'react';
 import './LoginComp.css';
 
+import {getFb} from '../../../services/FaceBookService.js';
+
 
 class LoginComp extends React.Component{
+    constructor(props) {
+      super(props);
 
+      this.state = {
+        FB: []
+      }
+    }
     componentDidMount(){
         setTimeout(function(){
             var loginForm = document.getElementById('loginForm');
@@ -12,6 +20,8 @@ class LoginComp extends React.Component{
         }, 200)
 
     }
+
+
 
 
     handleLoginClose(){
@@ -44,7 +54,7 @@ class LoginComp extends React.Component{
                         <p className="login-or">or</p>
 
 
-                        <button  type="button" onClick={this.handleFbLogin} className="login-facebook-btn btn-primary"><i className="fa fa-facebook-official login-fb-logo" aria-hidden="true"></i>Log in with Facebook</button>
+                        <button  type="button"  className="login-facebook-btn btn-primary"><i className="fa fa-facebook-official login-fb-logo" aria-hidden="true"></i><a href="/auth/facebook">Login with Facebook</a></button>
 
 
                         <p className="login-newtolyft">New to Lyft?<span className="login-signup">Sign up</span></p>

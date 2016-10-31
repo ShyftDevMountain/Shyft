@@ -1,1 +1,1 @@
-select * from customer where FB = $1;
+select * from customer where fb = $1;
