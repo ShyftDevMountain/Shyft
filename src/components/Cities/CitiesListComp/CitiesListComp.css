@@ -1,25 +1,72 @@
 
 
-.city-list h2 {
+.cities-list-comp h2 {
   margin-top:25px;
+  margin-bottom:25px;
   text-align: center;
 }
 
-.city-links {
-  margin-top:30px;
-  margin-left: 20px;
+.city-list h4 {
+  font-size: 20px;
 }
 
-.city-links ul {
+.cities-div {
+  padding-top:10px;
+}
+
+.city-name {
+  font-size: 13px;
+}
+
+.city-list {
+  display:flex;
+  justify-content: center;
+  margin:0 50px;
+}
+
+.city-links {
+  column-count:1;
+  text-align: center;
+  margin-bottom:10px;
+  }
+
+
+.city-links li {
   list-style-type: none;
 }
+
+
+
 
 .city-links a {
   color:#FF00BF;
   text-decoration: none;
+  font-size: 17px;
 }
 
 .city-links a:hover {
   color:#b30086;
   text-decoration: underline;
+}
+
+
+
+@media(min-width: 544px) {
+  .city-links {
+    column-count:2;
+    text-align: left;
+  }
+
+
+  }
+
+
+@media (min-width: 768px) {
+  .city-links {
+    column-count: 3;
+    text-align:left;
+  }
+
+
+
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import createFragment from 'react-addons-create-fragment';
 
 
 import {getCities} from '../../../services/citiesListService.js';
@@ -29,22 +28,22 @@ class CitiesList extends React.Component {
         return val2.city
       })
       return (
-        <h2 key={i}>{val.state}
-          <ul>{test.map((val3, i) => {
+        <h4 key={i}>{val.state}
+          <div className='cities-div'>{test.map((val3, i) => {
               return (
-                <li key={i}><a href='#'>{val3}</a></li>
+                <p className='city-name' key={i}><a>{val3}</a></p>
               )
-            })}</ul>
-        </h2>
+            })}</div>
+        </h4>
       )
     })
 
 
 
     return (
-      <div className='container-fluid city-list'>
+      <div className='cities-list-comp'>
         <h2>Available Shyft Cities</h2>
-        <div className='row'>
+      <div className='city-list'>
         <div className='city-links'>
             {states}
         </div>
