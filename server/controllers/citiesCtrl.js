@@ -31,7 +31,7 @@ checkZip: function(req, res, next) {
     if(err) {
       res.status(500).json(err);
     }
-    else{
+    else {
     for(var i = 0; i < zips.length; i++) {
       if(req.body.zip_code === zips[i].zip_code) {
         id = zips[i].id
@@ -42,6 +42,7 @@ checkZip: function(req, res, next) {
     }
     else {
       res.status(200).json('sorry');
+
     }
   }
   });

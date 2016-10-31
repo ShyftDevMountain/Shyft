@@ -1,20 +1,57 @@
 import React from 'react';
-var Geosuggest = require('react-geosuggest-plus');
+import Geosuggest from 'react-geosuggest-plus';
+import {getLyftEstimate} from '../../../services/estimateFormService.js';
 
 import './CitiesEstimateForm.css';
 
-const destInput = {
-  background: 'green'
-}
+var pickupLatLng,
+    destLatLng,
+    lyftEstimate,
+    lyftPlusEstimate;
+
 
 class CitiesEstimateForm extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+        lyftEstimate: 0,
+        lyftPlusEstimate: 0,
+        showEstimate: 'estimate',
+        estimateButton: 'button-getEstimate'
+    }
+    this.getEstimate = this.getEstimate.bind(this);
+    this.resetForm = this.resetForm.bind(this);
+  }
+
   onSuggestSelectPickup (pickup) {
-    console.log(pickup.location)
+    pickupLatLng = [pickup.location.lat, pickup.location.lng];
   }
 
   onSuggestSelectDest (dest) {
-    console.log(dest.location)
+    destLatLng = [dest.location.lat, dest.location.lng];
+  }
+
+  getEstimate () {
+    var estimates = getLyftEstimate(pickupLatLng[0],pickupLatLng[1],destLatLng[0],destLatLng[1]);
+    estimates.then(res => {
+      this.setState({
+        lyftEstimate: res[1],
+        lyftPlusEstimate: res[0],
+        showEstimate: 'estimate active',
+        estimateButton: 'button-getEstimate hide'
+      })
+    })
+  }
+
+  resetForm () {
+    console.log('reset');
+    this.setState({
+        lyftEstimate: 0,
+        lyftPlusEstimate: 0,
+        showEstimate: 'estimate',
+        estimateButton: 'button-getEstimate'
+    })
   }
 
   render () {
@@ -29,6 +66,7 @@ class CitiesEstimateForm extends React.Component {
                   className='pickup-input'
                   placeholder='Add pickup location'
                   onSuggestSelect={this.onSuggestSelectPickup}
+                  onChange={this.resetForm}
                   />
               </div>
               <div className='pickup-destination-container'>
@@ -37,17 +75,18 @@ class CitiesEstimateForm extends React.Component {
                   className='dest-input'
                   placeholder='Add destination'
                   onSuggestSelect={this.onSuggestSelectDest}
+                  onChange={this.resetForm}
                   />
               </div>
-              <button className='button-getEstimate'>Get Estimate</button>
-              <div className='estimate'>
+              <button onClick={this.getEstimate} className={this.state.estimateButton}>Get Estimate</button>
+              <div className={this.state.showEstimate}>
                 <div className='estimate-lyft'>
-                  <span>$11</span>
+                  <span>${this.state.lyftEstimate}</span>
                   <div>Lyft</div>
                 </div>
                 <div className='divider'></div>
                 <div className='estimate-plus'>
-                  <span>$18</span>
+                  <span>${this.state.lyftPlusEstimate}</span>
                   <div>Plus</div>
                 </div>
               </div>
