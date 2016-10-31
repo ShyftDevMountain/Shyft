@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {hashHistory} from 'react-router';
 
 import {getCities} from '../../../services/citiesListService.js';
 
@@ -22,22 +22,26 @@ class CitiesList extends React.Component {
     })
   }
 
+  handleCityClick(city) {
+    return hashHistory.push('/cities/' + city.id);
+  }
+
   render() {
     let states = this.state.states.map((val, i, arr) => {
       let test = val.cities.map((val2) => {
-        return val2.city
+        return val2;
       })
       return (
-        <h4 key={i}>{val.state}
+        <h4 className='state-name' key={i}>{val.state}
           <div className='cities-div'>{test.map((val3, i) => {
+              let url = '/citydetails/'
               return (
-                <p className='city-name' key={i}><a>{val3}</a></p>
+                <p key={val3.id}><a href={url + val3.id}>{val3.city}</a></p>
               )
             })}</div>
         </h4>
       )
     })
-
 
 
     return (
