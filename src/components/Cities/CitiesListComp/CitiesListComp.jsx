@@ -11,30 +11,42 @@ class CitiesList extends React.Component {
     super(props);
 
   this.state = {
-    cities: []
+    states: [],
   }
 }
 
   componentDidMount() {
-    getCities().then(cities => {
+    getCities().then(statesList => {
       this.setState({
-        cities:cities
+        states: statesList
       })
     })
   }
 
   render() {
-    const cities = this.state.cities.map(city => {
+    let states = this.state.states.map((val, i, arr) => {
+      let test = val.cities.map((val2) => {
+        return val2.city
+      })
       return (
-        <ul key={city.id}><li><a href='#'>{city.city}</a></li></ul>
+        <h2 key={i}>{val.state}
+          <ul>{test.map((val3, i) => {
+              return (
+                <li key={i}><a href='#'>{val3}</a></li>
+              )
+            })}</ul>
+        </h2>
       )
     })
+
+
+
     return (
       <div className='container-fluid city-list'>
         <h2>Available Shyft Cities</h2>
         <div className='row'>
         <div className='city-links'>
-            {cities}
+            {states}
         </div>
       </div>
       </div>
