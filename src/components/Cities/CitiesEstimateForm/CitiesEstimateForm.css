@@ -48,6 +48,7 @@
   overflow-y: auto;
   right: 16px;
   left: 16px;
+  z-index: 500;
 }
 .dest-input .geosuggest__suggests {
 margin-top: -3px;
@@ -83,6 +84,9 @@ margin-top: -3px;
   cursor: pointer;
   user-select: none;
 }
+.button-getEstimate.hide {
+  display: none;
+}
 
 .estimate {
   margin-top: 1.5rem;
@@ -92,6 +96,11 @@ margin-top: -3px;
   font-size: 2.1rem;
   font-weight: 100;
   justify-content: center;
+  display: none;
+}
+
+.estimate.active {
+  display: flex;
 }
 
 .estimate-lyft {

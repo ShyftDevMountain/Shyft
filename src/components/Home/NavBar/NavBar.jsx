@@ -119,7 +119,7 @@ class NavBar extends React.Component {
 
 
 
-        <SideMenu showMenu={this.state.showMenu}/>
+        <SideMenu showMenu={this.state.showMenu} hideMenu={this.hideMenu}/>
             <SideMenuBackDrop showMenu={this.state.showBackDrop} hideMenu={this.hideMenu}/>
             <div className="navbar-mobile">
                 <span className="glyphicon glyphicon-menu-hamburger" onClick={this.showMenu}></span>

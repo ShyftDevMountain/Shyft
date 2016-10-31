@@ -70,3 +70,23 @@
     left: 13px;
     color: #d8dce6;
 }
+
+.cities-jumbotron-input-container .geosuggest__suggests{
+  list-style: none;
+  position: absolute;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  background: white;
+  padding-left: 26px;
+  margin-top: -7px;
+  transition: max-height 0.2s, border 0.2s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  right: 0px;
+  left: 0px;
+  font-size: 1.75rem;
+  padding: 12px 0px 12px 40px;
+  border: 1px solid #d8dce6;
+  border-top: 1px solid white;
+  text-align: left;
+}
