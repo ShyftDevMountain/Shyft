@@ -8,9 +8,8 @@ import NavBar from './components/Home/NavBar/NavBar.jsx';
 import Footer from './components/Home/Footer/Footer.jsx';
 import HomeComp from './components/Home/HomeComp/HomeComp.jsx';
 import CitiesComp from './components/Cities/CitiesComp/CitiesComp.jsx';
-import RidesComp from './components/Rides/RidesComp/RidesComp.jsx';
+// import RidesComp from './components/Rides/RidesComp/RidesComp.jsx';
 import UserDashboardComp from './components/UserDashboard/UserDashboardComp/UserDashboardComp.jsx';
-import RidesComp from './components/RideWithShyft/RidesComp/RidesComp.jsx';
 import CityDetails from './components/Cities/CityDetails/CityDetails.jsx';
 import LoginComp from './components/Login/LoginComp/LoginComp.jsx';
 
