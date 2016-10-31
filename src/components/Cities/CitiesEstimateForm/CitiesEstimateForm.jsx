@@ -8,6 +8,15 @@ const destInput = {
 }
 
 class CitiesEstimateForm extends React.Component {
+
+  onSuggestSelectPickup (pickup) {
+    console.log(pickup.location)
+  }
+
+  onSuggestSelectDest (dest) {
+    console.log(dest.location)
+  }
+
   render () {
     return (
         <div>
@@ -19,6 +28,7 @@ class CitiesEstimateForm extends React.Component {
                 <Geosuggest
                   className='pickup-input'
                   placeholder='Add pickup location'
+                  onSuggestSelect={this.onSuggestSelectPickup}
                   />
               </div>
               <div className='pickup-destination-container'>
@@ -26,6 +36,7 @@ class CitiesEstimateForm extends React.Component {
                 <Geosuggest
                   className='dest-input'
                   placeholder='Add destination'
+                  onSuggestSelect={this.onSuggestSelectDest}
                   />
               </div>
               <button className='button-getEstimate'>Get Estimate</button>

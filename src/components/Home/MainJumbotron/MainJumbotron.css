@@ -20,12 +20,16 @@
     font-size: 1.75rem;
     padding: 13px 15px;
     width: 80%;
+    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));
+    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));
     background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));
     border: none;
     transition: all .2s ease;
 }
 
 .MainJumbotron-btn:hover {
+    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));
+    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));
     background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));
 }
 

@@ -1,0 +1,72 @@
+.cities-jumbotron-container .geosuggest-container {
+    width: 310px;
+    margin: 0 auto;
+    border-radius: 7px;
+    border: none;
+}
+
+.cities-jumbotron-container .geosuggest__input {
+    width: 310px;
+    color: #d8dce6;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.75rem;
+    padding: 12px 0px 12px 40px;
+    border: 1px solid #d8dce6;
+    border-radius: 7px;
+}
+
+.cities-jumbotron-container .geosuggest__input::-webkit-input-placeholder{
+    color: #d8dce6;
+}
+
+.cities-jumbotron-container {
+    background-image: url('https://www.lyft.com/images/cities/cities-hero.1e733ed9.png');
+    background-size: cover;
+    height: 410px;
+    text-align: center;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.cities-jumbotron-title {
+    padding-top: 140px;
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-shadow: 1px 2px 4px black;
+    color: #F3F3F5;
+    margin-bottom: 5px;
+}
+
+.cities-jumbotron-input-container {
+    position: relative;
+    margin: 0 auto;
+    width: 310px;
+}
+
+.cities-jumbotron-input {
+    border-radius: 7px;
+    padding: 13px 0 13px 40px;
+    border: 1px solid #d8dce6;
+    width: 310px;
+}
+
+.cities-jumbotron-input::-webkit-input-placeholder {
+      color: #d8dce6;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.75rem;
+  }
+
+.cities-jumbotron-input-container input,
+.cities-jumbotron-input-container input:focus {
+    color: #d8dce6;
+    outline: none;
+}
+
+.cities-magnify {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #d8dce6;
+}

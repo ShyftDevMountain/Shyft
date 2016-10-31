@@ -1,1 +1,0 @@
-select * from users_version2 where FB = $1;

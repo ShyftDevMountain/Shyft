@@ -1,1 +1,1 @@
-select id, city from cities order by state;
+select id, city, state from cities order by state;
