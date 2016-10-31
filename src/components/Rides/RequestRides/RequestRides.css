@@ -1,0 +1,22 @@
+
+.map_img {
+      width: 100%;
+    background-image: url(https://teslamotorsclub.com/tmc/media/2016-05-03-08_45_19-place-vertu-google-maps.114885/full);
+    height: 82vh;
+    background-repeat: no-repeat;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 200px;
+    width: 100%;
+    background-color: gray;
+}
+
+.col-lg-12 {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+}
