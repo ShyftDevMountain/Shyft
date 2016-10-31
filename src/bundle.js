@@ -74,11 +74,15 @@
 
 	var _CitiesComp2 = _interopRequireDefault(_CitiesComp);
 
-	var _UserDashboardComp = __webpack_require__(305);
+	var _RidesComp = __webpack_require__(305);
+
+	var _RidesComp2 = _interopRequireDefault(_RidesComp);
+
+	var _UserDashboardComp = __webpack_require__(306);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(308);
+	var _CityDetails = __webpack_require__(309);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -93,8 +97,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	// import RidesComp from './components/Rides/RidesComp/RidesComp.jsx';
-
 
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
@@ -116,9 +118,8 @@
 	          { component: _NavBar2.default },
 	          _react2.default.createElement(_reactRouter.Route, { path: "/", component: _HomeComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/cities", component: _CitiesComp2.default }),
-	          _react2.default.createElement(_reactRouter.Route, { path: "/rides", component: RidesComp }),
+	          _react2.default.createElement(_reactRouter.Route, { path: "/rides", component: _RidesComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/userdashboard", component: _UserDashboardComp2.default }),
-	          _react2.default.createElement(_reactRouter.Route, { path: "/rideWithShyft", component: RidesComp }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/cities/:id", component: _CityDetails2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/login", component: _LoginComp2.default })
 	        )
@@ -30290,7 +30291,7 @@
 	                        { className: 'ride-with-lyft-btn' },
 	                        _react2.default.createElement(
 	                            _reactRouter.Link,
-	                            { to: '/rideWithShyft' },
+	                            { to: '/rides' },
 	                            'Ride With Lyft'
 	                        )
 	                    )
@@ -32117,7 +32118,60 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(306);
+	__webpack_require__(316);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Rides = function (_React$Component) {
+	    _inherits(Rides, _React$Component);
+
+	    function Rides() {
+	        _classCallCheck(this, Rides);
+
+	        return _possibleConstructorReturn(this, (Rides.__proto__ || Object.getPrototypeOf(Rides)).apply(this, arguments));
+	    }
+
+	    _createClass(Rides, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                'This is the rides comp!'
+	            );
+	        }
+	    }]);
+
+	    return Rides;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = Rides;
+
+/***/ },
+/* 306 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(307);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32155,13 +32209,13 @@
 	exports.default = UserDashboardComp;
 
 /***/ },
-/* 306 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(307);
+	var content = __webpack_require__(308);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32181,7 +32235,7 @@
 	}
 
 /***/ },
-/* 307 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32195,7 +32249,7 @@
 
 
 /***/ },
-/* 308 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32212,11 +32266,11 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	var _CitiesEstimateForm = __webpack_require__(309);
+	var _CitiesEstimateForm = __webpack_require__(310);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	__webpack_require__(313);
+	__webpack_require__(314);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32259,7 +32313,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 309 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32278,9 +32332,9 @@
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _estimateFormService = __webpack_require__(310);
+	var _estimateFormService = __webpack_require__(311);
 
-	__webpack_require__(311);
+	__webpack_require__(312);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32440,7 +32494,7 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 310 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32470,13 +32524,13 @@
 	}
 
 /***/ },
-/* 311 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(312);
+	var content = __webpack_require__(313);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32496,7 +32550,7 @@
 	}
 
 /***/ },
-/* 312 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32510,13 +32564,13 @@
 
 
 /***/ },
-/* 313 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(314);
+	var content = __webpack_require__(315);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32536,7 +32590,47 @@
 	}
 
 /***/ },
-/* 314 */
+/* 315 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 316 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(317);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
