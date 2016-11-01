@@ -1,5 +1,7 @@
 var app = require('../../server.js');
+var _ = require('underscore');
 var db = app.get('db');
+
 module.exports = {
 
 getCities: function(req, res, next) {
@@ -8,7 +10,15 @@ getCities: function(req, res, next) {
       res.status(500).json(err);
     }
     else {
-      res.status(200).json(cities);
+      let citiesGroup = _.groupBy(cities, 'state');
+      let statesList = []
+      for(var prop in citiesGroup){
+        statesList.push({
+          state: prop,
+          cities: citiesGroup[prop]
+        })
+      }
+      res.status(200).json(statesList);
     }
   });
 },
