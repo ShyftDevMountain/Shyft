@@ -34,7 +34,7 @@ app.use(express.static(__dirname + '/src'));
 
 ///Controllers///
 var citiesCtrl = require('./server/controllers/citiesCtrl.js');
-
+var ridesCtrl = require('./server/controllers/ridesCtrl.js');
 
 
 ///Requests///
@@ -43,6 +43,12 @@ app.get('/cityDetails/:id', citiesCtrl.getOneCity);
 
 app.post('/checkZip', citiesCtrl.checkZip);
 
+
+//RidesComp requests
+
+app.post('/request', ridesCtrl.createRide);
+app.put('/arrive', ridesCtrl.arriveRide);
+app.put('/cancel', ridesCtrl.cancelRide);
 
 
 // *********************************************************************************************************************************************************
