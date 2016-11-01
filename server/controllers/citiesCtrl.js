@@ -10,8 +10,8 @@ getCities: function(req, res, next) {
       res.status(500).json(err);
     }
     else {
-      let citiesGroup = _.groupBy(cities, 'state');
-      let statesList = []
+      var citiesGroup = _.groupBy(cities, 'state');
+      var statesList = []
       for(var prop in citiesGroup){
         statesList.push({
           state: prop,
