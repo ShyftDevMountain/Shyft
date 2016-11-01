@@ -7,7 +7,7 @@
   border-style: solid;
   border-radius: .5rem;
   border-color: #D8DCE6;
-  padding: 1.5rem;
+  padding: 2.4rem;
   box-sizing: inherit;
   font-size: 1.8rem;
   line-height: 1.3;
@@ -26,7 +26,8 @@
 .pickup-input-container .geosuggest__input {
   border-top-right-radius: .5rem;
   border-top-left-radius: .5rem;
-  border: .08333rem solid #E60000;
+  /*border: .08333rem solid #E60000;*/
+  border: .08333rem solid #ccc;
 }
 .geosuggest-container span,
 .geosuggest-container button {
@@ -38,7 +39,8 @@
   position: absolute;
   border-bottom-right-radius: .5rem;
   border-bottom-left-radius: .5rem;
-  border: .08333rem solid #E60000;
+  /*border: .08333rem solid #E60000;*/
+  border: .08333rem solid #ccc;
   background: white;
   padding-left: 26px;
   margin-top: -1px;
@@ -46,8 +48,6 @@
   transition: max-height 0.2s, border 0.2s;
   overflow-x: hidden;
   overflow-y: auto;
-  right: 16px;
-  left: 16px;
   z-index: 500;
 }
 .dest-input .geosuggest__suggests {
@@ -61,19 +61,20 @@ margin-top: -3px;
 .pickup-destination-container .geosuggest__input {
   border-bottom-right-radius: .5rem;
   border-bottom-left-radius: .5rem;
-  border: .08333rem solid #E60000;
+  /*border: .08333rem solid #E60000;*/
+  border: .08333rem solid #ccc;
 }
 
 .button-getEstimate {
-  padding: .8125rem 1.25rem;
+  padding: 1.2rem;
   background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);
   background: -o-linear-gradient(top left, #FF00BF, #B80B8C);
   background: linear-gradient(to bottom right, #FF00BF, #B80B8C);
-  margin-top: 1rem;
+  margin-top: 1.7rem;
   border: none;
   display: block;
   width: 100%;
-  font-size: 1.8srem;
+  font-size: 1.8rem;
   line-height: 1.33333;
   border-radius: .5rem;
   color: #fff;
@@ -124,4 +125,10 @@ margin-top: -3px;
 
 .estimate-plus div {
   font-size: 1.7rem;
+}
+
+.estimateForm .geosuggest-suggestions {
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
 }

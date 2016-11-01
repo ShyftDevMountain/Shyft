@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 var lyftToken = {
-  headers: { 'Authorization' : 'Bearer "gAAAAABYFnw4eMlKCDPaBWTC1EiJvcWMTDRLtrceBEjtL4YNk543OaX-3h5uz0RwaTnJVdJ92YQETRbZcycKl0owl3SRD14CRAuE1okG06p6chAXksNmdHxgkOIIt4k1KLsN-Tn3R5LNGTBZIkQiPvDblg7HsLhwTDkpdFckFjBM1gMkgB1s6wq-gmtKNXOI0xBoxElKElclSoHmy1x-m94cZK2mCGXb_g=="'
+  headers: { 'Authorization' : 'Bearer "gAAAAABYGNhPJJQHxYMYhr029HqohlQ1rKwvu5cUe8E3kKkHIOvP5l9TxSiMaCtKakuw3pKfCiKFEI0gOZbwp43HytMCFi3m7G4yVv7DASmjQLU_V--AnBNK4fSXNYBtL_8yKx4NLBoErsYMP7sCB1n7eVSamU5VBswoBIAglZ9wei5V38cf55KUaP0YMGCnyrKy4J0x8jHMhCaAQt8kDdfI9GY7bzffxg=="'
   }
 }
 
