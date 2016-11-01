@@ -1,0 +1,231 @@
+
+.userdash-icons {
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.userdash-icons-title {
+    font-size: 3rem;
+    margin-right: 10px;
+}
+
+.userdash-icons-google {
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+.userdash-logo-main {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.userdash-sideanduser-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.userdash-sidebar-container {
+    width: 100%;
+    /*height: 40rem;*/
+    background: #ff00bf;
+    padding: 70px 0 50px;
+    text-align: center;
+    transition: all .2s ease;
+}
+
+.userdash-sidebar-innerbox {
+    width: 160px;
+    margin: 0 auto;
+}
+
+.userdash-user-pic-container {
+    margin: 15px 0 25px;
+    /* border: 1px solid #ff00bf; */
+    box-shadow: 1px 1px 5px gray;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    width: 160px;
+    border-radius: 7px;
+}
+
+.userdash-user-pic-container img {
+    width: 140px;
+    border-radius: 7px;
+}
+
+.userdash-welcome {
+    color: #f3f3f5;
+}
+
+.userdash-sidebar-item-container {
+    padding: 5px 3px;
+    border: 1px solid #f2f2f2;
+    border-radius: 7px;
+    margin-top: 5px;
+}
+
+.userdash-sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 2px 5px;
+}
+
+.userdash-sidebar-item a {
+    color: #333;
+}
+
+.userdash-sidebar-item a:hover {
+    color: #ff00bf;
+}
+
+.userdash-user-container {
+    width: 100%;
+    padding: 50px 0;
+    border: 1px solid #f2f2f2;
+}
+
+.userdash-user-innerbox {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.userdash-user-title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    transition: all .2s ease;
+}
+
+.userdash-user-infobox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.userdash-icon-box {
+    width: 35px;
+}
+
+.userdash-user-info {
+    padding: 10px 10px;
+    width: 100%;
+    border: 1px solid #f2f2f2;
+    background-color: white;
+    border-radius: 7px;
+    color: #333;
+}
+
+.userdash-user-ridesrequest-box {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    margin: 50px 0;
+}
+
+.userdash-user-rides {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.userdash-ridenumber {
+    border: 1px solid #f2f2f2;
+    border-radius: 7px;
+    padding: 10px;
+    width: 100%;
+}
+
+.userdash-user-comments textarea {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    font-style: italic;
+    font-weight: 100;
+    border: 1px solid #f2f2f2;
+    border-radius: 7px;
+    width: 100%;
+}
+
+.userdash-user-comments {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.userdash-request-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.75rem;
+    background: none;
+    border: 1px solid #ff00bf;
+    color: #ff00bf;
+}
+
+.userdash-request-btn:hover {
+    background: none;
+    border: 1px solid #ff00bf;
+    color: #ff00bf;
+}
+
+@media (min-width:768px){
+
+    .userdash-icons-title {
+        font-size: 4rem;
+    }
+
+    .userdash-sideanduser-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .userdash-sidebar-container {
+        width: 50%;
+        padding-left: 0px;
+        padding-top: 150px;
+    }
+
+    .userdash-user-container {
+        width: 100%;
+        padding-top: 100px;
+    }
+
+    .userdash-user-title {
+        font-size: 4rem;
+    }
+
+    .userdash-request-btn {
+        width: 180px;
+    }
+
+    .userdash-user-ridesrequest-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .userdash-user-comments textarea {
+        width: 90%;
+    }
+
+    .userdash-user-comments {
+        width: 50%;
+    }
+
+    .userdash-ridenumber {
+        width: 70%;
+        text-align: center;
+    }
+
+    .userdash-user-rides {
+        width: 50%;
+        margin-bottom: 0px;
+    }
+
+}
+
+@media (min-width:992px) {
+    .userdash-sidebar-container {
+        width: 45%;
+    }
+}
