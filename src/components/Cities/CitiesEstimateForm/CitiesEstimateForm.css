@@ -48,8 +48,6 @@
   transition: max-height 0.2s, border 0.2s;
   overflow-x: hidden;
   overflow-y: auto;
-  right: 16px;
-  left: 16px;
   z-index: 500;
 }
 .dest-input .geosuggest__suggests {
@@ -127,4 +125,10 @@ margin-top: -3px;
 
 .estimate-plus div {
   font-size: 1.7rem;
+}
+
+.estimateForm .geosuggest-suggestions {
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
 }
