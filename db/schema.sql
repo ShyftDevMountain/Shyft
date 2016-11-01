@@ -65,9 +65,6 @@ CREATE TABLE cities
   state VARCHAR(50),
   img TEXT,
   map_img TEXT,
-  center_lat INT,
-  center_long INT,
-  map_path TEXT
 );
 
 
