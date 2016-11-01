@@ -1,0 +1,172 @@
+.cityDetails-jumbotron-container {
+  background-size: cover;
+  height: 60vh;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.cityDetails-jumbotron-title {
+  color: #F3F3F5;
+  font-size: 3.1rem;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.cityDetails-jumbotron-container .MainJumbotron-btn {
+  width: 110px;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+
+.jumbo-wrap {
+  -ms-align-self: center;
+  align-self: center;
+}
+
+.icons-wrap div {
+  margin-bottom: 25px;
+}
+
+.icons-wrap img {
+  margin-bottom: 10px;
+  height: 5.5rem;
+  width: 5.5rem;
+}
+
+.cityDetails-howShyftWorks {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  max-width: 45rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+
+.howitworksDescrip {
+  margin-bottom: 6rem;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.howitworkstable {
+  justify-content: center;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.cityDetails-howShyftWorks h2 {
+  padding-bottom: 20px;
+  font-size: 3rem;
+  padding-top: 28px;
+}
+
+.cityDetails-howShyftWorks p {
+  font-size: 1.8rem;
+  font-weight: 100;
+  line-height: 3rem;
+}
+
+.clock-icon {
+  background-repeat: no-repeat;
+}
+.cityDetailsMap {
+  background-size: cover;
+  height: 450px;
+  background-position: center;
+  margin-bottom: 20px;
+}
+.cityDetailsEstimate {
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+.cityDetailsEstimate-Wrap {
+  display: flex;
+  padding-bottom: 8rem;
+  padding-top: 5rem;
+  border-color: #D8DCE6;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  flex-wrap: wrap;
+  margin-left: -.9375rem;
+  margin-right: -.9375rem;
+}
+
+.estimateform-wrap {
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+  min-height: 1px;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+
+
+.estimate-description {
+  line-height: 1.8;
+  font-size: 2rem;
+  font-weight: 100;
+  padding-top: 10px;
+  text-align: center;
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+  min-height: 1px;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+
+.estimate-description h2 {
+  margin-bottom: 2rem;
+  font-size: 3.3rem;
+}
+
+
+@media (min-width: 768px) {
+  .cityDetails-jumbotron-title {
+    font-size: 4.3rem;
+  }
+  .cityDetails-jumbotron-container .MainJumbotron-btn {
+    width: 160px;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  .cityDetails-howShyftWorks {
+    max-width: 85rem;
+  }
+
+  .icons-wrap img {
+    height: 6.5rem;
+    width: 6.5rem;
+  }
+
+  .cityDetails-howShyftWorks h2 {
+    font-size: 3.3rem;
+  }
+
+  .cityDetails-howShyftWorks p {
+    font-size: 2.2rem;
+    line-height: 3.8rem;
+  }
+  .cityDetailsEstimate {
+    max-width: 92rem;
+  }
+
+  .estimate-description {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    text-align: left;
+    }
+
+  .estimateform-wrap {
+    -webkit-box-flex: 0;
+    flex: 0 0 41.66667%;
+    margin-left: 8.33333%;
+  }
+}

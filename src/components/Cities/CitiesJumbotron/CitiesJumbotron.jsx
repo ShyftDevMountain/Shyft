@@ -18,7 +18,7 @@ class CitiesJumbotron extends React.Component{
       var cityId = getCityZip(lat, lng).then(res => postZip(res))
       console.log(getCityZip(lat, lng))
       console.log(cityId);
-      return cityId.then(res => hashHistory.push('/cities/' + res))
+      return cityId.then(res => hashHistory.push('/citydetails/' + res))
     }
 
     render(){

@@ -45,7 +45,6 @@ class CitiesEstimateForm extends React.Component {
   }
 
   resetForm () {
-    console.log('reset');
     this.setState({
         lyftEstimate: 0,
         lyftPlusEstimate: 0,
@@ -57,7 +56,6 @@ class CitiesEstimateForm extends React.Component {
   render () {
     return (
         <div>
-          <h1>test</h1>
           <form className='estimateForm'>
             <fieldset>
               <div className='pickup-input-container'>

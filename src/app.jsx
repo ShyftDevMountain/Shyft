@@ -23,7 +23,7 @@ class App extends React.Component {
             <Route path="/cities" component={CitiesComp}></Route>
             <Route path="/rides" component={RidesComp}></Route>
             <Route path="/userdashboard" component={UserDashboardComp}></Route>
-            <Route path="/cities/:id" component={CityDetails}></Route>
+            <Route path="/cityDetails/:id" component={CityDetails}></Route>
             <Route path="/login" component={LoginComp}></Route>
         </Route>
       </Router>
