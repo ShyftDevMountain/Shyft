@@ -1,5 +1,5 @@
 import React from 'react';
-// import './RidesComp.css';
+import './RidesComp.css';
 
 class Rides extends React.Component{
     render(){
