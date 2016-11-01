@@ -1,4 +1,5 @@
 import React from 'react';
+import {hashHistory} from 'react-router';
 
 import {getCities} from '../../../services/citiesListService.js';
 
@@ -9,30 +10,43 @@ class CitiesList extends React.Component {
     super(props);
 
   this.state = {
-    cities: []
+    states: [],
   }
 }
 
   componentDidMount() {
-    getCities().then(cities => {
+    getCities().then(statesList => {
       this.setState({
-        cities:cities
+        states: statesList
       })
     })
   }
 
+
   render() {
-    const cities = this.state.cities.map(city => {
+    let states = this.state.states.map((val, i, arr) => {
+      let test = val.cities.map((val2) => {
+        return val2;
+      })
       return (
-        <ul key={city.id}><li><a href='#'>{city.city}</a></li></ul>
+        <h4 className='state-name' key={i}>{val.state}
+          <div className='cities-div'>{test.map((val3, i) => {
+              let url = '/citydetails/'
+              return (
+                <p key={val3.id}><a href={url + val3.id}>{val3.city}</a></p>
+              )
+            })}</div>
+        </h4>
       )
     })
+
+
     return (
-      <div className='container-fluid city-list'>
+      <div className='cities-list-comp'>
         <h2>Available Shyft Cities</h2>
-        <div className='row'>
+      <div className='city-list'>
         <div className='city-links'>
-            {cities}
+            {states}
         </div>
       </div>
       </div>

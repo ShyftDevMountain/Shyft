@@ -120,6 +120,10 @@
 	          _react2.default.createElement(_reactRouter.Route, { path: "/cities", component: _CitiesComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/rides", component: _RidesComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/userdashboard", component: _UserDashboardComp2.default }),
+<<<<<<< HEAD
+	          _react2.default.createElement(_reactRouter.Route, { path: "/rideWithShyft", component: _RidesComp2.default }),
+=======
+>>>>>>> master
 	          _react2.default.createElement(_reactRouter.Route, { path: "/cities/:id", component: _CityDetails2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/login", component: _LoginComp2.default })
 	        )
@@ -31981,6 +31985,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(172);
+
 	var _citiesListService = __webpack_require__(296);
 
 	__webpack_require__(303);
@@ -32002,7 +32008,7 @@
 	    var _this = _possibleConstructorReturn(this, (CitiesList.__proto__ || Object.getPrototypeOf(CitiesList)).call(this, props));
 
 	    _this.state = {
-	      cities: []
+	      states: []
 	    };
 	    return _this;
 	  }
@@ -32012,33 +32018,45 @@
 	    value: function componentDidMount() {
 	      var _this2 = this;
 
-	      (0, _citiesListService.getCities)().then(function (cities) {
+	      (0, _citiesListService.getCities)().then(function (statesList) {
 	        _this2.setState({
-	          cities: cities
+	          states: statesList
 	        });
 	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var cities = this.state.cities.map(function (city) {
+	      var states = this.state.states.map(function (val, i, arr) {
+	        var test = val.cities.map(function (val2) {
+	          return val2;
+	        });
 	        return _react2.default.createElement(
-	          'ul',
-	          { key: city.id },
+	          'h4',
+	          { className: 'state-name', key: i },
+	          val.state,
 	          _react2.default.createElement(
-	            'li',
-	            null,
-	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
-	              city.city
-	            )
+	            'div',
+	            { className: 'cities-div' },
+	            test.map(function (val3, i) {
+	              var url = '/citydetails/';
+	              return _react2.default.createElement(
+	                'p',
+	                { key: val3.id },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: url + val3.id },
+	                  val3.city
+	                )
+	              );
+	            })
 	          )
 	        );
 	      });
+
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'container-fluid city-list' },
+	        { className: 'cities-list-comp' },
 	        _react2.default.createElement(
 	          'h2',
 	          null,
@@ -32046,11 +32064,11 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'row' },
+	          { className: 'city-list' },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'city-links' },
-	            cities
+	            states
 	          )
 	        )
 	      );
@@ -32097,7 +32115,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n.city-list h2 {\n  margin-top:25px;\n  text-align: center;\n}\n\n.city-links {\n  margin-top:30px;\n  margin-left: 20px;\n}\n\n.city-links ul {\n  list-style-type: none;\n}\n\n.city-links a {\n  color:#FF00BF;\n  text-decoration: none;\n}\n\n.city-links a:hover {\n  color:#b30086;\n  text-decoration: underline;\n}\n", ""]);
+	exports.push([module.id, "\n\n.cities-list-comp h2 {\n  margin-top:25px;\n  margin-bottom:25px;\n  text-align: center;\n}\n\n.state-name {\n  font-size: 19px;\n}\n\n.cities-div {\n  padding-top:10px;\n}\n\n\n.city-list {\n  display:flex;\n  justify-content: center;\n  margin:0 50px;\n}\n\n.city-links {\n  column-count:1;\n  text-align: center;\n  margin-bottom:10px;\n  }\n\n\n.city-links li {\n  list-style-type: none;\n}\n\n\n\n\n.city-links a {\n  color:#FF00BF;\n  text-decoration: none;\n  font-size: 16px;\n}\n\n.city-links a:hover {\n  color:#b30086;\n  text-decoration: underline;\n}\n\n\n\n@media(min-width: 544px) {\n  .city-links {\n    column-count:2;\n    text-align: left;\n  }\n\n\n  }\n\n\n@media (min-width: 768px) {\n  .city-links {\n    column-count: 3;\n    text-align:left;\n  }\n\n\n\n}\n", ""]);
 
 	// exports
 
@@ -32118,8 +32136,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+<<<<<<< HEAD
+=======
 	__webpack_require__(316);
 
+>>>>>>> master
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32128,6 +32149,11 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+<<<<<<< HEAD
+	// import './RidesComp.css';
+
+=======
+>>>>>>> master
 	var Rides = function (_React$Component) {
 	    _inherits(Rides, _React$Component);
 
@@ -32591,6 +32617,8 @@
 
 /***/ },
 /* 315 */
+<<<<<<< HEAD
+=======
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32631,6 +32659,7 @@
 
 /***/ },
 /* 317 */
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();

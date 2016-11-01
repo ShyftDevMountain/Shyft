@@ -5,6 +5,12 @@ export function getCities() {
   .then(res => res.data);
 }
 
+
+
+
+
+
+
 export function getCityZip(lat, lng) {
 
   var results =  axios.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat.toString() + ',' + lng.toString())
