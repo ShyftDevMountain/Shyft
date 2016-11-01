@@ -1,8 +1,8 @@
 import React from 'react';
 import './RidesComp.css';
 
-import MainJumbotron from '../../Home/MainJumbotron/MainJumbotron.jsx';
 import RequestRides from '../RequestRides/RequestRides.jsx';
+import MapComp from '../RidesMap/MapComp.jsx';
 
 
 class Rides extends React.Component{
@@ -10,7 +10,7 @@ class Rides extends React.Component{
         return (
             <div>
 
-                  <MainJumbotron />
+                  <MapComp />
                   <RequestRides />
 
 

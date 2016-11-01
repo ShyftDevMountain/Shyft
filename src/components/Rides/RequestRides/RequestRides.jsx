@@ -8,12 +8,7 @@ class RequestRides extends React.Component{
         return (
             <div>
 
-                  <div className="map_img">
-
-
-
-
-                  </div>
+                  
 
 
             </div>

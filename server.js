@@ -40,8 +40,9 @@ var citiesCtrl = require('./server/controllers/citiesCtrl.js');
 ///Requests///
 app.get('/cities', citiesCtrl.getCities);
 app.get('/cityDetails/:id', citiesCtrl.getOneCity);
-
 app.post('/checkZip', citiesCtrl.checkZip);
+
+
 
 
 
