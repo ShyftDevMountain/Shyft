@@ -1,4 +1,7 @@
 import React from 'react';
+import {render} from 'react-dom';
+
+import EditInfoModal from '../EditInfoModal/EditInfoModal.jsx';
 import './UserDashboardComp.css';
 import {getCustomerInfo} from '../../../services/dashboardService.js';
 
@@ -100,7 +103,7 @@ User Dashboard</div>
 
                             </div>
                             <div>
-                                <button className="userdash-request-btn btn btn-primary">Request Ride</button>
+                                <button className="userdash-updateinfo-btn btn btn-primary">Update Info</button>
                             </div>
 
 
@@ -110,6 +113,7 @@ User Dashboard</div>
 
                 </div>
 
+                <EditInfoModal />
             </div>
         );
     }
