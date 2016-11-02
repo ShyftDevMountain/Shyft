@@ -1,5 +1,6 @@
 import React from 'react';
-import RequestRide from '../RequestRide/RequestRide.jsx';
+import RequestRides from '../RequestRides/RequestRides.jsx';
+import MapComp from '../RidesMap/MapComp.jsx';
 
 import './RidesComp.css';
 
@@ -9,12 +10,8 @@ class Rides extends React.Component{
     render(){
         return (
             <div>
-
-
-                  <MapComp />
-                  <RequestRides />
-
-
+            
+                <RequestRides />
 
             </div>
         );

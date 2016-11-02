@@ -6,10 +6,15 @@ class RequestRides extends React.Component{
 
     render(){
         return (
-            <div>
+            <div className='RequestRides'>
 
+                <div className='second'>
                   
+                    <div className='fristBox'></div>
+                    <div className='fristBox'></div>
+                    <div className='fristBox'></div>
 
+                </div>
 
             </div>
         );

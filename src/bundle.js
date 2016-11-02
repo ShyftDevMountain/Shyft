@@ -78,11 +78,11 @@
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(339);
+	var _UserDashboardComp = __webpack_require__(308);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(342);
+	var _CityDetails = __webpack_require__(311);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -120,7 +120,7 @@
 	          _react2.default.createElement(_reactRouter.Route, { path: "/cities", component: _CitiesComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/rides", component: _RidesComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/userdashboard", component: _UserDashboardComp2.default }),
-	          _react2.default.createElement(_reactRouter.Route, { path: "/cities/:id", component: _CityDetails2.default }),
+	          _react2.default.createElement(_reactRouter.Route, { path: "/cityDetails/:id", component: _CityDetails2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/login", component: _LoginComp2.default })
 	        )
 	      );
@@ -30145,7 +30145,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .3s ease;\n}\n\n.navbar-mobile img {\n    width: 42px;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .3s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .3s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: all .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;    \n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .3s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
+	exports.push([module.id, "\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .3s ease;\n}\n\n.navbar-mobile img {\n    width: 42px;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .3s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .3s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: all .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;\n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .3s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -30913,7 +30913,7 @@
 	            console.log((0, _citiesListService.getCityZip)(lat, lng));
 	            console.log(cityId);
 	            return cityId.then(function (res) {
-	                return _reactRouter.hashHistory.push('/cities/' + res);
+	                return _reactRouter.hashHistory.push('/citydetails/' + res);
 	            });
 	        }
 	    }, {
@@ -31982,6 +31982,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(172);
+
 	var _citiesListService = __webpack_require__(296);
 
 	__webpack_require__(303);
@@ -32003,7 +32005,7 @@
 	    var _this = _possibleConstructorReturn(this, (CitiesList.__proto__ || Object.getPrototypeOf(CitiesList)).call(this, props));
 
 	    _this.state = {
-	      cities: []
+	      states: []
 	    };
 	    return _this;
 	  }
@@ -32013,33 +32015,45 @@
 	    value: function componentDidMount() {
 	      var _this2 = this;
 
-	      (0, _citiesListService.getCities)().then(function (cities) {
+	      (0, _citiesListService.getCities)().then(function (statesList) {
 	        _this2.setState({
-	          cities: cities
+	          states: statesList
 	        });
 	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var cities = this.state.cities.map(function (city) {
+	      var states = this.state.states.map(function (val, i, arr) {
+	        var test = val.cities.map(function (val2) {
+	          return val2;
+	        });
 	        return _react2.default.createElement(
-	          'ul',
-	          { key: city.id },
+	          'h4',
+	          { className: 'state-name', key: i },
+	          val.state,
 	          _react2.default.createElement(
-	            'li',
-	            null,
-	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
-	              city.city
-	            )
+	            'div',
+	            { className: 'cities-div' },
+	            test.map(function (val3, i) {
+	              var url = '/#/citydetails/';
+	              return _react2.default.createElement(
+	                'p',
+	                { key: val3.id },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: url + val3.id },
+	                  val3.city
+	                )
+	              );
+	            })
 	          )
 	        );
 	      });
+
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'container-fluid city-list' },
+	        { className: 'cities-list-comp' },
 	        _react2.default.createElement(
 	          'h2',
 	          null,
@@ -32047,11 +32061,11 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'row' },
+	          { className: 'city-list' },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'city-links' },
-	            cities
+	            states
 	          )
 	        )
 	      );
@@ -32098,7 +32112,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n.city-list h2 {\n  margin-top:25px;\n  text-align: center;\n}\n\n.city-links {\n  margin-top:30px;\n  margin-left: 20px;\n}\n\n.city-links ul {\n  list-style-type: none;\n}\n\n.city-links a {\n  color:#FF00BF;\n  text-decoration: none;\n}\n\n.city-links a:hover {\n  color:#b30086;\n  text-decoration: underline;\n}\n", ""]);
+	exports.push([module.id, "\n\n.cities-list-comp h2 {\n  margin-top:25px;\n  margin-bottom:25px;\n  text-align: center;\n}\n\n.state-name {\n  font-size: 19px;\n}\n\n.cities-div {\n  padding-top:10px;\n}\n\n\n.city-list {\n  display:flex;\n  justify-content: center;\n  margin:0 50px;\n}\n\n.city-links {\n  column-count:1;\n  text-align: center;\n  margin-bottom:10px;\n  }\n\n\n.city-links li {\n  list-style-type: none;\n}\n\n\n\n\n.city-links a {\n  color:#FF00BF;\n  text-decoration: none;\n  font-size: 16px;\n}\n\n.city-links a:hover {\n  color:#b30086;\n  text-decoration: underline;\n}\n\n\n\n@media(min-width: 544px) {\n  .city-links {\n    column-count:2;\n    text-align: left;\n  }\n\n\n  }\n\n\n@media (min-width: 768px) {\n  .city-links {\n    column-count: 3;\n    text-align:left;\n  }\n\n\n\n}\n", ""]);
 
 	// exports
 
@@ -32119,15 +32133,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(306);
-
-	var _RequestRides = __webpack_require__(308);
+	var _RequestRides = __webpack_require__(319);
 
 	var _RequestRides2 = _interopRequireDefault(_RequestRides);
 
-	var _MapComp = __webpack_require__(311);
+	var _MapComp = __webpack_require__(322);
 
 	var _MapComp2 = _interopRequireDefault(_MapComp);
+
+	__webpack_require__(306);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32152,7 +32166,6 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(_MapComp2.default, null),
 	                _react2.default.createElement(_RequestRides2.default, null)
 	            );
 	        }
@@ -32231,28 +32244,171 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var RequestRides = function (_React$Component) {
-	    _inherits(RequestRides, _React$Component);
+	var UserDashboardComp = function (_React$Component) {
+	    _inherits(UserDashboardComp, _React$Component);
 
-	    function RequestRides() {
-	        _classCallCheck(this, RequestRides);
+	    function UserDashboardComp() {
+	        _classCallCheck(this, UserDashboardComp);
 
-	        return _possibleConstructorReturn(this, (RequestRides.__proto__ || Object.getPrototypeOf(RequestRides)).apply(this, arguments));
+	        return _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).apply(this, arguments));
 	    }
 
-	    _createClass(RequestRides, [{
+	    _createClass(UserDashboardComp, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement('div', null);
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'userdash-wrapper' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'userdash-sideanduser-container' },
+	                    _react2.default.createElement(
+	                        'section',
+	                        { className: 'userdash-sidebar-container' },
+	                        _react2.default.createElement('img', { className: 'userdash-logo-main', src: './img/LYFT_LOGO/SVG/white_logo.svg' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'userdash-sidebar-innerbox' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-pic-container' },
+	                                _react2.default.createElement('img', { src: './img/userdash/screaming-kid1.jpg' }),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-sidebar-item-container' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'userdash-sidebar-item' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-user userdash-icons', 'aria-hidden': 'true' }),
+	                                        _react2.default.createElement(
+	                                            'span',
+	                                            null,
+	                                            'User'
+	                                        )
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'userdash-sidebar-item' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-question-circle userdash-icons', 'aria-hidden': 'true' }),
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: '#' },
+	                                            'Help'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'h4',
+	                                { className: 'userdash-welcome' },
+	                                'Welcome Johnny!'
+	                            )
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'section',
+	                        { className: 'userdash-user-container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'userdash-user-innerbox' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-title' },
+	                                _react2.default.createElement('i', { className: 'fa fa-tachometer userdash-icons-title userdash-icons-title', 'aria-hidden': 'true' }),
+	                                'User Dashboard'
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-infobox' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-icon-box' },
+	                                    _react2.default.createElement('i', { className: 'fa fa-user userdash-icons', 'aria-hidden': 'true' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-user-info' },
+	                                    'Stuff goes here'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-infobox' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-icon-box' },
+	                                    _react2.default.createElement('i', { className: 'fa fa-phone-square userdash-icons', 'aria-hidden': 'true' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-user-info' },
+	                                    'Stuff goes here'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-infobox' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-icon-box' },
+	                                    _react2.default.createElement('i', { className: 'fa fa-envelope userdash-icons', 'aria-hidden': 'true' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-user-info' },
+	                                    'Stuff goes here'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-ridesrequest-box' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-user-rides' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'userdash-icon-box' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-car userdash-icons', 'aria-hidden': 'true' })
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'span',
+	                                        { className: 'userdash-ridenumber' },
+	                                        ' 5'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-user-comments' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'userdash-icon-box' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-file-text-o userdash-icons', 'aria-hidden': 'true' })
+	                                    ),
+	                                    _react2.default.createElement('textarea', { className: 'userdash-textarea', placeholder: 'Comments' })
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'button',
+	                                    { className: 'userdash-request-btn btn btn-primary' },
+	                                    'Request Ride'
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
 	        }
 	    }]);
 
-	    return RequestRides;
+	    return UserDashboardComp;
 	}(_react2.default.Component);
 
 	;
 
-	exports.default = RequestRides;
+	exports.default = UserDashboardComp;
 
 /***/ },
 /* 309 */
@@ -32270,8 +32426,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RequestRides.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RequestRides.css");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -32289,7 +32445,7 @@
 
 
 	// module
-	exports.push([module.id, "\n", ""]);
+	exports.push([module.id, "\n.userdash-icons {\n    font-size: 26px;\n    margin-right: 10px;\n}\n\n.userdash-icons-title {\n    font-size: 3rem;\n    margin-right: 10px;\n}\n\n.userdash-icons-google {\n    font-size: 36px;\n    margin-right: 10px;\n}\n\n.userdash-logo-main {\n    width: 60px;\n    margin-bottom: 10px;\n}\n\n.userdash-sideanduser-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.userdash-sidebar-container {\n    width: 100%;\n    /*height: 40rem;*/\n    background: #ff00bf;\n    padding: 70px 0 50px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.userdash-sidebar-innerbox {\n    width: 160px;\n    margin: 0 auto;\n}\n\n.userdash-user-pic-container {\n    margin: 15px 0 25px;\n    /* border: 1px solid #ff00bf; */\n    box-shadow: 1px 1px 5px gray;\n    background: white;\n    padding: 10px;\n    text-align: center;\n    width: 160px;\n    border-radius: 7px;\n}\n\n.userdash-user-pic-container img {\n    width: 140px;\n    border-radius: 7px;\n}\n\n.userdash-welcome {\n    color: #f3f3f5;\n}\n\n.userdash-sidebar-item-container {\n    padding: 5px 3px;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    margin-top: 5px;\n}\n\n.userdash-sidebar-item {\n    display: flex;\n    align-items: center;\n    padding: 2px 5px;\n}\n\n.userdash-sidebar-item a {\n    color: #333;\n}\n\n.userdash-sidebar-item a:hover {\n    color: #ff00bf;\n}\n\n.userdash-user-container {\n    width: 100%;\n    padding: 50px 0;\n    border: 1px solid #f2f2f2;\n}\n\n.userdash-user-innerbox {\n    width: 80%;\n    margin: 0 auto;\n}\n\n.userdash-user-title {\n    font-size: 3rem;\n    margin-bottom: 30px;\n    transition: all .2s ease;\n}\n\n.userdash-user-infobox {\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-icon-box {\n    width: 35px;\n}\n\n.userdash-user-info {\n    padding: 10px 10px;\n    width: 100%;\n    border: 1px solid #f2f2f2;\n    background-color: white;\n    border-radius: 7px;\n    color: #333;\n}\n\n.userdash-user-ridesrequest-box {\n    display: flex;\n    flex-direction: column;\n    align-items: initial;\n    margin: 50px 0;\n}\n\n.userdash-user-rides {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-ridenumber {\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    padding: 10px;\n    width: 100%;\n}\n\n.userdash-user-comments textarea {\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    font-style: italic;\n    font-weight: 100;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    width: 100%;\n}\n\n.userdash-user-comments {\n    width: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.userdash-request-btn {\n    width: 100%;\n    padding: 12px;\n    font-size: 1.75rem;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n.userdash-request-btn:hover {\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n@media (min-width:768px){\n\n    .userdash-icons-title {\n        font-size: 4rem;\n    }\n\n    .userdash-sideanduser-container {\n        display: flex;\n        flex-direction: row;\n    }\n\n    .userdash-sidebar-container {\n        width: 50%;\n        padding-left: 0px;\n        padding-top: 150px;\n    }\n\n    .userdash-user-container {\n        width: 100%;\n        padding-top: 100px;\n    }\n\n    .userdash-user-title {\n        font-size: 4rem;\n    }\n\n    .userdash-request-btn {\n        width: 180px;\n    }\n\n    .userdash-user-ridesrequest-box {\n        display: flex;\n        flex-direction: row;\n        align-items: center;\n    }\n\n    .userdash-user-comments textarea {\n        width: 90%;\n    }\n\n    .userdash-user-comments {\n        width: 50%;\n    }\n\n    .userdash-ridenumber {\n        width: 70%;\n        text-align: center;\n    }\n\n    .userdash-user-rides {\n        width: 50%;\n        margin-bottom: 0px;\n    }\n\n}\n\n@media (min-width:992px) {\n    .userdash-sidebar-container {\n        width: 45%;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -32310,13 +32466,782 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(312);
+	var _cityDetailsService = __webpack_require__(312);
 
-	var _googleMapReact = __webpack_require__(314);
+	var _CityBottomBanner = __webpack_require__(299);
+
+	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
+
+	var _CitiesEstimateForm = __webpack_require__(313);
+
+	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
+
+	__webpack_require__(317);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var CityDetails = function (_React$Component) {
+	  _inherits(CityDetails, _React$Component);
+
+	  function CityDetails(props) {
+	    _classCallCheck(this, CityDetails);
+
+	    var _this = _possibleConstructorReturn(this, (CityDetails.__proto__ || Object.getPrototypeOf(CityDetails)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(CityDetails, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      var _this2 = this;
+
+	      (0, _cityDetailsService.getOneCity)(this.props.params.id).then(function (res) {
+	        res = res[0];
+	        _this2.setState({
+	          city: res.city,
+	          state: res.state,
+	          img: res.img,
+	          map_img: res.map_img
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      var backgroundImg = {
+	        backgroundImage: 'url("' + this.state.img + '")'
+	      };
+
+	      var cityMap = {
+	        backgroundImage: 'url("' + this.state.map_img + '")'
+	      };
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'cityDetails' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'cityDetails-jumbotron-container', style: backgroundImg },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12 align-center jumbo-wrap' },
+	            _react2.default.createElement(
+	              'h1',
+	              { className: 'cityDetails-jumbotron-title' },
+	              this.state.city,
+	              ' Area'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'btn btn-primary MainJumbotron-btn' },
+	              'Sign Up Now'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'section',
+	          { className: 'cityDetails-howShyftWorks' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'howitworksDescrip' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'How Lyft Works'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Wherever you\'re headed in the ',
+	              this.state.city,
+	              ' Area, count on Lyft for rides in minutes. The Lyft app matches you with friendly local drivers at the tap of a button. Just request and go. After the ride, simply pay through your phone.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'howitworkstable' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-lg-10 col-sm-12 col-xs-8' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'icons-wrap' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-sm-4' },
+	                  _react2.default.createElement('img', { className: 'clock-icon', src: '/img/cities/clock-icon.svg' }),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Lyft is available 24 hours a day, 7 days a week.'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-sm-4' },
+	                  _react2.default.createElement('img', { className: 'dollar-icon', src: '/img/cities/dollar-icon.svg' }),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Choose Lyft and get the most affordable ride in town.'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-sm-4' },
+	                  _react2.default.createElement('img', { className: 'people-icon', src: '/img/cities/people-icon.svg' }),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'From florists to firefighters, meet awesome drivers.'
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement('div', { className: 'cityDetailsMap', style: cityMap }),
+	        _react2.default.createElement(
+	          'section',
+	          { className: 'cityDetailsEstimate' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetailsEstimate-Wrap' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'estimate-description' },
+	              _react2.default.createElement(
+	                'h2',
+	                null,
+	                'Estimate Trip Cost'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Where to? Enter a pickup and drop-off location to estimate the price of your trip. Pro-tip: Your ride doesn\u2019t just have to be from A to B. With Lyft and Lyft Plus, you can make multiple stops per ride.'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'estimateform-wrap' },
+	              _react2.default.createElement(_CitiesEstimateForm2.default, null)
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'section',
+	          { className: 'cityDetails-TwoWays' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-TwoWaysWrap' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Two Ways to Ride'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-carWrapper' },
+	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/lyftcar.png' })
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Lyft is your personal ride. Whether you\'re traveling solo or with up to three friends, this sedan is yours to fill.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-pricesWrapper' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-prices' },
+	              _react2.default.createElement(
+	                'section',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'priceChart' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-btnwrapper' },
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn active' },
+	                      'Lyft'
+	                    ),
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn' },
+	                      'Plus'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-pricing' },
+	                    _react2.default.createElement(
+	                      'table',
+	                      { className: 'pricingTable' },
+	                      _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Base Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.60'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Mile'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.30'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Minute'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$0.14'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Maximum Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$4.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Scheduled Ride Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Service Fee'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.00'
+	                          )
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(_CityBottomBanner2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return CityDetails;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = CityDetails;
+
+/***/ },
+/* 312 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOneCity = getOneCity;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOneCity(cityId) {
+	  return _axios2.default.get('/cityDetails/' + cityId.toString()).then(function (res) {
+	    return res.data;
+	  });
+	}
+
+/***/ },
+/* 313 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactGeosuggestPlus = __webpack_require__(294);
+
+	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
+
+	var _estimateFormService = __webpack_require__(314);
+
+	__webpack_require__(315);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var pickupLatLng, destLatLng, lyftEstimate, lyftPlusEstimate;
+
+	var CitiesEstimateForm = function (_React$Component) {
+	  _inherits(CitiesEstimateForm, _React$Component);
+
+	  function CitiesEstimateForm(props) {
+	    _classCallCheck(this, CitiesEstimateForm);
+
+	    var _this = _possibleConstructorReturn(this, (CitiesEstimateForm.__proto__ || Object.getPrototypeOf(CitiesEstimateForm)).call(this, props));
+
+	    _this.state = {
+	      lyftEstimate: 0,
+	      lyftPlusEstimate: 0,
+	      showEstimate: 'estimate',
+	      estimateButton: 'button-getEstimate'
+	    };
+	    _this.getEstimate = _this.getEstimate.bind(_this);
+	    _this.resetForm = _this.resetForm.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(CitiesEstimateForm, [{
+	    key: 'onSuggestSelectPickup',
+	    value: function onSuggestSelectPickup(pickup) {
+	      pickupLatLng = [pickup.location.lat, pickup.location.lng];
+	    }
+	  }, {
+	    key: 'onSuggestSelectDest',
+	    value: function onSuggestSelectDest(dest) {
+	      destLatLng = [dest.location.lat, dest.location.lng];
+	    }
+	  }, {
+	    key: 'getEstimate',
+	    value: function getEstimate() {
+	      var _this2 = this;
+
+	      var estimates = (0, _estimateFormService.getLyftEstimate)(pickupLatLng[0], pickupLatLng[1], destLatLng[0], destLatLng[1]);
+	      estimates.then(function (res) {
+	        _this2.setState({
+	          lyftEstimate: res[1],
+	          lyftPlusEstimate: res[0],
+	          showEstimate: 'estimate active',
+	          estimateButton: 'button-getEstimate hide'
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'resetForm',
+	    value: function resetForm() {
+	      this.setState({
+	        lyftEstimate: 0,
+	        lyftPlusEstimate: 0,
+	        showEstimate: 'estimate',
+	        estimateButton: 'button-getEstimate'
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'form',
+	          { className: 'estimateForm' },
+	          _react2.default.createElement(
+	            'fieldset',
+	            null,
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'pickup-input-container' },
+	              _react2.default.createElement('div', { className: 'pickup-icon' }),
+	              _react2.default.createElement(_reactGeosuggestPlus2.default, {
+	                className: 'pickup-input',
+	                placeholder: 'Add pickup location',
+	                onSuggestSelect: this.onSuggestSelectPickup,
+	                onChange: this.resetForm
+	              })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'pickup-destination-container' },
+	              _react2.default.createElement('div', { className: 'dest-icon' }),
+	              _react2.default.createElement(_reactGeosuggestPlus2.default, {
+	                className: 'dest-input',
+	                placeholder: 'Add destination',
+	                onSuggestSelect: this.onSuggestSelectDest,
+	                onChange: this.resetForm
+	              })
+	            ),
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: this.getEstimate, className: this.state.estimateButton },
+	              'Get Estimate'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: this.state.showEstimate },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'estimate-lyft' },
+	                _react2.default.createElement(
+	                  'span',
+	                  null,
+	                  '$',
+	                  this.state.lyftEstimate
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  null,
+	                  'Lyft'
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'divider' }),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'estimate-plus' },
+	                _react2.default.createElement(
+	                  'span',
+	                  null,
+	                  '$',
+	                  this.state.lyftPlusEstimate
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  null,
+	                  'Plus'
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return CitiesEstimateForm;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = CitiesEstimateForm;
+
+/***/ },
+/* 314 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getLyftEstimate = getLyftEstimate;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var lyftToken = {
+	  headers: { 'Authorization': 'Bearer "gAAAAABYGNhPJJQHxYMYhr029HqohlQ1rKwvu5cUe8E3kKkHIOvP5l9TxSiMaCtKakuw3pKfCiKFEI0gOZbwp43HytMCFi3m7G4yVv7DASmjQLU_V--AnBNK4fSXNYBtL_8yKx4NLBoErsYMP7sCB1n7eVSamU5VBswoBIAglZ9wei5V38cf55KUaP0YMGCnyrKy4J0x8jHMhCaAQt8kDdfI9GY7bzffxg=="'
+	  }
+	};
+
+	function getLyftEstimate(pickupLat, pickupLng, destLat, destLng) {
+	  return _axios2.default.get('https://api.lyft.com/v1/cost?start_lat=' + pickupLat.toString() + '&start_lng=' + pickupLng.toString() + '&end_lat=' + destLat.toString() + '&end_lng=' + destLng.toString(), lyftToken).then(function (res) {
+	    var lyftPlusPrice = Math.floor((res.data.cost_estimates[0].estimated_cost_cents_min + 400) / 100);
+	    var lyftPrice = Math.floor((res.data.cost_estimates[1].estimated_cost_cents_min + 400) / 100);
+	    return [lyftPlusPrice, lyftPrice];
+	  });
+	}
+
+/***/ },
+/* 315 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(316);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CitiesEstimateForm.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CitiesEstimateForm.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 316 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "*:focus {\n  outline: none;\n}\n.estimateForm {\n  background-color: #F3F3F5;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: .5rem;\n  border-color: #D8DCE6;\n  padding: 2.4rem;\n  box-sizing: inherit;\n  font-size: 1.8rem;\n  line-height: 1.3;\n}\n\n.estimateForm input {\n  display: block;\n  width: 100%;\n  color: #333447;\n  padding: .75rem 1.25rem;\n  font-size: 1.8rem;\n  line-height: 1.33333;\n  padding-left: 2.75rem;\n}\n\n.pickup-input-container .geosuggest__input {\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  /*border: .08333rem solid #E60000;*/\n  border: .08333rem solid #ccc;\n}\n.geosuggest-container span,\n.geosuggest-container button {\n  display: none;\n}\n\n.estimateForm .geosuggest__suggests {\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  /*border: .08333rem solid #E60000;*/\n  border: .08333rem solid #ccc;\n  background: white;\n  padding-left: 26px;\n  margin-top: -1px;\n  border-top: 1px solid white;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n  z-index: 500;\n}\n.dest-input .geosuggest__suggests {\nmargin-top: -3px;\n}\n\n.pickup-icon {\n  background-repeat: no-repeat\n}\n\n.pickup-destination-container .geosuggest__input {\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  /*border: .08333rem solid #E60000;*/\n  border: .08333rem solid #ccc;\n}\n\n.button-getEstimate {\n  padding: 1.2rem;\n  background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: -o-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: linear-gradient(to bottom right, #FF00BF, #B80B8C);\n  margin-top: 1.7rem;\n  border: none;\n  display: block;\n  width: 100%;\n  font-size: 1.8rem;\n  line-height: 1.33333;\n  border-radius: .5rem;\n  color: #fff;\n  font-weight: 400;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  user-select: none;\n}\n.button-getEstimate.hide {\n  display: none;\n}\n\n.estimate {\n  margin-top: 1.5rem;\n  margin-bottom: .5rem;\n  display: flex;\n  text-align: center!important;\n  font-size: 2.1rem;\n  font-weight: 100;\n  justify-content: center;\n  display: none;\n}\n\n.estimate.active {\n  display: flex;\n}\n\n.estimate-lyft {\n\n}\n\n.estimate-lyft div {\n  font-size: 1.7rem;\n}\n\n.estimateForm .divider {\n  border-color: #D8DCE6;\n  border-right-width: 1px;\n  border-right-style: solid;\n  margin: 0 15%;\n}\n\n.estimate-plus {\n\n}\n\n.estimate-plus div {\n  font-size: 1.7rem;\n}\n\n.estimateForm .geosuggest-suggestions {\n  position: relative;\n  margin-left: 15px;\n  margin-right: 15px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 317 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(318);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 318 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".cityDetails-jumbotron-container {\n  background-size: cover;\n  height: 60vh;\n  text-align: center;\n  background-position: center;\n  background-repeat: no-repeat;\n  display: flex;\n}\n\n.cityDetails-jumbotron-title {\n  color: #F3F3F5;\n  font-size: 3.1rem;\n  margin-bottom: 20px;\n  font-weight: bolder;\n}\n\n.cityDetails-jumbotron-container .MainJumbotron-btn {\n  width: 110px;\n  font-weight: 400;\n  font-size: 1.4rem;\n}\n\n\n.jumbo-wrap {\n  -ms-align-self: center;\n  align-self: center;\n}\n\n.icons-wrap div {\n  margin-bottom: 25px;\n}\n\n.icons-wrap img {\n  margin-bottom: 10px;\n  height: 5.5rem;\n  width: 5.5rem;\n}\n\n.cityDetails-howShyftWorks {\n  margin-bottom: 4rem;\n  margin-top: 4rem;\n  max-width: 45rem;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.howitworksDescrip {\n  margin-bottom: 6rem;\n  width: 70%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.howitworkstable {\n  justify-content: center;\n  display: flex;\n  margin-top: 1rem;\n}\n\n.cityDetails-howShyftWorks h2 {\n  padding-bottom: 20px;\n  font-size: 3rem;\n  padding-top: 28px;\n}\n\n.cityDetails-howShyftWorks p {\n  font-size: 1.8rem;\n  font-weight: 100;\n  line-height: 3rem;\n}\n\n.clock-icon {\n  background-repeat: no-repeat;\n}\n.cityDetailsMap {\n  background-size: cover;\n  height: 450px;\n  background-position: center;\n  margin-bottom: 20px;\n}\n.cityDetailsEstimate {\n  max-width: 34rem;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetailsEstimate-Wrap {\n  display: flex;\n  padding-bottom: 8rem;\n  padding-top: 5rem;\n  border-color: #D8DCE6;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n}\n\n.estimateform-wrap {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n\n.estimate-description {\n  line-height: 1.8;\n  font-size: 1.8rem;\n  font-weight: 100;\n  padding-top: 10px;\n  text-align: center;\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.estimate-description h2 {\n  margin-bottom: 2rem;\n  font-size: 3rem;\n}\n\n\n.cityDetails-TwoWays {\n  margin-bottom: -12rem;\n  text-align: center!important;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetails-TwoWaysWrap {\n  width: 70%\n}\n\n.cityDetails-TwoWays div:nth-child(1) {\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.cityDetails-TwoWays h2 {\n  margin-top: 4rem;\n  font-size: 3rem;\n}\n\n.cityDetails-TwoWays p {\n  font-size: 1.7rem;\n  line-height: 1.5;\n  font-weight: 100;\n}\n\n.cityDetails-carWrapper {\n  background-position: center;\n  background-size: contain;\n  background-repeat: no-repeat;\n  margin-bottom: 1.5rem;\n  padding: 4rem;\n  max-width: 100%;\n  text-align: center!important;\n}\n\n.cityDetails-carWrapper img {\n  width: 580px;\n  max-width: 100%;\n  vertical-align: middle;\n}\n\n.cityDetails-pricesWrapper {\n  -webkit-box-pack: center;\n  justify-content: center;\n  display: flex;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n  text-align: center;\n  margin-top: 4rem;\n\n}\n\n.cityDetails-prices {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n}\n\n.priceChart-btnwrapper {\n  border-color: #D8DCE6;\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border-width: 1px;\n  border-style: solid;\n  background-color: #F3F3F5;\n  display: flex;\n  text-align: center!important;\n  line-height: 2;\n}\n\n.priceChart-pricing {\n  border-color: #D8DCE6;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  margin-top: -1px;\n  border: 1px solid #D8DCE6;\n  line-height: 2;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  padding-right: 1.5rem;\n  padding-left: 1.5rem;\n  font-size: 1.7rem;\n  font-weight: 100;\n}\n\n.pricingTable {\n  width: 100%;\n  background-color: transparent;\n}\n\ntr td {\n  text-align: left;\n}\n\n\n.pricechart-btn {\n  border-color: #D8DCE6;\n  font-size: 1.9rem;\n  background-color: transparent;\n  display: block;\n  width: 100%;\n  font-weight: 200;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  border: .08333rem solid transparent;\n  padding: .75rem 1.25rem;\n  line-height: 1.5;\n  border-radius: .5rem;\n}\n\n.pricechart-btn.active {\n  color: #FF00BF!important;\n  background: #fff;\n}\n\n@media (min-width: 768px) {\n  .cityDetails-jumbotron-title {\n    font-size: 4.3rem;\n  }\n\n  .cityDetails-jumbotron-container .MainJumbotron-btn {\n    width: 160px;\n    font-weight: 600;\n    font-size: 1.8rem;\n  }\n\n  .cityDetails-howShyftWorks {\n    max-width: 85rem;\n  }\n\n  .icons-wrap img {\n    height: 6.5rem;\n    width: 6.5rem;\n  }\n\n  .cityDetails-howShyftWorks h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-howShyftWorks p {\n    font-size: 2.2rem;\n    line-height: 3.8rem;\n  }\n\n  .cityDetailsEstimate {\n    max-width: 92rem;\n  }\n\n  .estimate-description {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    text-align: left;\n    font-size: 2rem;\n  }\n\n  .estimateform-wrap {\n    -webkit-box-flex: 0;\n    flex: 0 0 41.66667%;\n    margin-left: 8.33333%;\n  }\n\n  .cityDetails-TwoWays {\n    max-width: 92vh;\n  }\n\n  .estimate-description h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-TwoWays h2 {\n    margin-top: 5rem;\n    font-size: 3.5rem;\n  }\n\n  .cityDetails-TwoWays p {\n    font-size: 1.9rem;\n    line-height: 1.8;\n  }\n\n  .cityDetails-prices {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    line-height: 2;\n  }\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 319 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(320);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var RequestRides = function (_React$Component) {
+	    _inherits(RequestRides, _React$Component);
+
+	    function RequestRides() {
+	        _classCallCheck(this, RequestRides);
+
+	        return _possibleConstructorReturn(this, (RequestRides.__proto__ || Object.getPrototypeOf(RequestRides)).apply(this, arguments));
+	    }
+
+	    _createClass(RequestRides, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'RequestRides' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'second' },
+	                    _react2.default.createElement('div', { className: 'fristBox' }),
+	                    _react2.default.createElement('div', { className: 'fristBox' }),
+	                    _react2.default.createElement('div', { className: 'fristBox' })
+	                )
+	            );
+	        }
+	    }]);
+
+	    return RequestRides;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = RequestRides;
+
+/***/ },
+/* 320 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(321);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RequestRides.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RequestRides.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 321 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n.RequestRides  {\n    background-color: blue;\n    /* display: inline-block; */\n    /* margin-top: 200px; */\n    /* width: 976px; */\n    height: 50vh;\n    /* display: flex; */\n    margin-left: 22px;\n    margin-right: 20px;\n    /* display: inherit; */\n    padding-left: 20px;\n    padding-right: 20px;\n    padding-bottom: 9px;\n    padding-top: 9px;\n}\n.second {\n    background-color: green;\n    width: 100%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 100%;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    flex-direction: column;\n    /*padding: 15px;*/\n\n}\n.fristBox {\n  background-color: pink;\n  width: 78%;\n  /* margin-left: 20px; */\n  /* margin-right: 20px; */\n  height: 101px;\n  margin: 7px;\n\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 322 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(323);
+
+	var _googleMapReact = __webpack_require__(325);
 
 	var _googleMapReact2 = _interopRequireDefault(_googleMapReact);
 
-	var _function = __webpack_require__(337);
+	var _function = __webpack_require__(348);
 
 	var _function2 = _interopRequireDefault(_function);
 
@@ -32364,13 +33289,13 @@
 	exports.default = SimpleMapPage;
 
 /***/ },
-/* 312 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(313);
+	var content = __webpack_require__(324);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32390,7 +33315,7 @@
 	}
 
 /***/ },
-/* 313 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32404,7 +33329,7 @@
 
 
 /***/ },
-/* 314 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32414,7 +33339,7 @@
 	});
 	exports.default = undefined;
 
-	var _google_map = __webpack_require__(315);
+	var _google_map = __webpack_require__(326);
 
 	var _google_map2 = _interopRequireDefault(_google_map);
 
@@ -32423,7 +33348,7 @@
 	exports.default = _google_map2.default;
 
 /***/ },
-/* 315 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -32448,63 +33373,63 @@
 
 	var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
-	var _marker_dispatcher = __webpack_require__(316);
+	var _marker_dispatcher = __webpack_require__(327);
 
 	var _marker_dispatcher2 = _interopRequireDefault(_marker_dispatcher);
 
-	var _google_map_map = __webpack_require__(318);
+	var _google_map_map = __webpack_require__(329);
 
 	var _google_map_map2 = _interopRequireDefault(_google_map_map);
 
-	var _google_map_markers = __webpack_require__(319);
+	var _google_map_markers = __webpack_require__(330);
 
 	var _google_map_markers2 = _interopRequireDefault(_google_map_markers);
 
-	var _google_map_markers_prerender = __webpack_require__(321);
+	var _google_map_markers_prerender = __webpack_require__(332);
 
 	var _google_map_markers_prerender2 = _interopRequireDefault(_google_map_markers_prerender);
 
-	var _google_map_loader = __webpack_require__(322);
+	var _google_map_loader = __webpack_require__(333);
 
 	var _google_map_loader2 = _interopRequireDefault(_google_map_loader);
 
-	var _detect = __webpack_require__(324);
+	var _detect = __webpack_require__(335);
 
 	var _detect2 = _interopRequireDefault(_detect);
 
-	var _geo = __webpack_require__(325);
+	var _geo = __webpack_require__(336);
 
 	var _geo2 = _interopRequireDefault(_geo);
 
-	var _array_helper = __webpack_require__(330);
+	var _array_helper = __webpack_require__(341);
 
 	var _array_helper2 = _interopRequireDefault(_array_helper);
 
-	var _is_plain_object = __webpack_require__(331);
+	var _is_plain_object = __webpack_require__(342);
 
 	var _is_plain_object2 = _interopRequireDefault(_is_plain_object);
 
-	var _pick = __webpack_require__(332);
+	var _pick = __webpack_require__(343);
 
 	var _pick2 = _interopRequireDefault(_pick);
 
-	var _raf = __webpack_require__(333);
+	var _raf = __webpack_require__(344);
 
 	var _raf2 = _interopRequireDefault(_raf);
 
-	var _log = __webpack_require__(334);
+	var _log = __webpack_require__(345);
 
 	var _log2 = _interopRequireDefault(_log);
 
-	var _isNumber = __webpack_require__(335);
+	var _isNumber = __webpack_require__(346);
 
 	var _isNumber2 = _interopRequireDefault(_isNumber);
 
-	var _omit = __webpack_require__(320);
+	var _omit = __webpack_require__(331);
 
 	var _omit2 = _interopRequireDefault(_omit);
 
-	var _detectElementResize = __webpack_require__(336);
+	var _detectElementResize = __webpack_require__(347);
 
 	var _detectElementResize2 = _interopRequireDefault(_detectElementResize);
 
@@ -33415,7 +34340,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 316 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33426,7 +34351,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _eventemitter = __webpack_require__(317);
+	var _eventemitter = __webpack_require__(328);
 
 	var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
@@ -33479,7 +34404,7 @@
 	exports.default = MarkerDispatcher;
 
 /***/ },
-/* 317 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33774,7 +34699,7 @@
 
 
 /***/ },
-/* 318 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33834,7 +34759,7 @@
 	exports.default = GoogleMapMap;
 
 /***/ },
-/* 319 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33855,7 +34780,7 @@
 
 	var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
-	var _omit = __webpack_require__(320);
+	var _omit = __webpack_require__(331);
 
 	var _omit2 = _interopRequireDefault(_omit);
 
@@ -34169,7 +35094,7 @@
 	exports.default = GoogleMapMarkers;
 
 /***/ },
-/* 320 */
+/* 331 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -34196,7 +35121,7 @@
 	exports.default = omit;
 
 /***/ },
-/* 321 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34219,7 +35144,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _google_map_markers = __webpack_require__(319);
+	var _google_map_markers = __webpack_require__(330);
 
 	var _google_map_markers2 = _interopRequireDefault(_google_map_markers);
 
@@ -34237,7 +35162,7 @@
 	};
 
 /***/ },
-/* 322 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -34258,7 +35183,7 @@
 	// TODO add libraries language and other map options
 	function googleMapLoader(bootstrapURLKeys) {
 	  if (!$script_) {
-	    $script_ = __webpack_require__(323); // eslint-disable-line
+	    $script_ = __webpack_require__(334); // eslint-disable-line
 	  }
 
 	  // call from outside google-map-react
@@ -34315,7 +35240,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 323 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -34444,7 +35369,7 @@
 
 
 /***/ },
-/* 324 */
+/* 335 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34493,7 +35418,7 @@
 	}
 
 /***/ },
-/* 325 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34506,15 +35431,15 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _lat_lng = __webpack_require__(326);
+	var _lat_lng = __webpack_require__(337);
 
 	var _lat_lng2 = _interopRequireDefault(_lat_lng);
 
-	var _pointGeometry = __webpack_require__(328);
+	var _pointGeometry = __webpack_require__(339);
 
 	var _pointGeometry2 = _interopRequireDefault(_pointGeometry);
 
-	var _transform = __webpack_require__(329);
+	var _transform = __webpack_require__(340);
 
 	var _transform2 = _interopRequireDefault(_transform);
 
@@ -34649,7 +35574,7 @@
 	exports.default = Geo;
 
 /***/ },
-/* 326 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34660,7 +35585,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _wrap2 = __webpack_require__(327);
+	var _wrap2 = __webpack_require__(338);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -34704,7 +35629,7 @@
 	exports.default = LatLng;
 
 /***/ },
-/* 327 */
+/* 338 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -34719,7 +35644,7 @@
 	}
 
 /***/ },
-/* 328 */
+/* 339 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34856,7 +35781,7 @@
 
 
 /***/ },
-/* 329 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34867,15 +35792,15 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _lat_lng = __webpack_require__(326);
+	var _lat_lng = __webpack_require__(337);
 
 	var _lat_lng2 = _interopRequireDefault(_lat_lng);
 
-	var _pointGeometry = __webpack_require__(328);
+	var _pointGeometry = __webpack_require__(339);
 
 	var _pointGeometry2 = _interopRequireDefault(_pointGeometry);
 
-	var _wrap = __webpack_require__(327);
+	var _wrap = __webpack_require__(338);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35036,7 +35961,7 @@
 	exports.default = Transform;
 
 /***/ },
-/* 330 */
+/* 341 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -35058,7 +35983,7 @@
 	}
 
 /***/ },
-/* 331 */
+/* 342 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35096,7 +36021,7 @@
 	}
 
 /***/ },
-/* 332 */
+/* 343 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -35117,7 +36042,7 @@
 	}
 
 /***/ },
-/* 333 */
+/* 344 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -35137,7 +36062,7 @@
 	}
 
 /***/ },
-/* 334 */
+/* 345 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -35153,7 +36078,7 @@
 	exports.default = log2;
 
 /***/ },
-/* 335 */
+/* 346 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35178,7 +36103,7 @@
 	}
 
 /***/ },
-/* 336 */
+/* 347 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35356,7 +36281,7 @@
 	};
 
 /***/ },
-/* 337 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35366,7 +36291,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _shallowEqual = __webpack_require__(338);
+	var _shallowEqual = __webpack_require__(349);
 
 	var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
@@ -35377,7 +36302,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 338 */
+/* 349 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35413,454 +36338,6 @@
 	}
 
 	module.exports = exports['default'];
-
-/***/ },
-/* 339 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(340);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var UserDashboardComp = function (_React$Component) {
-	    _inherits(UserDashboardComp, _React$Component);
-
-	    function UserDashboardComp() {
-	        _classCallCheck(this, UserDashboardComp);
-
-	        return _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).apply(this, arguments));
-	    }
-
-	    _createClass(UserDashboardComp, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                'This is userdashboard comp!'
-	            );
-	        }
-	    }]);
-
-	    return UserDashboardComp;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = UserDashboardComp;
-
-/***/ },
-/* 340 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(341);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./UserDashboardComp.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 341 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 342 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _CitiesEstimateForm = __webpack_require__(343);
-
-	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
-
-	__webpack_require__(347);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var CityDetails = function (_React$Component) {
-	  _inherits(CityDetails, _React$Component);
-
-	  function CityDetails() {
-	    _classCallCheck(this, CityDetails);
-
-	    return _possibleConstructorReturn(this, (CityDetails.__proto__ || Object.getPrototypeOf(CityDetails)).apply(this, arguments));
-	  }
-
-	  _createClass(CityDetails, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'div',
-	          null,
-	          'This is city details!'
-	        ),
-	        _react2.default.createElement(_CitiesEstimateForm2.default, null)
-	      );
-	    }
-	  }]);
-
-	  return CityDetails;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = CityDetails;
-
-/***/ },
-/* 343 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactGeosuggestPlus = __webpack_require__(294);
-
-	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
-
-	var _estimateFormService = __webpack_require__(344);
-
-	__webpack_require__(345);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var pickupLatLng, destLatLng, lyftEstimate, lyftPlusEstimate;
-
-	var CitiesEstimateForm = function (_React$Component) {
-	  _inherits(CitiesEstimateForm, _React$Component);
-
-	  function CitiesEstimateForm(props) {
-	    _classCallCheck(this, CitiesEstimateForm);
-
-	    var _this = _possibleConstructorReturn(this, (CitiesEstimateForm.__proto__ || Object.getPrototypeOf(CitiesEstimateForm)).call(this, props));
-
-	    _this.state = {
-	      lyftEstimate: 0,
-	      lyftPlusEstimate: 0,
-	      showEstimate: 'estimate',
-	      estimateButton: 'button-getEstimate'
-	    };
-	    _this.getEstimate = _this.getEstimate.bind(_this);
-	    _this.resetForm = _this.resetForm.bind(_this);
-	    return _this;
-	  }
-
-	  _createClass(CitiesEstimateForm, [{
-	    key: 'onSuggestSelectPickup',
-	    value: function onSuggestSelectPickup(pickup) {
-	      pickupLatLng = [pickup.location.lat, pickup.location.lng];
-	    }
-	  }, {
-	    key: 'onSuggestSelectDest',
-	    value: function onSuggestSelectDest(dest) {
-	      destLatLng = [dest.location.lat, dest.location.lng];
-	    }
-	  }, {
-	    key: 'getEstimate',
-	    value: function getEstimate() {
-	      var _this2 = this;
-
-	      var estimates = (0, _estimateFormService.getLyftEstimate)(pickupLatLng[0], pickupLatLng[1], destLatLng[0], destLatLng[1]);
-	      estimates.then(function (res) {
-	        _this2.setState({
-	          lyftEstimate: res[1],
-	          lyftPlusEstimate: res[0],
-	          showEstimate: 'estimate active',
-	          estimateButton: 'button-getEstimate hide'
-	        });
-	      });
-	    }
-	  }, {
-	    key: 'resetForm',
-	    value: function resetForm() {
-	      console.log('reset');
-	      this.setState({
-	        lyftEstimate: 0,
-	        lyftPlusEstimate: 0,
-	        showEstimate: 'estimate',
-	        estimateButton: 'button-getEstimate'
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'test'
-	        ),
-	        _react2.default.createElement(
-	          'form',
-	          { className: 'estimateForm' },
-	          _react2.default.createElement(
-	            'fieldset',
-	            null,
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'pickup-input-container' },
-	              _react2.default.createElement('div', { className: 'pickup-icon' }),
-	              _react2.default.createElement(_reactGeosuggestPlus2.default, {
-	                className: 'pickup-input',
-	                placeholder: 'Add pickup location',
-	                onSuggestSelect: this.onSuggestSelectPickup,
-	                onChange: this.resetForm
-	              })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'pickup-destination-container' },
-	              _react2.default.createElement('div', { className: 'dest-icon' }),
-	              _react2.default.createElement(_reactGeosuggestPlus2.default, {
-	                className: 'dest-input',
-	                placeholder: 'Add destination',
-	                onSuggestSelect: this.onSuggestSelectDest,
-	                onChange: this.resetForm
-	              })
-	            ),
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: this.getEstimate, className: this.state.estimateButton },
-	              'Get Estimate'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: this.state.showEstimate },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'estimate-lyft' },
-	                _react2.default.createElement(
-	                  'span',
-	                  null,
-	                  '$',
-	                  this.state.lyftEstimate
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  'Lyft'
-	                )
-	              ),
-	              _react2.default.createElement('div', { className: 'divider' }),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'estimate-plus' },
-	                _react2.default.createElement(
-	                  'span',
-	                  null,
-	                  '$',
-	                  this.state.lyftPlusEstimate
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  'Plus'
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return CitiesEstimateForm;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = CitiesEstimateForm;
-
-/***/ },
-/* 344 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.getLyftEstimate = getLyftEstimate;
-
-	var _axios = __webpack_require__(253);
-
-	var _axios2 = _interopRequireDefault(_axios);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var lyftToken = {
-	  headers: { 'Authorization': 'Bearer "gAAAAABYFnw4eMlKCDPaBWTC1EiJvcWMTDRLtrceBEjtL4YNk543OaX-3h5uz0RwaTnJVdJ92YQETRbZcycKl0owl3SRD14CRAuE1okG06p6chAXksNmdHxgkOIIt4k1KLsN-Tn3R5LNGTBZIkQiPvDblg7HsLhwTDkpdFckFjBM1gMkgB1s6wq-gmtKNXOI0xBoxElKElclSoHmy1x-m94cZK2mCGXb_g=="'
-	  }
-	};
-
-	function getLyftEstimate(pickupLat, pickupLng, destLat, destLng) {
-	  return _axios2.default.get('https://api.lyft.com/v1/cost?start_lat=' + pickupLat.toString() + '&start_lng=' + pickupLng.toString() + '&end_lat=' + destLat.toString() + '&end_lng=' + destLng.toString(), lyftToken).then(function (res) {
-	    var lyftPlusPrice = Math.floor((res.data.cost_estimates[0].estimated_cost_cents_min + 400) / 100);
-	    var lyftPrice = Math.floor((res.data.cost_estimates[1].estimated_cost_cents_min + 400) / 100);
-	    return [lyftPlusPrice, lyftPrice];
-	  });
-	}
-
-/***/ },
-/* 345 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(346);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CitiesEstimateForm.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CitiesEstimateForm.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 346 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "*:focus {\n  outline: none;\n}\n.estimateForm {\n  background-color: #F3F3F5;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: .5rem;\n  border-color: #D8DCE6;\n  padding: 1.5rem;\n  box-sizing: inherit;\n  font-size: 1.8rem;\n  line-height: 1.3;\n}\n\n.estimateForm input {\n  display: block;\n  width: 100%;\n  color: #333447;\n  padding: .75rem 1.25rem;\n  font-size: 1.8rem;\n  line-height: 1.33333;\n  padding-left: 2.75rem;\n}\n\n.pickup-input-container .geosuggest__input {\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n.geosuggest-container span,\n.geosuggest-container button {\n  display: none;\n}\n\n.estimateForm .geosuggest__suggests {\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n  background: white;\n  padding-left: 26px;\n  margin-top: -1px;\n  border-top: 1px solid white;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n  right: 16px;\n  left: 16px;\n  z-index: 500;\n}\n.dest-input .geosuggest__suggests {\nmargin-top: -3px;\n}\n\n.pickup-icon {\n  background-repeat: no-repeat\n}\n\n.pickup-destination-container .geosuggest__input {\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n\n.button-getEstimate {\n  padding: .8125rem 1.25rem;\n  background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: -o-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: linear-gradient(to bottom right, #FF00BF, #B80B8C);\n  margin-top: 1rem;\n  border: none;\n  display: block;\n  width: 100%;\n  font-size: 1.8srem;\n  line-height: 1.33333;\n  border-radius: .5rem;\n  color: #fff;\n  font-weight: 400;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  user-select: none;\n}\n.button-getEstimate.hide {\n  display: none;\n}\n\n.estimate {\n  margin-top: 1.5rem;\n  margin-bottom: .5rem;\n  display: flex;\n  text-align: center!important;\n  font-size: 2.1rem;\n  font-weight: 100;\n  justify-content: center;\n  display: none;\n}\n\n.estimate.active {\n  display: flex;\n}\n\n.estimate-lyft {\n\n}\n\n.estimate-lyft div {\n  font-size: 1.7rem;\n}\n\n.estimateForm .divider {\n  border-color: #D8DCE6;\n  border-right-width: 1px;\n  border-right-style: solid;\n  margin: 0 15%;\n}\n\n.estimate-plus {\n\n}\n\n.estimate-plus div {\n  font-size: 1.7rem;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 347 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(348);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 348 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
 
 /***/ }
 /******/ ]);
