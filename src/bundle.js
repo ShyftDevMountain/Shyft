@@ -78,11 +78,11 @@
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(308);
+	var _UserDashboardComp = __webpack_require__(311);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(311);
+	var _CityDetails = __webpack_require__(314);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -120,7 +120,7 @@
 	          _react2.default.createElement(_reactRouter.Route, { path: "/cities", component: _CitiesComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/rides", component: _RidesComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/userdashboard", component: _UserDashboardComp2.default }),
-	          _react2.default.createElement(_reactRouter.Route, { path: "/cities/:id", component: _CityDetails2.default }),
+	          _react2.default.createElement(_reactRouter.Route, { path: "/cityDetails/:id", component: _CityDetails2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/login", component: _LoginComp2.default })
 	        )
 	      );
@@ -27683,7 +27683,6 @@
 	    }, {
 	        key: 'hideMenu',
 	        value: function hideMenu() {
-	            console.log('testing');
 	            this.setState({
 	                showMenu: 'sidemenu',
 	                showBackDrop: 'SideMenuBackDrop'
@@ -30564,7 +30563,7 @@
 
 
 	// module
-	exports.push([module.id, "@media (min-width: 768px){\n  .ridesInMinutes .col-md-4 {\n    width: 33.33333333%;\n  }\n}\n\n.ridesInMinutes {\n  font-size: 1.75rem;\n  margin-bottom: 6rem;\n  margin-top: 4rem;\n}\n\n.ridesInMinutes h4 h3 h2 h1 {\n  margin-bottom: 1rem;\n}\n\n.ridesInMinutes p {\n  margin-bottom: 2rem;\n  font-weight: 100;\n}\n\n.ridesInMinutes .row {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.ridesInMinutes img {\n  max-height: 60vh;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.intro {\n  margin-bottom: 4rem;\n}\n\n.intro h4 {\n  font-size: 2rem;\n  font-weight: bold;\n}\n\n.works h2 {\n  font-size: 3.3rem;\n  margin-bottom: 0rem;\n  font-weight: bold;\n}\n\n.works h3 {\n  font-size: 3rem;\n  font-weight: 100;\n  margin-bottom: 2rem;\n}\n\n.steps p {\n  height: 7rem;\n  margin-bottom: 4rem;\n}\n", ""]);
+	exports.push([module.id, "@media (min-width: 768px){\n  .ridesInMinutes .col-md-4 {\n    width: 33.33333333%;\n  }\n}\n\n.ridesInMinutes {\n  font-size: 1.75rem;\n  margin-bottom: 6rem;\n  margin-top: 4rem;\n}\n\n.ridesInMinutes h4 h3 h2 h1 {\n  margin-bottom: 1rem;\n}\n\n.ridesInMinutes p {\n  margin-bottom: 2rem;\n  font-weight: 100;\n}\n\n.ridesInMinutes .row {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.ridesInMinutes img {\n  max-height: 60vh;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.intro {\n  margin-bottom: 4rem;\n}\n\n.intro h4 {\n  font-size: 2rem;\n  font-weight: bold;\n}\n\n.works h2 {\n  font-size: 3.3rem;\n  margin-bottom: 3rem;\n  font-weight: bold;\n}\n\n.works h3 {\n  font-size: 3rem;\n  font-weight: 100;\n  margin-bottom: 2rem;\n}\n\n.steps p {\n  height: 7rem;\n  margin-bottom: 4rem;\n}\n", ""]);
 
 	// exports
 
@@ -30902,7 +30901,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -30930,68 +30929,104 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var CitiesJumbotron = function (_React$Component) {
-	    _inherits(CitiesJumbotron, _React$Component);
+	  _inherits(CitiesJumbotron, _React$Component);
 
-	    function CitiesJumbotron() {
-	        _classCallCheck(this, CitiesJumbotron);
+	  function CitiesJumbotron(props) {
+	    _classCallCheck(this, CitiesJumbotron);
 
-	        return _possibleConstructorReturn(this, (CitiesJumbotron.__proto__ || Object.getPrototypeOf(CitiesJumbotron)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (CitiesJumbotron.__proto__ || Object.getPrototypeOf(CitiesJumbotron)).call(this, props));
+
+	    _this.state = {
+	      citynotavailable: 'citynotavailable'
+	    };
+	    _this.onSuggestSelectCity = _this.onSuggestSelectCity.bind(_this);
+	    _this.removeCityNotAvaliable = _this.removeCityNotAvaliable.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(CitiesJumbotron, [{
+	    key: 'removeCityNotAvaliable',
+	    value: function removeCityNotAvaliable() {
+	      this.setState({
+	        citynotavailable: 'citynotavailable'
+	      });
 	    }
+	  }, {
+	    key: 'onSuggestSelectCity',
+	    value: function onSuggestSelectCity(city) {
+	      var _this2 = this;
 
-	    _createClass(CitiesJumbotron, [{
-	        key: 'handleInput',
-	        value: function handleInput() {}
-	    }, {
-	        key: 'onSuggestSelectCity',
-	        value: function onSuggestSelectCity(city) {
-	            var lat = city.location.lat;
-	            var lng = city.location.lng;
-	            var cityId = (0, _citiesListService.getCityZip)(lat, lng).then(function (res) {
-	                return (0, _citiesListService.postZip)(res);
-	            });
-	            console.log((0, _citiesListService.getCityZip)(lat, lng));
-	            console.log(cityId);
-	            return cityId.then(function (res) {
-	                return _reactRouter.hashHistory.push('/cities/' + res);
-	            });
+	      var lat = city.location.lat;
+	      var lng = city.location.lng;
+	      var cityId = (0, _citiesListService.getCityZip)(lat, lng).then(function (res) {
+	        return (0, _citiesListService.postZip)(res);
+	      });
+	      return cityId.then(function (res) {
+	        if (res === 'sorry') {
+	          _this2.setState({
+	            citynotavailable: 'citynotavailable active'
+	          });
+	        } else {
+	          return _reactRouter.hashHistory.push('/citydetails/' + res);
 	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'cities-jumbotron-container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cities-jumbotron-title' },
+	            'Cities We\'re In'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cities-jumbotron-input-container' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cities-magnify' },
+	              _react2.default.createElement(
+	                'i',
+	                { className: 'material-icons' },
+	                'search'
+	              )
+	            ),
+	            _react2.default.createElement(_reactGeosuggestPlus2.default, { placeholder: 'Find by city',
+	              onSuggestSelect: this.onSuggestSelectCity,
+	              onClick: this.removeCityNotAvaliable
+	            }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: this.state.citynotavailable, onClick: this.removeCityNotAvaliable },
+	              _react2.default.createElement(
+	                'p',
 	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'cities-jumbotron-container' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'cities-jumbotron-title' },
-	                        'Cities We\'re In'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'cities-jumbotron-input-container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'cities-magnify' },
-	                            _react2.default.createElement(
-	                                'i',
-	                                { className: 'material-icons' },
-	                                'search'
-	                            )
-	                        ),
-	                        _react2.default.createElement(_reactGeosuggestPlus2.default, { placeholder: 'Find by city',
-	                            onSuggestSelect: this.onSuggestSelectCity,
-	                            onActivateSuggest: this.changeRoute
-	                        })
-	                    )
-	                )
-	            );
-	        }
-	    }]);
+	                'Sorry, Lyft is not available in your city.'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Tell us why Lyft should come to your city!'
+	              ),
+	              _react2.default.createElement(
+	                'button',
+	                null,
+	                'Tweet'
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
 
-	    return CitiesJumbotron;
+	  return CitiesJumbotron;
 	}(_react2.default.Component);
 
 	;
@@ -31880,7 +31915,7 @@
 
 
 	// module
-	exports.push([module.id, ".cities-jumbotron-container .geosuggest-container {\n    width: 310px;\n    margin: 0 auto;\n    border-radius: 7px;\n    border: none;\n}\n\n.cities-jumbotron-container .geosuggest__input {\n    width: 310px;\n    color: #d8dce6;\n    font-style: italic;\n    font-weight: 300;\n    font-size: 1.75rem;\n    padding: 12px 0px 12px 40px;\n    border: 1px solid #d8dce6;\n    border-radius: 7px;\n}\n\n.cities-jumbotron-container .geosuggest__input::-webkit-input-placeholder{\n    color: #d8dce6;\n}\n\n.cities-jumbotron-container {\n    background-image: url('https://www.lyft.com/images/cities/cities-hero.1e733ed9.png');\n    background-size: cover;\n    height: 410px;\n    text-align: center;\n    background-position: top;\n    background-repeat: no-repeat;\n}\n\n.cities-jumbotron-title {\n    padding-top: 140px;\n    font-size: 4.5rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 4px black;\n    color: #F3F3F5;\n    margin-bottom: 5px;\n}\n\n.cities-jumbotron-input-container {\n    position: relative;\n    margin: 0 auto;\n    width: 310px;\n}\n\n.cities-jumbotron-input {\n    border-radius: 7px;\n    padding: 13px 0 13px 40px;\n    border: 1px solid #d8dce6;\n    width: 310px;\n}\n\n.cities-jumbotron-input::-webkit-input-placeholder {\n      color: #d8dce6;\n      font-style: italic;\n      font-weight: 300;\n      font-size: 1.75rem;\n  }\n\n.cities-jumbotron-input-container input,\n.cities-jumbotron-input-container input:focus {\n    color: #d8dce6;\n    outline: none;\n}\n\n.cities-magnify {\n    position: absolute;\n    top: 13px;\n    left: 13px;\n    color: #d8dce6;\n}\n\n.cities-jumbotron-input-container .geosuggest__suggests{\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: 7px;\n  border-bottom-left-radius: 7px;\n  background: white;\n  padding-left: 26px;\n  margin-top: -7px;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n  right: 0px;\n  left: 0px;\n  font-size: 1.75rem;\n  padding: 12px 0px 12px 40px;\n  border: 1px solid #d8dce6;\n  border-top: 1px solid white;\n  text-align: left;\n}\n", ""]);
+	exports.push([module.id, ".cities-jumbotron-container .geosuggest-container {\n    width: 310px;\n    margin: 0 auto;\n    border-radius: 7px;\n    border: none;\n}\n\n.cities-jumbotron-container .geosuggest__input {\n    width: 310px;\n    color: #d8dce6;\n    font-style: italic;\n    font-weight: 300;\n    font-size: 1.75rem;\n    padding: 12px 0px 12px 40px;\n    border: 1px solid #d8dce6;\n    border-radius: 7px;\n}\n\n.cities-jumbotron-container .geosuggest__input::-webkit-input-placeholder{\n    color: #d8dce6;\n}\n\n.cities-jumbotron-container {\n    background-image: url('https://www.lyft.com/images/cities/cities-hero.1e733ed9.png');\n    background-size: cover;\n    height: 60vh;\n    text-align: center;\n    background-position: top;\n    background-repeat: no-repeat;\n}\n\n.cities-jumbotron-title {\n    padding-top: 180px;\n    font-size: 4.5rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 4px black;\n    color: #F3F3F5;\n    margin-bottom: 5px;\n}\n\n.cities-jumbotron-input-container {\n    position: relative;\n    margin: 0 auto;\n    width: 310px;\n}\n\n.cities-jumbotron-input {\n    border-radius: 7px;\n    padding: 13px 0 13px 40px;\n    border: 1px solid #d8dce6;\n    width: 310px;\n}\n\n.cities-jumbotron-input::-webkit-input-placeholder {\n      color: #d8dce6;\n      font-style: italic;\n      font-weight: 300;\n      font-size: 1.75rem;\n  }\n\n.cities-jumbotron-input-container input,\n.cities-jumbotron-input-container input:focus {\n    color: #d8dce6;\n    outline: none;\n}\n\n.cities-magnify {\n    position: absolute;\n    top: 13px;\n    left: 13px;\n    color: #d8dce6;\n}\n\n.cities-jumbotron-input-container .geosuggest__suggests{\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: 7px;\n  border-bottom-left-radius: 7px;\n  background: white;\n  padding-left: 26px;\n  margin-top: -7px;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n  right: 0px;\n  left: 0px;\n  font-size: 1.75rem;\n  padding: 12px 0px 12px 40px;\n  border: 1px solid #d8dce6;\n  border-top: 1px solid white;\n  text-align: left;\n}\n\n.citynotavailable {\n  padding-top: 10px;\n  background:#fff;\n  display: flex;\n  flex-direction: column;\n  -ms-align-items: center;\n  align-items: center;\n  padding-left: 15px;\n  padding-right: 15px;\n  border-bottom-right-radius: 7px;\n  border-bottom-left-radius: 7px;\n  margin-top: -4px;\n  z-index: 50;\n  display: none;\n}\n\n.citynotavailable.active {\n  display: block;\n}\n\n.citynotavailable p {\n  margin-top: 10px;\n  font-weight: 100;\n}\n\n.citynotavailable p:nth-child(1) {\n  font-weight: 600;\n}\n\n.citynotavailable button {\n  width: 60px;\n  margin-bottom: 15px;\n  color: #fff;\n  background-color: #2AACE3;\n  border-color: #2AACE3;\n  border-radius: .25rem;\n  padding: .25rem .75rem;\n  font-size: 1.4rem;\n  line-height: 1.5;\n  border: .08333rem solid transparent;\n}\n", ""]);
 
 	// exports
 
@@ -32075,7 +32110,7 @@
 	            'div',
 	            { className: 'cities-div' },
 	            test.map(function (val3, i) {
-	              var url = '/citydetails/';
+	              var url = '/#/citydetails/';
 	              return _react2.default.createElement(
 	                'p',
 	                { key: val3.id },
@@ -32151,7 +32186,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n.cities-list-comp h2 {\n  margin-top:25px;\n  margin-bottom:25px;\n  text-align: center;\n}\n\n.state-name {\n  font-size: 19px;\n}\n\n.cities-div {\n  padding-top:10px;\n}\n\n\n.city-list {\n  display:flex;\n  justify-content: center;\n  margin:0 50px;\n}\n\n.city-links {\n  column-count:1;\n  text-align: center;\n  margin-bottom:10px;\n  }\n\n\n.city-links li {\n  list-style-type: none;\n}\n\n\n\n\n.city-links a {\n  color:#FF00BF;\n  text-decoration: none;\n  font-size: 16px;\n}\n\n.city-links a:hover {\n  color:#b30086;\n  text-decoration: underline;\n}\n\n\n\n@media(min-width: 544px) {\n  .city-links {\n    column-count:2;\n    text-align: left;\n  }\n\n\n  }\n\n\n@media (min-width: 768px) {\n  .city-links {\n    column-count: 3;\n    text-align:left;\n  }\n\n\n\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n.cities-list-comp h2 {\n  margin-top: 60px;\n  margin-bottom: 40px;\n  text-align: center;\n}\n\n.state-name {\n  font-size: 19px;\n  margin-bottom: 20px;\n  margin-top: 46px;\n  font-weight: 300;\n}\n\n.state-name:nth-child(1) {\n  margin-top: 0px;\n}\n\n.state-name:nth-child(25) {\n  margin-top: 149px;\n}\n\n.cities-div {\n  padding-top:10px;\n}\n\n\n.city-list {\n  display:flex;\n  justify-content: center;\n  margin:0 50px;\n}\n\n.city-links {\n  column-count:1;\n  text-align: center;\n  margin-bottom:10px;\n  }\n\n\n.city-links li {\n  list-style-type: none;\n}\n\n\n\n\n.city-links a {\n  color:#FF00BF;\n  text-decoration: none;\n  font-size: 1.75rem;\n  font-weight: 100;\n}\n\n\n.city-links a:hover {\n  color:#b30086;\n  text-decoration: underline;\n}\n\n\n\n@media(min-width: 544px) {\n  .city-links {\n    column-count:2;\n    text-align: left;\n  }\n}\n\n\n@media (min-width: 768px) {\n  .city-links {\n    column-count: 3;\n    text-align:left;\n    padding-left: 15rem;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -32172,7 +32207,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(306);
+	var _RequestRide = __webpack_require__(306);
+
+	var _RequestRide2 = _interopRequireDefault(_RequestRide);
+
+	__webpack_require__(309);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32197,7 +32236,8 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                'This is the rides comp!'
+	                'This is the rides comp!',
+	                _react2.default.createElement(_RequestRide2.default, null)
 	            );
 	        }
 	    }]);
@@ -32213,10 +32253,101 @@
 /* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(307);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var RequestRide = function (_React$Component) {
+	  _inherits(RequestRide, _React$Component);
+
+	  function RequestRide(props) {
+	    _classCallCheck(this, RequestRide);
+
+	    return _possibleConstructorReturn(this, (RequestRide.__proto__ || Object.getPrototypeOf(RequestRide)).call(this, props));
+	  }
+
+	  _createClass(RequestRide, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'Request Ride'
+	      );
+	    }
+	  }]);
+
+	  return RequestRide;
+	}(_react2.default.Component);
+
+	exports.default = RequestRide;
+
+/***/ },
+/* 307 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(307);
+	var content = __webpack_require__(308);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RequestRide.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RequestRide.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 308 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 309 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(310);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32236,7 +32367,7 @@
 	}
 
 /***/ },
-/* 307 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32250,7 +32381,7 @@
 
 
 /***/ },
-/* 308 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32265,7 +32396,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(309);
+	var _reactDom = __webpack_require__(34);
+
+	var _EditInfoModal = __webpack_require__(322);
+
+	var _EditInfoModal2 = _interopRequireDefault(_EditInfoModal);
+
+	__webpack_require__(312);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32423,13 +32560,14 @@
 	                                null,
 	                                _react2.default.createElement(
 	                                    'button',
-	                                    { className: 'userdash-request-btn btn btn-primary' },
-	                                    'Request Ride'
+	                                    { className: 'userdash-updateinfo-btn btn btn-primary' },
+	                                    'Update Info'
 	                                )
 	                            )
 	                        )
 	                    )
-	                )
+	                ),
+	                _react2.default.createElement(_EditInfoModal2.default, null)
 	            );
 	        }
 	    }]);
@@ -32442,13 +32580,13 @@
 	exports.default = UserDashboardComp;
 
 /***/ },
-/* 309 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(310);
+	var content = __webpack_require__(313);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32468,7 +32606,7 @@
 	}
 
 /***/ },
-/* 310 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32476,13 +32614,13 @@
 
 
 	// module
-	exports.push([module.id, "\n.userdash-icons {\n    font-size: 26px;\n    margin-right: 10px;\n}\n\n.userdash-icons-title {\n    font-size: 3rem;\n    margin-right: 10px;\n}\n\n.userdash-icons-google {\n    font-size: 36px;\n    margin-right: 10px;\n}\n\n.userdash-logo-main {\n    width: 60px;\n    margin-bottom: 10px;\n}\n\n.userdash-sideanduser-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.userdash-sidebar-container {\n    width: 100%;\n    /*height: 40rem;*/\n    background: #ff00bf;\n    padding: 70px 0 50px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.userdash-sidebar-innerbox {\n    width: 160px;\n    margin: 0 auto;\n}\n\n.userdash-user-pic-container {\n    margin: 15px 0 25px;\n    /* border: 1px solid #ff00bf; */\n    box-shadow: 1px 1px 5px gray;\n    background: white;\n    padding: 10px;\n    text-align: center;\n    width: 160px;\n    border-radius: 7px;\n}\n\n.userdash-user-pic-container img {\n    width: 140px;\n    border-radius: 7px;\n}\n\n.userdash-welcome {\n    color: #f3f3f5;\n}\n\n.userdash-sidebar-item-container {\n    padding: 5px 3px;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    margin-top: 5px;\n}\n\n.userdash-sidebar-item {\n    display: flex;\n    align-items: center;\n    padding: 2px 5px;\n}\n\n.userdash-sidebar-item a {\n    color: #333;\n}\n\n.userdash-sidebar-item a:hover {\n    color: #ff00bf;\n}\n\n.userdash-user-container {\n    width: 100%;\n    padding: 50px 0;\n    border: 1px solid #f2f2f2;\n}\n\n.userdash-user-innerbox {\n    width: 80%;\n    margin: 0 auto;\n}\n\n.userdash-user-title {\n    font-size: 3rem;\n    margin-bottom: 30px;\n    transition: all .2s ease;\n}\n\n.userdash-user-infobox {\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-icon-box {\n    width: 35px;\n}\n\n.userdash-user-info {\n    padding: 10px 10px;\n    width: 100%;\n    border: 1px solid #f2f2f2;\n    background-color: white;\n    border-radius: 7px;\n    color: #333;\n}\n\n.userdash-user-ridesrequest-box {\n    display: flex;\n    flex-direction: column;\n    align-items: initial;\n    margin: 50px 0;\n}\n\n.userdash-user-rides {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-ridenumber {\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    padding: 10px;\n    width: 100%;\n}\n\n.userdash-user-comments textarea {\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    font-style: italic;\n    font-weight: 100;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    width: 100%;\n}\n\n.userdash-user-comments {\n    width: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.userdash-request-btn {\n    width: 100%;\n    padding: 12px;\n    font-size: 1.75rem;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n.userdash-request-btn:hover {\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n@media (min-width:768px){\n\n    .userdash-icons-title {\n        font-size: 4rem;\n    }\n\n    .userdash-sideanduser-container {\n        display: flex;\n        flex-direction: row;\n    }\n\n    .userdash-sidebar-container {\n        width: 50%;\n        padding-left: 0px;\n        padding-top: 150px;\n    }\n\n    .userdash-user-container {\n        width: 100%;\n        padding-top: 100px;\n    }\n\n    .userdash-user-title {\n        font-size: 4rem;\n    }\n\n    .userdash-request-btn {\n        width: 180px;\n    }\n\n    .userdash-user-ridesrequest-box {\n        display: flex;\n        flex-direction: row;\n        align-items: center;\n    }\n\n    .userdash-user-comments textarea {\n        width: 90%;\n    }\n\n    .userdash-user-comments {\n        width: 50%;\n    }\n\n    .userdash-ridenumber {\n        width: 70%;\n        text-align: center;\n    }\n\n    .userdash-user-rides {\n        width: 50%;\n        margin-bottom: 0px;\n    }\n\n}\n\n@media (min-width:992px) {\n    .userdash-sidebar-container {\n        width: 45%;\n    }\n}\n", ""]);
+	exports.push([module.id, "\n.userdash-icons {\n    font-size: 26px;\n    margin-right: 10px;\n}\n\n.userdash-icons-title {\n    font-size: 3rem;\n    margin-right: 10px;\n}\n\n.userdash-icons-google {\n    font-size: 36px;\n    margin-right: 10px;\n}\n\n.userdash-logo-main {\n    width: 60px;\n    margin-bottom: 10px;\n}\n\n.userdash-sideanduser-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.userdash-sidebar-container {\n    width: 100%;\n    /*height: 40rem;*/\n    background: #ff00bf;\n    padding: 70px 0 50px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.userdash-sidebar-innerbox {\n    width: 160px;\n    margin: 0 auto;\n}\n\n.userdash-user-pic-container {\n    margin: 15px 0 25px;\n    /* border: 1px solid #ff00bf; */\n    box-shadow: 1px 1px 5px gray;\n    background: white;\n    padding: 10px;\n    text-align: center;\n    width: 160px;\n    border-radius: 7px;\n}\n\n.userdash-user-pic-container img {\n    width: 140px;\n    border-radius: 7px;\n}\n\n.userdash-welcome {\n    color: #f3f3f5;\n}\n\n.userdash-sidebar-item-container {\n    padding: 5px 3px;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    margin-top: 5px;\n}\n\n.userdash-sidebar-item {\n    display: flex;\n    align-items: center;\n    padding: 2px 5px;\n}\n\n.userdash-sidebar-item a {\n    color: #333;\n}\n\n.userdash-sidebar-item a:hover {\n    color: #ff00bf;\n}\n\n.userdash-user-container {\n    width: 100%;\n    padding: 50px 0;\n    border: 1px solid #f2f2f2;\n}\n\n.userdash-user-innerbox {\n    width: 80%;\n    margin: 0 auto;\n}\n\n.userdash-user-title {\n    font-size: 3rem;\n    margin-bottom: 30px;\n    transition: all .2s ease;\n}\n\n.userdash-user-infobox {\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-icon-box {\n    width: 35px;\n}\n\n.userdash-user-info {\n    padding: 10px 10px;\n    width: 100%;\n    border: 1px solid #f2f2f2;\n    background-color: white;\n    border-radius: 7px;\n    color: #333;\n}\n\n.userdash-user-ridesrequest-box {\n    display: flex;\n    flex-direction: column;\n    align-items: initial;\n    margin: 50px 0;\n}\n\n.userdash-user-rides {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-ridenumber {\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    padding: 10px;\n    width: 100%;\n}\n\n.userdash-user-comments textarea {\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    font-style: italic;\n    font-weight: 100;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    width: 100%;\n}\n\n.userdash-user-comments {\n    width: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.userdash-updateinfo-btn {\n    width: 100%;\n    padding: 12px;\n    font-size: 1.75rem;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n.userdash-updateinfo-btn:hover,\n.userdash-updateinfo-btn:focus,\n.userdash-updateinfo-btn:active {\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n    outline: none;\n}\n\n@media (min-width:768px){\n\n    .userdash-icons-title {\n        font-size: 4rem;\n    }\n\n    .userdash-sideanduser-container {\n        display: flex;\n        flex-direction: row;\n    }\n\n    .userdash-sidebar-container {\n        width: 50%;\n        padding-left: 0px;\n        padding-top: 150px;\n    }\n\n    .userdash-user-container {\n        width: 100%;\n        padding-top: 100px;\n    }\n\n    .userdash-user-title {\n        font-size: 4rem;\n    }\n\n    /*.userdash-request-btn {\n        width: 180px;\n    }*/\n\n    .userdash-user-ridesrequest-box {\n        display: flex;\n        flex-direction: row;\n        align-items: center;\n    }\n\n    .userdash-user-comments textarea {\n        width: 90%;\n    }\n\n    .userdash-user-comments {\n        width: 50%;\n    }\n\n    .userdash-ridenumber {\n        width: 70%;\n        text-align: center;\n    }\n\n    .userdash-user-rides {\n        width: 50%;\n        margin-bottom: 0px;\n    }\n\n}\n\n@media (min-width:992px) {\n    .userdash-sidebar-container {\n        width: 45%;\n    }\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 311 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32497,13 +32635,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(172);
+	var _cityDetailsService = __webpack_require__(315);
 
-	var _CitiesEstimateForm = __webpack_require__(312);
+	var _CityBottomBanner = __webpack_require__(299);
+
+	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
+
+	var _CitiesEstimateForm = __webpack_require__(316);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	__webpack_require__(316);
+	__webpack_require__(320);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32516,24 +32658,318 @@
 	var CityDetails = function (_React$Component) {
 	  _inherits(CityDetails, _React$Component);
 
-	  function CityDetails() {
+	  function CityDetails(props) {
 	    _classCallCheck(this, CityDetails);
 
-	    return _possibleConstructorReturn(this, (CityDetails.__proto__ || Object.getPrototypeOf(CityDetails)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (CityDetails.__proto__ || Object.getPrototypeOf(CityDetails)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
 	  }
 
 	  _createClass(CityDetails, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      var _this2 = this;
+
+	      (0, _cityDetailsService.getOneCity)(this.props.params.id).then(function (res) {
+	        res = res[0];
+	        _this2.setState({
+	          city: res.city,
+	          state: res.state,
+	          img: res.img,
+	          map_img: res.map_img
+	        });
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+
+	      var backgroundImg = {
+	        backgroundImage: 'url("' + this.state.img + '")'
+	      };
+
+	      var cityMap = {
+	        backgroundImage: 'url("' + this.state.map_img + '")'
+	      };
+
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'cityDetails' },
 	        _react2.default.createElement(
 	          'div',
-	          null,
-	          'This is city details!'
+	          { className: 'cityDetails-jumbotron-container', style: backgroundImg },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12 align-center jumbo-wrap' },
+	            _react2.default.createElement(
+	              'h1',
+	              { className: 'cityDetails-jumbotron-title' },
+	              this.state.city,
+	              ' Area'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'btn btn-primary MainJumbotron-btn' },
+	              'Sign Up Now'
+	            )
+	          )
 	        ),
-	        _react2.default.createElement(_CitiesEstimateForm2.default, null)
+	        _react2.default.createElement(
+	          'section',
+	          { className: 'cityDetails-howShyftWorks' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'howitworksDescrip' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'How Lyft Works'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Wherever you\'re headed in the ',
+	              this.state.city,
+	              ' Area, count on Lyft for rides in minutes. The Lyft app matches you with friendly local drivers at the tap of a button. Just request and go. After the ride, simply pay through your phone.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'howitworkstable' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-lg-10 col-sm-12 col-xs-8' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'icons-wrap' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-sm-4' },
+	                  _react2.default.createElement('img', { className: 'clock-icon', src: '/img/cities/clock-icon.svg' }),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Lyft is available 24 hours a day, 7 days a week.'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-sm-4' },
+	                  _react2.default.createElement('img', { className: 'dollar-icon', src: '/img/cities/dollar-icon.svg' }),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Choose Lyft and get the most affordable ride in town.'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-sm-4' },
+	                  _react2.default.createElement('img', { className: 'people-icon', src: '/img/cities/people-icon.svg' }),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'From florists to firefighters, meet awesome drivers.'
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement('div', { className: 'cityDetailsMap', style: cityMap }),
+	        _react2.default.createElement(
+	          'section',
+	          { className: 'cityDetailsEstimate' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetailsEstimate-Wrap' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'estimate-description' },
+	              _react2.default.createElement(
+	                'h2',
+	                null,
+	                'Estimate Trip Cost'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Where to? Enter a pickup and drop-off location to estimate the price of your trip. Pro-tip: Your ride doesn\u2019t just have to be from A to B. With Lyft and Lyft Plus, you can make multiple stops per ride.'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'estimateform-wrap' },
+	              _react2.default.createElement(_CitiesEstimateForm2.default, null)
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'section',
+	          { className: 'cityDetails-TwoWays' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-TwoWaysWrap' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Two Ways to Ride'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-carWrapper' },
+	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/lyftcar.png' })
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Lyft is your personal ride. Whether you\'re traveling solo or with up to three friends, this sedan is yours to fill.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-pricesWrapper' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-prices' },
+	              _react2.default.createElement(
+	                'section',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'priceChart' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-btnwrapper' },
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn active' },
+	                      'Lyft'
+	                    ),
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn' },
+	                      'Plus'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-pricing' },
+	                    _react2.default.createElement(
+	                      'table',
+	                      { className: 'pricingTable' },
+	                      _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Base Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.60'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Mile'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.30'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Minute'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$0.14'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Maximum Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$4.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Scheduled Ride Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Service Fee'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.00'
+	                          )
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(_CityBottomBanner2.default, null)
 	      );
 	    }
 	  }]);
@@ -32546,7 +32982,30 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 312 */
+/* 315 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getOneCity = getOneCity;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getOneCity(cityId) {
+	  return _axios2.default.get('/cityDetails/' + cityId.toString()).then(function (res) {
+	    return res.data;
+	  });
+	}
+
+/***/ },
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32565,9 +33024,9 @@
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _estimateFormService = __webpack_require__(313);
+	var _estimateFormService = __webpack_require__(317);
 
-	__webpack_require__(314);
+	__webpack_require__(318);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32614,6 +33073,7 @@
 	      var _this2 = this;
 
 	      var estimates = (0, _estimateFormService.getLyftEstimate)(pickupLatLng[0], pickupLatLng[1], destLatLng[0], destLatLng[1]);
+	      console.log(pickupLatLng, destLatLng);
 	      estimates.then(function (res) {
 	        _this2.setState({
 	          lyftEstimate: res[1],
@@ -32626,7 +33086,6 @@
 	  }, {
 	    key: 'resetForm',
 	    value: function resetForm() {
-	      console.log('reset');
 	      this.setState({
 	        lyftEstimate: 0,
 	        lyftPlusEstimate: 0,
@@ -32640,11 +33099,6 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'test'
-	        ),
 	        _react2.default.createElement(
 	          'form',
 	          { className: 'estimateForm' },
@@ -32675,7 +33129,7 @@
 	            ),
 	            _react2.default.createElement(
 	              'button',
-	              { onClick: this.getEstimate, className: this.state.estimateButton },
+	              { onClick: this.getEstimate, type: 'button', className: this.state.estimateButton },
 	              'Get Estimate'
 	            ),
 	            _react2.default.createElement(
@@ -32727,7 +33181,7 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 313 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32744,7 +33198,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var lyftToken = {
-	  headers: { 'Authorization': 'Bearer "gAAAAABYFnw4eMlKCDPaBWTC1EiJvcWMTDRLtrceBEjtL4YNk543OaX-3h5uz0RwaTnJVdJ92YQETRbZcycKl0owl3SRD14CRAuE1okG06p6chAXksNmdHxgkOIIt4k1KLsN-Tn3R5LNGTBZIkQiPvDblg7HsLhwTDkpdFckFjBM1gMkgB1s6wq-gmtKNXOI0xBoxElKElclSoHmy1x-m94cZK2mCGXb_g=="'
+	  headers: { 'Authorization': 'Bearer "gAAAAABYGNhPJJQHxYMYhr029HqohlQ1rKwvu5cUe8E3kKkHIOvP5l9TxSiMaCtKakuw3pKfCiKFEI0gOZbwp43HytMCFi3m7G4yVv7DASmjQLU_V--AnBNK4fSXNYBtL_8yKx4NLBoErsYMP7sCB1n7eVSamU5VBswoBIAglZ9wei5V38cf55KUaP0YMGCnyrKy4J0x8jHMhCaAQt8kDdfI9GY7bzffxg=="'
 	  }
 	};
 
@@ -32757,13 +33211,13 @@
 	}
 
 /***/ },
-/* 314 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(315);
+	var content = __webpack_require__(319);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32783,7 +33237,7 @@
 	}
 
 /***/ },
-/* 315 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32791,19 +33245,19 @@
 
 
 	// module
-	exports.push([module.id, "*:focus {\n  outline: none;\n}\n.estimateForm {\n  background-color: #F3F3F5;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: .5rem;\n  border-color: #D8DCE6;\n  padding: 1.5rem;\n  box-sizing: inherit;\n  font-size: 1.8rem;\n  line-height: 1.3;\n}\n\n.estimateForm input {\n  display: block;\n  width: 100%;\n  color: #333447;\n  padding: .75rem 1.25rem;\n  font-size: 1.8rem;\n  line-height: 1.33333;\n  padding-left: 2.75rem;\n}\n\n.pickup-input-container .geosuggest__input {\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n.geosuggest-container span,\n.geosuggest-container button {\n  display: none;\n}\n\n.estimateForm .geosuggest__suggests {\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n  background: white;\n  padding-left: 26px;\n  margin-top: -1px;\n  border-top: 1px solid white;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n  right: 16px;\n  left: 16px;\n  z-index: 500;\n}\n.dest-input .geosuggest__suggests {\nmargin-top: -3px;\n}\n\n.pickup-icon {\n  background-repeat: no-repeat\n}\n\n.pickup-destination-container .geosuggest__input {\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n\n.button-getEstimate {\n  padding: .8125rem 1.25rem;\n  background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: -o-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: linear-gradient(to bottom right, #FF00BF, #B80B8C);\n  margin-top: 1rem;\n  border: none;\n  display: block;\n  width: 100%;\n  font-size: 1.8srem;\n  line-height: 1.33333;\n  border-radius: .5rem;\n  color: #fff;\n  font-weight: 400;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  user-select: none;\n}\n.button-getEstimate.hide {\n  display: none;\n}\n\n.estimate {\n  margin-top: 1.5rem;\n  margin-bottom: .5rem;\n  display: flex;\n  text-align: center!important;\n  font-size: 2.1rem;\n  font-weight: 100;\n  justify-content: center;\n  display: none;\n}\n\n.estimate.active {\n  display: flex;\n}\n\n.estimate-lyft {\n\n}\n\n.estimate-lyft div {\n  font-size: 1.7rem;\n}\n\n.estimateForm .divider {\n  border-color: #D8DCE6;\n  border-right-width: 1px;\n  border-right-style: solid;\n  margin: 0 15%;\n}\n\n.estimate-plus {\n\n}\n\n.estimate-plus div {\n  font-size: 1.7rem;\n}\n", ""]);
+	exports.push([module.id, "*:focus {\n  outline: none;\n}\n.estimateForm {\n  background-color: #F3F3F5;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: .5rem;\n  border-color: #D8DCE6;\n  padding: 2.4rem;\n  box-sizing: inherit;\n  font-size: 1.8rem;\n  line-height: 1.3;\n}\n\n.estimateForm input {\n  display: block;\n  width: 100%;\n  color: #333447;\n  padding: .75rem 1.25rem;\n  font-size: 1.8rem;\n  line-height: 1.33333;\n  padding-left: 2.75rem;\n}\n\n.pickup-input-container .geosuggest__input {\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  /*border: .08333rem solid #E60000;*/\n  border: .08333rem solid #ccc;\n}\n.geosuggest-container span,\n.geosuggest-container button {\n  display: none;\n}\n\n.estimateForm .geosuggest__suggests {\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  /*border: .08333rem solid #E60000;*/\n  border: .08333rem solid #ccc;\n  background: white;\n  padding-left: 26px;\n  margin-top: -1px;\n  border-top: 1px solid white;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n  z-index: 500;\n}\n.dest-input .geosuggest__suggests {\nmargin-top: -3px;\n}\n\n.pickup-icon {\n  background-repeat: no-repeat\n}\n\n.pickup-destination-container .geosuggest__input {\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  /*border: .08333rem solid #E60000;*/\n  border: .08333rem solid #ccc;\n}\n\n.button-getEstimate {\n  padding: 1.2rem;\n  background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: -o-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: linear-gradient(to bottom right, #FF00BF, #B80B8C);\n  margin-top: 1.7rem;\n  border: none;\n  display: block;\n  width: 100%;\n  font-size: 1.8rem;\n  line-height: 1.33333;\n  border-radius: .5rem;\n  color: #fff;\n  font-weight: 400;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  user-select: none;\n}\n.button-getEstimate.hide {\n  display: none;\n}\n\n.estimate {\n  margin-top: 1.5rem;\n  margin-bottom: .5rem;\n  display: flex;\n  text-align: center!important;\n  font-size: 2.1rem;\n  font-weight: 100;\n  justify-content: center;\n  display: none;\n}\n\n.estimate.active {\n  display: flex;\n}\n\n.estimate-lyft {\n\n}\n\n.estimate-lyft div {\n  font-size: 1.7rem;\n}\n\n.estimateForm .divider {\n  border-color: #D8DCE6;\n  border-right-width: 1px;\n  border-right-style: solid;\n  margin: 0 15%;\n}\n\n.estimate-plus {\n\n}\n\n.estimate-plus div {\n  font-size: 1.7rem;\n}\n\n.estimateForm .geosuggest-suggestions {\n  position: relative;\n  margin-left: 15px;\n  margin-right: 15px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 316 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(317);
+	var content = __webpack_require__(321);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32823,7 +33277,7 @@
 	}
 
 /***/ },
-/* 317 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32831,7 +33285,132 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".cityDetails-jumbotron-container {\n  background-size: cover;\n  height: 60vh;\n  text-align: center;\n  background-position: center;\n  background-repeat: no-repeat;\n  display: flex;\n}\n\n.cityDetails-jumbotron-title {\n  color: #F3F3F5;\n  font-size: 3.1rem;\n  margin-bottom: 20px;\n  font-weight: bolder;\n}\n\n.cityDetails-jumbotron-container .MainJumbotron-btn {\n  width: 110px;\n  font-weight: 400;\n  font-size: 1.4rem;\n}\n\n\n.jumbo-wrap {\n  -ms-align-self: center;\n  align-self: center;\n}\n\n.icons-wrap div {\n  margin-bottom: 25px;\n}\n\n.icons-wrap img {\n  margin-bottom: 10px;\n  height: 5.5rem;\n  width: 5.5rem;\n}\n\n.cityDetails-howShyftWorks {\n  margin-bottom: 4rem;\n  margin-top: 4rem;\n  max-width: 45rem;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.howitworksDescrip {\n  margin-bottom: 6rem;\n  width: 70%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.howitworkstable {\n  justify-content: center;\n  display: flex;\n  margin-top: 1rem;\n}\n\n.cityDetails-howShyftWorks h2 {\n  padding-bottom: 20px;\n  font-size: 3rem;\n  padding-top: 28px;\n}\n\n.cityDetails-howShyftWorks p {\n  font-size: 1.8rem;\n  font-weight: 100;\n  line-height: 3rem;\n}\n\n.clock-icon {\n  background-repeat: no-repeat;\n}\n.cityDetailsMap {\n  background-size: cover;\n  height: 450px;\n  background-position: center;\n  margin-bottom: 20px;\n}\n.cityDetailsEstimate {\n  max-width: 34rem;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetailsEstimate-Wrap {\n  display: flex;\n  padding-bottom: 8rem;\n  padding-top: 5rem;\n  border-color: #D8DCE6;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n}\n\n.estimateform-wrap {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n\n.estimate-description {\n  line-height: 1.8;\n  font-size: 1.8rem;\n  font-weight: 100;\n  padding-top: 10px;\n  text-align: center;\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.estimate-description h2 {\n  margin-bottom: 2rem;\n  font-size: 3rem;\n}\n\n\n.cityDetails-TwoWays {\n  margin-bottom: -12rem;\n  text-align: center!important;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetails-TwoWaysWrap {\n  width: 70%\n}\n\n.cityDetails-TwoWays div:nth-child(1) {\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.cityDetails-TwoWays h2 {\n  margin-top: 4rem;\n  font-size: 3rem;\n}\n\n.cityDetails-TwoWays p {\n  font-size: 1.7rem;\n  line-height: 1.5;\n  font-weight: 100;\n}\n\n.cityDetails-carWrapper {\n  background-position: center;\n  background-size: contain;\n  background-repeat: no-repeat;\n  margin-bottom: 1.5rem;\n  padding: 4rem;\n  max-width: 100%;\n  text-align: center!important;\n}\n\n.cityDetails-carWrapper img {\n  width: 580px;\n  max-width: 100%;\n  vertical-align: middle;\n}\n\n.cityDetails-pricesWrapper {\n  -webkit-box-pack: center;\n  justify-content: center;\n  display: flex;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n  text-align: center;\n  margin-top: 4rem;\n\n}\n\n.cityDetails-prices {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n}\n\n.priceChart-btnwrapper {\n  border-color: #D8DCE6;\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border-width: 1px;\n  border-style: solid;\n  background-color: #F3F3F5;\n  display: flex;\n  text-align: center!important;\n  line-height: 2;\n}\n\n.priceChart-pricing {\n  border-color: #D8DCE6;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  margin-top: -1px;\n  border: 1px solid #D8DCE6;\n  line-height: 2;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  padding-right: 1.5rem;\n  padding-left: 1.5rem;\n  font-size: 1.7rem;\n  font-weight: 100;\n}\n\n.pricingTable {\n  width: 100%;\n  background-color: transparent;\n}\n\ntr td {\n  text-align: left;\n}\n\n\n.pricechart-btn {\n  border-color: #D8DCE6;\n  font-size: 1.9rem;\n  background-color: transparent;\n  display: block;\n  width: 100%;\n  font-weight: 200;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  border: .08333rem solid transparent;\n  padding: .75rem 1.25rem;\n  line-height: 1.5;\n  border-radius: .5rem;\n}\n\n.pricechart-btn.active {\n  color: #FF00BF!important;\n  background: #fff;\n}\n\n@media (min-width: 768px) {\n  .cityDetails-jumbotron-title {\n    font-size: 4.3rem;\n  }\n\n  .cityDetails-jumbotron-container .MainJumbotron-btn {\n    width: 160px;\n    font-weight: 600;\n    font-size: 1.8rem;\n  }\n\n  .cityDetails-howShyftWorks {\n    max-width: 85rem;\n  }\n\n  .icons-wrap img {\n    height: 6.5rem;\n    width: 6.5rem;\n  }\n\n  .cityDetails-howShyftWorks h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-howShyftWorks p {\n    font-size: 2.2rem;\n    line-height: 3.8rem;\n  }\n\n  .cityDetailsEstimate {\n    max-width: 92rem;\n  }\n\n  .estimate-description {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    text-align: left;\n    font-size: 2rem;\n  }\n\n  .estimateform-wrap {\n    -webkit-box-flex: 0;\n    flex: 0 0 41.66667%;\n    margin-left: 8.33333%;\n  }\n\n  .cityDetails-TwoWays {\n    max-width: 92vh;\n  }\n\n  .estimate-description h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-TwoWays h2 {\n    margin-top: 5rem;\n    font-size: 3.5rem;\n  }\n\n  .cityDetails-TwoWays p {\n    font-size: 1.9rem;\n    line-height: 1.8;\n  }\n\n  .cityDetails-prices {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    line-height: 2;\n  }\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 322 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(325);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var EditInfoModal = function (_React$Component) {
+	    _inherits(EditInfoModal, _React$Component);
+
+	    function EditInfoModal() {
+	        _classCallCheck(this, EditInfoModal);
+
+	        return _possibleConstructorReturn(this, (EditInfoModal.__proto__ || Object.getPrototypeOf(EditInfoModal)).apply(this, arguments));
+	    }
+
+	    _createClass(EditInfoModal, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'editinfo-modal' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'editinfo-info-container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'editinfo-update-container' },
+	                            _react2.default.createElement(
+	                                'form',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'editinfo-update-content' },
+	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'editinfo-update-content' },
+	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'editinfo-update-content' },
+	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return EditInfoModal;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = EditInfoModal;
+
+/***/ },
+/* 323 */,
+/* 324 */,
+/* 325 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(326);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./EditInfoModal.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./EditInfoModal.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 326 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".editinfo-modal {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    z-index: 1000;\n}\n\n.editinfo-info-container {\n    position: relative;\n    margin: 85px auto;\n    height: 500px;\n    background: #fff;\n    width: 80%;\n}\n\n.editinfo-update-content {\n    width: 80%;\n    height: auto;\n    border: 1px solid gray;\n    border-radius: 7px;\n    padding: 10px;\n    margin: 10px auto;\n}\n\n.editinfo-update-content input {\n    padding: 10px;\n    border-radius: 7px;\n    border: 1px solid lightgray;\n}\n", ""]);
 
 	// exports
 
