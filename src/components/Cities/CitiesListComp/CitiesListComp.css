@@ -1,13 +1,26 @@
 
 
+
+
 .cities-list-comp h2 {
-  margin-top:25px;
-  margin-bottom:25px;
+  margin-top: 60px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
 .state-name {
   font-size: 19px;
+  margin-bottom: 20px;
+  margin-top: 46px;
+  font-weight: 300;
+}
+
+.state-name:nth-child(1) {
+  margin-top: 0px;
+}
+
+.state-name:nth-child(25) {
+  margin-top: 149px;
 }
 
 .cities-div {
@@ -38,8 +51,10 @@
 .city-links a {
   color:#FF00BF;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1.75rem;
+  font-weight: 100;
 }
+
 
 .city-links a:hover {
   color:#b30086;
@@ -53,17 +68,13 @@
     column-count:2;
     text-align: left;
   }
-
-
-  }
+}
 
 
 @media (min-width: 768px) {
   .city-links {
     column-count: 3;
     text-align:left;
+    padding-left: 15rem;
   }
-
-
-
 }
