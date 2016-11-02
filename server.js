@@ -35,12 +35,13 @@ app.use(express.static(__dirname + '/src'));
 ///Controllers///
 var citiesCtrl = require('./server/controllers/citiesCtrl.js');
 var ridesCtrl = require('./server/controllers/ridesCtrl.js');
+var customerCtrl = require('./server/controllers/customerCtrl.js');
+
 
 
 ///Requests///
 app.get('/cities', citiesCtrl.getCities);
 app.get('/cityDetails/:id', citiesCtrl.getOneCity);
-
 app.post('/checkZip', citiesCtrl.checkZip);
 
 
@@ -50,6 +51,10 @@ app.post('/request/:rider_id', ridesCtrl.createRide);
 app.put('/arrive/:rideid', ridesCtrl.arriveRide);
 app.put('/cancel/:rideid', ridesCtrl.cancelRide);
 app.put('/complete/:rideid', ridesCtrl.completeRide);
+
+//Customer Requests
+
+app.get('/customerinfo', customerCtrl.getCustomer);
 
 // *********************************************************************************************************************************************************
 // FB

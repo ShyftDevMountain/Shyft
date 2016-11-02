@@ -11,8 +11,8 @@ class CitiesList extends React.Component {
 
   this.state = {
     states: [],
+    }
   }
-}
 
   componentDidMount() {
     getCities().then(statesList => {
