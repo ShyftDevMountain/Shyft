@@ -31,7 +31,7 @@ class CitiesList extends React.Component {
       return (
         <h4 className='state-name' key={i}>{val.state}
           <div className='cities-div'>{test.map((val3, i) => {
-              let url = '/citydetails/'
+              let url = '/#/citydetails/'
               return (
                 <p key={val3.id}><a href={url + val3.id}>{val3.city}</a></p>
               )

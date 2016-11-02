@@ -133,7 +133,6 @@ class NavBar extends React.Component {
     }
 
     hideMenu() {
-      console.log('testing');
       this.setState({
         showMenu: 'sidemenu',
         showBackDrop: 'SideMenuBackDrop'

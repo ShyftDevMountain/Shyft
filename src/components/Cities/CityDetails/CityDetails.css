@@ -1,0 +1,320 @@
+.cityDetails-jumbotron-container {
+  background-size: cover;
+  height: 60vh;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.cityDetails-jumbotron-title {
+  color: #F3F3F5;
+  font-size: 3.1rem;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.cityDetails-jumbotron-container .MainJumbotron-btn {
+  width: 110px;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+
+.jumbo-wrap {
+  -ms-align-self: center;
+  align-self: center;
+}
+
+.icons-wrap div {
+  margin-bottom: 25px;
+}
+
+.icons-wrap img {
+  margin-bottom: 10px;
+  height: 5.5rem;
+  width: 5.5rem;
+}
+
+.cityDetails-howShyftWorks {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  max-width: 45rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+
+.howitworksDescrip {
+  margin-bottom: 6rem;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.howitworkstable {
+  justify-content: center;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.cityDetails-howShyftWorks h2 {
+  padding-bottom: 20px;
+  font-size: 3rem;
+  padding-top: 28px;
+}
+
+.cityDetails-howShyftWorks p {
+  font-size: 1.8rem;
+  font-weight: 100;
+  line-height: 3rem;
+}
+
+.clock-icon {
+  background-repeat: no-repeat;
+}
+.cityDetailsMap {
+  background-size: cover;
+  height: 450px;
+  background-position: center;
+  margin-bottom: 20px;
+}
+.cityDetailsEstimate {
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+.cityDetailsEstimate-Wrap {
+  display: flex;
+  padding-bottom: 8rem;
+  padding-top: 5rem;
+  border-color: #D8DCE6;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  flex-wrap: wrap;
+  margin-left: -.9375rem;
+  margin-right: -.9375rem;
+}
+
+.estimateform-wrap {
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+  min-height: 1px;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+
+
+.estimate-description {
+  line-height: 1.8;
+  font-size: 1.8rem;
+  font-weight: 100;
+  padding-top: 10px;
+  text-align: center;
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+  min-height: 1px;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+
+.estimate-description h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+
+.cityDetails-TwoWays {
+  margin-bottom: -12rem;
+  text-align: center!important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+.cityDetails-TwoWaysWrap {
+  width: 70%
+}
+
+.cityDetails-TwoWays div:nth-child(1) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cityDetails-TwoWays h2 {
+  margin-top: 4rem;
+  font-size: 3rem;
+}
+
+.cityDetails-TwoWays p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+.cityDetails-carWrapper {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 1.5rem;
+  padding: 4rem;
+  max-width: 100%;
+  text-align: center!important;
+}
+
+.cityDetails-carWrapper img {
+  width: 580px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.cityDetails-pricesWrapper {
+  -webkit-box-pack: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -.9375rem;
+  margin-right: -.9375rem;
+  text-align: center;
+  margin-top: 4rem;
+
+}
+
+.cityDetails-prices {
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+}
+
+.priceChart-btnwrapper {
+  border-color: #D8DCE6;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #F3F3F5;
+  display: flex;
+  text-align: center!important;
+  line-height: 2;
+}
+
+.priceChart-pricing {
+  border-color: #D8DCE6;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  margin-top: -1px;
+  border: 1px solid #D8DCE6;
+  line-height: 2;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+
+.pricingTable {
+  width: 100%;
+  background-color: transparent;
+}
+
+tr td {
+  text-align: left;
+}
+
+
+.pricechart-btn {
+  border-color: #D8DCE6;
+  font-size: 1.9rem;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  font-weight: 200;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: .08333rem solid transparent;
+  padding: .75rem 1.25rem;
+  line-height: 1.5;
+  border-radius: .5rem;
+}
+
+.pricechart-btn.active {
+  color: #FF00BF!important;
+  background: #fff;
+}
+
+@media (min-width: 768px) {
+  .cityDetails-jumbotron-title {
+    font-size: 4.3rem;
+  }
+
+  .cityDetails-jumbotron-container .MainJumbotron-btn {
+    width: 160px;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+
+  .cityDetails-howShyftWorks {
+    max-width: 85rem;
+  }
+
+  .icons-wrap img {
+    height: 6.5rem;
+    width: 6.5rem;
+  }
+
+  .cityDetails-howShyftWorks h2 {
+    font-size: 3.3rem;
+  }
+
+  .cityDetails-howShyftWorks p {
+    font-size: 2.2rem;
+    line-height: 3.8rem;
+  }
+
+  .cityDetailsEstimate {
+    max-width: 92rem;
+  }
+
+  .estimate-description {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .estimateform-wrap {
+    -webkit-box-flex: 0;
+    flex: 0 0 41.66667%;
+    margin-left: 8.33333%;
+  }
+
+  .cityDetails-TwoWays {
+    max-width: 92vh;
+  }
+
+  .estimate-description h2 {
+    font-size: 3.3rem;
+  }
+
+  .cityDetails-TwoWays h2 {
+    margin-top: 5rem;
+    font-size: 3.5rem;
+  }
+
+  .cityDetails-TwoWays p {
+    font-size: 1.9rem;
+    line-height: 1.8;
+  }
+
+  .cityDetails-prices {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    line-height: 2;
+  }
+}

@@ -34,6 +34,7 @@ class CitiesEstimateForm extends React.Component {
 
   getEstimate () {
     var estimates = getLyftEstimate(pickupLatLng[0],pickupLatLng[1],destLatLng[0],destLatLng[1]);
+    console.log(pickupLatLng, destLatLng);
     estimates.then(res => {
       this.setState({
         lyftEstimate: res[1],
@@ -45,7 +46,6 @@ class CitiesEstimateForm extends React.Component {
   }
 
   resetForm () {
-    console.log('reset');
     this.setState({
         lyftEstimate: 0,
         lyftPlusEstimate: 0,
@@ -57,7 +57,6 @@ class CitiesEstimateForm extends React.Component {
   render () {
     return (
         <div>
-          <h1>test</h1>
           <form className='estimateForm'>
             <fieldset>
               <div className='pickup-input-container'>
@@ -78,7 +77,7 @@ class CitiesEstimateForm extends React.Component {
                   onChange={this.resetForm}
                   />
               </div>
-              <button onClick={this.getEstimate} className={this.state.estimateButton}>Get Estimate</button>
+              <button onClick={this.getEstimate} type = "button" className={this.state.estimateButton}>Get Estimate</button>
               <div className={this.state.showEstimate}>
                 <div className='estimate-lyft'>
                   <span>${this.state.lyftEstimate}</span>

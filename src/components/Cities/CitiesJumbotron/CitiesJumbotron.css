@@ -23,14 +23,14 @@
 .cities-jumbotron-container {
     background-image: url('https://www.lyft.com/images/cities/cities-hero.1e733ed9.png');
     background-size: cover;
-    height: 410px;
+    height: 60vh;
     text-align: center;
     background-position: top;
     background-repeat: no-repeat;
 }
 
 .cities-jumbotron-title {
-    padding-top: 140px;
+    padding-top: 180px;
     font-size: 4.5rem;
     font-weight: bold;
     text-shadow: 1px 2px 4px black;
@@ -89,4 +89,46 @@
   border: 1px solid #d8dce6;
   border-top: 1px solid white;
   text-align: left;
+}
+
+.citynotavailable {
+  padding-top: 10px;
+  background:#fff;
+  display: flex;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-top: -4px;
+  z-index: 50;
+  display: none;
+}
+
+.citynotavailable.active {
+  display: block;
+}
+
+.citynotavailable p {
+  margin-top: 10px;
+  font-weight: 100;
+}
+
+.citynotavailable p:nth-child(1) {
+  font-weight: 600;
+}
+
+.citynotavailable button {
+  width: 60px;
+  margin-bottom: 15px;
+  color: #fff;
+  background-color: #2AACE3;
+  border-color: #2AACE3;
+  border-radius: .25rem;
+  padding: .25rem .75rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  border: .08333rem solid transparent;
 }
