@@ -81,7 +81,7 @@ class CitiesEstimateForm extends React.Component {
               <div className={this.state.showEstimate}>
                 <div className='estimate-lyft'>
                   <span>${this.state.lyftEstimate}</span>
-                  <div>Lyft</div>
+                  <div>Shyft</div>
                 </div>
                 <div className='divider'></div>
                 <div className='estimate-plus'>

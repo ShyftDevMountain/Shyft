@@ -35,10 +35,10 @@ class Footer extends React.Component {
                       <li className='footer-title'>Explore</li>
                       <li><a href='#'>Enterprise</a></li>
                       <li><a href='#'>Partnerships</a></li>
-                      <li><a href='#'>Lyft For Good</a></li>
+                      <li><a href='#'>Shyft For Good</a></li>
                       <li><a href='#'>Ambassadors</a></li>
                       <li><a href='#'>Developers</a></li>
-                      <li><a href='#'>Lyft Promo Code</a></li>
+                      <li><a href='#'>Shyft Promo Code</a></li>
                     </ul>
                   </div>
                 </div>

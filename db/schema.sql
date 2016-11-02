@@ -1,8 +1,7 @@
 CREATE TABLE customer
 (
   id SERIAL PRIMARY KEY,
-  firstname VARCHAR(40),
-  lastname VARCHAR(40),
+  name VARCHAR(100),
   email VARCHAR(100),
   phone varchar(22),
   fb TEXT
@@ -42,18 +41,6 @@ alter table rides add column rider_id integer references customer(id);
 
 
 
-INSERT INTO customer (id, firstname, lastname, email, phone)
-VALUES (1, 'John', 'Doe', 'johndoe@gmail.com', '6025551234');
-
-INSERT INTO customer (id, firstname, lastname, email, phone)
-VALUES (2, 'Sally', 'Doe', 'Sallydoe@gmail.com', '1235551234');
-
-INSERT INTO customer (id, firstname, lastname, email, phone)
-VALUES (3, 'Billy', 'Bob', 'billybob@gmail.com', '3015551234');
-
-INSERT INTO ride (rideid, driverid, originlat, originlong, origindate, destlat, destlong, destdate, rating, review)
-VALUES (1, 1, 40.226284, -111.660637, '2016-10-23 10:30:00', 40.229396, -111.653237, '2016-10-23 10:40:00', 5, 'Great Ride!, slow but safe. :D');
-
 INSERT INTO drivers (id, firstname, lastname, ridetype, make, model, year, licence, color, img)
 VALUES (1, 'Speedy', 'McFast', 'Lyft', 'Chevy', 'Cobalt', 2007, '2F4ST4U', 'Red', 'https://media.ed.edmunds-media.com/chevrolet/cobalt/2007/oem/2007_chevrolet_cobalt_coupe_ss-supercharged_fq_oem_1_400.jpg');
 
@@ -69,7 +56,7 @@ CREATE TABLE cities
   city VARCHAR(50),
   state VARCHAR(50),
   img TEXT,
-  map_img TEXT,
+  map_img TEXT
 );
 
 

@@ -30,10 +30,10 @@ class FourWaysToRide extends React.Component {
                                       <div className='img'>
                                       </div>
                                       <div className='flexer'>
-                                          <h3 className="text-thin m-b-s p-l-m-sm" data-reactid="150">shyft Line</h3>
+                                          <h3 className="text-thin m-b-s p-l-m-sm" data-reactid="150">Shyft Line</h3>
                                           <p className='m-b-0 '>
-                                            Lyft Line is a shared ride. It matches you with others going the same way, so you can split the cost.
-                                            Price is fixed upfront and always less than original Lyft. Available in select U.S. cities.
+                                            Shyft Line is a shared ride. It matches you with others going the same way, so you can split the cost.
+                                            Price is fixed upfront and always less than original Shyft. Available in select U.S. cities.
                                           </p>
                                           <p className='m-b-0 '>
                                              <a>Learn More</a>
@@ -45,9 +45,9 @@ class FourWaysToRide extends React.Component {
                                       <div className='img2'>
                                       </div>
                                       <div className='flexer'>
-                                          <h3 className="text-thin m-b-s p-l-m-sm" data-reactid="150">shyft</h3>
+                                          <h3 className="text-thin m-b-s p-l-m-sm" data-reactid="150">Shyft</h3>
                                           <p className='m-b-0 '>
-                                            Lyft is your personal ride. Whether you’re traveling solo or with up to three friends, this sedan is yours to fill. Available nationwide.
+                                            Shyft is your personal ride. Whether you’re traveling solo or with up to three friends, this sedan is yours to fill. Available nationwide.
                                           </p>
 
                                       </div>
@@ -57,9 +57,9 @@ class FourWaysToRide extends React.Component {
                                       <div className='img3'>
                                       </div>
                                       <div className='flexer'>
-                                          <h3 className="text-thin m-b-s p-l-m-sm" data-reactid="150">shyft Plus</h3>
+                                          <h3 className="text-thin m-b-s p-l-m-sm" data-reactid="150">Shyft Plus</h3>
                                           <p className='m-b-0 '>
-                                            Lyft Plus is a supersized ride with six seats for when you need more space or just want to roll with the entire squad. Available nationwide.
+                                            Shyft Plus is a supersized ride with six seats for when you need more space or just want to roll with the entire squad. Available nationwide.
                                           </p>
 
                                       </div>
@@ -69,9 +69,9 @@ class FourWaysToRide extends React.Component {
                                       <div className='img4'>
                                       </div>
                                       <div className='flexer'>
-                                          <h3 className="text-thin m-b-s p-l-m-sm" data-reactid="150">shyft Line</h3>
+                                          <h3 className="text-thin m-b-s p-l-m-sm" data-reactid="150">Shyft Line</h3>
                                           <p className='m-b-0 '>
-                                            Lyft Premier is your high-end ride. From business trips to a night on the town, it’s the perfect way to add a little luxury and arrive in style. Available in select U.S. cities.
+                                            Shyft Premier is your high-end ride. From business trips to a night on the town, it’s the perfect way to add a little luxury and arrive in style. Available in select U.S. cities.
                                           </p>
                                       </div>
                               </div>
