@@ -1,5 +1,6 @@
 
 
+
 /*/////////////////////////////////
 // MOBILE NAV BAR DISPLAYED WITH UNDER 768PX
 ///////////////////////////////////*/
@@ -10,6 +11,7 @@
     height: 60px;
     display: flex;
     align-items: center;
+    z-index: 10;
 }
 
 .navbar-mobile span {
@@ -80,6 +82,8 @@
     height: 80px;
     font-weight: 300;
     z-index: 10;
+    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));
+    transition: all .2s ease;
 }
 
 .navbar-active {
@@ -93,6 +97,12 @@
     color: #333;
     background: #fff;
     z-index: 10;
+}
+
+.navbar-scroll-active {
+    background: #fff;
+    color: #333;
+    box-shadow: 1px 1px 5px gray;
 }
 
 .navbarlink-active {

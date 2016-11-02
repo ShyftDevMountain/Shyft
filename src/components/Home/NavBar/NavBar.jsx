@@ -9,9 +9,49 @@ import './NavBar.css';
 
 class NavBar extends React.Component {
 
+    componentDidMount(){
+        window.onscroll = function() {
+          var explore = document.getElementById('explore');
+          var logo = document.getElementById('mainlogo');
+          var logo2 = document.getElementById('logo2');
+          var navbarDrop = document.getElementById('navbar-drop');
+          var rideLyft = document.getElementById('navbar-ride-lyftbtn')
+          var signup = document.getElementById('navbar-signup');
+          var signupLink = document.getElementById('signup-link');
+          var navbarRight = document.getElementById('navbar-right');
+          var carrot = document.getElementById('carrot');
+          var cities = document.getElementById('cities');
+          var help = document.getElementById('help');
+          var ride = document.getElementById('ride');
+
+          var range = 80;
+          var scrollTop = document.body.scrollTop;
+
+          if(scrollTop > range){
+              explore.classList.add('navbar-scroll-active');
+              logo.classList.add('navbar-logo-hide');
+              logo2.classList.add('navbar-logo-show');
+              cities.classList.add('navbar-link-active');
+              rideLyft.classList.add('navbar-ride-lyft-active');
+              help.classList.add('navbar-link-active');
+              ride.classList.add('navbar-link-active');
+          }
+          else {
+              explore.classList.remove('navbar-scroll-active');
+              logo.classList.remove('navbar-logo-hide');
+              logo2.classList.remove('navbar-logo-show');
+              rideLyft.classList.remove('navbar-ride-lyft-active');
+              carrot.classList.remove('carrot-active');
+              cities.classList.remove('navbar-link-active');
+              help.classList.remove('navbar-link-active');
+              ride.classList.remove('navbar-link-active');
+          }
+        }
+    }
+
     handleHover(){
         var explore = document.getElementById('explore');
-        var logo = document.getElementById('logo');
+        var logo = document.getElementById('mainlogo');
         var logo2 = document.getElementById('logo2');
         var navbarDrop = document.getElementById('navbar-drop');
         var rideLyft = document.getElementById('navbar-ride-lyftbtn')
@@ -42,7 +82,7 @@ class NavBar extends React.Component {
 
     handleHoverLeave(){
         var explore = document.getElementById('explore');
-        var logo = document.getElementById('logo');
+        var logo = document.getElementById('mainlogo');
         var logo2 = document.getElementById('logo2');
         var navbarDrop = document.getElementById('navbar-drop');
         var rideLyft = document.getElementById('navbar-ride-lyftbtn')
@@ -117,7 +157,6 @@ class NavBar extends React.Component {
     <div>
 
 
-
         <SideMenu showMenu={this.state.showMenu} hideMenu={this.hideMenu}/>
             <SideMenuBackDrop showMenu={this.state.showBackDrop} hideMenu={this.hideMenu}/>
             <div className="navbar-mobile">
@@ -129,7 +168,7 @@ class NavBar extends React.Component {
         <div onMouseLeave={this.handleHoverLeave}>
             <div id="explore" className="navbar-container">
                 <div className="navbar-left">
-                    <div id="logo" className="navbar-logo">
+                    <div id="mainlogo" className="navbar-logo">
                         <Link to="/"><img src="./img/LYFT_LOGO/SVG/white_logo.svg"/></Link>
                     </div>
                     <div id="logo2" className="navbar-logo2">
