@@ -5,6 +5,7 @@ import EditInfoModal from '../EditInfoModal/EditInfoModal.jsx';
 import './UserDashboardComp.css';
 
 class UserDashboardComp extends React.Component{
+    
     render(){
         return (
             <div className="userdash-wrapper">

@@ -15,6 +15,17 @@
     height: 500px;
     background: #fff;
     width: 80%;
+    padding-top: 10px;
+}
+
+.editinfo-logo-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.editinfo-logo {
+    width: 100px;
 }
 
 .editinfo-update-content {
@@ -30,4 +41,16 @@
     padding: 10px;
     border-radius: 7px;
     border: 1px solid lightgray;
+    width: 100%;
+}
+
+.editinfo-update-btn {
+    width: 250px;
+    background: none;
+    border: 1px solid #ff00bf;
+    color: #ff00bf;
+    border-radius: 7px;
+    padding: 10px;
+    margin-left: 265px;
+    margin-top: 20px;
 }
