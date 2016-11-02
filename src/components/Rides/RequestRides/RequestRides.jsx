@@ -6,7 +6,7 @@ class RequestRides extends React.Component{
 
     render(){
         return (
-            <div className='map'>
+            <div className='mapmike'>
               <div className='RequestRides'>
 
                   <div className='second'>
@@ -24,15 +24,18 @@ class RequestRides extends React.Component{
                       </div>
 
                       <div className='secondBox'>
-                        <div className='car_icon'></div>
+                        <div className='car_icon'>
+                          Shyft
+                        </div>
 
                       </div>
 
-                      <div className='secondBox'>
+                      <div className='secondBox2'>
 
-                        <div>
-                          Set PickUp 
+                        <div className='pickup_button'>
+                          Set PickUp
                         </div>
+
                       </div>
 
                   </div>
