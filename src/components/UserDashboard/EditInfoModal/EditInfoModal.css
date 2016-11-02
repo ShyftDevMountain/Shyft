@@ -1,0 +1,33 @@
+.editinfo-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .9);
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.editinfo-info-container {
+    position: relative;
+    margin: 85px auto;
+    height: 500px;
+    background: #fff;
+    width: 80%;
+}
+
+.editinfo-update-content {
+    width: 80%;
+    height: auto;
+    border: 1px solid gray;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.editinfo-update-content input {
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid lightgray;
+}
