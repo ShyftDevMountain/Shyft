@@ -28,15 +28,15 @@ class CitiesJumbotron extends React.Component{
     var lat = city.location.lat;
     var lng = city.location.lng;
     var cityId = getCityZip(lat, lng).then(res => postZip(res))
-      return cityId.then(res => {
-        if (res === 'sorry') {
-          this.setState({
-            citynotavailable: 'citynotavailable active'
-          })
-        } else {
-          return hashHistory.push('/citydetails/' + res)
-        }
-      });
+    return cityId.then(res => {
+      if (res === 'sorry') {
+        this.setState({
+          citynotavailable: 'citynotavailable active'
+        })
+      } else {
+        return hashHistory.push('/citydetails/' + res)
+      }
+    });
   }
 
 
