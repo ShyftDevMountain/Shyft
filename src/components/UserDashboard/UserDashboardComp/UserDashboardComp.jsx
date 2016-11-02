@@ -1,7 +1,43 @@
 import React from 'react';
+import {render} from 'react-dom';
+
+import EditInfoModal from '../EditInfoModal/EditInfoModal.jsx';
 import './UserDashboardComp.css';
+import {getCustomerInfo} from '../../../services/dashboardService.js';
+
+
+
+
+
+
+
+
+
+
 
 class UserDashboardComp extends React.Component{
+
+  constructor(props) {
+    super(props)
+    this.state = {
+    }
+  }
+
+  componentWillMount() {
+      getCustomerInfo().then(res => {
+          res = res[0]
+          this.setState({
+            name: res.name,
+            email: res.email,
+            phone: res.phone,
+            fb: res.fb
+          })
+      })
+  }
+
+
+
+
     render(){
         return (
             <div className="userdash-wrapper">
@@ -22,7 +58,7 @@ class UserDashboardComp extends React.Component{
                                 </div>
                             </div>
 
-                            <h4 className="userdash-welcome">Welcome Johnny!</h4>
+                            <h4 className="userdash-welcome">Welcome {this.state.fb}!</h4>
                         </div>
                     </section>
 
@@ -35,19 +71,19 @@ User Dashboard</div>
                                 <div className="userdash-icon-box">
                                     <i className="fa fa-user userdash-icons" aria-hidden="true"></i>
                                 </div>
-                                <div className="userdash-user-info">Stuff goes here</div>
+                                <div className="userdash-user-info">{this.state.name}</div>
                             </div>
                             <div className="userdash-user-infobox">
                                 <div className="userdash-icon-box">
                                     <i className="fa fa-phone-square userdash-icons" aria-hidden="true"></i>
                                 </div>
-                                <div className="userdash-user-info">Stuff goes here</div>
+                                <div className="userdash-user-info">{this.state.phone}</div>
                             </div>
                             <div className="userdash-user-infobox">
                                 <div className="userdash-icon-box">
                                     <i className="fa fa-envelope userdash-icons" aria-hidden="true"></i>
                                 </div>
-                                <div className="userdash-user-info">Stuff goes here</div>
+                                <div className="userdash-user-info">{this.state.email}</div>
                             </div>
 
 
@@ -67,7 +103,7 @@ User Dashboard</div>
 
                             </div>
                             <div>
-                                <button className="userdash-request-btn btn btn-primary">Request Ride</button>
+                                <button className="userdash-updateinfo-btn btn btn-primary">Update Info</button>
                             </div>
 
 
@@ -77,6 +113,7 @@ User Dashboard</div>
 
                 </div>
 
+                <EditInfoModal />
             </div>
         );
     }
