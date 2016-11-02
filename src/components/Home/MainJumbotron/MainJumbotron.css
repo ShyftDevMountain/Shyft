@@ -102,8 +102,14 @@
     }
 }
 
+@media (min-width: 768px) {
+    .MainJumbotron-container {
+        height: 520px;
+    }
+}
+
 @media (min-width: 992px) {
     .MainJumbotron-container {
-        height: 500px;
+        height: 520px;
     }
 }

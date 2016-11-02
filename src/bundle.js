@@ -78,11 +78,11 @@
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(306);
+	var _UserDashboardComp = __webpack_require__(308);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(309);
+	var _CityDetails = __webpack_require__(311);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -120,10 +120,6 @@
 	          _react2.default.createElement(_reactRouter.Route, { path: "/cities", component: _CitiesComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/rides", component: _RidesComp2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/userdashboard", component: _UserDashboardComp2.default }),
-<<<<<<< HEAD
-	          _react2.default.createElement(_reactRouter.Route, { path: "/rideWithShyft", component: _RidesComp2.default }),
-=======
->>>>>>> master
 	          _react2.default.createElement(_reactRouter.Route, { path: "/cities/:id", component: _CityDetails2.default }),
 	          _react2.default.createElement(_reactRouter.Route, { path: "/login", component: _LoginComp2.default })
 	        )
@@ -27553,10 +27549,50 @@
 	    _inherits(NavBar, _React$Component);
 
 	    _createClass(NavBar, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            window.onscroll = function () {
+	                var explore = document.getElementById('explore');
+	                var logo = document.getElementById('mainlogo');
+	                var logo2 = document.getElementById('logo2');
+	                var navbarDrop = document.getElementById('navbar-drop');
+	                var rideLyft = document.getElementById('navbar-ride-lyftbtn');
+	                var signup = document.getElementById('navbar-signup');
+	                var signupLink = document.getElementById('signup-link');
+	                var navbarRight = document.getElementById('navbar-right');
+	                var carrot = document.getElementById('carrot');
+	                var cities = document.getElementById('cities');
+	                var help = document.getElementById('help');
+	                var ride = document.getElementById('ride');
+
+	                var range = 80;
+	                var scrollTop = document.body.scrollTop;
+
+	                if (scrollTop > range) {
+	                    explore.classList.add('navbar-scroll-active');
+	                    logo.classList.add('navbar-logo-hide');
+	                    logo2.classList.add('navbar-logo-show');
+	                    cities.classList.add('navbar-link-active');
+	                    rideLyft.classList.add('navbar-ride-lyft-active');
+	                    help.classList.add('navbar-link-active');
+	                    ride.classList.add('navbar-link-active');
+	                } else {
+	                    explore.classList.remove('navbar-scroll-active');
+	                    logo.classList.remove('navbar-logo-hide');
+	                    logo2.classList.remove('navbar-logo-show');
+	                    rideLyft.classList.remove('navbar-ride-lyft-active');
+	                    carrot.classList.remove('carrot-active');
+	                    cities.classList.remove('navbar-link-active');
+	                    help.classList.remove('navbar-link-active');
+	                    ride.classList.remove('navbar-link-active');
+	                }
+	            };
+	        }
+	    }, {
 	        key: 'handleHover',
 	        value: function handleHover() {
 	            var explore = document.getElementById('explore');
-	            var logo = document.getElementById('logo');
+	            var logo = document.getElementById('mainlogo');
 	            var logo2 = document.getElementById('logo2');
 	            var navbarDrop = document.getElementById('navbar-drop');
 	            var rideLyft = document.getElementById('navbar-ride-lyftbtn');
@@ -27588,7 +27624,7 @@
 	        key: 'handleHoverLeave',
 	        value: function handleHoverLeave() {
 	            var explore = document.getElementById('explore');
-	            var logo = document.getElementById('logo');
+	            var logo = document.getElementById('mainlogo');
 	            var logo2 = document.getElementById('logo2');
 	            var navbarDrop = document.getElementById('navbar-drop');
 	            var rideLyft = document.getElementById('navbar-ride-lyftbtn');
@@ -27692,7 +27728,7 @@
 	                            { className: 'navbar-left' },
 	                            _react2.default.createElement(
 	                                'div',
-	                                { id: 'logo', className: 'navbar-logo' },
+	                                { id: 'mainlogo', className: 'navbar-logo' },
 	                                _react2.default.createElement(
 	                                    _reactRouter.Link,
 	                                    { to: '/' },
@@ -30148,7 +30184,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .3s ease;\n}\n\n.navbar-mobile img {\n    width: 42px;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .3s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .3s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: all .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;    \n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .3s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
+	exports.push([module.id, "\n\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n    z-index: 10;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .3s ease;\n}\n\n.navbar-mobile img {\n    width: 42px;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .3s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    transition: all .2s ease;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbar-scroll-active {\n    background: #fff;\n    color: #333;\n    box-shadow: 1px 1px 5px gray;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .3s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: all .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;\n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .3s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -30346,7 +30382,7 @@
 
 
 	// module
-	exports.push([module.id, ".MainJumbotron-container {\n    background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n        height: 500px;\n    }\n}\n", ""]);
+	exports.push([module.id, ".MainJumbotron-container {\n    background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 768px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -32136,11 +32172,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-=======
-	__webpack_require__(316);
+	__webpack_require__(306);
 
->>>>>>> master
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32149,11 +32182,6 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-<<<<<<< HEAD
-	// import './RidesComp.css';
-
-=======
->>>>>>> master
 	var Rides = function (_React$Component) {
 	    _inherits(Rides, _React$Component);
 
@@ -32185,6 +32213,46 @@
 /* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(307);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 307 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 308 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -32197,7 +32265,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(307);
+	__webpack_require__(309);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32221,8 +32289,147 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                null,
-	                'This is userdashboard comp!'
+	                { className: 'userdash-wrapper' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'userdash-sideanduser-container' },
+	                    _react2.default.createElement(
+	                        'section',
+	                        { className: 'userdash-sidebar-container' },
+	                        _react2.default.createElement('img', { className: 'userdash-logo-main', src: './img/LYFT_LOGO/SVG/white_logo.svg' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'userdash-sidebar-innerbox' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-pic-container' },
+	                                _react2.default.createElement('img', { src: './img/userdash/screaming-kid1.jpg' }),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-sidebar-item-container' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'userdash-sidebar-item' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-user userdash-icons', 'aria-hidden': 'true' }),
+	                                        _react2.default.createElement(
+	                                            'span',
+	                                            null,
+	                                            'User'
+	                                        )
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'userdash-sidebar-item' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-question-circle userdash-icons', 'aria-hidden': 'true' }),
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: '#' },
+	                                            'Help'
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'h4',
+	                                { className: 'userdash-welcome' },
+	                                'Welcome Johnny!'
+	                            )
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'section',
+	                        { className: 'userdash-user-container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'userdash-user-innerbox' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-title' },
+	                                _react2.default.createElement('i', { className: 'fa fa-tachometer userdash-icons-title userdash-icons-title', 'aria-hidden': 'true' }),
+	                                'User Dashboard'
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-infobox' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-icon-box' },
+	                                    _react2.default.createElement('i', { className: 'fa fa-user userdash-icons', 'aria-hidden': 'true' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-user-info' },
+	                                    'Stuff goes here'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-infobox' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-icon-box' },
+	                                    _react2.default.createElement('i', { className: 'fa fa-phone-square userdash-icons', 'aria-hidden': 'true' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-user-info' },
+	                                    'Stuff goes here'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-infobox' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-icon-box' },
+	                                    _react2.default.createElement('i', { className: 'fa fa-envelope userdash-icons', 'aria-hidden': 'true' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-user-info' },
+	                                    'Stuff goes here'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-ridesrequest-box' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-user-rides' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'userdash-icon-box' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-car userdash-icons', 'aria-hidden': 'true' })
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'span',
+	                                        { className: 'userdash-ridenumber' },
+	                                        ' 5'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'userdash-user-comments' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'userdash-icon-box' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-file-text-o userdash-icons', 'aria-hidden': 'true' })
+	                                    ),
+	                                    _react2.default.createElement('textarea', { className: 'userdash-textarea', placeholder: 'Comments' })
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'button',
+	                                    { className: 'userdash-request-btn btn btn-primary' },
+	                                    'Request Ride'
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
 	            );
 	        }
 	    }]);
@@ -32235,13 +32442,13 @@
 	exports.default = UserDashboardComp;
 
 /***/ },
-/* 307 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(308);
+	var content = __webpack_require__(310);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32261,7 +32468,7 @@
 	}
 
 /***/ },
-/* 308 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32269,13 +32476,13 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "\n.userdash-icons {\n    font-size: 26px;\n    margin-right: 10px;\n}\n\n.userdash-icons-title {\n    font-size: 3rem;\n    margin-right: 10px;\n}\n\n.userdash-icons-google {\n    font-size: 36px;\n    margin-right: 10px;\n}\n\n.userdash-logo-main {\n    width: 60px;\n    margin-bottom: 10px;\n}\n\n.userdash-sideanduser-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.userdash-sidebar-container {\n    width: 100%;\n    /*height: 40rem;*/\n    background: #ff00bf;\n    padding: 70px 0 50px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.userdash-sidebar-innerbox {\n    width: 160px;\n    margin: 0 auto;\n}\n\n.userdash-user-pic-container {\n    margin: 15px 0 25px;\n    /* border: 1px solid #ff00bf; */\n    box-shadow: 1px 1px 5px gray;\n    background: white;\n    padding: 10px;\n    text-align: center;\n    width: 160px;\n    border-radius: 7px;\n}\n\n.userdash-user-pic-container img {\n    width: 140px;\n    border-radius: 7px;\n}\n\n.userdash-welcome {\n    color: #f3f3f5;\n}\n\n.userdash-sidebar-item-container {\n    padding: 5px 3px;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    margin-top: 5px;\n}\n\n.userdash-sidebar-item {\n    display: flex;\n    align-items: center;\n    padding: 2px 5px;\n}\n\n.userdash-sidebar-item a {\n    color: #333;\n}\n\n.userdash-sidebar-item a:hover {\n    color: #ff00bf;\n}\n\n.userdash-user-container {\n    width: 100%;\n    padding: 50px 0;\n    border: 1px solid #f2f2f2;\n}\n\n.userdash-user-innerbox {\n    width: 80%;\n    margin: 0 auto;\n}\n\n.userdash-user-title {\n    font-size: 3rem;\n    margin-bottom: 30px;\n    transition: all .2s ease;\n}\n\n.userdash-user-infobox {\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-icon-box {\n    width: 35px;\n}\n\n.userdash-user-info {\n    padding: 10px 10px;\n    width: 100%;\n    border: 1px solid #f2f2f2;\n    background-color: white;\n    border-radius: 7px;\n    color: #333;\n}\n\n.userdash-user-ridesrequest-box {\n    display: flex;\n    flex-direction: column;\n    align-items: initial;\n    margin: 50px 0;\n}\n\n.userdash-user-rides {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-ridenumber {\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    padding: 10px;\n    width: 100%;\n}\n\n.userdash-user-comments textarea {\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    font-style: italic;\n    font-weight: 100;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    width: 100%;\n}\n\n.userdash-user-comments {\n    width: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.userdash-request-btn {\n    width: 100%;\n    padding: 12px;\n    font-size: 1.75rem;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n.userdash-request-btn:hover {\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n@media (min-width:768px){\n\n    .userdash-icons-title {\n        font-size: 4rem;\n    }\n\n    .userdash-sideanduser-container {\n        display: flex;\n        flex-direction: row;\n    }\n\n    .userdash-sidebar-container {\n        width: 50%;\n        padding-left: 0px;\n        padding-top: 150px;\n    }\n\n    .userdash-user-container {\n        width: 100%;\n        padding-top: 100px;\n    }\n\n    .userdash-user-title {\n        font-size: 4rem;\n    }\n\n    .userdash-request-btn {\n        width: 180px;\n    }\n\n    .userdash-user-ridesrequest-box {\n        display: flex;\n        flex-direction: row;\n        align-items: center;\n    }\n\n    .userdash-user-comments textarea {\n        width: 90%;\n    }\n\n    .userdash-user-comments {\n        width: 50%;\n    }\n\n    .userdash-ridenumber {\n        width: 70%;\n        text-align: center;\n    }\n\n    .userdash-user-rides {\n        width: 50%;\n        margin-bottom: 0px;\n    }\n\n}\n\n@media (min-width:992px) {\n    .userdash-sidebar-container {\n        width: 45%;\n    }\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 309 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32292,11 +32499,11 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	var _CitiesEstimateForm = __webpack_require__(310);
+	var _CitiesEstimateForm = __webpack_require__(312);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	__webpack_require__(314);
+	__webpack_require__(316);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32339,7 +32546,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 310 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32358,9 +32565,9 @@
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _estimateFormService = __webpack_require__(311);
+	var _estimateFormService = __webpack_require__(313);
 
-	__webpack_require__(312);
+	__webpack_require__(314);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32520,7 +32727,7 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 311 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32550,13 +32757,13 @@
 	}
 
 /***/ },
-/* 312 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(313);
+	var content = __webpack_require__(315);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32576,7 +32783,7 @@
 	}
 
 /***/ },
-/* 313 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32585,48 +32792,6 @@
 
 	// module
 	exports.push([module.id, "*:focus {\n  outline: none;\n}\n.estimateForm {\n  background-color: #F3F3F5;\n  border-width: 1px;\n  border-style: solid;\n  border-radius: .5rem;\n  border-color: #D8DCE6;\n  padding: 1.5rem;\n  box-sizing: inherit;\n  font-size: 1.8rem;\n  line-height: 1.3;\n}\n\n.estimateForm input {\n  display: block;\n  width: 100%;\n  color: #333447;\n  padding: .75rem 1.25rem;\n  font-size: 1.8rem;\n  line-height: 1.33333;\n  padding-left: 2.75rem;\n}\n\n.pickup-input-container .geosuggest__input {\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n.geosuggest-container span,\n.geosuggest-container button {\n  display: none;\n}\n\n.estimateForm .geosuggest__suggests {\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n  background: white;\n  padding-left: 26px;\n  margin-top: -1px;\n  border-top: 1px solid white;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n  right: 16px;\n  left: 16px;\n  z-index: 500;\n}\n.dest-input .geosuggest__suggests {\nmargin-top: -3px;\n}\n\n.pickup-icon {\n  background-repeat: no-repeat\n}\n\n.pickup-destination-container .geosuggest__input {\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  border: .08333rem solid #E60000;\n}\n\n.button-getEstimate {\n  padding: .8125rem 1.25rem;\n  background: -webkit-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: -o-linear-gradient(top left, #FF00BF, #B80B8C);\n  background: linear-gradient(to bottom right, #FF00BF, #B80B8C);\n  margin-top: 1rem;\n  border: none;\n  display: block;\n  width: 100%;\n  font-size: 1.8srem;\n  line-height: 1.33333;\n  border-radius: .5rem;\n  color: #fff;\n  font-weight: 400;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  user-select: none;\n}\n.button-getEstimate.hide {\n  display: none;\n}\n\n.estimate {\n  margin-top: 1.5rem;\n  margin-bottom: .5rem;\n  display: flex;\n  text-align: center!important;\n  font-size: 2.1rem;\n  font-weight: 100;\n  justify-content: center;\n  display: none;\n}\n\n.estimate.active {\n  display: flex;\n}\n\n.estimate-lyft {\n\n}\n\n.estimate-lyft div {\n  font-size: 1.7rem;\n}\n\n.estimateForm .divider {\n  border-color: #D8DCE6;\n  border-right-width: 1px;\n  border-right-style: solid;\n  margin: 0 15%;\n}\n\n.estimate-plus {\n\n}\n\n.estimate-plus div {\n  font-size: 1.7rem;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 314 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(315);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 315 */
-<<<<<<< HEAD
-=======
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
 
 	// exports
 
@@ -32647,8 +32812,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -32659,7 +32824,6 @@
 
 /***/ },
 /* 317 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
