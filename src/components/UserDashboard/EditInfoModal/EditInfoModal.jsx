@@ -2,6 +2,12 @@ import React from 'react';
 import './EditInfoModal.css';
 
 class EditInfoModal extends React.Component{
+
+    handleUpdateClose(){
+        var self = this;
+        self.props.handleUpdateClose()
+    }
+
     render(){
         return (
             <div>
@@ -21,7 +27,9 @@ class EditInfoModal extends React.Component{
                                 <div className="editinfo-update-content">
                                     <input type="text" value="Update Name"/>
                                 </div>
-                                <input className="editinfo-update-btn" type="submit" value="Update"/>
+                                <div className="editinfo-update-btn-container">
+                                    <input className="editinfo-update-btn" type="submit" value="Update" onClick={this.handleUpdateClose.bind(this)}/>
+                                </div>
                             </form>
                         </div>
                     </div>

@@ -82,7 +82,7 @@
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(317);
+	var _CityDetails = __webpack_require__(318);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -28278,7 +28278,7 @@
 	                        _react2.default.createElement(
 	                          'a',
 	                          { href: '#' },
-	                          'Lyft For Good'
+	                          'Shyft For Good'
 	                        )
 	                      ),
 	                      _react2.default.createElement(
@@ -28305,7 +28305,7 @@
 	                        _react2.default.createElement(
 	                          'a',
 	                          { href: '#' },
-	                          'Lyft Promo Code'
+	                          'Shyft Promo Code'
 	                        )
 	                      )
 	                    )
@@ -30262,7 +30262,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -30284,62 +30284,84 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var MainJumbotron = function (_React$Component) {
-	    _inherits(MainJumbotron, _React$Component);
+	  _inherits(MainJumbotron, _React$Component);
 
-	    function MainJumbotron() {
-	        _classCallCheck(this, MainJumbotron);
+	  function MainJumbotron(props) {
+	    _classCallCheck(this, MainJumbotron);
 
-	        return _possibleConstructorReturn(this, (MainJumbotron.__proto__ || Object.getPrototypeOf(MainJumbotron)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (MainJumbotron.__proto__ || Object.getPrototypeOf(MainJumbotron)).call(this, props));
+
+	    _this.state = {
+	      jumboBg: 'MainJumbotron-container'
+	    };
+	    _this.changeBg = _this.changeBg.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(MainJumbotron, [{
+	    key: 'changeBg',
+	    value: function changeBg() {
+
+	      var imgs = [1, 2, 3, 4, 5, 6, 7];
+	      var x = imgs[0];
+
+	      this.setState({
+	        jumboBg: 'MainJumbotron-container bg' + x
+	      });
 	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.changeBg();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
 
-	    _createClass(MainJumbotron, [{
-	        key: 'render',
-	        value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: this.state.jumboBg },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'MainJumbotron-title' },
+	            'Rides in Minutes'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'btn btn-primary MainJumbotron-btn' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/userdashboard' },
+	              'Sign Up Now'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'MainJumbotron-btm-banner' },
+	          _react2.default.createElement(
+	            'p',
+	            { className: 'MainJumbotron-btm-banner-text' },
+	            'Take the wheel.'
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'ride-with-lyft-btn' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/rides' },
+	              'Ride With Shyft'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
 
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'MainJumbotron-container' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'MainJumbotron-title' },
-	                        'Rides in Minutes'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'btn btn-primary MainJumbotron-btn' },
-	                        _react2.default.createElement(
-	                            _reactRouter.Link,
-	                            { to: '/userdashboard' },
-	                            'Sign Up Now'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'MainJumbotron-btm-banner' },
-	                    _react2.default.createElement(
-	                        'p',
-	                        { className: 'MainJumbotron-btm-banner-text' },
-	                        'Take the wheel.'
-	                    ),
-	                    _react2.default.createElement(
-	                        'span',
-	                        { className: 'ride-with-lyft-btn' },
-	                        _react2.default.createElement(
-	                            _reactRouter.Link,
-	                            { to: '/rides' },
-	                            'Ride With Lyft'
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return MainJumbotron;
+	  return MainJumbotron;
 	}(_react2.default.Component);
 
 	;
@@ -30381,7 +30403,7 @@
 
 
 	// module
-	exports.push([module.id, ".MainJumbotron-container {\n    background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 768px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n", ""]);
+	exports.push([module.id, ".MainJumbotron-container {\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-container.bg1 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n}\n\n.MainJumbotron-container.bg2 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-2-coffee.b2dab586.jpg');\n}\n\n.MainJumbotron-container.bg3 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-1-windshield.db7c8d1d.jpg');\n}\n\n.MainJumbotron-container.bg4 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-3-mom.7b5dfd46.jpg');\n\n}\n\n.MainJumbotron-container.bg5 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-4-profile.8b01a30e.jpg');\n\n}\n\n.MainJumbotron-container.bg6 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-5-backseat.ea3b7cce.jpg');\n\n}\n\n.MainJumbotron-container.bg7 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-6-night.ad428c78.jpg');\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 768px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -30655,12 +30677,12 @@
 	                                        _react2.default.createElement(
 	                                            'h3',
 	                                            { className: 'text-thin m-b-s p-l-m-sm', 'data-reactid': '150' },
-	                                            'shyft Line'
+	                                            'Shyft Line'
 	                                        ),
 	                                        _react2.default.createElement(
 	                                            'p',
 	                                            { className: 'm-b-0 ' },
-	                                            'Lyft Line is a shared ride. It matches you with others going the same way, so you can split the cost. Price is fixed upfront and always less than original Lyft. Available in select U.S. cities.'
+	                                            'Shyft Line is a shared ride. It matches you with others going the same way, so you can split the cost. Price is fixed upfront and always less than original Shyft. Available in select U.S. cities.'
 	                                        ),
 	                                        _react2.default.createElement(
 	                                            'p',
@@ -30683,12 +30705,12 @@
 	                                        _react2.default.createElement(
 	                                            'h3',
 	                                            { className: 'text-thin m-b-s p-l-m-sm', 'data-reactid': '150' },
-	                                            'shyft'
+	                                            'Shyft'
 	                                        ),
 	                                        _react2.default.createElement(
 	                                            'p',
 	                                            { className: 'm-b-0 ' },
-	                                            'Lyft is your personal ride. Whether you\u2019re traveling solo or with up to three friends, this sedan is yours to fill. Available nationwide.'
+	                                            'Shyft is your personal ride. Whether you\u2019re traveling solo or with up to three friends, this sedan is yours to fill. Available nationwide.'
 	                                        )
 	                                    )
 	                                ),
@@ -30702,12 +30724,12 @@
 	                                        _react2.default.createElement(
 	                                            'h3',
 	                                            { className: 'text-thin m-b-s p-l-m-sm', 'data-reactid': '150' },
-	                                            'shyft Plus'
+	                                            'Shyft Plus'
 	                                        ),
 	                                        _react2.default.createElement(
 	                                            'p',
 	                                            { className: 'm-b-0 ' },
-	                                            'Lyft Plus is a supersized ride with six seats for when you need more space or just want to roll with the entire squad. Available nationwide.'
+	                                            'Shyft Plus is a supersized ride with six seats for when you need more space or just want to roll with the entire squad. Available nationwide.'
 	                                        )
 	                                    )
 	                                ),
@@ -30721,12 +30743,12 @@
 	                                        _react2.default.createElement(
 	                                            'h3',
 	                                            { className: 'text-thin m-b-s p-l-m-sm', 'data-reactid': '150' },
-	                                            'shyft Line'
+	                                            'Shyft Line'
 	                                        ),
 	                                        _react2.default.createElement(
 	                                            'p',
 	                                            { className: 'm-b-0 ' },
-	                                            'Lyft Premier is your high-end ride. From business trips to a night on the town, it\u2019s the perfect way to add a little luxury and arrive in style. Available in select U.S. cities.'
+	                                            'Shyft Premier is your high-end ride. From business trips to a night on the town, it\u2019s the perfect way to add a little luxury and arrive in style. Available in select U.S. cities.'
 	                                        )
 	                                    )
 	                                )
@@ -31978,7 +32000,7 @@
 	                _react2.default.createElement(
 	                  'h2',
 	                  { className: 'h2ForContent' },
-	                  'Make up to $35/hr driving with Lyft.'
+	                  'Make up to $35/hr driving with Shyft.'
 	                ),
 	                _react2.default.createElement(
 	                  'a',
@@ -32404,6 +32426,8 @@
 
 	__webpack_require__(315);
 
+	var _dashboardService = __webpack_require__(317);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32415,13 +32439,51 @@
 	var UserDashboardComp = function (_React$Component) {
 	    _inherits(UserDashboardComp, _React$Component);
 
-	    function UserDashboardComp() {
+	    _createClass(UserDashboardComp, [{
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {
+	            var _this2 = this;
+
+	            (0, _dashboardService.getCustomerInfo)().then(function (res) {
+	                res = res[0];
+	                _this2.setState({
+	                    name: res.name,
+	                    email: res.email,
+	                    phone: res.phone,
+	                    fb: res.fb
+	                });
+	            });
+	        }
+	    }]);
+
+	    function UserDashboardComp(props) {
 	        _classCallCheck(this, UserDashboardComp);
 
-	        return _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).call(this, props));
+
+	        _this.state = {
+	            updateModal: false
+	        };
+	        _this.updateClick = _this.updateClick.bind(_this);
+	        _this.handleUpdateClose = _this.handleUpdateClose.bind(_this);
+	        return _this;
 	    }
 
 	    _createClass(UserDashboardComp, [{
+	        key: 'updateClick',
+	        value: function updateClick() {
+	            this.setState({
+	                updateModal: true
+	            });
+	        }
+	    }, {
+	        key: 'handleUpdateClose',
+	        value: function handleUpdateClose() {
+	            this.setState({
+	                updateModal: false
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -32433,7 +32495,6 @@
 	                    _react2.default.createElement(
 	                        'section',
 	                        { className: 'userdash-sidebar-container' },
-	                        _react2.default.createElement('img', { className: 'userdash-logo-main', src: './img/LYFT_LOGO/SVG/white_logo.svg' }),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'userdash-sidebar-innerbox' },
@@ -32447,7 +32508,11 @@
 	                                    _react2.default.createElement(
 	                                        'div',
 	                                        { className: 'userdash-sidebar-item' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-user userdash-icons', 'aria-hidden': 'true' }),
+	                                        _react2.default.createElement(
+	                                            'i',
+	                                            { className: 'material-icons userdash-icons' },
+	                                            'nature_people'
+	                                        ),
 	                                        _react2.default.createElement(
 	                                            'span',
 	                                            null,
@@ -32457,7 +32522,11 @@
 	                                    _react2.default.createElement(
 	                                        'div',
 	                                        { className: 'userdash-sidebar-item' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-question-circle userdash-icons', 'aria-hidden': 'true' }),
+	                                        _react2.default.createElement(
+	                                            'i',
+	                                            { className: 'material-icons userdash-icons' },
+	                                            'help_outline'
+	                                        ),
 	                                        _react2.default.createElement(
 	                                            'a',
 	                                            { href: '#' },
@@ -32469,7 +32538,9 @@
 	                            _react2.default.createElement(
 	                                'h4',
 	                                { className: 'userdash-welcome' },
-	                                'Welcome Johnny!'
+	                                'Welcome ',
+	                                this.state.fb,
+	                                '!'
 	                            )
 	                        )
 	                    ),
@@ -32482,7 +32553,11 @@
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'userdash-user-title' },
-	                                _react2.default.createElement('i', { className: 'fa fa-tachometer userdash-icons-title userdash-icons-title', 'aria-hidden': 'true' }),
+	                                _react2.default.createElement(
+	                                    'i',
+	                                    { className: 'material-icons userdash-icons-title' },
+	                                    'blur_on'
+	                                ),
 	                                'User Dashboard'
 	                            ),
 	                            _react2.default.createElement(
@@ -32491,12 +32566,16 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-icon-box' },
-	                                    _react2.default.createElement('i', { className: 'fa fa-user userdash-icons', 'aria-hidden': 'true' })
+	                                    _react2.default.createElement(
+	                                        'i',
+	                                        { className: 'material-icons userdash-icons' },
+	                                        'portrait'
+	                                    )
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-user-info' },
-	                                    'Stuff goes here'
+	                                    this.state.name
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -32505,12 +32584,16 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-icon-box' },
-	                                    _react2.default.createElement('i', { className: 'fa fa-phone-square userdash-icons', 'aria-hidden': 'true' })
+	                                    _react2.default.createElement(
+	                                        'i',
+	                                        { className: 'material-icons userdash-icons' },
+	                                        'phone_iphone'
+	                                    )
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-user-info' },
-	                                    'Stuff goes here'
+	                                    this.state.phone
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -32519,12 +32602,16 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-icon-box' },
-	                                    _react2.default.createElement('i', { className: 'fa fa-envelope userdash-icons', 'aria-hidden': 'true' })
+	                                    _react2.default.createElement(
+	                                        'i',
+	                                        { className: 'material-icons userdash-icons' },
+	                                        'mail_outline'
+	                                    )
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-user-info' },
-	                                    'Stuff goes here'
+	                                    this.state.email
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -32536,7 +32623,11 @@
 	                                    _react2.default.createElement(
 	                                        'div',
 	                                        { className: 'userdash-icon-box' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-car userdash-icons', 'aria-hidden': 'true' })
+	                                        _react2.default.createElement(
+	                                            'i',
+	                                            { className: 'material-icons userdash-icons' },
+	                                            'directions_car'
+	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
 	                                        'span',
@@ -32550,7 +32641,11 @@
 	                                    _react2.default.createElement(
 	                                        'div',
 	                                        { className: 'userdash-icon-box' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-file-text-o userdash-icons', 'aria-hidden': 'true' })
+	                                        _react2.default.createElement(
+	                                            'i',
+	                                            { className: 'material-icons userdash-icons' },
+	                                            'subject'
+	                                        )
 	                                    ),
 	                                    _react2.default.createElement('textarea', { className: 'userdash-textarea', placeholder: 'Comments' })
 	                                )
@@ -32560,14 +32655,14 @@
 	                                null,
 	                                _react2.default.createElement(
 	                                    'button',
-	                                    { className: 'userdash-updateinfo-btn btn btn-primary' },
+	                                    { className: 'userdash-updateinfo-btn btn btn-primary', onClick: this.updateClick },
 	                                    'Update Info'
 	                                )
-	                            )
+	                            ),
+	                            this.state.updateModal ? _react2.default.createElement(_EditInfoModal2.default, { handleUpdateClose: this.handleUpdateClose }) : null
 	                        )
 	                    )
-	                ),
-	                _react2.default.createElement(_EditInfoModal2.default, null)
+	                )
 	            );
 	        }
 	    }]);
@@ -32615,6 +32710,12 @@
 	    }
 
 	    _createClass(EditInfoModal, [{
+	        key: 'handleUpdateClose',
+	        value: function handleUpdateClose() {
+	            var self = this;
+	            self.props.handleUpdateClose();
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -32652,7 +32753,11 @@
 	                                    { className: 'editinfo-update-content' },
 	                                    _react2.default.createElement('input', { type: 'text', value: 'Update Name' })
 	                                ),
-	                                _react2.default.createElement('input', { className: 'editinfo-update-btn', type: 'submit', value: 'Update' })
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'editinfo-update-btn-container' },
+	                                    _react2.default.createElement('input', { className: 'editinfo-update-btn', type: 'submit', value: 'Update', onClick: this.handleUpdateClose.bind(this) })
+	                                )
 	                            )
 	                        )
 	                    )
@@ -32703,7 +32808,7 @@
 
 
 	// module
-	exports.push([module.id, ".editinfo-modal {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    z-index: 1000;\n}\n\n.editinfo-info-container {\n    position: relative;\n    margin: 85px auto;\n    height: 500px;\n    background: #fff;\n    width: 80%;\n    padding-top: 10px;\n}\n\n.editinfo-logo-container {\n    width: 80%;\n    margin: 0 auto;\n    text-align: center;\n}\n\n.editinfo-logo {\n    width: 100px;\n}\n\n.editinfo-update-content {\n    width: 80%;\n    height: auto;\n    border: 1px solid gray;\n    border-radius: 7px;\n    padding: 10px;\n    margin: 10px auto;\n}\n\n.editinfo-update-content input {\n    padding: 10px;\n    border-radius: 7px;\n    border: 1px solid lightgray;\n    width: 100%;\n}\n\n.editinfo-update-btn {\n    width: 250px;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n    border-radius: 7px;\n    padding: 10px;\n    margin-left: 265px;\n    margin-top: 20px;\n}\n", ""]);
+	exports.push([module.id, "\n\n.editinfo-modal {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    z-index: 1000;\n}\n\n.editinfo-info-container {\n    position: relative;\n    margin: 85px auto;\n    height: 500px;\n    background: #fff;\n    width: 80%;\n    padding-top: 10px;\n}\n\n.editinfo-logo-container {\n    width: 80%;\n    margin: 0 auto;\n    text-align: center;\n}\n\n.editinfo-logo {\n    width: 80px;\n    transition: all .2s ease;\n}\n\n.editinfo-update-content {\n    width: 80%;\n    height: auto;\n    border: 1px solid gray;\n    border-radius: 7px;\n    padding: 10px;\n    margin: 10px auto;\n}\n\n.editinfo-update-content input {\n    padding: 10px;\n    border-radius: 7px;\n    border: 1px solid lightgray;\n    width: 100%;\n}\n\n.editinfo-update-btn-container {\n    margin: 0 auto;\n    width: 80%;\n    text-align: center;\n}\n\n.editinfo-update-btn {\n    width: 100%;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n    border-radius: 7px;\n    padding: 10px;\n    margin-top: 20px;\n    transition: all .2s ease;\n}\n\n@media (min-width: 550px){\n    .editinfo-update-btn {\n        width: 250px;\n    }\n\n    .editinfo-logo {\n        width: 100px;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -32743,13 +32848,36 @@
 
 
 	// module
-	exports.push([module.id, "\n.userdash-icons {\n    font-size: 26px;\n    margin-right: 10px;\n}\n\n.userdash-icons-title {\n    font-size: 3rem;\n    margin-right: 10px;\n}\n\n.userdash-icons-google {\n    font-size: 36px;\n    margin-right: 10px;\n}\n\n.userdash-logo-main {\n    width: 60px;\n    margin-bottom: 10px;\n}\n\n.userdash-sideanduser-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.userdash-sidebar-container {\n    width: 100%;\n    /*height: 40rem;*/\n    background: #ff00bf;\n    padding: 70px 0 50px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.userdash-sidebar-innerbox {\n    width: 160px;\n    margin: 0 auto;\n}\n\n.userdash-user-pic-container {\n    margin: 15px 0 25px;\n    /* border: 1px solid #ff00bf; */\n    box-shadow: 1px 1px 5px gray;\n    background: white;\n    padding: 10px;\n    text-align: center;\n    width: 160px;\n    border-radius: 7px;\n}\n\n.userdash-user-pic-container img {\n    width: 140px;\n    border-radius: 7px;\n}\n\n.userdash-welcome {\n    color: #f3f3f5;\n}\n\n.userdash-sidebar-item-container {\n    padding: 5px 3px;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    margin-top: 5px;\n}\n\n.userdash-sidebar-item {\n    display: flex;\n    align-items: center;\n    padding: 2px 5px;\n}\n\n.userdash-sidebar-item a {\n    color: #333;\n}\n\n.userdash-sidebar-item a:hover {\n    color: #ff00bf;\n}\n\n.userdash-user-container {\n    width: 100%;\n    padding: 50px 0;\n    border: 1px solid #f2f2f2;\n}\n\n.userdash-user-innerbox {\n    width: 80%;\n    margin: 0 auto;\n}\n\n.userdash-user-title {\n    font-size: 3rem;\n    margin-bottom: 30px;\n    transition: all .2s ease;\n}\n\n.userdash-user-infobox {\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-icon-box {\n    width: 35px;\n}\n\n.userdash-user-info {\n    padding: 10px 10px;\n    width: 100%;\n    border: 1px solid #f2f2f2;\n    background-color: white;\n    border-radius: 7px;\n    color: #333;\n}\n\n.userdash-user-ridesrequest-box {\n    display: flex;\n    flex-direction: column;\n    align-items: initial;\n    margin: 50px 0;\n}\n\n.userdash-user-rides {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-ridenumber {\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    padding: 10px;\n    width: 100%;\n}\n\n.userdash-user-comments textarea {\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    font-style: italic;\n    font-weight: 100;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    width: 100%;\n}\n\n.userdash-user-comments {\n    width: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.userdash-updateinfo-btn {\n    width: 100%;\n    padding: 12px;\n    font-size: 1.75rem;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n.userdash-updateinfo-btn:hover,\n.userdash-updateinfo-btn:focus,\n.userdash-updateinfo-btn:active {\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n    outline: none;\n}\n\n@media (min-width:768px){\n\n    .userdash-icons-title {\n        font-size: 4rem;\n    }\n\n    .userdash-sideanduser-container {\n        display: flex;\n        flex-direction: row;\n    }\n\n    .userdash-sidebar-container {\n        width: 50%;\n        padding-left: 0px;\n        padding-top: 150px;\n    }\n\n    .userdash-user-container {\n        width: 100%;\n        padding-top: 100px;\n    }\n\n    .userdash-user-title {\n        font-size: 4rem;\n    }\n\n    /*.userdash-request-btn {\n        width: 180px;\n    }*/\n\n    .userdash-user-ridesrequest-box {\n        display: flex;\n        flex-direction: row;\n        align-items: center;\n    }\n\n    .userdash-user-comments textarea {\n        width: 90%;\n    }\n\n    .userdash-user-comments {\n        width: 50%;\n    }\n\n    .userdash-ridenumber {\n        width: 70%;\n        text-align: center;\n    }\n\n    .userdash-user-rides {\n        width: 50%;\n        margin-bottom: 0px;\n    }\n\n}\n\n@media (min-width:992px) {\n    .userdash-sidebar-container {\n        width: 45%;\n    }\n}\n", ""]);
+	exports.push([module.id, "\n.userdash-icons {\n    font-size: 32px;\n    margin-right: 10px;\n    margin-left: 2px;\n}\n\n.userdash-icons-title {\n    font-size: 3.25rem;\n    margin-right: 10px;\n    vertical-align: text-top;\n}\n\n.userdash-icons-google {\n    font-size: 36px;\n    margin-right: 10px;\n}\n\n.userdash-logo-main {\n    width: 60px;\n    margin-bottom: 10px;\n}\n\n.userdash-sideanduser-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.userdash-sidebar-container {\n    width: 100%;\n    /*height: 40rem;*/\n    background: #ff00bf;\n    padding: 70px 0 50px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.userdash-sidebar-innerbox {\n    width: 160px;\n    margin: 0 auto;\n}\n\n.userdash-user-pic-container {\n    margin: 45px 0 25px;\n    box-shadow: 1px 1px 5px gray;\n    background: white;\n    padding: 10px;\n    text-align: center;\n    width: 160px;\n    border-radius: 7px;\n}\n\n.userdash-user-pic-container img {\n    width: 140px;\n    border-radius: 7px;\n}\n\n.userdash-welcome {\n    color: #f3f3f5;\n}\n\n.userdash-sidebar-item-container {\n    padding: 5px 3px;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    margin-top: 5px;\n}\n\n.userdash-sidebar-item {\n    display: flex;\n    align-items: center;\n    padding: 2px 5px;\n}\n\n.userdash-sidebar-item a {\n    color: #333;\n}\n\n.userdash-sidebar-item a:hover {\n    color: #ff00bf;\n}\n\n.userdash-user-container {\n    width: 100%;\n    padding: 60px 0;\n    border: 1px solid #f2f2f2;\n}\n\n.userdash-user-innerbox {\n    width: 80%;\n    margin: 0 auto;\n}\n\n.userdash-user-title {\n    font-size: 3rem;\n    margin-bottom: 30px;\n    transition: all .2s ease;\n}\n\n.userdash-user-infobox {\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-icon-box {\n    width: 50px;\n}\n\n.userdash-user-info {\n    padding: 20px 10px;\n    width: 100%;\n    border: 1px solid #f2f2f2;\n    background-color: white;\n    border-radius: 7px;\n    color: #333;\n}\n\n.userdash-user-ridesrequest-box {\n    display: flex;\n    flex-direction: column;\n    align-items: initial;\n    margin: 50px 0;\n}\n\n.userdash-user-rides {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-ridenumber {\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    padding: 10px;\n    width: 100%;\n}\n\n.userdash-user-comments textarea {\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    font-style: italic;\n    font-weight: 100;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    width: 100%;\n}\n\n.userdash-user-comments {\n    width: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.userdash-updateinfo-btn {\n    width: 100%;\n    padding: 12px;\n    font-size: 1.75rem;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n.userdash-updateinfo-btn:hover,\n.userdash-updateinfo-btn:focus,\n.userdash-updateinfo-btn:active {\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n    outline: none;\n}\n\n@media (min-width:768px){\n\n    .userdash-icons-title {\n        font-size: 4.5rem;\n    }\n\n    .userdash-sideanduser-container {\n        display: flex;\n        flex-direction: row;\n    }\n\n    .userdash-sidebar-container {\n        width: 50%;\n        padding-left: 0px;\n        padding-top: 150px;\n    }\n\n    .userdash-user-container {\n        width: 100%;\n        padding: 110px 0 80px;\n\n    }\n\n    .userdash-user-title {\n        font-size: 4rem;\n    }\n\n    .userdash-user-ridesrequest-box {\n        display: flex;\n        flex-direction: row;\n        align-items: center;\n    }\n\n    .userdash-user-comments textarea {\n        width: 90%;\n    }\n\n    .userdash-user-comments {\n        width: 50%;\n    }\n\n    .userdash-ridenumber {\n        width: 70%;\n        text-align: center;\n    }\n\n    .userdash-user-rides {\n        width: 50%;\n        margin-bottom: 0px;\n    }\n\n}\n\n@media (min-width:992px) {\n    .userdash-sidebar-container {\n        width: 45%;\n    }\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 317 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getCustomerInfo = getCustomerInfo;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getCustomerInfo() {
+	  return _axios2.default.get('/customerinfo').then(function (res) {
+	    return res.data;
+	  });
+	}
+
+/***/ },
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32764,17 +32892,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _cityDetailsService = __webpack_require__(318);
+	var _cityDetailsService = __webpack_require__(319);
 
 	var _CityBottomBanner = __webpack_require__(299);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesEstimateForm = __webpack_require__(319);
+	var _CitiesEstimateForm = __webpack_require__(320);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	__webpack_require__(323);
+	__webpack_require__(324);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33111,7 +33239,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 318 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33134,7 +33262,7 @@
 	}
 
 /***/ },
-/* 319 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33153,9 +33281,9 @@
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _estimateFormService = __webpack_require__(320);
+	var _estimateFormService = __webpack_require__(321);
 
-	__webpack_require__(321);
+	__webpack_require__(322);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33276,7 +33404,7 @@
 	                _react2.default.createElement(
 	                  'div',
 	                  null,
-	                  'Lyft'
+	                  'Shyft'
 	                )
 	              ),
 	              _react2.default.createElement('div', { className: 'divider' }),
@@ -33310,7 +33438,7 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 320 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33340,13 +33468,13 @@
 	}
 
 /***/ },
-/* 321 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(322);
+	var content = __webpack_require__(323);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33366,7 +33494,7 @@
 	}
 
 /***/ },
-/* 322 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33380,13 +33508,13 @@
 
 
 /***/ },
-/* 323 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(324);
+	var content = __webpack_require__(325);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33406,7 +33534,7 @@
 	}
 
 /***/ },
-/* 324 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
