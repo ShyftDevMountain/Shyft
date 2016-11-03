@@ -22,6 +22,50 @@ var corsOptions = {
 
 
 
+
+
+
+passport.use(new FacebookStrategy({
+    clientID: '690120977818625',
+    clientSecret: '27892e3ea50e3b10a4890159da63298b',
+    callbackURL: "http://localhost:8000/auth/facebook/callback"
+
+  },
+
+  function(accessToken, refreshToken, profile, next) {
+
+          db.find_user([profile.id], function(err, user){
+              if (err) return done(err);
+
+              if (!user[0]) {
+                db.add_user([profile.id],  function(err, response){
+                      if (err) {
+                        // console.log('error', err);
+                      }
+                      // console.log('success', response);
+                        return next(null, response)
+                });
+              }
+          });
+        next(null, profile);
+    }
+));
+
+passport.serializeUser(function(user, done) {
+  // this is putting the user.id into the whole session
+  console.log(user)
+  done(null, user);
+});
+
+passport.deserializeUser(function(id, done) {
+  // add in the database call
+    db.find_user([id], function(err, user) {
+      // req.session.userid = user[0].userid;
+
+    done(err, user[0]);
+  });
+});
+
 var app = express();
 module.exports = app;
 
@@ -29,8 +73,19 @@ var massiveInstance = massive.connectSync({connectionString: connectionString});
 
 app.set('db', db);
 app.use(cors(corsOptions));
+
+
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/src'));
+
+app.use(passport.initialize())
+app.use(passport.session())
+
+app.use(session({
+    secret: config.config.secret,
+    saveUninitialized: true,
+    resave: true
+}));
 
 ///Controllers///
 var citiesCtrl = require('./server/controllers/citiesCtrl.js');
@@ -55,6 +110,7 @@ app.put('/cancel', ridesCtrl.cancelRide);
 //Customer Requests
 
 app.get('/customerinfo', customerCtrl.getCustomer);
+app.put('/customerinfo', customerCtrl.updateCustomer);
 
 // *********************************************************************************************************************************************************
 // FB
@@ -62,55 +118,12 @@ app.get('/customerinfo', customerCtrl.getCustomer);
 
 // sesssion
 // maybe we'll use sessions later
-app.use(session({
-    secret: config.config.secret,
-    saveUninitialized: true,
-    resave: true
-}));
 
-app.use(passport.initialize())
-app.use(passport.session())
 
-passport.serializeUser(function(user, done) {
-  // this is putting the user.id into the whole session
-  done(null, user.id);
-});
 
-passport.deserializeUser(function(id, done) {
-  // add in the database call
-    db.find_user([id], function(err, user) {
-      // req.session.userid = user[0].userid;
 
-    done(err, user[0]);
-  });
-});
 
-passport.use(new FacebookStrategy({
-    clientID: '690120977818625',
-    clientSecret: '27892e3ea50e3b10a4890159da63298b',
-    callbackURL: "http://localhost:8000/auth/facebook/callback"
 
-  },
-
-  function(accessToken, refreshToken, profile, done) {
-        console.log(profile);
-
-          db.find_user([profile.id], function(err, user){
-              if (err) return done(err);
-
-              if (!user[0]) {
-                db.add_user([profile.id],  function(err, response){
-                      if (err) {
-                        console.log("*****************", err);
-                      }
-                      console.log('*********************', response);
-                        return done(null, response)
-                });
-              }
-          });
-        done(null, profile);
-    }
-));
 
 // direct user to Fb to login
 

@@ -4,13 +4,7 @@ import {render} from 'react-dom';
 import EditInfoModal from '../EditInfoModal/EditInfoModal.jsx';
 import './UserDashboardComp.css';
 import {getCustomerInfo} from '../../../services/dashboardService.js';
-
-
-
-
-
-
-
+import {updateCustomerInfo} from '../../../services/dashboardService.js';
 
 
 
@@ -34,9 +28,6 @@ class UserDashboardComp extends React.Component{
           })
       })
   }
-
-
-
 
     render(){
         return (

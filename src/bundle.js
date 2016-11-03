@@ -70,19 +70,19 @@
 
 	var _HomeComp2 = _interopRequireDefault(_HomeComp);
 
-	var _CitiesComp = __webpack_require__(290);
+	var _CitiesComp = __webpack_require__(291);
 
 	var _CitiesComp2 = _interopRequireDefault(_CitiesComp);
 
-	var _RidesComp = __webpack_require__(305);
+	var _RidesComp = __webpack_require__(306);
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(311);
+	var _UserDashboardComp = __webpack_require__(312);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(314);
+	var _CityDetails = __webpack_require__(319);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -28278,7 +28278,7 @@
 	                        _react2.default.createElement(
 	                          'a',
 	                          { href: '#' },
-	                          'Lyft For Good'
+	                          'Shyft For Good'
 	                        )
 	                      ),
 	                      _react2.default.createElement(
@@ -28305,7 +28305,7 @@
 	                        _react2.default.createElement(
 	                          'a',
 	                          { href: '#' },
-	                          'Lyft Promo Code'
+	                          'Shyft Promo Code'
 	                        )
 	                      )
 	                    )
@@ -28457,7 +28457,7 @@
 
 
 	// module
-	exports.push([module.id, ".footer {\n  background-color: #333447;\n  color:#F3F3F5;\n  line-height: 1.5;\n  font-size: 16px;\n  width:100%;\n  text-align: center;\n  padding-bottom: 1.5rem;\n  padding-top:1.5rem;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.footer-links {\n  margin-bottom:4rem;\n}\n\n.footer ul{\n  list-style-type: none;\n}\n\n.footer-links ul {\n  margin-top:2rem;\n}\n\n.footer-buttons {\n  margin-bottom:4rem;\n}\n\n.footer a {\n  color: #F3F3F5;\n}\n\n.footer a:hover {\n  color: #b30086;\n  text-decoration: underline;\n}\n\n.footer-title {\n  font-weight: bold;\n  font-size: 18px;\n  padding-bottom: 5px;\n}\n\n.footer-sign-up-button {\n  font-size:16px;\n  width:160px;\n  height:48px;\n  margin-bottom:10px;\n  background-color:#cc0099;\n  border-color:#cc0099;\n  border-radius:10px;\n}\n\n.footer .btn:hover {\n  color:#F3F3F5;\n}\n\n.footer-store img {\n  width:160px;\n  height:48px;\n  border-radius:10px;\n  margin-bottom: 10px;\n}\n\n.footer .border-t {\n  border-top: 1px solid #F3F3F5;\n  padding-top: 1.5rem;\n}\n\n.footer .x {\n  display:flex;\n  justify-content: center;\n}\n\n.footer .logo-circle {\n  height:50px;\n  width:50px;\n  border: #F3F3F5 1.5px solid;\n  border-radius:100%;\n  margin-right:10px;\n  margin-bottom:1.5rem;\n}\n\n.footer .justify-center {\n  justify-content:center;\n}\n\n.footer .xs-col {\n  flex: 0 0 100%;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n}\n\n.footer .justify-between {\n  justify-content: space-between;\n}\n\n\n.footer .row {\n  display:flex;\n  flex-wrap: wrap;\n  margin-left: -0.9375rem;\n  margin-right: -0.9375rem;\n}\n\n\n\n@media(min-width: 544px) {\n    .footer {\n      text-align: left;\n    }\n\n  .footer .flex-sm {\n    display:flex;\n  }\n\n\n\n}\n\n@media (min-width: 768px) {\n  .footer {\n    padding-left: 4rem;\n    padding-right:4rem;\n  }\n\n\n  .footer .text-md-right {\n    text-align: right;\n  }\n\n  .footer .medium-col {\n    flex: 0 0 16.66667%;\n  }\n\n   .footer .med-6-col {\n    flex: 0 0 50%;\n  }\n\n  .footer .justify-between-md {\n    justify-content: space-between;\n  }\n}\n\n\n@media (min-width: 992px) {\n  .footer .lg-col {\n    flex: 0 0 33.33333%;\n  }\n}\n", ""]);
+	exports.push([module.id, ".footer {\n  background-color: #333447;\n  color:#F3F3F5;\n  line-height: 1.5;\n  font-size: 16px;\n  width:100%;\n  text-align: center;\n  padding-bottom: 1.5rem;\n  padding-top:1.5rem;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.footer-links {\n  margin-bottom:4rem;\n}\n\n.footer ul{\n  list-style-type: none;\n  padding-left: 0;\n}\n\n.footer-links ul {\n  margin-top:2rem;\n}\n\n.footer-buttons {\n  margin-bottom:4rem;\n}\n\n.footer a {\n  color: #F3F3F5;\n}\n\n.footer a:hover {\n  color: #b30086;\n  text-decoration: underline;\n}\n\n.footer-title {\n  font-weight: bold;\n  font-size: 18px;\n  padding-bottom: 5px;\n}\n\n.footer-sign-up-button {\n  font-size:16px;\n  width:160px;\n  height:48px;\n  margin-bottom:10px;\n  background-color:#cc0099;\n  border-color:#cc0099;\n  border-radius:10px;\n}\n\n.footer .btn:hover {\n  color:#F3F3F5;\n}\n\n.footer-store img {\n  width:160px;\n  height:48px;\n  border-radius:10px;\n  margin-bottom: 10px;\n}\n\n.footer .border-t {\n  border-top: 1px solid #F3F3F5;\n  padding-top: 1.5rem;\n}\n\n.footer .x {\n  display:flex;\n  justify-content: center;\n}\n\n.footer .logo-circle {\n  height:50px;\n  width:50px;\n  border: #F3F3F5 1.5px solid;\n  border-radius:100%;\n  margin-right:10px;\n  margin-bottom:1.5rem;\n}\n\n.footer .justify-center {\n  justify-content:center;\n}\n\n.footer .xs-col {\n  flex: 0 0 100%;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n}\n\n.footer .justify-between {\n  justify-content: space-between;\n}\n\n\n.footer .row {\n  display:flex;\n  flex-wrap: wrap;\n  margin-left: -0.9375rem;\n  margin-right: -0.9375rem;\n}\n\n\n\n@media(min-width: 544px) {\n    .footer {\n      text-align: left;\n    }\n\n  .footer .flex-sm {\n    display:flex;\n  }\n\n\n\n}\n\n@media (min-width: 768px) {\n  .footer {\n    padding-left: 4rem;\n    padding-right:4rem;\n  }\n\n\n  .footer .text-md-right {\n    text-align: right;\n  }\n\n  .footer .medium-col {\n    flex: 0 0 16.66667%;\n  }\n\n   .footer .med-6-col {\n    flex: 0 0 50%;\n  }\n\n  .footer .justify-between-md {\n    justify-content: space-between;\n  }\n}\n\n\n@media (min-width: 992px) {\n  .footer .lg-col {\n    flex: 0 0 33.33333%;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -30212,11 +30212,11 @@
 
 	var _MainJumbotron2 = _interopRequireDefault(_MainJumbotron);
 
-	var _RidesInMinutes = __webpack_require__(284);
+	var _RidesInMinutes = __webpack_require__(285);
 
 	var _RidesInMinutes2 = _interopRequireDefault(_RidesInMinutes);
 
-	var _FourWaysToRide = __webpack_require__(287);
+	var _FourWaysToRide = __webpack_require__(288);
 
 	var _FourWaysToRide2 = _interopRequireDefault(_FourWaysToRide);
 
@@ -30275,6 +30275,10 @@
 
 	__webpack_require__(282);
 
+	var _BackgroundComponent = __webpack_require__(284);
+
+	var _BackgroundComponent2 = _interopRequireDefault(_BackgroundComponent);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30299,24 +30303,7 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'MainJumbotron-container' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'MainJumbotron-title' },
-	                        'Rides in Minutes'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'btn btn-primary MainJumbotron-btn' },
-	                        _react2.default.createElement(
-	                            _reactRouter.Link,
-	                            { to: '/userdashboard' },
-	                            'Sign Up Now'
-	                        )
-	                    )
-	                ),
+	                _react2.default.createElement(_BackgroundComponent2.default, null),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'MainJumbotron-btm-banner' },
@@ -30331,7 +30318,7 @@
 	                        _react2.default.createElement(
 	                            _reactRouter.Link,
 	                            { to: '/rides' },
-	                            'Ride With Lyft'
+	                            'Ride With Shyft'
 	                        )
 	                    )
 	                )
@@ -30381,7 +30368,7 @@
 
 
 	// module
-	exports.push([module.id, ".MainJumbotron-container {\n    background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 768px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n", ""]);
+	exports.push([module.id, ".MainJumbotron-container {\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-container.bg1 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n}\n\n.MainJumbotron-container.bg2 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-2-coffee.b2dab586.jpg');\n}\n\n.MainJumbotron-container.bg3 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-1-windshield.db7c8d1d.jpg');\n}\n\n.MainJumbotron-container.bg4 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-3-mom.7b5dfd46.jpg');\n\n}\n\n.MainJumbotron-container.bg5 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-4-profile.8b01a30e.jpg');\n\n}\n\n.MainJumbotron-container.bg6 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-5-backseat.ea3b7cce.jpg');\n\n}\n\n.MainJumbotron-container.bg7 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-6-night.ad428c78.jpg');\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 768px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -30402,7 +30389,100 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(285);
+	var _reactRouter = __webpack_require__(172);
+
+	__webpack_require__(282);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var test = 1;
+
+	var BackgroundComponent = function (_React$Component) {
+	  _inherits(BackgroundComponent, _React$Component);
+
+	  function BackgroundComponent(props) {
+	    _classCallCheck(this, BackgroundComponent);
+
+	    var _this = _possibleConstructorReturn(this, (BackgroundComponent.__proto__ || Object.getPrototypeOf(BackgroundComponent)).call(this, props));
+
+	    _this.state = {
+	      jumboBg: 'MainJumbotron-container bg1'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(BackgroundComponent, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var self = this;
+	      this.timer = setInterval(function () {
+	        if (test === 7) {
+	          test = 0;
+	        }
+	        test++;
+	        self.setState({
+	          jumboBg: 'MainJumbotron-container bg' + test
+	        });
+	      }, 5000);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      clearInterval(this.timer);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: this.state.jumboBg },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'MainJumbotron-title' },
+	          'Rides in Minutes'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'btn btn-primary MainJumbotron-btn' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/userdashboard' },
+	            'Sign Up Now'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return BackgroundComponent;
+	}(_react2.default.Component);
+
+	exports.default = BackgroundComponent;
+
+/***/ },
+/* 285 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(286);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30529,13 +30609,13 @@
 	exports.default = RidesInMinutes;
 
 /***/ },
-/* 285 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(286);
+	var content = __webpack_require__(287);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30555,7 +30635,7 @@
 	}
 
 /***/ },
-/* 286 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30569,7 +30649,7 @@
 
 
 /***/ },
-/* 287 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30584,7 +30664,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(288);
+	__webpack_require__(289);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30655,12 +30735,12 @@
 	                                        _react2.default.createElement(
 	                                            'h3',
 	                                            { className: 'text-thin m-b-s p-l-m-sm', 'data-reactid': '150' },
-	                                            'shyft Line'
+	                                            'Shyft Line'
 	                                        ),
 	                                        _react2.default.createElement(
 	                                            'p',
 	                                            { className: 'm-b-0 ' },
-	                                            'Lyft Line is a shared ride. It matches you with others going the same way, so you can split the cost. Price is fixed upfront and always less than original Lyft. Available in select U.S. cities.'
+	                                            'Shyft Line is a shared ride. It matches you with others going the same way, so you can split the cost. Price is fixed upfront and always less than original Shyft. Available in select U.S. cities.'
 	                                        ),
 	                                        _react2.default.createElement(
 	                                            'p',
@@ -30683,12 +30763,12 @@
 	                                        _react2.default.createElement(
 	                                            'h3',
 	                                            { className: 'text-thin m-b-s p-l-m-sm', 'data-reactid': '150' },
-	                                            'shyft'
+	                                            'Shyft'
 	                                        ),
 	                                        _react2.default.createElement(
 	                                            'p',
 	                                            { className: 'm-b-0 ' },
-	                                            'Lyft is your personal ride. Whether you\u2019re traveling solo or with up to three friends, this sedan is yours to fill. Available nationwide.'
+	                                            'Shyft is your personal ride. Whether you\u2019re traveling solo or with up to three friends, this sedan is yours to fill. Available nationwide.'
 	                                        )
 	                                    )
 	                                ),
@@ -30702,12 +30782,12 @@
 	                                        _react2.default.createElement(
 	                                            'h3',
 	                                            { className: 'text-thin m-b-s p-l-m-sm', 'data-reactid': '150' },
-	                                            'shyft Plus'
+	                                            'Shyft Plus'
 	                                        ),
 	                                        _react2.default.createElement(
 	                                            'p',
 	                                            { className: 'm-b-0 ' },
-	                                            'Lyft Plus is a supersized ride with six seats for when you need more space or just want to roll with the entire squad. Available nationwide.'
+	                                            'Shyft Plus is a supersized ride with six seats for when you need more space or just want to roll with the entire squad. Available nationwide.'
 	                                        )
 	                                    )
 	                                ),
@@ -30721,12 +30801,12 @@
 	                                        _react2.default.createElement(
 	                                            'h3',
 	                                            { className: 'text-thin m-b-s p-l-m-sm', 'data-reactid': '150' },
-	                                            'shyft Line'
+	                                            'Shyft Line'
 	                                        ),
 	                                        _react2.default.createElement(
 	                                            'p',
 	                                            { className: 'm-b-0 ' },
-	                                            'Lyft Premier is your high-end ride. From business trips to a night on the town, it\u2019s the perfect way to add a little luxury and arrive in style. Available in select U.S. cities.'
+	                                            'Shyft Premier is your high-end ride. From business trips to a night on the town, it\u2019s the perfect way to add a little luxury and arrive in style. Available in select U.S. cities.'
 	                                        )
 	                                    )
 	                                )
@@ -30744,13 +30824,13 @@
 	exports.default = FourWaysToRide;
 
 /***/ },
-/* 288 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(289);
+	var content = __webpack_require__(290);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30770,7 +30850,7 @@
 	}
 
 /***/ },
-/* 289 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30784,7 +30864,7 @@
 
 
 /***/ },
-/* 290 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30803,17 +30883,17 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	__webpack_require__(291);
+	__webpack_require__(292);
 
-	var _CitiesJumbotron = __webpack_require__(293);
+	var _CitiesJumbotron = __webpack_require__(294);
 
 	var _CitiesJumbotron2 = _interopRequireDefault(_CitiesJumbotron);
 
-	var _CityBottomBanner = __webpack_require__(299);
+	var _CityBottomBanner = __webpack_require__(300);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesListComp = __webpack_require__(302);
+	var _CitiesListComp = __webpack_require__(303);
 
 	var _CitiesListComp2 = _interopRequireDefault(_CitiesListComp);
 
@@ -30855,13 +30935,13 @@
 	exports.default = CitiesComp;
 
 /***/ },
-/* 291 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(292);
+	var content = __webpack_require__(293);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30881,7 +30961,7 @@
 	}
 
 /***/ },
-/* 292 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30895,7 +30975,7 @@
 
 
 /***/ },
-/* 293 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30910,15 +30990,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactGeosuggestPlus = __webpack_require__(294);
+	var _reactGeosuggestPlus = __webpack_require__(295);
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _citiesListService = __webpack_require__(296);
+	var _citiesListService = __webpack_require__(297);
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(297);
+	__webpack_require__(298);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31034,7 +31114,7 @@
 	exports.default = CitiesJumbotron;
 
 /***/ },
-/* 294 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global google */
@@ -31059,7 +31139,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _GeosuggestItem = __webpack_require__(295);
+	var _GeosuggestItem = __webpack_require__(296);
 
 	var _GeosuggestItem2 = _interopRequireDefault(_GeosuggestItem);
 
@@ -31709,7 +31789,7 @@
 
 
 /***/ },
-/* 295 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
@@ -31839,7 +31919,7 @@
 
 
 /***/ },
-/* 296 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31881,13 +31961,13 @@
 	}
 
 /***/ },
-/* 297 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(298);
+	var content = __webpack_require__(299);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -31907,7 +31987,7 @@
 	}
 
 /***/ },
-/* 298 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -31921,7 +32001,7 @@
 
 
 /***/ },
-/* 299 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31938,7 +32018,7 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(300);
+	__webpack_require__(301);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31978,7 +32058,7 @@
 	                _react2.default.createElement(
 	                  'h2',
 	                  { className: 'h2ForContent' },
-	                  'Make up to $35/hr driving with Lyft.'
+	                  'Make up to $35/hr driving with Shyft.'
 	                ),
 	                _react2.default.createElement(
 	                  'a',
@@ -32001,13 +32081,13 @@
 	exports.default = CityBottomBanner;
 
 /***/ },
-/* 300 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(301);
+	var content = __webpack_require__(302);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32027,7 +32107,7 @@
 	}
 
 /***/ },
-/* 301 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32041,7 +32121,7 @@
 
 
 /***/ },
-/* 302 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32058,9 +32138,9 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	var _citiesListService = __webpack_require__(296);
+	var _citiesListService = __webpack_require__(297);
 
-	__webpack_require__(303);
+	__webpack_require__(304);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32152,13 +32232,13 @@
 	exports.default = CitiesList;
 
 /***/ },
-/* 303 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(304);
+	var content = __webpack_require__(305);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32178,7 +32258,7 @@
 	}
 
 /***/ },
-/* 304 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32192,7 +32272,7 @@
 
 
 /***/ },
-/* 305 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32207,11 +32287,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _RequestRide = __webpack_require__(306);
+	var _RequestRide = __webpack_require__(307);
 
 	var _RequestRide2 = _interopRequireDefault(_RequestRide);
 
-	__webpack_require__(309);
+	__webpack_require__(310);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32250,7 +32330,7 @@
 	exports.default = Rides;
 
 /***/ },
-/* 306 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32265,7 +32345,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(307);
+	__webpack_require__(308);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32301,13 +32381,13 @@
 	exports.default = RequestRide;
 
 /***/ },
-/* 307 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(308);
+	var content = __webpack_require__(309);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32327,7 +32407,7 @@
 	}
 
 /***/ },
-/* 308 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32341,13 +32421,13 @@
 
 
 /***/ },
-/* 309 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(310);
+	var content = __webpack_require__(311);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32367,7 +32447,7 @@
 	}
 
 /***/ },
-/* 310 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32381,7 +32461,7 @@
 
 
 /***/ },
-/* 311 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32398,11 +32478,13 @@
 
 	var _reactDom = __webpack_require__(34);
 
-	var _EditInfoModal = __webpack_require__(322);
+	var _EditInfoModal = __webpack_require__(313);
 
 	var _EditInfoModal2 = _interopRequireDefault(_EditInfoModal);
 
-	__webpack_require__(312);
+	__webpack_require__(316);
+
+	var _dashboardService = __webpack_require__(318);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32415,13 +32497,31 @@
 	var UserDashboardComp = function (_React$Component) {
 	    _inherits(UserDashboardComp, _React$Component);
 
-	    function UserDashboardComp() {
+	    function UserDashboardComp(props) {
 	        _classCallCheck(this, UserDashboardComp);
 
-	        return _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).call(this, props));
+
+	        _this.state = {};
+	        return _this;
 	    }
 
 	    _createClass(UserDashboardComp, [{
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {
+	            var _this2 = this;
+
+	            (0, _dashboardService.getCustomerInfo)().then(function (res) {
+	                res = res[0];
+	                _this2.setState({
+	                    name: res.name,
+	                    email: res.email,
+	                    phone: res.phone,
+	                    fb: res.fb
+	                });
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -32469,7 +32569,9 @@
 	                            _react2.default.createElement(
 	                                'h4',
 	                                { className: 'userdash-welcome' },
-	                                'Welcome Johnny!'
+	                                'Welcome ',
+	                                this.state.fb,
+	                                '!'
 	                            )
 	                        )
 	                    ),
@@ -32496,7 +32598,7 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-user-info' },
-	                                    'Stuff goes here'
+	                                    this.state.name
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -32510,7 +32612,7 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-user-info' },
-	                                    'Stuff goes here'
+	                                    this.state.phone
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -32524,7 +32626,7 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-user-info' },
-	                                    'Stuff goes here'
+	                                    this.state.email
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -32580,13 +32682,136 @@
 	exports.default = UserDashboardComp;
 
 /***/ },
-/* 312 */
+/* 313 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(314);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var EditInfoModal = function (_React$Component) {
+	    _inherits(EditInfoModal, _React$Component);
+
+	    function EditInfoModal() {
+	        _classCallCheck(this, EditInfoModal);
+
+	        return _possibleConstructorReturn(this, (EditInfoModal.__proto__ || Object.getPrototypeOf(EditInfoModal)).apply(this, arguments));
+	    }
+
+	    _createClass(EditInfoModal, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'editinfo-modal' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'editinfo-info-container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'editinfo-update-container' },
+	                            _react2.default.createElement(
+	                                'form',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'editinfo-update-content' },
+	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'editinfo-update-content' },
+	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'editinfo-update-content' },
+	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return EditInfoModal;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = EditInfoModal;
+
+/***/ },
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(313);
+	var content = __webpack_require__(315);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./EditInfoModal.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./EditInfoModal.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 315 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".editinfo-modal {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    z-index: 1000;\n}\n\n.editinfo-info-container {\n    position: relative;\n    margin: 85px auto;\n    height: 500px;\n    background: #fff;\n    width: 80%;\n}\n\n.editinfo-update-content {\n    width: 80%;\n    height: auto;\n    border: 1px solid gray;\n    border-radius: 7px;\n    padding: 10px;\n    margin: 10px auto;\n}\n\n.editinfo-update-content input {\n    padding: 10px;\n    border-radius: 7px;\n    border: 1px solid lightgray;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 316 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(317);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32606,7 +32831,7 @@
 	}
 
 /***/ },
-/* 313 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32620,7 +32845,37 @@
 
 
 /***/ },
-/* 314 */
+/* 318 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getCustomerInfo = getCustomerInfo;
+	exports.updateCustomerInfo = updateCustomerInfo;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getCustomerInfo() {
+	  return _axios2.default.get('/customerinfo').then(function (res) {
+	    return res.data;
+	  });
+	}
+
+	function updateCustomerInfo(name, email, phone) {
+	  return _axios2.default.put('/customerinfo', { name: name, email: email, phone: phone }).then(function (res) {
+	    return res.data;
+	  });
+	}
+
+/***/ },
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32635,17 +32890,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _cityDetailsService = __webpack_require__(315);
+	var _cityDetailsService = __webpack_require__(320);
 
-	var _CityBottomBanner = __webpack_require__(299);
+	var _CityBottomBanner = __webpack_require__(300);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesEstimateForm = __webpack_require__(316);
+	var _CitiesEstimateForm = __webpack_require__(321);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	__webpack_require__(320);
+	__webpack_require__(325);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32982,7 +33237,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 315 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33005,7 +33260,7 @@
 	}
 
 /***/ },
-/* 316 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33020,13 +33275,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactGeosuggestPlus = __webpack_require__(294);
+	var _reactGeosuggestPlus = __webpack_require__(295);
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _estimateFormService = __webpack_require__(317);
+	var _estimateFormService = __webpack_require__(322);
 
-	__webpack_require__(318);
+	__webpack_require__(323);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33147,7 +33402,7 @@
 	                _react2.default.createElement(
 	                  'div',
 	                  null,
-	                  'Lyft'
+	                  'Shyft'
 	                )
 	              ),
 	              _react2.default.createElement('div', { className: 'divider' }),
@@ -33181,7 +33436,7 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 317 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33211,13 +33466,13 @@
 	}
 
 /***/ },
-/* 318 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(319);
+	var content = __webpack_require__(324);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33237,7 +33492,7 @@
 	}
 
 /***/ },
-/* 319 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33251,13 +33506,13 @@
 
 
 /***/ },
-/* 320 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(321);
+	var content = __webpack_require__(326);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33277,131 +33532,6 @@
 	}
 
 /***/ },
-/* 321 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".cityDetails-jumbotron-container {\n  background-size: cover;\n  height: 60vh;\n  text-align: center;\n  background-position: center;\n  background-repeat: no-repeat;\n  display: flex;\n}\n\n.cityDetails-jumbotron-title {\n  color: #F3F3F5;\n  font-size: 3.1rem;\n  margin-bottom: 20px;\n  font-weight: bolder;\n}\n\n.cityDetails-jumbotron-container .MainJumbotron-btn {\n  width: 110px;\n  font-weight: 400;\n  font-size: 1.4rem;\n}\n\n\n.jumbo-wrap {\n  -ms-align-self: center;\n  align-self: center;\n}\n\n.icons-wrap div {\n  margin-bottom: 25px;\n}\n\n.icons-wrap img {\n  margin-bottom: 10px;\n  height: 5.5rem;\n  width: 5.5rem;\n}\n\n.cityDetails-howShyftWorks {\n  margin-bottom: 4rem;\n  margin-top: 4rem;\n  max-width: 45rem;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.howitworksDescrip {\n  margin-bottom: 6rem;\n  width: 70%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.howitworkstable {\n  justify-content: center;\n  display: flex;\n  margin-top: 1rem;\n}\n\n.cityDetails-howShyftWorks h2 {\n  padding-bottom: 20px;\n  font-size: 3rem;\n  padding-top: 28px;\n}\n\n.cityDetails-howShyftWorks p {\n  font-size: 1.8rem;\n  font-weight: 100;\n  line-height: 3rem;\n}\n\n.clock-icon {\n  background-repeat: no-repeat;\n}\n.cityDetailsMap {\n  background-size: cover;\n  height: 450px;\n  background-position: center;\n  margin-bottom: 20px;\n}\n.cityDetailsEstimate {\n  max-width: 34rem;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetailsEstimate-Wrap {\n  display: flex;\n  padding-bottom: 8rem;\n  padding-top: 5rem;\n  border-color: #D8DCE6;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n}\n\n.estimateform-wrap {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n\n.estimate-description {\n  line-height: 1.8;\n  font-size: 1.8rem;\n  font-weight: 100;\n  padding-top: 10px;\n  text-align: center;\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.estimate-description h2 {\n  margin-bottom: 2rem;\n  font-size: 3rem;\n}\n\n\n.cityDetails-TwoWays {\n  margin-bottom: -12rem;\n  text-align: center!important;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetails-TwoWaysWrap {\n  width: 70%\n}\n\n.cityDetails-TwoWays div:nth-child(1) {\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.cityDetails-TwoWays h2 {\n  margin-top: 4rem;\n  font-size: 3rem;\n}\n\n.cityDetails-TwoWays p {\n  font-size: 1.7rem;\n  line-height: 1.5;\n  font-weight: 100;\n}\n\n.cityDetails-carWrapper {\n  background-position: center;\n  background-size: contain;\n  background-repeat: no-repeat;\n  margin-bottom: 1.5rem;\n  padding: 4rem;\n  max-width: 100%;\n  text-align: center!important;\n}\n\n.cityDetails-carWrapper img {\n  width: 580px;\n  max-width: 100%;\n  vertical-align: middle;\n}\n\n.cityDetails-pricesWrapper {\n  -webkit-box-pack: center;\n  justify-content: center;\n  display: flex;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n  text-align: center;\n  margin-top: 4rem;\n\n}\n\n.cityDetails-prices {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n}\n\n.priceChart-btnwrapper {\n  border-color: #D8DCE6;\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border-width: 1px;\n  border-style: solid;\n  background-color: #F3F3F5;\n  display: flex;\n  text-align: center!important;\n  line-height: 2;\n}\n\n.priceChart-pricing {\n  border-color: #D8DCE6;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  margin-top: -1px;\n  border: 1px solid #D8DCE6;\n  line-height: 2;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  padding-right: 1.5rem;\n  padding-left: 1.5rem;\n  font-size: 1.7rem;\n  font-weight: 100;\n}\n\n.pricingTable {\n  width: 100%;\n  background-color: transparent;\n}\n\ntr td {\n  text-align: left;\n}\n\n\n.pricechart-btn {\n  border-color: #D8DCE6;\n  font-size: 1.9rem;\n  background-color: transparent;\n  display: block;\n  width: 100%;\n  font-weight: 200;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  border: .08333rem solid transparent;\n  padding: .75rem 1.25rem;\n  line-height: 1.5;\n  border-radius: .5rem;\n}\n\n.pricechart-btn.active {\n  color: #FF00BF!important;\n  background: #fff;\n}\n\n@media (min-width: 768px) {\n  .cityDetails-jumbotron-title {\n    font-size: 4.3rem;\n  }\n\n  .cityDetails-jumbotron-container .MainJumbotron-btn {\n    width: 160px;\n    font-weight: 600;\n    font-size: 1.8rem;\n  }\n\n  .cityDetails-howShyftWorks {\n    max-width: 85rem;\n  }\n\n  .icons-wrap img {\n    height: 6.5rem;\n    width: 6.5rem;\n  }\n\n  .cityDetails-howShyftWorks h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-howShyftWorks p {\n    font-size: 2.2rem;\n    line-height: 3.8rem;\n  }\n\n  .cityDetailsEstimate {\n    max-width: 92rem;\n  }\n\n  .estimate-description {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    text-align: left;\n    font-size: 2rem;\n  }\n\n  .estimateform-wrap {\n    -webkit-box-flex: 0;\n    flex: 0 0 41.66667%;\n    margin-left: 8.33333%;\n  }\n\n  .cityDetails-TwoWays {\n    max-width: 92vh;\n  }\n\n  .estimate-description h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-TwoWays h2 {\n    margin-top: 5rem;\n    font-size: 3.5rem;\n  }\n\n  .cityDetails-TwoWays p {\n    font-size: 1.9rem;\n    line-height: 1.8;\n  }\n\n  .cityDetails-prices {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    line-height: 2;\n  }\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 322 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(325);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var EditInfoModal = function (_React$Component) {
-	    _inherits(EditInfoModal, _React$Component);
-
-	    function EditInfoModal() {
-	        _classCallCheck(this, EditInfoModal);
-
-	        return _possibleConstructorReturn(this, (EditInfoModal.__proto__ || Object.getPrototypeOf(EditInfoModal)).apply(this, arguments));
-	    }
-
-	    _createClass(EditInfoModal, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'editinfo-modal' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'editinfo-info-container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'editinfo-update-container' },
-	                            _react2.default.createElement(
-	                                'form',
-	                                null,
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'editinfo-update-content' },
-	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'editinfo-update-content' },
-	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'editinfo-update-content' },
-	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return EditInfoModal;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = EditInfoModal;
-
-/***/ },
-/* 323 */,
-/* 324 */,
-/* 325 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(326);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./EditInfoModal.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./EditInfoModal.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
 /* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33410,7 +33540,7 @@
 
 
 	// module
-	exports.push([module.id, ".editinfo-modal {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    z-index: 1000;\n}\n\n.editinfo-info-container {\n    position: relative;\n    margin: 85px auto;\n    height: 500px;\n    background: #fff;\n    width: 80%;\n}\n\n.editinfo-update-content {\n    width: 80%;\n    height: auto;\n    border: 1px solid gray;\n    border-radius: 7px;\n    padding: 10px;\n    margin: 10px auto;\n}\n\n.editinfo-update-content input {\n    padding: 10px;\n    border-radius: 7px;\n    border: 1px solid lightgray;\n}\n", ""]);
+	exports.push([module.id, ".cityDetails-jumbotron-container {\n  background-size: cover;\n  height: 60vh;\n  text-align: center;\n  background-position: center;\n  background-repeat: no-repeat;\n  display: flex;\n}\n\n.cityDetails-jumbotron-title {\n  color: #F3F3F5;\n  font-size: 3.1rem;\n  margin-bottom: 20px;\n  font-weight: bolder;\n}\n\n.cityDetails-jumbotron-container .MainJumbotron-btn {\n  width: 110px;\n  font-weight: 400;\n  font-size: 1.4rem;\n}\n\n\n.jumbo-wrap {\n  -ms-align-self: center;\n  align-self: center;\n}\n\n.icons-wrap div {\n  margin-bottom: 25px;\n}\n\n.icons-wrap img {\n  margin-bottom: 10px;\n  height: 5.5rem;\n  width: 5.5rem;\n}\n\n.cityDetails-howShyftWorks {\n  margin-bottom: 4rem;\n  margin-top: 4rem;\n  max-width: 45rem;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.howitworksDescrip {\n  margin-bottom: 6rem;\n  width: 70%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.howitworkstable {\n  justify-content: center;\n  display: flex;\n  margin-top: 1rem;\n}\n\n.cityDetails-howShyftWorks h2 {\n  padding-bottom: 20px;\n  font-size: 3rem;\n  padding-top: 28px;\n}\n\n.cityDetails-howShyftWorks p {\n  font-size: 1.8rem;\n  font-weight: 100;\n  line-height: 3rem;\n}\n\n.clock-icon {\n  background-repeat: no-repeat;\n}\n.cityDetailsMap {\n  background-size: cover;\n  height: 450px;\n  background-position: center;\n  margin-bottom: 20px;\n}\n.cityDetailsEstimate {\n  max-width: 34rem;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetailsEstimate-Wrap {\n  display: flex;\n  padding-bottom: 8rem;\n  padding-top: 5rem;\n  border-color: #D8DCE6;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n}\n\n.estimateform-wrap {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n\n.estimate-description {\n  line-height: 1.8;\n  font-size: 1.8rem;\n  font-weight: 100;\n  padding-top: 10px;\n  text-align: center;\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.estimate-description h2 {\n  margin-bottom: 2rem;\n  font-size: 3rem;\n}\n\n\n.cityDetails-TwoWays {\n  margin-bottom: -12rem;\n  text-align: center!important;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetails-TwoWaysWrap {\n  width: 70%\n}\n\n.cityDetails-TwoWays div:nth-child(1) {\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.cityDetails-TwoWays h2 {\n  margin-top: 4rem;\n  font-size: 3rem;\n}\n\n.cityDetails-TwoWays p {\n  font-size: 1.7rem;\n  line-height: 1.5;\n  font-weight: 100;\n}\n\n.cityDetails-carWrapper {\n  background-position: center;\n  background-size: contain;\n  background-repeat: no-repeat;\n  margin-bottom: 1.5rem;\n  padding: 4rem;\n  max-width: 100%;\n  text-align: center!important;\n}\n\n.cityDetails-carWrapper img {\n  width: 580px;\n  max-width: 100%;\n  vertical-align: middle;\n}\n\n.cityDetails-pricesWrapper {\n  -webkit-box-pack: center;\n  justify-content: center;\n  display: flex;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n  text-align: center;\n  margin-top: 4rem;\n\n}\n\n.cityDetails-prices {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n}\n\n.priceChart-btnwrapper {\n  border-color: #D8DCE6;\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border-width: 1px;\n  border-style: solid;\n  background-color: #F3F3F5;\n  display: flex;\n  text-align: center!important;\n  line-height: 2;\n}\n\n.priceChart-pricing {\n  border-color: #D8DCE6;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  margin-top: -1px;\n  border: 1px solid #D8DCE6;\n  line-height: 2;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  padding-right: 1.5rem;\n  padding-left: 1.5rem;\n  font-size: 1.7rem;\n  font-weight: 100;\n}\n\n.pricingTable {\n  width: 100%;\n  background-color: transparent;\n}\n\ntr td {\n  text-align: left;\n}\n\n\n.pricechart-btn {\n  border-color: #D8DCE6;\n  font-size: 1.9rem;\n  background-color: transparent;\n  display: block;\n  width: 100%;\n  font-weight: 200;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  border: .08333rem solid transparent;\n  padding: .75rem 1.25rem;\n  line-height: 1.5;\n  border-radius: .5rem;\n}\n\n.pricechart-btn.active {\n  color: #FF00BF!important;\n  background: #fff;\n}\n\n@media (min-width: 768px) {\n  .cityDetails-jumbotron-title {\n    font-size: 4.3rem;\n  }\n\n  .cityDetails-jumbotron-container .MainJumbotron-btn {\n    width: 160px;\n    font-weight: 600;\n    font-size: 1.8rem;\n  }\n\n  .cityDetails-howShyftWorks {\n    max-width: 85rem;\n  }\n\n  .icons-wrap img {\n    height: 6.5rem;\n    width: 6.5rem;\n  }\n\n  .cityDetails-howShyftWorks h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-howShyftWorks p {\n    font-size: 2.2rem;\n    line-height: 3.8rem;\n  }\n\n  .cityDetailsEstimate {\n    max-width: 92rem;\n  }\n\n  .estimate-description {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    text-align: left;\n    font-size: 2rem;\n  }\n\n  .estimateform-wrap {\n    -webkit-box-flex: 0;\n    flex: 0 0 41.66667%;\n    margin-left: 8.33333%;\n  }\n\n  .cityDetails-TwoWays {\n    max-width: 92vh;\n  }\n\n  .estimate-description h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-TwoWays h2 {\n    margin-top: 5rem;\n    font-size: 3.5rem;\n  }\n\n  .cityDetails-TwoWays p {\n    font-size: 1.9rem;\n    line-height: 1.8;\n  }\n\n  .cityDetails-prices {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    line-height: 2;\n  }\n}\n", ""]);
 
 	// exports
 
