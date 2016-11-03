@@ -78,19 +78,11 @@
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-<<<<<<< HEAD
 	var _UserDashboardComp = __webpack_require__(331);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
 	var _CityDetails = __webpack_require__(338);
-=======
-	var _UserDashboardComp = __webpack_require__(330);
-
-	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
-
-	var _CityDetails = __webpack_require__(337);
->>>>>>> master
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -32437,7 +32429,7 @@
 	}
 
 	var lyftToken = {
-	  headers: { 'Authorization': 'Bearer "gAAAAABYGlWbMEMn9Sgo900TGeX6PIlaWgjOTJSh4U0TQpXwdg1LQXrataOaK1ryY-pgoW9f8WPUjImNPmHPN2O5bVWihVPbB7z4SQZ3HYOpJmsLHtpalfvuD_sVlaZyFIaezzptXWbLWoikagqU9W860XSentCameqiAZ2B70GbI_vJc25wjjl5Uz5013dtY1_XHCboHPrzpze9teYmJMoew-zMHokylQ=="'
+	  headers: { 'Authorization': 'Bearer "gAAAAABYG6e0ofqwWbOOjz6z1wAsnm809QjRZKziHvLlilzJ5U82hSGRdeBhZirSgc9prOkXID3IV_2cVbZ0OxUPy_wdFYoEwRroPYG6gKBEPCeJGOsErokJ3dFZhfsnHyZuDkvVNKSlkJUTwVKUZBQ9UwZAmGv2O8Uh1yT2qHLuK5z5-ZRrNvhbnk1t25SfuQHS85aoIpOGxMN4OjfbM5A1IaWsTBTN6Q=="'
 	  }
 	};
 
@@ -32465,7 +32457,6 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-<<<<<<< HEAD
 	var _SetPickup = __webpack_require__(311);
 
 	var _SetPickup2 = _interopRequireDefault(_SetPickup);
@@ -32491,33 +32482,6 @@
 	var _Payment2 = _interopRequireDefault(_Payment);
 
 	__webpack_require__(329);
-=======
-	var _SetPickup = __webpack_require__(310);
-
-	var _SetPickup2 = _interopRequireDefault(_SetPickup);
-
-	var _Request = __webpack_require__(313);
-
-	var _Request2 = _interopRequireDefault(_Request);
-
-	var _Cancel = __webpack_require__(316);
-
-	var _Cancel2 = _interopRequireDefault(_Cancel);
-
-	var _StartRide = __webpack_require__(319);
-
-	var _StartRide2 = _interopRequireDefault(_StartRide);
-
-	var _RateRide = __webpack_require__(322);
-
-	var _RateRide2 = _interopRequireDefault(_RateRide);
-
-	var _Payment = __webpack_require__(325);
-
-	var _Payment2 = _interopRequireDefault(_Payment);
-
-	__webpack_require__(328);
->>>>>>> master
 
 	var _GetGoogleMap = __webpack_require__(309);
 
@@ -32549,7 +32513,7 @@
 	        'div',
 	        { className: 'map' },
 	        _react2.default.createElement('div', { className: 'map-page', ref: 'mapCanvas' }),
-	        _react2.default.createElement(_StartRide2.default, null)
+	        _react2.default.createElement(_Request2.default, null)
 	      );
 	    }
 	  }, {
@@ -32622,11 +32586,7 @@
 	exports.default = MapComp;
 
 /***/ },
-<<<<<<< HEAD
 /* 311 */
-=======
-/* 310 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32641,11 +32601,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
 	__webpack_require__(312);
-=======
-	__webpack_require__(311);
->>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32747,21 +32703,13 @@
 	exports.default = SetPickup;
 
 /***/ },
-<<<<<<< HEAD
 /* 312 */
-=======
-/* 311 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-<<<<<<< HEAD
 	var content = __webpack_require__(313);
-=======
-	var content = __webpack_require__(312);
->>>>>>> master
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32779,23 +32727,6 @@
 		// When the module is disposed, remove the <style> tags
 		module.hot.dispose(function() { update(); });
 	}
-<<<<<<< HEAD
-=======
-
-/***/ },
-/* 312 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".RequestRides  {\n      /*background-color: blue;*/\n    height: 20vh;\n    /* margin-left: 22px; */\n    margin-right: 20px;\n    padding-left: 3px;\n    padding-right: 3px;\n    padding-top: 9px;\n    width: 100%;\n    position: absolute;\n    bottom: -15px;\n}\n.second {\n    /*background-color: green;*/\n    width: 100%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 100%;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    flex-direction: column;\n    /*padding: 15px;*/\n\n}\n.fristBox {\n    /*background-color: pink;*/\n    width: 100%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 49px;\n    margin: 7px;\n    display: flex;\n    padding-left: 10px;\n    padding-right: 10px;\n    justify-content: space-between;\n    align-items: center;\n\n}\n.box_for_google_text {\n    display: flex;\n    justify-content: center;\n\n}\n\n.g {\n  color: blue;\n}\n.o {\n  color: red;\n}\n.o2 {\n  color: yellow;\n}\n\n.l {\n  color: green;\n}\n.gps {\n  background-color: rgba(255,255,255,1);\n  border-radius: 2px;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.3);\n  display: block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden;\n  cursor: pointer;\n  transition: background-color 0.16s ease-out;\n  border-radius: 14px;\n  background-image: url(//maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png);\n  background-size: 247px 24px;\n}\n\n\n.secondBox {\n  background-color: #FFFFFF;\n  width: 29%;\n  /* margin-left: 20px; */\n  /* margin-right: 20px; */\n  height: 121px;\n  margin: 7px;\n  justify-content: flex-start;\n  align-items: center;\n  display: flex;\n  border-left-radius: 63px;\n  border-top-left-radius: 28px;\n  border-bottom-left-radius: 28px;\n  border-top-right-radius: 8px;\n  border-bottom-right-radius: 7px;\n\n}\n\n.car_icon {\n      width: 64px;\n          height: 64px;\n      /* background-color: black; */\n      border-radius: 40px;\n      background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);\n      background-size: contain;\n      background-position: center;\n      background-repeat: no-repeat;\n      border-style: solid;\n      border-color: purple;\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-end;\n      align-items: center;\n      background-position-y: 9px;\n      font-size: 13px;\n      padding-bottom: 4px;\n}\n.content {\n  display: flex;\n  flex-direction: column;\n  /* justify-content: flex-start; */\n  width: 77%;\n  align-items: flex-start;\n  /* padding-top: 28px; */\n  height: 40px;\n}\n.location {\n    width: 50%;\n    height: 25px;\n    /* background-color: black; */\n    padding-left: 28px;\n    font-size: 20px;\n}\n.pickup_location {\n    width: 50%;\n    height: 58px;\n    /* background-color: black; */\n    padding-left: 28px;\n    font-size: 12px;\n}\n\n.secondBox2 {\n  /*background-color: pink;*/\n  width: 78%;\n  /* margin-left: 20px; */\n  /* margin-right: 20px; */\n  height: 101px;\n  margin: 7px;\n  justify-content: center;\n  align-items: center;\n  display: flex;\n\n}\n\n.pickup_button {\n\n      width: 37%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 58px;\n    border-style: solid;\n    background-color: #3D0880;\n    border-radius: 7px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: white;\n    border: none;\n    font-size: 22px;\n    border-radius: 8px;\n\n}\n", ""]);
-
-	// exports
-
->>>>>>> master
 
 /***/ },
 /* 313 */
@@ -32845,12 +32776,80 @@
 
 	    return _possibleConstructorReturn(this, (Request.__proto__ || Object.getPrototypeOf(Request)).apply(this, arguments));
 	  }
-<<<<<<< HEAD
 
 	  _createClass(Request, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null);
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'request' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'the-estimate-box' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'car-type-div' },
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement('img', { src: 'https://www.lyft.com/images/cities/classic.6d006a8c.png' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'ride-type-section' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'ride-type-title' },
+	                'Lyft'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'ride-type-desc' },
+	                'Fast ride, 4 seats'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'eta-and-cost' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'the-eta-title' },
+	              'Eta',
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'real-eta' },
+	                '2 min'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'eta-title' },
+	              'Cost',
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'real-eta' },
+	                '$6 - $7'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'address-input origin-address' },
+	            'Start Destination'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'address-input dest-address' },
+	            'End Destination'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'request-shyft-btn btn' },
+	          'Request Ride'
+	        )
+	      );
 	    }
 	  }]);
 
@@ -32894,7 +32893,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".request {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  left:0;\n  right:0;\n  margin-left: auto;\n  margin-right:auto;\n}\n\n.car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.ride-type-section p{\n  margin:0px;\n}\n\n.ride-type-desc {\n  font-size: 12px;\n}\n\n.the-estimate-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.eta-and-cost {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n\n}\n\n.the-eta-title {\n  border-right: 0.5px solid grey;\n  height: 100%;\n  padding-right:10px;\n}\n\n.eta-title {\n  padding-left:10px;\n}\n\n\n.address-input {\n  margin-left:20px;\n}\n\n.request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#FF00BF;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n", ""]);
 
 	// exports
 
@@ -33593,841 +33592,6 @@
 
 	        return _possibleConstructorReturn(this, (EditInfoModal.__proto__ || Object.getPrototypeOf(EditInfoModal)).apply(this, arguments));
 	    }
-=======
->>>>>>> master
-
-	  _createClass(Request, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'request' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'the-estimate-box' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'car-type-div' },
-	            _react2.default.createElement(
-	              'div',
-	              null,
-	              _react2.default.createElement('img', { src: 'https://www.lyft.com/images/cities/classic.6d006a8c.png' })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'ride-type-section' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'ride-type-title' },
-	                'Lyft'
-	              ),
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'ride-type-desc' },
-	                'Fast ride, 4 seats'
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'eta-and-cost' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'the-eta-title' },
-	              'Eta',
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'real-eta' },
-	                '2 min'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'eta-title' },
-	              'Cost',
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'real-eta' },
-	                '$6 - $7'
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'address-input origin-address' },
-	            'Start Destination'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'address-input dest-address' },
-	            'End Destination'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'request-shyft-btn btn' },
-	          'Request Ride'
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Request;
-	}(_react2.default.Component);
-
-	exports.default = Request;
-
-/***/ },
-/* 333 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(334);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./Request.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./Request.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 334 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".request {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  left:0;\n  right:0;\n  margin-left: auto;\n  margin-right:auto;\n}\n\n.car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.ride-type-section p{\n  margin:0px;\n}\n\n.ride-type-desc {\n  font-size: 12px;\n}\n\n.the-estimate-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.eta-and-cost {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n\n}\n\n.the-eta-title {\n  border-right: 0.5px solid grey;\n  height: 100%;\n  padding-right:10px;\n}\n\n.eta-title {\n  padding-left:10px;\n}\n\n\n.address-input {\n  margin-left:20px;\n}\n\n.request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#FF00BF;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 335 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(317);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Cancel = function (_React$Component) {
-	  _inherits(Cancel, _React$Component);
-
-	  function Cancel() {
-	    _classCallCheck(this, Cancel);
-
-	    return _possibleConstructorReturn(this, (Cancel.__proto__ || Object.getPrototypeOf(Cancel)).apply(this, arguments));
-	  }
-
-	  _createClass(Cancel, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement('div', null);
-	    }
-	  }]);
-
-	  return Cancel;
-	}(_react2.default.Component);
-
-	exports.default = Cancel;
-
-/***/ },
-/* 317 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-<<<<<<< HEAD
-	var content = __webpack_require__(336);
-=======
-	var content = __webpack_require__(318);
->>>>>>> master
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./Cancel.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./Cancel.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-<<<<<<< HEAD
-/* 336 */
-=======
-/* 318 */
->>>>>>> master
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-<<<<<<< HEAD
-/* 337 */
-=======
-/* 319 */
->>>>>>> master
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-<<<<<<< HEAD
-	exports.getCustomerInfo = getCustomerInfo;
-	exports.updateCustomerInfo = updateCustomerInfo;
-=======
->>>>>>> master
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(320);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var StartRide = function (_React$Component) {
-	  _inherits(StartRide, _React$Component);
-
-	  function StartRide() {
-	    _classCallCheck(this, StartRide);
-
-	    return _possibleConstructorReturn(this, (StartRide.__proto__ || Object.getPrototypeOf(StartRide)).apply(this, arguments));
-	  }
-
-	  _createClass(StartRide, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement('div', null);
-	    }
-	  }]);
-
-	  return StartRide;
-	}(_react2.default.Component);
-
-	exports.default = StartRide;
-
-/***/ },
-/* 320 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(321);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./StartRide.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./StartRide.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 321 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 322 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(323);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var RateRide = function (_React$Component) {
-	  _inherits(RateRide, _React$Component);
-
-	  function RateRide() {
-	    _classCallCheck(this, RateRide);
-
-	    return _possibleConstructorReturn(this, (RateRide.__proto__ || Object.getPrototypeOf(RateRide)).apply(this, arguments));
-	  }
-
-	  _createClass(RateRide, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement('div', null);
-	    }
-	  }]);
-
-	  return RateRide;
-	}(_react2.default.Component);
-
-	exports.default = RateRide;
-
-/***/ },
-/* 323 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(324);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RateRide.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RateRide.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 324 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 325 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(326);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Payment = function (_React$Component) {
-	  _inherits(Payment, _React$Component);
-
-	  function Payment() {
-	    _classCallCheck(this, Payment);
-
-	    return _possibleConstructorReturn(this, (Payment.__proto__ || Object.getPrototypeOf(Payment)).apply(this, arguments));
-	  }
-
-	  _createClass(Payment, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement('div', null);
-	    }
-	  }]);
-
-	  return Payment;
-	}(_react2.default.Component);
-
-	exports.default = Payment;
-
-/***/ },
-/* 326 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(327);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./Payment.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./Payment.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 327 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 328 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(329);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./MapComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./MapComp.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 329 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n.map {\n height:100vh;\n width:100vw;\n}\n\n.map-page {\n   height:100vh;\n   width:100vw;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 330 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(34);
-
-	var _EditInfoModal = __webpack_require__(331);
-
-	var _EditInfoModal2 = _interopRequireDefault(_EditInfoModal);
-
-	__webpack_require__(334);
-
-	var _dashboardService = __webpack_require__(336);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var UserDashboardComp = function (_React$Component) {
-	    _inherits(UserDashboardComp, _React$Component);
-
-	    _createClass(UserDashboardComp, [{
-	        key: 'componentWillMount',
-	        value: function componentWillMount() {
-	            var _this2 = this;
-
-	            (0, _dashboardService.getCustomerInfo)().then(function (res) {
-	                res = res[0];
-	                _this2.setState({
-	                    name: res.name,
-	                    email: res.email,
-	                    phone: res.phone,
-	                    fb: res.fb
-	                });
-	            });
-	        }
-	    }]);
-
-	    function UserDashboardComp(props) {
-	        _classCallCheck(this, UserDashboardComp);
-
-	        var _this = _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).call(this, props));
-
-	        _this.state = {
-	            updateModal: false
-	        };
-	        _this.updateClick = _this.updateClick.bind(_this);
-	        _this.handleUpdateClose = _this.handleUpdateClose.bind(_this);
-	        return _this;
-	    }
-
-	    _createClass(UserDashboardComp, [{
-	        key: 'updateClick',
-	        value: function updateClick() {
-	            this.setState({
-	                updateModal: true
-	            });
-	        }
-	    }, {
-	        key: 'handleUpdateClose',
-	        value: function handleUpdateClose() {
-	            this.setState({
-	                updateModal: false
-	            });
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'userdash-wrapper' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'userdash-sideanduser-container' },
-	                    _react2.default.createElement(
-	                        'section',
-	                        { className: 'userdash-sidebar-container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'userdash-sidebar-innerbox' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'userdash-user-pic-container' },
-	                                _react2.default.createElement('img', { src: './img/userdash/screaming-kid1.jpg' }),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'userdash-sidebar-item-container' },
-	                                    _react2.default.createElement(
-	                                        'div',
-	                                        { className: 'userdash-sidebar-item' },
-	                                        _react2.default.createElement(
-	                                            'i',
-	                                            { className: 'material-icons userdash-icons' },
-	                                            'nature_people'
-	                                        ),
-	                                        _react2.default.createElement(
-	                                            'span',
-	                                            null,
-	                                            'User'
-	                                        )
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'div',
-	                                        { className: 'userdash-sidebar-item' },
-	                                        _react2.default.createElement(
-	                                            'i',
-	                                            { className: 'material-icons userdash-icons' },
-	                                            'help_outline'
-	                                        ),
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { href: '#' },
-	                                            'Help'
-	                                        )
-	                                    )
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'h4',
-	                                { className: 'userdash-welcome' },
-	                                'Welcome ',
-	                                this.state.fb,
-	                                '!'
-	                            )
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'section',
-	                        { className: 'userdash-user-container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'userdash-user-innerbox' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'userdash-user-title' },
-	                                _react2.default.createElement(
-	                                    'i',
-	                                    { className: 'material-icons userdash-icons-title' },
-	                                    'blur_on'
-	                                ),
-	                                'User Dashboard'
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'userdash-user-infobox' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'userdash-icon-box' },
-	                                    _react2.default.createElement(
-	                                        'i',
-	                                        { className: 'material-icons userdash-icons' },
-	                                        'portrait'
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'userdash-user-info' },
-	                                    this.state.name
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'userdash-user-infobox' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'userdash-icon-box' },
-	                                    _react2.default.createElement(
-	                                        'i',
-	                                        { className: 'material-icons userdash-icons' },
-	                                        'phone_iphone'
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'userdash-user-info' },
-	                                    this.state.phone
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'userdash-user-infobox' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'userdash-icon-box' },
-	                                    _react2.default.createElement(
-	                                        'i',
-	                                        { className: 'material-icons userdash-icons' },
-	                                        'mail_outline'
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'userdash-user-info' },
-	                                    this.state.email
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'userdash-user-ridesrequest-box' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'userdash-user-rides' },
-	                                    _react2.default.createElement(
-	                                        'div',
-	                                        { className: 'userdash-icon-box' },
-	                                        _react2.default.createElement(
-	                                            'i',
-	                                            { className: 'material-icons userdash-icons' },
-	                                            'directions_car'
-	                                        )
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'span',
-	                                        { className: 'userdash-ridenumber' },
-	                                        ' 5'
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'userdash-user-comments' },
-	                                    _react2.default.createElement(
-	                                        'div',
-	                                        { className: 'userdash-icon-box' },
-	                                        _react2.default.createElement(
-	                                            'i',
-	                                            { className: 'material-icons userdash-icons' },
-	                                            'subject'
-	                                        )
-	                                    ),
-	                                    _react2.default.createElement('textarea', { className: 'userdash-textarea', placeholder: 'Comments' })
-	                                )
-	                            ),
-	                            _react2.default.createElement(
-	                                'div',
-	                                null,
-	                                _react2.default.createElement(
-	                                    'button',
-	                                    { className: 'userdash-updateinfo-btn btn btn-primary', onClick: this.updateClick },
-	                                    'Update Info'
-	                                )
-	                            ),
-	                            this.state.updateModal ? _react2.default.createElement(_EditInfoModal2.default, { handleUpdateClose: this.handleUpdateClose }) : null
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-
-	    return UserDashboardComp;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = UserDashboardComp;
-
-/***/ },
-/* 331 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(332);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var EditInfoModal = function (_React$Component) {
-	    _inherits(EditInfoModal, _React$Component);
-
-	    function EditInfoModal() {
-	        _classCallCheck(this, EditInfoModal);
-
-	        return _possibleConstructorReturn(this, (EditInfoModal.__proto__ || Object.getPrototypeOf(EditInfoModal)).apply(this, arguments));
-	    }
 
 	    _createClass(EditInfoModal, [{
 	        key: 'handleUpdateClose',
@@ -34494,13 +33658,13 @@
 	exports.default = EditInfoModal;
 
 /***/ },
-/* 332 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(333);
+	var content = __webpack_require__(334);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34520,7 +33684,7 @@
 	}
 
 /***/ },
-/* 333 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34534,13 +33698,13 @@
 
 
 /***/ },
-/* 334 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(335);
+	var content = __webpack_require__(336);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34560,7 +33724,7 @@
 	}
 
 /***/ },
-/* 335 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34574,7 +33738,7 @@
 
 
 /***/ },
-/* 336 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34583,6 +33747,7 @@
 	  value: true
 	});
 	exports.getCustomerInfo = getCustomerInfo;
+	exports.updateCustomerInfo = updateCustomerInfo;
 
 	var _axios = __webpack_require__(253);
 
@@ -34603,11 +33768,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
 /* 338 */
-=======
-/* 337 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34622,29 +33783,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
 	var _cityDetailsService = __webpack_require__(339);
-=======
-	var _cityDetailsService = __webpack_require__(338);
->>>>>>> master
 
 	var _CityBottomBanner = __webpack_require__(300);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-<<<<<<< HEAD
 	var _CitiesEstimateForm = __webpack_require__(340);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
 	__webpack_require__(344);
-=======
-	var _CitiesEstimateForm = __webpack_require__(339);
-
-	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
-
-	__webpack_require__(343);
->>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34981,11 +34130,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-<<<<<<< HEAD
 /* 339 */
-=======
-/* 338 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35008,11 +34153,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
 /* 340 */
-=======
-/* 339 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35027,7 +34168,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
 	var _reactGeosuggestPlus = __webpack_require__(295);
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
@@ -35035,15 +34175,6 @@
 	var _estimateFormService = __webpack_require__(341);
 
 	__webpack_require__(342);
-=======
-	var _reactGeosuggestPlus = __webpack_require__(294);
-
-	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
-
-	var _estimateFormService = __webpack_require__(340);
-
-	__webpack_require__(341);
->>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35198,11 +34329,7 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-<<<<<<< HEAD
 /* 341 */
-=======
-/* 340 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35232,21 +34359,13 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
 /* 342 */
-=======
-/* 341 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-<<<<<<< HEAD
 	var content = __webpack_require__(343);
-=======
-	var content = __webpack_require__(342);
->>>>>>> master
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -35266,11 +34385,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
 /* 343 */
-=======
-/* 342 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -35284,21 +34399,13 @@
 
 
 /***/ },
-<<<<<<< HEAD
 /* 344 */
-=======
-/* 343 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-<<<<<<< HEAD
 	var content = __webpack_require__(345);
-=======
-	var content = __webpack_require__(344);
->>>>>>> master
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -35318,11 +34425,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
 /* 345 */
-=======
-/* 344 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
