@@ -112,7 +112,9 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        _reactRouter.Router,
-	        { history: _reactRouter.hashHistory },
+	        { onUpdate: function onUpdate() {
+	            return window.scrollTo(0, 0);
+	          }, history: _reactRouter.hashHistory },
 	        _react2.default.createElement(
 	          _reactRouter.Route,
 	          { component: _NavBar2.default },
@@ -32294,7 +32296,11 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
+<<<<<<< HEAD
+	        _react2.default.createElement(_MapComp2.default, { initialCenter: this.state.initialCenter, nearByDrives: this.state.nearByDrives })
+=======
 	        _react2.default.createElement(_MapComp2.default, { initialCenter: this.state.initialCenter, nearbyDrivers: this.state.nearbyDrivers })
+>>>>>>> master
 	      );
 	    }
 	  }]);
@@ -32356,7 +32362,11 @@
 	  value: true
 	});
 	exports.getLocation = getLocation;
+<<<<<<< HEAD
+	exports.getNearByDrivers = getNearByDrivers;
+=======
 	exports.getNearbyDrivers = getNearbyDrivers;
+>>>>>>> master
 
 	var _axios = __webpack_require__(253);
 
@@ -32373,7 +32383,11 @@
 	  }
 	};
 
+<<<<<<< HEAD
+	function getNearByDrivers(cord) {
+=======
 	function getNearbyDrivers(cord) {
+>>>>>>> master
 	  return _axios2.default.get('https://api.lyft.com/v1/drivers?lat=' + cord.lat.toString() + '&lng=' + cord.lng.toString(), lyftToken);
 	}
 
@@ -32514,12 +32528,26 @@
 	    key: 'componentDidUpdate',
 	    value: function componentDidUpdate() {
 	      this.map = this.createMap();
+<<<<<<< HEAD
+	      this.createArray(this.props.nearByDrives);
+=======
 	      this.createArray(this.props.nearbyDrivers);
+>>>>>>> master
 	      this.createCurrentLocationMarker();
 	    }
 	  }, {
 	    key: 'createArray',
 	    value: function createArray(arr) {
+<<<<<<< HEAD
+
+	      var drivers = arr.map(function (val, i) {
+
+	        return {
+	          position: new google.maps.LatLng(val.lat, val.lng)
+	        };
+	      });
+	      console.log(drivers);
+=======
 	      var drivers = arr.map(function (val, i) {
 
 	        return {
@@ -32527,6 +32555,7 @@
 	          type: 'car'
 	        };
 	      });
+>>>>>>> master
 	      for (var i = 0; i < drivers.length; i++) {
 	        this.createMarker(drivers[i]);
 	      }
@@ -32548,6 +32577,10 @@
 	  }, {
 	    key: 'createMarker',
 	    value: function createMarker(feature) {
+<<<<<<< HEAD
+	      return new google.maps.Marker({
+	        position: feature.position,
+=======
 	      var image = {
 	        url: '../../../img/cities/car-marker.png',
 	        size: new google.maps.Size(150, 170),
@@ -32561,6 +32594,7 @@
 	      return new google.maps.Marker({
 	        position: feature.position,
 	        icon: icons[feature.type].icon,
+>>>>>>> master
 	        map: this.map
 	      });
 	    }
@@ -32656,15 +32690,7 @@
 	var UserDashboardComp = function (_React$Component) {
 	    _inherits(UserDashboardComp, _React$Component);
 
-	    function UserDashboardComp(props) {
-	        _classCallCheck(this, UserDashboardComp);
-
-	        var _this = _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).call(this, props));
-
-	        _this.state = {};
-	        return _this;
-	    }
-
+<<<<<<< HEAD
 	    _createClass(UserDashboardComp, [{
 	        key: 'componentWillMount',
 	        value: function componentWillMount() {
@@ -32680,6 +32706,56 @@
 	                });
 	            });
 	        }
+	    }]);
+
+=======
+>>>>>>> master
+	    function UserDashboardComp(props) {
+	        _classCallCheck(this, UserDashboardComp);
+
+	        var _this = _possibleConstructorReturn(this, (UserDashboardComp.__proto__ || Object.getPrototypeOf(UserDashboardComp)).call(this, props));
+
+<<<<<<< HEAD
+	        _this.state = {
+	            updateModal: false
+	        };
+	        _this.updateClick = _this.updateClick.bind(_this);
+	        _this.handleUpdateClose = _this.handleUpdateClose.bind(_this);
+=======
+	        _this.state = {};
+>>>>>>> master
+	        return _this;
+	    }
+
+	    _createClass(UserDashboardComp, [{
+<<<<<<< HEAD
+	        key: 'updateClick',
+	        value: function updateClick() {
+	            this.setState({
+	                updateModal: true
+	            });
+	        }
+	    }, {
+	        key: 'handleUpdateClose',
+	        value: function handleUpdateClose() {
+	            this.setState({
+	                updateModal: false
+=======
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {
+	            var _this2 = this;
+
+	            (0, _dashboardService.getCustomerInfo)().then(function (res) {
+	                res = res[0];
+	                _this2.setState({
+	                    name: res.name,
+	                    email: res.email,
+	                    phone: res.phone,
+	                    fb: res.fb
+	                });
+>>>>>>> master
+	            });
+	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
@@ -32692,7 +32768,6 @@
 	                    _react2.default.createElement(
 	                        'section',
 	                        { className: 'userdash-sidebar-container' },
-	                        _react2.default.createElement('img', { className: 'userdash-logo-main', src: './img/LYFT_LOGO/SVG/white_logo.svg' }),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'userdash-sidebar-innerbox' },
@@ -32706,7 +32781,11 @@
 	                                    _react2.default.createElement(
 	                                        'div',
 	                                        { className: 'userdash-sidebar-item' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-user userdash-icons', 'aria-hidden': 'true' }),
+	                                        _react2.default.createElement(
+	                                            'i',
+	                                            { className: 'material-icons userdash-icons' },
+	                                            'nature_people'
+	                                        ),
 	                                        _react2.default.createElement(
 	                                            'span',
 	                                            null,
@@ -32716,7 +32795,11 @@
 	                                    _react2.default.createElement(
 	                                        'div',
 	                                        { className: 'userdash-sidebar-item' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-question-circle userdash-icons', 'aria-hidden': 'true' }),
+	                                        _react2.default.createElement(
+	                                            'i',
+	                                            { className: 'material-icons userdash-icons' },
+	                                            'help_outline'
+	                                        ),
 	                                        _react2.default.createElement(
 	                                            'a',
 	                                            { href: '#' },
@@ -32743,7 +32826,11 @@
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'userdash-user-title' },
-	                                _react2.default.createElement('i', { className: 'fa fa-tachometer userdash-icons-title userdash-icons-title', 'aria-hidden': 'true' }),
+	                                _react2.default.createElement(
+	                                    'i',
+	                                    { className: 'material-icons userdash-icons-title' },
+	                                    'blur_on'
+	                                ),
 	                                'User Dashboard'
 	                            ),
 	                            _react2.default.createElement(
@@ -32752,7 +32839,11 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-icon-box' },
-	                                    _react2.default.createElement('i', { className: 'fa fa-user userdash-icons', 'aria-hidden': 'true' })
+	                                    _react2.default.createElement(
+	                                        'i',
+	                                        { className: 'material-icons userdash-icons' },
+	                                        'portrait'
+	                                    )
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
@@ -32766,7 +32857,11 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-icon-box' },
-	                                    _react2.default.createElement('i', { className: 'fa fa-phone-square userdash-icons', 'aria-hidden': 'true' })
+	                                    _react2.default.createElement(
+	                                        'i',
+	                                        { className: 'material-icons userdash-icons' },
+	                                        'phone_iphone'
+	                                    )
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
@@ -32780,7 +32875,11 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-icon-box' },
-	                                    _react2.default.createElement('i', { className: 'fa fa-envelope userdash-icons', 'aria-hidden': 'true' })
+	                                    _react2.default.createElement(
+	                                        'i',
+	                                        { className: 'material-icons userdash-icons' },
+	                                        'mail_outline'
+	                                    )
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
@@ -32797,7 +32896,11 @@
 	                                    _react2.default.createElement(
 	                                        'div',
 	                                        { className: 'userdash-icon-box' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-car userdash-icons', 'aria-hidden': 'true' })
+	                                        _react2.default.createElement(
+	                                            'i',
+	                                            { className: 'material-icons userdash-icons' },
+	                                            'directions_car'
+	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
 	                                        'span',
@@ -32811,7 +32914,11 @@
 	                                    _react2.default.createElement(
 	                                        'div',
 	                                        { className: 'userdash-icon-box' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-file-text-o userdash-icons', 'aria-hidden': 'true' })
+	                                        _react2.default.createElement(
+	                                            'i',
+	                                            { className: 'material-icons userdash-icons' },
+	                                            'subject'
+	                                        )
 	                                    ),
 	                                    _react2.default.createElement('textarea', { className: 'userdash-textarea', placeholder: 'Comments' })
 	                                )
@@ -32821,14 +32928,23 @@
 	                                null,
 	                                _react2.default.createElement(
 	                                    'button',
+<<<<<<< HEAD
+	                                    { className: 'userdash-updateinfo-btn btn btn-primary', onClick: this.updateClick },
+=======
 	                                    { className: 'userdash-updateinfo-btn btn btn-primary' },
+>>>>>>> master
 	                                    'Update Info'
 	                                )
-	                            )
+	                            ),
+	                            this.state.updateModal ? _react2.default.createElement(_EditInfoModal2.default, { handleUpdateClose: this.handleUpdateClose }) : null
 	                        )
 	                    )
+<<<<<<< HEAD
+	                )
+=======
 	                ),
 	                _react2.default.createElement(_EditInfoModal2.default, null)
+>>>>>>> master
 	            );
 	        }
 	    }]);
@@ -32876,6 +32992,15 @@
 	    }
 
 	    _createClass(EditInfoModal, [{
+<<<<<<< HEAD
+	        key: 'handleUpdateClose',
+	        value: function handleUpdateClose() {
+	            var self = this;
+	            self.props.handleUpdateClose();
+	        }
+	    }, {
+=======
+>>>>>>> master
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -32889,6 +33014,14 @@
 	                        { className: 'editinfo-info-container' },
 	                        _react2.default.createElement(
 	                            'div',
+<<<<<<< HEAD
+	                            { className: 'editinfo-logo-container' },
+	                            _react2.default.createElement('img', { className: 'editinfo-logo', src: './img/LYFT_LOGO/SVG/lyft_pixel.svg' })
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+=======
+>>>>>>> master
 	                            { className: 'editinfo-update-container' },
 	                            _react2.default.createElement(
 	                                'form',
@@ -32896,17 +33029,34 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'editinfo-update-content' },
+<<<<<<< HEAD
+	                                    _react2.default.createElement('input', { type: 'text', value: 'Update Name' })
+=======
 	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
+>>>>>>> master
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'editinfo-update-content' },
+<<<<<<< HEAD
+	                                    _react2.default.createElement('input', { type: 'text', value: 'Update Name' })
+=======
 	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
+>>>>>>> master
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'editinfo-update-content' },
+<<<<<<< HEAD
+	                                    _react2.default.createElement('input', { type: 'text', value: 'Update Name' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'editinfo-update-btn-container' },
+	                                    _react2.default.createElement('input', { className: 'editinfo-update-btn', type: 'submit', value: 'Update', onClick: this.handleUpdateClose.bind(this) })
+=======
 	                                    _react2.default.createElement('input', { type: 'text', placeholder: 'Update Name' })
+>>>>>>> master
 	                                )
 	                            )
 	                        )
@@ -32958,7 +33108,11 @@
 
 
 	// module
+<<<<<<< HEAD
+	exports.push([module.id, "\n\n.editinfo-modal {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    z-index: 1000;\n}\n\n.editinfo-info-container {\n    position: relative;\n    margin: 85px auto;\n    height: 500px;\n    background: #fff;\n    width: 80%;\n    padding-top: 10px;\n}\n\n.editinfo-logo-container {\n    width: 80%;\n    margin: 0 auto;\n    text-align: center;\n}\n\n.editinfo-logo {\n    width: 80px;\n    transition: all .2s ease;\n}\n\n.editinfo-update-content {\n    width: 80%;\n    height: auto;\n    border: 1px solid gray;\n    border-radius: 7px;\n    padding: 10px;\n    margin: 10px auto;\n}\n\n.editinfo-update-content input {\n    padding: 10px;\n    border-radius: 7px;\n    border: 1px solid lightgray;\n    width: 100%;\n}\n\n.editinfo-update-btn-container {\n    margin: 0 auto;\n    width: 80%;\n    text-align: center;\n}\n\n.editinfo-update-btn {\n    width: 100%;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n    border-radius: 7px;\n    padding: 10px;\n    margin-top: 20px;\n    transition: all .2s ease;\n}\n\n@media (min-width: 550px){\n    .editinfo-update-btn {\n        width: 250px;\n    }\n\n    .editinfo-logo {\n        width: 100px;\n    }\n}\n", ""]);
+=======
 	exports.push([module.id, ".editinfo-modal {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0, .9);\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    z-index: 1000;\n}\n\n.editinfo-info-container {\n    position: relative;\n    margin: 85px auto;\n    height: 500px;\n    background: #fff;\n    width: 80%;\n}\n\n.editinfo-update-content {\n    width: 80%;\n    height: auto;\n    border: 1px solid gray;\n    border-radius: 7px;\n    padding: 10px;\n    margin: 10px auto;\n}\n\n.editinfo-update-content input {\n    padding: 10px;\n    border-radius: 7px;\n    border: 1px solid lightgray;\n}\n", ""]);
+>>>>>>> master
 
 	// exports
 
@@ -32998,7 +33152,11 @@
 
 
 	// module
+<<<<<<< HEAD
+	exports.push([module.id, "\n.userdash-icons {\n    font-size: 32px;\n    margin-right: 10px;\n    margin-left: 2px;\n}\n\n.userdash-icons-title {\n    font-size: 3.25rem;\n    margin-right: 10px;\n    vertical-align: text-top;\n}\n\n.userdash-icons-google {\n    font-size: 36px;\n    margin-right: 10px;\n}\n\n.userdash-logo-main {\n    width: 60px;\n    margin-bottom: 10px;\n}\n\n.userdash-sideanduser-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.userdash-sidebar-container {\n    width: 100%;\n    /*height: 40rem;*/\n    background: #ff00bf;\n    padding: 70px 0 50px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.userdash-sidebar-innerbox {\n    width: 160px;\n    margin: 0 auto;\n}\n\n.userdash-user-pic-container {\n    margin: 45px 0 25px;\n    box-shadow: 1px 1px 5px gray;\n    background: white;\n    padding: 10px;\n    text-align: center;\n    width: 160px;\n    border-radius: 7px;\n}\n\n.userdash-user-pic-container img {\n    width: 140px;\n    border-radius: 7px;\n}\n\n.userdash-welcome {\n    color: #f3f3f5;\n}\n\n.userdash-sidebar-item-container {\n    padding: 5px 3px;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    margin-top: 5px;\n}\n\n.userdash-sidebar-item {\n    display: flex;\n    align-items: center;\n    padding: 2px 5px;\n}\n\n.userdash-sidebar-item a {\n    color: #333;\n}\n\n.userdash-sidebar-item a:hover {\n    color: #ff00bf;\n}\n\n.userdash-user-container {\n    width: 100%;\n    padding: 60px 0;\n    border: 1px solid #f2f2f2;\n}\n\n.userdash-user-innerbox {\n    width: 80%;\n    margin: 0 auto;\n}\n\n.userdash-user-title {\n    font-size: 3rem;\n    margin-bottom: 30px;\n    transition: all .2s ease;\n}\n\n.userdash-user-infobox {\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-icon-box {\n    width: 50px;\n}\n\n.userdash-user-info {\n    padding: 20px 10px;\n    width: 100%;\n    border: 1px solid #f2f2f2;\n    background-color: white;\n    border-radius: 7px;\n    color: #333;\n}\n\n.userdash-user-ridesrequest-box {\n    display: flex;\n    flex-direction: column;\n    align-items: initial;\n    margin: 50px 0;\n}\n\n.userdash-user-rides {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-ridenumber {\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    padding: 10px;\n    width: 100%;\n}\n\n.userdash-user-comments textarea {\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    font-style: italic;\n    font-weight: 100;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    width: 100%;\n}\n\n.userdash-user-comments {\n    width: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.userdash-updateinfo-btn {\n    width: 100%;\n    padding: 12px;\n    font-size: 1.75rem;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n.userdash-updateinfo-btn:hover,\n.userdash-updateinfo-btn:focus,\n.userdash-updateinfo-btn:active {\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n    outline: none;\n}\n\n@media (min-width:768px){\n\n    .userdash-icons-title {\n        font-size: 4.5rem;\n    }\n\n    .userdash-sideanduser-container {\n        display: flex;\n        flex-direction: row;\n    }\n\n    .userdash-sidebar-container {\n        width: 50%;\n        padding-left: 0px;\n        padding-top: 150px;\n    }\n\n    .userdash-user-container {\n        width: 100%;\n        padding: 110px 0 80px;\n\n    }\n\n    .userdash-user-title {\n        font-size: 4rem;\n    }\n\n    .userdash-user-ridesrequest-box {\n        display: flex;\n        flex-direction: row;\n        align-items: center;\n    }\n\n    .userdash-user-comments textarea {\n        width: 90%;\n    }\n\n    .userdash-user-comments {\n        width: 50%;\n    }\n\n    .userdash-ridenumber {\n        width: 70%;\n        text-align: center;\n    }\n\n    .userdash-user-rides {\n        width: 50%;\n        margin-bottom: 0px;\n    }\n\n}\n\n@media (min-width:992px) {\n    .userdash-sidebar-container {\n        width: 45%;\n    }\n}\n", ""]);
+=======
 	exports.push([module.id, "\n.userdash-icons {\n    font-size: 26px;\n    margin-right: 10px;\n}\n\n.userdash-icons-title {\n    font-size: 3rem;\n    margin-right: 10px;\n}\n\n.userdash-icons-google {\n    font-size: 36px;\n    margin-right: 10px;\n}\n\n.userdash-logo-main {\n    width: 60px;\n    margin-bottom: 10px;\n}\n\n.userdash-sideanduser-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.userdash-sidebar-container {\n    width: 100%;\n    /*height: 40rem;*/\n    background: #ff00bf;\n    padding: 70px 0 50px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.userdash-sidebar-innerbox {\n    width: 160px;\n    margin: 0 auto;\n}\n\n.userdash-user-pic-container {\n    margin: 15px 0 25px;\n    /* border: 1px solid #ff00bf; */\n    box-shadow: 1px 1px 5px gray;\n    background: white;\n    padding: 10px;\n    text-align: center;\n    width: 160px;\n    border-radius: 7px;\n}\n\n.userdash-user-pic-container img {\n    width: 140px;\n    border-radius: 7px;\n}\n\n.userdash-welcome {\n    color: #f3f3f5;\n}\n\n.userdash-sidebar-item-container {\n    padding: 5px 3px;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    margin-top: 5px;\n}\n\n.userdash-sidebar-item {\n    display: flex;\n    align-items: center;\n    padding: 2px 5px;\n}\n\n.userdash-sidebar-item a {\n    color: #333;\n}\n\n.userdash-sidebar-item a:hover {\n    color: #ff00bf;\n}\n\n.userdash-user-container {\n    width: 100%;\n    padding: 50px 0;\n    border: 1px solid #f2f2f2;\n}\n\n.userdash-user-innerbox {\n    width: 80%;\n    margin: 0 auto;\n}\n\n.userdash-user-title {\n    font-size: 3rem;\n    margin-bottom: 30px;\n    transition: all .2s ease;\n}\n\n.userdash-user-infobox {\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-icon-box {\n    width: 35px;\n}\n\n.userdash-user-info {\n    padding: 10px 10px;\n    width: 100%;\n    border: 1px solid #f2f2f2;\n    background-color: white;\n    border-radius: 7px;\n    color: #333;\n}\n\n.userdash-user-ridesrequest-box {\n    display: flex;\n    flex-direction: column;\n    align-items: initial;\n    margin: 50px 0;\n}\n\n.userdash-user-rides {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-ridenumber {\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    padding: 10px;\n    width: 100%;\n}\n\n.userdash-user-comments textarea {\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    font-style: italic;\n    font-weight: 100;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    width: 100%;\n}\n\n.userdash-user-comments {\n    width: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.userdash-updateinfo-btn {\n    width: 100%;\n    padding: 12px;\n    font-size: 1.75rem;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n.userdash-updateinfo-btn:hover,\n.userdash-updateinfo-btn:focus,\n.userdash-updateinfo-btn:active {\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n    outline: none;\n}\n\n@media (min-width:768px){\n\n    .userdash-icons-title {\n        font-size: 4rem;\n    }\n\n    .userdash-sideanduser-container {\n        display: flex;\n        flex-direction: row;\n    }\n\n    .userdash-sidebar-container {\n        width: 50%;\n        padding-left: 0px;\n        padding-top: 150px;\n    }\n\n    .userdash-user-container {\n        width: 100%;\n        padding-top: 100px;\n    }\n\n    .userdash-user-title {\n        font-size: 4rem;\n    }\n\n    /*.userdash-request-btn {\n        width: 180px;\n    }*/\n\n    .userdash-user-ridesrequest-box {\n        display: flex;\n        flex-direction: row;\n        align-items: center;\n    }\n\n    .userdash-user-comments textarea {\n        width: 90%;\n    }\n\n    .userdash-user-comments {\n        width: 50%;\n    }\n\n    .userdash-ridenumber {\n        width: 70%;\n        text-align: center;\n    }\n\n    .userdash-user-rides {\n        width: 50%;\n        margin-bottom: 0px;\n    }\n\n}\n\n@media (min-width:992px) {\n    .userdash-sidebar-container {\n        width: 45%;\n    }\n}\n", ""]);
+>>>>>>> master
 
 	// exports
 
