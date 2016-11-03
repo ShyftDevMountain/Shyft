@@ -35,7 +35,6 @@ getLocation().then(function(res){
     })
   })
 
-
 }
 
 
