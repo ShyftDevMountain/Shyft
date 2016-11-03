@@ -52,7 +52,7 @@ else {
         return (
             <div>
                 <MapComp initialCenter={this.state.initialCenter} nearbyDrivers={this.state.nearbyDrivers} />
-
+                
 
             </div>
         );

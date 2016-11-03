@@ -26,17 +26,15 @@ class MapComp extends React.Component {
 
 
     render() {
-     return (<div className="map">
-       <div className='map-page' ref="mapCanvas">
-</div>
-    <SetPickup />
-    // <Request />
-    // <Cancel />
-    // <StartRide/>
-    // <RateRide/>
-    // <Payment />
+     return (
+       <div className="map">
+           <div className='map-page' ref="mapCanvas">
+            </div>
 
-     </div>)
+            <StartRide/>
+    
+
+        </div>)
 
    }
 

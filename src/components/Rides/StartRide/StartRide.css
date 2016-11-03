@@ -1,0 +1,49 @@
+/*********************************************************************************
+ Main container
+*********************************************************************************/
+.Main_Wrapper1 {
+    width: 75%;
+    height: 25vh;
+    position: absolute;
+    bottom: 6px;
+    display: flex;
+    display: table-column;
+    position: absolute;
+    left: 12.5%;
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+
+}
+/*********************************************************************************
+ buttons container start here
+*********************************************************************************/
+.Top_button_container {
+    width: 75px;
+    height: 25px;
+    background-color: aqua;
+    margin: 2px;
+  }
+
+.Middle_button_container {
+  width: 75px;
+  height: 25px;
+  background-color: aqua;
+  margin: 2px;
+
+}
+
+.Bottom_button_container {
+  width: 65%;
+  height: 42px;
+  background-color: #3C0981;
+  margin: 2px;
+  border-radius: 9px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
