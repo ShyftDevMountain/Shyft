@@ -1,8 +1,8 @@
 import React from 'react';
-import './RequestRides.css';
+import './SetPickup.css';
 
 
-class RequestRides extends React.Component{
+class SetPickup extends React.Component{
 
     render(){
         return (
@@ -46,4 +46,4 @@ class RequestRides extends React.Component{
     }
 };
 
-export default RequestRides;
+export default SetPickup;
