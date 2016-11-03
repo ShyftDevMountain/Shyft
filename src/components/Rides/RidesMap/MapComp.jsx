@@ -104,7 +104,6 @@ class MapComp extends React.Component {
 
 
    mapCenter() {
-     console.log(this.props.initialCenter.lat, this.props.initialCenter.lng);
      return new google.maps.LatLng(
 
        this.props.initialCenter.lat,
@@ -115,7 +114,7 @@ class MapComp extends React.Component {
    createMarker(feature) {
      var image = {
   url: '../../../img/cities/car-marker.png',
-  size: new google.maps.Size(100, 100),
+  size: new google.maps.Size(150, 170),
   scaledSize: new google.maps.Size(25, 25)
 }
      var icons = {

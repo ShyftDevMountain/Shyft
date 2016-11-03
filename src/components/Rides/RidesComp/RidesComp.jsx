@@ -13,13 +13,14 @@ class RidesComp extends React.Component{
 constructor(props){
   super(props);
   this.state = {
-
+    nearbyDrivers: []
   }
 }
 componentDidMount() {
   var self = this;
 getLocation().then(function(res){
   getNearbyDrivers(res.data.location).then(function(response){
+    if(response.data.nearby_drivers.length >= 1) {
     self.setState({
       initialCenter: {
         lat: res.data.location.lat,
@@ -32,9 +33,18 @@ getLocation().then(function(res){
       })
 
 
-    })
-  })
+    }
 
+else {
+  self.setState({
+    initialCenter: {
+      lat: res.data.location.lat,
+      lng: res.data.location.lng
+    }
+})
+}
+})
+})
 }
 
 
