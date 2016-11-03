@@ -6,7 +6,7 @@ class Request extends React.Component {
   render() {
     return(
       <div className='request'>
-        <div className='the-estimate-box'>
+        <div className='the-white-box'>
           <div className='car-type-div'>
             <div>
             <img src='https://www.lyft.com/images/cities/classic.6d006a8c.png' />
@@ -30,9 +30,17 @@ class Request extends React.Component {
               </div>
             </div>
           </div>
-          <div className='address-input origin-address'>Start Destination</div>
-          <div className='address-input dest-address'>End Destination</div>
-        </div>
+          <div className='input-section'>
+            <div className='color-dest-circles'>
+              <div className='blue-circle'></div>
+              <div className='pink-circle'></div>
+            </div>
+            <div className='inputs-stacked'>
+          <div className='address-input origin-address'><input type='text' placeholder='Pickup Location' /></div>
+          <div className='address-input dest-address'><input type='text' placeholder='Add Destination'/></div>
+          </div>
+      </div>
+      </div>
         <div className='request-shyft-btn btn'>Request Ride</div>
       </div>
     )
