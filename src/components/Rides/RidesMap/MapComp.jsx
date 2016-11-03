@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './MapComp.css';
-import {getNearByDrivers} from '../../../services/GetGoogleMap.js';
+import {getNearbyDrivers} from '../../../services/GetGoogleMap.js';
 import {getLocation} from '../../../services/GetGoogleMap.js';
 
 
@@ -73,20 +73,19 @@ class MapComp extends React.Component {
 
 
    componentDidUpdate() {
-      this.map = this.createMap()
-      this.createArray(this.props.nearByDrives)
-      this.createCurrentLocationMarker()
+      this.map = this.createMap();
+      this.createArray(this.props.nearbyDrivers);
+      this.createCurrentLocationMarker();
    }
 
   createArray(arr) {
-
     var drivers = arr.map(function(val, i){
 
           return {
-           position: new google.maps.LatLng(val.lat, val.lng)
+           position: new google.maps.LatLng(val.lat, val.lng),
+           type:'car'
           }
     })
-      console.log(drivers);
     for (var i = 0; i <drivers.length; i++) {
           this.createMarker(drivers[i])
     }
@@ -105,6 +104,7 @@ class MapComp extends React.Component {
 
 
    mapCenter() {
+     console.log(this.props.initialCenter.lat, this.props.initialCenter.lng);
      return new google.maps.LatLng(
 
        this.props.initialCenter.lat,
@@ -113,8 +113,19 @@ class MapComp extends React.Component {
    }
 
    createMarker(feature) {
+     var image = {
+  url: '../../../img/cities/car-marker.png',
+  size: new google.maps.Size(100, 100),
+  scaledSize: new google.maps.Size(25, 25)
+}
+     var icons = {
+       car: {
+         icon: image
+       }
+     }
      return new google.maps.Marker({
      position: feature.position,
+     icon: icons[feature.type].icon,
      map: this.map
    })
 
@@ -131,4 +142,4 @@ class MapComp extends React.Component {
 
 
 
-export default MapComp
+export default MapComp;
