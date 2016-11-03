@@ -26,17 +26,15 @@ class MapComp extends React.Component {
 
 
     render() {
-     return (<div className="map">
-       <div className='map-page' ref="mapCanvas">
-</div>
-    <SetPickup />
-    // <Request />
-    // <Cancel />
-    // <StartRide/>
-    // <RateRide/>
-    // <Payment />
+     return (
+       <div className="map">
+           <div className='map-page' ref="mapCanvas">
+            </div>
 
-     </div>)
+            <StartRide />
+
+
+        </div>)
 
    }
 
@@ -68,7 +66,7 @@ class MapComp extends React.Component {
      let mapOptions = {
        zoom: 12,
        center: this.mapCenter()
-     }
+          }
      return new google.maps.Map(this.refs.mapCanvas, mapOptions)
    }
 
