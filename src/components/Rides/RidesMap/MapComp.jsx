@@ -31,7 +31,7 @@ class MapComp extends React.Component {
            <div className='map-page' ref="mapCanvas">
             </div>
 
-            <StartRide />
+            <Request />
 
 
         </div>)
