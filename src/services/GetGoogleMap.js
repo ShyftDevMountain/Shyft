@@ -12,7 +12,7 @@ var lyftToken = {
   }
 }
 
-export function getNearByDrivers(cord) {
+export function getNearbyDrivers(cord) {
   return axios.get('https://api.lyft.com/v1/drivers?lat='+ cord.lat.toString() +'&lng='+ cord.lng.toString(), lyftToken)
 
 }
