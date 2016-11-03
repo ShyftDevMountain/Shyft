@@ -78,11 +78,11 @@
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(306);
+	var _UserDashboardComp = __webpack_require__(312);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(313);
+	var _CityDetails = __webpack_require__(319);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -32230,11 +32230,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(321);
+	__webpack_require__(306);
 
-	var _GetGoogleMap = __webpack_require__(323);
+	var _GetGoogleMap = __webpack_require__(308);
 
-	var _MapComp = __webpack_require__(324);
+	var _MapComp = __webpack_require__(309);
 
 	var _MapComp2 = _interopRequireDefault(_MapComp);
 
@@ -32310,6 +32310,319 @@
 /* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(307);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 307 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 308 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getLocation = getLocation;
+	exports.getNearbyDrivers = getNearbyDrivers;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getLocation() {
+	  return _axios2.default.post('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDrzX2pFc5mTwnwwA2cqXKo2nLVV2Zkq5I');
+	}
+
+	var lyftToken = {
+	  headers: { 'Authorization': 'Bearer "gAAAAABYGlWbMEMn9Sgo900TGeX6PIlaWgjOTJSh4U0TQpXwdg1LQXrataOaK1ryY-pgoW9f8WPUjImNPmHPN2O5bVWihVPbB7z4SQZ3HYOpJmsLHtpalfvuD_sVlaZyFIaezzptXWbLWoikagqU9W860XSentCameqiAZ2B70GbI_vJc25wjjl5Uz5013dtY1_XHCboHPrzpze9teYmJMoew-zMHokylQ=="'
+	  }
+	};
+
+	function getNearbyDrivers(cord) {
+	  return _axios2.default.get('https://api.lyft.com/v1/drivers?lat=' + cord.lat.toString() + '&lng=' + cord.lng.toString(), lyftToken);
+	}
+
+/***/ },
+/* 309 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(34);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	__webpack_require__(310);
+
+	var _GetGoogleMap = __webpack_require__(308);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var MapComp = function (_React$Component) {
+	  _inherits(MapComp, _React$Component);
+
+	  function MapComp(props) {
+	    _classCallCheck(this, MapComp);
+
+	    var _this = _possibleConstructorReturn(this, (MapComp.__proto__ || Object.getPrototypeOf(MapComp)).call(this, props));
+
+	    _this.state = {};
+
+	    return _this;
+	  }
+
+	  _createClass(MapComp, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'map' },
+	        _react2.default.createElement('div', { className: 'map-page', ref: 'mapCanvas' }),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'RequestRides' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'second' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'fristBox' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'box_for_google_text' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'g' },
+	                  'G'
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'o' },
+	                  'o'
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'o2' },
+	                  'o'
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'g' },
+	                  'g'
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'l' },
+	                  'l'
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'o' },
+	                  'e'
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'gps' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'secondBox' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'car_icon' },
+	                'Shyft'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'content' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'location' },
+	                  'location'
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'pickup_location' },
+	                  'PickUp location'
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'secondBox2' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'pickup_button' },
+	                'Set PickUp'
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate() {
+	      this.map = this.createMap();
+	      this.createArray(this.props.nearbyDrivers);
+	      this.createCurrentLocationMarker();
+	    }
+	  }, {
+	    key: 'createArray',
+	    value: function createArray(arr) {
+	      var drivers = arr.map(function (val, i) {
+
+	        return {
+	          position: new google.maps.LatLng(val.lat, val.lng),
+	          type: 'car'
+	        };
+	      });
+	      for (var i = 0; i < drivers.length; i++) {
+	        this.createMarker(drivers[i]);
+	      }
+	    }
+	  }, {
+	    key: 'createMap',
+	    value: function createMap() {
+	      var mapOptions = {
+	        zoom: 12,
+	        center: this.mapCenter()
+	      };
+	      return new google.maps.Map(this.refs.mapCanvas, mapOptions);
+	    }
+	  }, {
+	    key: 'mapCenter',
+	    value: function mapCenter() {
+	      return new google.maps.LatLng(this.props.initialCenter.lat, this.props.initialCenter.lng);
+	    }
+	  }, {
+	    key: 'createMarker',
+	    value: function createMarker(feature) {
+	      var image = {
+	        url: '../../../img/cities/car-marker.png',
+	        size: new google.maps.Size(150, 170),
+	        scaledSize: new google.maps.Size(25, 25)
+	      };
+	      var icons = {
+	        car: {
+	          icon: image
+	        }
+	      };
+	      return new google.maps.Marker({
+	        position: feature.position,
+	        icon: icons[feature.type].icon,
+	        map: this.map
+	      });
+	    }
+	  }, {
+	    key: 'createCurrentLocationMarker',
+	    value: function createCurrentLocationMarker() {
+	      return new google.maps.Marker({
+	        position: this.mapCenter(),
+	        map: this.map
+	      });
+	    }
+	  }]);
+
+	  return MapComp;
+	}(_react2.default.Component);
+
+	exports.default = MapComp;
+
+/***/ },
+/* 310 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(311);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./MapComp.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./MapComp.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 311 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n.map {\n height:100vh;\n width:100vw;\n}\n\n.map-page {\n   height:100vh;\n   width:100vw;\n}\n\n\n\n.RequestRides  {\n      /*background-color: blue;*/\n    height: 20vh;\n    /* margin-left: 22px; */\n    margin-right: 20px;\n    padding-left: 3px;\n    padding-right: 3px;\n    padding-top: 9px;\n    width: 100%;\n    position: absolute;\n    bottom: -15px;\n}\n.second {\n    /*background-color: green;*/\n    width: 100%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 100%;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    flex-direction: column;\n    /*padding: 15px;*/\n\n}\n.fristBox {\n    /*background-color: pink;*/\n    width: 100%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 49px;\n    margin: 7px;\n    display: flex;\n    padding-left: 10px;\n    padding-right: 10px;\n    justify-content: space-between;\n    align-items: center;\n\n}\n.box_for_google_text {\n    display: flex;\n    justify-content: center;\n\n}\n\n.g {\n  color: blue;\n}\n.o {\n  color: red;\n}\n.o2 {\n  color: yellow;\n}\n\n.l {\n  color: green;\n}\n.gps {\n  background-color: rgba(255,255,255,1);\n  border-radius: 2px;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.3);\n  display: block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden;\n  cursor: pointer;\n  transition: background-color 0.16s ease-out;\n  border-radius: 14px;\n  background-image: url(//maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png);\n  background-size: 247px 24px;\n}\n\n\n.secondBox {\n  background-color: #FFFFFF;\n  width: 29%;\n  /* margin-left: 20px; */\n  /* margin-right: 20px; */\n  height: 121px;\n  margin: 7px;\n  justify-content: flex-start;\n  align-items: center;\n  display: flex;\n  border-left-radius: 63px;\n  border-top-left-radius: 28px;\n  border-bottom-left-radius: 28px;\n  border-top-right-radius: 8px;\n  border-bottom-right-radius: 7px;\n\n}\n\n.car_icon {\n      width: 64px;\n          height: 64px;\n      /* background-color: black; */\n      border-radius: 40px;\n      background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);\n      background-size: contain;\n      background-position: center;\n      background-repeat: no-repeat;\n      border-style: solid;\n      border-color: purple;\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-end;\n      align-items: center;\n      background-position-y: 9px;\n      font-size: 13px;\n      padding-bottom: 4px;\n}\n.content {\n  display: flex;\n  flex-direction: column;\n  /* justify-content: flex-start; */\n  width: 77%;\n  align-items: flex-start;\n  /* padding-top: 28px; */\n  height: 40px;\n}\n.location {\n    width: 50%;\n    height: 25px;\n    /* background-color: black; */\n    padding-left: 28px;\n    font-size: 20px;\n}\n.pickup_location {\n    width: 50%;\n    height: 58px;\n    /* background-color: black; */\n    padding-left: 28px;\n    font-size: 12px;\n}\n\n.secondBox2 {\n  /*background-color: pink;*/\n  width: 78%;\n  /* margin-left: 20px; */\n  /* margin-right: 20px; */\n  height: 101px;\n  margin: 7px;\n  justify-content: center;\n  align-items: center;\n  display: flex;\n\n}\n\n.pickup_button {\n\n      width: 37%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 58px;\n    border-style: solid;\n    background-color: #3D0880;\n    border-radius: 7px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: white;\n    border: none;\n    font-size: 22px;\n    border-radius: 8px;\n\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 312 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -32324,13 +32637,13 @@
 
 	var _reactDom = __webpack_require__(34);
 
-	var _EditInfoModal = __webpack_require__(307);
+	var _EditInfoModal = __webpack_require__(313);
 
 	var _EditInfoModal2 = _interopRequireDefault(_EditInfoModal);
 
-	__webpack_require__(310);
+	__webpack_require__(316);
 
-	var _dashboardService = __webpack_require__(312);
+	var _dashboardService = __webpack_require__(318);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32528,7 +32841,7 @@
 	exports.default = UserDashboardComp;
 
 /***/ },
-/* 307 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32543,7 +32856,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(308);
+	__webpack_require__(314);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32611,13 +32924,13 @@
 	exports.default = EditInfoModal;
 
 /***/ },
-/* 308 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(309);
+	var content = __webpack_require__(315);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32637,7 +32950,7 @@
 	}
 
 /***/ },
-/* 309 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32651,13 +32964,13 @@
 
 
 /***/ },
-/* 310 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(311);
+	var content = __webpack_require__(317);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32677,7 +32990,7 @@
 	}
 
 /***/ },
-/* 311 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32691,7 +33004,7 @@
 
 
 /***/ },
-/* 312 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32714,7 +33027,7 @@
 	}
 
 /***/ },
-/* 313 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32729,17 +33042,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _cityDetailsService = __webpack_require__(314);
+	var _cityDetailsService = __webpack_require__(320);
 
 	var _CityBottomBanner = __webpack_require__(299);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesEstimateForm = __webpack_require__(315);
+	var _CitiesEstimateForm = __webpack_require__(321);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	__webpack_require__(319);
+	__webpack_require__(325);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33076,7 +33389,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 314 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33099,7 +33412,7 @@
 	}
 
 /***/ },
-/* 315 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33118,9 +33431,9 @@
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _estimateFormService = __webpack_require__(316);
+	var _estimateFormService = __webpack_require__(322);
 
-	__webpack_require__(317);
+	__webpack_require__(323);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33275,7 +33588,7 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 316 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33305,13 +33618,13 @@
 	}
 
 /***/ },
-/* 317 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(318);
+	var content = __webpack_require__(324);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33331,7 +33644,7 @@
 	}
 
 /***/ },
-/* 318 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33345,13 +33658,13 @@
 
 
 /***/ },
-/* 319 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(320);
+	var content = __webpack_require__(326);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33371,319 +33684,6 @@
 	}
 
 /***/ },
-/* 320 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".cityDetails-jumbotron-container {\n  background-size: cover;\n  height: 60vh;\n  text-align: center;\n  background-position: center;\n  background-repeat: no-repeat;\n  display: flex;\n}\n\n.cityDetails-jumbotron-title {\n  color: #F3F3F5;\n  font-size: 3.1rem;\n  margin-bottom: 20px;\n  font-weight: bolder;\n}\n\n.cityDetails-jumbotron-container .MainJumbotron-btn {\n  width: 110px;\n  font-weight: 400;\n  font-size: 1.4rem;\n}\n\n\n.jumbo-wrap {\n  -ms-align-self: center;\n  align-self: center;\n}\n\n.icons-wrap div {\n  margin-bottom: 25px;\n}\n\n.icons-wrap img {\n  margin-bottom: 10px;\n  height: 5.5rem;\n  width: 5.5rem;\n}\n\n.cityDetails-howShyftWorks {\n  margin-bottom: 4rem;\n  margin-top: 4rem;\n  max-width: 45rem;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.howitworksDescrip {\n  margin-bottom: 6rem;\n  width: 70%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.howitworkstable {\n  justify-content: center;\n  display: flex;\n  margin-top: 1rem;\n}\n\n.cityDetails-howShyftWorks h2 {\n  padding-bottom: 20px;\n  font-size: 3rem;\n  padding-top: 28px;\n}\n\n.cityDetails-howShyftWorks p {\n  font-size: 1.8rem;\n  font-weight: 100;\n  line-height: 3rem;\n}\n\n.clock-icon {\n  background-repeat: no-repeat;\n}\n.cityDetailsMap {\n  background-size: cover;\n  height: 450px;\n  background-position: center;\n  margin-bottom: 20px;\n}\n.cityDetailsEstimate {\n  max-width: 34rem;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetailsEstimate-Wrap {\n  display: flex;\n  padding-bottom: 8rem;\n  padding-top: 5rem;\n  border-color: #D8DCE6;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n}\n\n.estimateform-wrap {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n\n.estimate-description {\n  line-height: 1.8;\n  font-size: 1.8rem;\n  font-weight: 100;\n  padding-top: 10px;\n  text-align: center;\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.estimate-description h2 {\n  margin-bottom: 2rem;\n  font-size: 3rem;\n}\n\n\n.cityDetails-TwoWays {\n  margin-bottom: -12rem;\n  text-align: center!important;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetails-TwoWaysWrap {\n  width: 70%\n}\n\n.cityDetails-TwoWays div:nth-child(1) {\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.cityDetails-TwoWays h2 {\n  margin-top: 4rem;\n  font-size: 3rem;\n}\n\n.cityDetails-TwoWays p {\n  font-size: 1.7rem;\n  line-height: 1.5;\n  font-weight: 100;\n}\n\n.cityDetails-carWrapper {\n  background-position: center;\n  background-size: contain;\n  background-repeat: no-repeat;\n  margin-bottom: 1.5rem;\n  padding: 4rem;\n  max-width: 100%;\n  text-align: center!important;\n}\n\n.cityDetails-carWrapper img {\n  width: 580px;\n  max-width: 100%;\n  vertical-align: middle;\n}\n\n.cityDetails-pricesWrapper {\n  -webkit-box-pack: center;\n  justify-content: center;\n  display: flex;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n  text-align: center;\n  margin-top: 4rem;\n\n}\n\n.cityDetails-prices {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n}\n\n.priceChart-btnwrapper {\n  border-color: #D8DCE6;\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border-width: 1px;\n  border-style: solid;\n  background-color: #F3F3F5;\n  display: flex;\n  text-align: center!important;\n  line-height: 2;\n}\n\n.priceChart-pricing {\n  border-color: #D8DCE6;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  margin-top: -1px;\n  border: 1px solid #D8DCE6;\n  line-height: 2;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  padding-right: 1.5rem;\n  padding-left: 1.5rem;\n  font-size: 1.7rem;\n  font-weight: 100;\n}\n\n.pricingTable {\n  width: 100%;\n  background-color: transparent;\n}\n\ntr td {\n  text-align: left;\n}\n\n\n.pricechart-btn {\n  border-color: #D8DCE6;\n  font-size: 1.9rem;\n  background-color: transparent;\n  display: block;\n  width: 100%;\n  font-weight: 200;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  border: .08333rem solid transparent;\n  padding: .75rem 1.25rem;\n  line-height: 1.5;\n  border-radius: .5rem;\n}\n\n.pricechart-btn.active {\n  color: #FF00BF!important;\n  background: #fff;\n}\n\n@media (min-width: 768px) {\n  .cityDetails-jumbotron-title {\n    font-size: 4.3rem;\n  }\n\n  .cityDetails-jumbotron-container .MainJumbotron-btn {\n    width: 160px;\n    font-weight: 600;\n    font-size: 1.8rem;\n  }\n\n  .cityDetails-howShyftWorks {\n    max-width: 85rem;\n  }\n\n  .icons-wrap img {\n    height: 6.5rem;\n    width: 6.5rem;\n  }\n\n  .cityDetails-howShyftWorks h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-howShyftWorks p {\n    font-size: 2.2rem;\n    line-height: 3.8rem;\n  }\n\n  .cityDetailsEstimate {\n    max-width: 92rem;\n  }\n\n  .estimate-description {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    text-align: left;\n    font-size: 2rem;\n  }\n\n  .estimateform-wrap {\n    -webkit-box-flex: 0;\n    flex: 0 0 41.66667%;\n    margin-left: 8.33333%;\n  }\n\n  .cityDetails-TwoWays {\n    max-width: 92vh;\n  }\n\n  .estimate-description h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-TwoWays h2 {\n    margin-top: 5rem;\n    font-size: 3.5rem;\n  }\n\n  .cityDetails-TwoWays p {\n    font-size: 1.9rem;\n    line-height: 1.8;\n  }\n\n  .cityDetails-prices {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    line-height: 2;\n  }\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 321 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(322);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./RidesComp.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 322 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 323 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.getLocation = getLocation;
-	exports.getNearbyDrivers = getNearbyDrivers;
-
-	var _axios = __webpack_require__(253);
-
-	var _axios2 = _interopRequireDefault(_axios);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function getLocation() {
-	  return _axios2.default.post('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDrzX2pFc5mTwnwwA2cqXKo2nLVV2Zkq5I');
-	}
-
-	var lyftToken = {
-	  headers: { 'Authorization': 'Bearer "gAAAAABYGlWbMEMn9Sgo900TGeX6PIlaWgjOTJSh4U0TQpXwdg1LQXrataOaK1ryY-pgoW9f8WPUjImNPmHPN2O5bVWihVPbB7z4SQZ3HYOpJmsLHtpalfvuD_sVlaZyFIaezzptXWbLWoikagqU9W860XSentCameqiAZ2B70GbI_vJc25wjjl5Uz5013dtY1_XHCboHPrzpze9teYmJMoew-zMHokylQ=="'
-	  }
-	};
-
-	function getNearbyDrivers(cord) {
-	  return _axios2.default.get('https://api.lyft.com/v1/drivers?lat=' + cord.lat.toString() + '&lng=' + cord.lng.toString(), lyftToken);
-	}
-
-/***/ },
-/* 324 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(34);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	__webpack_require__(325);
-
-	var _GetGoogleMap = __webpack_require__(323);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var MapComp = function (_React$Component) {
-	  _inherits(MapComp, _React$Component);
-
-	  function MapComp(props) {
-	    _classCallCheck(this, MapComp);
-
-	    var _this = _possibleConstructorReturn(this, (MapComp.__proto__ || Object.getPrototypeOf(MapComp)).call(this, props));
-
-	    _this.state = {};
-
-	    return _this;
-	  }
-
-	  _createClass(MapComp, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'map' },
-	        _react2.default.createElement('div', { className: 'map-page', ref: 'mapCanvas' }),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'RequestRides' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'second' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'fristBox' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'box_for_google_text' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'g' },
-	                  'G'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'o' },
-	                  'o'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'o2' },
-	                  'o'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'g' },
-	                  'g'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'l' },
-	                  'l'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'o' },
-	                  'e'
-	                )
-	              ),
-	              _react2.default.createElement('div', { className: 'gps' })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'secondBox' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'car_icon' },
-	                'Shyft'
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'content' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'location' },
-	                  'location'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'pickup_location' },
-	                  'PickUp location'
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'secondBox2' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'pickup_button' },
-	                'Set PickUp'
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate() {
-	      this.map = this.createMap();
-	      this.createArray(this.props.nearbyDrivers);
-	      this.createCurrentLocationMarker();
-	    }
-	  }, {
-	    key: 'createArray',
-	    value: function createArray(arr) {
-	      var drivers = arr.map(function (val, i) {
-
-	        return {
-	          position: new google.maps.LatLng(val.lat, val.lng),
-	          type: 'car'
-	        };
-	      });
-	      for (var i = 0; i < drivers.length; i++) {
-	        this.createMarker(drivers[i]);
-	      }
-	    }
-	  }, {
-	    key: 'createMap',
-	    value: function createMap() {
-	      var mapOptions = {
-	        zoom: 12,
-	        center: this.mapCenter()
-	      };
-	      return new google.maps.Map(this.refs.mapCanvas, mapOptions);
-	    }
-	  }, {
-	    key: 'mapCenter',
-	    value: function mapCenter() {
-	      return new google.maps.LatLng(this.props.initialCenter.lat, this.props.initialCenter.lng);
-	    }
-	  }, {
-	    key: 'createMarker',
-	    value: function createMarker(feature) {
-	      var image = {
-	        url: '../../../img/cities/car-marker.png',
-	        size: new google.maps.Size(150, 170),
-	        scaledSize: new google.maps.Size(25, 25)
-	      };
-	      var icons = {
-	        car: {
-	          icon: image
-	        }
-	      };
-	      return new google.maps.Marker({
-	        position: feature.position,
-	        icon: icons[feature.type].icon,
-	        map: this.map
-	      });
-	    }
-	  }, {
-	    key: 'createCurrentLocationMarker',
-	    value: function createCurrentLocationMarker() {
-	      return new google.maps.Marker({
-	        position: this.mapCenter(),
-	        map: this.map
-	      });
-	    }
-	  }]);
-
-	  return MapComp;
-	}(_react2.default.Component);
-
-	exports.default = MapComp;
-
-/***/ },
-/* 325 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(326);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./MapComp.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./MapComp.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
 /* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33692,7 +33692,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n.map {\n height:100vh;\n width:100vw;\n}\n\n.map-page {\n   height:100vh;\n   width:100vw;\n}\n\n\n\n.RequestRides  {\n      /*background-color: blue;*/\n    height: 20vh;\n    /* margin-left: 22px; */\n    margin-right: 20px;\n    padding-left: 3px;\n    padding-right: 3px;\n    padding-top: 9px;\n    width: 100%;\n    position: absolute;\n    bottom: -15px;\n}\n.second {\n    /*background-color: green;*/\n    width: 100%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 100%;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    flex-direction: column;\n    /*padding: 15px;*/\n\n}\n.fristBox {\n    /*background-color: pink;*/\n    width: 100%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 49px;\n    margin: 7px;\n    display: flex;\n    padding-left: 10px;\n    padding-right: 10px;\n    justify-content: space-between;\n    align-items: center;\n\n}\n.box_for_google_text {\n    display: flex;\n    justify-content: center;\n\n}\n\n.g {\n  color: blue;\n}\n.o {\n  color: red;\n}\n.o2 {\n  color: yellow;\n}\n\n.l {\n  color: green;\n}\n.gps {\n  background-color: rgba(255,255,255,1);\n  border-radius: 2px;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.3);\n  display: block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden;\n  cursor: pointer;\n  transition: background-color 0.16s ease-out;\n  border-radius: 14px;\n  background-image: url(//maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png);\n  background-size: 247px 24px;\n}\n\n\n.secondBox {\n  background-color: #FFFFFF;\n  width: 29%;\n  /* margin-left: 20px; */\n  /* margin-right: 20px; */\n  height: 121px;\n  margin: 7px;\n  justify-content: flex-start;\n  align-items: center;\n  display: flex;\n  border-left-radius: 63px;\n  border-top-left-radius: 28px;\n  border-bottom-left-radius: 28px;\n  border-top-right-radius: 8px;\n  border-bottom-right-radius: 7px;\n\n}\n\n.car_icon {\n      width: 64px;\n          height: 64px;\n      /* background-color: black; */\n      border-radius: 40px;\n      background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);\n      background-size: contain;\n      background-position: center;\n      background-repeat: no-repeat;\n      border-style: solid;\n      border-color: purple;\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-end;\n      align-items: center;\n      background-position-y: 9px;\n      font-size: 13px;\n      padding-bottom: 4px;\n}\n.content {\n  display: flex;\n  flex-direction: column;\n  /* justify-content: flex-start; */\n  width: 77%;\n  align-items: flex-start;\n  /* padding-top: 28px; */\n  height: 40px;\n}\n.location {\n    width: 50%;\n    height: 25px;\n    /* background-color: black; */\n    padding-left: 28px;\n    font-size: 20px;\n}\n.pickup_location {\n    width: 50%;\n    height: 58px;\n    /* background-color: black; */\n    padding-left: 28px;\n    font-size: 12px;\n}\n\n.secondBox2 {\n  /*background-color: pink;*/\n  width: 78%;\n  /* margin-left: 20px; */\n  /* margin-right: 20px; */\n  height: 101px;\n  margin: 7px;\n  justify-content: center;\n  align-items: center;\n  display: flex;\n\n}\n\n.pickup_button {\n\n      width: 37%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 58px;\n    border-style: solid;\n    background-color: #3D0880;\n    border-radius: 7px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: white;\n    border: none;\n    font-size: 22px;\n    border-radius: 8px;\n\n}\n", ""]);
+	exports.push([module.id, ".cityDetails-jumbotron-container {\n  background-size: cover;\n  height: 60vh;\n  text-align: center;\n  background-position: center;\n  background-repeat: no-repeat;\n  display: flex;\n}\n\n.cityDetails-jumbotron-title {\n  color: #F3F3F5;\n  font-size: 3.1rem;\n  margin-bottom: 20px;\n  font-weight: bolder;\n}\n\n.cityDetails-jumbotron-container .MainJumbotron-btn {\n  width: 110px;\n  font-weight: 400;\n  font-size: 1.4rem;\n}\n\n\n.jumbo-wrap {\n  -ms-align-self: center;\n  align-self: center;\n}\n\n.icons-wrap div {\n  margin-bottom: 25px;\n}\n\n.icons-wrap img {\n  margin-bottom: 10px;\n  height: 5.5rem;\n  width: 5.5rem;\n}\n\n.cityDetails-howShyftWorks {\n  margin-bottom: 4rem;\n  margin-top: 4rem;\n  max-width: 45rem;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.howitworksDescrip {\n  margin-bottom: 6rem;\n  width: 70%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.howitworkstable {\n  justify-content: center;\n  display: flex;\n  margin-top: 1rem;\n}\n\n.cityDetails-howShyftWorks h2 {\n  padding-bottom: 20px;\n  font-size: 3rem;\n  padding-top: 28px;\n}\n\n.cityDetails-howShyftWorks p {\n  font-size: 1.8rem;\n  font-weight: 100;\n  line-height: 3rem;\n}\n\n.clock-icon {\n  background-repeat: no-repeat;\n}\n.cityDetailsMap {\n  background-size: cover;\n  height: 450px;\n  background-position: center;\n  margin-bottom: 20px;\n}\n.cityDetailsEstimate {\n  max-width: 34rem;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetailsEstimate-Wrap {\n  display: flex;\n  padding-bottom: 8rem;\n  padding-top: 5rem;\n  border-color: #D8DCE6;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n}\n\n.estimateform-wrap {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n\n.estimate-description {\n  line-height: 1.8;\n  font-size: 1.8rem;\n  font-weight: 100;\n  padding-top: 10px;\n  text-align: center;\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.estimate-description h2 {\n  margin-bottom: 2rem;\n  font-size: 3rem;\n}\n\n\n.cityDetails-TwoWays {\n  margin-bottom: -12rem;\n  text-align: center!important;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetails-TwoWaysWrap {\n  width: 70%\n}\n\n.cityDetails-TwoWays div:nth-child(1) {\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.cityDetails-TwoWays h2 {\n  margin-top: 4rem;\n  font-size: 3rem;\n}\n\n.cityDetails-TwoWays p {\n  font-size: 1.7rem;\n  line-height: 1.5;\n  font-weight: 100;\n}\n\n.cityDetails-carWrapper {\n  background-position: center;\n  background-size: contain;\n  background-repeat: no-repeat;\n  margin-bottom: 1.5rem;\n  padding: 4rem;\n  max-width: 100%;\n  text-align: center!important;\n}\n\n.cityDetails-carWrapper img {\n  width: 580px;\n  max-width: 100%;\n  vertical-align: middle;\n}\n\n.cityDetails-pricesWrapper {\n  -webkit-box-pack: center;\n  justify-content: center;\n  display: flex;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n  text-align: center;\n  margin-top: 4rem;\n\n}\n\n.cityDetails-prices {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n}\n\n.priceChart-btnwrapper {\n  border-color: #D8DCE6;\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border-width: 1px;\n  border-style: solid;\n  background-color: #F3F3F5;\n  display: flex;\n  text-align: center!important;\n  line-height: 2;\n}\n\n.priceChart-pricing {\n  border-color: #D8DCE6;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  margin-top: -1px;\n  border: 1px solid #D8DCE6;\n  line-height: 2;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  padding-right: 1.5rem;\n  padding-left: 1.5rem;\n  font-size: 1.7rem;\n  font-weight: 100;\n}\n\n.pricingTable {\n  width: 100%;\n  background-color: transparent;\n}\n\ntr td {\n  text-align: left;\n}\n\n\n.pricechart-btn {\n  border-color: #D8DCE6;\n  font-size: 1.9rem;\n  background-color: transparent;\n  display: block;\n  width: 100%;\n  font-weight: 200;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  border: .08333rem solid transparent;\n  padding: .75rem 1.25rem;\n  line-height: 1.5;\n  border-radius: .5rem;\n}\n\n.pricechart-btn.active {\n  color: #FF00BF!important;\n  background: #fff;\n}\n\n@media (min-width: 768px) {\n  .cityDetails-jumbotron-title {\n    font-size: 4.3rem;\n  }\n\n  .cityDetails-jumbotron-container .MainJumbotron-btn {\n    width: 160px;\n    font-weight: 600;\n    font-size: 1.8rem;\n  }\n\n  .cityDetails-howShyftWorks {\n    max-width: 85rem;\n  }\n\n  .icons-wrap img {\n    height: 6.5rem;\n    width: 6.5rem;\n  }\n\n  .cityDetails-howShyftWorks h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-howShyftWorks p {\n    font-size: 2.2rem;\n    line-height: 3.8rem;\n  }\n\n  .cityDetailsEstimate {\n    max-width: 92rem;\n  }\n\n  .estimate-description {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    text-align: left;\n    font-size: 2rem;\n  }\n\n  .estimateform-wrap {\n    -webkit-box-flex: 0;\n    flex: 0 0 41.66667%;\n    margin-left: 8.33333%;\n  }\n\n  .cityDetails-TwoWays {\n    max-width: 92vh;\n  }\n\n  .estimate-description h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-TwoWays h2 {\n    margin-top: 5rem;\n    font-size: 3.5rem;\n  }\n\n  .cityDetails-TwoWays p {\n    font-size: 1.9rem;\n    line-height: 1.8;\n  }\n\n  .cityDetails-prices {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    line-height: 2;\n  }\n}\n", ""]);
 
 	// exports
 
