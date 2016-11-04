@@ -11,6 +11,7 @@
     height: 60px;
     display: flex;
     align-items: center;
+    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));
     z-index: 10;
 }
 
@@ -22,6 +23,10 @@
 
 .navbar-mobile img {
     width: 42px;
+}
+
+.navbar-mobile-active {
+    background: white;
 }
 
 
@@ -44,7 +49,7 @@
     font-weight: 300;
     box-shadow: 1px 3px 4px rgba(0,0,0,0.3);
     z-index: 5;
-    transition: top .3s ease;
+    transition: top .2s ease;
 }
 
 .navbar-hover-container-active {
@@ -118,7 +123,7 @@
 
 .navbar-right {
     justify-content: flex-end;
-    transition: all .3s ease;
+    transition: all .2s ease;
 }
 
 .navbar-right-active {
@@ -226,7 +231,7 @@
     right: -125px;
     color: #ff00bf;
     font-weight: 600;
-    transition: all .3s ease;
+    transition: all .2s ease;
 }
 
 .navbar-signup:hover {

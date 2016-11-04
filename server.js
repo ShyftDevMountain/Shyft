@@ -38,7 +38,7 @@ passport.use(new FacebookStrategy({
               if (err) return done(err);
 
               if (!user[0]) {
-                db.add_user([profile.id],  function(err, response){
+                db.add_user([profile.id, profile.displayName],  function(err, response){
                       if (err) {
                         // console.log('error', err);
                       }
@@ -111,6 +111,7 @@ app.put('/complete/:rideid', ridesCtrl.completeRide);
 
 app.get('/customerinfo', customerCtrl.getCustomer);
 app.put('/customerinfo', customerCtrl.updateCustomer);
+app.put('/customerrides', customerCtrl.getCustomerRides);
 
 
 

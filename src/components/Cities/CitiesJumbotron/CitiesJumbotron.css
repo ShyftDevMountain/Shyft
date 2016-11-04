@@ -31,7 +31,7 @@
 
 .cities-jumbotron-title {
     padding-top: 180px;
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-weight: bold;
     text-shadow: 1px 2px 4px black;
     color: #F3F3F5;
@@ -131,4 +131,12 @@
   font-size: 1.4rem;
   line-height: 1.5;
   border: .08333rem solid transparent;
+}
+
+
+@media (min-width: 768px) {
+
+  .cities-jumbotron-title {
+      font-size: 4.5rem;
+    }
 }

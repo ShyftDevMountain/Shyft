@@ -3,9 +3,10 @@
 
 
 .cities-list-comp h2 {
-  margin-top: 60px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 25px;
   text-align: center;
+  font-size: 2.3rem;
 }
 
 .state-name {
@@ -19,9 +20,7 @@
   margin-top: 0px;
 }
 
-.state-name:nth-child(25) {
-  margin-top: 149px;
-}
+
 
 .cities-div {
   padding-top:10px;
@@ -51,7 +50,7 @@
 .city-links a {
   color:#FF00BF;
   text-decoration: none;
-  font-size: 1.75rem;
+  font-size: 1.60rem;
   font-weight: 100;
 }
 
@@ -76,5 +75,19 @@
     column-count: 3;
     text-align:left;
     padding-left: 15rem;
+  }
+  .city-links a {
+    font-size: 1.75rem;
+  }
+  .state-name:nth-child(25) {
+    margin-top: 200px;
+  }
+  .state-name {
+    font-size: 20px;
+  }
+  .cities-list-comp h2 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 3.25rem;
   }
 }
