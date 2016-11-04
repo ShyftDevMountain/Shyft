@@ -38,7 +38,7 @@ class MainJumbotron extends React.Component {
             <div className={this.state.jumboBg}>
                 <div className="MainJumbotron-title">Rides in Minutes</div>
                 <div className="btn btn-primary MainJumbotron-btn">
-                    <Link to="/userdashboard">Sign Up Now</Link>
+                    <Link to="/login">Sign Up Now</Link>
                 </div>
             </div>
             <div className="MainJumbotron-btm-banner">
