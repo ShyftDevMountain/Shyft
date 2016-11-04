@@ -32541,7 +32541,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -32561,90 +32561,61 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var SetPickup = function (_React$Component) {
-	    _inherits(SetPickup, _React$Component);
+	  _inherits(SetPickup, _React$Component);
 
-	    function SetPickup() {
-	        _classCallCheck(this, SetPickup);
+	  function SetPickup() {
+	    _classCallCheck(this, SetPickup);
 
-	        return _possibleConstructorReturn(this, (SetPickup.__proto__ || Object.getPrototypeOf(SetPickup)).apply(this, arguments));
-	    }
+	    return _possibleConstructorReturn(this, (SetPickup.__proto__ || Object.getPrototypeOf(SetPickup)).apply(this, arguments));
+	  }
 
-	    _createClass(SetPickup, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
+	  _createClass(SetPickup, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'SetPickUp main-wrapper' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'request' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'the-estimate-box' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'outer-container-for-current-adrress' },
+	              _react2.default.createElement(
 	                'div',
-	                { className: 'mapmike' },
+	                { className: 'arrow-inside-of-small-div' },
+	                ' ^ '
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'main-wrapper-for-all-content' },
 	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'RequestRides' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'second' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'fristBox' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'box_for_google_text' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'g' },
-	                                    'G'
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'o' },
-	                                    'o'
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'o2' },
-	                                    'o'
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'g' },
-	                                    'g'
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'l' },
-	                                    'l'
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'o' },
-	                                    'e'
-	                                )
-	                            ),
-	                            _react2.default.createElement('div', { className: 'gps' })
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'secondBox' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'car_icon' },
-	                                'Shyft'
-	                            )
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'secondBox2' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'pickup_button' },
-	                                'Set PickUp'
-	                            )
-	                        )
-	                    )
+	                  'div',
+	                  { className: 'inner-container-for-current-adrress' },
+	                  '300 South Provo Utah'
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'Pickup-location-container-for-current-adrress' },
+	                  'Pickup Location'
 	                )
-	            );
-	        }
-	    }]);
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'SetPickup_btn' },
+	            'Set PickUp'
+	          )
+	        )
+	      );
+	    }
+	  }]);
 
-	    return SetPickup;
+	  return SetPickup;
 	}(_react2.default.Component);
 
 	;
@@ -32686,7 +32657,7 @@
 
 
 	// module
-	exports.push([module.id, ".RequestRides  {\n      /*background-color: blue;*/\n    height: 20vh;\n    /* margin-left: 22px; */\n    margin-right: 20px;\n    padding-left: 3px;\n    padding-right: 3px;\n    padding-top: 9px;\n    width: 100%;\n    position: absolute;\n    bottom: -15px;\n}\n.second {\n    /*background-color: green;*/\n    width: 100%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 100%;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    flex-direction: column;\n    /*padding: 15px;*/\n\n}\n.fristBox {\n    /*background-color: pink;*/\n    width: 100%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 49px;\n    margin: 7px;\n    display: flex;\n    padding-left: 10px;\n    padding-right: 10px;\n    justify-content: space-between;\n    align-items: center;\n\n}\n.box_for_google_text {\n    display: flex;\n    justify-content: center;\n\n}\n\n.g {\n  color: blue;\n}\n.o {\n  color: red;\n}\n.o2 {\n  color: yellow;\n}\n\n.l {\n  color: green;\n}\n.gps {\n  background-color: rgba(255,255,255,1);\n  border-radius: 2px;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.3);\n  display: block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden;\n  cursor: pointer;\n  transition: background-color 0.16s ease-out;\n  border-radius: 14px;\n  background-image: url(//maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png);\n  background-size: 247px 24px;\n}\n\n\n.secondBox {\n  background-color: #FFFFFF;\n  width: 29%;\n  /* margin-left: 20px; */\n  /* margin-right: 20px; */\n  height: 121px;\n  margin: 7px;\n  justify-content: flex-start;\n  align-items: center;\n  display: flex;\n  border-left-radius: 63px;\n  border-top-left-radius: 28px;\n  border-bottom-left-radius: 28px;\n  border-top-right-radius: 8px;\n  border-bottom-right-radius: 7px;\n\n}\n\n.car_icon {\n      width: 64px;\n          height: 64px;\n      /* background-color: black; */\n      border-radius: 40px;\n      background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);\n      background-size: contain;\n      background-position: center;\n      background-repeat: no-repeat;\n      border-style: solid;\n      border-color: purple;\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-end;\n      align-items: center;\n      background-position-y: 9px;\n      font-size: 13px;\n      padding-bottom: 4px;\n}\n.content {\n  display: flex;\n  flex-direction: column;\n  /* justify-content: flex-start; */\n  width: 77%;\n  align-items: flex-start;\n  /* padding-top: 28px; */\n  height: 40px;\n}\n.location {\n    width: 50%;\n    height: 25px;\n    /* background-color: black; */\n    padding-left: 28px;\n    font-size: 20px;\n}\n.pickup_location {\n    width: 50%;\n    height: 58px;\n    /* background-color: black; */\n    padding-left: 28px;\n    font-size: 12px;\n}\n\n.secondBox2 {\n  /*background-color: pink;*/\n  width: 78%;\n  /* margin-left: 20px; */\n  /* margin-right: 20px; */\n  height: 101px;\n  margin: 7px;\n  justify-content: center;\n  align-items: center;\n  display: flex;\n\n}\n\n.pickup_button {\n\n      width: 37%;\n    /* margin-left: 20px; */\n    /* margin-right: 20px; */\n    height: 58px;\n    border-style: solid;\n    background-color: #3D0880;\n    border-radius: 7px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: white;\n    border: none;\n    font-size: 22px;\n    border-radius: 8px;\n\n}\n", ""]);
+	exports.push([module.id, ".SetPickUp .request {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin: auto;\n  height: 16vh;\n  width: 40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top: 58vh;\n  left: 0;\n  right: 0;\n  margin-left: auto;\n  margin-right: auto;\n  top: 84%;\n  margin-left: 5px;\n}\n\n.SetPickUp .the-estimate-box {\n  height: 37%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.SetPickUp .outer-container-for-current-adrress {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n.SetPickUp .arrow-inside-of-small-div{\n  height: 30px;\n  width: 30px;\n  margin-right: 12px;\n  margin-left: 7px;\n  display: flex;\n  justify-content: center;\n  /* align-items: center; */\n  /* flex-direction: column; */\n  font-size: 27px;\n  border-radius: 17px;\n  border: solid 1px black;\n  padding-right: 2px;\n}\n\n.SetPickUp .main-wrapper-for-all-content{\n  display: flex;\n  flex-direction: column;\n  /* align-items: center; */\n  justify-content: flex-start;\n  align-items: flex-start;\n}\n\n.SetPickUp .inner-container-for-current-adrress {\n  font-size: 16px;\n}\n\n.SetPickUp .Pickup-location-container-for-current-adrress {\n  font-size: 10px;\n}\n\n.SetPickUp .SetPickup_btn {\n  border-radius: 20px;\n  height: 37%;\n  width:90%;\n  background-color:#3D0780;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 20px;\n  color: white;\n}\n", ""]);
 
 	// exports
 
@@ -32972,7 +32943,55 @@
 	  _createClass(StartRide, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null);
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'StartRide' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'reqest' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'the-estimate-box' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'car-type-div' },
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement('img', { src: 'https://www.lyft.com/images/cities/classic.6d006a8c.png' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'ride-type-section' },
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'ride-type-title' },
+	                  'Lyft'
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'Your-lyft-is_ready_box' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'Your_ride_is_ready_inner' },
+	                'Your Ride is Ready!'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'confirm-Your-ride_button' },
+	            'Confirm Your Ride'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'request-shyft-btn btn' },
+	            'Cancel'
+	          )
+	        )
+	      );
 	    }
 	  }]);
 
@@ -33016,7 +33035,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, " .StartRide .reqest  {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  left:5px;\n\n  margin-left: auto;\n  margin-right:auto;\n  padding-top: 7px;\n}\n\n.StartRide .car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.StartRide .car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.StartRide .ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.StartRide .ride-type-section p{\n  margin:0px;\n}\n\n.StartRide .ride-type-desc {\n  font-size: 12px;\n}\n\n.StartRide .the-estimate-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.StartRide .Your-lyft-is_ready_box {\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  font-size: 15px;\n  padding-bottom: 15px;\n  /* border-bottom: 0.5px solid grey; */\n  width: 100%;\n  /* background-color: black; */\n  height: 72%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n}\n.StartRide .Your_ride_is_ready_inner {\n  /* background-color: black; */\n  height: 70px;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 27px;\n\n\n}\n\n\n\n\n\n\n\n.StartRide .confirm-Your-ride_button {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#FF00BF;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n    margin-bottom: 6px;\n  }\n\n.StartRide .request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color: #3D0981;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 4px;\n  border: none;\n}\n", ""]);
 
 	// exports
 
