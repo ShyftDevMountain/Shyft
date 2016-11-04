@@ -70,19 +70,19 @@
 
 	var _HomeComp2 = _interopRequireDefault(_HomeComp);
 
-	var _CitiesComp = __webpack_require__(291);
+	var _CitiesComp = __webpack_require__(290);
 
 	var _CitiesComp2 = _interopRequireDefault(_CitiesComp);
 
-	var _RidesComp = __webpack_require__(306);
+	var _RidesComp = __webpack_require__(305);
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(331);
+	var _UserDashboardComp = __webpack_require__(330);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(338);
+	var _CityDetails = __webpack_require__(337);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -27620,7 +27620,7 @@
 	            logo2.classList.add('navbar-logo-show');
 	            setTimeout(function () {
 	                navbarDrop.classList.add('navbar-hover-container-active');
-	            }, 135);
+	            }, 25);
 	        }
 	    }, {
 	        key: 'handleHoverLeave',
@@ -27670,7 +27670,7 @@
 	        _this.showMenu = _this.showMenu.bind(_this);
 	        _this.loginClick = _this.loginClick.bind(_this);
 	        _this.handleLoginClose = _this.handleLoginClose.bind(_this);
-
+	        _this.handleWindowClose = _this.handleWindowClose.bind(_this);
 	        return _this;
 	    }
 
@@ -27705,6 +27705,13 @@
 	            });
 	        }
 	    }, {
+	        key: 'handleWindowClose',
+	        value: function handleWindowClose() {
+	            this.setState({
+	                showLogin: false
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -27714,7 +27721,7 @@
 	                _react2.default.createElement(_SideMenuBackDrop2.default, { showMenu: this.state.showBackDrop, hideMenu: this.hideMenu }),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'navbar-mobile' },
+	                    { id: 'navbarMobile', className: 'navbar-mobile' },
 	                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-menu-hamburger', onClick: this.showMenu }),
 	                    _react2.default.createElement('img', { src: 'img/LYFT_LOGO/SVG/white_logo.svg' })
 	                ),
@@ -28516,6 +28523,15 @@
 	            }, 200);
 	        }
 	    }, {
+	        key: 'handleWindowClose',
+	        value: function handleWindowClose() {
+	            var loginContainer = document.getElementById('loginContainer');
+	            var loginForm = document.getElementById('loginForm');
+
+	            loginContainer.classList.remove('login-container-active');
+	            loginForm.classList.remove('login-form-container-active');
+	        }
+	    }, {
 	        key: 'handleLoginClose',
 	        value: function handleLoginClose() {
 	            var self = this;
@@ -28537,11 +28553,19 @@
 	                null,
 	                _react2.default.createElement(
 	                    'div',
-	                    { id: 'loginContainer', className: 'login-container' },
+	                    { onClick: this.handleWindowClose, id: 'loginContainer', className: 'login-container' },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { id: 'loginForm', className: 'login-form-container' },
-	                        _react2.default.createElement('span', { onClick: this.handleLoginClose.bind(this), className: 'login-close glyphicon glyphicon-remove' }),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { onClick: this.handleLoginClose.bind(this) },
+	                            _react2.default.createElement(
+	                                'i',
+	                                { className: 'material-icons login-close' },
+	                                'close'
+	                            )
+	                        ),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'login-heading' },
@@ -30186,7 +30210,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n    z-index: 10;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .3s ease;\n}\n\n.navbar-mobile img {\n    width: 42px;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .3s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    transition: all .2s ease;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbar-scroll-active {\n    background: #fff;\n    color: #333;\n    box-shadow: 1px 1px 5px gray;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .3s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: all .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;\n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .3s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
+	exports.push([module.id, "\n\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    z-index: 10;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .3s ease;\n}\n\n.navbar-mobile img {\n    width: 42px;\n}\n\n.navbar-mobile-active {\n    background: white;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .2s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    transition: all .2s ease;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbar-scroll-active {\n    background: #fff;\n    color: #333;\n    box-shadow: 1px 1px 5px gray;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .2s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: all .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;\n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .2s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -30215,11 +30239,11 @@
 
 	var _MainJumbotron2 = _interopRequireDefault(_MainJumbotron);
 
-	var _RidesInMinutes = __webpack_require__(285);
+	var _RidesInMinutes = __webpack_require__(284);
 
 	var _RidesInMinutes2 = _interopRequireDefault(_RidesInMinutes);
 
-	var _FourWaysToRide = __webpack_require__(288);
+	var _FourWaysToRide = __webpack_require__(287);
 
 	var _FourWaysToRide2 = _interopRequireDefault(_FourWaysToRide);
 
@@ -30278,7 +30302,7 @@
 
 	__webpack_require__(282);
 
-	var _BackgroundComponent = __webpack_require__(284);
+	var _BackgroundComponent = __webpack_require__(345);
 
 	var _BackgroundComponent2 = _interopRequireDefault(_BackgroundComponent);
 
@@ -30306,6 +30330,24 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: this.state.jumboBg },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'MainJumbotron-title' },
+	                        'Rides in Minutes'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'btn btn-primary MainJumbotron-btn' },
+	                        _react2.default.createElement(
+	                            _reactRouter.Link,
+	                            { to: '/login' },
+	                            'Sign Up Now'
+	                        )
+	                    )
+	                ),
 	                _react2.default.createElement(_BackgroundComponent2.default, null),
 	                _react2.default.createElement(
 	                    'div',
@@ -30392,100 +30434,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(172);
-
-	__webpack_require__(282);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var test = 1;
-
-	var BackgroundComponent = function (_React$Component) {
-	  _inherits(BackgroundComponent, _React$Component);
-
-	  function BackgroundComponent(props) {
-	    _classCallCheck(this, BackgroundComponent);
-
-	    var _this = _possibleConstructorReturn(this, (BackgroundComponent.__proto__ || Object.getPrototypeOf(BackgroundComponent)).call(this, props));
-
-	    _this.state = {
-	      jumboBg: 'MainJumbotron-container bg1'
-	    };
-	    return _this;
-	  }
-
-	  _createClass(BackgroundComponent, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var self = this;
-	      this.timer = setInterval(function () {
-	        if (test === 7) {
-	          test = 0;
-	        }
-	        test++;
-	        self.setState({
-	          jumboBg: 'MainJumbotron-container bg' + test
-	        });
-	      }, 5000);
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      clearInterval(this.timer);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: this.state.jumboBg },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'MainJumbotron-title' },
-	          'Rides in Minutes'
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'btn btn-primary MainJumbotron-btn' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/userdashboard' },
-	            'Sign Up Now'
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return BackgroundComponent;
-	}(_react2.default.Component);
-
-	exports.default = BackgroundComponent;
-
-/***/ },
-/* 285 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(286);
+	__webpack_require__(285);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30612,13 +30561,13 @@
 	exports.default = RidesInMinutes;
 
 /***/ },
-/* 286 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(287);
+	var content = __webpack_require__(286);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30638,7 +30587,7 @@
 	}
 
 /***/ },
-/* 287 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30652,7 +30601,7 @@
 
 
 /***/ },
-/* 288 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30667,7 +30616,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(289);
+	__webpack_require__(288);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30827,13 +30776,13 @@
 	exports.default = FourWaysToRide;
 
 /***/ },
-/* 289 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(290);
+	var content = __webpack_require__(289);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30853,7 +30802,7 @@
 	}
 
 /***/ },
-/* 290 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30867,7 +30816,7 @@
 
 
 /***/ },
-/* 291 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30886,17 +30835,17 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	__webpack_require__(292);
+	__webpack_require__(291);
 
-	var _CitiesJumbotron = __webpack_require__(294);
+	var _CitiesJumbotron = __webpack_require__(293);
 
 	var _CitiesJumbotron2 = _interopRequireDefault(_CitiesJumbotron);
 
-	var _CityBottomBanner = __webpack_require__(300);
+	var _CityBottomBanner = __webpack_require__(299);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesListComp = __webpack_require__(303);
+	var _CitiesListComp = __webpack_require__(302);
 
 	var _CitiesListComp2 = _interopRequireDefault(_CitiesListComp);
 
@@ -30938,13 +30887,13 @@
 	exports.default = CitiesComp;
 
 /***/ },
-/* 292 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(293);
+	var content = __webpack_require__(292);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30964,7 +30913,7 @@
 	}
 
 /***/ },
-/* 293 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30978,7 +30927,7 @@
 
 
 /***/ },
-/* 294 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30993,15 +30942,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactGeosuggestPlus = __webpack_require__(295);
+	var _reactGeosuggestPlus = __webpack_require__(294);
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _citiesListService = __webpack_require__(297);
+	var _citiesListService = __webpack_require__(296);
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(298);
+	__webpack_require__(297);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31117,7 +31066,7 @@
 	exports.default = CitiesJumbotron;
 
 /***/ },
-/* 295 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global google */
@@ -31142,7 +31091,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _GeosuggestItem = __webpack_require__(296);
+	var _GeosuggestItem = __webpack_require__(295);
 
 	var _GeosuggestItem2 = _interopRequireDefault(_GeosuggestItem);
 
@@ -31792,7 +31741,7 @@
 
 
 /***/ },
-/* 296 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
@@ -31922,7 +31871,7 @@
 
 
 /***/ },
-/* 297 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31964,13 +31913,13 @@
 	}
 
 /***/ },
-/* 298 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(299);
+	var content = __webpack_require__(298);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -31990,7 +31939,7 @@
 	}
 
 /***/ },
-/* 299 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32004,7 +31953,7 @@
 
 
 /***/ },
-/* 300 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32021,7 +31970,7 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(301);
+	__webpack_require__(300);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32084,13 +32033,13 @@
 	exports.default = CityBottomBanner;
 
 /***/ },
-/* 301 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(302);
+	var content = __webpack_require__(301);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32110,7 +32059,7 @@
 	}
 
 /***/ },
-/* 302 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32124,7 +32073,7 @@
 
 
 /***/ },
-/* 303 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32141,9 +32090,9 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	var _citiesListService = __webpack_require__(297);
+	var _citiesListService = __webpack_require__(296);
 
-	__webpack_require__(304);
+	__webpack_require__(303);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32235,13 +32184,13 @@
 	exports.default = CitiesList;
 
 /***/ },
-/* 304 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(305);
+	var content = __webpack_require__(304);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32261,7 +32210,7 @@
 	}
 
 /***/ },
-/* 305 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32275,7 +32224,7 @@
 
 
 /***/ },
-/* 306 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32290,11 +32239,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(307);
+	__webpack_require__(306);
 
-	var _GetGoogleMap = __webpack_require__(309);
+	var _GetGoogleMap = __webpack_require__(308);
 
-	var _MapComp = __webpack_require__(310);
+	var _MapComp = __webpack_require__(309);
 
 	var _MapComp2 = _interopRequireDefault(_MapComp);
 
@@ -32367,13 +32316,13 @@
 	exports.default = RidesComp;
 
 /***/ },
-/* 307 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(308);
+	var content = __webpack_require__(307);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32393,7 +32342,7 @@
 	}
 
 /***/ },
-/* 308 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32407,7 +32356,7 @@
 
 
 /***/ },
-/* 309 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32438,7 +32387,7 @@
 	}
 
 /***/ },
-/* 310 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32457,33 +32406,33 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _SetPickup = __webpack_require__(311);
+	var _SetPickup = __webpack_require__(310);
 
 	var _SetPickup2 = _interopRequireDefault(_SetPickup);
 
-	var _Request = __webpack_require__(314);
+	var _Request = __webpack_require__(313);
 
 	var _Request2 = _interopRequireDefault(_Request);
 
-	var _Cancel = __webpack_require__(317);
+	var _Cancel = __webpack_require__(316);
 
 	var _Cancel2 = _interopRequireDefault(_Cancel);
 
-	var _StartRide = __webpack_require__(320);
+	var _StartRide = __webpack_require__(319);
 
 	var _StartRide2 = _interopRequireDefault(_StartRide);
 
-	var _RateRide = __webpack_require__(323);
+	var _RateRide = __webpack_require__(322);
 
 	var _RateRide2 = _interopRequireDefault(_RateRide);
 
-	var _Payment = __webpack_require__(326);
+	var _Payment = __webpack_require__(325);
 
 	var _Payment2 = _interopRequireDefault(_Payment);
 
-	__webpack_require__(329);
+	__webpack_require__(328);
 
-	var _GetGoogleMap = __webpack_require__(309);
+	var _GetGoogleMap = __webpack_require__(308);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32586,7 +32535,7 @@
 	exports.default = MapComp;
 
 /***/ },
-/* 311 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32601,7 +32550,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(312);
+	__webpack_require__(311);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32703,13 +32652,13 @@
 	exports.default = SetPickup;
 
 /***/ },
-/* 312 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(313);
+	var content = __webpack_require__(312);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32729,7 +32678,7 @@
 	}
 
 /***/ },
-/* 313 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32743,7 +32692,7 @@
 
 
 /***/ },
-/* 314 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32758,7 +32707,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(315);
+	__webpack_require__(314);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32859,13 +32808,13 @@
 	exports.default = Request;
 
 /***/ },
-/* 315 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(316);
+	var content = __webpack_require__(315);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32885,7 +32834,7 @@
 	}
 
 /***/ },
-/* 316 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32899,7 +32848,7 @@
 
 
 /***/ },
-/* 317 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32914,7 +32863,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(318);
+	__webpack_require__(317);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32946,13 +32895,13 @@
 	exports.default = Cancel;
 
 /***/ },
-/* 318 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(319);
+	var content = __webpack_require__(318);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32972,7 +32921,7 @@
 	}
 
 /***/ },
-/* 319 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32986,7 +32935,7 @@
 
 
 /***/ },
-/* 320 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33001,7 +32950,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(321);
+	__webpack_require__(320);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33033,13 +32982,13 @@
 	exports.default = StartRide;
 
 /***/ },
-/* 321 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(322);
+	var content = __webpack_require__(321);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33059,7 +33008,7 @@
 	}
 
 /***/ },
-/* 322 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33073,7 +33022,7 @@
 
 
 /***/ },
-/* 323 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33088,7 +33037,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(324);
+	__webpack_require__(323);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33120,13 +33069,13 @@
 	exports.default = RateRide;
 
 /***/ },
-/* 324 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(325);
+	var content = __webpack_require__(324);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33146,7 +33095,7 @@
 	}
 
 /***/ },
-/* 325 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33160,7 +33109,7 @@
 
 
 /***/ },
-/* 326 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33175,7 +33124,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(327);
+	__webpack_require__(326);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33207,13 +33156,13 @@
 	exports.default = Payment;
 
 /***/ },
-/* 327 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(328);
+	var content = __webpack_require__(327);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33233,7 +33182,7 @@
 	}
 
 /***/ },
-/* 328 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33247,13 +33196,13 @@
 
 
 /***/ },
-/* 329 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(330);
+	var content = __webpack_require__(329);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33273,7 +33222,7 @@
 	}
 
 /***/ },
-/* 330 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33287,7 +33236,7 @@
 
 
 /***/ },
-/* 331 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33304,19 +33253,13 @@
 
 	var _reactDom = __webpack_require__(34);
 
-	var _EditInfoModal = __webpack_require__(332);
+	var _EditInfoModal = __webpack_require__(331);
 
 	var _EditInfoModal2 = _interopRequireDefault(_EditInfoModal);
 
-<<<<<<< HEAD
-	__webpack_require__(336);
+	__webpack_require__(334);
 
-	var _dashboardService = __webpack_require__(333);
-=======
-	__webpack_require__(335);
-
-	var _dashboardService = __webpack_require__(337);
->>>>>>> master
+	var _dashboardService = __webpack_require__(336);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33328,6 +33271,23 @@
 
 	var UserDashboardComp = function (_React$Component) {
 	    _inherits(UserDashboardComp, _React$Component);
+
+	    _createClass(UserDashboardComp, [{
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {
+	            var _this2 = this;
+
+	            (0, _dashboardService.getCustomerInfo)().then(function (res) {
+	                res = res[0];
+	                _this2.setState({
+	                    name: res.name,
+	                    email: res.email,
+	                    phone: res.phone,
+	                    fb: res.fb
+	                });
+	            });
+	        }
+	    }]);
 
 	    function UserDashboardComp(props) {
 	        _classCallCheck(this, UserDashboardComp);
@@ -33343,25 +33303,6 @@
 	    }
 
 	    _createClass(UserDashboardComp, [{
-	        key: 'componentWillMount',
-	        value: function componentWillMount() {
-	            var _this2 = this;
-
-	            (0, _dashboardService.getCustomerInfo)().then(function (res) {
-	                console.log(res);
-	                res = res[0];
-	                _this2.setState({
-	                    name: res.displayname,
-	                    email: res.email,
-	                    phone: res.phone,
-	                    fb: res.fb
-	                });
-	            });
-	            (0, _dashboardService.getCustomerRides)().then(function (res) {
-	                console.log(res);
-	            });
-	        }
-	    }, {
 	        key: 'updateClick',
 	        value: function updateClick() {
 	            this.setState({
@@ -33431,7 +33372,7 @@
 	                                'h4',
 	                                { className: 'userdash-welcome' },
 	                                'Welcome ',
-	                                this.state.name,
+	                                this.state.fb,
 	                                '!'
 	                            )
 	                        )
@@ -33567,7 +33508,7 @@
 	exports.default = UserDashboardComp;
 
 /***/ },
-/* 332 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33582,13 +33523,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _dashboardService = __webpack_require__(333);
+	var _dashboardService = __webpack_require__(336);
 
-	__webpack_require__(334);
-=======
-	__webpack_require__(333);
->>>>>>> master
+	__webpack_require__(332);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33688,57 +33625,13 @@
 	exports.default = EditInfoModal;
 
 /***/ },
-/* 333 */
-<<<<<<< HEAD
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.getCustomerInfo = getCustomerInfo;
-	exports.getCustomerRides = getCustomerRides;
-	exports.updateCustomerInfo = updateCustomerInfo;
-
-	var _axios = __webpack_require__(253);
-
-	var _axios2 = _interopRequireDefault(_axios);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function getCustomerInfo() {
-	  return _axios2.default.get('/customerinfo').then(function (res) {
-	    return res.data;
-	  });
-	}
-
-	function getCustomerRides() {
-	  return _axios2.default.get('/customerrides').then(function (res) {
-	    return res.data;
-	  });
-	}
-
-	function updateCustomerInfo(name, email, phone) {
-	  return _axios2.default.put('/customerinfo', { name: name, email: email, phone: phone }).then(function (res) {
-	    return res.data;
-	  });
-	}
-
-/***/ },
-/* 334 */
-=======
->>>>>>> master
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-<<<<<<< HEAD
-	var content = __webpack_require__(335);
-=======
-	var content = __webpack_require__(334);
->>>>>>> master
+	var content = __webpack_require__(333);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33758,11 +33651,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 335 */
-=======
-/* 334 */
->>>>>>> master
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33776,21 +33665,13 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 336 */
-=======
-/* 335 */
->>>>>>> master
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-<<<<<<< HEAD
-	var content = __webpack_require__(337);
-=======
-	var content = __webpack_require__(336);
->>>>>>> master
+	var content = __webpack_require__(335);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33810,11 +33691,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 337 */
-=======
-/* 336 */
->>>>>>> master
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33828,9 +33705,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-=======
-/* 337 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33860,8 +33735,7 @@
 	}
 
 /***/ },
->>>>>>> master
-/* 338 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33876,17 +33750,25 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _cityDetailsService = __webpack_require__(339);
+	var _cityDetailsService = __webpack_require__(338);
 
-	var _CityBottomBanner = __webpack_require__(300);
+	var _CityBottomBanner = __webpack_require__(299);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesEstimateForm = __webpack_require__(340);
+	var _CitiesEstimateForm = __webpack_require__(339);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	__webpack_require__(344);
+	var _ShyftPlus = __webpack_require__(346);
+
+	var _ShyftPlus2 = _interopRequireDefault(_ShyftPlus);
+
+	var _RideShyft = __webpack_require__(347);
+
+	var _RideShyft2 = _interopRequireDefault(_RideShyft);
+
+	__webpack_require__(343);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33904,11 +33786,48 @@
 
 	    var _this = _possibleConstructorReturn(this, (CityDetails.__proto__ || Object.getPrototypeOf(CityDetails)).call(this, props));
 
-	    _this.state = {};
+	    _this.state = {
+	      showPlus: false,
+	      showLyft: true
+	    };
+	    _this.showPlus = _this.showPlus.bind(_this);
+	    _this.showLyft = _this.showLyft.bind(_this);
+
 	    return _this;
 	  }
 
+	  // handleShyftClick(){
+	  //     this.setState({
+	  //         showPlus: false,
+	  //         showLyft: true
+	  //     })
+	  // }
+	  //
+	  // handleShyftPlusClick() {
+	  //     this.setState({
+	  //         showPlus: true,
+	  //         showLyft: false
+	  //     })
+	  // }
+
+
 	  _createClass(CityDetails, [{
+	    key: 'showPlus',
+	    value: function showPlus() {
+	      this.setState({
+	        showPlus: true,
+	        showLyft: false
+	      });
+	    }
+	  }, {
+	    key: 'showLyft',
+	    value: function showLyft() {
+	      this.setState({
+	        showPlus: false,
+	        showLyft: true
+	      });
+	    }
+	  }, {
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
 	      var _this2 = this;
@@ -34047,169 +33966,8 @@
 	            )
 	          )
 	        ),
-	        _react2.default.createElement(
-	          'section',
-	          { className: 'cityDetails-TwoWays' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'cityDetails-TwoWaysWrap' },
-	            _react2.default.createElement(
-	              'h2',
-	              null,
-	              'Two Ways to Ride'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'cityDetails-carWrapper' },
-	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/lyftcar.png' })
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Lyft is your personal ride. Whether you\'re traveling solo or with up to three friends, this sedan is yours to fill.'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'cityDetails-pricesWrapper' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'cityDetails-prices' },
-	              _react2.default.createElement(
-	                'section',
-	                null,
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'priceChart' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'priceChart-btnwrapper' },
-	                    _react2.default.createElement(
-	                      'button',
-	                      { className: 'pricechart-btn active' },
-	                      'Lyft'
-	                    ),
-	                    _react2.default.createElement(
-	                      'button',
-	                      { className: 'pricechart-btn' },
-	                      'Plus'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'priceChart-pricing' },
-	                    _react2.default.createElement(
-	                      'table',
-	                      { className: 'pricingTable' },
-	                      _react2.default.createElement(
-	                        'tbody',
-	                        null,
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Base Fare'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$1.60'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cancel Penalty'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$5.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cost Per Mile'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$1.30'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cost Per Minute'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$0.14'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Maximum Fare'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$4.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Scheduled Ride Cancel Penalty'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$5.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Service Fee'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$1.00'
-	                          )
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        ),
+	        this.state.showPlus ? _react2.default.createElement(_ShyftPlus2.default, { showLyft: this.showLyft }) : null,
+	        this.state.showLyft ? _react2.default.createElement(_RideShyft2.default, { showPlus: this.showPlus }) : null,
 	        _react2.default.createElement(_CityBottomBanner2.default, null)
 	      );
 	    }
@@ -34223,7 +33981,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 339 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34246,7 +34004,7 @@
 	}
 
 /***/ },
-/* 340 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34261,13 +34019,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactGeosuggestPlus = __webpack_require__(295);
+	var _reactGeosuggestPlus = __webpack_require__(294);
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _estimateFormService = __webpack_require__(341);
+	var _estimateFormService = __webpack_require__(340);
 
-	__webpack_require__(342);
+	__webpack_require__(341);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34422,7 +34180,7 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 341 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34452,13 +34210,13 @@
 	}
 
 /***/ },
-/* 342 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(343);
+	var content = __webpack_require__(342);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34478,7 +34236,7 @@
 	}
 
 /***/ },
-/* 343 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34492,13 +34250,13 @@
 
 
 /***/ },
-/* 344 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(345);
+	var content = __webpack_require__(344);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34518,7 +34276,7 @@
 	}
 
 /***/ },
-/* 345 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34530,6 +34288,525 @@
 
 	// exports
 
+
+/***/ },
+/* 345 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	__webpack_require__(282);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var test = 1;
+
+	var BackgroundComponent = function (_React$Component) {
+	  _inherits(BackgroundComponent, _React$Component);
+
+	  function BackgroundComponent(props) {
+	    _classCallCheck(this, BackgroundComponent);
+
+	    var _this = _possibleConstructorReturn(this, (BackgroundComponent.__proto__ || Object.getPrototypeOf(BackgroundComponent)).call(this, props));
+
+	    _this.state = {
+	      jumboBg: 'MainJumbotron-container bg1'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(BackgroundComponent, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var self = this;
+	      this.timer = setInterval(function () {
+	        if (test === 7) {
+	          test = 0;
+	        }
+	        test++;
+	        self.setState({
+	          jumboBg: 'MainJumbotron-container bg' + test
+	        });
+	      }, 5000);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      clearInterval(this.timer);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: this.state.jumboBg },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'MainJumbotron-title' },
+	          'Rides in Minutes'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'btn btn-primary MainJumbotron-btn' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/userdashboard' },
+	            'Sign Up Now'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return BackgroundComponent;
+	}(_react2.default.Component);
+
+	exports.default = BackgroundComponent;
+
+/***/ },
+/* 346 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ShyftPlus = function (_React$Component) {
+	  _inherits(ShyftPlus, _React$Component);
+
+	  function ShyftPlus() {
+	    _classCallCheck(this, ShyftPlus);
+
+	    return _possibleConstructorReturn(this, (ShyftPlus.__proto__ || Object.getPrototypeOf(ShyftPlus)).apply(this, arguments));
+	  }
+
+	  _createClass(ShyftPlus, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'section',
+	          { id: 'ShyftPlus', className: 'cityDetails-TwoWays' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-TwoWaysWrap' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Two Ways to Ride'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-carWrapper' },
+	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/carLyftplus.png' })
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Lyft Plus is a supersized ride with six seats for when you need more space or just want to roll with the entire squad.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-pricesWrapper' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-prices' },
+	              _react2.default.createElement(
+	                'section',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'priceChart' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-btnwrapper' },
+	                    _react2.default.createElement(
+	                      'button',
+	                      { onClick: this.props.showLyft, className: 'pricechart-btn active' },
+	                      'Lyft'
+	                    ),
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn' },
+	                      'Plus'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-pricing' },
+	                    _react2.default.createElement(
+	                      'table',
+	                      { className: 'pricingTable' },
+	                      _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Base Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$3.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Mile'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$2.35'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Minute'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$0.25'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Maximum Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$7.50'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Scheduled Ride Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$10.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Service Fee'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.70'
+	                          )
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return ShyftPlus;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = ShyftPlus;
+
+/***/ },
+/* 347 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var RideShyft = function (_React$Component) {
+	  _inherits(RideShyft, _React$Component);
+
+	  function RideShyft() {
+	    _classCallCheck(this, RideShyft);
+
+	    return _possibleConstructorReturn(this, (RideShyft.__proto__ || Object.getPrototypeOf(RideShyft)).apply(this, arguments));
+	  }
+
+	  _createClass(RideShyft, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'section',
+	          { className: 'cityDetails-TwoWays' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-TwoWaysWrap' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Two Ways to Ride'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-carWrapper' },
+	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/lyftcar.png' })
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Lyft is your personal ride. Whether you\'re traveling solo or with up to three friends, this sedan is yours to fill.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-pricesWrapper' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-prices' },
+	              _react2.default.createElement(
+	                'section',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'priceChart' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-btnwrapper' },
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn active' },
+	                      'Lyft'
+	                    ),
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn', onClick: this.props.showPlus },
+	                      'Plus'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-pricing' },
+	                    _react2.default.createElement(
+	                      'table',
+	                      { className: 'pricingTable' },
+	                      _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Base Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.60'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Mile'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.30'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Minute'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$0.14'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Maximum Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$4.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Scheduled Ride Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Service Fee'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.00'
+	                          )
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return RideShyft;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = RideShyft;
 
 /***/ }
 /******/ ]);
