@@ -32555,7 +32555,7 @@
 	        'div',
 	        { className: 'map' },
 	        _react2.default.createElement('div', { className: 'map-page', ref: 'mapCanvas' }),
-	        _react2.default.createElement(_Request2.default, null)
+	        _react2.default.createElement(_RateRide2.default, null)
 	      );
 	    }
 	  }, {
@@ -32584,7 +32584,8 @@
 	    value: function createMap() {
 	      var mapOptions = {
 	        zoom: 12,
-	        center: this.mapCenter()
+	        center: this.mapCenter(),
+	        scrollwheel: false
 	      };
 	      return new google.maps.Map(this.refs.mapCanvas, mapOptions);
 	    }
@@ -32827,7 +32828,7 @@
 	        { className: 'request' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'the-estimate-box' },
+	          { className: 'the-eta-box' },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'car-type-div' },
@@ -32877,13 +32878,27 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'address-input origin-address' },
-	            'Start Destination'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'address-input dest-address' },
-	            'End Destination'
+	            { className: 'input-section' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'color-dest-circles' },
+	              _react2.default.createElement('div', { className: 'blue-circle' }),
+	              _react2.default.createElement('div', { className: 'pink-circle' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'inputs-stacked' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'address-input origin-address' },
+	                _react2.default.createElement('input', { type: 'text', placeholder: 'Pickup Location' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'address-input dest-address' },
+	                _react2.default.createElement('input', { type: 'text', placeholder: 'Add Destination' })
+	              )
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -32935,7 +32950,7 @@
 
 
 	// module
-	exports.push([module.id, ".request {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  left:0;\n  right:0;\n  margin-left: auto;\n  margin-right:auto;\n}\n\n.car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.ride-type-section p{\n  margin:0px;\n}\n\n.ride-type-desc {\n  font-size: 12px;\n}\n\n.the-estimate-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.eta-and-cost {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n\n}\n\n.the-eta-title {\n  border-right: 0.5px solid grey;\n  height: 100%;\n  padding-right:10px;\n}\n\n.eta-title {\n  padding-left:10px;\n}\n\n\n.address-input {\n  margin-left:20px;\n}\n\n.request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#FF00BF;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n", ""]);
+	exports.push([module.id, ".request {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  margin-left: 5px;\n}\n\n.car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.ride-type-section p{\n  margin:0px;\n}\n\n.ride-type-desc {\n  font-size: 12px;\n}\n\n.the-eta-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.eta-and-cost {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n\n}\n\n.the-eta-title {\n  border-right: 0.5px solid grey;\n  height: 100%;\n  padding-right:10px;\n}\n\n.eta-title {\n  padding-left:10px;\n}\n\n.input-section {\n  display:flex;\n}\n\n.color-dest-circles{\n  margin-left:15px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.blue-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#3D0880;\n}\n\n.pink-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#FF00BF;\n}\n\n.address-input {\n  margin-left:30px;\n\n}\n\n.address-input input{\n  border:none;\n  width:100%;\n  border-radius: 20px;\n}\n\n.inputs-stacked {\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#FF00BF;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.request-shyft-btn:hover {\n  color:white;\n}\n", ""]);
 
 	// exports
 
@@ -32978,7 +32993,61 @@
 	  _createClass(Cancel, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null);
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'cancel-section' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'the-white-box' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'car-img-cancel' },
+	            _react2.default.createElement('img', { src: 'https://www.lyft.com/images/cities/classic.6d006a8c.png' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'confirmation-eta' },
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Awesome! Your Shyft ride will be here in approximately 2 minutes!'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'test-flex' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-section' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'color-dest-circles' },
+	                _react2.default.createElement('div', { className: 'blue-circle' }),
+	                _react2.default.createElement('div', { className: 'pink-circle' })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'inputs-stacked' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'address-input origin-address' },
+	                _react2.default.createElement('input', { type: 'text', placeholder: 'Pickup Location' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'address-input dest-address' },
+	                _react2.default.createElement('input', { type: 'text', placeholder: 'Add Destination' })
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'cancel-shyft-btn btn' },
+	          'Cancel Ride'
+	        )
+	      );
 	    }
 	  }]);
 
@@ -33022,7 +33091,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".cancel-section {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  margin-left: 5px;\n}\n\n.confirmation-eta{\n  text-align: center;\n  font-size:20px;\n  padding: 10px;\n}\n\n.car-img-cancel{\n  margin:auto;\n  }\n\n.car-img-cancel img {\n  height:50px;\n  width:70px;\n}\n\n\n.the-white-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.input-section {\n  display:flex;\n}\n\n.color-dest-circles{\n  margin-left:15px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.blue-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#3D0880;\n}\n\n.pink-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#FF00BF;\n}\n\n.address-input {\n  margin-left:30px;\n\n}\n\n.address-input input{\n  border:none;\n  width:100%;\n  border-radius: 20px;\n}\n\n.inputs-stacked {\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.test-flex{\n  display: flex;\n}\n\n.cancel-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#3D0880;\n  border:1px #3D0880 solid;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.cancel-shyft-btn:hover {\n  color:white;\n}\n", ""]);
 
 	// exports
 
@@ -33239,7 +33308,83 @@
 	  _createClass(Payment, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null);
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'payment-section' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'payment-white' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'payment-text' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'payment-title' },
+	              'Thank you for riding with ',
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Shyft'
+	              ),
+	              '.'
+	            ),
+	            _react2.default.createElement('img', { src: './img/userdash/screaming-kid1.jpg' }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'add-tip' },
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                'No tip'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                '$1'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                '$2'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                '$5'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                'Other'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'add-payment' },
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                'Add Payment'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'grey-numbers' },
+	                '*1234'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'total-price-div' },
+	              '$9.00'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'next-btn btn' },
+	              'Next'
+	            )
+	          )
+	        )
+	      );
 	    }
 	  }]);
 
@@ -33283,7 +33428,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".payment-section {\n  height:60vh;\n  width:60vw;\n  background-color: rgba(0, 0, 0, 0.3);\n  position:absolute;\n  top:20vh;\n  left:0;\n  right:0;\n  margin-left: auto;\n  margin-right: auto;\n  border-radius: 28px;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.payment-white{\n  background-color: white;\n  height:90%;\n  width:90%;\n  border-radius:28px;\n}\n\n\n.payment-text {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n}\n\n.payment-title{\n  font-size: 30px;\n  margin-bottom: 20px;\n  margin-top:20px;\n}\n\n.payment-title span{\n  color:#FF00BF;\n}\n\n.payment-text img {\n  height:100px;\n  width:100px;\n  border-radius: 50px;\n  margin-bottom: 20px;\n}\n\n.add-tip{\n  display:flex;\n  flex-direction: row;\n  justify-content: space-around;\n  border: 1px solid grey;\n  padding:5px;\n  border-radius: 5px;\n  margin-bottom:20px;\n  width:50%;\n\n}\n\n.add-tip div:nth-child(-n+4){\n  border-right: 1px solid grey;\n  padding-right: 15px;\n}\n\n.add-tip div:nth-child(5) {\n  margin-right: 7px;\n}\n\n\n.add-payment {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-between;\n  border: 1px solid grey;\n  padding:5px;\n  border-radius:5px;\n  width:50%;\n  margin-bottom: 20px;\n}\n\n.grey-numbers {\n  color:#a8a8a8;\n}\n\n.total-price-div {\n  font-size:30px;\n}\n\n.next-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#3D0880;\n  border:none;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.next-btn:hover {\n  color:white;\n}\n", ""]);
 
 	// exports
 
@@ -34356,6 +34501,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+<<<<<<< HEAD
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -34783,6 +34929,435 @@
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
+=======
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ShyftPlus = function (_React$Component) {
+	  _inherits(ShyftPlus, _React$Component);
+
+	  function ShyftPlus() {
+	    _classCallCheck(this, ShyftPlus);
+
+	    return _possibleConstructorReturn(this, (ShyftPlus.__proto__ || Object.getPrototypeOf(ShyftPlus)).apply(this, arguments));
+	  }
+
+	  _createClass(ShyftPlus, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'section',
+	          { id: 'ShyftPlus', className: 'cityDetails-TwoWays' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-TwoWaysWrap' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Two Ways to Ride'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-carWrapper' },
+	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/carLyftplus.png' })
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Lyft Plus is a supersized ride with six seats for when you need more space or just want to roll with the entire squad.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-pricesWrapper' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-prices' },
+	              _react2.default.createElement(
+	                'section',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'priceChart' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-btnwrapper' },
+	                    _react2.default.createElement(
+	                      'button',
+	                      { onClick: this.props.showLyft, className: 'pricechart-btn active' },
+	                      'Lyft'
+	                    ),
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn' },
+	                      'Plus'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-pricing' },
+	                    _react2.default.createElement(
+	                      'table',
+	                      { className: 'pricingTable' },
+	                      _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Base Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$3.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Mile'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$2.35'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Minute'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$0.25'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Maximum Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$7.50'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Scheduled Ride Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$10.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Service Fee'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.70'
+	                          )
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return ShyftPlus;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = ShyftPlus;
+
+/***/ },
+/* 345 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var RideShyft = function (_React$Component) {
+	  _inherits(RideShyft, _React$Component);
+
+	  function RideShyft() {
+	    _classCallCheck(this, RideShyft);
+
+	    return _possibleConstructorReturn(this, (RideShyft.__proto__ || Object.getPrototypeOf(RideShyft)).apply(this, arguments));
+	  }
+
+	  _createClass(RideShyft, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'section',
+	          { className: 'cityDetails-TwoWays' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-TwoWaysWrap' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Two Ways to Ride'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-carWrapper' },
+	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/lyftcar.png' })
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Lyft is your personal ride. Whether you\'re traveling solo or with up to three friends, this sedan is yours to fill.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-pricesWrapper' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-prices' },
+	              _react2.default.createElement(
+	                'section',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'priceChart' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-btnwrapper' },
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn active' },
+	                      'Lyft'
+	                    ),
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn', onClick: this.props.showPlus },
+	                      'Plus'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-pricing' },
+	                    _react2.default.createElement(
+	                      'table',
+	                      { className: 'pricingTable' },
+	                      _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Base Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.60'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Mile'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.30'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Minute'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$0.14'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Maximum Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$4.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Scheduled Ride Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Service Fee'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.00'
+	                          )
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return RideShyft;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = RideShyft;
+
+/***/ },
+/* 346 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+>>>>>>> master
 	// load the styles
 	var content = __webpack_require__(347);
 	if(typeof content === 'string') content = [[module.id, content, '']];
