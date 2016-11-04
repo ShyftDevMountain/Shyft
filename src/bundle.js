@@ -32432,19 +32432,78 @@
 
 	    var _this = _possibleConstructorReturn(this, (MapComp.__proto__ || Object.getPrototypeOf(MapComp)).call(this, props));
 
-	    _this.state = {};
-
+	    _this.state = {
+	      showPickup: true,
+	      showRequest: false,
+	      showCancel: false,
+	      showStart: false,
+	      showRate: false,
+	      showPayment: false
+	    };
+	    _this.changeToRequest = _this.changeToRequest.bind(_this);
+	    _this.changeToCancel = _this.changeToCancel.bind(_this);
+	    _this.changeToStart = _this.changeToStart.bind(_this);
+	    _this.changeToRate = _this.changeToRate.bind(_this);
+	    _this.changeToPayment = _this.changeToPayment.bind(_this);
 	    return _this;
 	  }
 
 	  _createClass(MapComp, [{
+	    key: 'changeToRequest',
+	    value: function changeToRequest() {
+	      this.setState({
+	        showPickup: false,
+	        showRequest: true
+	      });
+	    }
+	  }, {
+	    key: 'changeToCancel',
+	    value: function changeToCancel() {
+	      this.setState({
+	        showRequest: false,
+	        showCancel: true
+	      });
+	    }
+	  }, {
+	    key: 'changeToStart',
+	    value: function changeToStart() {
+	      var self = this;
+	      setTimeout(function () {
+	        self.setState({
+	          showCancel: false,
+	          showStart: true
+	        });
+	      }, 8000);
+	    }
+	  }, {
+	    key: 'changeToRate',
+	    value: function changeToRate() {
+	      this.setState({
+	        showStart: false,
+	        showRate: true
+	      });
+	    }
+	  }, {
+	    key: 'changeToPayment',
+	    value: function changeToPayment() {
+	      this.setState({
+	        showRate: false,
+	        showPayment: true
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'map' },
 	        _react2.default.createElement('div', { className: 'map-page', ref: 'mapCanvas' }),
-	        _react2.default.createElement(_SetPickup2.default, null)
+	        this.state.showPickup ? _react2.default.createElement(_SetPickup2.default, { changeToRequest: this.changeToRequest }) : null,
+	        this.state.showRequest ? _react2.default.createElement(_Request2.default, { changeToCancel: this.changeToCancel }) : null,
+	        this.state.showCancel ? _react2.default.createElement(_Cancel2.default, { changeToStart: this.changeToStart }) : null,
+	        this.state.showStart ? _react2.default.createElement(_StartRide2.default, { changeToRate: this.changeToRate }) : null,
+	        this.state.showRate ? _react2.default.createElement(_RateRide2.default, { changeToPayment: this.changeToPayment }) : null,
+	        this.state.showPayment ? _react2.default.createElement(_Payment2.default, null) : null
 	      );
 	    }
 	  }, {
@@ -32592,7 +32651,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'SetPickup_btn' },
+	            { className: 'SetPickup_btn', onClick: this.props.changeToRequest },
 	            'Set PickUp'
 	          )
 	        )
@@ -32642,7 +32701,7 @@
 
 
 	// module
-	exports.push([module.id, ".SetPickUp .request {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin: auto;\n  height: 16vh;\n  width: 40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top: 58vh;\n  left: 0;\n  right: 0;\n  margin-left: auto;\n  margin-right: auto;\n  top: 84%;\n  margin-left: 5px;\n}\n\n.SetPickUp .the-estimate-box {\n  height: 37%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.SetPickUp .outer-container-for-current-adrress {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n.SetPickUp .arrow-inside-of-small-div{\n  height: 30px;\n  width: 30px;\n  margin-right: 12px;\n  margin-left: 7px;\n  display: flex;\n  justify-content: center;\n  /* align-items: center; */\n  /* flex-direction: column; */\n  font-size: 27px;\n  border-radius: 17px;\n  border: solid 1px black;\n  padding-right: 2px;\n}\n\n.SetPickUp .main-wrapper-for-all-content{\n  display: flex;\n  flex-direction: column;\n  /* align-items: center; */\n  justify-content: flex-start;\n  align-items: flex-start;\n}\n\n.SetPickUp .inner-container-for-current-adrress {\n  font-size: 16px;\n}\n\n.SetPickUp .Pickup-location-container-for-current-adrress {\n  font-size: 10px;\n}\n\n.SetPickUp .SetPickup_btn {\n  border-radius: 20px;\n  height: 37%;\n  width:90%;\n  background-color:#3D0780;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 20px;\n  color: white;\n}\n", ""]);
+	exports.push([module.id, ".SetPickUp .request {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin: auto;\n  height: 16vh;\n  width: 40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top: 80vh;\n  left: 0;\n  right: 0;\n  margin-left: auto;\n  margin-right: auto;\n  margin-left: 5px;\n}\n\n.SetPickUp .the-estimate-box {\n  height: 37%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.SetPickUp .outer-container-for-current-adrress {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n.SetPickUp .arrow-inside-of-small-div{\n  height: 30px;\n  width: 30px;\n  margin-right: 12px;\n  margin-left: 7px;\n  display: flex;\n  justify-content: center;\n  /* align-items: center; */\n  /* flex-direction: column; */\n  font-size: 27px;\n  border-radius: 17px;\n  border: solid 1px black;\n  padding-right: 2px;\n}\n\n.SetPickUp .main-wrapper-for-all-content{\n  display: flex;\n  flex-direction: column;\n  /* align-items: center; */\n  justify-content: flex-start;\n  align-items: flex-start;\n}\n\n.SetPickUp .inner-container-for-current-adrress {\n  font-size: 16px;\n}\n\n.SetPickUp .Pickup-location-container-for-current-adrress {\n  font-size: 10px;\n}\n\n.SetPickUp .SetPickup_btn {\n  border-radius: 20px;\n  height: 37%;\n  width:90%;\n  background-color:#3D0780;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 20px;\n  color: white;\n}\n", ""]);
 
 	// exports
 
@@ -32765,7 +32824,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'request-shyft-btn btn' },
+	          { className: 'request-shyft-btn btn', onClick: this.props.changeToCancel },
 	          'Request Ride'
 	        )
 	      );
@@ -32853,6 +32912,11 @@
 	  }
 
 	  _createClass(Cancel, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.props.changeToStart();
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -33035,7 +33099,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'confirm-Your-ride_button' },
+	            { className: 'confirm-Your-ride_button', onClick: this.props.changeToRate },
 	            'Confirm Your Ride'
 	          ),
 	          _react2.default.createElement(
@@ -33180,7 +33244,7 @@
 	                  { className: 'stars-container' },
 	                  _react2.default.createElement(
 	                    'div',
-	                    { 'class': 'rating' },
+	                    { className: 'rating' },
 	                    _react2.default.createElement(
 	                      'span',
 	                      null,
@@ -33213,7 +33277,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'request-shyft-btn btn' },
+	            { className: 'request-shyft-btn btn', onClick: this.props.changeToPayment },
 	            'Next'
 	          )
 	        )
@@ -33281,6 +33345,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
 
 	__webpack_require__(326);
 
@@ -33376,7 +33442,11 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'next-btn btn' },
-	              'Next'
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/userDashboard' },
+	                'Next'
+	              )
 	            )
 	          )
 	        )

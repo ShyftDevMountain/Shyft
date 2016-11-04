@@ -41,7 +41,7 @@ class Request extends React.Component {
           </div>
       </div>
       </div>
-        <div className='request-shyft-btn btn'>Request Ride</div>
+        <div className='request-shyft-btn btn' onClick={this.props.changeToCancel}>Request Ride</div>
       </div>
     )
   }

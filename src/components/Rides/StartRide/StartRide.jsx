@@ -24,7 +24,7 @@ class StartRide extends React.Component {
             </div>
 
           </div>
-          <div className='confirm-Your-ride_button'>Confirm Your Ride</div>
+          <div className='confirm-Your-ride_button' onClick={this.props.changeToRate}>Confirm Your Ride</div>
           <div className='request-shyft-btn btn'>Cancel</div>
         </div>
       </div>

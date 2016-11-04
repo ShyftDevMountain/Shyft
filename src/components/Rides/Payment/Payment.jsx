@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 import './Payment.css';
 
@@ -24,7 +25,7 @@ class Payment extends React.Component {
             <div className='total-price-div'>
               $9.00
             </div>
-            <div className='next-btn btn'>Next</div>
+            <div className='next-btn btn'><Link to='/userDashboard'>Next</Link></div>
           </div>
         </div>
       </div>
