@@ -1,0 +1,104 @@
+.payment-section {
+  height:60vh;
+  width:60vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  position:absolute;
+  top:20vh;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 28px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-white{
+  background-color: white;
+  height:90%;
+  width:90%;
+  border-radius:28px;
+}
+
+
+.payment-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.payment-title{
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top:20px;
+}
+
+.payment-title span{
+  color:#FF00BF;
+}
+
+.payment-text img {
+  height:100px;
+  width:100px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.add-tip{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid grey;
+  padding:5px;
+  border-radius: 5px;
+  margin-bottom:20px;
+  width:50%;
+
+}
+
+.add-tip div:nth-child(-n+4){
+  border-right: 1px solid grey;
+  padding-right: 15px;
+}
+
+.add-tip div:nth-child(5) {
+  margin-right: 7px;
+}
+
+
+.add-payment {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid grey;
+  padding:5px;
+  border-radius:5px;
+  width:50%;
+  margin-bottom: 20px;
+}
+
+.grey-numbers {
+  color:#a8a8a8;
+}
+
+.total-price-div {
+  font-size:30px;
+}
+
+.next-btn {
+  border-radius: 20px;
+  height:20%;
+  width:90%;
+  background-color:#3D0880;
+  border:none;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+
+
+.next-btn:hover {
+  color:white;
+}

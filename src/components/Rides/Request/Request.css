@@ -10,10 +10,7 @@
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 28px;
   top:58vh;
-  left:0;
-  right:0;
-  margin-left: auto;
-  margin-right:auto;
+  margin-left: 5px;
 }
 
 .car-type-div {
@@ -42,7 +39,7 @@
   font-size: 12px;
 }
 
-.the-estimate-box {
+.the-eta-box {
   height:70%;
   width:90%;
   background-color: white;
@@ -75,9 +72,46 @@
   padding-left:10px;
 }
 
+.input-section {
+  display:flex;
+}
+
+.color-dest-circles{
+  margin-left:15px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.blue-circle {
+  width:8px;
+  height:8px;
+  border-radius: 100%;
+  background-color:#3D0880;
+}
+
+.pink-circle {
+  width:8px;
+  height:8px;
+  border-radius: 100%;
+  background-color:#FF00BF;
+}
 
 .address-input {
-  margin-left:20px;
+  margin-left:30px;
+
+}
+
+.address-input input{
+  border:none;
+  width:100%;
+  border-radius: 20px;
+}
+
+.inputs-stacked {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .request-shyft-btn {
@@ -88,4 +122,10 @@
   display:flex;
   justify-content: center;
   align-items: center;
+  color:white;
+}
+
+
+.request-shyft-btn:hover {
+  color:white;
 }

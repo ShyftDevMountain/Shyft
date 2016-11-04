@@ -30330,24 +30330,6 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: this.state.jumboBg },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'MainJumbotron-title' },
-	                        'Rides in Minutes'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'btn btn-primary MainJumbotron-btn' },
-	                        _react2.default.createElement(
-	                            _reactRouter.Link,
-	                            { to: '/login' },
-	                            'Sign Up Now'
-	                        )
-	                    )
-	                ),
 	                _react2.default.createElement(_BackgroundComponent2.default, null),
 	                _react2.default.createElement(
 	                    'div',
@@ -32491,8 +32473,11 @@
 	    value: function createMap() {
 	      var mapOptions = {
 	        zoom: 12,
-	        center: this.mapCenter()
+
+	        center: this.mapCenter(),
+	        scrollwheel: false
 	      };
+
 	      return new google.maps.Map(this.refs.mapCanvas, mapOptions);
 	    }
 	  }, {
@@ -32705,7 +32690,7 @@
 	        { className: 'request' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'the-estimate-box' },
+	          { className: 'the-eta-box' },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'car-type-div' },
@@ -32755,13 +32740,27 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'address-input origin-address' },
-	            'Start Destination'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'address-input dest-address' },
-	            'End Destination'
+	            { className: 'input-section' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'color-dest-circles' },
+	              _react2.default.createElement('div', { className: 'blue-circle' }),
+	              _react2.default.createElement('div', { className: 'pink-circle' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'inputs-stacked' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'address-input origin-address' },
+	                _react2.default.createElement('input', { type: 'text', placeholder: 'Pickup Location' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'address-input dest-address' },
+	                _react2.default.createElement('input', { type: 'text', placeholder: 'Add Destination' })
+	              )
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -32813,7 +32812,7 @@
 
 
 	// module
-	exports.push([module.id, ".request {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  left:0;\n  right:0;\n  margin-left: auto;\n  margin-right:auto;\n}\n\n.car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.ride-type-section p{\n  margin:0px;\n}\n\n.ride-type-desc {\n  font-size: 12px;\n}\n\n.the-estimate-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.eta-and-cost {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n\n}\n\n.the-eta-title {\n  border-right: 0.5px solid grey;\n  height: 100%;\n  padding-right:10px;\n}\n\n.eta-title {\n  padding-left:10px;\n}\n\n\n.address-input {\n  margin-left:20px;\n}\n\n.request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#FF00BF;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n}\n", ""]);
+	exports.push([module.id, ".request {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  margin-left: 5px;\n}\n\n.car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.ride-type-section p{\n  margin:0px;\n}\n\n.ride-type-desc {\n  font-size: 12px;\n}\n\n.the-eta-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.eta-and-cost {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n\n}\n\n.the-eta-title {\n  border-right: 0.5px solid grey;\n  height: 100%;\n  padding-right:10px;\n}\n\n.eta-title {\n  padding-left:10px;\n}\n\n.input-section {\n  display:flex;\n}\n\n.color-dest-circles{\n  margin-left:15px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.blue-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#3D0880;\n}\n\n.pink-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#FF00BF;\n}\n\n.address-input {\n  margin-left:30px;\n\n}\n\n.address-input input{\n  border:none;\n  width:100%;\n  border-radius: 20px;\n}\n\n.inputs-stacked {\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#FF00BF;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.request-shyft-btn:hover {\n  color:white;\n}\n", ""]);
 
 	// exports
 
@@ -32856,7 +32855,61 @@
 	  _createClass(Cancel, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null);
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'cancel-section' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'the-white-box' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'car-img-cancel' },
+	            _react2.default.createElement('img', { src: 'https://www.lyft.com/images/cities/classic.6d006a8c.png' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'confirmation-eta' },
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Awesome! Your Shyft ride will be here in approximately 2 minutes!'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'test-flex' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'input-section' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'color-dest-circles' },
+	                _react2.default.createElement('div', { className: 'blue-circle' }),
+	                _react2.default.createElement('div', { className: 'pink-circle' })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'inputs-stacked' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'address-input origin-address' },
+	                _react2.default.createElement('input', { type: 'text', placeholder: 'Pickup Location' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'address-input dest-address' },
+	                _react2.default.createElement('input', { type: 'text', placeholder: 'Add Destination' })
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'cancel-shyft-btn btn' },
+	          'Cancel Ride'
+	        )
+	      );
 	    }
 	  }]);
 
@@ -32900,7 +32953,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".cancel-section {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  margin-left: 5px;\n}\n\n.confirmation-eta{\n  text-align: center;\n  font-size:20px;\n  padding: 10px;\n}\n\n.car-img-cancel{\n  margin:auto;\n  }\n\n.car-img-cancel img {\n  height:50px;\n  width:70px;\n}\n\n\n.the-white-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.input-section {\n  display:flex;\n}\n\n.color-dest-circles{\n  margin-left:15px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.blue-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#3D0880;\n}\n\n.pink-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#FF00BF;\n}\n\n.address-input {\n  margin-left:30px;\n\n}\n\n.address-input input{\n  border:none;\n  width:100%;\n  border-radius: 20px;\n}\n\n.inputs-stacked {\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.test-flex{\n  display: flex;\n}\n\n.cancel-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#3D0880;\n  border:1px #3D0880 solid;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.cancel-shyft-btn:hover {\n  color:white;\n}\n", ""]);
 
 	// exports
 
@@ -33251,7 +33304,83 @@
 	  _createClass(Payment, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null);
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'payment-section' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'payment-white' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'payment-text' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'payment-title' },
+	              'Thank you for riding with ',
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Shyft'
+	              ),
+	              '.'
+	            ),
+	            _react2.default.createElement('img', { src: './img/userdash/screaming-kid1.jpg' }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'add-tip' },
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                'No tip'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                '$1'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                '$2'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                '$5'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                'Other'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'add-payment' },
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                'Add Payment'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'grey-numbers' },
+	                '*1234'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'total-price-div' },
+	              '$9.00'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'next-btn btn' },
+	              'Next'
+	            )
+	          )
+	        )
+	      );
 	    }
 	  }]);
 
@@ -33295,7 +33424,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".payment-section {\n  height:60vh;\n  width:60vw;\n  background-color: rgba(0, 0, 0, 0.3);\n  position:absolute;\n  top:20vh;\n  left:0;\n  right:0;\n  margin-left: auto;\n  margin-right: auto;\n  border-radius: 28px;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.payment-white{\n  background-color: white;\n  height:90%;\n  width:90%;\n  border-radius:28px;\n}\n\n\n.payment-text {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n}\n\n.payment-title{\n  font-size: 30px;\n  margin-bottom: 20px;\n  margin-top:20px;\n}\n\n.payment-title span{\n  color:#FF00BF;\n}\n\n.payment-text img {\n  height:100px;\n  width:100px;\n  border-radius: 50px;\n  margin-bottom: 20px;\n}\n\n.add-tip{\n  display:flex;\n  flex-direction: row;\n  justify-content: space-around;\n  border: 1px solid grey;\n  padding:5px;\n  border-radius: 5px;\n  margin-bottom:20px;\n  width:50%;\n\n}\n\n.add-tip div:nth-child(-n+4){\n  border-right: 1px solid grey;\n  padding-right: 15px;\n}\n\n.add-tip div:nth-child(5) {\n  margin-right: 7px;\n}\n\n\n.add-payment {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-between;\n  border: 1px solid grey;\n  padding:5px;\n  border-radius:5px;\n  width:50%;\n  margin-bottom: 20px;\n}\n\n.grey-numbers {\n  color:#a8a8a8;\n}\n\n.total-price-div {\n  font-size:30px;\n}\n\n.next-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#3D0880;\n  border:none;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.next-btn:hover {\n  color:white;\n}\n", ""]);
 
 	// exports
 
