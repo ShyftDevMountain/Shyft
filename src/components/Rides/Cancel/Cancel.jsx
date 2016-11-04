@@ -3,6 +3,11 @@ import React from 'react';
 import './Cancel.css';
 
 class Cancel extends React.Component {
+
+  componentDidMount() {
+    this.props.changeToStart();
+  }
+
   render() {
     return (
       <div className='cancel-section'>
