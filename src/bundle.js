@@ -32786,7 +32786,7 @@
 	        { className: 'request' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'the-white-box' },
+	          { className: 'the-eta-box' },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'car-type-div' },
@@ -32908,7 +32908,7 @@
 
 
 	// module
-	exports.push([module.id, ".request {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  margin-left: 5px;\n}\n\n.car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.ride-type-section p{\n  margin:0px;\n}\n\n.ride-type-desc {\n  font-size: 12px;\n}\n\n.the-white-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.eta-and-cost {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n\n}\n\n.the-eta-title {\n  border-right: 0.5px solid grey;\n  height: 100%;\n  padding-right:10px;\n}\n\n.eta-title {\n  padding-left:10px;\n}\n\n.input-section {\n  display:flex;\n}\n\n.color-dest-circles{\n  margin-left:15px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.blue-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#3D0880;\n}\n\n.pink-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#FF00BF;\n}\n\n.address-input {\n  margin-left:30px;\n\n}\n\n.address-input input{\n  border:none;\n  width:100%;\n  border-radius: 20px;\n}\n\n.inputs-stacked {\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#FF00BF;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.request-shyft-btn:hover {\n  color:white;\n}\n", ""]);
+	exports.push([module.id, ".request {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  margin-left: 5px;\n}\n\n.car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.ride-type-section p{\n  margin:0px;\n}\n\n.ride-type-desc {\n  font-size: 12px;\n}\n\n.the-eta-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.eta-and-cost {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n\n}\n\n.the-eta-title {\n  border-right: 0.5px solid grey;\n  height: 100%;\n  padding-right:10px;\n}\n\n.eta-title {\n  padding-left:10px;\n}\n\n.input-section {\n  display:flex;\n}\n\n.color-dest-circles{\n  margin-left:15px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.blue-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#3D0880;\n}\n\n.pink-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#FF00BF;\n}\n\n.address-input {\n  margin-left:30px;\n\n}\n\n.address-input input{\n  border:none;\n  width:100%;\n  border-radius: 20px;\n}\n\n.inputs-stacked {\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#FF00BF;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.request-shyft-btn:hover {\n  color:white;\n}\n", ""]);
 
 	// exports
 
@@ -32959,6 +32959,11 @@
 	          { className: 'the-white-box' },
 	          _react2.default.createElement(
 	            'div',
+	            { className: 'car-img-cancel' },
+	            _react2.default.createElement('img', { src: 'https://www.lyft.com/images/cities/classic.6d006a8c.png' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
 	            { className: 'confirmation-eta' },
 	            _react2.default.createElement(
 	              'p',
@@ -32968,38 +32973,37 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'car-img-cancel' },
-	            _react2.default.createElement('img', { src: 'https://www.lyft.com/images/cities/classic.6d006a8c.png' })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'input-section' },
+	            { className: 'test-flex' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'color-dest-circles' },
-	              _react2.default.createElement('div', { className: 'blue-circle' }),
-	              _react2.default.createElement('div', { className: 'pink-circle' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'inputs-stacked' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'address-input origin-address' },
-	              _react2.default.createElement('input', { type: 'text', placeholder: 'Pickup Location' })
+	              { className: 'input-section' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'color-dest-circles' },
+	                _react2.default.createElement('div', { className: 'blue-circle' }),
+	                _react2.default.createElement('div', { className: 'pink-circle' })
+	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'address-input dest-address' },
-	              _react2.default.createElement('input', { type: 'text', placeholder: 'Add Destination' })
+	              { className: 'inputs-stacked' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'address-input origin-address' },
+	                _react2.default.createElement('input', { type: 'text', placeholder: 'Pickup Location' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'address-input dest-address' },
+	                _react2.default.createElement('input', { type: 'text', placeholder: 'Add Destination' })
+	              )
 	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'request-shyft-btn btn' },
-	            'Request Ride'
 	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'request-shyft-btn btn' },
+	          'Cancel Ride'
 	        )
 	      );
 	    }
@@ -33045,7 +33049,7 @@
 
 
 	// module
-	exports.push([module.id, ".cancel-section {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  margin-left: 5px;\n}\n\n.confirmation-eta{\n  text-align: center;\n  font-size:20px;\n  padding: 10px;\n}\n\n.car-img-cancel{\n  margin:auto;\n  }\n\n.car-img-cancel img {\n  height:50px;\n  width:70px;\n}\n\n\n.ride-type-desc {\n  font-size: 12px;\n}\n\n.the-white-box {\n  height:80%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.eta-and-cost {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n\n}\n\n.the-eta-title {\n  border-right: 0.5px solid grey;\n  height: 100%;\n  padding-right:10px;\n}\n\n.eta-title {\n  padding-left:10px;\n}\n\n.input-section {\n  display:flex;\n}\n\n.color-dest-circles{\n  margin-left:15px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.blue-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#3D0880;\n}\n\n.pink-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#FF00BF;\n}\n\n.address-input {\n  margin-left:30px;\n\n}\n\n.address-input input{\n  border:none;\n  width:100%;\n  border-radius: 20px;\n}\n\n.inputs-stacked {\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#FF00BF;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.request-shyft-btn:hover {\n  color:white;\n}\n", ""]);
+	exports.push([module.id, ".cancel-section {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  margin-left: 5px;\n}\n\n.confirmation-eta{\n  text-align: center;\n  font-size:20px;\n  padding: 10px;\n}\n\n.car-img-cancel{\n  margin:auto;\n  }\n\n.car-img-cancel img {\n  height:50px;\n  width:70px;\n}\n\n\n.the-white-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.input-section {\n  display:flex;\n}\n\n.color-dest-circles{\n  margin-left:15px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.blue-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#3D0880;\n}\n\n.pink-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#FF00BF;\n}\n\n.address-input {\n  margin-left:30px;\n\n}\n\n.address-input input{\n  border:none;\n  width:100%;\n  border-radius: 20px;\n}\n\n.inputs-stacked {\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.test-flex{\n  display: flex;\n}\n\n.request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#3D0880;\n  border:1px #3D0880 solid;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.request-shyft-btn:hover {\n  color:white;\n}\n", ""]);
 
 	// exports
 

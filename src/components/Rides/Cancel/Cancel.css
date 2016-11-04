@@ -29,12 +29,8 @@
 }
 
 
-.ride-type-desc {
-  font-size: 12px;
-}
-
 .the-white-box {
-  height:80%;
+  height:70%;
   width:90%;
   background-color: white;
   border-radius: 20px;
@@ -43,27 +39,6 @@
   flex-direction: column;
   justify-content: space-around;
 
-}
-
-.eta-and-cost {
-  text-align: center;
-  display:flex;
-  justify-content: center;
-  font-size:15px;
-  padding-bottom: 15px;
-  border-bottom: 0.5px solid grey;
-  width:100%;
-
-}
-
-.the-eta-title {
-  border-right: 0.5px solid grey;
-  height: 100%;
-  padding-right:10px;
-}
-
-.eta-title {
-  padding-left:10px;
 }
 
 .input-section {
@@ -108,11 +83,16 @@
   justify-content: space-around;
 }
 
+.test-flex{
+  display: flex;
+}
+
 .request-shyft-btn {
   border-radius: 20px;
   height:20%;
   width:90%;
-  background-color:#FF00BF;
+  background-color:#3D0880;
+  border:1px #3D0880 solid;
   display:flex;
   justify-content: center;
   align-items: center;

@@ -6,7 +6,7 @@ class Request extends React.Component {
   render() {
     return(
       <div className='request'>
-        <div className='the-white-box'>
+        <div className='the-eta-box'>
           <div className='car-type-div'>
             <div>
             <img src='https://www.lyft.com/images/cities/classic.6d006a8c.png' />
