@@ -27620,7 +27620,7 @@
 	            logo2.classList.add('navbar-logo-show');
 	            setTimeout(function () {
 	                navbarDrop.classList.add('navbar-hover-container-active');
-	            }, 135);
+	            }, 25);
 	        }
 	    }, {
 	        key: 'handleHoverLeave',
@@ -27670,7 +27670,7 @@
 	        _this.showMenu = _this.showMenu.bind(_this);
 	        _this.loginClick = _this.loginClick.bind(_this);
 	        _this.handleLoginClose = _this.handleLoginClose.bind(_this);
-
+	        _this.handleWindowClose = _this.handleWindowClose.bind(_this);
 	        return _this;
 	    }
 
@@ -27705,6 +27705,13 @@
 	            });
 	        }
 	    }, {
+	        key: 'handleWindowClose',
+	        value: function handleWindowClose() {
+	            this.setState({
+	                showLogin: false
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -27714,7 +27721,7 @@
 	                _react2.default.createElement(_SideMenuBackDrop2.default, { showMenu: this.state.showBackDrop, hideMenu: this.hideMenu }),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'navbar-mobile' },
+	                    { id: 'navbarMobile', className: 'navbar-mobile' },
 	                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-menu-hamburger', onClick: this.showMenu }),
 	                    _react2.default.createElement('img', { src: 'img/LYFT_LOGO/SVG/white_logo.svg' })
 	                ),
@@ -28516,6 +28523,15 @@
 	            }, 200);
 	        }
 	    }, {
+	        key: 'handleWindowClose',
+	        value: function handleWindowClose() {
+	            var loginContainer = document.getElementById('loginContainer');
+	            var loginForm = document.getElementById('loginForm');
+
+	            loginContainer.classList.remove('login-container-active');
+	            loginForm.classList.remove('login-form-container-active');
+	        }
+	    }, {
 	        key: 'handleLoginClose',
 	        value: function handleLoginClose() {
 	            var self = this;
@@ -28537,11 +28553,19 @@
 	                null,
 	                _react2.default.createElement(
 	                    'div',
-	                    { id: 'loginContainer', className: 'login-container' },
+	                    { onClick: this.handleWindowClose, id: 'loginContainer', className: 'login-container' },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { id: 'loginForm', className: 'login-form-container' },
-	                        _react2.default.createElement('span', { onClick: this.handleLoginClose.bind(this), className: 'login-close glyphicon glyphicon-remove' }),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { onClick: this.handleLoginClose.bind(this) },
+	                            _react2.default.createElement(
+	                                'i',
+	                                { className: 'material-icons login-close' },
+	                                'close'
+	                            )
+	                        ),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'login-heading' },
@@ -30186,7 +30210,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n    z-index: 10;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .3s ease;\n}\n\n.navbar-mobile img {\n    width: 42px;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .3s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    transition: all .2s ease;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbar-scroll-active {\n    background: #fff;\n    color: #333;\n    box-shadow: 1px 1px 5px gray;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .3s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: all .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;\n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .3s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
+	exports.push([module.id, "\n\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    z-index: 10;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .3s ease;\n}\n\n.navbar-mobile img {\n    width: 42px;\n}\n\n.navbar-mobile-active {\n    background: white;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .2s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    transition: all .2s ease;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbar-scroll-active {\n    background: #fff;\n    color: #333;\n    box-shadow: 1px 1px 5px gray;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .2s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: all .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;\n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .2s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -33453,15 +33477,9 @@
 
 	var _EditInfoModal2 = _interopRequireDefault(_EditInfoModal);
 
-<<<<<<< HEAD
 	__webpack_require__(336);
 
 	var _dashboardService = __webpack_require__(333);
-=======
-	__webpack_require__(335);
-
-	var _dashboardService = __webpack_require__(337);
->>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33727,13 +33745,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
 	var _dashboardService = __webpack_require__(333);
 
 	__webpack_require__(334);
-=======
-	__webpack_require__(333);
->>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33834,7 +33848,6 @@
 
 /***/ },
 /* 333 */
-<<<<<<< HEAD
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33872,18 +33885,12 @@
 
 /***/ },
 /* 334 */
-=======
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-<<<<<<< HEAD
 	var content = __webpack_require__(335);
-=======
-	var content = __webpack_require__(334);
->>>>>>> master
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33903,11 +33910,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
 /* 335 */
-=======
-/* 334 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33921,21 +33924,13 @@
 
 
 /***/ },
-<<<<<<< HEAD
 /* 336 */
-=======
-/* 335 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-<<<<<<< HEAD
 	var content = __webpack_require__(337);
-=======
-	var content = __webpack_require__(336);
->>>>>>> master
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33955,11 +33950,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
 /* 337 */
-=======
-/* 336 */
->>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33973,39 +33964,6 @@
 
 
 /***/ },
-<<<<<<< HEAD
-=======
-/* 337 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.getCustomerInfo = getCustomerInfo;
-	exports.updateCustomerInfo = updateCustomerInfo;
-
-	var _axios = __webpack_require__(253);
-
-	var _axios2 = _interopRequireDefault(_axios);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function getCustomerInfo() {
-	  return _axios2.default.get('/customerinfo').then(function (res) {
-	    return res.data;
-	  });
-	}
-
-	function updateCustomerInfo(name, email, phone) {
-	  return _axios2.default.put('/customerinfo', { name: name, email: email, phone: phone }).then(function (res) {
-	    return res.data;
-	  });
-	}
-
-/***/ },
->>>>>>> master
 /* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -34031,7 +33989,15 @@
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	__webpack_require__(344);
+	var _ShyftPlus = __webpack_require__(344);
+
+	var _ShyftPlus2 = _interopRequireDefault(_ShyftPlus);
+
+	var _RideShyft = __webpack_require__(345);
+
+	var _RideShyft2 = _interopRequireDefault(_RideShyft);
+
+	__webpack_require__(346);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34049,11 +34015,48 @@
 
 	    var _this = _possibleConstructorReturn(this, (CityDetails.__proto__ || Object.getPrototypeOf(CityDetails)).call(this, props));
 
-	    _this.state = {};
+	    _this.state = {
+	      showPlus: false,
+	      showLyft: true
+	    };
+	    _this.showPlus = _this.showPlus.bind(_this);
+	    _this.showLyft = _this.showLyft.bind(_this);
+
 	    return _this;
 	  }
 
+	  // handleShyftClick(){
+	  //     this.setState({
+	  //         showPlus: false,
+	  //         showLyft: true
+	  //     })
+	  // }
+	  //
+	  // handleShyftPlusClick() {
+	  //     this.setState({
+	  //         showPlus: true,
+	  //         showLyft: false
+	  //     })
+	  // }
+
+
 	  _createClass(CityDetails, [{
+	    key: 'showPlus',
+	    value: function showPlus() {
+	      this.setState({
+	        showPlus: true,
+	        showLyft: false
+	      });
+	    }
+	  }, {
+	    key: 'showLyft',
+	    value: function showLyft() {
+	      this.setState({
+	        showPlus: false,
+	        showLyft: true
+	      });
+	    }
+	  }, {
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
 	      var _this2 = this;
@@ -34192,169 +34195,8 @@
 	            )
 	          )
 	        ),
-	        _react2.default.createElement(
-	          'section',
-	          { className: 'cityDetails-TwoWays' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'cityDetails-TwoWaysWrap' },
-	            _react2.default.createElement(
-	              'h2',
-	              null,
-	              'Two Ways to Ride'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'cityDetails-carWrapper' },
-	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/lyftcar.png' })
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Lyft is your personal ride. Whether you\'re traveling solo or with up to three friends, this sedan is yours to fill.'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'cityDetails-pricesWrapper' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'cityDetails-prices' },
-	              _react2.default.createElement(
-	                'section',
-	                null,
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'priceChart' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'priceChart-btnwrapper' },
-	                    _react2.default.createElement(
-	                      'button',
-	                      { className: 'pricechart-btn active' },
-	                      'Lyft'
-	                    ),
-	                    _react2.default.createElement(
-	                      'button',
-	                      { className: 'pricechart-btn' },
-	                      'Plus'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'priceChart-pricing' },
-	                    _react2.default.createElement(
-	                      'table',
-	                      { className: 'pricingTable' },
-	                      _react2.default.createElement(
-	                        'tbody',
-	                        null,
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Base Fare'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$1.60'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cancel Penalty'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$5.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cost Per Mile'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$1.30'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cost Per Minute'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$0.14'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Maximum Fare'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$4.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Scheduled Ride Cancel Penalty'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$5.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Service Fee'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$1.00'
-	                          )
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        ),
+	        this.state.showPlus ? _react2.default.createElement(_ShyftPlus2.default, { showLyft: this.showLyft }) : null,
+	        this.state.showLyft ? _react2.default.createElement(_RideShyft2.default, { showPlus: this.showPlus }) : null,
 	        _react2.default.createElement(_CityBottomBanner2.default, null)
 	      );
 	    }
@@ -34640,10 +34482,436 @@
 /* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ShyftPlus = function (_React$Component) {
+	  _inherits(ShyftPlus, _React$Component);
+
+	  function ShyftPlus() {
+	    _classCallCheck(this, ShyftPlus);
+
+	    return _possibleConstructorReturn(this, (ShyftPlus.__proto__ || Object.getPrototypeOf(ShyftPlus)).apply(this, arguments));
+	  }
+
+	  _createClass(ShyftPlus, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'section',
+	          { id: 'ShyftPlus', className: 'cityDetails-TwoWays' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-TwoWaysWrap' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Two Ways to Ride'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-carWrapper' },
+	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/carLyftplus.png' })
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Lyft Plus is a supersized ride with six seats for when you need more space or just want to roll with the entire squad.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-pricesWrapper' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-prices' },
+	              _react2.default.createElement(
+	                'section',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'priceChart' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-btnwrapper' },
+	                    _react2.default.createElement(
+	                      'button',
+	                      { onClick: this.props.showLyft, className: 'pricechart-btn active' },
+	                      'Lyft'
+	                    ),
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn' },
+	                      'Plus'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-pricing' },
+	                    _react2.default.createElement(
+	                      'table',
+	                      { className: 'pricingTable' },
+	                      _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Base Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$3.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Mile'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$2.35'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Minute'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$0.25'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Maximum Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$7.50'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Scheduled Ride Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$10.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Service Fee'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.70'
+	                          )
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return ShyftPlus;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = ShyftPlus;
+
+/***/ },
+/* 345 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var RideShyft = function (_React$Component) {
+	  _inherits(RideShyft, _React$Component);
+
+	  function RideShyft() {
+	    _classCallCheck(this, RideShyft);
+
+	    return _possibleConstructorReturn(this, (RideShyft.__proto__ || Object.getPrototypeOf(RideShyft)).apply(this, arguments));
+	  }
+
+	  _createClass(RideShyft, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'section',
+	          { className: 'cityDetails-TwoWays' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-TwoWaysWrap' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Two Ways to Ride'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-carWrapper' },
+	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/lyftcar.png' })
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Lyft is your personal ride. Whether you\'re traveling solo or with up to three friends, this sedan is yours to fill.'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'cityDetails-pricesWrapper' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'cityDetails-prices' },
+	              _react2.default.createElement(
+	                'section',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'priceChart' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-btnwrapper' },
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn active' },
+	                      'Lyft'
+	                    ),
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'pricechart-btn', onClick: this.props.showPlus },
+	                      'Plus'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'priceChart-pricing' },
+	                    _react2.default.createElement(
+	                      'table',
+	                      { className: 'pricingTable' },
+	                      _react2.default.createElement(
+	                        'tbody',
+	                        null,
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Base Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.60'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Mile'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.30'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Cost Per Minute'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$0.14'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Maximum Fare'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$4.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Scheduled Ride Cancel Penalty'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$5.00'
+	                          )
+	                        ),
+	                        _react2.default.createElement(
+	                          'tr',
+	                          null,
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            'Service Fee'
+	                          ),
+	                          _react2.default.createElement(
+	                            'td',
+	                            null,
+	                            '$1.00'
+	                          )
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return RideShyft;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = RideShyft;
+
+/***/ },
+/* 346 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(345);
+	var content = __webpack_require__(347);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34663,7 +34931,7 @@
 	}
 
 /***/ },
-/* 345 */
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
