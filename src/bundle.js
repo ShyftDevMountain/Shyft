@@ -32429,7 +32429,7 @@
 	}
 
 	var lyftToken = {
-	  headers: { 'Authorization': 'Bearer "gAAAAABYGlWbMEMn9Sgo900TGeX6PIlaWgjOTJSh4U0TQpXwdg1LQXrataOaK1ryY-pgoW9f8WPUjImNPmHPN2O5bVWihVPbB7z4SQZ3HYOpJmsLHtpalfvuD_sVlaZyFIaezzptXWbLWoikagqU9W860XSentCameqiAZ2B70GbI_vJc25wjjl5Uz5013dtY1_XHCboHPrzpze9teYmJMoew-zMHokylQ=="'
+	  headers: { 'Authorization': 'Bearer "gAAAAABYG6e0ofqwWbOOjz6z1wAsnm809QjRZKziHvLlilzJ5U82hSGRdeBhZirSgc9prOkXID3IV_2cVbZ0OxUPy_wdFYoEwRroPYG6gKBEPCeJGOsErokJ3dFZhfsnHyZuDkvVNKSlkJUTwVKUZBQ9UwZAmGv2O8Uh1yT2qHLuK5z5-ZRrNvhbnk1t25SfuQHS85aoIpOGxMN4OjfbM5A1IaWsTBTN6Q=="'
 	  }
 	};
 
@@ -32513,7 +32513,7 @@
 	        'div',
 	        { className: 'map' },
 	        _react2.default.createElement('div', { className: 'map-page', ref: 'mapCanvas' }),
-	        _react2.default.createElement(_StartRide2.default, null)
+	        _react2.default.createElement(_Request2.default, null)
 	      );
 	    }
 	  }, {
@@ -33308,9 +33308,15 @@
 
 	var _EditInfoModal2 = _interopRequireDefault(_EditInfoModal);
 
+<<<<<<< HEAD
 	__webpack_require__(336);
 
 	var _dashboardService = __webpack_require__(333);
+=======
+	__webpack_require__(335);
+
+	var _dashboardService = __webpack_require__(337);
+>>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33576,9 +33582,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+<<<<<<< HEAD
 	var _dashboardService = __webpack_require__(333);
 
 	__webpack_require__(334);
+=======
+	__webpack_require__(333);
+>>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33679,6 +33689,7 @@
 
 /***/ },
 /* 333 */
+<<<<<<< HEAD
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33716,12 +33727,18 @@
 
 /***/ },
 /* 334 */
+=======
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
+<<<<<<< HEAD
 	var content = __webpack_require__(335);
+=======
+	var content = __webpack_require__(334);
+>>>>>>> master
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33741,7 +33758,11 @@
 	}
 
 /***/ },
+<<<<<<< HEAD
 /* 335 */
+=======
+/* 334 */
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33755,13 +33776,21 @@
 
 
 /***/ },
+<<<<<<< HEAD
 /* 336 */
+=======
+/* 335 */
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
+<<<<<<< HEAD
 	var content = __webpack_require__(337);
+=======
+	var content = __webpack_require__(336);
+>>>>>>> master
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33781,7 +33810,11 @@
 	}
 
 /***/ },
+<<<<<<< HEAD
 /* 337 */
+=======
+/* 336 */
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33795,6 +33828,39 @@
 
 
 /***/ },
+<<<<<<< HEAD
+=======
+/* 337 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getCustomerInfo = getCustomerInfo;
+	exports.updateCustomerInfo = updateCustomerInfo;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getCustomerInfo() {
+	  return _axios2.default.get('/customerinfo').then(function (res) {
+	    return res.data;
+	  });
+	}
+
+	function updateCustomerInfo(name, email, phone) {
+	  return _axios2.default.put('/customerinfo', { name: name, email: email, phone: phone }).then(function (res) {
+	    return res.data;
+	  });
+	}
+
+/***/ },
+>>>>>>> master
 /* 338 */
 /***/ function(module, exports, __webpack_require__) {
 

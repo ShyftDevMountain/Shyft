@@ -35,6 +35,7 @@ class NavBar extends React.Component {
               rideLyft.classList.add('navbar-ride-lyft-active');
               help.classList.add('navbar-link-active');
               ride.classList.add('navbar-link-active');
+
           }
           else {
               explore.classList.remove('navbar-scroll-active');
@@ -77,7 +78,7 @@ class NavBar extends React.Component {
         logo2.classList.add('navbar-logo-show');
         setTimeout(function(){
             navbarDrop.classList.add('navbar-hover-container-active');
-        }, 135);
+        }, 25);
     }
 
     handleHoverLeave(){
@@ -122,7 +123,7 @@ class NavBar extends React.Component {
       this.showMenu = this.showMenu.bind(this);
       this.loginClick = this.loginClick.bind(this);
       this.handleLoginClose = this.handleLoginClose.bind(this);
-
+      this.handleWindowClose = this.handleWindowClose.bind(this);
     }
 
     showMenu() {
@@ -151,6 +152,12 @@ class NavBar extends React.Component {
         })
     }
 
+    handleWindowClose() {
+        this.setState({
+            showLogin: false
+        })
+    }
+
 
   render() {
     return (
@@ -159,7 +166,7 @@ class NavBar extends React.Component {
 
         <SideMenu showMenu={this.state.showMenu} hideMenu={this.hideMenu}/>
             <SideMenuBackDrop showMenu={this.state.showBackDrop} hideMenu={this.hideMenu}/>
-            <div className="navbar-mobile">
+            <div id="navbarMobile" className="navbar-mobile">
                 <span className="glyphicon glyphicon-menu-hamburger" onClick={this.showMenu}></span>
                 <img src="img/LYFT_LOGO/SVG/white_logo.svg"/>
             </div>
@@ -185,7 +192,9 @@ class NavBar extends React.Component {
                 </div>
                 <div id="navbar-right" className="navbar-right">
                     <div id="navbar-ride-lyftbtn" className="navbar-ride-lyft"><Link to="/rides" id="ride" className="hover-link-none">Ride with Shyft</Link></div>
+
                     {this.state.showLogin ? <LoginComp handleLoginClose={this.handleLoginClose}/> : null}
+
                     <div className="navbar-login">
                         <div id="login" onClick={this.loginClick}>Login</div>
                     </div>
