@@ -32513,7 +32513,7 @@
 	        'div',
 	        { className: 'map' },
 	        _react2.default.createElement('div', { className: 'map-page', ref: 'mapCanvas' }),
-	        _react2.default.createElement(_Cancel2.default, null)
+	        _react2.default.createElement(_RateRide2.default, null)
 	      );
 	    }
 	  }, {
@@ -33002,7 +33002,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'request-shyft-btn btn' },
+	          { className: 'cancel-shyft-btn btn' },
 	          'Cancel Ride'
 	        )
 	      );
@@ -33049,7 +33049,7 @@
 
 
 	// module
-	exports.push([module.id, ".cancel-section {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  margin-left: 5px;\n}\n\n.confirmation-eta{\n  text-align: center;\n  font-size:20px;\n  padding: 10px;\n}\n\n.car-img-cancel{\n  margin:auto;\n  }\n\n.car-img-cancel img {\n  height:50px;\n  width:70px;\n}\n\n\n.the-white-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.input-section {\n  display:flex;\n}\n\n.color-dest-circles{\n  margin-left:15px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.blue-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#3D0880;\n}\n\n.pink-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#FF00BF;\n}\n\n.address-input {\n  margin-left:30px;\n\n}\n\n.address-input input{\n  border:none;\n  width:100%;\n  border-radius: 20px;\n}\n\n.inputs-stacked {\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.test-flex{\n  display: flex;\n}\n\n.request-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#3D0880;\n  border:1px #3D0880 solid;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.request-shyft-btn:hover {\n  color:white;\n}\n", ""]);
+	exports.push([module.id, ".cancel-section {\n  position:absolute;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin:auto;\n  height:40vh;\n  width:40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top:58vh;\n  margin-left: 5px;\n}\n\n.confirmation-eta{\n  text-align: center;\n  font-size:20px;\n  padding: 10px;\n}\n\n.car-img-cancel{\n  margin:auto;\n  }\n\n.car-img-cancel img {\n  height:50px;\n  width:70px;\n}\n\n\n.the-white-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.input-section {\n  display:flex;\n}\n\n.color-dest-circles{\n  margin-left:15px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.blue-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#3D0880;\n}\n\n.pink-circle {\n  width:8px;\n  height:8px;\n  border-radius: 100%;\n  background-color:#FF00BF;\n}\n\n.address-input {\n  margin-left:30px;\n\n}\n\n.address-input input{\n  border:none;\n  width:100%;\n  border-radius: 20px;\n}\n\n.inputs-stacked {\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.test-flex{\n  display: flex;\n}\n\n.cancel-shyft-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#3D0880;\n  border:1px #3D0880 solid;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.cancel-shyft-btn:hover {\n  color:white;\n}\n", ""]);
 
 	// exports
 
@@ -33266,7 +33266,83 @@
 	  _createClass(Payment, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null);
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'payment-section' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'payment-white' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'payment-text' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'payment-title' },
+	              'Thank you for riding with ',
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Shyft'
+	              ),
+	              '.'
+	            ),
+	            _react2.default.createElement('img', { src: './img/userdash/screaming-kid1.jpg' }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'add-tip' },
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                'No tip'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                '$1'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                '$2'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                '$5'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                'Other'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'add-payment' },
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                'Add Payment'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'grey-numbers' },
+	                '*1234'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'total-price-div' },
+	              '$9.00'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'next-btn btn' },
+	              'Next'
+	            )
+	          )
+	        )
+	      );
 	    }
 	  }]);
 
@@ -33310,7 +33386,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".payment-section {\n  height:60vh;\n  width:60vw;\n  background-color: rgba(0, 0, 0, 0.3);\n  position:absolute;\n  top:20vh;\n  left:0;\n  right:0;\n  margin-left: auto;\n  margin-right: auto;\n  border-radius: 28px;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.payment-white{\n  background-color: white;\n  height:90%;\n  width:90%;\n  border-radius:28px;\n}\n\n\n.payment-text {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n}\n\n.payment-title{\n  font-size: 30px;\n  margin-bottom: 20px;\n  margin-top:20px;\n}\n\n.payment-title span{\n  color:#FF00BF;\n}\n\n.payment-text img {\n  height:100px;\n  width:100px;\n  border-radius: 50px;\n  margin-bottom: 20px;\n}\n\n.add-tip{\n  display:flex;\n  flex-direction: row;\n  justify-content: space-around;\n  border: 1px solid grey;\n  padding:5px;\n  border-radius: 5px;\n  margin-bottom:20px;\n  width:50%;\n\n}\n\n.add-tip div:nth-child(-n+4){\n  border-right: 1px solid grey;\n  padding-right: 15px;\n}\n\n.add-tip div:nth-child(5) {\n  margin-right: 7px;\n}\n\n\n.add-payment {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-between;\n  border: 1px solid grey;\n  padding:5px;\n  border-radius:5px;\n  width:50%;\n  margin-bottom: 20px;\n}\n\n.grey-numbers {\n  color:#a8a8a8;\n}\n\n.total-price-div {\n  font-size:30px;\n}\n\n.next-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#3D0880;\n  border:none;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.next-btn:hover {\n  color:white;\n}\n", ""]);
 
 	// exports
 

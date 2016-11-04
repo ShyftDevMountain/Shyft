@@ -87,7 +87,7 @@
   display: flex;
 }
 
-.request-shyft-btn {
+.cancel-shyft-btn {
   border-radius: 20px;
   height:20%;
   width:90%;
@@ -100,6 +100,6 @@
 }
 
 
-.request-shyft-btn:hover {
+.cancel-shyft-btn:hover {
   color:white;
 }

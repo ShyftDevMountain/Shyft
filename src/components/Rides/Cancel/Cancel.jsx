@@ -26,7 +26,7 @@ class Cancel extends React.Component {
           </div>
           </div>
         </div>
-                <div className='request-shyft-btn btn'>Cancel Ride</div>
+                <div className='cancel-shyft-btn btn'>Cancel Ride</div>
 
         </div>
     )
