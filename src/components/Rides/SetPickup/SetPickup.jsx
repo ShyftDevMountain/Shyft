@@ -21,7 +21,7 @@ class SetPickup extends React.Component{
                          </div>
                    </div>
                </div>
-              <div className='SetPickup_btn'>Set PickUp</div>
+              <div className='SetPickup_btn' onClick={this.props.changeToRequest}>Set PickUp</div>
             </div>
           </div>
         );

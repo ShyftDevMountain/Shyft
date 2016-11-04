@@ -27,7 +27,7 @@ class RateRide extends React.Component {
               <div className='rate-your-driver-inner'>
                 Rate Your Driver
                 <div className='stars-container'>
-                  <div class="rating">
+                  <div className="rating">
                     <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                   </div>
                 </div>
@@ -35,7 +35,7 @@ class RateRide extends React.Component {
             </div>
 
           </div>
-          <div className='request-shyft-btn btn'>Next</div>
+          <div className='request-shyft-btn btn' onClick={this.props.changeToPayment}>Next</div>
         </div>
       </div>
     )
