@@ -32,7 +32,7 @@ class MapComp extends React.Component {
             </div>
 
 
-            <RateRide />
+            <SetPickup />
 
 
 

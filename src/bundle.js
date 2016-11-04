@@ -32444,7 +32444,7 @@
 	        'div',
 	        { className: 'map' },
 	        _react2.default.createElement('div', { className: 'map-page', ref: 'mapCanvas' }),
-	        _react2.default.createElement(_RateRide2.default, null)
+	        _react2.default.createElement(_SetPickup2.default, null)
 	      );
 	    }
 	  }, {
