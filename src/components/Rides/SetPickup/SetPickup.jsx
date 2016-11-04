@@ -6,42 +6,24 @@ class SetPickup extends React.Component{
 
     render(){
         return (
-            <div className='mapmike'>
-              <div className='RequestRides'>
-
-                  <div className='second'>
-
-                      <div className='fristBox'>
-                          <div className='box_for_google_text'>
-                          <div className='g'>G</div>
-                          <div className='o'>o</div>
-                          <div className='o2'>o</div>
-                          <div className='g'>g</div>
-                          <div className='l'>l</div>
-                          <div className='o'>e</div>
-                          </div>
-                          <div className='gps'></div>
-                      </div>
-
-                      <div className='secondBox'>
-                        <div className='car_icon'>
-                          Shyft
-                        </div>
-
-                      </div>
-
-                      <div className='secondBox2'>
-
-                        <div className='pickup_button'>
-                          Set PickUp
-                        </div>
-
-                      </div>
-
-                  </div>
-
-              </div>
+          <div className='SetPickUp main-wrapper'>
+            <div className='request'>
+              <div className='the-estimate-box'>
+                    <div className='outer-container-for-current-adrress'>
+                          <div className='arrow-inside-of-small-div'> ^ </div>
+                          <div className='main-wrapper-for-all-content'>
+                             <div className='inner-container-for-current-adrress'>
+                              300 South Provo Utah
+                             </div>
+                             <div className='Pickup-location-container-for-current-adrress'>
+                              Pickup Location
+                             </div>
+                         </div>
+                   </div>
+               </div>
+              <div className='SetPickup_btn'>Set PickUp</div>
             </div>
+          </div>
         );
     }
 };

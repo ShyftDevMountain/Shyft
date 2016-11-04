@@ -31,7 +31,9 @@ class MapComp extends React.Component {
            <div className='map-page' ref="mapCanvas">
             </div>
 
+
             <RateRide />
+
 
 
         </div>)
@@ -65,9 +67,11 @@ class MapComp extends React.Component {
    createMap() {
      let mapOptions = {
        zoom: 12,
+
        center: this.mapCenter(),
        scrollwheel:false
           }
+
      return new google.maps.Map(this.refs.mapCanvas, mapOptions)
    }
 
