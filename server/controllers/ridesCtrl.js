@@ -4,13 +4,13 @@ var db = app.get('db');
 module.exports = {
 
   createRide: function(req, res, next) {
-      db.createRide([req.body.originlat, req.body.originlong, req.body.origindate, req.body.destlat, req.body.destlong, req.body.driver_id, req.params.rider_id], function(err, ride) {
+      db.createRide([req.body.originlat, req.body.originlong, req.body.origindate, req.body.destlat, req.body.destlong, req.body.driver_id, req.session.passport.user.id], function(err, ride) {
 
         if(err) {
           res.status(500).json(err);
         }
         else {
-          res.status(200).json(cities);
+          res.status(200).json('Your ride will be here in 5 minutes');
         }
 
       })

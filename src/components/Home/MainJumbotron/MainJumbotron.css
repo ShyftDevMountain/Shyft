@@ -3,38 +3,49 @@
     background-size: cover;
     height: 460px;
     text-align: center;
-    transition: all .2s ease;
+    transition: all .7s ease;
+    opacity: 0;
 }
 
 .MainJumbotron-container.bg1 {
   background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');
+  opacity: 1;
 }
 
 .MainJumbotron-container.bg2 {
   background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-2-coffee.b2dab586.jpg');
+  opacity: 1;
+
 }
 
 .MainJumbotron-container.bg3 {
   background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-1-windshield.db7c8d1d.jpg');
+  opacity: 1;
+
 }
 
 .MainJumbotron-container.bg4 {
   background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-3-mom.7b5dfd46.jpg');
+  opacity: 1;
 
 }
 
 .MainJumbotron-container.bg5 {
   background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-4-profile.8b01a30e.jpg');
+  opacity: 1;
 
 }
 
 .MainJumbotron-container.bg6 {
   background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-5-backseat.ea3b7cce.jpg');
+  opacity: 1;
 
 }
 
 .MainJumbotron-container.bg7 {
   background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-6-night.ad428c78.jpg');
+  opacity: 1;
+
 }
 
 .MainJumbotron-title {
@@ -134,12 +145,31 @@
 
 @media (min-width: 768px) {
     .MainJumbotron-container {
-        height: 520px;
+      height: 560px;
+    }
+    .MainJumbotron-btm-banner {
+      height: 67px;
+      padding-top: 15px;
+    }
+    .MainJumbotron-btm-banner-text {
+      font-size: 3.375rem;
+      font-weight: 500;
+      line-height: 1.1;
     }
 }
 
 @media (min-width: 992px) {
     .MainJumbotron-container {
-        height: 520px;
+      height: 560px;
+
+    }
+    .MainJumbotron-btm-banner {
+      height: 67px;
+      padding-top: 15px;
+    }
+    .MainJumbotron-btm-banner-text {
+      font-size: 3.375rem;
+      font-weight: 500;
+      line-height: 1.1;
     }
 }
