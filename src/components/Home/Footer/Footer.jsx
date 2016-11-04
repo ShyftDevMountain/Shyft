@@ -10,7 +10,7 @@ class Footer extends React.Component {
         <div className='row justify-center'>
           <div className='col-xs-12 xs-col'>
             <div className='row justify-center justify-between-md'>
-              <div className='col-lg-4 lg-col col-md-6 med-6-col col-xs-12 xs-col'>
+              <div className='sitemap col-lg-4 lg-col col-md-6 med-6-col col-xs-12 xs-col'>
                 <div className='footer-links text-xs-center text-sm-left flex-sm justify-between'>
                   <div>
                     <ul>
@@ -59,7 +59,7 @@ class Footer extends React.Component {
             </div>
           </div>
         </div>
-        <div className='row justify-center text-xs-center'>
+        <div className='social-links justify-center text-xs-center'>
           <ul className='text-xs-center col-xs-12 xs-col list-inline x'>
             <li>
               <a href='#'><img className='logo-circle list-inline-item' src='https://www.cvshealth.com/sites/default/themes/cvs/img/social/twitter.png' /></a>

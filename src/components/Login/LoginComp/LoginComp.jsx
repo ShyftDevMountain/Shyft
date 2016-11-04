@@ -22,7 +22,14 @@ class LoginComp extends React.Component{
     }
 
 
+    handleWindowClose(){
+        var loginContainer = document.getElementById('loginContainer');
+        var loginForm = document.getElementById('loginForm');
 
+        loginContainer.classList.remove('login-container-active');
+        loginForm.classList.remove('login-form-container-active');
+
+    }
 
     handleLoginClose(){
         var self = this;
@@ -43,9 +50,9 @@ class LoginComp extends React.Component{
     render(){
         return (
             <div>
-                <div id="loginContainer" className="login-container">
+                <div onClick={this.handleWindowClose} id="loginContainer" className="login-container">
                     <div id="loginForm" className="login-form-container">
-                        <span onClick={this.handleLoginClose.bind(this)} className="login-close glyphicon glyphicon-remove"></span>
+                        <span onClick={this.handleLoginClose.bind(this)}><i className="material-icons login-close">close</i></span>
                         <div className="login-heading">Log in to Shyft</div>
                         <div className="login-input-container">
                             <input type="text" placeholder="Phone number"/>

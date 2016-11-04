@@ -28143,7 +28143,7 @@
 	              { className: 'row justify-center justify-between-md' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'col-lg-4 lg-col col-md-6 med-6-col col-xs-12 xs-col' },
+	                { className: 'sitemap col-lg-4 lg-col col-md-6 med-6-col col-xs-12 xs-col' },
 	                _react2.default.createElement(
 	                  'div',
 	                  { className: 'footer-links text-xs-center text-sm-left flex-sm justify-between' },
@@ -28354,7 +28354,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'row justify-center text-xs-center' },
+	          { className: 'social-links justify-center text-xs-center' },
 	          _react2.default.createElement(
 	            'ul',
 	            { className: 'text-xs-center col-xs-12 xs-col list-inline x' },
@@ -28459,7 +28459,7 @@
 
 
 	// module
-	exports.push([module.id, ".footer {\n  background-color: #333447;\n  color:#F3F3F5;\n  line-height: 1.5;\n  font-size: 16px;\n  width:100%;\n  text-align: center;\n  padding-bottom: 1.5rem;\n  padding-top:1.5rem;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.footer-links {\n  margin-bottom:4rem;\n}\n\n.footer ul{\n  list-style-type: none;\n  padding-left: 0;\n}\n\n.footer-links ul {\n  margin-top:2rem;\n}\n\n.footer-buttons {\n  margin-bottom:4rem;\n}\n\n.footer a {\n  color: #F3F3F5;\n}\n\n.footer a:hover {\n  color: #b30086;\n  text-decoration: underline;\n}\n\n.footer-title {\n  font-weight: bold;\n  font-size: 18px;\n  padding-bottom: 5px;\n}\n\n.footer-sign-up-button {\n  font-size:16px;\n  width:160px;\n  height:48px;\n  margin-bottom:10px;\n  background-color:#cc0099;\n  border-color:#cc0099;\n  border-radius:10px;\n}\n\n.footer .btn:hover {\n  color:#F3F3F5;\n}\n\n.footer-store img {\n  width:160px;\n  height:48px;\n  border-radius:10px;\n  margin-bottom: 10px;\n}\n\n.footer .border-t {\n  border-top: 1px solid #F3F3F5;\n  padding-top: 1.5rem;\n}\n\n.footer .x {\n  display:flex;\n  justify-content: center;\n}\n\n.footer .logo-circle {\n  height:50px;\n  width:50px;\n  border: #F3F3F5 1.5px solid;\n  border-radius:100%;\n  margin-right:10px;\n  margin-bottom:1.5rem;\n}\n\n.footer .justify-center {\n  justify-content:center;\n}\n\n.footer .xs-col {\n  flex: 0 0 100%;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n}\n\n.footer .justify-between {\n  justify-content: space-between;\n}\n\n\n.footer .row {\n  display:flex;\n  flex-wrap: wrap;\n  margin-left: -0.9375rem;\n  margin-right: -0.9375rem;\n}\n\n\n\n@media(min-width: 544px) {\n    .footer {\n      text-align: left;\n    }\n\n  .footer .flex-sm {\n    display:flex;\n  }\n\n\n\n}\n\n@media (min-width: 768px) {\n  .footer {\n    padding-left: 4rem;\n    padding-right:4rem;\n  }\n\n\n  .footer .text-md-right {\n    text-align: right;\n  }\n\n  .footer .medium-col {\n    flex: 0 0 16.66667%;\n  }\n\n   .footer .med-6-col {\n    flex: 0 0 50%;\n  }\n\n  .footer .justify-between-md {\n    justify-content: space-between;\n  }\n}\n\n\n@media (min-width: 992px) {\n  .footer .lg-col {\n    flex: 0 0 33.33333%;\n  }\n}\n", ""]);
+	exports.push([module.id, ".footer {\n  background-color: #333447;\n  color:#F3F3F5;\n  line-height: 1.5;\n  font-size: 16px;\n  width:100%;\n  text-align: center;\n  padding-bottom: 1.5rem;\n  padding-top: 2rem;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 3rem;\n}\n\n.footer-links {\n  margin-bottom:4rem;\n}\n\n.footer ul{\n  list-style-type: none;\n  padding-left: 0;\n}\n\n.footer-links ul {\n  margin-top:2rem;\n}\n\n.footer-buttons {\n  margin-bottom:4rem;\n  margin-left: auto;\n}\n\n.footer a {\n  color: #F3F3F5;\n  font-weight: 100;\n}\n\n.footer a:hover {\n  color: #b30086;\n  text-decoration: underline;\n}\n\n.footer-title {\n  font-weight: bold;\n  font-size: 18px;\n  padding-bottom: 5px;\n}\n\n.footer-sign-up-button {\n  font-size:16px;\n  width:160px;\n  height:48px;\n  margin-bottom:10px;\n  background-color:#cc0099;\n  border-color:#cc0099;\n  border-radius:10px;\n}\n\n.footer .btn:hover {\n  color:#F3F3F5;\n}\n\n.footer-store img {\n  width:160px;\n  height:48px;\n  border-radius:10px;\n  margin-bottom: 10px;\n}\n\n.footer .border-t {\n  border-top: 1px solid #F3F3F5;\n  padding-top: 1.5rem;\n}\n\n.footer .x {\n  display:flex;\n  justify-content: center;\n}\n\n.footer .logo-circle {\n  height:50px;\n  width:50px;\n  border: #F3F3F5 1.5px solid;\n  border-radius:100%;\n  margin-right:10px;\n  margin-bottom:1.5rem;\n}\n\n.footer .justify-center {\n  justify-content:center;\n}\n\n.footer .xs-col {\n  flex: 0 0 100%;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n}\n\n.footer .justify-between {\n  justify-content: space-between;\n}\n\n.social-links {\n  margin-left: 0px;\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.footer .row {\n  display:flex;\n  flex-wrap: wrap;\n  margin-left: -0.9375rem;\n  margin-right: -0.9375rem;\n}\n\n\n\n@media(min-width: 544px) {\n    .footer {\n      text-align: left;\n    }\n\n  .footer .flex-sm {\n    display:flex;\n  }\n\n\n\n}\n\n@media (min-width: 768px) {\n  .footer {\n    padding-left: 4rem;\n    padding-right:4rem;\n  }\n\n\n  .footer .text-md-right {\n    text-align: right;\n  }\n\n  .footer .medium-col {\n    flex: 0 0 16.66667%;\n  }\n\n   .footer .med-6-col {\n    flex: 0 0 50%;\n  }\n\n  .footer .justify-between-md {\n    justify-content: space-between;\n  }\n  .footer-buttons {\n    margin-bottom: 4rem;\n    margin-right: 15px;\n    margin-left: auto;\n    margin-top: 35px;\n  }\n  .social-links {\n    margin-left: 20px;\n    margin-top: 60px;\n  }\n  .sitemap {\n    line-height: 2.4;\n  }\n}\n\n\n@media (min-width: 992px) {\n  .footer .lg-col {\n    flex: 0 0 33.33333%;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -30371,7 +30371,7 @@
 
 
 	// module
-	exports.push([module.id, ".MainJumbotron-container {\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-container.bg1 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n}\n\n.MainJumbotron-container.bg2 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-2-coffee.b2dab586.jpg');\n}\n\n.MainJumbotron-container.bg3 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-1-windshield.db7c8d1d.jpg');\n}\n\n.MainJumbotron-container.bg4 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-3-mom.7b5dfd46.jpg');\n\n}\n\n.MainJumbotron-container.bg5 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-4-profile.8b01a30e.jpg');\n\n}\n\n.MainJumbotron-container.bg6 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-5-backseat.ea3b7cce.jpg');\n\n}\n\n.MainJumbotron-container.bg7 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-6-night.ad428c78.jpg');\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 768px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n        height: 520px;\n    }\n}\n", ""]);
+	exports.push([module.id, ".MainJumbotron-container {\n    background-position: 80%;\n    background-size: cover;\n    height: 460px;\n    text-align: center;\n    transition: all .7s ease;\n    opacity: 0;\n}\n\n.MainJumbotron-container.bg1 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-7-nyc.05994626.jpg');\n  opacity: 1;\n}\n\n.MainJumbotron-container.bg2 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-2-coffee.b2dab586.jpg');\n  opacity: 1;\n\n}\n\n.MainJumbotron-container.bg3 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-1-windshield.db7c8d1d.jpg');\n  opacity: 1;\n\n}\n\n.MainJumbotron-container.bg4 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-3-mom.7b5dfd46.jpg');\n  opacity: 1;\n\n}\n\n.MainJumbotron-container.bg5 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-4-profile.8b01a30e.jpg');\n  opacity: 1;\n\n}\n\n.MainJumbotron-container.bg6 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-5-backseat.ea3b7cce.jpg');\n  opacity: 1;\n\n}\n\n.MainJumbotron-container.bg7 {\n  background-image: url('https://cdn.lyft.net/brochure/images/whyilyft-6-night.ad428c78.jpg');\n  opacity: 1;\n\n}\n\n.MainJumbotron-title {\n    padding-top: 200px;\n    font-size: 3.75rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 5px black;\n    color: #F3F3F5;\n    margin-bottom: 20px;\n}\n\n.MainJumbotron-btn {\n    font-size: 1.75rem;\n    padding: 13px 15px;\n    width: 80%;\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0, 115, 1));\n    border: none;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btn:hover {\n    background: -webkit-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: -o-linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n    background: linear-gradient(rgba(255, 0, 191, 1), rgba(153, 0,115,1));\n}\n\n.MainJumbotron-btn a:hover {\n    color: #f3f3f5;\n}\n\n.MainJumbotron-btm-banner {\n    background-color: #ff00bf;\n    width: 100%;\n    height: auto;\n    color: #F3F3F5;\n    text-align: center;\n    padding-top: 9px;\n    padding-bottom: 20px;\n    transition: all .2s ease;\n}\n\n.MainJumbotron-btm-banner-text {\n    display: block;\n    font-size: 2.75rem;\n    font-weight: 400;\n}\n\n.ride-with-lyft-btn {\n    border: 1px solid white;\n    border-radius: 7px;\n    padding: 8px 18px;\n    font-size: 1.5rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    font-weight: 100;\n    vertical-align: super;\n    margin-left: 0px;\n    transition: all .2s ease;\n}\n\n.ride-with-lyft-btn:hover,\n.ride-with-lyft-btn a:hover {\n    cursor: pointer;\n    background-color: #ff4dd2;\n    color: #f3f3f5;\n}\n\n@media (min-width: 550px) {\n    .MainJumbotron-btn {\n        width: 290px;\n    }\n\n    .MainJumbotron-title {\n        font-size: 5.25rem;\n        margin-bottom: 10px;\n    }\n\n    .MainJumbotron-btm-banner {\n        height: 60px;\n        padding-bottom: 0px;\n        padding-top: 10px;\n    }\n\n    .MainJumbotron-btm-banner-text {\n        display: inline-block;\n        font-size: 2.75rem;\n        font-weight: 400;\n    }\n\n    .ride-with-lyft-btn {\n        margin-left: 15px;\n        transition: all .2s ease;\n    }\n}\n\n@media (min-width: 768px) {\n    .MainJumbotron-container {\n      height: 560px;\n    }\n    .MainJumbotron-btm-banner {\n      height: 67px;\n      padding-top: 15px;\n    }\n    .MainJumbotron-btm-banner-text {\n      font-size: 3.375rem;\n      font-weight: 500;\n      line-height: 1.1;\n    }\n}\n\n@media (min-width: 992px) {\n    .MainJumbotron-container {\n      height: 560px;\n\n    }\n    .MainJumbotron-btm-banner {\n      height: 67px;\n      padding-top: 15px;\n    }\n    .MainJumbotron-btm-banner-text {\n      font-size: 3.375rem;\n      font-weight: 500;\n      line-height: 1.1;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -30646,7 +30646,7 @@
 
 
 	// module
-	exports.push([module.id, "@media (min-width: 768px){\n  .ridesInMinutes .col-md-4 {\n    width: 33.33333333%;\n  }\n}\n\n.ridesInMinutes {\n  font-size: 1.75rem;\n  margin-bottom: 6rem;\n  margin-top: 4rem;\n}\n\n.ridesInMinutes h4 h3 h2 h1 {\n  margin-bottom: 1rem;\n}\n\n.ridesInMinutes p {\n  margin-bottom: 2rem;\n  font-weight: 100;\n}\n\n.ridesInMinutes .row {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.ridesInMinutes img {\n  max-height: 60vh;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.intro {\n  margin-bottom: 4rem;\n}\n\n.intro h4 {\n  font-size: 2rem;\n  font-weight: bold;\n}\n\n.works h2 {\n  font-size: 3.3rem;\n  margin-bottom: 3rem;\n  font-weight: bold;\n}\n\n.works h3 {\n  font-size: 3rem;\n  font-weight: 100;\n  margin-bottom: 2rem;\n}\n\n.steps p {\n  height: 7rem;\n  margin-bottom: 4rem;\n}\n", ""]);
+	exports.push([module.id, "\n.ridesInMinutes {\n  font-size: 1.6rem;\n  margin-bottom: 8.5rem;\n  margin-top: 4rem;\n}\n\n.ridesInMinutes h4 h3 h2 h1 {\n  margin-bottom: 1rem;\n}\n\n.ridesInMinutes p {\n  margin-bottom: 2rem;\n  font-weight: 100;\n}\n\n.ridesInMinutes .row {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.ridesInMinutes img {\n  max-height: 60vh;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.intro {\n  margin-bottom: 4rem;\n}\n\n.intro h4 {\n  font-size: 2rem;\n  font-weight: bold;\n}\n\n.works h2 {\n  font-size: 2.8rem;\n  margin-bottom: 1.5rem;\n  font-weight: bold;\n}\n\n.works h3 {\n  font-size: 2.2rem;\n  font-weight: 100;\n  margin-bottom: 1.4rem;\n  margin-top: 2rem;\n}\n\n.steps p {\n  height: 4rem;\n  margin-bottom: 4rem;\n}\n\n@media (min-width: 768px){\n  .ridesInMinutes .col-md-4 {\n    width: 33.33333333%;\n  }\n  .intro h4 {\n    font-size: 2.2rem;\n    margin-top: 15px;\n    margin-bottom: 14px;\n  }\n  .ridesInMinutes p {\n    font-size: 1.8rem;\n  }\n  .works h3 {\n    font-size: 3rem;\n    font-weight: 100;\n    margin-bottom: 2rem;\n  }\n  .ridesInMinutes {\n    font-size: 1.75rem;\n  }\n  .works h2 {\n    font-size: 3.3rem;\n    margin-bottom: 3rem;\n  }\n  .steps p {\n     height: 7rem;\n     margin-bottom: 4rem;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -30861,7 +30861,7 @@
 
 
 	// module
-	exports.push([module.id, ".contentforfourways .container-fluid {\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n  box-sizing: inherit;\n}\n.contentforfourways .row {\n    display: -webkit-box;\n    display: flex;\n    flex-wrap: wrap;\n    margin-left: -0.9375rem;\n    margin-right: -0.9375rem;\n  }\n.contentforfourways  .m-b-xl {\n    margin-bottom: 2rem;\n  }\n  .contentforfourways .col-xs-12 {\n    -webkit-box-flex: 0;\n    flex: 0 0 100%;\n  }\n\n  .contentforfourways .container{\n    margin-left: auto;\n    margin-right: auto;\n    padding-left: 0.9375rem;\n    padding-right: 0.9375rem;\n  }\n\n\n  .contentforfourways .embedded_video{\n    box-sizing: inherit;\n  }\n\n.contentforfourways .full_width{\n  width: 100%;\n}\n\n.contentforfourways .pos_r{\n    position: relative;\n}\n.contentforfourways .radius-circle {\n    border-radius: 50%;\n}\n.contentforfourways .pos-ar {\n    position: absolute;\n}\n.contentforfourways .bg-pink {\n    background-color: #FF00BF;\n}\n.contentforfourways .play {\n    height: 7.4rem;\n    width: 7.4rem;\n    top: 45%;\n    left: 45%;\n    top: calc(50% - 3rem);\n    left: calc(50% - 3rem);\n}\n.contentforfourways .arrow {\n      width: 0px;\n    height: 0;\n    border-top: 1.7rem solid transparent;\n    border-bottom: 1.7rem solid transparent;\n    border-left: 3rem solid white;\n    top: calc(50% - 0.9rem);\n    left: calc(50% - 0.3rem);\n}\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  beg css for Four Ways to ride - start with the Title: four ways to ride\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n.contentforfourways .text-xs-center {\n  text-align: center !important;\n  font-size: 2.75rem;\n}\n\n\n.contentforfourways .content_for_fourWaysToRide {\n  display: block;\n  box-sizing: inherit;\n}\n\n.contentforfourways h2  {\n  font-size: 1.75rem;\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n.contentforfourways .align-group-center {\n    -webkit-box-align: center;\n    align-items: center;\n}\n.contentforfourways .flex {\n    display: -webkit-box;\n    display: flex;\n}\n.contentforfourways .flex-column {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    flex-direction: column;\n}\n.contentforfourways .m-y-l {\n    margin-top: 1.5rem;\n}\n.contentforfourways .text-xs-center {\n    text-align: center !important;\n}\n.contentforfourways .img {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-line.7a1567b4.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img2 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img3 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-plus.742070a1.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img4 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-premier.c0230045.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .text-thin {\n    font-weight: 300;\n}\n\n.contentforfourways .m-b-s {\n    margin-bottom: 0.5rem;\n}\n\n.contentforfourways h3 {\n    font-size: 2.1rem;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6 {\n    margin-top: 0;\n    margin-bottom: .5rem;\n}\n.contentforfourways .m-b-0 {\n    margin-bottom: 0;\n}\n.contentforfourways p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n    display: block;\n    -webkit-margin-before: 1em;\n    -webkit-margin-after: 1em;\n    -webkit-margin-start: 0px;\n    -webkit-margin-end: 0px;\n    font-weight: 300;\n    font-size: 1.5rem;\n}\n\n\n.contentforfourways a {\n    color: #FF00BF;\n    text-decoration: none;\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  first media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 544px) {\n\n  .contentforfourways .container{\n    max-width: 34rem;\n  }\n\n }\n\n /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n   2nd media query\n *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n\n@media (min-width: 768px) {\n\n    .contentforfourways  .container{\n        max-width: 64rem;\n      }\n\n      .contentforfourways .flex-column {\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n        flex-direction: row;\n      }\n\n    .contentforfourways .m-b-xl {\n      margin-bottom: 4rem;\n    }\n\n    .contentforfourways .flexer{\n      text-align: left !important;\n      text-align: left !important;\n      margin-left: 32px;\n    }\n\n    .contentforfourways .text-xs-center {\n    text-align: center !important;\n    font-size: 3.06rem;\n    }\n\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  third media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 992px) {\n\n  .contentforfourways .container{\n    max-width: 90rem;\n  }\n\n  .contentforfourways h3 {\n    font-size: 3.1rem;\n  }\n\n  .contentforfourways p {\n    font-weight: 100;\n    font-size: 2rem;\n    line-height: 24px;\n  }\n\n}\n", ""]);
+	exports.push([module.id, ".contentforfourways .container-fluid {\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n  box-sizing: inherit;\n}\n.contentforfourways .row {\n    display: -webkit-box;\n    display: flex;\n    flex-wrap: wrap;\n    margin-left: -0.9375rem;\n    margin-right: -0.9375rem;\n  }\n.contentforfourways  .m-b-xl {\n    margin-bottom: 2rem;\n  }\n  .contentforfourways .col-xs-12 {\n    -webkit-box-flex: 0;\n    flex: 0 0 100%;\n  }\n\n  .contentforfourways .container{\n    margin-left: auto;\n    margin-right: auto;\n    padding-left: 0.9375rem;\n    padding-right: 0.9375rem;\n  }\n\n\n  .contentforfourways .embedded_video{\n    box-sizing: inherit;\n  }\n\n.contentforfourways .full_width{\n  width: 100%;\n}\n\n.contentforfourways .pos_r{\n    position: relative;\n}\n.contentforfourways .radius-circle {\n    border-radius: 50%;\n}\n.contentforfourways .pos-ar {\n    position: absolute;\n}\n.contentforfourways .bg-pink {\n    background-color: #FF00BF;\n}\n.contentforfourways .play {\n    height: 7.4rem;\n    width: 7.4rem;\n    top: 45%;\n    left: 45%;\n    top: calc(50% - 3rem);\n    left: calc(50% - 3rem);\n}\n.contentforfourways .arrow {\n      width: 0px;\n    height: 0;\n    border-top: 1.7rem solid transparent;\n    border-bottom: 1.7rem solid transparent;\n    border-left: 3rem solid white;\n    top: calc(50% - 0.9rem);\n    left: calc(50% - 0.3rem);\n}\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  beg css for Four Ways to ride - start with the Title: four ways to ride\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n.contentforfourways .text-xs-center {\n  text-align: center !important;\n  font-size: 2.75rem;\n}\n\n\n.contentforfourways .content_for_fourWaysToRide {\n  display: block;\n  box-sizing: inherit;\n}\n\n.contentforfourways h2  {\n  font-size: 1.75rem;\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n.contentforfourways .align-group-center {\n    -webkit-box-align: center;\n    align-items: center;\n}\n.contentforfourways .flex {\n    display: -webkit-box;\n    display: flex;\n}\n.contentforfourways .flex-column {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    flex-direction: column;\n}\n.contentforfourways .m-y-l {\n    margin-top: 1.5rem;\n}\n.contentforfourways .text-xs-center {\n    text-align: center !important;\n}\n.contentforfourways .img {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-line.7a1567b4.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img2 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img3 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-plus.742070a1.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img4 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-premier.c0230045.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .text-thin {\n    font-weight: 300;\n}\n\n.contentforfourways .m-b-s {\n    margin-bottom: 0.5rem;\n}\n\n.contentforfourways h3 {\n    font-size: 2.1rem;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6 {\n    margin-top: 0;\n    margin-bottom: .5rem;\n}\n.contentforfourways .m-b-0 {\n    margin-bottom: 0;\n}\n.contentforfourways p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n    display: block;\n    -webkit-margin-before: 1em;\n    -webkit-margin-after: 1em;\n    -webkit-margin-start: 0px;\n    -webkit-margin-end: 0px;\n    font-weight: 300;\n    font-size: 1.5rem;\n}\n\n\n.contentforfourways a {\n    color: #FF00BF;\n    text-decoration: none;\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  first media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 544px) {\n\n  .contentforfourways .container{\n    max-width: 34rem;\n  }\n\n }\n\n /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n   2nd media query\n *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n\n@media (min-width: 768px) {\n\n    .contentforfourways  .container{\n        max-width: 64rem;\n      }\n\n      .contentforfourways .flex-column {\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n        flex-direction: row;\n      }\n\n    .contentforfourways .m-b-xl {\n      margin-bottom: 4rem;\n    }\n\n    .contentforfourways .flexer{\n      text-align: left !important;\n      text-align: left !important;\n      margin-left: 32px;\n    }\n\n    .contentforfourways .text-xs-center {\n    text-align: center !important;\n    font-size: 3.06rem;\n    }\n\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  third media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 992px) {\n\n  .contentforfourways .container{\n    max-width: 90rem;\n  }\n\n  .contentforfourways h2 {\n    margin-top: 20px\n  }\n\n  .contentforfourways h3 {\n    font-size: 3.1rem;\n    margin-top: 20px\n  }\n\n  .contentforfourways p {\n    font-weight: 100;\n    font-size: 2rem;\n    line-height: 24px;\n  }\n  \n  .contentforfourways .text-xs-center {\n  text-align: center !important;\n  font-size: 3.5rem;\n  margin-bottom: -10px;\n  }\n\n}\n", ""]);
 
 	// exports
 
@@ -31998,7 +31998,7 @@
 
 
 	// module
-	exports.push([module.id, ".cities-jumbotron-container .geosuggest-container {\n    width: 310px;\n    margin: 0 auto;\n    border-radius: 7px;\n    border: none;\n}\n\n.cities-jumbotron-container .geosuggest__input {\n    width: 310px;\n    color: #d8dce6;\n    font-style: italic;\n    font-weight: 300;\n    font-size: 1.75rem;\n    padding: 12px 0px 12px 40px;\n    border: 1px solid #d8dce6;\n    border-radius: 7px;\n}\n\n.cities-jumbotron-container .geosuggest__input::-webkit-input-placeholder{\n    color: #d8dce6;\n}\n\n.cities-jumbotron-container {\n    background-image: url('https://www.lyft.com/images/cities/cities-hero.1e733ed9.png');\n    background-size: cover;\n    height: 60vh;\n    text-align: center;\n    background-position: top;\n    background-repeat: no-repeat;\n}\n\n.cities-jumbotron-title {\n    padding-top: 180px;\n    font-size: 4.5rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 4px black;\n    color: #F3F3F5;\n    margin-bottom: 5px;\n}\n\n.cities-jumbotron-input-container {\n    position: relative;\n    margin: 0 auto;\n    width: 310px;\n}\n\n.cities-jumbotron-input {\n    border-radius: 7px;\n    padding: 13px 0 13px 40px;\n    border: 1px solid #d8dce6;\n    width: 310px;\n}\n\n.cities-jumbotron-input::-webkit-input-placeholder {\n      color: #d8dce6;\n      font-style: italic;\n      font-weight: 300;\n      font-size: 1.75rem;\n  }\n\n.cities-jumbotron-input-container input,\n.cities-jumbotron-input-container input:focus {\n    color: #d8dce6;\n    outline: none;\n}\n\n.cities-magnify {\n    position: absolute;\n    top: 13px;\n    left: 13px;\n    color: #d8dce6;\n}\n\n.cities-jumbotron-input-container .geosuggest__suggests{\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: 7px;\n  border-bottom-left-radius: 7px;\n  background: white;\n  padding-left: 26px;\n  margin-top: -7px;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n  right: 0px;\n  left: 0px;\n  font-size: 1.75rem;\n  padding: 12px 0px 12px 40px;\n  border: 1px solid #d8dce6;\n  border-top: 1px solid white;\n  text-align: left;\n}\n\n.citynotavailable {\n  padding-top: 10px;\n  background:#fff;\n  display: flex;\n  flex-direction: column;\n  -ms-align-items: center;\n  align-items: center;\n  padding-left: 15px;\n  padding-right: 15px;\n  border-bottom-right-radius: 7px;\n  border-bottom-left-radius: 7px;\n  margin-top: -4px;\n  z-index: 50;\n  display: none;\n}\n\n.citynotavailable.active {\n  display: block;\n}\n\n.citynotavailable p {\n  margin-top: 10px;\n  font-weight: 100;\n}\n\n.citynotavailable p:nth-child(1) {\n  font-weight: 600;\n}\n\n.citynotavailable button {\n  width: 60px;\n  margin-bottom: 15px;\n  color: #fff;\n  background-color: #2AACE3;\n  border-color: #2AACE3;\n  border-radius: .25rem;\n  padding: .25rem .75rem;\n  font-size: 1.4rem;\n  line-height: 1.5;\n  border: .08333rem solid transparent;\n}\n", ""]);
+	exports.push([module.id, ".cities-jumbotron-container .geosuggest-container {\n    width: 310px;\n    margin: 0 auto;\n    border-radius: 7px;\n    border: none;\n}\n\n.cities-jumbotron-container .geosuggest__input {\n    width: 310px;\n    color: #d8dce6;\n    font-style: italic;\n    font-weight: 300;\n    font-size: 1.75rem;\n    padding: 12px 0px 12px 40px;\n    border: 1px solid #d8dce6;\n    border-radius: 7px;\n}\n\n.cities-jumbotron-container .geosuggest__input::-webkit-input-placeholder{\n    color: #d8dce6;\n}\n\n.cities-jumbotron-container {\n    background-image: url('https://www.lyft.com/images/cities/cities-hero.1e733ed9.png');\n    background-size: cover;\n    height: 60vh;\n    text-align: center;\n    background-position: top;\n    background-repeat: no-repeat;\n}\n\n.cities-jumbotron-title {\n    padding-top: 180px;\n    font-size: 3rem;\n    font-weight: bold;\n    text-shadow: 1px 2px 4px black;\n    color: #F3F3F5;\n    margin-bottom: 5px;\n}\n\n.cities-jumbotron-input-container {\n    position: relative;\n    margin: 0 auto;\n    width: 310px;\n}\n\n.cities-jumbotron-input {\n    border-radius: 7px;\n    padding: 13px 0 13px 40px;\n    border: 1px solid #d8dce6;\n    width: 310px;\n}\n\n.cities-jumbotron-input::-webkit-input-placeholder {\n      color: #d8dce6;\n      font-style: italic;\n      font-weight: 300;\n      font-size: 1.75rem;\n  }\n\n.cities-jumbotron-input-container input,\n.cities-jumbotron-input-container input:focus {\n    color: #d8dce6;\n    outline: none;\n}\n\n.cities-magnify {\n    position: absolute;\n    top: 13px;\n    left: 13px;\n    color: #d8dce6;\n}\n\n.cities-jumbotron-input-container .geosuggest__suggests{\n  list-style: none;\n  position: absolute;\n  border-bottom-right-radius: 7px;\n  border-bottom-left-radius: 7px;\n  background: white;\n  padding-left: 26px;\n  margin-top: -7px;\n  transition: max-height 0.2s, border 0.2s;\n  overflow-x: hidden;\n  overflow-y: auto;\n  right: 0px;\n  left: 0px;\n  font-size: 1.75rem;\n  padding: 12px 0px 12px 40px;\n  border: 1px solid #d8dce6;\n  border-top: 1px solid white;\n  text-align: left;\n}\n\n.citynotavailable {\n  padding-top: 10px;\n  background:#fff;\n  display: flex;\n  flex-direction: column;\n  -ms-align-items: center;\n  align-items: center;\n  padding-left: 15px;\n  padding-right: 15px;\n  border-bottom-right-radius: 7px;\n  border-bottom-left-radius: 7px;\n  margin-top: -4px;\n  z-index: 50;\n  display: none;\n}\n\n.citynotavailable.active {\n  display: block;\n}\n\n.citynotavailable p {\n  margin-top: 10px;\n  font-weight: 100;\n}\n\n.citynotavailable p:nth-child(1) {\n  font-weight: 600;\n}\n\n.citynotavailable button {\n  width: 60px;\n  margin-bottom: 15px;\n  color: #fff;\n  background-color: #2AACE3;\n  border-color: #2AACE3;\n  border-radius: .25rem;\n  padding: .25rem .75rem;\n  font-size: 1.4rem;\n  line-height: 1.5;\n  border: .08333rem solid transparent;\n}\n\n\n@media (min-width: 768px) {\n\n  .cities-jumbotron-title {\n      font-size: 4.5rem;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -32269,7 +32269,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n.cities-list-comp h2 {\n  margin-top: 60px;\n  margin-bottom: 40px;\n  text-align: center;\n}\n\n.state-name {\n  font-size: 19px;\n  margin-bottom: 20px;\n  margin-top: 46px;\n  font-weight: 300;\n}\n\n.state-name:nth-child(1) {\n  margin-top: 0px;\n}\n\n.state-name:nth-child(25) {\n  margin-top: 149px;\n}\n\n.cities-div {\n  padding-top:10px;\n}\n\n\n.city-list {\n  display:flex;\n  justify-content: center;\n  margin:0 50px;\n}\n\n.city-links {\n  column-count:1;\n  text-align: center;\n  margin-bottom:10px;\n  }\n\n\n.city-links li {\n  list-style-type: none;\n}\n\n\n\n\n.city-links a {\n  color:#FF00BF;\n  text-decoration: none;\n  font-size: 1.75rem;\n  font-weight: 100;\n}\n\n\n.city-links a:hover {\n  color:#b30086;\n  text-decoration: underline;\n}\n\n\n\n@media(min-width: 544px) {\n  .city-links {\n    column-count:2;\n    text-align: left;\n  }\n}\n\n\n@media (min-width: 768px) {\n  .city-links {\n    column-count: 3;\n    text-align:left;\n    padding-left: 15rem;\n  }\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n.cities-list-comp h2 {\n  margin-top: 40px;\n  margin-bottom: 25px;\n  text-align: center;\n  font-size: 2.3rem;\n}\n\n.state-name {\n  font-size: 19px;\n  margin-bottom: 20px;\n  margin-top: 46px;\n  font-weight: 300;\n}\n\n.state-name:nth-child(1) {\n  margin-top: 0px;\n}\n\n\n\n.cities-div {\n  padding-top:10px;\n}\n\n\n.city-list {\n  display:flex;\n  justify-content: center;\n  margin:0 50px;\n}\n\n.city-links {\n  column-count:1;\n  text-align: center;\n  margin-bottom:10px;\n  }\n\n\n.city-links li {\n  list-style-type: none;\n}\n\n\n\n\n.city-links a {\n  color:#FF00BF;\n  text-decoration: none;\n  font-size: 1.60rem;\n  font-weight: 100;\n}\n\n\n.city-links a:hover {\n  color:#b30086;\n  text-decoration: underline;\n}\n\n\n\n@media(min-width: 544px) {\n  .city-links {\n    column-count:2;\n    text-align: left;\n  }\n}\n\n\n@media (min-width: 768px) {\n  .city-links {\n    column-count: 3;\n    text-align:left;\n    padding-left: 15rem;\n  }\n  .city-links a {\n    font-size: 1.75rem;\n  }\n  .state-name:nth-child(25) {\n    margin-top: 200px;\n  }\n  .state-name {\n    font-size: 20px;\n  }\n  .cities-list-comp h2 {\n    margin-top: 60px;\n    margin-bottom: 40px;\n    font-size: 3.25rem;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -33453,9 +33453,15 @@
 
 	var _EditInfoModal2 = _interopRequireDefault(_EditInfoModal);
 
+<<<<<<< HEAD
+	__webpack_require__(336);
+
+	var _dashboardService = __webpack_require__(333);
+=======
 	__webpack_require__(335);
 
 	var _dashboardService = __webpack_require__(337);
+>>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33467,23 +33473,6 @@
 
 	var UserDashboardComp = function (_React$Component) {
 	    _inherits(UserDashboardComp, _React$Component);
-
-	    _createClass(UserDashboardComp, [{
-	        key: 'componentWillMount',
-	        value: function componentWillMount() {
-	            var _this2 = this;
-
-	            (0, _dashboardService.getCustomerInfo)().then(function (res) {
-	                res = res[0];
-	                _this2.setState({
-	                    name: res.name,
-	                    email: res.email,
-	                    phone: res.phone,
-	                    fb: res.fb
-	                });
-	            });
-	        }
-	    }]);
 
 	    function UserDashboardComp(props) {
 	        _classCallCheck(this, UserDashboardComp);
@@ -33499,6 +33488,25 @@
 	    }
 
 	    _createClass(UserDashboardComp, [{
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {
+	            var _this2 = this;
+
+	            (0, _dashboardService.getCustomerInfo)().then(function (res) {
+	                console.log(res);
+	                res = res[0];
+	                _this2.setState({
+	                    name: res.displayname,
+	                    email: res.email,
+	                    phone: res.phone,
+	                    fb: res.fb
+	                });
+	            });
+	            (0, _dashboardService.getCustomerRides)().then(function (res) {
+	                console.log(res);
+	            });
+	        }
+	    }, {
 	        key: 'updateClick',
 	        value: function updateClick() {
 	            this.setState({
@@ -33568,7 +33576,7 @@
 	                                'h4',
 	                                { className: 'userdash-welcome' },
 	                                'Welcome ',
-	                                this.state.fb,
+	                                this.state.name,
 	                                '!'
 	                            )
 	                        )
@@ -33719,7 +33727,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+<<<<<<< HEAD
+	var _dashboardService = __webpack_require__(333);
+
+	__webpack_require__(334);
+=======
 	__webpack_require__(333);
+>>>>>>> master
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33732,13 +33746,29 @@
 	var EditInfoModal = function (_React$Component) {
 	    _inherits(EditInfoModal, _React$Component);
 
-	    function EditInfoModal() {
+	    function EditInfoModal(props) {
 	        _classCallCheck(this, EditInfoModal);
 
-	        return _possibleConstructorReturn(this, (EditInfoModal.__proto__ || Object.getPrototypeOf(EditInfoModal)).apply(this, arguments));
+	        return _possibleConstructorReturn(this, (EditInfoModal.__proto__ || Object.getPrototypeOf(EditInfoModal)).call(this, props));
 	    }
 
 	    _createClass(EditInfoModal, [{
+	        key: 'componentWillMount',
+	        value: function componentWillMount() {
+	            var _this2 = this;
+
+	            (0, _dashboardService.getCustomerInfo)().then(function (res) {
+	                console.log(res);
+	                res = res[0];
+	                _this2.setState({
+	                    name: res.displayname,
+	                    email: res.email,
+	                    phone: res.phone,
+	                    fb: res.fb
+	                });
+	            });
+	        }
+	    }, {
 	        key: 'handleUpdateClose',
 	        value: function handleUpdateClose() {
 	            var self = this;
@@ -33770,17 +33800,17 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'editinfo-update-content' },
-	                                    _react2.default.createElement('input', { type: 'text', value: 'Update Name' })
+	                                    _react2.default.createElement('input', { type: 'text', value: this.state.name })
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'editinfo-update-content' },
-	                                    _react2.default.createElement('input', { type: 'text', value: 'Update Name' })
+	                                    _react2.default.createElement('input', { type: 'text', value: this.state.email })
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'editinfo-update-content' },
-	                                    _react2.default.createElement('input', { type: 'text', value: 'Update Name' })
+	                                    _react2.default.createElement('input', { type: 'text', value: this.state.phone })
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
@@ -33804,12 +33834,56 @@
 
 /***/ },
 /* 333 */
+<<<<<<< HEAD
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getCustomerInfo = getCustomerInfo;
+	exports.getCustomerRides = getCustomerRides;
+	exports.updateCustomerInfo = updateCustomerInfo;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getCustomerInfo() {
+	  return _axios2.default.get('/customerinfo').then(function (res) {
+	    return res.data;
+	  });
+	}
+
+	function getCustomerRides() {
+	  return _axios2.default.get('/customerrides').then(function (res) {
+	    return res.data;
+	  });
+	}
+
+	function updateCustomerInfo(name, email, phone) {
+	  return _axios2.default.put('/customerinfo', { name: name, email: email, phone: phone }).then(function (res) {
+	    return res.data;
+	  });
+	}
+
+/***/ },
+/* 334 */
+=======
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
+<<<<<<< HEAD
+	var content = __webpack_require__(335);
+=======
 	var content = __webpack_require__(334);
+>>>>>>> master
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33829,7 +33903,11 @@
 	}
 
 /***/ },
+<<<<<<< HEAD
+/* 335 */
+=======
 /* 334 */
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33843,13 +33921,21 @@
 
 
 /***/ },
+<<<<<<< HEAD
+/* 336 */
+=======
 /* 335 */
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
+<<<<<<< HEAD
+	var content = __webpack_require__(337);
+=======
 	var content = __webpack_require__(336);
+>>>>>>> master
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33869,7 +33955,11 @@
 	}
 
 /***/ },
+<<<<<<< HEAD
+/* 337 */
+=======
 /* 336 */
+>>>>>>> master
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33883,6 +33973,8 @@
 
 
 /***/ },
+<<<<<<< HEAD
+=======
 /* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33913,6 +34005,7 @@
 	}
 
 /***/ },
+>>>>>>> master
 /* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
