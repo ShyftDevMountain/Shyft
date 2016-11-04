@@ -1,10 +1,9 @@
 CREATE TABLE customer
 (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(100),
+  fb text PRIMARY KEY,
+  displayName VARCHAR(100),
   email VARCHAR(100),
-  phone varchar(22),
-  fb TEXT
+  phone varchar(22)
 );
 
 
@@ -37,7 +36,27 @@ CREATE TABLE rides
 );
 
 alter table rides add column driver_id integer references drivers(id);
-alter table rides add column rider_id integer references customer(id);
+alter table rides add column facebook_id text references customer(fb);
+
+insert into rides (originlat, originlong, origindate, destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
+values (1, 2, 3, 4, 6, 'complete', 7, 5, '1234567890', 1, '811911947709');
+
+insert into rides (originlat, originlong,origindate,destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
+values (2, 8, 3, 4, 7, 'complete', 7, 5, 'o987654328765432', 2, '811911947709');
+
+insert into rides (originlat, originlong, origindate, destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
+values (3, 2, 3, 4, 6, 'complete', 7, 5, '1234567890', 1, '714344348719552');
+
+insert into rides (originlat, originlong,origindate,destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
+values (4, 8, 3, 4, 7, 'complete', 7, 5, 'o987654328765432', 2, '714344348719552');
+
+insert into rides (originlat, originlong, origindate, destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
+values (5, 2, 3, 4, 6, 'complete', 7, 5, '1234567890', 1, '');
+
+insert into rides (originlat, originlong,origindate,destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
+values (6, 8, 3, 4, 7, 'complete', 7, 5, 'o987654328765432', 2, '');
+
+
 
 
 

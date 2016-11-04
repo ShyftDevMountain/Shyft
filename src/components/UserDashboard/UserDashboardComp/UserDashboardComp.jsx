@@ -4,32 +4,38 @@ import {render} from 'react-dom';
 import EditInfoModal from '../EditInfoModal/EditInfoModal.jsx';
 import './UserDashboardComp.css';
 import {getCustomerInfo} from '../../../services/dashboardService.js';
-import {updateCustomerInfo} from '../../../services/dashboardService.js';
+import {getCustomerRides} from '../../../services/dashboardService.js';
+
 
 
 
 
 class UserDashboardComp extends React.Component{
 
-    componentWillMount() {
-        getCustomerInfo().then(res => {
-            res = res[0]
-            this.setState({
-              name: res.name,
-              email: res.email,
-              phone: res.phone,
-              fb: res.fb
-            })
-        })
-    }
-
   constructor(props) {
     super(props)
     this.state = {
-        updateModal: false
+      updateModal: false
     }
     this.updateClick = this.updateClick.bind(this);
     this.handleUpdateClose = this.handleUpdateClose.bind(this);
+  }
+
+  componentWillMount() {
+    getCustomerInfo().then(res => {
+      console.log(res)
+      res = res[0]
+      this.setState({
+        name: res.displayname,
+        email: res.email,
+        phone: res.phone,
+        fb: res.fb
+      })
+    });
+    getCustomerRides().then(res => {
+      console.log(res)
+
+    })
   }
 
 
@@ -65,7 +71,7 @@ class UserDashboardComp extends React.Component{
                                 </div>
                             </div>
 
-                            <h4 className="userdash-welcome">Welcome {this.state.fb}!</h4>
+                            <h4 className="userdash-welcome">Welcome {this.state.name}!</h4>
                         </div>
                     </section>
 
