@@ -1,16 +1,5 @@
-
-.mapmike {
-  width: 100%;
-  height: 100vh;
-  background-image: url(https://www.theurbanist.org/wp-content/uploads/2016/07/Google-Maps-Seattle.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 440px;
-  align-items: center;
-}
-
 .RequestRides  {
-  background-color: blue;
+      /*background-color: blue;*/
     height: 20vh;
     /* margin-left: 22px; */
     margin-right: 20px;
@@ -18,9 +7,11 @@
     padding-right: 3px;
     padding-top: 9px;
     width: 100%;
+    position: absolute;
+    bottom: -15px;
 }
 .second {
-    background-color: green;
+    /*background-color: green;*/
     width: 100%;
     /* margin-left: 20px; */
     /* margin-right: 20px; */
@@ -33,7 +24,7 @@
 
 }
 .fristBox {
-    background-color: pink;
+    /*background-color: pink;*/
     width: 100%;
     /* margin-left: 20px; */
     /* margin-right: 20px; */
@@ -70,23 +61,23 @@
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.3);
   display: block;
-  width: 29px;
-  height: 29px;
+  width: 25px;
+  height: 25px;
   overflow: hidden;
   cursor: pointer;
   transition: background-color 0.16s ease-out;
   border-radius: 14px;
-  background-image: url('//maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png');
-  background-size: 289px 28px;
+  background-image: url(//maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png);
+  background-size: 247px 24px;
 }
 
 
 .secondBox {
-  background-color: lightblue;
+  background-color: #FFFFFF;
   width: 29%;
   /* margin-left: 20px; */
   /* margin-right: 20px; */
-  height: 101px;
+  height: 121px;
   margin: 7px;
   justify-content: flex-start;
   align-items: center;
@@ -94,14 +85,16 @@
   border-left-radius: 63px;
   border-top-left-radius: 28px;
   border-bottom-left-radius: 28px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 7px;
 
 }
 
 .car_icon {
-      width: 58px;
-      height: 58px;
+      width: 64px;
+          height: 64px;
       /* background-color: black; */
-      border-radius: 29px;
+      border-radius: 40px;
       background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);
       background-size: contain;
       background-position: center;
@@ -115,6 +108,29 @@
       background-position-y: 9px;
       font-size: 13px;
       padding-bottom: 4px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  width: 77%;
+  align-items: flex-start;
+  /* padding-top: 28px; */
+  height: 40px;
+}
+.location {
+    width: 50%;
+    height: 25px;
+    /* background-color: black; */
+    padding-left: 28px;
+    font-size: 20px;
+}
+.pickup_location {
+    width: 50%;
+    height: 58px;
+    /* background-color: black; */
+    padding-left: 28px;
+    font-size: 12px;
 }
 
 .secondBox2 {
@@ -132,15 +148,19 @@
 
 .pickup_button {
 
-  width: 37%;
+      width: 37%;
     /* margin-left: 20px; */
     /* margin-right: 20px; */
-    height: 30px;
+    height: 58px;
     border-style: solid;
-    background-color: purple;
+    background-color: #3D0880;
     border-radius: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    border: none;
+    font-size: 22px;
+    border-radius: 8px;
 
 }
