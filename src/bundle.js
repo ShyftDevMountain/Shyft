@@ -78,11 +78,11 @@
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(331);
+	var _UserDashboardComp = __webpack_require__(332);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(338);
+	var _CityDetails = __webpack_require__(339);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -32322,6 +32322,8 @@
 
 	var _MapComp2 = _interopRequireDefault(_MapComp);
 
+	var _pickupFunctions = __webpack_require__(331);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32349,26 +32351,32 @@
 	    value: function componentDidMount() {
 	      var self = this;
 	      (0, _GetGoogleMap.getLocation)().then(function (res) {
-	        (0, _GetGoogleMap.getNearbyDrivers)(res.data.location).then(function (response) {
-	          if (response.data.nearby_drivers.length >= 1) {
-	            self.setState({
-	              initialCenter: {
-	                lat: res.data.location.lat,
-	                lng: res.data.location.lng
-	              },
+	        (0, _pickupFunctions.getPickup)(res.data.location).then(function (resp) {
+	          var address = resp.data.results[0].formatted_address;
 
-	              nearbyDrivers: response.data.nearby_drivers[0].drivers.map(function (value) {
-	                return value.locations[0];
-	              })
-	            });
-	          } else {
-	            self.setState({
-	              initialCenter: {
-	                lat: res.data.location.lat,
-	                lng: res.data.location.lng
-	              }
-	            });
-	          }
+	          (0, _GetGoogleMap.getNearbyDrivers)(res.data.location).then(function (response) {
+	            if (response.data.nearby_drivers.length >= 1) {
+	              self.setState({
+	                initialCenter: {
+	                  lat: res.data.location.lat,
+	                  lng: res.data.location.lng
+	                },
+	                address: address.substring(0, address.length - 15),
+
+	                nearbyDrivers: response.data.nearby_drivers[0].drivers.map(function (value) {
+	                  return value.locations[0];
+	                })
+	              });
+	            } else {
+	              self.setState({
+	                initialCenter: {
+	                  lat: res.data.location.lat,
+	                  lng: res.data.location.lng
+	                },
+	                address: address.substring(0, address.length - 15)
+	              });
+	            }
+	          });
 	        });
 	      });
 	    }
@@ -32378,7 +32386,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_MapComp2.default, { initialCenter: this.state.initialCenter, nearbyDrivers: this.state.nearbyDrivers })
+	        _react2.default.createElement(_MapComp2.default, { initialCenter: this.state, nearbyDrivers: this.state.nearbyDrivers })
 	      );
 	    }
 	  }]);
@@ -32453,7 +32461,7 @@
 	}
 
 	var lyftToken = {
-	  headers: { 'Authorization': 'Bearer "gAAAAABYG6e0ofqwWbOOjz6z1wAsnm809QjRZKziHvLlilzJ5U82hSGRdeBhZirSgc9prOkXID3IV_2cVbZ0OxUPy_wdFYoEwRroPYG6gKBEPCeJGOsErokJ3dFZhfsnHyZuDkvVNKSlkJUTwVKUZBQ9UwZAmGv2O8Uh1yT2qHLuK5z5-ZRrNvhbnk1t25SfuQHS85aoIpOGxMN4OjfbM5A1IaWsTBTN6Q=="'
+	  headers: { 'Authorization': 'Bearer "gAAAAABYHPmP66A0sHFCGCiRoxlijFg22aKgFAGwm4baFo1v7zOiF_PiYaa1JDrJHyDf50UlSmDAG1XbqhiUQCgqhH73ndpgP8azh-jz9Nlge4Rds3PcVFOm5h9DlbhFNNOREurrU21CykEdSKEtRhO5Ure2tLZA4V9ODgqZzUVFrkykO0EV7Lfrewh54Yo7HAInITBDfV6WFbkW42gm6FfWqSToWz-djA=="'
 	  }
 	};
 
@@ -32591,8 +32599,8 @@
 	        'div',
 	        { className: 'map' },
 	        _react2.default.createElement('div', { className: 'map-page', ref: 'mapCanvas' }),
-	        this.state.showPickup ? _react2.default.createElement(_SetPickup2.default, { changeToRequest: this.changeToRequest }) : null,
-	        this.state.showRequest ? _react2.default.createElement(_Request2.default, { changeToCancel: this.changeToCancel }) : null,
+	        this.state.showPickup ? _react2.default.createElement(_SetPickup2.default, { address: this.props.initialCenter.address, changeToRequest: this.changeToRequest }) : null,
+	        this.state.showRequest ? _react2.default.createElement(_Request2.default, { address: this.props.initialCenter.address, changeToCancel: this.changeToCancel }) : null,
 	        this.state.showCancel ? _react2.default.createElement(_Cancel2.default, { changeToStart: this.changeToStart }) : null,
 	        this.state.showStart ? _react2.default.createElement(_StartRide2.default, { changeToRate: this.changeToRate }) : null,
 	        this.state.showRate ? _react2.default.createElement(_RateRide2.default, { changeToPayment: this.changeToPayment }) : null,
@@ -32635,7 +32643,7 @@
 	  }, {
 	    key: 'mapCenter',
 	    value: function mapCenter() {
-	      return new google.maps.LatLng(this.props.initialCenter.lat, this.props.initialCenter.lng);
+	      return new google.maps.LatLng(this.props.initialCenter.initialCenter.lat, this.props.initialCenter.initialCenter.lng);
 	    }
 	  }, {
 	    key: 'createMarker',
@@ -32700,10 +32708,14 @@
 	var SetPickup = function (_React$Component) {
 	  _inherits(SetPickup, _React$Component);
 
-	  function SetPickup() {
+	  function SetPickup(props) {
 	    _classCallCheck(this, SetPickup);
 
-	    return _possibleConstructorReturn(this, (SetPickup.__proto__ || Object.getPrototypeOf(SetPickup)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (SetPickup.__proto__ || Object.getPrototypeOf(SetPickup)).call(this, props));
+
+	    _this.state = {};
+
+	    return _this;
 	  }
 
 	  _createClass(SetPickup, [{
@@ -32729,11 +32741,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'main-wrapper-for-all-content' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'inner-container-for-current-adrress' },
-	                  '300 South Provo Utah'
-	                ),
+	                _react2.default.createElement('input', { className: 'inner-container-for-current-adrress', value: this.props.address }),
 	                _react2.default.createElement(
 	                  'div',
 	                  { className: 'Pickup-location-container-for-current-adrress' },
@@ -32794,7 +32802,7 @@
 
 
 	// module
-	exports.push([module.id, ".SetPickUp .request {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin: auto;\n  height: 16vh;\n  width: 40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top: 80vh;\n  left: 0;\n  right: 0;\n  margin-left: auto;\n  margin-right: auto;\n  margin-left: 5px;\n}\n\n.SetPickUp .the-estimate-box {\n  height: 37%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.SetPickUp .outer-container-for-current-adrress {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n.SetPickUp .arrow-inside-of-small-div{\n  height: 30px;\n  width: 30px;\n  margin-right: 12px;\n  margin-left: 7px;\n  display: flex;\n  justify-content: center;\n  /* align-items: center; */\n  /* flex-direction: column; */\n  font-size: 27px;\n  border-radius: 17px;\n  border: solid 1px black;\n  padding-right: 2px;\n}\n\n.SetPickUp .main-wrapper-for-all-content{\n  display: flex;\n  flex-direction: column;\n  /* align-items: center; */\n  justify-content: flex-start;\n  align-items: flex-start;\n}\n\n.SetPickUp .inner-container-for-current-adrress {\n  font-size: 16px;\n}\n\n.SetPickUp .Pickup-location-container-for-current-adrress {\n  font-size: 10px;\n}\n\n.SetPickUp .SetPickup_btn {\n  border-radius: 20px;\n  height: 37%;\n  width:90%;\n  background-color:#3D0780;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 20px;\n  color: white;\n}\n", ""]);
+	exports.push([module.id, ".SetPickUp .request {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin: auto;\n  height: 16vh;\n  width: 40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top: 80vh;\n  left: 0;\n  right: 0;\n  margin-left: auto;\n  margin-right: auto;\n  margin-left: 5px;\n}\n\n.SetPickUp .the-estimate-box {\n  height: 37%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.SetPickUp input {\n  border:none;\n  width:100%\n}\n\n.SetPickUp .outer-container-for-current-adrress {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n.SetPickUp .arrow-inside-of-small-div{\n  height: 30px;\n  width: 30px;\n  margin-right: 12px;\n  margin-left: 7px;\n  display: flex;\n  justify-content: center;\n  /* align-items: center; */\n  /* flex-direction: column; */\n  font-size: 27px;\n  border-radius: 17px;\n  border: solid 1px black;\n  padding-right: 2px;\n}\n\n.SetPickUp .main-wrapper-for-all-content{\n  display: flex;\n  flex-direction: column;\n  /* align-items: center; */\n  justify-content: flex-start;\n  align-items: flex-start;\n}\n\n.SetPickUp .inner-container-for-current-adrress {\n  font-size: 16px;\n  width:100%\n}\n\n.SetPickUp .Pickup-location-container-for-current-adrress {\n  font-size: 10px;\n}\n\n.SetPickUp .SetPickup_btn {\n  border-radius: 20px;\n  height: 37%;\n  width:90%;\n  background-color:#3D0780;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 20px;\n  color: white;\n}\n", ""]);
 
 	// exports
 
@@ -32905,7 +32913,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'address-input origin-address' },
-	                _react2.default.createElement('input', { type: 'text', placeholder: 'Pickup Location' })
+	                _react2.default.createElement('input', { type: 'text', value: this.props.address })
 	              ),
 	              _react2.default.createElement(
 	                'div',
@@ -33031,34 +33039,6 @@
 	              null,
 	              'Awesome! Your Shyft ride will be here in approximately 2 minutes!'
 	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'test-flex' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'input-section' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'color-dest-circles' },
-	                _react2.default.createElement('div', { className: 'blue-circle' }),
-	                _react2.default.createElement('div', { className: 'pink-circle' })
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'inputs-stacked' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'address-input origin-address' },
-	                _react2.default.createElement('input', { type: 'text', placeholder: 'Pickup Location' })
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'address-input dest-address' },
-	                _react2.default.createElement('input', { type: 'text', placeholder: 'Add Destination' })
-	              )
-	            )
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -33176,7 +33156,7 @@
 	                _react2.default.createElement(
 	                  'p',
 	                  { className: 'ride-type-title' },
-	                  'Lyft'
+	                  'Shyft'
 	                )
 	              )
 	            ),
@@ -33639,6 +33619,27 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getPickup = getPickup;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getPickup(test) {
+	  return _axios2.default.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + test.lat.toString() + ',' + test.lng.toString() + '&key=AIzaSyD1-p2LRZozs7Y-5-pYvh8AMlVSHgeFa9E');
+	}
+
+/***/ },
+/* 332 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 
@@ -33650,13 +33651,13 @@
 
 	var _reactDom = __webpack_require__(34);
 
-	var _EditInfoModal = __webpack_require__(332);
+	var _EditInfoModal = __webpack_require__(333);
 
 	var _EditInfoModal2 = _interopRequireDefault(_EditInfoModal);
 
-	__webpack_require__(336);
+	__webpack_require__(337);
 
-	var _dashboardService = __webpack_require__(333);
+	var _dashboardService = __webpack_require__(334);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33907,7 +33908,7 @@
 	exports.default = UserDashboardComp;
 
 /***/ },
-/* 332 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33922,9 +33923,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _dashboardService = __webpack_require__(333);
+	var _dashboardService = __webpack_require__(334);
 
-	__webpack_require__(334);
+	__webpack_require__(335);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34024,7 +34025,7 @@
 	exports.default = EditInfoModal;
 
 /***/ },
-/* 333 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34061,13 +34062,13 @@
 	}
 
 /***/ },
-/* 334 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(335);
+	var content = __webpack_require__(336);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34087,7 +34088,7 @@
 	}
 
 /***/ },
-/* 335 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34101,13 +34102,13 @@
 
 
 /***/ },
-/* 336 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(337);
+	var content = __webpack_require__(338);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34127,7 +34128,7 @@
 	}
 
 /***/ },
-/* 337 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34141,7 +34142,7 @@
 
 
 /***/ },
-/* 338 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34156,25 +34157,25 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _cityDetailsService = __webpack_require__(339);
+	var _cityDetailsService = __webpack_require__(340);
 
 	var _CityBottomBanner = __webpack_require__(300);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesEstimateForm = __webpack_require__(340);
+	var _CitiesEstimateForm = __webpack_require__(341);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	var _ShyftPlus = __webpack_require__(344);
+	var _ShyftPlus = __webpack_require__(345);
 
 	var _ShyftPlus2 = _interopRequireDefault(_ShyftPlus);
 
-	var _RideShyft = __webpack_require__(345);
+	var _RideShyft = __webpack_require__(346);
 
 	var _RideShyft2 = _interopRequireDefault(_RideShyft);
 
-	__webpack_require__(346);
+	__webpack_require__(347);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34387,7 +34388,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 339 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34410,7 +34411,7 @@
 	}
 
 /***/ },
-/* 340 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34429,9 +34430,9 @@
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _estimateFormService = __webpack_require__(341);
+	var _estimateFormService = __webpack_require__(342);
 
-	__webpack_require__(342);
+	__webpack_require__(343);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34586,7 +34587,7 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 341 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34616,13 +34617,13 @@
 	}
 
 /***/ },
-/* 342 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(343);
+	var content = __webpack_require__(344);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34642,7 +34643,7 @@
 	}
 
 /***/ },
-/* 343 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34656,7 +34657,7 @@
 
 
 /***/ },
-/* 344 */
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34869,7 +34870,7 @@
 	exports.default = ShyftPlus;
 
 /***/ },
-/* 345 */
+/* 346 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35082,13 +35083,13 @@
 	exports.default = RideShyft;
 
 /***/ },
-/* 346 */
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(347);
+	var content = __webpack_require__(348);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -35108,7 +35109,7 @@
 	}
 
 /***/ },
-/* 347 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();

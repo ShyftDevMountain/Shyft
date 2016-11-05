@@ -13,7 +13,7 @@ class StartRide extends React.Component {
               <img src='https://www.lyft.com/images/cities/classic.6d006a8c.png' />
               </div>
               <div className='ride-type-section'>
-              <p className='ride-type-title'>Lyft</p>
+              <p className='ride-type-title'>Shyft</p>
               </div>
             </div>
             <div className='Your-lyft-is_ready_box'>

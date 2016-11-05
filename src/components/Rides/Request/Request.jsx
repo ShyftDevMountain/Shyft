@@ -36,7 +36,7 @@ class Request extends React.Component {
               <div className='pink-circle'></div>
             </div>
             <div className='inputs-stacked'>
-          <div className='address-input origin-address'><input type='text' placeholder='Pickup Location' /></div>
+          <div className='address-input origin-address'><input type='text' value={this.props.address} /></div>
           <div className='address-input dest-address'><input type='text' placeholder='Add Destination'/></div>
           </div>
       </div>
