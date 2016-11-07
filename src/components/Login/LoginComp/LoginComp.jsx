@@ -1,6 +1,6 @@
 import React from 'react';
 import './LoginComp.css';
-
+import {Link} from 'react-router'
 import {getFb} from '../../../services/FaceBookService.js';
 
 
@@ -23,17 +23,7 @@ class LoginComp extends React.Component{
 
 
     handleWindowClose(){
-        var loginContainer = document.getElementById('loginContainer');
-        var loginForm = document.getElementById('loginForm');
-
-        loginContainer.classList.remove('login-container-active');
-        loginForm.classList.remove('login-form-container-active');
-
-    }
-
-    handleLoginClose(){
         var self = this;
-
         var loginContainer = document.getElementById('loginContainer');
         var loginForm = document.getElementById('loginForm');
 
@@ -41,8 +31,25 @@ class LoginComp extends React.Component{
         loginForm.classList.remove('login-form-container-active');
         setTimeout(function(){
             self.props.handleLoginClose()
-
         }, 500)
+
+
+    }
+
+    handleLoginClose(){
+
+        var self = this;
+        var loginContainer = document.getElementById('loginContainer');
+        var loginForm = document.getElementById('loginForm');
+
+        loginContainer.classList.remove('login-container-active');
+        loginForm.classList.remove('login-form-container-active');
+        setTimeout(function(){
+            self.props.handleLoginClose()
+        }, 500)
+
+
+
 
     }
 
@@ -50,8 +57,10 @@ class LoginComp extends React.Component{
     render(){
         return (
             <div>
-                <div onClick={this.handleWindowClose} id="loginContainer" className="login-container">
+                <div onClick={this.handleWindowClose.bind(this)} id="loginContainer" className="login-container">
+
                     <div id="loginForm" className="login-form-container">
+
                         <span onClick={this.handleLoginClose.bind(this)}><i className="material-icons login-close">close</i></span>
                         <div className="login-heading">Log in to Shyft</div>
                         <div className="login-input-container">

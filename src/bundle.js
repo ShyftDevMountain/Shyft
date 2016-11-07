@@ -27566,7 +27566,9 @@
 	                var cities = document.getElementById('cities');
 	                var help = document.getElementById('help');
 	                var ride = document.getElementById('ride');
-
+	                var navbarMobile = document.getElementById('navbarMobile');
+	                var navbarLogo = document.getElementById('navbarLogo');
+	                var navbarLogo2 = document.getElementById('navbarLogo2');
 	                var range = 80;
 	                var scrollTop = document.body.scrollTop;
 
@@ -27578,6 +27580,9 @@
 	                    rideLyft.classList.add('navbar-ride-lyft-active');
 	                    help.classList.add('navbar-link-active');
 	                    ride.classList.add('navbar-link-active');
+	                    navbarMobile.classList.add('navbar-mobile-active');
+	                    navbarLogo.classList.add('navbar-mobile-logo-hide');
+	                    navbarLogo2.classList.add('navbar-mobile-logo2-active');
 	                } else {
 	                    explore.classList.remove('navbar-scroll-active');
 	                    logo.classList.remove('navbar-logo-hide');
@@ -27587,6 +27592,9 @@
 	                    cities.classList.remove('navbar-link-active');
 	                    help.classList.remove('navbar-link-active');
 	                    ride.classList.remove('navbar-link-active');
+	                    navbarMobile.classList.remove('navbar-mobile-active');
+	                    navbarLogo.classList.remove('navbar-mobile-logo-hide');
+	                    navbarLogo2.classList.remove('navbar-mobile-logo2-active');
 	                }
 	            };
 	        }
@@ -27620,7 +27628,7 @@
 	            logo2.classList.add('navbar-logo-show');
 	            setTimeout(function () {
 	                navbarDrop.classList.add('navbar-hover-container-active');
-	            }, 25);
+	            }, 10);
 	        }
 	    }, {
 	        key: 'handleHoverLeave',
@@ -27723,7 +27731,8 @@
 	                    'div',
 	                    { id: 'navbarMobile', className: 'navbar-mobile' },
 	                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-menu-hamburger', onClick: this.showMenu }),
-	                    _react2.default.createElement('img', { src: 'img/LYFT_LOGO/SVG/white_logo.svg' })
+	                    _react2.default.createElement('img', { id: 'navbarLogo', className: 'navbar-mobile-logo', src: 'img/LYFT_LOGO/SVG/white_logo.svg' }),
+	                    _react2.default.createElement('img', { id: 'navbarLogo2', className: 'navbar-mobile-logo2', src: 'img/LYFT_LOGO/SVG/lyft_pixel.svg' })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
@@ -27789,7 +27798,7 @@
 	                                { id: 'navbar-ride-lyftbtn', className: 'navbar-ride-lyft' },
 	                                _react2.default.createElement(
 	                                    _reactRouter.Link,
-	                                    { to: '/rides', id: 'ride', className: 'hover-link-none' },
+	                                    { to: '/login', id: 'ride', className: 'hover-link-none' },
 	                                    'Ride with Shyft'
 	                                )
 	                            ),
@@ -28466,7 +28475,7 @@
 
 
 	// module
-	exports.push([module.id, ".footer {\n  background-color: #333447;\n  color:#F3F3F5;\n  line-height: 1.5;\n  font-size: 16px;\n  width:100%;\n  text-align: center;\n  padding-bottom: 1.5rem;\n  padding-top: 2rem;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 3rem;\n}\n\n.footer-links {\n  margin-bottom:4rem;\n}\n\n.footer ul{\n  list-style-type: none;\n  padding-left: 0;\n}\n\n.footer-links ul {\n  margin-top:2rem;\n}\n\n.footer-buttons {\n  margin-bottom:4rem;\n  margin-left: auto;\n}\n\n.footer a {\n  color: #F3F3F5;\n  font-weight: 100;\n}\n\n.footer a:hover {\n  color: #b30086;\n  text-decoration: underline;\n}\n\n.footer-title {\n  font-weight: bold;\n  font-size: 18px;\n  padding-bottom: 5px;\n}\n\n.footer-sign-up-button {\n  font-size:16px;\n  width:160px;\n  height:48px;\n  margin-bottom:10px;\n  background-color:#cc0099;\n  border-color:#cc0099;\n  border-radius:10px;\n}\n\n.footer .btn:hover {\n  color:#F3F3F5;\n}\n\n.footer-store img {\n  width:160px;\n  height:48px;\n  border-radius:10px;\n  margin-bottom: 10px;\n}\n\n.footer .border-t {\n  border-top: 1px solid #F3F3F5;\n  padding-top: 1.5rem;\n}\n\n.footer .x {\n  display:flex;\n  justify-content: center;\n}\n\n.footer .logo-circle {\n  height:50px;\n  width:50px;\n  border: #F3F3F5 1.5px solid;\n  border-radius:100%;\n  margin-right:10px;\n  margin-bottom:1.5rem;\n}\n\n.footer .justify-center {\n  justify-content:center;\n}\n\n.footer .xs-col {\n  flex: 0 0 100%;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n}\n\n.footer .justify-between {\n  justify-content: space-between;\n}\n\n.social-links {\n  margin-left: 0px;\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.footer .row {\n  display:flex;\n  flex-wrap: wrap;\n  margin-left: -0.9375rem;\n  margin-right: -0.9375rem;\n}\n\n\n\n@media(min-width: 544px) {\n    .footer {\n      text-align: left;\n    }\n\n  .footer .flex-sm {\n    display:flex;\n  }\n\n\n\n}\n\n@media (min-width: 768px) {\n  .footer {\n    padding-left: 4rem;\n    padding-right:4rem;\n  }\n\n\n  .footer .text-md-right {\n    text-align: right;\n  }\n\n  .footer .medium-col {\n    flex: 0 0 16.66667%;\n  }\n\n   .footer .med-6-col {\n    flex: 0 0 50%;\n  }\n\n  .footer .justify-between-md {\n    justify-content: space-between;\n  }\n  .footer-buttons {\n    margin-bottom: 4rem;\n    margin-right: 15px;\n    margin-left: auto;\n    margin-top: 35px;\n  }\n  .social-links {\n    margin-left: 20px;\n    margin-top: 60px;\n  }\n  .sitemap {\n    line-height: 2.4;\n  }\n}\n\n\n@media (min-width: 992px) {\n  .footer .lg-col {\n    flex: 0 0 33.33333%;\n  }\n}\n", ""]);
+	exports.push([module.id, ".footer {\n  background-color: #333447;\n  color:#F3F3F5;\n  line-height: 1.5;\n  font-size: 16px;\n  width:100%;\n  text-align: center;\n  padding-bottom: 1.5rem;\n  padding-top: 2rem;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.footer-links {\n  margin-bottom:4rem;\n}\n\n.footer ul{\n  list-style-type: none;\n  padding-left: 0;\n}\n\n.footer-links ul {\n  margin-top:2rem;\n}\n\n.footer-buttons {\n  margin-bottom:4rem;\n  margin-left: auto;\n}\n\n.footer a {\n  color: #F3F3F5;\n  font-weight: 100;\n}\n\n.footer a:hover {\n  color: #b30086;\n  text-decoration: underline;\n}\n\n.footer-title {\n  font-weight: bold;\n  font-size: 18px;\n  padding-bottom: 5px;\n}\n\n.footer-sign-up-button {\n  font-size:16px;\n  width:160px;\n  height:48px;\n  margin-bottom:10px;\n  background-color:#cc0099;\n  border-color:#cc0099;\n  border-radius:10px;\n}\n\n.footer .btn:hover {\n  color:#F3F3F5;\n}\n\n.footer-store img {\n  width:160px;\n  height:48px;\n  border-radius:10px;\n  margin-bottom: 10px;\n}\n\n.footer .border-t {\n  border-top: 1px solid #F3F3F5;\n  padding-top: 1.5rem;\n}\n\n.footer .x {\n  display:flex;\n  justify-content: center;\n}\n\n.footer .logo-circle {\n  height:50px;\n  width:50px;\n  border: #F3F3F5 1.5px solid;\n  border-radius:100%;\n  margin-right:10px;\n  margin-bottom:1.5rem;\n}\n\n.footer .justify-center {\n  justify-content:center;\n}\n\n.footer .xs-col {\n  flex: 0 0 100%;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n}\n\n.footer .justify-between {\n  justify-content: space-between;\n}\n\n.social-links {\n  margin-left: 0px;\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.footer .row {\n  display:flex;\n  flex-wrap: wrap;\n  margin-left: -0.9375rem;\n  margin-right: -0.9375rem;\n}\n\n\n\n@media(min-width: 544px) {\n    .footer {\n      text-align: left;\n    }\n\n  .footer .flex-sm {\n    display:flex;\n  }\n\n\n\n}\n\n@media (min-width: 768px) {\n  .footer {\n    padding-left: 4rem;\n    padding-right:4rem;\n  }\n\n\n  .footer .text-md-right {\n    text-align: right;\n  }\n\n  .footer .medium-col {\n    flex: 0 0 16.66667%;\n  }\n\n   .footer .med-6-col {\n    flex: 0 0 50%;\n  }\n\n  .footer .justify-between-md {\n    justify-content: space-between;\n  }\n  .footer-buttons {\n    margin-bottom: 4rem;\n    margin-right: 15px;\n    margin-left: auto;\n    margin-top: 35px;\n  }\n  .social-links {\n    margin-left: 20px;\n    margin-top: 60px;\n  }\n  .sitemap {\n    line-height: 2.4;\n  }\n}\n\n\n@media (min-width: 992px) {\n  .footer .lg-col {\n    flex: 0 0 33.33333%;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -28488,6 +28497,8 @@
 	var _react2 = _interopRequireDefault(_react);
 
 	__webpack_require__(250);
+
+	var _reactRouter = __webpack_require__(172);
 
 	var _FaceBookService = __webpack_require__(252);
 
@@ -28525,17 +28536,21 @@
 	    }, {
 	        key: 'handleWindowClose',
 	        value: function handleWindowClose() {
+	            var self = this;
 	            var loginContainer = document.getElementById('loginContainer');
 	            var loginForm = document.getElementById('loginForm');
 
 	            loginContainer.classList.remove('login-container-active');
 	            loginForm.classList.remove('login-form-container-active');
+	            setTimeout(function () {
+	                self.props.handleLoginClose();
+	            }, 500);
 	        }
 	    }, {
 	        key: 'handleLoginClose',
 	        value: function handleLoginClose() {
-	            var self = this;
 
+	            var self = this;
 	            var loginContainer = document.getElementById('loginContainer');
 	            var loginForm = document.getElementById('loginForm');
 
@@ -28553,7 +28568,7 @@
 	                null,
 	                _react2.default.createElement(
 	                    'div',
-	                    { onClick: this.handleWindowClose, id: 'loginContainer', className: 'login-container' },
+	                    { onClick: this.handleWindowClose.bind(this), id: 'loginContainer', className: 'login-container' },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { id: 'loginForm', className: 'login-form-container' },
@@ -30210,7 +30225,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    z-index: 10;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .3s ease;\n}\n\n.navbar-mobile img {\n    width: 42px;\n}\n\n.navbar-mobile-active {\n    background: white;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .2s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    transition: all .2s ease;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbar-scroll-active {\n    background: #fff;\n    color: #333;\n    box-shadow: 1px 1px 5px gray;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .2s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: all .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;\n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .2s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
+	exports.push([module.id, "\n\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    z-index: 10;\n    transition: all .2s ease;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .2s ease;\n}\n\n.navbar-mobile-logo {\n    width: 42px;\n}\n\n.navbar-mobile-active {\n    background: white;\n    box-shadow: 1px 1px 5px grey;\n}\n\n.navbar-mobile-logo-hide {\n    display: none;\n}\n\n.navbar-mobile-logo2 {\n    display: none;\n}\n\n.navbar-mobile-logo2-active {\n    display: initial;\n    width: 42px;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .2s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    transition: all .2s ease;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbar-scroll-active {\n    background: #fff;\n    color: #333;\n    box-shadow: 1px 1px 5px gray;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .2s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: transform .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;\n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .2s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -30330,24 +30345,6 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: this.state.jumboBg },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'MainJumbotron-title' },
-	                        'Rides in Minutes'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'btn btn-primary MainJumbotron-btn' },
-	                        _react2.default.createElement(
-	                            _reactRouter.Link,
-	                            { to: '/login' },
-	                            'Sign Up Now'
-	                        )
-	                    )
-	                ),
 	                _react2.default.createElement(_BackgroundComponent2.default, null),
 	                _react2.default.createElement(
 	                    'div',
@@ -30436,6 +30433,10 @@
 
 	var _reactRouter = __webpack_require__(172);
 
+	var _LoginComp = __webpack_require__(249);
+
+	var _LoginComp2 = _interopRequireDefault(_LoginComp);
+
 	__webpack_require__(282);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -30457,8 +30458,11 @@
 	    var _this = _possibleConstructorReturn(this, (BackgroundComponent.__proto__ || Object.getPrototypeOf(BackgroundComponent)).call(this, props));
 
 	    _this.state = {
-	      jumboBg: 'MainJumbotron-container bg1'
+	      jumboBg: 'MainJumbotron-container bg1',
+	      showLogin: false
 	    };
+	    _this.signUpClick = _this.signUpClick.bind(_this);
+	    _this.handleLoginClose = _this.handleLoginClose.bind(_this);
 	    return _this;
 	  }
 
@@ -30473,8 +30477,23 @@
 	        test++;
 	        self.setState({
 	          jumboBg: 'MainJumbotron-container bg' + test
+
 	        });
 	      }, 5000);
+	    }
+	  }, {
+	    key: 'signUpClick',
+	    value: function signUpClick() {
+	      this.setState({
+	        showLogin: true
+	      });
+	    }
+	  }, {
+	    key: 'handleLoginClose',
+	    value: function handleLoginClose() {
+	      this.setState({
+	        showLogin: false
+	      });
 	    }
 	  }, {
 	    key: 'componentWillUnmount',
@@ -30495,13 +30514,10 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'btn btn-primary MainJumbotron-btn' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/userdashboard' },
-	            'Sign Up Now'
-	          )
-	        )
+	          { onClick: this.signUpClick, className: 'btn btn-primary MainJumbotron-btn' },
+	          'Sign Up Now'
+	        ),
+	        this.state.showLogin ? _react2.default.createElement(_LoginComp2.default, { handleLoginClose: this.handleLoginClose }) : null
 	      );
 	    }
 	  }]);
@@ -30903,7 +30919,7 @@
 
 
 	// module
-	exports.push([module.id, ".contentforfourways .container-fluid {\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n  box-sizing: inherit;\n}\n.contentforfourways .row {\n    display: -webkit-box;\n    display: flex;\n    flex-wrap: wrap;\n    margin-left: -0.9375rem;\n    margin-right: -0.9375rem;\n  }\n.contentforfourways  .m-b-xl {\n    margin-bottom: 2rem;\n  }\n  .contentforfourways .col-xs-12 {\n    -webkit-box-flex: 0;\n    flex: 0 0 100%;\n  }\n\n  .contentforfourways .container{\n    margin-left: auto;\n    margin-right: auto;\n    padding-left: 0.9375rem;\n    padding-right: 0.9375rem;\n  }\n\n\n  .contentforfourways .embedded_video{\n    box-sizing: inherit;\n  }\n\n.contentforfourways .full_width{\n  width: 100%;\n}\n\n.contentforfourways .pos_r{\n    position: relative;\n}\n.contentforfourways .radius-circle {\n    border-radius: 50%;\n}\n.contentforfourways .pos-ar {\n    position: absolute;\n}\n.contentforfourways .bg-pink {\n    background-color: #FF00BF;\n}\n.contentforfourways .play {\n    height: 7.4rem;\n    width: 7.4rem;\n    top: 45%;\n    left: 45%;\n    top: calc(50% - 3rem);\n    left: calc(50% - 3rem);\n}\n.contentforfourways .arrow {\n      width: 0px;\n    height: 0;\n    border-top: 1.7rem solid transparent;\n    border-bottom: 1.7rem solid transparent;\n    border-left: 3rem solid white;\n    top: calc(50% - 0.9rem);\n    left: calc(50% - 0.3rem);\n}\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  beg css for Four Ways to ride - start with the Title: four ways to ride\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n.contentforfourways .text-xs-center {\n  text-align: center !important;\n  font-size: 2.75rem;\n}\n\n\n.contentforfourways .content_for_fourWaysToRide {\n  display: block;\n  box-sizing: inherit;\n}\n\n.contentforfourways h2  {\n  font-size: 1.75rem;\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n.contentforfourways .align-group-center {\n    -webkit-box-align: center;\n    align-items: center;\n}\n.contentforfourways .flex {\n    display: -webkit-box;\n    display: flex;\n}\n.contentforfourways .flex-column {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    flex-direction: column;\n}\n.contentforfourways .m-y-l {\n    margin-top: 1.5rem;\n}\n.contentforfourways .text-xs-center {\n    text-align: center !important;\n}\n.contentforfourways .img {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-line.7a1567b4.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img2 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img3 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-plus.742070a1.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img4 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-premier.c0230045.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .text-thin {\n    font-weight: 300;\n}\n\n.contentforfourways .m-b-s {\n    margin-bottom: 0.5rem;\n}\n\n.contentforfourways h3 {\n    font-size: 2.1rem;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6 {\n    margin-top: 0;\n    margin-bottom: .5rem;\n}\n.contentforfourways .m-b-0 {\n    margin-bottom: 0;\n}\n.contentforfourways p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n    display: block;\n    -webkit-margin-before: 1em;\n    -webkit-margin-after: 1em;\n    -webkit-margin-start: 0px;\n    -webkit-margin-end: 0px;\n    font-weight: 300;\n    font-size: 1.5rem;\n}\n\n\n.contentforfourways a {\n    color: #FF00BF;\n    text-decoration: none;\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  first media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 544px) {\n\n  .contentforfourways .container{\n    max-width: 34rem;\n  }\n\n }\n\n /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n   2nd media query\n *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n\n@media (min-width: 768px) {\n\n    .contentforfourways  .container{\n        max-width: 64rem;\n      }\n\n      .contentforfourways .flex-column {\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n        flex-direction: row;\n      }\n\n    .contentforfourways .m-b-xl {\n      margin-bottom: 4rem;\n    }\n\n    .contentforfourways .flexer{\n      text-align: left !important;\n      text-align: left !important;\n      margin-left: 32px;\n    }\n\n    .contentforfourways .text-xs-center {\n    text-align: center !important;\n    font-size: 3.06rem;\n    }\n\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  third media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 992px) {\n\n  .contentforfourways .container{\n    max-width: 90rem;\n  }\n\n  .contentforfourways h2 {\n    margin-top: 20px\n  }\n\n  .contentforfourways h3 {\n    font-size: 3.1rem;\n    margin-top: 20px\n  }\n\n  .contentforfourways p {\n    font-weight: 100;\n    font-size: 2rem;\n    line-height: 24px;\n  }\n  \n  .contentforfourways .text-xs-center {\n  text-align: center !important;\n  font-size: 3.5rem;\n  margin-bottom: -10px;\n  }\n\n}\n", ""]);
+	exports.push([module.id, ".contentforfourways .container-fluid {\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n  box-sizing: inherit;\n}\n.contentforfourways .row {\n    display: -webkit-box;\n    display: flex;\n    flex-wrap: wrap;\n    margin-left: -0.9375rem;\n    margin-right: -0.9375rem;\n  }\n.contentforfourways  .m-b-xl {\n    margin-bottom: 2rem;\n\n  }\n  .contentforfourways .col-xs-12 {\n    -webkit-box-flex: 0;\n    flex: 0 0 100%;\n  }\n\n  .contentforfourways .container{\n    margin-left: auto;\n    margin-right: auto;\n    padding-left: 0.9375rem;\n    padding-right: 0.9375rem;\n  }\n\n.content_for_fourWaysToRide {\n    padding: 50px 0;\n}\n\n  .contentforfourways .embedded_video{\n    box-sizing: inherit;\n  }\n\n.contentforfourways .full_width{\n  width: 100%;\n}\n\n.contentforfourways .pos_r{\n    position: relative;\n}\n.contentforfourways .radius-circle {\n    border-radius: 50%;\n}\n.contentforfourways .pos-ar {\n    position: absolute;\n}\n.contentforfourways .bg-pink {\n    background-color: #FF00BF;\n}\n.contentforfourways .play {\n    height: 7.4rem;\n    width: 7.4rem;\n    top: 45%;\n    left: 45%;\n    top: calc(50% - 3rem);\n    left: calc(50% - 3rem);\n}\n.contentforfourways .arrow {\n      width: 0px;\n    height: 0;\n    border-top: 1.7rem solid transparent;\n    border-bottom: 1.7rem solid transparent;\n    border-left: 3rem solid white;\n    top: calc(50% - 0.9rem);\n    left: calc(50% - 0.3rem);\n}\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  beg css for Four Ways to ride - start with the Title: four ways to ride\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n.contentforfourways .text-xs-center {\n  text-align: center !important;\n  font-size: 2.75rem;\n}\n\n\n.contentforfourways .content_for_fourWaysToRide {\n  display: block;\n  box-sizing: inherit;\n}\n\n.contentforfourways h2  {\n  font-size: 1.75rem;\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n.contentforfourways .align-group-center {\n    -webkit-box-align: center;\n    align-items: center;\n}\n.contentforfourways .flex {\n    display: -webkit-box;\n    display: flex;\n}\n.contentforfourways .flex-column {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    flex-direction: column;\n}\n.contentforfourways .m-y-l {\n    margin-top: 1.5rem;\n}\n.contentforfourways .text-xs-center {\n    text-align: center !important;\n}\n.contentforfourways .img {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-line.7a1567b4.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img2 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img3 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-plus.742070a1.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img4 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-premier.c0230045.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .text-thin {\n    font-weight: 300;\n}\n\n.contentforfourways .m-b-s {\n    margin-bottom: 0.5rem;\n}\n\n.contentforfourways h3 {\n    font-size: 2.1rem;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6 {\n    margin-top: 0;\n    margin-bottom: .5rem;\n}\n.contentforfourways .m-b-0 {\n    margin-bottom: 0;\n}\n.contentforfourways p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n    display: block;\n    -webkit-margin-before: 1em;\n    -webkit-margin-after: 1em;\n    -webkit-margin-start: 0px;\n    -webkit-margin-end: 0px;\n    font-weight: 300;\n    font-size: 1.5rem;\n}\n\n\n.contentforfourways a {\n    color: #FF00BF;\n    text-decoration: none;\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  first media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 544px) {\n\n  .contentforfourways .container{\n    max-width: 34rem;\n  }\n\n }\n\n /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n   2nd media query\n *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n\n@media (min-width: 768px) {\n\n    .contentforfourways  .container{\n        max-width: 64rem;\n      }\n\n      .contentforfourways .flex-column {\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n        flex-direction: row;\n      }\n\n    .contentforfourways .m-b-xl {\n      margin-bottom: 4rem;\n    }\n\n    .contentforfourways .flexer{\n      text-align: left !important;\n      text-align: left !important;\n      margin-left: 32px;\n    }\n\n    .contentforfourways .text-xs-center {\n    text-align: center !important;\n    font-size: 3.06rem;\n    }\n\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  third media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 992px) {\n\n  .contentforfourways .container{\n    max-width: 90rem;\n  }\n\n  .contentforfourways h2 {\n    margin-top: 20px\n  }\n\n  .contentforfourways h3 {\n    font-size: 3.1rem;\n    margin-top: 20px\n  }\n\n  .contentforfourways p {\n    font-weight: 100;\n    font-size: 2rem;\n    line-height: 24px;\n  }\n\n  .contentforfourways .text-xs-center {\n  text-align: center !important;\n  font-size: 3.5rem;\n  margin-bottom: -10px;\n  }\n\n}\n", ""]);
 
 	// exports
 
@@ -34501,7 +34517,6 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-<<<<<<< HEAD
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -34929,435 +34944,6 @@
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
-=======
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ShyftPlus = function (_React$Component) {
-	  _inherits(ShyftPlus, _React$Component);
-
-	  function ShyftPlus() {
-	    _classCallCheck(this, ShyftPlus);
-
-	    return _possibleConstructorReturn(this, (ShyftPlus.__proto__ || Object.getPrototypeOf(ShyftPlus)).apply(this, arguments));
-	  }
-
-	  _createClass(ShyftPlus, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'section',
-	          { id: 'ShyftPlus', className: 'cityDetails-TwoWays' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'cityDetails-TwoWaysWrap' },
-	            _react2.default.createElement(
-	              'h2',
-	              null,
-	              'Two Ways to Ride'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'cityDetails-carWrapper' },
-	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/carLyftplus.png' })
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Lyft Plus is a supersized ride with six seats for when you need more space or just want to roll with the entire squad.'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'cityDetails-pricesWrapper' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'cityDetails-prices' },
-	              _react2.default.createElement(
-	                'section',
-	                null,
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'priceChart' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'priceChart-btnwrapper' },
-	                    _react2.default.createElement(
-	                      'button',
-	                      { onClick: this.props.showLyft, className: 'pricechart-btn active' },
-	                      'Lyft'
-	                    ),
-	                    _react2.default.createElement(
-	                      'button',
-	                      { className: 'pricechart-btn' },
-	                      'Plus'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'priceChart-pricing' },
-	                    _react2.default.createElement(
-	                      'table',
-	                      { className: 'pricingTable' },
-	                      _react2.default.createElement(
-	                        'tbody',
-	                        null,
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Base Fare'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$3.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cancel Penalty'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$5.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cost Per Mile'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$2.35'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cost Per Minute'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$0.25'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Maximum Fare'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$7.50'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Scheduled Ride Cancel Penalty'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$10.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Service Fee'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$1.70'
-	                          )
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return ShyftPlus;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = ShyftPlus;
-
-/***/ },
-/* 345 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var RideShyft = function (_React$Component) {
-	  _inherits(RideShyft, _React$Component);
-
-	  function RideShyft() {
-	    _classCallCheck(this, RideShyft);
-
-	    return _possibleConstructorReturn(this, (RideShyft.__proto__ || Object.getPrototypeOf(RideShyft)).apply(this, arguments));
-	  }
-
-	  _createClass(RideShyft, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'section',
-	          { className: 'cityDetails-TwoWays' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'cityDetails-TwoWaysWrap' },
-	            _react2.default.createElement(
-	              'h2',
-	              null,
-	              'Two Ways to Ride'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'cityDetails-carWrapper' },
-	              _react2.default.createElement('img', { className: 'citydetails-lyft', src: '/img/cities/lyftcar.png' })
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'Lyft is your personal ride. Whether you\'re traveling solo or with up to three friends, this sedan is yours to fill.'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'cityDetails-pricesWrapper' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'cityDetails-prices' },
-	              _react2.default.createElement(
-	                'section',
-	                null,
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'priceChart' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'priceChart-btnwrapper' },
-	                    _react2.default.createElement(
-	                      'button',
-	                      { className: 'pricechart-btn active' },
-	                      'Lyft'
-	                    ),
-	                    _react2.default.createElement(
-	                      'button',
-	                      { className: 'pricechart-btn', onClick: this.props.showPlus },
-	                      'Plus'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'priceChart-pricing' },
-	                    _react2.default.createElement(
-	                      'table',
-	                      { className: 'pricingTable' },
-	                      _react2.default.createElement(
-	                        'tbody',
-	                        null,
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Base Fare'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$1.60'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cancel Penalty'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$5.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cost Per Mile'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$1.30'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Cost Per Minute'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$0.14'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Maximum Fare'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$4.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Scheduled Ride Cancel Penalty'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$5.00'
-	                          )
-	                        ),
-	                        _react2.default.createElement(
-	                          'tr',
-	                          null,
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            'Service Fee'
-	                          ),
-	                          _react2.default.createElement(
-	                            'td',
-	                            null,
-	                            '$1.00'
-	                          )
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return RideShyft;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = RideShyft;
-
-/***/ },
-/* 346 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
->>>>>>> master
 	// load the styles
 	var content = __webpack_require__(347);
 	if(typeof content === 'string') content = [[module.id, content, '']];
