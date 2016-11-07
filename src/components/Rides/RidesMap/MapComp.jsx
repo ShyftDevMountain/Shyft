@@ -18,12 +18,59 @@ class MapComp extends React.Component {
     constructor(props) {
       super(props);
         this.state = {
-
+          showPickup: true,
+          showRequest: false,
+          showCancel: false,
+          showStart: false,
+          showRate: false,
+          showPayment: false
           }
-
+          this.changeToRequest = this.changeToRequest.bind(this);
+          this.changeToCancel = this.changeToCancel.bind(this);
+          this.changeToStart = this.changeToStart.bind(this);
+          this.changeToRate = this.changeToRate.bind(this);
+          this.changeToPayment = this.changeToPayment.bind(this);
         }
 
+      changeToRequest(){
+        this.setState({
+          showPickup:false,
+          showRequest:true
+        })
+      }
 
+      changeToCancel() {
+        this.setState({
+          showRequest:false,
+          showCancel: true
+        })
+      }
+
+      changeToStart() {
+        var self = this;
+        setTimeout(function(){
+        self.setState({
+          showCancel:false,
+          showStart: true
+        })
+      },
+         8000)
+
+      }
+
+      changeToRate() {
+        this.setState({
+          showStart:false,
+          showRate: true
+        })
+      }
+
+      changeToPayment() {
+        this.setState({
+          showRate: false,
+          showPayment: true
+        })
+      }
 
     render() {
      return (
@@ -31,7 +78,14 @@ class MapComp extends React.Component {
            <div className='map-page' ref="mapCanvas">
             </div>
 
-            <RateRide />
+
+            {this.state.showPickup ? <SetPickup changeToRequest={this.changeToRequest} /> : null}
+            {this.state.showRequest ? <Request changeToCancel={this.changeToCancel} /> : null}
+            {this.state.showCancel ? <Cancel changeToStart={this.changeToStart} /> : null}
+            {this.state.showStart ? <StartRide changeToRate={this.changeToRate} /> : null}
+            {this.state.showRate ? <RateRide changeToPayment={this.changeToPayment} /> : null}
+            {this.state.showPayment ? <Payment /> : null}
+
 
 
         </div>)
@@ -65,9 +119,11 @@ class MapComp extends React.Component {
    createMap() {
      let mapOptions = {
        zoom: 12,
+
        center: this.mapCenter(),
        scrollwheel:false
           }
+
      return new google.maps.Map(this.refs.mapCanvas, mapOptions)
    }
 
