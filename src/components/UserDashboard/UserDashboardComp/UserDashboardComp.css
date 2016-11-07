@@ -87,7 +87,7 @@
 }
 
 .userdash-user-innerbox {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -120,7 +120,7 @@
     display: flex;
     flex-direction: column;
     align-items: initial;
-    margin: 50px 0;
+    margin: 10px 0;
 }
 
 .userdash-user-rides {
@@ -133,8 +133,10 @@
 .userdash-ridenumber {
     border: 1px solid #f2f2f2;
     border-radius: 7px;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
+    height: 150px;
+    overflow-y: scroll;
 }
 
 .userdash-user-comments textarea {
@@ -191,7 +193,7 @@
 
     .userdash-user-container {
         width: 100%;
-        padding: 110px 0 80px;
+        padding: 110px 0 30px;
 
     }
 
@@ -214,12 +216,11 @@
     }
 
     .userdash-ridenumber {
-        width: 70%;
-        text-align: center;
+
     }
 
     .userdash-user-rides {
-        width: 50%;
+        width: 100%;
         margin-bottom: 0px;
     }
 
