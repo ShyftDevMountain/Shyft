@@ -24,7 +24,7 @@ class SetPickup extends React.Component{
                     <div className='outer-container-for-current-adrress'>
                           <div className='arrow-inside-of-small-div'> ^ </div>
                           <div className='main-wrapper-for-all-content'>
-                            <input className='inner-container-for-current-adrress' value={this.props.address} />
+                            <input type='text' className='inner-container-for-current-adrress' value={this.props.address} />
                              <div className='Pickup-location-container-for-current-adrress'>
                               Pickup Location
                              </div>

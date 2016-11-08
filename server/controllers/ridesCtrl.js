@@ -18,7 +18,7 @@ module.exports = {
 
 
   arriveRide: function(req, res, next) {
-    db.arriveRide([req.params.rideid], function(err) {
+    db.arriveRide([req.body.origindate, req.params.rideid], function(err) {
       if(err) {
         res.status(500).json(err);
       }
@@ -47,6 +47,17 @@ module.exports = {
       }
       else{
         res.status(200).json('Thank you for your rating.');
+      }
+    })
+  },
+
+  getRideId: function(req, res, next){
+    db.getRideId([req.session.passport.user.id], function(err, id){
+      if(err){
+        res.status(500).json(err);
+      }
+      else{
+        res.status(200).json(id);
       }
     })
   }

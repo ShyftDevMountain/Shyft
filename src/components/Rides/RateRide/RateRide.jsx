@@ -2,7 +2,40 @@ import React from 'react';
 
 import './RateRide.css';
 
+import {getRideId} from '../Cancel/cancelFunctions.js';
+import {rateRide} from './rateFunctions.js';
+
+
 class RateRide extends React.Component {
+  constructor(props) {
+    super(props);
+
+
+    this.onClickStar = this.onClickStar.bind(this);
+    this.onClickNext = this.onClickNext.bind(this);
+
+  }
+
+  onClickStar() {
+    this.rating = 1;
+  }
+
+
+  onClickNext() {
+    var self = this;
+    getRideId().then(function(res){
+         let objToSend = {
+           rideid: res.data[0].rideid,
+           rating: self.rating,
+           destdate: new Date().getTime()
+         }
+         console.log(objToSend.rating, objToSend.destdate);
+         rateRide(objToSend);
+         self.props.changeToPayment();
+    })
+
+  }
+
   render() {
     return(
       <div className='RateRide'>
@@ -19,7 +52,7 @@ class RateRide extends React.Component {
             </div>
             <div className='eta-and-cost'>
               <div className='You-have-arrived'>
-                You Have Arrived!
+                You have arrived at your destination.
               </div>
             </div>
 
@@ -28,14 +61,14 @@ class RateRide extends React.Component {
                 Rate Your Driver
                 <div className='stars-container'>
                   <div className="rating">
-                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    <span onClick={this.onClickStar} id='star'>☆</span><span onClick={this.onClickStar} id='star2'>☆</span><span onClick={this.onClickStar} id='star3'>☆</span><span onClick={this.onClickStar} id='star4'>☆</span><span onClick={this.onClickStar} id='star5'>☆</span>
                   </div>
                 </div>
               </div>
             </div>
 
           </div>
-          <div className='request-shyft-btn btn' onClick={this.props.changeToPayment}>Next</div>
+          <div className='request-shyft-btn btn' onClick={this.onClickNext}>Next</div>
         </div>
       </div>
     )

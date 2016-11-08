@@ -78,11 +78,11 @@
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(332);
+	var _UserDashboardComp = __webpack_require__(336);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(339);
+	var _CityDetails = __webpack_require__(343);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -32322,7 +32322,7 @@
 
 	var _MapComp2 = _interopRequireDefault(_MapComp);
 
-	var _pickupFunctions = __webpack_require__(331);
+	var _pickupFunctions = __webpack_require__(335);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32461,7 +32461,7 @@
 	}
 
 	var lyftToken = {
-	  headers: { 'Authorization': 'Bearer "gAAAAABYHPmP66A0sHFCGCiRoxlijFg22aKgFAGwm4baFo1v7zOiF_PiYaa1JDrJHyDf50UlSmDAG1XbqhiUQCgqhH73ndpgP8azh-jz9Nlge4Rds3PcVFOm5h9DlbhFNNOREurrU21CykEdSKEtRhO5Ure2tLZA4V9ODgqZzUVFrkykO0EV7Lfrewh54Yo7HAInITBDfV6WFbkW42gm6FfWqSToWz-djA=="'
+	  headers: { 'Authorization': 'Bearer "gAAAAABYIKfH_39mfCGDjXkZDW2cDKW-WfFbqpoy4TRln1TrJbgnEbBUFvMdGj-n0AVYqa-c_fOqqylRvweSMIBQaW2oDrLCdE8vCctjpXkVvhfoM-9l5ozOxMd_cCqCgjLWJqR0kYhWUT5TaLHvYcohTE0jFyGKThqsNOpvYhnGmAhVbo60SHtdWWDChcZDl9bvCKvTnXF7g-2JbhI3fJIOBlmIfC5znA=="'
 	  }
 	};
 
@@ -32497,23 +32497,23 @@
 
 	var _Request2 = _interopRequireDefault(_Request);
 
-	var _Cancel = __webpack_require__(317);
+	var _Cancel = __webpack_require__(318);
 
 	var _Cancel2 = _interopRequireDefault(_Cancel);
 
-	var _StartRide = __webpack_require__(320);
+	var _StartRide = __webpack_require__(322);
 
 	var _StartRide2 = _interopRequireDefault(_StartRide);
 
-	var _RateRide = __webpack_require__(323);
+	var _RateRide = __webpack_require__(326);
 
 	var _RateRide2 = _interopRequireDefault(_RateRide);
 
-	var _Payment = __webpack_require__(326);
+	var _Payment = __webpack_require__(330);
 
 	var _Payment2 = _interopRequireDefault(_Payment);
 
-	__webpack_require__(329);
+	__webpack_require__(333);
 
 	var _GetGoogleMap = __webpack_require__(309);
 
@@ -32600,7 +32600,7 @@
 	        { className: 'map' },
 	        _react2.default.createElement('div', { className: 'map-page', ref: 'mapCanvas' }),
 	        this.state.showPickup ? _react2.default.createElement(_SetPickup2.default, { address: this.props.initialCenter.address, changeToRequest: this.changeToRequest }) : null,
-	        this.state.showRequest ? _react2.default.createElement(_Request2.default, { address: this.props.initialCenter.address, changeToCancel: this.changeToCancel }) : null,
+	        this.state.showRequest ? _react2.default.createElement(_Request2.default, { address: this.props.initialCenter, changeToCancel: this.changeToCancel }) : null,
 	        this.state.showCancel ? _react2.default.createElement(_Cancel2.default, { changeToStart: this.changeToStart }) : null,
 	        this.state.showStart ? _react2.default.createElement(_StartRide2.default, { changeToRate: this.changeToRate }) : null,
 	        this.state.showRate ? _react2.default.createElement(_RateRide2.default, { changeToPayment: this.changeToPayment }) : null,
@@ -32741,7 +32741,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'main-wrapper-for-all-content' },
-	                _react2.default.createElement('input', { className: 'inner-container-for-current-adrress', value: this.props.address }),
+	                _react2.default.createElement('input', { type: 'text', className: 'inner-container-for-current-adrress', value: this.props.address }),
 	                _react2.default.createElement(
 	                  'div',
 	                  { className: 'Pickup-location-container-for-current-adrress' },
@@ -32823,7 +32823,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactGeosuggestPlus = __webpack_require__(295);
+
+	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
+
 	__webpack_require__(315);
+
+	var _requestFunctions = __webpack_require__(317);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32836,13 +32842,37 @@
 	var Request = function (_React$Component) {
 	  _inherits(Request, _React$Component);
 
-	  function Request() {
+	  function Request(props) {
 	    _classCallCheck(this, Request);
 
-	    return _possibleConstructorReturn(this, (Request.__proto__ || Object.getPrototypeOf(Request)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Request.__proto__ || Object.getPrototypeOf(Request)).call(this, props));
+
+	    _this.onClick = _this.onClick.bind(_this);
+	    _this.onSuggestSelectAddress = _this.onSuggestSelectAddress.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(Request, [{
+	    key: 'onSuggestSelectAddress',
+	    value: function onSuggestSelectAddress(address) {
+	      this.destinLat = address.location.lat;
+	      this.destinLng = address.location.lng;
+	    }
+	  }, {
+	    key: 'onClick',
+	    value: function onClick(obj) {
+	      var dataToSend = {
+	        originlat: this.props.address.initialCenter.lat,
+	        originlong: this.props.address.initialCenter.lng,
+	        destlat: this.destinLat,
+	        destlong: this.destinLng,
+	        driver_id: Math.floor(Math.random() * 6 + 1)
+	      };
+	      console.log(dataToSend);
+	      (0, _requestFunctions.createRide)(dataToSend);
+	      this.props.changeToCancel();
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -32913,19 +32943,19 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'address-input origin-address' },
-	                _react2.default.createElement('input', { type: 'text', value: this.props.address })
+	                _react2.default.createElement('input', { type: 'text', defaultValue: this.props.address.address })
 	              ),
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'address-input dest-address' },
-	                _react2.default.createElement('input', { type: 'text', placeholder: 'Add Destination' })
+	                _react2.default.createElement(_reactGeosuggestPlus2.default, { onSuggestSelect: this.onSuggestSelectAddress, type: 'text', placeholder: 'Add Destination' })
 	              )
 	            )
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'request-shyft-btn btn', onClick: this.props.changeToCancel },
+	          { className: 'request-shyft-btn btn', onClick: this.onClick },
 	          'Request Ride'
 	        )
 	      );
@@ -32986,6 +33016,27 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.createRide = createRide;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function createRide(obj) {
+	  _axios2.default.post('/request', obj);
+	}
+
+/***/ },
+/* 318 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -32993,7 +33044,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(318);
+	var _reactRouter = __webpack_require__(172);
+
+	__webpack_require__(319);
+
+	var _cancelFunctions = __webpack_require__(321);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33016,6 +33071,13 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      this.props.changeToStart();
+	    }
+	  }, {
+	    key: 'onCancel',
+	    value: function onCancel() {
+	      (0, _cancelFunctions.getRideId)().then(function (res) {
+	        (0, _cancelFunctions.cancelRide)(res.data[0].rideid);
+	      });
 	    }
 	  }, {
 	    key: 'render',
@@ -33043,8 +33105,12 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'cancel-shyft-btn btn' },
-	          'Cancel Ride'
+	          { className: 'cancel-shyft-btn btn', onClick: this.onCancel },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            'Cancel Ride'
+	          )
 	        )
 	      );
 	    }
@@ -33056,13 +33122,13 @@
 	exports.default = Cancel;
 
 /***/ },
-/* 318 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(319);
+	var content = __webpack_require__(320);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33082,7 +33148,7 @@
 	}
 
 /***/ },
-/* 319 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33096,7 +33162,33 @@
 
 
 /***/ },
-/* 320 */
+/* 321 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getRideId = getRideId;
+	exports.cancelRide = cancelRide;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getRideId() {
+	  return _axios2.default.get('/rideid');
+	}
+
+	function cancelRide(rideid) {
+	  return _axios2.default.put('/cancel/' + rideid.toString());
+	}
+
+/***/ },
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33111,7 +33203,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(321);
+	var _reactRouter = __webpack_require__(172);
+
+	__webpack_require__(323);
+
+	var _cancelFunctions = __webpack_require__(321);
+
+	var _startFunctions = __webpack_require__(325);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33124,13 +33222,37 @@
 	var StartRide = function (_React$Component) {
 	  _inherits(StartRide, _React$Component);
 
-	  function StartRide() {
+	  function StartRide(props) {
 	    _classCallCheck(this, StartRide);
 
-	    return _possibleConstructorReturn(this, (StartRide.__proto__ || Object.getPrototypeOf(StartRide)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (StartRide.__proto__ || Object.getPrototypeOf(StartRide)).call(this, props));
+
+	    _this.onClickConfirm = _this.onClickConfirm.bind(_this);
+	    _this.onClickCancel = _this.onClickCancel.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(StartRide, [{
+	    key: 'onClickCancel',
+	    value: function onClickCancel() {
+	      (0, _cancelFunctions.getRideId)().then(function (res) {
+	        (0, _cancelFunctions.cancelRide)(res.data[0].rideid);
+	      });
+	    }
+	  }, {
+	    key: 'onClickConfirm',
+	    value: function onClickConfirm() {
+	      var self = this;
+	      (0, _cancelFunctions.getRideId)().then(function (res) {
+	        var rideid = res.data[0].rideid;
+	        var startObj = {
+	          origindate: new Date().getTime()
+	        };
+	        (0, _startFunctions.startRide)(rideid, startObj);
+	        self.props.changeToRate();
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -33166,19 +33288,23 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'Your_ride_is_ready_inner' },
-	                'Your Ride is Ready!'
+	                'Your ride has arrived!'
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'confirm-Your-ride_button', onClick: this.props.changeToRate },
-	            'Confirm Your Ride'
+	            { className: 'confirm-Your-ride_button', onClick: this.onClickConfirm },
+	            'Confirm and Start Ride'
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'request-shyft-btn btn' },
-	            'Cancel'
+	            { className: 'request-shyft-btn btn', onClick: this.onClickCancel },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              'Cancel'
+	            )
 	          )
 	        )
 	      );
@@ -33191,13 +33317,13 @@
 	exports.default = StartRide;
 
 /***/ },
-/* 321 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(322);
+	var content = __webpack_require__(324);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33217,7 +33343,7 @@
 	}
 
 /***/ },
-/* 322 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33231,7 +33357,34 @@
 
 
 /***/ },
-/* 323 */
+/* 325 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.startRide = startRide;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function startRide(rideid, obj) {
+	  (0, _axios2.default)({
+	    method: 'post',
+	    url: '/arrive/' + rideid.toString(),
+	    data: {
+	      origindate: obj.origindate
+	    }
+	  });
+	}
+
+/***/ },
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33246,7 +33399,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(324);
+	__webpack_require__(327);
+
+	var _cancelFunctions = __webpack_require__(321);
+
+	var _rateFunctions = __webpack_require__(329);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33259,13 +33416,38 @@
 	var RateRide = function (_React$Component) {
 	  _inherits(RateRide, _React$Component);
 
-	  function RateRide() {
+	  function RateRide(props) {
 	    _classCallCheck(this, RateRide);
 
-	    return _possibleConstructorReturn(this, (RateRide.__proto__ || Object.getPrototypeOf(RateRide)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (RateRide.__proto__ || Object.getPrototypeOf(RateRide)).call(this, props));
+
+	    _this.onClickStar = _this.onClickStar.bind(_this);
+	    _this.onClickNext = _this.onClickNext.bind(_this);
+
+	    return _this;
 	  }
 
 	  _createClass(RateRide, [{
+	    key: 'onClickStar',
+	    value: function onClickStar() {
+	      this.rating = 1;
+	    }
+	  }, {
+	    key: 'onClickNext',
+	    value: function onClickNext() {
+	      var self = this;
+	      (0, _cancelFunctions.getRideId)().then(function (res) {
+	        var objToSend = {
+	          rideid: res.data[0].rideid,
+	          rating: self.rating,
+	          destdate: new Date().getTime()
+	        };
+	        console.log(objToSend.rating, objToSend.destdate);
+	        (0, _rateFunctions.rateRide)(objToSend);
+	        self.props.changeToPayment();
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -33302,7 +33484,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'You-have-arrived' },
-	                'You Have Arrived!'
+	                'You have arrived at your destination.'
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -33320,27 +33502,27 @@
 	                    { className: 'rating' },
 	                    _react2.default.createElement(
 	                      'span',
-	                      null,
+	                      { onClick: this.onClickStar, id: 'star' },
 	                      '\u2606'
 	                    ),
 	                    _react2.default.createElement(
 	                      'span',
-	                      null,
+	                      { onClick: this.onClickStar, id: 'star2' },
 	                      '\u2606'
 	                    ),
 	                    _react2.default.createElement(
 	                      'span',
-	                      null,
+	                      { onClick: this.onClickStar, id: 'star3' },
 	                      '\u2606'
 	                    ),
 	                    _react2.default.createElement(
 	                      'span',
-	                      null,
+	                      { onClick: this.onClickStar, id: 'star4' },
 	                      '\u2606'
 	                    ),
 	                    _react2.default.createElement(
 	                      'span',
-	                      null,
+	                      { onClick: this.onClickStar, id: 'star5' },
 	                      '\u2606'
 	                    )
 	                  )
@@ -33350,7 +33532,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'request-shyft-btn btn', onClick: this.props.changeToPayment },
+	            { className: 'request-shyft-btn btn', onClick: this.onClickNext },
 	            'Next'
 	          )
 	        )
@@ -33364,13 +33546,13 @@
 	exports.default = RateRide;
 
 /***/ },
-/* 324 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(325);
+	var content = __webpack_require__(328);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33390,7 +33572,7 @@
 	}
 
 /***/ },
-/* 325 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33398,13 +33580,34 @@
 
 
 	// module
-	exports.push([module.id, ".RateRide .request {\n    position: absolute;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-direction: column;\n    margin: auto;\n    height: 40vh;\n    width: 40%;\n    background-color: rgba(0, 0, 0, 0.3);\n    border-radius: 28px;\n    top: 58vh;\n    left: 0;\n    right: 0;\n    margin-left: auto;\n    margin-right: auto;\n    top: 58%;\n    margin-left: 5px;\n}\n\n.RateRide .car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.RateRide .car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.RateRide .ride-type-section p{\n  margin:0px;\n}\n\n.RateRide .ride-type-desc {\n  font-size: 12px;\n}\n\n.RateRide .the-estimate-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.RateRide .You-have-arrived {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  width:100%;\n  font-size: 24px;\n\n}\n\n.RateRide .Rate-Your-Driver-Box {\n  /* text-align: center; */\n  display: flex;\n  justify-content: center;\n  font-size: 15px;\n  /* padding-bottom: 15px; */\n  width: 100%;\n  font-size: 24px;\n  /*background-color: black;*/\n  height: 32%;\n\n}\n.RateRide .rate-your-driver-inner {\n  /* text-align: center; */\n  display: flex;\n  justify-content: center;\n  font-size: 15px;\n  /* padding-bottom: 15px; */\n  width: 100%;\n  font-size: 25px;\n  /*background-color: green;*/\n  height: 100%;\n  align-items: flex-start;\n  flex-direction: column;\n  align-items: center;\n\n}\n\n\n.RateRide .request-shyft-btn {\n    border-radius: 20px;\n    height: 20%;\n    width: 90%;\n    background-color: #3D0981;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    border: none;\n    color: white;\n    font-size: 20px;\n}\n", ""]);
+	exports.push([module.id, ".RateRide .request {\n    position: absolute;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-direction: column;\n    margin: auto;\n    height: 40vh;\n    width: 40%;\n    background-color: rgba(0, 0, 0, 0.3);\n    border-radius: 28px;\n    top: 58vh;\n    left: 0;\n    right: 0;\n    margin-left: auto;\n    margin-right: auto;\n    top: 58%;\n    margin-left: 5px;\n}\n\n.RateRide .car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.RateRide .car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.RateRide .ride-type-section p{\n  margin:0px;\n}\n\n.RateRide .ride-type-desc {\n  font-size: 12px;\n}\n\n.RateRide .the-estimate-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.RateRide .You-have-arrived {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  width:100%;\n  font-size: 24px;\n\n}\n\n.RateRide .Rate-Your-Driver-Box {\n  /* text-align: center; */\n  display: flex;\n  justify-content: center;\n  font-size: 15px;\n  /* padding-bottom: 15px; */\n  width: 100%;\n  font-size: 24px;\n  /*background-color: black;*/\n  height: 32%;\n\n}\n.RateRide .rate-your-driver-inner {\n  /* text-align: center; */\n  display: flex;\n  justify-content: center;\n  font-size: 15px;\n  /* padding-bottom: 15px; */\n  width: 100%;\n  font-size: 25px;\n  /*background-color: green;*/\n  height: 100%;\n  align-items: flex-start;\n  flex-direction: column;\n  align-items: center;\n\n}\n\n\n.RateRide .request-shyft-btn {\n    border-radius: 20px;\n    height: 20%;\n    width: 90%;\n    background-color: #3D0981;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    border: none;\n    color: white;\n    font-size: 20px;\n}\n\n.colored-star{\n  color:yellow;\n  background-color: yellow;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 326 */
+/* 329 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.rateRide = rateRide;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function rateRide(obj) {
+	  return _axios2.default.put('/complete/' + obj.rideid, obj);
+	}
+
+/***/ },
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33421,7 +33624,7 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(327);
+	__webpack_require__(331);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33533,13 +33736,13 @@
 	exports.default = Payment;
 
 /***/ },
-/* 327 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(328);
+	var content = __webpack_require__(332);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33559,7 +33762,7 @@
 	}
 
 /***/ },
-/* 328 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33573,13 +33776,13 @@
 
 
 /***/ },
-/* 329 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(330);
+	var content = __webpack_require__(334);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33599,7 +33802,7 @@
 	}
 
 /***/ },
-/* 330 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33613,7 +33816,7 @@
 
 
 /***/ },
-/* 331 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33634,7 +33837,7 @@
 	}
 
 /***/ },
-/* 332 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33651,13 +33854,13 @@
 
 	var _reactDom = __webpack_require__(34);
 
-	var _EditInfoModal = __webpack_require__(333);
+	var _EditInfoModal = __webpack_require__(337);
 
 	var _EditInfoModal2 = _interopRequireDefault(_EditInfoModal);
 
-	__webpack_require__(337);
+	__webpack_require__(341);
 
-	var _dashboardService = __webpack_require__(334);
+	var _dashboardService = __webpack_require__(338);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33908,7 +34111,7 @@
 	exports.default = UserDashboardComp;
 
 /***/ },
-/* 333 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33923,9 +34126,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _dashboardService = __webpack_require__(334);
+	var _dashboardService = __webpack_require__(338);
 
-	__webpack_require__(335);
+	__webpack_require__(339);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34025,7 +34228,7 @@
 	exports.default = EditInfoModal;
 
 /***/ },
-/* 334 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34062,13 +34265,13 @@
 	}
 
 /***/ },
-/* 335 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(336);
+	var content = __webpack_require__(340);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34088,7 +34291,7 @@
 	}
 
 /***/ },
-/* 336 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34102,13 +34305,13 @@
 
 
 /***/ },
-/* 337 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(338);
+	var content = __webpack_require__(342);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34128,7 +34331,7 @@
 	}
 
 /***/ },
-/* 338 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34142,7 +34345,7 @@
 
 
 /***/ },
-/* 339 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34157,25 +34360,25 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _cityDetailsService = __webpack_require__(340);
+	var _cityDetailsService = __webpack_require__(344);
 
 	var _CityBottomBanner = __webpack_require__(300);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesEstimateForm = __webpack_require__(341);
+	var _CitiesEstimateForm = __webpack_require__(345);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	var _ShyftPlus = __webpack_require__(345);
+	var _ShyftPlus = __webpack_require__(349);
 
 	var _ShyftPlus2 = _interopRequireDefault(_ShyftPlus);
 
-	var _RideShyft = __webpack_require__(346);
+	var _RideShyft = __webpack_require__(350);
 
 	var _RideShyft2 = _interopRequireDefault(_RideShyft);
 
-	__webpack_require__(347);
+	__webpack_require__(351);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34388,7 +34591,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 340 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34411,7 +34614,7 @@
 	}
 
 /***/ },
-/* 341 */
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34430,9 +34633,9 @@
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _estimateFormService = __webpack_require__(342);
+	var _estimateFormService = __webpack_require__(346);
 
-	__webpack_require__(343);
+	__webpack_require__(347);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34587,7 +34790,7 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 342 */
+/* 346 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34617,13 +34820,13 @@
 	}
 
 /***/ },
-/* 343 */
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(344);
+	var content = __webpack_require__(348);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34643,7 +34846,7 @@
 	}
 
 /***/ },
-/* 344 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34657,7 +34860,7 @@
 
 
 /***/ },
-/* 345 */
+/* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34870,7 +35073,7 @@
 	exports.default = ShyftPlus;
 
 /***/ },
-/* 346 */
+/* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35083,13 +35286,13 @@
 	exports.default = RideShyft;
 
 /***/ },
-/* 347 */
+/* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(348);
+	var content = __webpack_require__(352);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -35109,7 +35312,7 @@
 	}
 
 /***/ },
-/* 348 */
+/* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();

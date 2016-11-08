@@ -108,3 +108,8 @@
     color: white;
     font-size: 20px;
 }
+
+.colored-star{
+  color:yellow;
+  background-color: yellow;
+}
