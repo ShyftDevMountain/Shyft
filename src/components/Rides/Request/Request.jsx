@@ -27,7 +27,6 @@ class Request extends React.Component {
       destlong: this.destinLng,
       driver_id: Math.floor((Math.random() * 6) + 1)
     }
-    console.log(dataToSend);
     createRide(dataToSend);
     this.props.changeToCancel();
   }

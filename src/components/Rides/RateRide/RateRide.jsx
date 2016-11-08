@@ -30,7 +30,6 @@ class RateRide extends React.Component {
            rating: self.rating,
            destdate: new Date().getTime()
          }
-         console.log(objToSend.rating, objToSend.destdate);
          rateRide(objToSend);
          self.props.changeToPayment();
     })
