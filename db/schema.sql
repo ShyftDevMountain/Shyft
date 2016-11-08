@@ -26,12 +26,12 @@ CREATE TABLE rides
   rideId SERIAL PRIMARY KEY,
   originlat decimal,
   originlong decimal,
-  origindate VARCHAR(50),
+  origindate text,
   destlat decimal,
   destlong decimal,
   status VARCHAR(40),
-  destdate VARCHAR(50),
-  rating INT,
+  destdate text,
+  rating text,
   review TEXT
 );
 
@@ -60,11 +60,16 @@ values (6, 8, 3, 4, 7, 'complete', 7, 5, 'o987654328765432', 2, '');
 
 
 
-INSERT INTO drivers (id, firstname, lastname, ridetype, make, model, year, licence, color, img)
-VALUES (1, 'Speedy', 'McFast', 'Lyft', 'Chevy', 'Cobalt', 2007, '2F4ST4U', 'Red', 'https://media.ed.edmunds-media.com/chevrolet/cobalt/2007/oem/2007_chevrolet_cobalt_coupe_ss-supercharged_fq_oem_1_400.jpg');
+INSERT INTO drivers (firstname, lastname, ridetype, make, model, year, licence, color, img)
+VALUES ('Speedy', 'McFast', 'Lyft', 'Chevy', 'Cobalt', 2007, '2F4ST4U', 'Red', 'https://media.ed.edmunds-media.com/chevrolet/cobalt/2007/oem/2007_chevrolet_cobalt_coupe_ss-supercharged_fq_oem_1_400.jpg');
 
 INSERT INTO drivers (id, firstname, lastname, ridetype, make, model, year, licence, color, img)
-VALUES (2, 'Sloth', 'McSlow', 'Lyft', 'Ford', 'Fusion', 2007, '2F4ST4U', 'black', 'http://images.gtcarlot.com/pictures/28124359.jpg');
+VALUES ('Sloth', 'McSlow', 'Lyft', 'Ford', 'Fusion', 2007, '2F4ST4U', 'black', 'http://images.gtcarlot.com/pictures/28124359.jpg');
+
+insert into drivers (firstname, lastname, ridetype, make, model, year, licence, color, img) values('Kenna', 'Martin', 'Shyft', 'Toyota', 'Corolla', 2015, '39xkys', 'Red', 'fdsf');
+insert into drivers (firstname, lastname, ridetype, make, model, year, licence, color, img) values('Dan', 'Martin', 'Shyft', 'Toyota', 'Camry', 2016, '39xkyv', 'Black', 'fdsfdfas');
+insert into drivers (firstname, lastname, ridetype, make, model, year, licence, color, img) values('Heidi', 'Martin', 'Shyft', 'Subaru', 'Forrester', 2017, '39xked', 'Green', 'fdsfadf');
+insert into drivers (firstname, lastname, ridetype, make, model, year, licence, color, img) values('Tim', 'Martin', 'Shyft', 'Honda', 'CR-V', 2015, '39xgdf', 'Blue', 'fdsffadsf');
 
 
 

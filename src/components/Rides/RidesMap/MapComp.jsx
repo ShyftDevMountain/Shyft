@@ -78,9 +78,8 @@ class MapComp extends React.Component {
            <div className='map-page' ref="mapCanvas">
             </div>
 
-
-            {this.state.showPickup ? <SetPickup changeToRequest={this.changeToRequest} /> : null}
-            {this.state.showRequest ? <Request changeToCancel={this.changeToCancel} /> : null}
+            {this.state.showPickup ? <SetPickup address={this.props.initialCenter.address} changeToRequest={this.changeToRequest} /> : null}
+            {this.state.showRequest ? <Request address={this.props.initialCenter} changeToCancel={this.changeToCancel} /> : null}
             {this.state.showCancel ? <Cancel changeToStart={this.changeToStart} /> : null}
             {this.state.showStart ? <StartRide changeToRate={this.changeToRate} /> : null}
             {this.state.showRate ? <RateRide changeToPayment={this.changeToPayment} /> : null}
@@ -131,8 +130,8 @@ class MapComp extends React.Component {
    mapCenter() {
      return new google.maps.LatLng(
 
-       this.props.initialCenter.lat,
-       this.props.initialCenter.lng
+       this.props.initialCenter.initialCenter.lat,
+       this.props.initialCenter.initialCenter.lng
      )
    }
 

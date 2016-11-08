@@ -1,2 +1,1 @@
-update rides set status = 'arrived' where rideid = $1;
- 
+update rides set status = 'arrived', origindate = $1 where rideid = $2;
