@@ -112,7 +112,7 @@ app.put('/complete/:rideid', ridesCtrl.completeRide);
 
 app.get('/customerinfo', customerCtrl.getCustomer);
 app.put('/customerinfo', customerCtrl.updateCustomer);
-app.put('/customerrides', customerCtrl.getCustomerRides);
+app.get('/customerrides', customerCtrl.getCustomerRides);
 
 
 

@@ -26,11 +26,11 @@ CREATE TABLE rides
   rideId SERIAL PRIMARY KEY,
   originlat decimal,
   originlong decimal,
-  origindate INTEGER,
+  origindate VARCHAR(50),
   destlat decimal,
   destlong decimal,
   status VARCHAR(40),
-  destdate INTEGER,
+  destdate VARCHAR(50),
   rating INT,
   review TEXT
 );
@@ -39,10 +39,10 @@ alter table rides add column driver_id integer references drivers(id);
 alter table rides add column facebook_id text references customer(fb);
 
 insert into rides (originlat, originlong, origindate, destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
-values (1, 2, 3, 4, 6, 'complete', 7, 5, '1234567890', 1, '811911947709');
+values (40.226343, -111.660337, '4:30am, October 29th, 2016', 40.280179, -111.717904, 'complete', '4:45am, October 29th, 2016', 5, '1234567890', 1, '811911947709');
 
 insert into rides (originlat, originlong,origindate,destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
-values (2, 8, 3, 4, 7, 'complete', 7, 5, 'o987654328765432', 2, '811911947709');
+values (40.426365, -111.881067, '7:00pm, November 1st, 2016', 40.236429, -111.633727, 'complete', '7:28pm, November 1st, 2016', 2, 'o987654328765432', 2, '811911947709');
 
 insert into rides (originlat, originlong, origindate, destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
 values (3, 2, 3, 4, 6, 'complete', 7, 5, '1234567890', 1, '714344348719552');
