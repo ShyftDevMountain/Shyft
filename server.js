@@ -102,7 +102,8 @@ app.post('/checkZip', citiesCtrl.checkZip);
 
 //RidesComp requests
 
-app.post('/request/:rider_id', ridesCtrl.createRide);
+app.post('/request', ridesCtrl.createRide);
+app.get('/rideid', ridesCtrl.getRideId);
 app.put('/arrive/:rideid', ridesCtrl.arriveRide);
 app.put('/cancel/:rideid', ridesCtrl.cancelRide);
 app.put('/complete/:rideid', ridesCtrl.completeRide);
@@ -118,12 +119,6 @@ app.get('/customerrides', customerCtrl.getCustomerRides);
 // *********************************************************************************************************************************************************
 // FB
 // *********************************************************************************************************************************************************
-
-// sesssion
-// maybe we'll use sessions later
-
-
-
 
 
 

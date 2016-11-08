@@ -8,7 +8,7 @@ export function getLocation() {
 
 
 var lyftToken = {
-  headers: { 'Authorization' : 'Bearer "gAAAAABYG6e0ofqwWbOOjz6z1wAsnm809QjRZKziHvLlilzJ5U82hSGRdeBhZirSgc9prOkXID3IV_2cVbZ0OxUPy_wdFYoEwRroPYG6gKBEPCeJGOsErokJ3dFZhfsnHyZuDkvVNKSlkJUTwVKUZBQ9UwZAmGv2O8Uh1yT2qHLuK5z5-ZRrNvhbnk1t25SfuQHS85aoIpOGxMN4OjfbM5A1IaWsTBTN6Q=="'
+  headers: { 'Authorization' : 'Bearer "gAAAAABYIkJZFkYcTlg_WTkBIyM6716T52HNY21Nsvno7t9wLPCZuLygnTbJhvCcvjq0wW3vj8nUPlUzwCkIoZH1qte9_xJ8JCOD2uJ0vJeVDQObGWtqgM7uJPjPFkwRKxh1HXw0bUdcHehzWPJ54LP_bMxGITPT7KQQs_7t1vskQTLCb_ITqYp5iV4aMRU7Fc3V0Cx7X7-PkKk_cY7arzZP34ihCcDWTw=="'
   }
 }
 
