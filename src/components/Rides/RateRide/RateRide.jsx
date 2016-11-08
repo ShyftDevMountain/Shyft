@@ -16,8 +16,9 @@ class RateRide extends React.Component {
 
   }
 
-  onClickStar() {
-    this.rating = 1;
+  onClickStar(e) {
+    this.rating = e.target.id;
+    document.getElementById(e.target.id).classList.add('colored-star');
   }
 
 
@@ -61,7 +62,7 @@ class RateRide extends React.Component {
                 Rate Your Driver
                 <div className='stars-container'>
                   <div className="rating">
-                    <span onClick={this.onClickStar} id='star'>☆</span><span onClick={this.onClickStar} id='star2'>☆</span><span onClick={this.onClickStar} id='star3'>☆</span><span onClick={this.onClickStar} id='star4'>☆</span><span onClick={this.onClickStar} id='star5'>☆</span>
+                    <span onClick={this.onClickStar} id='1'>☆</span><span onClick={this.onClickStar} id='2'>☆</span><span onClick={this.onClickStar} id='3'>☆</span><span onClick={this.onClickStar} id='4'>☆</span><span onClick={this.onClickStar} id='5'>☆</span>
                   </div>
                 </div>
               </div>

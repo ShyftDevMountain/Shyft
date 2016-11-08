@@ -18,7 +18,7 @@ module.exports = {
 
 
   arriveRide: function(req, res, next) {
-    db.arriveRide([req.body.origindate, req.params.rideid], function(err) {
+    db.arriveRide([req.body.origindate, req.params.rideid], function(err, resp) {
       if(err) {
         res.status(500).json(err);
       }

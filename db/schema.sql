@@ -26,12 +26,12 @@ CREATE TABLE rides
   rideId SERIAL PRIMARY KEY,
   originlat decimal,
   originlong decimal,
-  origindate VARCHAR(50),
+  origindate text,
   destlat decimal,
   destlong decimal,
   status VARCHAR(40),
-  destdate VARCHAR(50),
-  rating INT,
+  destdate text,
+  rating text,
   review TEXT
 );
 

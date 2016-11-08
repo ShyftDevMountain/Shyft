@@ -1,11 +1,9 @@
 import axios from 'axios';
 
 export function startRide(rideid, obj) {
-  axios({
-  method: 'post',
+  return axios({
+  method: 'put',
   url: '/arrive/' + rideid.toString(),
-  data: {
-    origindate: obj.origindate
-  }
+  data: obj
 });
 }

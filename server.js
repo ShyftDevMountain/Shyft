@@ -104,7 +104,7 @@ app.post('/checkZip', citiesCtrl.checkZip);
 
 app.post('/request', ridesCtrl.createRide);
 app.get('/rideid', ridesCtrl.getRideId);
-app.post('/arrive/:rideid', ridesCtrl.arriveRide);
+app.put('/arrive/:rideid', ridesCtrl.arriveRide);
 app.put('/cancel/:rideid', ridesCtrl.cancelRide);
 app.put('/complete/:rideid', ridesCtrl.completeRide);
 

@@ -28,6 +28,7 @@ class StartRide extends React.Component {
       let startObj = {
         origindate: new Date().getTime()
       }
+  
       startRide(rideid, startObj);
       self.props.changeToRate();
 
