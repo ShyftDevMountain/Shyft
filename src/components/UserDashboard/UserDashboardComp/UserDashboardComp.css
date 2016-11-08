@@ -186,19 +186,19 @@
     }
 
     .userdash-sidebar-container {
-        width: 50%;
+        width: 30%;
         padding-left: 0px;
         padding-top: 150px;
     }
 
     .userdash-user-container {
         width: 100%;
-        padding: 110px 0 30px;
+        padding: 80px 0 30px;
 
     }
 
     .userdash-user-title {
-        font-size: 4rem;
+        font-size: 3.3rem;
     }
 
     .userdash-user-ridesrequest-box {

@@ -1,3 +1,4 @@
-.rideslist {
+.customerrides-tablehead {
   display: flex;
+  justify-content: space-around;
 }

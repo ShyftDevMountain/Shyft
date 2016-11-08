@@ -3,6 +3,15 @@ var db = app.get('db');
 
 module.exports = {
 
+  isloggedin: function(req,res,next){
+    if (!req.session.passport) {
+      res.send(false)
+    }
+    else {
+      res.send(true)
+    }
+  },
+
   getCustomer: function(req, res, next) {
     db.get_customer([req.session.passport.user.id],function(err, customerInfo) {
       if(err) {

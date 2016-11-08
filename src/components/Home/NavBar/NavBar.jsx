@@ -6,6 +6,10 @@ import SideMenuBackDrop from '../SideMenuBackDrop/SideMenuBackDrop.jsx';
 import Footer from '../Footer/Footer.jsx';
 import LoginComp from '../../Login/LoginComp/LoginComp.jsx';
 import './NavBar.css';
+import {isloggedin} from '../../../services/dashboardService.js';
+import {hashHistory} from 'react-router'
+
+
 
 class NavBar extends React.Component {
 
@@ -141,9 +145,17 @@ class NavBar extends React.Component {
     }
 
     loginClick() {
-        this.setState({
-            showLogin: true
-        })
+      var self = this
+      isloggedin().then(function(res){
+        if(res.data){
+          return hashHistory.push('/userdashboard')
+        }
+        else {
+          self.setState({
+              showLogin: true
+          })
+        }
+      })
     }
 
     handleLoginClose() {
