@@ -5,4 +5,8 @@ export function getFb() {
   .then(res => res.data);
   console.log(data);
 }
-console.log();
+
+export function logoutFb() {
+  return axios.get('/logout')
+  .then(res => res)
+}

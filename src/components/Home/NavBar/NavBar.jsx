@@ -1,14 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router';
+import {hashHistory} from 'react-router'
 
 import SideMenu from '../SideMenu/SideMenu.jsx'
 import SideMenuBackDrop from '../SideMenuBackDrop/SideMenuBackDrop.jsx';
 import Footer from '../Footer/Footer.jsx';
 import LoginComp from '../../Login/LoginComp/LoginComp.jsx';
-import './NavBar.css';
-import {isloggedin} from '../../../services/dashboardService.js';
-import {hashHistory} from 'react-router'
 
+import {isloggedin} from '../../../services/dashboardService.js';
+
+import './NavBar.css';
 
 
 class NavBar extends React.Component {
@@ -133,6 +134,7 @@ class NavBar extends React.Component {
       this.hideMenu = this.hideMenu.bind(this);
       this.showMenu = this.showMenu.bind(this);
       this.loginClick = this.loginClick.bind(this);
+      this.rideWithShyftClick = this.rideWithShyftClick.bind(this);
       this.handleLoginClose = this.handleLoginClose.bind(this);
       this.handleWindowClose = this.handleWindowClose.bind(this);
     }
@@ -165,6 +167,20 @@ class NavBar extends React.Component {
       })
     }
 
+    rideWithShyftClick() {
+      var self = this
+      isloggedin().then(function(res){
+        if(res.data){
+          return hashHistory.push('/rides')
+        }
+        else {
+          self.setState({
+              showLogin: true
+          })
+        }
+      })
+    }
+
     handleLoginClose() {
         this.setState({
             showLogin: false
@@ -187,8 +203,8 @@ class NavBar extends React.Component {
             <SideMenuBackDrop showMenu={this.state.showBackDrop} hideMenu={this.hideMenu}/>
             <div id="navbarMobile" className="navbar-mobile">
                 <span className="glyphicon glyphicon-menu-hamburger" onClick={this.showMenu}></span>
-                <img id="navbarLogo" className="navbar-mobile-logo" src="img/LYFT_LOGO/SVG/white_logo.svg"/>
-                <img id="navbarLogo2" className="navbar-mobile-logo2" src="img/LYFT_LOGO/SVG/lyft_pixel.svg"/>
+                <Link to="/"><img id="navbarLogo" className="navbar-mobile-logo" src="img/LYFT_LOGO/SVG/white_logo.svg"/></Link>
+                <Link to="/"><img id="navbarLogo2" className="navbar-mobile-logo2" src="img/LYFT_LOGO/SVG/lyft_pixel.svg"/></Link>
             </div>
 
 
@@ -211,7 +227,7 @@ class NavBar extends React.Component {
                     </ul>
                 </div>
                 <div id="navbar-right" className="navbar-right">
-                    <div id="navbar-ride-lyftbtn" className="navbar-ride-lyft"><Link to="/login" id="ride" className="hover-link-none">Ride with Shyft</Link></div>
+                    <div id="navbar-ride-lyftbtn" className="navbar-ride-lyft"><div id="ride" className="hover-link-none" onClick={this.rideWithShyftClick}>Ride with Shyft</div></div>
 
                     {this.state.showLogin ? <LoginComp handleLoginClose={this.handleLoginClose}/> : null}
 
