@@ -133,6 +133,7 @@ class NavBar extends React.Component {
       this.hideMenu = this.hideMenu.bind(this);
       this.showMenu = this.showMenu.bind(this);
       this.loginClick = this.loginClick.bind(this);
+      this.rideWithShyftClick = this.rideWithShyftClick.bind(this);
       this.handleLoginClose = this.handleLoginClose.bind(this);
       this.handleWindowClose = this.handleWindowClose.bind(this);
     }
@@ -156,6 +157,20 @@ class NavBar extends React.Component {
       isloggedin().then(function(res){
         if(res.data){
           return hashHistory.push('/userdashboard')
+        }
+        else {
+          self.setState({
+              showLogin: true
+          })
+        }
+      })
+    }
+
+    rideWithShyftClick() {
+      var self = this
+      isloggedin().then(function(res){
+        if(res.data){
+          return hashHistory.push('/rides')
         }
         else {
           self.setState({
@@ -211,7 +226,7 @@ class NavBar extends React.Component {
                     </ul>
                 </div>
                 <div id="navbar-right" className="navbar-right">
-                    <div id="navbar-ride-lyftbtn" className="navbar-ride-lyft"><Link to="/login" id="ride" className="hover-link-none">Ride with Shyft</Link></div>
+                    <div id="navbar-ride-lyftbtn" className="navbar-ride-lyft"><div id="ride" className="hover-link-none" onClick={this.rideWithShyftClick}>Ride with Shyft</div></div>
 
                     {this.state.showLogin ? <LoginComp handleLoginClose={this.handleLoginClose}/> : null}
 
