@@ -1,4 +1,14 @@
-.customerrides-tablehead {
+/*.customerrides-tablehead {
   display: flex;
   justify-content: space-around;
+}*/
+
+.rides-desc-full {
+    font-size: 1.5rem;
+    padding-left: 5px;
+}
+
+.rides-desc {
+    font-weight: bold;
+
 }

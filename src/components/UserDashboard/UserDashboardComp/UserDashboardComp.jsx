@@ -102,7 +102,12 @@ class UserDashboardComp extends React.Component{
                                     <span className="userdash-ridenumber"> <CustomerRides /></span>
                                 </div>
 
-
+                            </div>
+                            <div className="userdash-user-comments">
+                                <div className="userdash-icon-box">
+                                    <i className="material-icons userdash-icons">subject</i>
+                                </div>
+                                <textarea className="userdash-textarea" placeholder="Comments"></textarea>
                             </div>
 
                             <div>
