@@ -10,8 +10,7 @@ CREATE TABLE customer
 CREATE TABLE drivers
 (
   id SERIAL PRIMARY KEY,
-  firstname VARCHAR(40),
-  lastname VARCHAR(40),
+  name VARCHAR(40),
   ridetype VARCHAR(40),
   make VARCHAR(40),
   model VARCHAR(40),
@@ -38,40 +37,20 @@ CREATE TABLE rides
 alter table rides add column driver_id integer references drivers(id);
 alter table rides add column facebook_id text references customer(fb);
 
-insert into rides (originlat, originlong, origindate, destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
-values (40.226343, -111.660337, '4:30am, October 29th, 2016', 40.280179, -111.717904, 'complete', '4:45am, October 29th, 2016', 5, '1234567890', 1, '811911947709');
 
-insert into rides (originlat, originlong,origindate,destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
-values (40.426365, -111.881067, '7:00pm, November 1st, 2016', 40.236429, -111.633727, 'complete', '7:28pm, November 1st, 2016', 2, 'o987654328765432', 2, '811911947709');
+INSERT INTO drivers (name, ridetype, make, model, year, licence, color, img)
+VALUES ('Speedy McFast', 'Lyft', 'Chevy', 'Cobalt', 2007, '2F4ST4U', 'Red', 'https://media.ed.edmunds-media.com/chevrolet/cobalt/2007/oem/2007_chevrolet_cobalt_coupe_ss-supercharged_fq_oem_1_400.jpg');
 
-insert into rides (originlat, originlong, origindate, destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
-values (3, 2, 3, 4, 6, 'complete', 7, 5, '1234567890', 1, '714344348719552');
+INSERT INTO drivers (name, ridetype, make, model, year, licence, color, img)
+VALUES ('Sloth McSlow', 'Lyft', 'Ford', 'Fusion', 2007, '2F4ST4U', 'black', 'http://images.gtcarlot.com/pictures/28124359.jpg');
 
-insert into rides (originlat, originlong,origindate,destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
-values (4, 8, 3, 4, 7, 'complete', 7, 5, 'o987654328765432', 2, '714344348719552');
+insert into drivers (name, ridetype, make, model, year, licence, color, img) values('Kenna Martin', 'Shyft', 'Toyota', 'Corolla', 2015, '39xkys', 'Red', 'fdsf');
 
-insert into rides (originlat, originlong, origindate, destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
-values (5, 2, 3, 4, 6, 'complete', 7, 5, '1234567890', 1, '');
+insert into drivers (name, ridetype, make, model, year, licence, color, img) values('Dan Martin', 'Shyft', 'Toyota', 'Camry', 2016, '39xkyv', 'Black', 'fdsfdfas');
 
-insert into rides (originlat, originlong,origindate,destlat, destlong, status, destdate, rating, review, driver_id, facebook_id)
-values (6, 8, 3, 4, 7, 'complete', 7, 5, 'o987654328765432', 2, '');
+insert into drivers (name, ridetype, make, model, year, licence, color, img) values('Heidi Martin', 'Shyft', 'Subaru', 'Forrester', 2017, '39xked', 'Green', 'fdsfadf');
 
-
-
-
-
-INSERT INTO drivers (firstname, lastname, ridetype, make, model, year, licence, color, img)
-VALUES ('Speedy', 'McFast', 'Lyft', 'Chevy', 'Cobalt', 2007, '2F4ST4U', 'Red', 'https://media.ed.edmunds-media.com/chevrolet/cobalt/2007/oem/2007_chevrolet_cobalt_coupe_ss-supercharged_fq_oem_1_400.jpg');
-
-INSERT INTO drivers (id, firstname, lastname, ridetype, make, model, year, licence, color, img)
-VALUES ('Sloth', 'McSlow', 'Lyft', 'Ford', 'Fusion', 2007, '2F4ST4U', 'black', 'http://images.gtcarlot.com/pictures/28124359.jpg');
-
-insert into drivers (firstname, lastname, ridetype, make, model, year, licence, color, img) values('Kenna', 'Martin', 'Shyft', 'Toyota', 'Corolla', 2015, '39xkys', 'Red', 'fdsf');
-insert into drivers (firstname, lastname, ridetype, make, model, year, licence, color, img) values('Dan', 'Martin', 'Shyft', 'Toyota', 'Camry', 2016, '39xkyv', 'Black', 'fdsfdfas');
-insert into drivers (firstname, lastname, ridetype, make, model, year, licence, color, img) values('Heidi', 'Martin', 'Shyft', 'Subaru', 'Forrester', 2017, '39xked', 'Green', 'fdsfadf');
-insert into drivers (firstname, lastname, ridetype, make, model, year, licence, color, img) values('Tim', 'Martin', 'Shyft', 'Honda', 'CR-V', 2015, '39xgdf', 'Blue', 'fdsffadsf');
-
-
+insert into drivers (name, ridetype, make, model, year, licence, color, img) values('Tim Martin', 'Shyft', 'Honda', 'CR-V', 2015, '39xgdf', 'Blue', 'fdsffadsf');
 
 
 CREATE TABLE cities
@@ -379,23 +358,3 @@ alter table zip_codes add column city_id integer references cities(id);
  insert into zip_codes (zip_code, city_id) values (93109, 17);
  insert into zip_codes (zip_code, city_id) values (93110, 17);
  insert into zip_codes (zip_code, city_id) values (93108, 17);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--- cities skipped - I will come back to these
--- inland Empire
--- silicon valley
--- napa and sonoma county

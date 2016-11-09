@@ -1,14 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router';
+import {hashHistory} from 'react-router'
 
 import SideMenu from '../SideMenu/SideMenu.jsx'
 import SideMenuBackDrop from '../SideMenuBackDrop/SideMenuBackDrop.jsx';
 import Footer from '../Footer/Footer.jsx';
 import LoginComp from '../../Login/LoginComp/LoginComp.jsx';
-import './NavBar.css';
-import {isloggedin} from '../../../services/dashboardService.js';
-import {hashHistory} from 'react-router'
 
+import {isloggedin} from '../../../services/dashboardService.js';
+
+import './NavBar.css';
 
 
 class NavBar extends React.Component {
@@ -202,8 +203,8 @@ class NavBar extends React.Component {
             <SideMenuBackDrop showMenu={this.state.showBackDrop} hideMenu={this.hideMenu}/>
             <div id="navbarMobile" className="navbar-mobile">
                 <span className="glyphicon glyphicon-menu-hamburger" onClick={this.showMenu}></span>
-                <img id="navbarLogo" className="navbar-mobile-logo" src="img/LYFT_LOGO/SVG/white_logo.svg"/>
-                <img id="navbarLogo2" className="navbar-mobile-logo2" src="img/LYFT_LOGO/SVG/lyft_pixel.svg"/>
+                <Link to="/"><img id="navbarLogo" className="navbar-mobile-logo" src="img/LYFT_LOGO/SVG/white_logo.svg"/></Link>
+                <Link to="/"><img id="navbarLogo2" className="navbar-mobile-logo2" src="img/LYFT_LOGO/SVG/lyft_pixel.svg"/></Link>
             </div>
 
 
