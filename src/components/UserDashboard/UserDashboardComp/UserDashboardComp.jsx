@@ -5,7 +5,7 @@ import EditInfoModal from '../EditInfoModal/EditInfoModal.jsx';
 import CustomerRides from '../CustomerRides/CustomerRides.jsx';
 import './UserDashboardComp.css';
 import {getCustomerInfo} from '../../../services/dashboardService.js';
-
+import {hashHistory} from 'react-router'
 
 
 
@@ -23,7 +23,6 @@ class UserDashboardComp extends React.Component{
 
   componentWillMount() {
     getCustomerInfo().then(res => {
-      // console.log(res)
       res = res[0]
       this.setState({
         name: res.displayname,
@@ -33,7 +32,6 @@ class UserDashboardComp extends React.Component{
       })
     });
   }
-
 
   updateClick() {
       this.setState({
