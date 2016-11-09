@@ -22,20 +22,15 @@ class CustomerRides extends React.Component{
       var theRides = rides.map(function(val, i, arr){
         return (
           <div key={i} className='rideswrap'>
-              <div>{val.destAddress}</div>
-              
-              <div >{val.origindate}</div>
-              <div>{val.originAddress}</div>
-              <div>{val.destdate}</div>
-              <div>{val.driver_id}</div>
-              <div>{val.rating}</div>
+              <div className="rides-desc-full"><span className="rides-desc">Start: </span> {val.destAddress}</div>
+
+              <div className="rides-desc-full"><span className="rides-desc">Time: </span>{val.origindate}</div>
+              <div className="rides-desc-full"><span className="rides-desc">Finish: </span>{val.originAddress}</div>
+              <div className="rides-desc-full"><span className="rides-desc">Time: </span>{val.destdate}</div>
+              <div className="rides-desc-full"><span className="rides-desc">Driver: </span>{val.driver_id}</div>
+              <div className="rides-desc-full"><span className="rides-desc">Rating: </span>{val.rating}</div>
               <div>
-                <span className="userdash-user-comments">
-                    <div className="userdash-icon-box">
-                        <i className="material-icons userdash-icons">subject</i>
-                    </div>
-                    <textarea className="userdash-textarea" placeholder="Comments"></textarea>
-                </span>
+
               </div>
           </div>
         )
@@ -49,15 +44,7 @@ class CustomerRides extends React.Component{
   render() {
     return (
       <div className='customerrides'>
-        <div className='customerrides-tablehead'>
-          <div>Start:</div>
-          <div></div>
-          <div>Finish:</div>
-          <div></div>
-          <div>Driver:</div>
-          <div>Rating:</div>
-          <div>Comments:</div>
-        </div>
+
         <div className='customerrides-tablebody'>
           {this.state.rides}
         </div>
