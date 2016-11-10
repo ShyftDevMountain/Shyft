@@ -20,6 +20,8 @@ class CustomerRides extends React.Component{
     var self = this;
     var testing = getCustomerRides().then(function(rides){
       var theRides = rides.map(function(val, i, arr){
+          console.log(i);
+
         return (
           <div key={i} className='rideswrap'>
               <div className="rides-desc-full"><span className="rides-desc">Start: </span> {val.destAddress}</div>
