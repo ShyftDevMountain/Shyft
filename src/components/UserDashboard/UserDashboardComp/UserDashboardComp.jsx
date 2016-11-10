@@ -2,10 +2,10 @@ import React from 'react';
 import {render} from 'react-dom';
 
 import EditInfoModal from '../EditInfoModal/EditInfoModal.jsx';
+import CustomerRides from '../CustomerRides/CustomerRides.jsx';
 import './UserDashboardComp.css';
 import {getCustomerInfo} from '../../../services/dashboardService.js';
-import {getCustomerRides} from '../../../services/dashboardService.js';
-
+import {hashHistory} from 'react-router'
 
 
 
@@ -23,21 +23,15 @@ class UserDashboardComp extends React.Component{
 
   componentWillMount() {
     getCustomerInfo().then(res => {
-      console.log(res)
       res = res[0]
       this.setState({
         name: res.displayname,
         email: res.email,
         phone: res.phone,
-        fb: res.fb
+        fb: 'https://graph.facebook.com/' + res.fb + '/picture?type=large'
       })
     });
-    getCustomerRides().then(res => {
-      console.log(res)
-
-    })
   }
-
 
   updateClick() {
       this.setState({
@@ -60,7 +54,7 @@ class UserDashboardComp extends React.Component{
 
                         <div className="userdash-sidebar-innerbox">
                             <div className="userdash-user-pic-container">
-                                    <img src="./img/userdash/screaming-kid1.jpg"/>
+                                    <img src={this.state.fb}/>
                                 <div className="userdash-sidebar-item-container">
                                     <div className="userdash-sidebar-item">
                                         <i className="material-icons userdash-icons">nature_people</i><span>User</span>
@@ -105,16 +99,17 @@ class UserDashboardComp extends React.Component{
                                     <div className="userdash-icon-box">
                                         <i className="material-icons userdash-icons">directions_car</i>
                                     </div>
-                                    <span className="userdash-ridenumber"> 5</span>
-                                </div>
-                                <div className="userdash-user-comments">
-                                    <div className="userdash-icon-box">
-                                        <i className="material-icons userdash-icons">subject</i>
-                                    </div>
-                                    <textarea className="userdash-textarea" placeholder="Comments"></textarea>
+                                    <span className="userdash-ridenumber"> <CustomerRides /></span>
                                 </div>
 
                             </div>
+                            <div className="userdash-user-comments">
+                                <div className="userdash-icon-box">
+                                    <i className="material-icons userdash-icons">subject</i>
+                                </div>
+                                <textarea className="userdash-textarea" placeholder="Comments"></textarea>
+                            </div>
+
                             <div>
                                 <button className="userdash-updateinfo-btn btn btn-primary" onClick={this.updateClick}>Update Info</button>
                             </div>

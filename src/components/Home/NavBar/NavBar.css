@@ -13,20 +13,35 @@
     align-items: center;
     background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));
     z-index: 10;
+    transition: all .2s ease;
 }
 
 .navbar-mobile span {
     width: 45%;
     padding-left: 20px;
-    transition: all .3s ease;
+    transition: all .2s ease;
 }
 
-.navbar-mobile img {
+.navbar-mobile-logo {
     width: 42px;
 }
 
 .navbar-mobile-active {
     background: white;
+    box-shadow: 1px 1px 5px grey;
+}
+
+.navbar-mobile-logo-hide {
+    display: none;
+}
+
+.navbar-mobile-logo2 {
+    display: none;
+}
+
+.navbar-mobile-logo2-active {
+    display: initial;
+    width: 42px;
 }
 
 
@@ -178,7 +193,7 @@
     top: 1px;
     margin-left: 2px;
     font-size: 12px;
-    transition: all .2s ease;
+    transition: transform .2s ease;
 }
 
 .carrot-active {

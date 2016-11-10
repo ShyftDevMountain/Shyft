@@ -14,6 +14,7 @@
   }
 .contentforfourways  .m-b-xl {
     margin-bottom: 2rem;
+
   }
   .contentforfourways .col-xs-12 {
     -webkit-box-flex: 0;
@@ -27,6 +28,9 @@
     padding-right: 0.9375rem;
   }
 
+.content_for_fourWaysToRide {
+    padding: 50px 0;
+}
 
   .contentforfourways .embedded_video{
     box-sizing: inherit;
@@ -266,7 +270,7 @@
     font-size: 2rem;
     line-height: 24px;
   }
-  
+
   .contentforfourways .text-xs-center {
   text-align: center !important;
   font-size: 3.5rem;

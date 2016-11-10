@@ -1,11 +1,20 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 import './Cancel.css';
+import {getRideId} from './cancelFunctions.js';
+import {cancelRide} from './cancelFunctions.js';
 
 class Cancel extends React.Component {
 
   componentDidMount() {
     this.props.changeToStart();
+  }
+
+  onCancel() {
+    getRideId().then(function(res){
+      cancelRide(res.data[0].rideid);
+    })
   }
 
   render() {
@@ -18,20 +27,8 @@ class Cancel extends React.Component {
           <div className='confirmation-eta'>
           <p>Awesome! Your Shyft ride will be here in approximately 2 minutes!</p>
           </div>
-          <div className='test-flex'>
-          <div className='input-section'>
-            <div className='color-dest-circles'>
-              <div className='blue-circle'></div>
-              <div className='pink-circle'></div>
-            </div>
-          </div>
-            <div className='inputs-stacked'>
-          <div className='address-input origin-address'><input type='text' placeholder='Pickup Location' /></div>
-          <div className='address-input dest-address'><input type='text' placeholder='Add Destination'/></div>
-          </div>
-          </div>
         </div>
-                <div className='cancel-shyft-btn btn'>Cancel Ride</div>
+            <div className='cancel-shyft-btn btn' onClick={this.onCancel}><Link to='/'>Cancel Ride</Link></div>
 
         </div>
     )

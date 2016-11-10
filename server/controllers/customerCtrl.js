@@ -3,8 +3,17 @@ var db = app.get('db');
 
 module.exports = {
 
+  isloggedin: function(req,res,next){
+    if (!req.session.passport) {
+      res.send(false)
+    }
+    else {
+      res.send(true)
+    }
+  },
+
   getCustomer: function(req, res, next) {
-    db.get_customer([req.session.passport.user.id],function(err, customerInfo) {;
+    db.get_customer([req.session.passport.user.id],function(err, customerInfo) {
       if(err) {
         res.status(500).json(err);
       }
@@ -15,7 +24,7 @@ module.exports = {
   },
 
   getCustomerRides: function(req, res, next) {
-    db.get_customer_rides([req.session.passport.user.id],function(err, rides) {;
+    db.get_customer_rides([req.session.passport.user.id],function(err, rides) {
       if(err) {
         res.status(500).json(err);
       }

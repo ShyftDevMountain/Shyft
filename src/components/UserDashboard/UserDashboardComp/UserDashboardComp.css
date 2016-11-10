@@ -52,6 +52,7 @@
 
 .userdash-user-pic-container img {
     width: 140px;
+    height: 160px;
     border-radius: 7px;
 }
 
@@ -87,7 +88,7 @@
 }
 
 .userdash-user-innerbox {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -120,7 +121,7 @@
     display: flex;
     flex-direction: column;
     align-items: initial;
-    margin: 50px 0;
+    margin: 10px 0;
 }
 
 .userdash-user-rides {
@@ -133,8 +134,10 @@
 .userdash-ridenumber {
     border: 1px solid #f2f2f2;
     border-radius: 7px;
-    padding: 10px;
+    padding: 10px 5px 5px 5px;
     width: 100%;
+    height: 150px;
+    overflow-y: scroll;
 }
 
 .userdash-user-comments textarea {
@@ -152,6 +155,7 @@
     width: 100%;
     display: flex;
     align-items: center;
+    margin: 15px 0;
 }
 
 .userdash-updateinfo-btn {
@@ -184,19 +188,19 @@
     }
 
     .userdash-sidebar-container {
-        width: 50%;
+        width: 45%;
         padding-left: 0px;
         padding-top: 150px;
     }
 
     .userdash-user-container {
         width: 100%;
-        padding: 110px 0 80px;
+        padding: 80px 0 30px;
 
     }
 
     .userdash-user-title {
-        font-size: 4rem;
+        font-size: 3.3rem;
     }
 
     .userdash-user-ridesrequest-box {
@@ -205,21 +209,20 @@
         align-items: center;
     }
 
-    .userdash-user-comments textarea {
+    /*.userdash-user-comments textarea {
         width: 90%;
     }
 
     .userdash-user-comments {
         width: 50%;
-    }
+    }*/
 
     .userdash-ridenumber {
-        width: 70%;
-        text-align: center;
+
     }
 
     .userdash-user-rides {
-        width: 50%;
+        width: 100%;
         margin-bottom: 0px;
     }
 
@@ -227,6 +230,6 @@
 
 @media (min-width:992px) {
     .userdash-sidebar-container {
-        width: 45%;
+        width: 50%;
     }
 }

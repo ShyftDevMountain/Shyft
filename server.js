@@ -102,7 +102,8 @@ app.post('/checkZip', citiesCtrl.checkZip);
 
 //RidesComp requests
 
-app.post('/request/:rider_id', ridesCtrl.createRide);
+app.post('/request', ridesCtrl.createRide);
+app.get('/rideid', ridesCtrl.getRideId);
 app.put('/arrive/:rideid', ridesCtrl.arriveRide);
 app.put('/cancel/:rideid', ridesCtrl.cancelRide);
 app.put('/complete/:rideid', ridesCtrl.completeRide);
@@ -111,19 +112,17 @@ app.put('/complete/:rideid', ridesCtrl.completeRide);
 
 app.get('/customerinfo', customerCtrl.getCustomer);
 app.put('/customerinfo', customerCtrl.updateCustomer);
-app.put('/customerrides', customerCtrl.getCustomerRides);
+app.get('/customerrides', customerCtrl.getCustomerRides);
+
+
+
+app.get('/isloggedin', customerCtrl.isloggedin);
 
 
 
 // *********************************************************************************************************************************************************
 // FB
 // *********************************************************************************************************************************************************
-
-// sesssion
-// maybe we'll use sessions later
-
-
-
 
 
 
@@ -133,7 +132,7 @@ app.put('/customerrides', customerCtrl.getCustomerRides);
 app.get('/auth/facebook',  passport.authenticate('facebook',  { scope: 'public_profile, email'}));
 // Fb oAuth
 // Facebook will redirect the user to this URL after approval.
-app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/#/userdashboard', failureRedirect: '/userdashboard' }));
+app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/#/rides', failureRedirect: '/' }));
 
 var port = 8000;
 app.listen(port, function(){

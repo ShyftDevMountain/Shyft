@@ -4,6 +4,18 @@ import {Link} from 'react-router';
 import './Payment.css';
 
 class Payment extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.onClickPinkDiv = this.onClickPinkDiv.bind(this);
+  }
+
+  onClickPinkDiv(e) {
+    document.getElementById(e.target.id).classList.add('pink-bg-div');
+  }
+
+
+
   render() {
     return(
       <div className='payment-section'>
@@ -12,11 +24,11 @@ class Payment extends React.Component {
             <div className='payment-title'>Thank you for riding with <span>Shyft</span>.</div>
             <img src='./img/userdash/screaming-kid1.jpg' />
             <div className='add-tip'>
-              <div>No tip</div>
-              <div>$1</div>
-              <div>$2</div>
-              <div>$5</div>
-              <div>Other</div>
+              <div onClick={this.onClickPinkDiv} id='no-tip'>No tip</div>
+              <div onClick={this.onClickPinkDiv} id='1-dollar'>$1</div>
+              <div onClick={this.onClickPinkDiv} id='2-dollars'>$2</div>
+              <div onClick={this.onClickPinkDiv} id='5-dollars'>$5</div>
+              <div onClick={this.onClickPinkDiv} id='other'>Other</div>
             </div>
             <div className='add-payment'>
               <div>Add Payment</div>
