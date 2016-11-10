@@ -70,19 +70,19 @@
 
 	var _HomeComp2 = _interopRequireDefault(_HomeComp);
 
-	var _CitiesComp = __webpack_require__(290);
+	var _CitiesComp = __webpack_require__(291);
 
 	var _CitiesComp2 = _interopRequireDefault(_CitiesComp);
 
-	var _RidesComp = __webpack_require__(305);
+	var _RidesComp = __webpack_require__(306);
 
 	var _RidesComp2 = _interopRequireDefault(_RidesComp);
 
-	var _UserDashboardComp = __webpack_require__(330);
+	var _UserDashboardComp = __webpack_require__(331);
 
 	var _UserDashboardComp2 = _interopRequireDefault(_UserDashboardComp);
 
-	var _CityDetails = __webpack_require__(337);
+	var _CityDetails = __webpack_require__(338);
 
 	var _CityDetails2 = _interopRequireDefault(_CityDetails);
 
@@ -27537,6 +27537,8 @@
 
 	var _LoginComp2 = _interopRequireDefault(_LoginComp);
 
+	var _dashboardService = __webpack_require__(333);
+
 	__webpack_require__(278);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -27566,7 +27568,9 @@
 	                var cities = document.getElementById('cities');
 	                var help = document.getElementById('help');
 	                var ride = document.getElementById('ride');
-
+	                var navbarMobile = document.getElementById('navbarMobile');
+	                var navbarLogo = document.getElementById('navbarLogo');
+	                var navbarLogo2 = document.getElementById('navbarLogo2');
 	                var range = 80;
 	                var scrollTop = document.body.scrollTop;
 
@@ -27578,6 +27582,9 @@
 	                    rideLyft.classList.add('navbar-ride-lyft-active');
 	                    help.classList.add('navbar-link-active');
 	                    ride.classList.add('navbar-link-active');
+	                    navbarMobile.classList.add('navbar-mobile-active');
+	                    navbarLogo.classList.add('navbar-mobile-logo-hide');
+	                    navbarLogo2.classList.add('navbar-mobile-logo2-active');
 	                } else {
 	                    explore.classList.remove('navbar-scroll-active');
 	                    logo.classList.remove('navbar-logo-hide');
@@ -27587,6 +27594,9 @@
 	                    cities.classList.remove('navbar-link-active');
 	                    help.classList.remove('navbar-link-active');
 	                    ride.classList.remove('navbar-link-active');
+	                    navbarMobile.classList.remove('navbar-mobile-active');
+	                    navbarLogo.classList.remove('navbar-mobile-logo-hide');
+	                    navbarLogo2.classList.remove('navbar-mobile-logo2-active');
 	                }
 	            };
 	        }
@@ -27620,7 +27630,7 @@
 	            logo2.classList.add('navbar-logo-show');
 	            setTimeout(function () {
 	                navbarDrop.classList.add('navbar-hover-container-active');
-	            }, 25);
+	            }, 10);
 	        }
 	    }, {
 	        key: 'handleHoverLeave',
@@ -27669,6 +27679,7 @@
 	        _this.hideMenu = _this.hideMenu.bind(_this);
 	        _this.showMenu = _this.showMenu.bind(_this);
 	        _this.loginClick = _this.loginClick.bind(_this);
+	        _this.rideWithShyftClick = _this.rideWithShyftClick.bind(_this);
 	        _this.handleLoginClose = _this.handleLoginClose.bind(_this);
 	        _this.handleWindowClose = _this.handleWindowClose.bind(_this);
 	        return _this;
@@ -27693,8 +27704,29 @@
 	    }, {
 	        key: 'loginClick',
 	        value: function loginClick() {
-	            this.setState({
-	                showLogin: true
+	            var self = this;
+	            (0, _dashboardService.isloggedin)().then(function (res) {
+	                if (res.data) {
+	                    return _reactRouter.hashHistory.push('/userdashboard');
+	                } else {
+	                    self.setState({
+	                        showLogin: true
+	                    });
+	                }
+	            });
+	        }
+	    }, {
+	        key: 'rideWithShyftClick',
+	        value: function rideWithShyftClick() {
+	            var self = this;
+	            (0, _dashboardService.isloggedin)().then(function (res) {
+	                if (res.data) {
+	                    return _reactRouter.hashHistory.push('/rides');
+	                } else {
+	                    self.setState({
+	                        showLogin: true
+	                    });
+	                }
 	            });
 	        }
 	    }, {
@@ -27723,7 +27755,16 @@
 	                    'div',
 	                    { id: 'navbarMobile', className: 'navbar-mobile' },
 	                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-menu-hamburger', onClick: this.showMenu }),
-	                    _react2.default.createElement('img', { src: 'img/LYFT_LOGO/SVG/white_logo.svg' })
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/' },
+	                        _react2.default.createElement('img', { id: 'navbarLogo', className: 'navbar-mobile-logo', src: 'img/LYFT_LOGO/SVG/white_logo.svg' })
+	                    ),
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/' },
+	                        _react2.default.createElement('img', { id: 'navbarLogo2', className: 'navbar-mobile-logo2', src: 'img/LYFT_LOGO/SVG/lyft_pixel.svg' })
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'div',
@@ -27788,8 +27829,8 @@
 	                                'div',
 	                                { id: 'navbar-ride-lyftbtn', className: 'navbar-ride-lyft' },
 	                                _react2.default.createElement(
-	                                    _reactRouter.Link,
-	                                    { to: '/rides', id: 'ride', className: 'hover-link-none' },
+	                                    'div',
+	                                    { id: 'ride', className: 'hover-link-none', onClick: this.rideWithShyftClick },
 	                                    'Ride with Shyft'
 	                                )
 	                            ),
@@ -27868,6 +27909,8 @@
 
 	var _reactRouter = __webpack_require__(172);
 
+	var _dashboardService = __webpack_require__(333);
+
 	__webpack_require__(241);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -27881,16 +27924,51 @@
 	var SideMenu = function (_React$Component) {
 	  _inherits(SideMenu, _React$Component);
 
-	  function SideMenu() {
+	  function SideMenu(props) {
 	    _classCallCheck(this, SideMenu);
 
-	    return _possibleConstructorReturn(this, (SideMenu.__proto__ || Object.getPrototypeOf(SideMenu)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (SideMenu.__proto__ || Object.getPrototypeOf(SideMenu)).call(this, props));
+
+	    _this.loginClick = _this.loginClick.bind(_this);
+	    _this.ridesClick = _this.ridesClick.bind(_this);
+	    _this.logout = _this.logout.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(SideMenu, [{
 	    key: 'handleClick',
 	    value: function handleClick() {
 	      this.props.hideMenu();
+	    }
+	  }, {
+	    key: 'loginClick',
+	    value: function loginClick() {
+	      (0, _dashboardService.isloggedin)().then(function (res) {
+	        if (res.data) {
+	          return _reactRouter.hashHistory.push('/userdashboard');
+	        } else {
+	          return _reactRouter.hashHistory.push('/login');
+	        }
+	      });
+	      this.handleClick();
+	    }
+	  }, {
+	    key: 'ridesClick',
+	    value: function ridesClick() {
+	      (0, _dashboardService.isloggedin)().then(function (res) {
+	        if (res.data) {
+	          return _reactRouter.hashHistory.push('/rides');
+	        } else {
+	          return _reactRouter.hashHistory.push('/login');
+	        }
+	      });
+	      this.handleClick();
+	    }
+	  }, {
+	    key: 'logout',
+	    value: function logout() {
+	      logoutFb();
+	      this.handleClick();
 	    }
 	  }, {
 	    key: 'render',
@@ -27915,8 +27993,8 @@
 	            'li',
 	            null,
 	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { onClick: this.handleClick.bind(this), to: '/login' },
+	              'div',
+	              { onClick: this.loginClick },
 	              'Sign Up'
 	            )
 	          ),
@@ -27924,8 +28002,8 @@
 	            'li',
 	            null,
 	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { onClick: this.handleClick.bind(this), to: '/login' },
+	              'div',
+	              { onClick: this.loginClick },
 	              'Login'
 	            )
 	          ),
@@ -27933,8 +28011,17 @@
 	            'li',
 	            null,
 	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { onClick: this.handleClick.bind(this), to: '/rides' },
+	              'div',
+	              { onClick: this.loginClick },
+	              'Dashboard'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              'div',
+	              { onClick: this.ridesClick },
 	              'Rides'
 	            )
 	          ),
@@ -28466,7 +28553,7 @@
 
 
 	// module
-	exports.push([module.id, ".footer {\n  background-color: #333447;\n  color:#F3F3F5;\n  line-height: 1.5;\n  font-size: 16px;\n  width:100%;\n  text-align: center;\n  padding-bottom: 1.5rem;\n  padding-top: 2rem;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 3rem;\n}\n\n.footer-links {\n  margin-bottom:4rem;\n}\n\n.footer ul{\n  list-style-type: none;\n  padding-left: 0;\n}\n\n.footer-links ul {\n  margin-top:2rem;\n}\n\n.footer-buttons {\n  margin-bottom:4rem;\n  margin-left: auto;\n}\n\n.footer a {\n  color: #F3F3F5;\n  font-weight: 100;\n}\n\n.footer a:hover {\n  color: #b30086;\n  text-decoration: underline;\n}\n\n.footer-title {\n  font-weight: bold;\n  font-size: 18px;\n  padding-bottom: 5px;\n}\n\n.footer-sign-up-button {\n  font-size:16px;\n  width:160px;\n  height:48px;\n  margin-bottom:10px;\n  background-color:#cc0099;\n  border-color:#cc0099;\n  border-radius:10px;\n}\n\n.footer .btn:hover {\n  color:#F3F3F5;\n}\n\n.footer-store img {\n  width:160px;\n  height:48px;\n  border-radius:10px;\n  margin-bottom: 10px;\n}\n\n.footer .border-t {\n  border-top: 1px solid #F3F3F5;\n  padding-top: 1.5rem;\n}\n\n.footer .x {\n  display:flex;\n  justify-content: center;\n}\n\n.footer .logo-circle {\n  height:50px;\n  width:50px;\n  border: #F3F3F5 1.5px solid;\n  border-radius:100%;\n  margin-right:10px;\n  margin-bottom:1.5rem;\n}\n\n.footer .justify-center {\n  justify-content:center;\n}\n\n.footer .xs-col {\n  flex: 0 0 100%;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n}\n\n.footer .justify-between {\n  justify-content: space-between;\n}\n\n.social-links {\n  margin-left: 0px;\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.footer .row {\n  display:flex;\n  flex-wrap: wrap;\n  margin-left: -0.9375rem;\n  margin-right: -0.9375rem;\n}\n\n\n\n@media(min-width: 544px) {\n    .footer {\n      text-align: left;\n    }\n\n  .footer .flex-sm {\n    display:flex;\n  }\n\n\n\n}\n\n@media (min-width: 768px) {\n  .footer {\n    padding-left: 4rem;\n    padding-right:4rem;\n  }\n\n\n  .footer .text-md-right {\n    text-align: right;\n  }\n\n  .footer .medium-col {\n    flex: 0 0 16.66667%;\n  }\n\n   .footer .med-6-col {\n    flex: 0 0 50%;\n  }\n\n  .footer .justify-between-md {\n    justify-content: space-between;\n  }\n  .footer-buttons {\n    margin-bottom: 4rem;\n    margin-right: 15px;\n    margin-left: auto;\n    margin-top: 35px;\n  }\n  .social-links {\n    margin-left: 20px;\n    margin-top: 60px;\n  }\n  .sitemap {\n    line-height: 2.4;\n  }\n}\n\n\n@media (min-width: 992px) {\n  .footer .lg-col {\n    flex: 0 0 33.33333%;\n  }\n}\n", ""]);
+	exports.push([module.id, ".footer {\n  background-color: #333447;\n  color:#F3F3F5;\n  line-height: 1.5;\n  font-size: 16px;\n  width:100%;\n  text-align: center;\n  padding-bottom: 1.5rem;\n  padding-top: 2rem;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.footer-links {\n  margin-bottom:4rem;\n}\n\n.footer ul{\n  list-style-type: none;\n  padding-left: 0;\n}\n\n.footer-links ul {\n  margin-top:2rem;\n}\n\n.footer-buttons {\n  margin-bottom:4rem;\n  margin-left: auto;\n}\n\n.footer a {\n  color: #F3F3F5;\n  font-weight: 100;\n}\n\n.footer a:hover {\n  color: #b30086;\n  text-decoration: underline;\n}\n\n.footer-title {\n  font-weight: bold;\n  font-size: 18px;\n  padding-bottom: 5px;\n}\n\n.footer-sign-up-button {\n  font-size:16px;\n  width:160px;\n  height:48px;\n  margin-bottom:10px;\n  background-color:#cc0099;\n  border-color:#cc0099;\n  border-radius:10px;\n}\n\n.footer .btn:hover {\n  color:#F3F3F5;\n}\n\n.footer-store img {\n  width:160px;\n  height:48px;\n  border-radius:10px;\n  margin-bottom: 10px;\n}\n\n.footer .border-t {\n  border-top: 1px solid #F3F3F5;\n  padding-top: 1.5rem;\n}\n\n.footer .x {\n  display:flex;\n  justify-content: center;\n}\n\n.footer .logo-circle {\n  height:50px;\n  width:50px;\n  border: #F3F3F5 1.5px solid;\n  border-radius:100%;\n  margin-right:10px;\n  margin-bottom:1.5rem;\n}\n\n.footer .justify-center {\n  justify-content:center;\n}\n\n.footer .xs-col {\n  flex: 0 0 100%;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n}\n\n.footer .justify-between {\n  justify-content: space-between;\n}\n\n.social-links {\n  margin-left: 0px;\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.footer .row {\n  display:flex;\n  flex-wrap: wrap;\n  margin-left: -0.9375rem;\n  margin-right: -0.9375rem;\n}\n\n\n\n@media(min-width: 544px) {\n    .footer {\n      text-align: left;\n    }\n\n  .footer .flex-sm {\n    display:flex;\n  }\n\n\n\n}\n\n@media (min-width: 768px) {\n  .footer {\n    padding-left: 4rem;\n    padding-right:4rem;\n  }\n\n\n  .footer .text-md-right {\n    text-align: right;\n  }\n\n  .footer .medium-col {\n    flex: 0 0 16.66667%;\n  }\n\n   .footer .med-6-col {\n    flex: 0 0 50%;\n  }\n\n  .footer .justify-between-md {\n    justify-content: space-between;\n  }\n  .footer-buttons {\n    margin-bottom: 4rem;\n    margin-right: 15px;\n    margin-left: auto;\n    margin-top: 35px;\n  }\n  .social-links {\n    margin-left: 20px;\n    margin-top: 60px;\n  }\n  .sitemap {\n    line-height: 2.4;\n  }\n}\n\n\n@media (min-width: 992px) {\n  .footer .lg-col {\n    flex: 0 0 33.33333%;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -28487,9 +28574,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(250);
+	var _reactRouter = __webpack_require__(172);
 
 	var _FaceBookService = __webpack_require__(252);
+
+	__webpack_require__(250);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28525,17 +28614,21 @@
 	    }, {
 	        key: 'handleWindowClose',
 	        value: function handleWindowClose() {
+	            var self = this;
 	            var loginContainer = document.getElementById('loginContainer');
 	            var loginForm = document.getElementById('loginForm');
 
 	            loginContainer.classList.remove('login-container-active');
 	            loginForm.classList.remove('login-form-container-active');
+	            setTimeout(function () {
+	                self.props.handleLoginClose();
+	            }, 500);
 	        }
 	    }, {
 	        key: 'handleLoginClose',
 	        value: function handleLoginClose() {
-	            var self = this;
 
+	            var self = this;
 	            var loginContainer = document.getElementById('loginContainer');
 	            var loginForm = document.getElementById('loginForm');
 
@@ -28553,7 +28646,7 @@
 	                null,
 	                _react2.default.createElement(
 	                    'div',
-	                    { onClick: this.handleWindowClose, id: 'loginContainer', className: 'login-container' },
+	                    { onClick: this.handleWindowClose.bind(this), id: 'loginContainer', className: 'login-container' },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { id: 'loginForm', className: 'login-form-container' },
@@ -28679,6 +28772,7 @@
 	  value: true
 	});
 	exports.getFb = getFb;
+	exports.logoutFb = logoutFb;
 
 	var _axios = __webpack_require__(253);
 
@@ -28692,7 +28786,12 @@
 	  });
 	  console.log(data);
 	}
-	console.log();
+
+	function logoutFb() {
+	  return _axios2.default.get('/logout').then(function (res) {
+	    return res;
+	  });
+	}
 
 /***/ },
 /* 253 */
@@ -30210,7 +30309,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    z-index: 10;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .3s ease;\n}\n\n.navbar-mobile img {\n    width: 42px;\n}\n\n.navbar-mobile-active {\n    background: white;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .2s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    transition: all .2s ease;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbar-scroll-active {\n    background: #fff;\n    color: #333;\n    box-shadow: 1px 1px 5px gray;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .2s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: all .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;\n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .2s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
+	exports.push([module.id, "\n\n\n/*/////////////////////////////////\n// MOBILE NAV BAR DISPLAYED WITH UNDER 768PX\n///////////////////////////////////*/\n\n.navbar-mobile {\n    position: fixed;\n    width:100%;\n    height: 60px;\n    display: flex;\n    align-items: center;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    z-index: 10;\n    transition: all .2s ease;\n}\n\n.navbar-mobile span {\n    width: 45%;\n    padding-left: 20px;\n    transition: all .2s ease;\n}\n\n.navbar-mobile-logo {\n    width: 42px;\n}\n\n.navbar-mobile-active {\n    background: white;\n    box-shadow: 1px 1px 5px grey;\n}\n\n.navbar-mobile-logo-hide {\n    display: none;\n}\n\n.navbar-mobile-logo2 {\n    display: none;\n}\n\n.navbar-mobile-logo2-active {\n    display: initial;\n    width: 42px;\n}\n\n\n/*////////////////////////////////////\n// ON HOVER DROPDOWN NAVBAR MENU\n///////////////////////////////////*/\n\n.navbar-hover-container {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 100px;\n    position: fixed;\n    top: -100px;\n    left: 0;\n    background: white;\n    border-top: 1px solid #d8dce6;\n    font-size: 1.85rem;\n    font-weight: 300;\n    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);\n    z-index: 5;\n    transition: top .2s ease;\n}\n\n.navbar-hover-container-active {\n    top: 80px;\n}\n\n.navbar-hover-options {\n    padding: 5px 15px;\n    border-right: 1px solid #d8dce6;\n    transition: all .2s ease;\n}\n\n.navbar-hover-options:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.border-hide {\n    border: none;\n}\n\n\n\n/*////////////////////////////////////\n// MAIN NAVBAR\n/////////////////////////////////////*/\n\n.navbar-container {\n    display: none;\n    position: fixed;\n    width: 100%;\n    color: #F3F3F5;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    z-index: 10;\n    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,0));\n    transition: all .2s ease;\n}\n\n.navbar-active {\n    display: flex;\n    position: fixed;\n    width: 100%;\n    font-size: 1.85rem;\n    align-items: center;\n    height: 80px;\n    font-weight: 300;\n    color: #333;\n    background: #fff;\n    z-index: 10;\n}\n\n.navbar-scroll-active {\n    background: #fff;\n    color: #333;\n    box-shadow: 1px 1px 5px gray;\n}\n\n.navbarlink-active {\n    color: #333;\n}\n\n.navbar-right,\n.navbar-left {\n    width: 50%;\n    display: flex;\n    align-items: center;\n}\n\n.navbar-right {\n    justify-content: flex-end;\n    transition: all .2s ease;\n}\n\n.navbar-right-active {\n    width: 38%;\n}\n\n.navbar-logo {\n    display: block;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo2 {\n    display: none;\n    width: 75px;\n    padding-left: 20px;\n    margin-right: 40px;\n}\n\n.navbar-logo-hide {\n    display: none;\n}\n\n.navbar-logo-show {\n    display: block;\n}\n\n.navbar-logo img,\n.navbar-logo2 img {\n    width: 60px;\n}\n\n.navbar-list {\n    padding: 0;\n    list-style-type: none;\n    margin: 0;\n}\n\n.navbar-list li {\n    margin-right: 25px;\n    display: inline-block;\n    transition: all .2s ease;\n}\n\n.navbar-list li:hover {\n    color: #ff00bf;\n    cursor: pointer;\n}\n\n.carrot {\n    top: 1px;\n    margin-left: 2px;\n    font-size: 12px;\n    transition: transform .2s ease;\n}\n\n.carrot-active {\n    color: #ff00bf;\n    transform: rotate(180deg);\n}\n\n.navbar-ride-lyft {\n    border: 1px solid #f3f3f5;\n    border-radius: 7px;\n    padding: 7px 15px;\n    margin-right: 30px;\n    letter-spacing: 2px;\n}\n\n.navbar-ride-lyft:hover {\n    background: rgba(255,255,255, 0.3);\n    cursor: pointer;\n}\n\n.navbar-ride-lyft a:hover {\n    color: #f3f3f5;\n}\n\n.navbar-ride-lyft-active {\n    border-color: #333;\n}\n\n.navbar-ride-lyft-active a:hover {\n    color: #ff00bf;\n}\n\n.navbar-ride-lyft-active:hover {\n    border-color: #ff00bf;\n    color: #ff00bf;\n}\n\n.navbar-login {\n    margin-right: 20px;\n}\n\n.navbar-login:hover {\n    cursor: pointer;\n    color: #ff00bf;\n}\n\n.navbar-signup {\n    position: absolute;\n    top: auto;\n    right: -125px;\n    color: #ff00bf;\n    font-weight: 600;\n    transition: all .2s ease;\n}\n\n.navbar-signup:hover {\n    cursor: pointer;\n}\n\n.navbar-signup-active {\n    right: 0px;\n    margin-right: 3%;\n}\n\n.navbar-pink-link {\n    color: #ff00bf;\n}\n\n.navbar-link-active {\n    color: #333;\n}\n\n\n\n/*/////////////////////////////\n// MEDIA QUERIES\n//////////////////////////////*/\n\n@media (min-width: 550px) {\n    .navbar-mobile span {\n        width: 48%;\n    }\n}\n\n@media (min-width:768px) {\n    .navbar-mobile {\n        display: none;\n    }\n    .navbar-container {\n        display: flex;\n    }\n}\n\n@media (min-width:992px) {\n    .navbar-ride-lyft {\n        padding: 8px 20px;\n        margin-right: 40px;\n    }\n\n    .navbar-login {\n        margin-right: 30px;\n    }\n\n    .navbar-list li {\n        margin-right: 40px;\n        display: inline-block;\n    }\n\n    .navbar-logo {\n        padding-left: 30px;\n        margin-right: 50px;\n    }\n\n    .navbar-signup-active {\n        margin-right: 4%;\n    }\n\n    .navbar-right-active {\n        width: 40%;\n    }\n}\n", ""]);
 
 	// exports
 
@@ -30239,11 +30338,11 @@
 
 	var _MainJumbotron2 = _interopRequireDefault(_MainJumbotron);
 
-	var _RidesInMinutes = __webpack_require__(284);
+	var _RidesInMinutes = __webpack_require__(285);
 
 	var _RidesInMinutes2 = _interopRequireDefault(_RidesInMinutes);
 
-	var _FourWaysToRide = __webpack_require__(287);
+	var _FourWaysToRide = __webpack_require__(288);
 
 	var _FourWaysToRide2 = _interopRequireDefault(_FourWaysToRide);
 
@@ -30302,7 +30401,7 @@
 
 	__webpack_require__(282);
 
-	var _BackgroundComponent = __webpack_require__(345);
+	var _BackgroundComponent = __webpack_require__(284);
 
 	var _BackgroundComponent2 = _interopRequireDefault(_BackgroundComponent);
 
@@ -30416,7 +30515,119 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(285);
+	var _reactRouter = __webpack_require__(172);
+
+	var _LoginComp = __webpack_require__(249);
+
+	var _LoginComp2 = _interopRequireDefault(_LoginComp);
+
+	__webpack_require__(282);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var test = 1;
+
+	var BackgroundComponent = function (_React$Component) {
+	  _inherits(BackgroundComponent, _React$Component);
+
+	  function BackgroundComponent(props) {
+	    _classCallCheck(this, BackgroundComponent);
+
+	    var _this = _possibleConstructorReturn(this, (BackgroundComponent.__proto__ || Object.getPrototypeOf(BackgroundComponent)).call(this, props));
+
+	    _this.state = {
+	      jumboBg: 'MainJumbotron-container bg1',
+	      showLogin: false
+	    };
+	    _this.signUpClick = _this.signUpClick.bind(_this);
+	    _this.handleLoginClose = _this.handleLoginClose.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(BackgroundComponent, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var self = this;
+	      this.timer = setInterval(function () {
+	        if (test === 7) {
+	          test = 0;
+	        }
+	        test++;
+	        self.setState({
+	          jumboBg: 'MainJumbotron-container bg' + test
+
+	        });
+	      }, 5000);
+	    }
+	  }, {
+	    key: 'signUpClick',
+	    value: function signUpClick() {
+	      this.setState({
+	        showLogin: true
+	      });
+	    }
+	  }, {
+	    key: 'handleLoginClose',
+	    value: function handleLoginClose() {
+	      this.setState({
+	        showLogin: false
+	      });
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      clearInterval(this.timer);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: this.state.jumboBg },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'MainJumbotron-title' },
+	          'Rides in Minutes'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { onClick: this.signUpClick, className: 'btn btn-primary MainJumbotron-btn' },
+	          'Sign Up Now'
+	        ),
+	        this.state.showLogin ? _react2.default.createElement(_LoginComp2.default, { handleLoginClose: this.handleLoginClose }) : null
+	      );
+	    }
+	  }]);
+
+	  return BackgroundComponent;
+	}(_react2.default.Component);
+
+	exports.default = BackgroundComponent;
+
+/***/ },
+/* 285 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(286);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30543,13 +30754,13 @@
 	exports.default = RidesInMinutes;
 
 /***/ },
-/* 285 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(286);
+	var content = __webpack_require__(287);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30569,7 +30780,7 @@
 	}
 
 /***/ },
-/* 286 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30583,7 +30794,7 @@
 
 
 /***/ },
-/* 287 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30598,7 +30809,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(288);
+	__webpack_require__(289);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30758,13 +30969,13 @@
 	exports.default = FourWaysToRide;
 
 /***/ },
-/* 288 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(289);
+	var content = __webpack_require__(290);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30784,7 +30995,7 @@
 	}
 
 /***/ },
-/* 289 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30792,13 +31003,13 @@
 
 
 	// module
-	exports.push([module.id, ".contentforfourways .container-fluid {\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n  box-sizing: inherit;\n}\n.contentforfourways .row {\n    display: -webkit-box;\n    display: flex;\n    flex-wrap: wrap;\n    margin-left: -0.9375rem;\n    margin-right: -0.9375rem;\n  }\n.contentforfourways  .m-b-xl {\n    margin-bottom: 2rem;\n  }\n  .contentforfourways .col-xs-12 {\n    -webkit-box-flex: 0;\n    flex: 0 0 100%;\n  }\n\n  .contentforfourways .container{\n    margin-left: auto;\n    margin-right: auto;\n    padding-left: 0.9375rem;\n    padding-right: 0.9375rem;\n  }\n\n\n  .contentforfourways .embedded_video{\n    box-sizing: inherit;\n  }\n\n.contentforfourways .full_width{\n  width: 100%;\n}\n\n.contentforfourways .pos_r{\n    position: relative;\n}\n.contentforfourways .radius-circle {\n    border-radius: 50%;\n}\n.contentforfourways .pos-ar {\n    position: absolute;\n}\n.contentforfourways .bg-pink {\n    background-color: #FF00BF;\n}\n.contentforfourways .play {\n    height: 7.4rem;\n    width: 7.4rem;\n    top: 45%;\n    left: 45%;\n    top: calc(50% - 3rem);\n    left: calc(50% - 3rem);\n}\n.contentforfourways .arrow {\n      width: 0px;\n    height: 0;\n    border-top: 1.7rem solid transparent;\n    border-bottom: 1.7rem solid transparent;\n    border-left: 3rem solid white;\n    top: calc(50% - 0.9rem);\n    left: calc(50% - 0.3rem);\n}\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  beg css for Four Ways to ride - start with the Title: four ways to ride\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n.contentforfourways .text-xs-center {\n  text-align: center !important;\n  font-size: 2.75rem;\n}\n\n\n.contentforfourways .content_for_fourWaysToRide {\n  display: block;\n  box-sizing: inherit;\n}\n\n.contentforfourways h2  {\n  font-size: 1.75rem;\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n.contentforfourways .align-group-center {\n    -webkit-box-align: center;\n    align-items: center;\n}\n.contentforfourways .flex {\n    display: -webkit-box;\n    display: flex;\n}\n.contentforfourways .flex-column {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    flex-direction: column;\n}\n.contentforfourways .m-y-l {\n    margin-top: 1.5rem;\n}\n.contentforfourways .text-xs-center {\n    text-align: center !important;\n}\n.contentforfourways .img {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-line.7a1567b4.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img2 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img3 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-plus.742070a1.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img4 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-premier.c0230045.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .text-thin {\n    font-weight: 300;\n}\n\n.contentforfourways .m-b-s {\n    margin-bottom: 0.5rem;\n}\n\n.contentforfourways h3 {\n    font-size: 2.1rem;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6 {\n    margin-top: 0;\n    margin-bottom: .5rem;\n}\n.contentforfourways .m-b-0 {\n    margin-bottom: 0;\n}\n.contentforfourways p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n    display: block;\n    -webkit-margin-before: 1em;\n    -webkit-margin-after: 1em;\n    -webkit-margin-start: 0px;\n    -webkit-margin-end: 0px;\n    font-weight: 300;\n    font-size: 1.5rem;\n}\n\n\n.contentforfourways a {\n    color: #FF00BF;\n    text-decoration: none;\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  first media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 544px) {\n\n  .contentforfourways .container{\n    max-width: 34rem;\n  }\n\n }\n\n /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n   2nd media query\n *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n\n@media (min-width: 768px) {\n\n    .contentforfourways  .container{\n        max-width: 64rem;\n      }\n\n      .contentforfourways .flex-column {\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n        flex-direction: row;\n      }\n\n    .contentforfourways .m-b-xl {\n      margin-bottom: 4rem;\n    }\n\n    .contentforfourways .flexer{\n      text-align: left !important;\n      text-align: left !important;\n      margin-left: 32px;\n    }\n\n    .contentforfourways .text-xs-center {\n    text-align: center !important;\n    font-size: 3.06rem;\n    }\n\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  third media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 992px) {\n\n  .contentforfourways .container{\n    max-width: 90rem;\n  }\n\n  .contentforfourways h2 {\n    margin-top: 20px\n  }\n\n  .contentforfourways h3 {\n    font-size: 3.1rem;\n    margin-top: 20px\n  }\n\n  .contentforfourways p {\n    font-weight: 100;\n    font-size: 2rem;\n    line-height: 24px;\n  }\n  \n  .contentforfourways .text-xs-center {\n  text-align: center !important;\n  font-size: 3.5rem;\n  margin-bottom: -10px;\n  }\n\n}\n", ""]);
+	exports.push([module.id, ".contentforfourways .container-fluid {\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: 0.9375rem;\n  padding-right: 0.9375rem;\n  box-sizing: inherit;\n}\n.contentforfourways .row {\n    display: -webkit-box;\n    display: flex;\n    flex-wrap: wrap;\n    margin-left: -0.9375rem;\n    margin-right: -0.9375rem;\n  }\n.contentforfourways  .m-b-xl {\n    margin-bottom: 2rem;\n\n  }\n  .contentforfourways .col-xs-12 {\n    -webkit-box-flex: 0;\n    flex: 0 0 100%;\n  }\n\n  .contentforfourways .container{\n    margin-left: auto;\n    margin-right: auto;\n    padding-left: 0.9375rem;\n    padding-right: 0.9375rem;\n  }\n\n.content_for_fourWaysToRide {\n    padding: 50px 0;\n}\n\n  .contentforfourways .embedded_video{\n    box-sizing: inherit;\n  }\n\n.contentforfourways .full_width{\n  width: 100%;\n}\n\n.contentforfourways .pos_r{\n    position: relative;\n}\n.contentforfourways .radius-circle {\n    border-radius: 50%;\n}\n.contentforfourways .pos-ar {\n    position: absolute;\n}\n.contentforfourways .bg-pink {\n    background-color: #FF00BF;\n}\n.contentforfourways .play {\n    height: 7.4rem;\n    width: 7.4rem;\n    top: 45%;\n    left: 45%;\n    top: calc(50% - 3rem);\n    left: calc(50% - 3rem);\n}\n.contentforfourways .arrow {\n      width: 0px;\n    height: 0;\n    border-top: 1.7rem solid transparent;\n    border-bottom: 1.7rem solid transparent;\n    border-left: 3rem solid white;\n    top: calc(50% - 0.9rem);\n    left: calc(50% - 0.3rem);\n}\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  beg css for Four Ways to ride - start with the Title: four ways to ride\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n.contentforfourways .text-xs-center {\n  text-align: center !important;\n  font-size: 2.75rem;\n}\n\n\n.contentforfourways .content_for_fourWaysToRide {\n  display: block;\n  box-sizing: inherit;\n}\n\n.contentforfourways h2  {\n  font-size: 1.75rem;\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n.contentforfourways .align-group-center {\n    -webkit-box-align: center;\n    align-items: center;\n}\n.contentforfourways .flex {\n    display: -webkit-box;\n    display: flex;\n}\n.contentforfourways .flex-column {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    flex-direction: column;\n}\n.contentforfourways .m-y-l {\n    margin-top: 1.5rem;\n}\n.contentforfourways .text-xs-center {\n    text-align: center !important;\n}\n.contentforfourways .img {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-line.7a1567b4.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img2 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-classic.46d6e930.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img3 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-plus.742070a1.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .img4 {\n    background-image: url(https://cdn.lyft.net/brochure/images/lyft-premier.c0230045.svg);\n    height: 8rem;\n    width: 11rem;\n    background-size: contain;\n    background-position: center;\n    background-repeat: no-repeat;\n    margin-bottom: 1rem;\n    flex-shrink: 0;\n    box-sizing: inherit;\n}\n\n.contentforfourways .text-thin {\n    font-weight: 300;\n}\n\n.contentforfourways .m-b-s {\n    margin-bottom: 0.5rem;\n}\n\n.contentforfourways h3 {\n    font-size: 2.1rem;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {\n    margin-bottom: 1rem;\n    font-family: inherit;\n    font-weight: 700;\n    line-height: 1.1;\n    color: inherit;\n}\n\n.contentforfourways h1, h2, h3, h4, h5, h6 {\n    margin-top: 0;\n    margin-bottom: .5rem;\n}\n.contentforfourways .m-b-0 {\n    margin-bottom: 0;\n}\n.contentforfourways p {\n    margin-top: 0;\n    margin-bottom: 1rem;\n    display: block;\n    -webkit-margin-before: 1em;\n    -webkit-margin-after: 1em;\n    -webkit-margin-start: 0px;\n    -webkit-margin-end: 0px;\n    font-weight: 300;\n    font-size: 1.5rem;\n}\n\n\n.contentforfourways a {\n    color: #FF00BF;\n    text-decoration: none;\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  first media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 544px) {\n\n  .contentforfourways .container{\n    max-width: 34rem;\n  }\n\n }\n\n /**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n   2nd media query\n *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n\n@media (min-width: 768px) {\n\n    .contentforfourways  .container{\n        max-width: 64rem;\n      }\n\n      .contentforfourways .flex-column {\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n        flex-direction: row;\n      }\n\n    .contentforfourways .m-b-xl {\n      margin-bottom: 4rem;\n    }\n\n    .contentforfourways .flexer{\n      text-align: left !important;\n      text-align: left !important;\n      margin-left: 32px;\n    }\n\n    .contentforfourways .text-xs-center {\n    text-align: center !important;\n    font-size: 3.06rem;\n    }\n\n}\n\n/**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\n  third media query\n*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/\n@media (min-width: 992px) {\n\n  .contentforfourways .container{\n    max-width: 90rem;\n  }\n\n  .contentforfourways h2 {\n    margin-top: 20px\n  }\n\n  .contentforfourways h3 {\n    font-size: 3.1rem;\n    margin-top: 20px\n  }\n\n  .contentforfourways p {\n    font-weight: 100;\n    font-size: 2rem;\n    line-height: 24px;\n  }\n\n  .contentforfourways .text-xs-center {\n  text-align: center !important;\n  font-size: 3.5rem;\n  margin-bottom: -10px;\n  }\n\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 290 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30817,17 +31028,17 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	__webpack_require__(291);
+	__webpack_require__(292);
 
-	var _CitiesJumbotron = __webpack_require__(293);
+	var _CitiesJumbotron = __webpack_require__(294);
 
 	var _CitiesJumbotron2 = _interopRequireDefault(_CitiesJumbotron);
 
-	var _CityBottomBanner = __webpack_require__(299);
+	var _CityBottomBanner = __webpack_require__(300);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesListComp = __webpack_require__(302);
+	var _CitiesListComp = __webpack_require__(303);
 
 	var _CitiesListComp2 = _interopRequireDefault(_CitiesListComp);
 
@@ -30869,13 +31080,13 @@
 	exports.default = CitiesComp;
 
 /***/ },
-/* 291 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(292);
+	var content = __webpack_require__(293);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -30895,7 +31106,7 @@
 	}
 
 /***/ },
-/* 292 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -30909,7 +31120,7 @@
 
 
 /***/ },
-/* 293 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30924,15 +31135,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactGeosuggestPlus = __webpack_require__(294);
+	var _reactGeosuggestPlus = __webpack_require__(295);
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _citiesListService = __webpack_require__(296);
+	var _citiesListService = __webpack_require__(297);
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(297);
+	__webpack_require__(298);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31048,7 +31259,7 @@
 	exports.default = CitiesJumbotron;
 
 /***/ },
-/* 294 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global google */
@@ -31073,7 +31284,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _GeosuggestItem = __webpack_require__(295);
+	var _GeosuggestItem = __webpack_require__(296);
 
 	var _GeosuggestItem2 = _interopRequireDefault(_GeosuggestItem);
 
@@ -31723,7 +31934,7 @@
 
 
 /***/ },
-/* 295 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
@@ -31853,7 +32064,7 @@
 
 
 /***/ },
-/* 296 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31895,13 +32106,13 @@
 	}
 
 /***/ },
-/* 297 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(298);
+	var content = __webpack_require__(299);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -31921,7 +32132,7 @@
 	}
 
 /***/ },
-/* 298 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -31935,7 +32146,7 @@
 
 
 /***/ },
-/* 299 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31952,7 +32163,7 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(300);
+	__webpack_require__(301);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32015,13 +32226,13 @@
 	exports.default = CityBottomBanner;
 
 /***/ },
-/* 300 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(301);
+	var content = __webpack_require__(302);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32041,7 +32252,7 @@
 	}
 
 /***/ },
-/* 301 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32055,7 +32266,7 @@
 
 
 /***/ },
-/* 302 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32072,9 +32283,9 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	var _citiesListService = __webpack_require__(296);
+	var _citiesListService = __webpack_require__(297);
 
-	__webpack_require__(303);
+	__webpack_require__(304);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32166,13 +32377,13 @@
 	exports.default = CitiesList;
 
 /***/ },
-/* 303 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(304);
+	var content = __webpack_require__(305);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32192,7 +32403,7 @@
 	}
 
 /***/ },
-/* 304 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32206,7 +32417,7 @@
 
 
 /***/ },
-/* 305 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32221,13 +32432,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(306);
+	__webpack_require__(307);
 
-	var _GetGoogleMap = __webpack_require__(308);
+	var _GetGoogleMap = __webpack_require__(309);
 
-	var _MapComp = __webpack_require__(309);
+	var _MapComp = __webpack_require__(310);
 
 	var _MapComp2 = _interopRequireDefault(_MapComp);
+
+	var _pickupFunctions = __webpack_require__(348);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32256,26 +32469,32 @@
 	    value: function componentDidMount() {
 	      var self = this;
 	      (0, _GetGoogleMap.getLocation)().then(function (res) {
-	        (0, _GetGoogleMap.getNearbyDrivers)(res.data.location).then(function (response) {
-	          if (response.data.nearby_drivers.length >= 1) {
-	            self.setState({
-	              initialCenter: {
-	                lat: res.data.location.lat,
-	                lng: res.data.location.lng
-	              },
+	        (0, _pickupFunctions.getPickup)(res.data.location).then(function (resp) {
+	          var address = resp.data.results[0].formatted_address;
 
-	              nearbyDrivers: response.data.nearby_drivers[0].drivers.map(function (value) {
-	                return value.locations[0];
-	              })
-	            });
-	          } else {
-	            self.setState({
-	              initialCenter: {
-	                lat: res.data.location.lat,
-	                lng: res.data.location.lng
-	              }
-	            });
-	          }
+	          (0, _GetGoogleMap.getNearbyDrivers)(res.data.location).then(function (response) {
+	            if (response.data.nearby_drivers.length >= 1) {
+	              self.setState({
+	                initialCenter: {
+	                  lat: res.data.location.lat,
+	                  lng: res.data.location.lng
+	                },
+	                address: address.substring(0, address.length - 15),
+
+	                nearbyDrivers: response.data.nearby_drivers[0].drivers.map(function (value) {
+	                  return value.locations[0];
+	                })
+	              });
+	            } else {
+	              self.setState({
+	                initialCenter: {
+	                  lat: res.data.location.lat,
+	                  lng: res.data.location.lng
+	                },
+	                address: address.substring(0, address.length - 15)
+	              });
+	            }
+	          });
 	        });
 	      });
 	    }
@@ -32285,7 +32504,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_MapComp2.default, { initialCenter: this.state.initialCenter, nearbyDrivers: this.state.nearbyDrivers })
+	        _react2.default.createElement(_MapComp2.default, { initialCenter: this.state, nearbyDrivers: this.state.nearbyDrivers })
 	      );
 	    }
 	  }]);
@@ -32298,13 +32517,13 @@
 	exports.default = RidesComp;
 
 /***/ },
-/* 306 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(307);
+	var content = __webpack_require__(308);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32324,7 +32543,7 @@
 	}
 
 /***/ },
-/* 307 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32338,7 +32557,7 @@
 
 
 /***/ },
-/* 308 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32360,7 +32579,7 @@
 	}
 
 	var lyftToken = {
-	  headers: { 'Authorization': 'Bearer "gAAAAABYG6e0ofqwWbOOjz6z1wAsnm809QjRZKziHvLlilzJ5U82hSGRdeBhZirSgc9prOkXID3IV_2cVbZ0OxUPy_wdFYoEwRroPYG6gKBEPCeJGOsErokJ3dFZhfsnHyZuDkvVNKSlkJUTwVKUZBQ9UwZAmGv2O8Uh1yT2qHLuK5z5-ZRrNvhbnk1t25SfuQHS85aoIpOGxMN4OjfbM5A1IaWsTBTN6Q=="'
+	  headers: { 'Authorization': 'Bearer "gAAAAABYI6xdH98dZGYCE5DFif3Am6VI8h1KIMHmhWRoxA1NenpOUF1v1Hea9oyudvzrYi8SKn7JuE657M5qWikbPpqYumH8_i1qldXEOo2Y6C04cASNVZkFFN-P_Gih3v1yaOsstsEIazsGsaRCmm28Ion9JLww_l70xejfSBzn9WcBKdJU49DgLk7_6u_TIaLF8DN9MEhXXSmceSrJM4tM2ufp5iH2JA=="'
 	  }
 	};
 
@@ -32369,7 +32588,7 @@
 	}
 
 /***/ },
-/* 309 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32388,33 +32607,33 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _SetPickup = __webpack_require__(310);
+	var _SetPickup = __webpack_require__(311);
 
 	var _SetPickup2 = _interopRequireDefault(_SetPickup);
 
-	var _Request = __webpack_require__(313);
+	var _Request = __webpack_require__(314);
 
 	var _Request2 = _interopRequireDefault(_Request);
 
-	var _Cancel = __webpack_require__(316);
+	var _Cancel = __webpack_require__(317);
 
 	var _Cancel2 = _interopRequireDefault(_Cancel);
 
-	var _StartRide = __webpack_require__(319);
+	var _StartRide = __webpack_require__(320);
 
 	var _StartRide2 = _interopRequireDefault(_StartRide);
 
-	var _RateRide = __webpack_require__(322);
+	var _RateRide = __webpack_require__(323);
 
 	var _RateRide2 = _interopRequireDefault(_RateRide);
 
-	var _Payment = __webpack_require__(325);
+	var _Payment = __webpack_require__(326);
 
 	var _Payment2 = _interopRequireDefault(_Payment);
 
-	__webpack_require__(328);
+	__webpack_require__(329);
 
-	var _GetGoogleMap = __webpack_require__(308);
+	var _GetGoogleMap = __webpack_require__(309);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32498,8 +32717,8 @@
 	        'div',
 	        { className: 'map' },
 	        _react2.default.createElement('div', { className: 'map-page', ref: 'mapCanvas' }),
-	        this.state.showPickup ? _react2.default.createElement(_SetPickup2.default, { changeToRequest: this.changeToRequest }) : null,
-	        this.state.showRequest ? _react2.default.createElement(_Request2.default, { changeToCancel: this.changeToCancel }) : null,
+	        this.state.showPickup ? _react2.default.createElement(_SetPickup2.default, { address: this.props.initialCenter.address, changeToRequest: this.changeToRequest }) : null,
+	        this.state.showRequest ? _react2.default.createElement(_Request2.default, { address: this.props.initialCenter, changeToCancel: this.changeToCancel }) : null,
 	        this.state.showCancel ? _react2.default.createElement(_Cancel2.default, { changeToStart: this.changeToStart }) : null,
 	        this.state.showStart ? _react2.default.createElement(_StartRide2.default, { changeToRate: this.changeToRate }) : null,
 	        this.state.showRate ? _react2.default.createElement(_RateRide2.default, { changeToPayment: this.changeToPayment }) : null,
@@ -32542,7 +32761,7 @@
 	  }, {
 	    key: 'mapCenter',
 	    value: function mapCenter() {
-	      return new google.maps.LatLng(this.props.initialCenter.lat, this.props.initialCenter.lng);
+	      return new google.maps.LatLng(this.props.initialCenter.initialCenter.lat, this.props.initialCenter.initialCenter.lng);
 	    }
 	  }, {
 	    key: 'createMarker',
@@ -32579,7 +32798,7 @@
 	exports.default = MapComp;
 
 /***/ },
-/* 310 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32594,7 +32813,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(311);
+	__webpack_require__(312);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32607,10 +32826,14 @@
 	var SetPickup = function (_React$Component) {
 	  _inherits(SetPickup, _React$Component);
 
-	  function SetPickup() {
+	  function SetPickup(props) {
 	    _classCallCheck(this, SetPickup);
 
-	    return _possibleConstructorReturn(this, (SetPickup.__proto__ || Object.getPrototypeOf(SetPickup)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (SetPickup.__proto__ || Object.getPrototypeOf(SetPickup)).call(this, props));
+
+	    _this.state = {};
+
+	    return _this;
 	  }
 
 	  _createClass(SetPickup, [{
@@ -32636,11 +32859,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'main-wrapper-for-all-content' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'inner-container-for-current-adrress' },
-	                  '300 South Provo Utah'
-	                ),
+	                _react2.default.createElement('input', { type: 'text', className: 'inner-container-for-current-adrress', value: this.props.address }),
 	                _react2.default.createElement(
 	                  'div',
 	                  { className: 'Pickup-location-container-for-current-adrress' },
@@ -32667,13 +32886,13 @@
 	exports.default = SetPickup;
 
 /***/ },
-/* 311 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(312);
+	var content = __webpack_require__(313);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32693,7 +32912,7 @@
 	}
 
 /***/ },
-/* 312 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32701,13 +32920,13 @@
 
 
 	// module
-	exports.push([module.id, ".SetPickUp .request {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin: auto;\n  height: 16vh;\n  width: 40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top: 80vh;\n  left: 0;\n  right: 0;\n  margin-left: auto;\n  margin-right: auto;\n  margin-left: 5px;\n}\n\n.SetPickUp .the-estimate-box {\n  height: 37%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.SetPickUp .outer-container-for-current-adrress {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n.SetPickUp .arrow-inside-of-small-div{\n  height: 30px;\n  width: 30px;\n  margin-right: 12px;\n  margin-left: 7px;\n  display: flex;\n  justify-content: center;\n  /* align-items: center; */\n  /* flex-direction: column; */\n  font-size: 27px;\n  border-radius: 17px;\n  border: solid 1px black;\n  padding-right: 2px;\n}\n\n.SetPickUp .main-wrapper-for-all-content{\n  display: flex;\n  flex-direction: column;\n  /* align-items: center; */\n  justify-content: flex-start;\n  align-items: flex-start;\n}\n\n.SetPickUp .inner-container-for-current-adrress {\n  font-size: 16px;\n}\n\n.SetPickUp .Pickup-location-container-for-current-adrress {\n  font-size: 10px;\n}\n\n.SetPickUp .SetPickup_btn {\n  border-radius: 20px;\n  height: 37%;\n  width:90%;\n  background-color:#3D0780;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 20px;\n  color: white;\n}\n", ""]);
+	exports.push([module.id, ".SetPickUp .request {\n  position: absolute;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  margin: auto;\n  height: 16vh;\n  width: 40%;\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 28px;\n  top: 80vh;\n  left: 0;\n  right: 0;\n  margin-left: auto;\n  margin-right: auto;\n  margin-left: 5px;\n}\n\n.SetPickUp .the-estimate-box {\n  height: 37%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.SetPickUp input {\n  border:none;\n  width:100%\n}\n\n.SetPickUp .outer-container-for-current-adrress {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n.SetPickUp .arrow-inside-of-small-div{\n  height: 30px;\n  width: 30px;\n  margin-right: 12px;\n  margin-left: 7px;\n  display: flex;\n  justify-content: center;\n  /* align-items: center; */\n  /* flex-direction: column; */\n  font-size: 27px;\n  border-radius: 17px;\n  border: solid 1px black;\n  padding-right: 2px;\n}\n\n.SetPickUp .main-wrapper-for-all-content{\n  display: flex;\n  flex-direction: column;\n  /* align-items: center; */\n  justify-content: flex-start;\n  align-items: flex-start;\n}\n\n.SetPickUp .inner-container-for-current-adrress {\n  font-size: 16px;\n  width:100%\n}\n\n.SetPickUp .Pickup-location-container-for-current-adrress {\n  font-size: 10px;\n}\n\n.SetPickUp .SetPickup_btn {\n  border-radius: 20px;\n  height: 37%;\n  width:90%;\n  background-color:#3D0780;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 20px;\n  color: white;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 313 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32722,7 +32941,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(314);
+	var _reactGeosuggestPlus = __webpack_require__(295);
+
+	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
+
+	__webpack_require__(315);
+
+	var _requestFunctions = __webpack_require__(352);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32735,13 +32960,36 @@
 	var Request = function (_React$Component) {
 	  _inherits(Request, _React$Component);
 
-	  function Request() {
+	  function Request(props) {
 	    _classCallCheck(this, Request);
 
-	    return _possibleConstructorReturn(this, (Request.__proto__ || Object.getPrototypeOf(Request)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Request.__proto__ || Object.getPrototypeOf(Request)).call(this, props));
+
+	    _this.onClick = _this.onClick.bind(_this);
+	    _this.onSuggestSelectAddress = _this.onSuggestSelectAddress.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(Request, [{
+	    key: 'onSuggestSelectAddress',
+	    value: function onSuggestSelectAddress(address) {
+	      this.destinLat = address.location.lat;
+	      this.destinLng = address.location.lng;
+	    }
+	  }, {
+	    key: 'onClick',
+	    value: function onClick(obj) {
+	      var dataToSend = {
+	        originlat: this.props.address.initialCenter.lat,
+	        originlong: this.props.address.initialCenter.lng,
+	        destlat: this.destinLat,
+	        destlong: this.destinLng,
+	        driver_id: Math.floor(Math.random() * 6 + 1)
+	      };
+	      (0, _requestFunctions.createRide)(dataToSend);
+	      this.props.changeToCancel();
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -32812,19 +33060,19 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'address-input origin-address' },
-	                _react2.default.createElement('input', { type: 'text', placeholder: 'Pickup Location' })
+	                _react2.default.createElement('input', { type: 'text', defaultValue: this.props.address.address })
 	              ),
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'address-input dest-address' },
-	                _react2.default.createElement('input', { type: 'text', placeholder: 'Add Destination' })
+	                _react2.default.createElement(_reactGeosuggestPlus2.default, { onSuggestSelect: this.onSuggestSelectAddress, type: 'text', placeholder: 'Add Destination' })
 	              )
 	            )
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'request-shyft-btn btn', onClick: this.props.changeToCancel },
+	          { className: 'request-shyft-btn btn', onClick: this.onClick },
 	          'Request Ride'
 	        )
 	      );
@@ -32837,13 +33085,13 @@
 	exports.default = Request;
 
 /***/ },
-/* 314 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(315);
+	var content = __webpack_require__(316);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -32863,7 +33111,7 @@
 	}
 
 /***/ },
-/* 315 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -32877,7 +33125,7 @@
 
 
 /***/ },
-/* 316 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32892,7 +33140,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(317);
+	var _reactRouter = __webpack_require__(172);
+
+	__webpack_require__(318);
+
+	var _cancelFunctions = __webpack_require__(353);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32917,6 +33169,13 @@
 	      this.props.changeToStart();
 	    }
 	  }, {
+	    key: 'onCancel',
+	    value: function onCancel() {
+	      (0, _cancelFunctions.getRideId)().then(function (res) {
+	        (0, _cancelFunctions.cancelRide)(res.data[0].rideid);
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -32938,40 +33197,16 @@
 	              null,
 	              'Awesome! Your Shyft ride will be here in approximately 2 minutes!'
 	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'test-flex' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'input-section' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'color-dest-circles' },
-	                _react2.default.createElement('div', { className: 'blue-circle' }),
-	                _react2.default.createElement('div', { className: 'pink-circle' })
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'inputs-stacked' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'address-input origin-address' },
-	                _react2.default.createElement('input', { type: 'text', placeholder: 'Pickup Location' })
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'address-input dest-address' },
-	                _react2.default.createElement('input', { type: 'text', placeholder: 'Add Destination' })
-	              )
-	            )
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'cancel-shyft-btn btn' },
-	          'Cancel Ride'
+	          { className: 'cancel-shyft-btn btn', onClick: this.onCancel },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            'Cancel Ride'
+	          )
 	        )
 	      );
 	    }
@@ -32983,13 +33218,13 @@
 	exports.default = Cancel;
 
 /***/ },
-/* 317 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(318);
+	var content = __webpack_require__(319);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33009,7 +33244,7 @@
 	}
 
 /***/ },
-/* 318 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33023,7 +33258,7 @@
 
 
 /***/ },
-/* 319 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33038,7 +33273,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(320);
+	var _reactRouter = __webpack_require__(172);
+
+	__webpack_require__(321);
+
+	var _cancelFunctions = __webpack_require__(353);
+
+	var _startFunctions = __webpack_require__(354);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33051,13 +33292,38 @@
 	var StartRide = function (_React$Component) {
 	  _inherits(StartRide, _React$Component);
 
-	  function StartRide() {
+	  function StartRide(props) {
 	    _classCallCheck(this, StartRide);
 
-	    return _possibleConstructorReturn(this, (StartRide.__proto__ || Object.getPrototypeOf(StartRide)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (StartRide.__proto__ || Object.getPrototypeOf(StartRide)).call(this, props));
+
+	    _this.onClickConfirm = _this.onClickConfirm.bind(_this);
+	    _this.onClickCancel = _this.onClickCancel.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(StartRide, [{
+	    key: 'onClickCancel',
+	    value: function onClickCancel() {
+	      (0, _cancelFunctions.getRideId)().then(function (res) {
+	        (0, _cancelFunctions.cancelRide)(res.data[0].rideid);
+	      });
+	    }
+	  }, {
+	    key: 'onClickConfirm',
+	    value: function onClickConfirm() {
+	      var self = this;
+	      (0, _cancelFunctions.getRideId)().then(function (res) {
+	        var rideid = res.data[0].rideid;
+	        var startObj = {
+	          origindate: new Date().getTime()
+	        };
+
+	        (0, _startFunctions.startRide)(rideid, startObj);
+	        self.props.changeToRate();
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -33083,7 +33349,7 @@
 	                _react2.default.createElement(
 	                  'p',
 	                  { className: 'ride-type-title' },
-	                  'Lyft'
+	                  'Shyft'
 	                )
 	              )
 	            ),
@@ -33093,19 +33359,23 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'Your_ride_is_ready_inner' },
-	                'Your Ride is Ready!'
+	                'Your ride has arrived!'
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'confirm-Your-ride_button', onClick: this.props.changeToRate },
-	            'Confirm Your Ride'
+	            { className: 'confirm-Your-ride_button', onClick: this.onClickConfirm },
+	            'Confirm and Start Ride'
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'request-shyft-btn btn' },
-	            'Cancel'
+	            { className: 'request-shyft-btn btn', onClick: this.onClickCancel },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              'Cancel'
+	            )
 	          )
 	        )
 	      );
@@ -33118,13 +33388,13 @@
 	exports.default = StartRide;
 
 /***/ },
-/* 320 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(321);
+	var content = __webpack_require__(322);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33144,7 +33414,7 @@
 	}
 
 /***/ },
-/* 321 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33158,7 +33428,7 @@
 
 
 /***/ },
-/* 322 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33173,7 +33443,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(323);
+	__webpack_require__(324);
+
+	var _cancelFunctions = __webpack_require__(353);
+
+	var _rateFunctions = __webpack_require__(355);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33186,13 +33460,38 @@
 	var RateRide = function (_React$Component) {
 	  _inherits(RateRide, _React$Component);
 
-	  function RateRide() {
+	  function RateRide(props) {
 	    _classCallCheck(this, RateRide);
 
-	    return _possibleConstructorReturn(this, (RateRide.__proto__ || Object.getPrototypeOf(RateRide)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (RateRide.__proto__ || Object.getPrototypeOf(RateRide)).call(this, props));
+
+	    _this.onClickStar = _this.onClickStar.bind(_this);
+	    _this.onClickNext = _this.onClickNext.bind(_this);
+
+	    return _this;
 	  }
 
 	  _createClass(RateRide, [{
+	    key: 'onClickStar',
+	    value: function onClickStar(e) {
+	      this.rating = e.target.id;
+	      document.getElementById(e.target.id).classList.add('colored-star');
+	    }
+	  }, {
+	    key: 'onClickNext',
+	    value: function onClickNext() {
+	      var self = this;
+	      (0, _cancelFunctions.getRideId)().then(function (res) {
+	        var objToSend = {
+	          rideid: res.data[0].rideid,
+	          rating: self.rating,
+	          destdate: new Date().getTime()
+	        };
+	        (0, _rateFunctions.rateRide)(objToSend);
+	        self.props.changeToPayment();
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -33229,7 +33528,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'You-have-arrived' },
-	                'You Have Arrived!'
+	                'You have arrived at your destination.'
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -33247,27 +33546,27 @@
 	                    { className: 'rating' },
 	                    _react2.default.createElement(
 	                      'span',
-	                      null,
+	                      { onClick: this.onClickStar, id: '1' },
 	                      '\u2606'
 	                    ),
 	                    _react2.default.createElement(
 	                      'span',
-	                      null,
+	                      { onClick: this.onClickStar, id: '2' },
 	                      '\u2606'
 	                    ),
 	                    _react2.default.createElement(
 	                      'span',
-	                      null,
+	                      { onClick: this.onClickStar, id: '3' },
 	                      '\u2606'
 	                    ),
 	                    _react2.default.createElement(
 	                      'span',
-	                      null,
+	                      { onClick: this.onClickStar, id: '4' },
 	                      '\u2606'
 	                    ),
 	                    _react2.default.createElement(
 	                      'span',
-	                      null,
+	                      { onClick: this.onClickStar, id: '5' },
 	                      '\u2606'
 	                    )
 	                  )
@@ -33277,7 +33576,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'request-shyft-btn btn', onClick: this.props.changeToPayment },
+	            { className: 'request-shyft-btn btn', onClick: this.onClickNext },
 	            'Next'
 	          )
 	        )
@@ -33291,13 +33590,13 @@
 	exports.default = RateRide;
 
 /***/ },
-/* 323 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(324);
+	var content = __webpack_require__(325);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33317,7 +33616,7 @@
 	}
 
 /***/ },
-/* 324 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33325,13 +33624,13 @@
 
 
 	// module
-	exports.push([module.id, ".RateRide .request {\n    position: absolute;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-direction: column;\n    margin: auto;\n    height: 40vh;\n    width: 40%;\n    background-color: rgba(0, 0, 0, 0.3);\n    border-radius: 28px;\n    top: 58vh;\n    left: 0;\n    right: 0;\n    margin-left: auto;\n    margin-right: auto;\n    top: 58%;\n    margin-left: 5px;\n}\n\n.RateRide .car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.RateRide .car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.RateRide .ride-type-section p{\n  margin:0px;\n}\n\n.RateRide .ride-type-desc {\n  font-size: 12px;\n}\n\n.RateRide .the-estimate-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.RateRide .You-have-arrived {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  width:100%;\n  font-size: 24px;\n\n}\n\n.RateRide .Rate-Your-Driver-Box {\n  /* text-align: center; */\n  display: flex;\n  justify-content: center;\n  font-size: 15px;\n  /* padding-bottom: 15px; */\n  width: 100%;\n  font-size: 24px;\n  /*background-color: black;*/\n  height: 32%;\n\n}\n.RateRide .rate-your-driver-inner {\n  /* text-align: center; */\n  display: flex;\n  justify-content: center;\n  font-size: 15px;\n  /* padding-bottom: 15px; */\n  width: 100%;\n  font-size: 25px;\n  /*background-color: green;*/\n  height: 100%;\n  align-items: flex-start;\n  flex-direction: column;\n  align-items: center;\n\n}\n\n\n.RateRide .request-shyft-btn {\n    border-radius: 20px;\n    height: 20%;\n    width: 90%;\n    background-color: #3D0981;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    border: none;\n    color: white;\n    font-size: 20px;\n}\n", ""]);
+	exports.push([module.id, ".RateRide .request {\n    position: absolute;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-direction: column;\n    margin: auto;\n    height: 40vh;\n    width: 40%;\n    background-color: rgba(0, 0, 0, 0.3);\n    border-radius: 28px;\n    top: 58vh;\n    left: 0;\n    right: 0;\n    margin-left: auto;\n    margin-right: auto;\n    top: 58%;\n    margin-left: 5px;\n}\n\n.RateRide .car-type-div {\n  display:flex;\n  justify-content: center;\n  border-bottom: 0.5px solid grey;\n  width:100%;\n}\n\n.RateRide .car-type-div img {\n  height:50px;\n  width:70px;\n}\n\n.ride-type-section{\n  display:flex;\n  margin-left:6px;\n  flex-direction: column;\n}\n\n.RateRide .ride-type-section p{\n  margin:0px;\n}\n\n.RateRide .ride-type-desc {\n  font-size: 12px;\n}\n\n.RateRide .the-estimate-box {\n  height:70%;\n  width:90%;\n  background-color: white;\n  border-radius: 20px;\n  margin-bottom:10px;\n  display:flex;\n  flex-direction: column;\n  justify-content: space-around;\n\n}\n\n.RateRide .You-have-arrived {\n  text-align: center;\n  display:flex;\n  justify-content: center;\n  font-size:15px;\n  padding-bottom: 15px;\n  width:100%;\n  font-size: 24px;\n\n}\n\n.RateRide .Rate-Your-Driver-Box {\n  /* text-align: center; */\n  display: flex;\n  justify-content: center;\n  font-size: 15px;\n  /* padding-bottom: 15px; */\n  width: 100%;\n  font-size: 24px;\n  /*background-color: black;*/\n  height: 32%;\n\n}\n.RateRide .rate-your-driver-inner {\n  /* text-align: center; */\n  display: flex;\n  justify-content: center;\n  font-size: 15px;\n  /* padding-bottom: 15px; */\n  width: 100%;\n  font-size: 25px;\n  /*background-color: green;*/\n  height: 100%;\n  align-items: flex-start;\n  flex-direction: column;\n  align-items: center;\n\n}\n\n\n.RateRide .request-shyft-btn {\n    border-radius: 20px;\n    height: 20%;\n    width: 90%;\n    background-color: #3D0981;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    border: none;\n    color: white;\n    font-size: 20px;\n}\n\n.colored-star{\n  color:#f7cf57;\n\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 325 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33348,7 +33647,7 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	__webpack_require__(326);
+	__webpack_require__(327);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33361,13 +33660,21 @@
 	var Payment = function (_React$Component) {
 	  _inherits(Payment, _React$Component);
 
-	  function Payment() {
+	  function Payment(props) {
 	    _classCallCheck(this, Payment);
 
-	    return _possibleConstructorReturn(this, (Payment.__proto__ || Object.getPrototypeOf(Payment)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Payment.__proto__ || Object.getPrototypeOf(Payment)).call(this, props));
+
+	    _this.onClickPinkDiv = _this.onClickPinkDiv.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(Payment, [{
+	    key: 'onClickPinkDiv',
+	    value: function onClickPinkDiv(e) {
+	      document.getElementById(e.target.id).classList.add('pink-bg-div');
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -33396,27 +33703,27 @@
 	              { className: 'add-tip' },
 	              _react2.default.createElement(
 	                'div',
-	                null,
+	                { onClick: this.onClickPinkDiv, id: 'no-tip' },
 	                'No tip'
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                null,
+	                { onClick: this.onClickPinkDiv, id: '1-dollar' },
 	                '$1'
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                null,
+	                { onClick: this.onClickPinkDiv, id: '2-dollars' },
 	                '$2'
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                null,
+	                { onClick: this.onClickPinkDiv, id: '5-dollars' },
 	                '$5'
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                null,
+	                { onClick: this.onClickPinkDiv, id: 'other' },
 	                'Other'
 	              )
 	            ),
@@ -33460,13 +33767,13 @@
 	exports.default = Payment;
 
 /***/ },
-/* 326 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(327);
+	var content = __webpack_require__(328);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33486,7 +33793,7 @@
 	}
 
 /***/ },
-/* 327 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33494,19 +33801,19 @@
 
 
 	// module
-	exports.push([module.id, ".payment-section {\n  height:60vh;\n  width:60vw;\n  background-color: rgba(0, 0, 0, 0.3);\n  position:absolute;\n  top:20vh;\n  left:0;\n  right:0;\n  margin-left: auto;\n  margin-right: auto;\n  border-radius: 28px;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.payment-white{\n  background-color: white;\n  height:90%;\n  width:90%;\n  border-radius:28px;\n}\n\n\n.payment-text {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n}\n\n.payment-title{\n  font-size: 30px;\n  margin-bottom: 20px;\n  margin-top:20px;\n}\n\n.payment-title span{\n  color:#FF00BF;\n}\n\n.payment-text img {\n  height:100px;\n  width:100px;\n  border-radius: 50px;\n  margin-bottom: 20px;\n}\n\n.add-tip{\n  display:flex;\n  flex-direction: row;\n  justify-content: space-around;\n  border: 1px solid grey;\n  padding:5px;\n  border-radius: 5px;\n  margin-bottom:20px;\n  width:50%;\n\n}\n\n.add-tip div:nth-child(-n+4){\n  border-right: 1px solid grey;\n  padding-right: 15px;\n}\n\n.add-tip div:nth-child(5) {\n  margin-right: 7px;\n}\n\n\n.add-payment {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-between;\n  border: 1px solid grey;\n  padding:5px;\n  border-radius:5px;\n  width:50%;\n  margin-bottom: 20px;\n}\n\n.grey-numbers {\n  color:#a8a8a8;\n}\n\n.total-price-div {\n  font-size:30px;\n}\n\n.next-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#3D0880;\n  border:none;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.next-btn:hover {\n  color:white;\n}\n", ""]);
+	exports.push([module.id, ".payment-section {\n  height:60vh;\n  width:60vw;\n  background-color: rgba(0, 0, 0, 0.3);\n  position:absolute;\n  top:20vh;\n  left:0;\n  right:0;\n  margin-left: auto;\n  margin-right: auto;\n  border-radius: 28px;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.payment-white{\n  background-color: white;\n  height:90%;\n  width:90%;\n  border-radius:28px;\n}\n\n\n.payment-text {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n}\n\n.payment-title{\n  font-size: 30px;\n  margin-bottom: 20px;\n  margin-top:20px;\n}\n\n.payment-title span{\n  color:#FF00BF;\n}\n\n.payment-text img {\n  height:100px;\n  width:100px;\n  border-radius: 50px;\n  margin-bottom: 20px;\n}\n\n.add-tip{\n  display:flex;\n  flex-direction: row;\n  justify-content: space-around;\n  border: 1px solid grey;\n  padding:5px;\n  border-radius: 5px;\n  margin-bottom:20px;\n  width:50%;\n\n}\n\n.add-tip div:nth-child(-n+4){\n  border-right: 1px solid grey;\n  padding-right: 15px;\n}\n\n.add-tip div:nth-child(5) {\n  margin-right: 7px;\n}\n\n\n.add-payment {\n  display:flex;\n  flex-direction: row;\n  justify-content: space-between;\n  border: 1px solid grey;\n  padding:5px;\n  border-radius:5px;\n  width:50%;\n  margin-bottom: 20px;\n}\n\n.grey-numbers {\n  color:#a8a8a8;\n}\n\n.total-price-div {\n  font-size:30px;\n}\n\n.next-btn {\n  border-radius: 20px;\n  height:20%;\n  width:90%;\n  background-color:#3D0880;\n  border:none;\n  display:flex;\n  justify-content: center;\n  align-items: center;\n  color:white;\n}\n\n\n.next-btn:hover {\n  color:white;\n}\n\n\n.pink-bg-div{\n  background-color: #FF00BF;\n  color:white;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 328 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(329);
+	var content = __webpack_require__(330);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33526,7 +33833,7 @@
 	}
 
 /***/ },
-/* 329 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33540,7 +33847,7 @@
 
 
 /***/ },
-/* 330 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33557,13 +33864,19 @@
 
 	var _reactDom = __webpack_require__(34);
 
-	var _EditInfoModal = __webpack_require__(331);
+	var _EditInfoModal = __webpack_require__(332);
 
 	var _EditInfoModal2 = _interopRequireDefault(_EditInfoModal);
 
-	__webpack_require__(334);
+	var _CustomerRides = __webpack_require__(349);
 
-	var _dashboardService = __webpack_require__(336);
+	var _CustomerRides2 = _interopRequireDefault(_CustomerRides);
+
+	__webpack_require__(336);
+
+	var _dashboardService = __webpack_require__(333);
+
+	var _reactRouter = __webpack_require__(172);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33595,17 +33908,13 @@
 	            var _this2 = this;
 
 	            (0, _dashboardService.getCustomerInfo)().then(function (res) {
-	                console.log(res);
 	                res = res[0];
 	                _this2.setState({
 	                    name: res.displayname,
 	                    email: res.email,
 	                    phone: res.phone,
-	                    fb: res.fb
+	                    fb: 'https://graph.facebook.com/' + res.fb + '/picture?type=large'
 	                });
-	            });
-	            (0, _dashboardService.getCustomerRides)().then(function (res) {
-	                console.log(res);
 	            });
 	        }
 	    }, {
@@ -33640,7 +33949,7 @@
 	                            _react2.default.createElement(
 	                                'div',
 	                                { className: 'userdash-user-pic-container' },
-	                                _react2.default.createElement('img', { src: './img/userdash/screaming-kid1.jpg' }),
+	                                _react2.default.createElement('img', { src: this.state.fb }),
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'userdash-sidebar-item-container' },
@@ -33771,23 +34080,24 @@
 	                                    _react2.default.createElement(
 	                                        'span',
 	                                        { className: 'userdash-ridenumber' },
-	                                        ' 5'
+	                                        ' ',
+	                                        _react2.default.createElement(_CustomerRides2.default, null)
 	                                    )
-	                                ),
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'userdash-user-comments' },
 	                                _react2.default.createElement(
 	                                    'div',
-	                                    { className: 'userdash-user-comments' },
+	                                    { className: 'userdash-icon-box' },
 	                                    _react2.default.createElement(
-	                                        'div',
-	                                        { className: 'userdash-icon-box' },
-	                                        _react2.default.createElement(
-	                                            'i',
-	                                            { className: 'material-icons userdash-icons' },
-	                                            'subject'
-	                                        )
-	                                    ),
-	                                    _react2.default.createElement('textarea', { className: 'userdash-textarea', placeholder: 'Comments' })
-	                                )
+	                                        'i',
+	                                        { className: 'material-icons userdash-icons' },
+	                                        'subject'
+	                                    )
+	                                ),
+	                                _react2.default.createElement('textarea', { className: 'userdash-textarea', placeholder: 'Comments' })
 	                            ),
 	                            _react2.default.createElement(
 	                                'div',
@@ -33814,7 +34124,7 @@
 	exports.default = UserDashboardComp;
 
 /***/ },
-/* 331 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33829,9 +34139,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _dashboardService = __webpack_require__(336);
+	var _dashboardService = __webpack_require__(333);
 
-	__webpack_require__(332);
+	__webpack_require__(334);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33931,13 +34241,77 @@
 	exports.default = EditInfoModal;
 
 /***/ },
-/* 332 */
+/* 333 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.isloggedin = isloggedin;
+	exports.getCustomerInfo = getCustomerInfo;
+	exports.getCustomerRides = getCustomerRides;
+	exports.getAddress = getAddress;
+	exports.updateCustomerInfo = updateCustomerInfo;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function isloggedin() {
+	  return _axios2.default.get('/isloggedin');
+	}
+
+	function getCustomerInfo() {
+	  return _axios2.default.get('/customerinfo').then(function (res) {
+	    return res.data;
+	  });
+	}
+
+	function getCustomerRides() {
+	  return _axios2.default.get('/customerrides').then(function (rides) {
+	    var promises = [];
+	    rides.data.forEach(function (val, i, arr) {
+	      promises.push(getAddress(val.originlat, val.originlong), getAddress(val.destlat, val.destlong));
+	    });
+	    function getAddress(lat, lng) {
+	      return _axios2.default.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat.toString() + ',' + lng.toString()).then(function (res) {
+	        return res.data.results[0].formatted_address;
+	      });
+	    }
+	    return Promise.all(promises).then(function (test) {
+	      rides.data.forEach(function (val, i, arr) {
+	        val.originAddress = test[i];
+	        val.destAddress = test[i + 1];
+	      });
+	      return rides.data;
+	    });
+	  });
+	}
+
+	function getAddress(lat, long) {
+	  return _axios2.default.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat.toString() + ',' + lng.toString()).then(function (res) {
+	    return res.data.results[0].formatted_address;
+	  });
+	}
+
+	function updateCustomerInfo(name, email, phone) {
+	  return _axios2.default.put('/customerinfo', { name: name, email: email, phone: phone }).then(function (res) {
+	    return res.data;
+	  });
+	}
+
+/***/ },
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(333);
+	var content = __webpack_require__(335);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33957,7 +34331,7 @@
 	}
 
 /***/ },
-/* 333 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -33971,13 +34345,13 @@
 
 
 /***/ },
-/* 334 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(335);
+	var content = __webpack_require__(337);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -33997,7 +34371,7 @@
 	}
 
 /***/ },
-/* 335 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34005,43 +34379,13 @@
 
 
 	// module
-	exports.push([module.id, "\n.userdash-icons {\n    font-size: 32px;\n    margin-right: 10px;\n    margin-left: 2px;\n}\n\n.userdash-icons-title {\n    font-size: 3.25rem;\n    margin-right: 10px;\n    vertical-align: text-top;\n}\n\n.userdash-icons-google {\n    font-size: 36px;\n    margin-right: 10px;\n}\n\n.userdash-logo-main {\n    width: 60px;\n    margin-bottom: 10px;\n}\n\n.userdash-sideanduser-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.userdash-sidebar-container {\n    width: 100%;\n    /*height: 40rem;*/\n    background: #ff00bf;\n    padding: 70px 0 50px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.userdash-sidebar-innerbox {\n    width: 160px;\n    margin: 0 auto;\n}\n\n.userdash-user-pic-container {\n    margin: 45px 0 25px;\n    box-shadow: 1px 1px 5px gray;\n    background: white;\n    padding: 10px;\n    text-align: center;\n    width: 160px;\n    border-radius: 7px;\n}\n\n.userdash-user-pic-container img {\n    width: 140px;\n    border-radius: 7px;\n}\n\n.userdash-welcome {\n    color: #f3f3f5;\n}\n\n.userdash-sidebar-item-container {\n    padding: 5px 3px;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    margin-top: 5px;\n}\n\n.userdash-sidebar-item {\n    display: flex;\n    align-items: center;\n    padding: 2px 5px;\n}\n\n.userdash-sidebar-item a {\n    color: #333;\n}\n\n.userdash-sidebar-item a:hover {\n    color: #ff00bf;\n}\n\n.userdash-user-container {\n    width: 100%;\n    padding: 60px 0;\n    border: 1px solid #f2f2f2;\n}\n\n.userdash-user-innerbox {\n    width: 80%;\n    margin: 0 auto;\n}\n\n.userdash-user-title {\n    font-size: 3rem;\n    margin-bottom: 30px;\n    transition: all .2s ease;\n}\n\n.userdash-user-infobox {\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-icon-box {\n    width: 50px;\n}\n\n.userdash-user-info {\n    padding: 20px 10px;\n    width: 100%;\n    border: 1px solid #f2f2f2;\n    background-color: white;\n    border-radius: 7px;\n    color: #333;\n}\n\n.userdash-user-ridesrequest-box {\n    display: flex;\n    flex-direction: column;\n    align-items: initial;\n    margin: 50px 0;\n}\n\n.userdash-user-rides {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-ridenumber {\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    padding: 10px;\n    width: 100%;\n}\n\n.userdash-user-comments textarea {\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    font-style: italic;\n    font-weight: 100;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    width: 100%;\n}\n\n.userdash-user-comments {\n    width: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.userdash-updateinfo-btn {\n    width: 100%;\n    padding: 12px;\n    font-size: 1.75rem;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n.userdash-updateinfo-btn:hover,\n.userdash-updateinfo-btn:focus,\n.userdash-updateinfo-btn:active {\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n    outline: none;\n}\n\n@media (min-width:768px){\n\n    .userdash-icons-title {\n        font-size: 4.5rem;\n    }\n\n    .userdash-sideanduser-container {\n        display: flex;\n        flex-direction: row;\n    }\n\n    .userdash-sidebar-container {\n        width: 50%;\n        padding-left: 0px;\n        padding-top: 150px;\n    }\n\n    .userdash-user-container {\n        width: 100%;\n        padding: 110px 0 80px;\n\n    }\n\n    .userdash-user-title {\n        font-size: 4rem;\n    }\n\n    .userdash-user-ridesrequest-box {\n        display: flex;\n        flex-direction: row;\n        align-items: center;\n    }\n\n    .userdash-user-comments textarea {\n        width: 90%;\n    }\n\n    .userdash-user-comments {\n        width: 50%;\n    }\n\n    .userdash-ridenumber {\n        width: 70%;\n        text-align: center;\n    }\n\n    .userdash-user-rides {\n        width: 50%;\n        margin-bottom: 0px;\n    }\n\n}\n\n@media (min-width:992px) {\n    .userdash-sidebar-container {\n        width: 45%;\n    }\n}\n", ""]);
+	exports.push([module.id, "\n.userdash-icons {\n    font-size: 32px;\n    margin-right: 10px;\n    margin-left: 2px;\n}\n\n.userdash-icons-title {\n    font-size: 3.25rem;\n    margin-right: 10px;\n    vertical-align: text-top;\n}\n\n.userdash-icons-google {\n    font-size: 36px;\n    margin-right: 10px;\n}\n\n.userdash-logo-main {\n    width: 60px;\n    margin-bottom: 10px;\n}\n\n.userdash-sideanduser-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.userdash-sidebar-container {\n    width: 100%;\n    /*height: 40rem;*/\n    background: #ff00bf;\n    padding: 70px 0 50px;\n    text-align: center;\n    transition: all .2s ease;\n}\n\n.userdash-sidebar-innerbox {\n    width: 160px;\n    margin: 0 auto;\n}\n\n.userdash-user-pic-container {\n    margin: 45px 0 25px;\n    box-shadow: 1px 1px 5px gray;\n    background: white;\n    padding: 10px;\n    text-align: center;\n    width: 160px;\n    border-radius: 7px;\n}\n\n.userdash-user-pic-container img {\n    width: 140px;\n    height: 160px;\n    border-radius: 7px;\n}\n\n.userdash-welcome {\n    color: #f3f3f5;\n}\n\n.userdash-sidebar-item-container {\n    padding: 5px 3px;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    margin-top: 5px;\n}\n\n.userdash-sidebar-item {\n    display: flex;\n    align-items: center;\n    padding: 2px 5px;\n}\n\n.userdash-sidebar-item a {\n    color: #333;\n}\n\n.userdash-sidebar-item a:hover {\n    color: #ff00bf;\n}\n\n.userdash-user-container {\n    width: 100%;\n    padding: 60px 0;\n    border: 1px solid #f2f2f2;\n}\n\n.userdash-user-innerbox {\n    width: 90%;\n    margin: 0 auto;\n}\n\n.userdash-user-title {\n    font-size: 3rem;\n    margin-bottom: 30px;\n    transition: all .2s ease;\n}\n\n.userdash-user-infobox {\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-icon-box {\n    width: 50px;\n}\n\n.userdash-user-info {\n    padding: 20px 10px;\n    width: 100%;\n    border: 1px solid #f2f2f2;\n    background-color: white;\n    border-radius: 7px;\n    color: #333;\n}\n\n.userdash-user-ridesrequest-box {\n    display: flex;\n    flex-direction: column;\n    align-items: initial;\n    margin: 10px 0;\n}\n\n.userdash-user-rides {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.userdash-ridenumber {\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    padding: 10px 5px 5px 5px;\n    width: 100%;\n    height: 150px;\n    overflow-y: scroll;\n}\n\n.userdash-user-comments textarea {\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    font-style: italic;\n    font-weight: 100;\n    border: 1px solid #f2f2f2;\n    border-radius: 7px;\n    width: 100%;\n}\n\n.userdash-user-comments {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    margin: 15px 0;\n}\n\n.userdash-updateinfo-btn {\n    width: 100%;\n    padding: 12px;\n    font-size: 1.75rem;\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n}\n\n.userdash-updateinfo-btn:hover,\n.userdash-updateinfo-btn:focus,\n.userdash-updateinfo-btn:active {\n    background: none;\n    border: 1px solid #ff00bf;\n    color: #ff00bf;\n    outline: none;\n}\n\n@media (min-width:768px){\n\n    .userdash-icons-title {\n        font-size: 4.5rem;\n    }\n\n    .userdash-sideanduser-container {\n        display: flex;\n        flex-direction: row;\n    }\n\n    .userdash-sidebar-container {\n        width: 45%;\n        padding-left: 0px;\n        padding-top: 150px;\n    }\n\n    .userdash-user-container {\n        width: 100%;\n        padding: 80px 0 30px;\n\n    }\n\n    .userdash-user-title {\n        font-size: 3.3rem;\n    }\n\n    .userdash-user-ridesrequest-box {\n        display: flex;\n        flex-direction: row;\n        align-items: center;\n    }\n\n    /*.userdash-user-comments textarea {\n        width: 90%;\n    }\n\n    .userdash-user-comments {\n        width: 50%;\n    }*/\n\n    .userdash-ridenumber {\n\n    }\n\n    .userdash-user-rides {\n        width: 100%;\n        margin-bottom: 0px;\n    }\n\n}\n\n@media (min-width:992px) {\n    .userdash-sidebar-container {\n        width: 50%;\n    }\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 336 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.getCustomerInfo = getCustomerInfo;
-	exports.updateCustomerInfo = updateCustomerInfo;
-
-	var _axios = __webpack_require__(253);
-
-	var _axios2 = _interopRequireDefault(_axios);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function getCustomerInfo() {
-	  return _axios2.default.get('/customerinfo').then(function (res) {
-	    return res.data;
-	  });
-	}
-
-	function updateCustomerInfo(name, email, phone) {
-	  return _axios2.default.put('/customerinfo', { name: name, email: email, phone: phone }).then(function (res) {
-	    return res.data;
-	  });
-	}
-
-/***/ },
-/* 337 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34056,25 +34400,25 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _cityDetailsService = __webpack_require__(338);
+	var _cityDetailsService = __webpack_require__(339);
 
-	var _CityBottomBanner = __webpack_require__(299);
+	var _CityBottomBanner = __webpack_require__(300);
 
 	var _CityBottomBanner2 = _interopRequireDefault(_CityBottomBanner);
 
-	var _CitiesEstimateForm = __webpack_require__(339);
+	var _CitiesEstimateForm = __webpack_require__(340);
 
 	var _CitiesEstimateForm2 = _interopRequireDefault(_CitiesEstimateForm);
 
-	var _ShyftPlus = __webpack_require__(346);
+	var _ShyftPlus = __webpack_require__(344);
 
 	var _ShyftPlus2 = _interopRequireDefault(_ShyftPlus);
 
-	var _RideShyft = __webpack_require__(347);
+	var _RideShyft = __webpack_require__(345);
 
 	var _RideShyft2 = _interopRequireDefault(_RideShyft);
 
-	__webpack_require__(343);
+	__webpack_require__(346);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34287,7 +34631,7 @@
 	exports.default = CityDetails;
 
 /***/ },
-/* 338 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34310,7 +34654,7 @@
 	}
 
 /***/ },
-/* 339 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34325,13 +34669,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactGeosuggestPlus = __webpack_require__(294);
+	var _reactGeosuggestPlus = __webpack_require__(295);
 
 	var _reactGeosuggestPlus2 = _interopRequireDefault(_reactGeosuggestPlus);
 
-	var _estimateFormService = __webpack_require__(340);
+	var _estimateFormService = __webpack_require__(341);
 
-	__webpack_require__(341);
+	__webpack_require__(342);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34486,7 +34830,7 @@
 	exports.default = CitiesEstimateForm;
 
 /***/ },
-/* 340 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34503,7 +34847,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var lyftToken = {
-	  headers: { 'Authorization': 'Bearer "gAAAAABYGNhPJJQHxYMYhr029HqohlQ1rKwvu5cUe8E3kKkHIOvP5l9TxSiMaCtKakuw3pKfCiKFEI0gOZbwp43HytMCFi3m7G4yVv7DASmjQLU_V--AnBNK4fSXNYBtL_8yKx4NLBoErsYMP7sCB1n7eVSamU5VBswoBIAglZ9wei5V38cf55KUaP0YMGCnyrKy4J0x8jHMhCaAQt8kDdfI9GY7bzffxg=="'
+	  headers: { 'Authorization': 'Bearer "gAAAAABYI6xdH98dZGYCE5DFif3Am6VI8h1KIMHmhWRoxA1NenpOUF1v1Hea9oyudvzrYi8SKn7JuE657M5qWikbPpqYumH8_i1qldXEOo2Y6C04cASNVZkFFN-P_Gih3v1yaOsstsEIazsGsaRCmm28Ion9JLww_l70xejfSBzn9WcBKdJU49DgLk7_6u_TIaLF8DN9MEhXXSmceSrJM4tM2ufp5iH2JA=="'
 	  }
 	};
 
@@ -34516,13 +34860,13 @@
 	}
 
 /***/ },
-/* 341 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(342);
+	var content = __webpack_require__(343);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -34542,7 +34886,7 @@
 	}
 
 /***/ },
-/* 342 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -34556,140 +34900,7 @@
 
 
 /***/ },
-/* 343 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(344);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
 /* 344 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(237)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".cityDetails-jumbotron-container {\n  background-size: cover;\n  height: 60vh;\n  text-align: center;\n  background-position: center;\n  background-repeat: no-repeat;\n  display: flex;\n}\n\n.cityDetails-jumbotron-title {\n  color: #F3F3F5;\n  font-size: 3.1rem;\n  margin-bottom: 20px;\n  font-weight: bolder;\n}\n\n.cityDetails-jumbotron-container .MainJumbotron-btn {\n  width: 110px;\n  font-weight: 400;\n  font-size: 1.4rem;\n}\n\n\n.jumbo-wrap {\n  -ms-align-self: center;\n  align-self: center;\n}\n\n.icons-wrap div {\n  margin-bottom: 25px;\n}\n\n.icons-wrap img {\n  margin-bottom: 10px;\n  height: 5.5rem;\n  width: 5.5rem;\n}\n\n.cityDetails-howShyftWorks {\n  margin-bottom: 4rem;\n  margin-top: 4rem;\n  max-width: 45rem;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.howitworksDescrip {\n  margin-bottom: 6rem;\n  width: 70%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.howitworkstable {\n  justify-content: center;\n  display: flex;\n  margin-top: 1rem;\n}\n\n.cityDetails-howShyftWorks h2 {\n  padding-bottom: 20px;\n  font-size: 3rem;\n  padding-top: 28px;\n}\n\n.cityDetails-howShyftWorks p {\n  font-size: 1.8rem;\n  font-weight: 100;\n  line-height: 3rem;\n}\n\n.clock-icon {\n  background-repeat: no-repeat;\n}\n.cityDetailsMap {\n  background-size: cover;\n  height: 450px;\n  background-position: center;\n  margin-bottom: 20px;\n}\n.cityDetailsEstimate {\n  max-width: 34rem;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetailsEstimate-Wrap {\n  display: flex;\n  padding-bottom: 8rem;\n  padding-top: 5rem;\n  border-color: #D8DCE6;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n}\n\n.estimateform-wrap {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n\n.estimate-description {\n  line-height: 1.8;\n  font-size: 1.8rem;\n  font-weight: 100;\n  padding-top: 10px;\n  text-align: center;\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.estimate-description h2 {\n  margin-bottom: 2rem;\n  font-size: 3rem;\n}\n\n\n.cityDetails-TwoWays {\n  margin-bottom: -12rem;\n  text-align: center!important;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetails-TwoWaysWrap {\n  width: 70%\n}\n\n.cityDetails-TwoWays div:nth-child(1) {\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.cityDetails-TwoWays h2 {\n  margin-top: 4rem;\n  font-size: 3rem;\n}\n\n.cityDetails-TwoWays p {\n  font-size: 1.7rem;\n  line-height: 1.5;\n  font-weight: 100;\n}\n\n.cityDetails-carWrapper {\n  background-position: center;\n  background-size: contain;\n  background-repeat: no-repeat;\n  margin-bottom: 1.5rem;\n  padding: 4rem;\n  max-width: 100%;\n  text-align: center!important;\n}\n\n.cityDetails-carWrapper img {\n  width: 580px;\n  max-width: 100%;\n  vertical-align: middle;\n}\n\n.cityDetails-pricesWrapper {\n  -webkit-box-pack: center;\n  justify-content: center;\n  display: flex;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n  text-align: center;\n  margin-top: 4rem;\n\n}\n\n.cityDetails-prices {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n}\n\n.priceChart-btnwrapper {\n  border-color: #D8DCE6;\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border-width: 1px;\n  border-style: solid;\n  background-color: #F3F3F5;\n  display: flex;\n  text-align: center!important;\n  line-height: 2;\n}\n\n.priceChart-pricing {\n  border-color: #D8DCE6;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  margin-top: -1px;\n  border: 1px solid #D8DCE6;\n  line-height: 2;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  padding-right: 1.5rem;\n  padding-left: 1.5rem;\n  font-size: 1.7rem;\n  font-weight: 100;\n}\n\n.pricingTable {\n  width: 100%;\n  background-color: transparent;\n}\n\ntr td {\n  text-align: left;\n}\n\n\n.pricechart-btn {\n  border-color: #D8DCE6;\n  font-size: 1.9rem;\n  background-color: transparent;\n  display: block;\n  width: 100%;\n  font-weight: 200;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  border: .08333rem solid transparent;\n  padding: .75rem 1.25rem;\n  line-height: 1.5;\n  border-radius: .5rem;\n}\n\n.pricechart-btn.active {\n  color: #FF00BF!important;\n  background: #fff;\n}\n\n@media (min-width: 768px) {\n  .cityDetails-jumbotron-title {\n    font-size: 4.3rem;\n  }\n\n  .cityDetails-jumbotron-container .MainJumbotron-btn {\n    width: 160px;\n    font-weight: 600;\n    font-size: 1.8rem;\n  }\n\n  .cityDetails-howShyftWorks {\n    max-width: 85rem;\n  }\n\n  .icons-wrap img {\n    height: 6.5rem;\n    width: 6.5rem;\n  }\n\n  .cityDetails-howShyftWorks h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-howShyftWorks p {\n    font-size: 2.2rem;\n    line-height: 3.8rem;\n  }\n\n  .cityDetailsEstimate {\n    max-width: 92rem;\n  }\n\n  .estimate-description {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    text-align: left;\n    font-size: 2rem;\n  }\n\n  .estimateform-wrap {\n    -webkit-box-flex: 0;\n    flex: 0 0 41.66667%;\n    margin-left: 8.33333%;\n  }\n\n  .cityDetails-TwoWays {\n    max-width: 92vh;\n  }\n\n  .estimate-description h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-TwoWays h2 {\n    margin-top: 5rem;\n    font-size: 3.5rem;\n  }\n\n  .cityDetails-TwoWays p {\n    font-size: 1.9rem;\n    line-height: 1.8;\n  }\n\n  .cityDetails-prices {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    line-height: 2;\n  }\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 345 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	__webpack_require__(282);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var test = 1;
-
-	var BackgroundComponent = function (_React$Component) {
-	  _inherits(BackgroundComponent, _React$Component);
-
-	  function BackgroundComponent(props) {
-	    _classCallCheck(this, BackgroundComponent);
-
-	    var _this = _possibleConstructorReturn(this, (BackgroundComponent.__proto__ || Object.getPrototypeOf(BackgroundComponent)).call(this, props));
-
-	    _this.state = {
-	      jumboBg: 'MainJumbotron-container bg1'
-	    };
-	    return _this;
-	  }
-
-	  _createClass(BackgroundComponent, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var self = this;
-	      this.timer = setInterval(function () {
-	        if (test === 7) {
-	          test = 0;
-	        }
-	        test++;
-	        self.setState({
-	          jumboBg: 'MainJumbotron-container bg' + test
-	        });
-	      }, 5000);
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      clearInterval(this.timer);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: this.state.jumboBg },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'MainJumbotron-title' },
-	          'Rides in Minutes'
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'btn btn-primary MainJumbotron-btn' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/userdashboard' },
-	            'Sign Up Now'
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return BackgroundComponent;
-	}(_react2.default.Component);
-
-	exports.default = BackgroundComponent;
-
-/***/ },
-/* 346 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34902,7 +35113,7 @@
 	exports.default = ShyftPlus;
 
 /***/ },
-/* 347 */
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35113,6 +35324,344 @@
 	;
 
 	exports.default = RideShyft;
+
+/***/ },
+/* 346 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(347);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CityDetails.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 347 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".cityDetails-jumbotron-container {\n  background-size: cover;\n  height: 60vh;\n  text-align: center;\n  background-position: center;\n  background-repeat: no-repeat;\n  display: flex;\n}\n\n.cityDetails-jumbotron-title {\n  color: #F3F3F5;\n  font-size: 3.1rem;\n  margin-bottom: 20px;\n  font-weight: bolder;\n}\n\n.cityDetails-jumbotron-container .MainJumbotron-btn {\n  width: 110px;\n  font-weight: 400;\n  font-size: 1.4rem;\n}\n\n\n.jumbo-wrap {\n  -ms-align-self: center;\n  align-self: center;\n}\n\n.icons-wrap div {\n  margin-bottom: 25px;\n}\n\n.icons-wrap img {\n  margin-bottom: 10px;\n  height: 5.5rem;\n  width: 5.5rem;\n}\n\n.cityDetails-howShyftWorks {\n  margin-bottom: 4rem;\n  margin-top: 4rem;\n  max-width: 45rem;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.howitworksDescrip {\n  margin-bottom: 6rem;\n  width: 70%;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.howitworkstable {\n  justify-content: center;\n  display: flex;\n  margin-top: 1rem;\n}\n\n.cityDetails-howShyftWorks h2 {\n  padding-bottom: 20px;\n  font-size: 3rem;\n  padding-top: 28px;\n}\n\n.cityDetails-howShyftWorks p {\n  font-size: 1.8rem;\n  font-weight: 100;\n  line-height: 3rem;\n}\n\n.clock-icon {\n  background-repeat: no-repeat;\n}\n.cityDetailsMap {\n  background-size: cover;\n  height: 450px;\n  background-position: center;\n  margin-bottom: 20px;\n}\n.cityDetailsEstimate {\n  max-width: 34rem;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetailsEstimate-Wrap {\n  display: flex;\n  padding-bottom: 8rem;\n  padding-top: 5rem;\n  border-color: #D8DCE6;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n}\n\n.estimateform-wrap {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n\n.estimate-description {\n  line-height: 1.8;\n  font-size: 1.8rem;\n  font-weight: 100;\n  padding-top: 10px;\n  text-align: center;\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n  min-height: 1px;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n\n.estimate-description h2 {\n  margin-bottom: 2rem;\n  font-size: 3rem;\n}\n\n\n.cityDetails-TwoWays {\n  margin-bottom: -12rem;\n  text-align: center!important;\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: .9375rem;\n  padding-right: .9375rem;\n}\n.cityDetails-TwoWaysWrap {\n  width: 70%\n}\n\n.cityDetails-TwoWays div:nth-child(1) {\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.cityDetails-TwoWays h2 {\n  margin-top: 4rem;\n  font-size: 3rem;\n}\n\n.cityDetails-TwoWays p {\n  font-size: 1.7rem;\n  line-height: 1.5;\n  font-weight: 100;\n}\n\n.cityDetails-carWrapper {\n  background-position: center;\n  background-size: contain;\n  background-repeat: no-repeat;\n  margin-bottom: 1.5rem;\n  padding: 4rem;\n  max-width: 100%;\n  text-align: center!important;\n}\n\n.cityDetails-carWrapper img {\n  width: 580px;\n  max-width: 100%;\n  vertical-align: middle;\n}\n\n.cityDetails-pricesWrapper {\n  -webkit-box-pack: center;\n  justify-content: center;\n  display: flex;\n  flex-wrap: wrap;\n  margin-left: -.9375rem;\n  margin-right: -.9375rem;\n  text-align: center;\n  margin-top: 4rem;\n\n}\n\n.cityDetails-prices {\n  -webkit-box-flex: 0;\n  flex: 0 0 100%;\n}\n\n.priceChart-btnwrapper {\n  border-color: #D8DCE6;\n  border-top-right-radius: .5rem;\n  border-top-left-radius: .5rem;\n  border-width: 1px;\n  border-style: solid;\n  background-color: #F3F3F5;\n  display: flex;\n  text-align: center!important;\n  line-height: 2;\n}\n\n.priceChart-pricing {\n  border-color: #D8DCE6;\n  border-bottom-right-radius: .5rem;\n  border-bottom-left-radius: .5rem;\n  margin-top: -1px;\n  border: 1px solid #D8DCE6;\n  line-height: 2;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  padding-right: 1.5rem;\n  padding-left: 1.5rem;\n  font-size: 1.7rem;\n  font-weight: 100;\n}\n\n.pricingTable {\n  width: 100%;\n  background-color: transparent;\n}\n\ntr td {\n  text-align: left;\n}\n\n\n.pricechart-btn {\n  border-color: #D8DCE6;\n  font-size: 1.9rem;\n  background-color: transparent;\n  display: block;\n  width: 100%;\n  font-weight: 200;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  cursor: pointer;\n  border: .08333rem solid transparent;\n  padding: .75rem 1.25rem;\n  line-height: 1.5;\n  border-radius: .5rem;\n}\n\n.pricechart-btn.active {\n  color: #FF00BF!important;\n  background: #fff;\n}\n\n@media (min-width: 768px) {\n  .cityDetails-jumbotron-title {\n    font-size: 4.3rem;\n  }\n\n  .cityDetails-jumbotron-container .MainJumbotron-btn {\n    width: 160px;\n    font-weight: 600;\n    font-size: 1.8rem;\n  }\n\n  .cityDetails-howShyftWorks {\n    max-width: 85rem;\n  }\n\n  .icons-wrap img {\n    height: 6.5rem;\n    width: 6.5rem;\n  }\n\n  .cityDetails-howShyftWorks h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-howShyftWorks p {\n    font-size: 2.2rem;\n    line-height: 3.8rem;\n  }\n\n  .cityDetailsEstimate {\n    max-width: 92rem;\n  }\n\n  .estimate-description {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    text-align: left;\n    font-size: 2rem;\n  }\n\n  .estimateform-wrap {\n    -webkit-box-flex: 0;\n    flex: 0 0 41.66667%;\n    margin-left: 8.33333%;\n  }\n\n  .cityDetails-TwoWays {\n    max-width: 92vh;\n  }\n\n  .estimate-description h2 {\n    font-size: 3.3rem;\n  }\n\n  .cityDetails-TwoWays h2 {\n    margin-top: 5rem;\n    font-size: 3.5rem;\n  }\n\n  .cityDetails-TwoWays p {\n    font-size: 1.9rem;\n    line-height: 1.8;\n  }\n\n  .cityDetails-prices {\n    -webkit-box-flex: 0;\n    flex: 0 0 50%;\n    line-height: 2;\n  }\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 348 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getPickup = getPickup;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getPickup(test) {
+	  return _axios2.default.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + test.lat.toString() + ',' + test.lng.toString() + '&key=AIzaSyD1-p2LRZozs7Y-5-pYvh8AMlVSHgeFa9E');
+	}
+
+/***/ },
+/* 349 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(34);
+
+	__webpack_require__(350);
+
+	__webpack_require__(336);
+
+	var _dashboardService = __webpack_require__(333);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var CustomerRides = function (_React$Component) {
+	  _inherits(CustomerRides, _React$Component);
+
+	  function CustomerRides(props) {
+	    _classCallCheck(this, CustomerRides);
+
+	    var _this = _possibleConstructorReturn(this, (CustomerRides.__proto__ || Object.getPrototypeOf(CustomerRides)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(CustomerRides, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var self = this;
+	      var testing = (0, _dashboardService.getCustomerRides)().then(function (rides) {
+	        var theRides = rides.map(function (val, i, arr) {
+	          return _react2.default.createElement(
+	            'div',
+	            { key: i, className: 'rideswrap' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'rides-desc-full' },
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'rides-desc' },
+	                'Start: '
+	              ),
+	              ' ',
+	              val.destAddress
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'rides-desc-full' },
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'rides-desc' },
+	                'Time: '
+	              ),
+	              val.origindate
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'rides-desc-full' },
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'rides-desc' },
+	                'Finish: '
+	              ),
+	              val.originAddress
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'rides-desc-full' },
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'rides-desc' },
+	                'Time: '
+	              ),
+	              val.destdate
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'rides-desc-full' },
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'rides-desc' },
+	                'Driver: '
+	              ),
+	              val.driver_id
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'rides-desc-full' },
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'rides-desc' },
+	                'Rating: '
+	              ),
+	              val.rating
+	            ),
+	            _react2.default.createElement('div', null)
+	          );
+	        });
+	        self.setState({
+	          rides: theRides
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'customerrides' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'customerrides-tablebody' },
+	          this.state.rides
+	        )
+	      );
+	    }
+	  }]);
+
+	  return CustomerRides;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = CustomerRides;
+
+/***/ },
+/* 350 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(351);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./CustomerRides.css", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./CustomerRides.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 351 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "/*.customerrides-tablehead {\n  display: flex;\n  justify-content: space-around;\n}*/\n\n.rides-desc-full {\n    font-size: 1.5rem;\n    padding-left: 5px;\n}\n\n.rides-desc {\n    font-weight: bold;\n\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 352 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.createRide = createRide;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function createRide(obj) {
+	  _axios2.default.post('/request', obj);
+	}
+
+/***/ },
+/* 353 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.getRideId = getRideId;
+	exports.cancelRide = cancelRide;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function getRideId() {
+	  return _axios2.default.get('/rideid');
+	}
+
+	function cancelRide(rideid) {
+	  return _axios2.default.put('/cancel/' + rideid.toString());
+	}
+
+/***/ },
+/* 354 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.startRide = startRide;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function startRide(rideid, obj) {
+	  return (0, _axios2.default)({
+	    method: 'put',
+	    url: '/arrive/' + rideid.toString(),
+	    data: obj
+	  });
+	}
+
+/***/ },
+/* 355 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.rateRide = rateRide;
+
+	var _axios = __webpack_require__(253);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function rateRide(obj) {
+	  return _axios2.default.put('/complete/' + obj.rideid, obj);
+	}
 
 /***/ }
 /******/ ]);
