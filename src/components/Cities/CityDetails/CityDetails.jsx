@@ -37,7 +37,6 @@ class CityDetails extends React.Component {
   //     })
   // }
 
-
   showPlus(){
       this.setState({
           showPlus: true,
@@ -52,10 +51,9 @@ class CityDetails extends React.Component {
       })
   }
 
-
-
-  componentWillMount() {
+  componentDidMount() {
       getOneCity(this.props.params.id).then(res => {
+        console.log(res);
           res = res[0]
           this.setState({
             city: res.city,
@@ -66,17 +64,26 @@ class CityDetails extends React.Component {
       })
   }
 
-
-
   render () {
 
-    let backgroundImg = {
-      backgroundImage: `url("${this.state.img}")`
+    let backgroundImg, cityMap
+    if (this.state.img) {
+      backgroundImg = {
+        backgroundImage: `url("${this.state.img}")`
+      }
+
+      cityMap = {
+        backgroundImage: `url("${this.state.map_img}")`
+      }
+    } else {
+      backgroundImg = {
+        backgroundColor: "#fff"
+      }
+      cityMap = {
+        backgroundColor: "#fff"
+      }
     }
 
-    let cityMap = {
-      backgroundImage: `url("${this.state.map_img}")`
-    }
 
     return (
 
