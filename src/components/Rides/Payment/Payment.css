@@ -60,7 +60,11 @@
 
 .add-tip div:nth-child(-n+4){
   border-right: 1px solid grey;
-  padding-right: 15px;
+}
+
+.add-tip div {
+    padding-right: 15px;
+    padding-left:15px;
 }
 
 .add-tip div:nth-child(5) {
@@ -108,6 +112,7 @@
 .pink-bg-div{
   background-color: #FF00BF;
   color:white;
+  border-radius: 15px;
 }
 
 @media (min-width:768px) {
