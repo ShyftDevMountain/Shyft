@@ -103,12 +103,6 @@ class UserDashboardComp extends React.Component{
                                 </div>
 
                             </div>
-                            <div className="userdash-user-comments">
-                                <div className="userdash-icon-box">
-                                    <i className="material-icons userdash-icons">subject</i>
-                                </div>
-                                <textarea className="userdash-textarea" placeholder="Comments"></textarea>
-                            </div>
 
                             <div>
                                 <button className="userdash-updateinfo-btn btn btn-primary" onClick={this.updateClick}>Update Info</button>
