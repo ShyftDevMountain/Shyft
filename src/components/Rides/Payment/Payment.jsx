@@ -15,7 +15,13 @@ class Payment extends React.Component {
   }
 
   onClickPinkDiv(e) {
-    document.getElementById(e.target.id).classList.add('pink-bg-div');
+    let x = document.getElementById(e.target.id);
+    if(!x.classList.length){
+      x.classList.add('pink-bg-div');
+  }
+  else {
+    x.classList.remove('pink-bg-div');
+  }
   }
 
   componentWillMount() {

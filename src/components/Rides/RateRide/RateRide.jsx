@@ -18,7 +18,13 @@ class RateRide extends React.Component {
 
   onClickStar(e) {
     this.rating = e.target.id;
-    document.getElementById(e.target.id).classList.add('colored-star');
+    let x = document.getElementById(e.target.id);
+    if(!x.classList.length){
+    x.classList.add('colored-star');
+  }
+  else{
+    x.classList.remove('colored-star');
+  }
   }
 
 
