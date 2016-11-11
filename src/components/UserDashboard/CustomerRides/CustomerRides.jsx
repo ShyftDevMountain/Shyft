@@ -20,15 +20,14 @@ class CustomerRides extends React.Component{
     var self = this;
     var testing = getCustomerRides().then(function(rides){
       var theRides = rides.map(function(val, i, arr){
-        console.log(i);
         return (
           <div key={i} className='rideswrap'>
               <div className="rides-desc-full Ride-number">Ride Number {i + 1}</div>
-              <div className="rides-desc-full"><span className="rides-desc">Start: </span> {val.destAddress}</div>
+              <div className="rides-desc-full"><span className="rides-desc">Start: </span>{val.destAddress}</div>
               <div className="rides-desc-full"><span className="rides-desc">Time: </span>{val.origindate}</div>
               <div className="rides-desc-full"><span className="rides-desc">Finish: </span>{val.originAddress}</div>
               <div className="rides-desc-full"><span className="rides-desc">Time: </span>{val.destdate}</div>
-              <div className="rides-desc-full"><span className="rides-desc">Driver: </span>{val.driver_id}</div>
+              <div className="rides-desc-full"><span className="rides-desc">Driver: </span>{val.name}</div>
               <div className="rides-desc-full"><span className="rides-desc">Rating: </span>{val.rating}</div>
               <div>
                 <div className="userdash-user-comments">
