@@ -1,11 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router';
+import {getCustomerInfo} from '../../../services/dashboardService.js';
 
 import './Payment.css';
 
 class Payment extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      fb: ''
+    }
 
     this.onClickPinkDiv = this.onClickPinkDiv.bind(this);
   }
@@ -20,7 +24,14 @@ class Payment extends React.Component {
   }
   }
 
+  componentWillMount() {
 
+   getCustomerInfo().then(res => {
+       this.setState({
+         fb: 'https://graph.facebook.com/' + res[0].fb + '/picture?type=large'
+       })
+     });
+  }
 
   render() {
     return(
@@ -28,7 +39,7 @@ class Payment extends React.Component {
         <div className='payment-white'>
           <div className='payment-text'>
             <div className='payment-title'>Thank you for riding with <span>Shyft</span>.</div>
-            <img src='./img/userdash/screaming-kid1.jpg' />
+            <img src={this.state.fb}/>
             <div className='add-tip'>
               <div onClick={this.onClickPinkDiv} id='no-tip'>No tip</div>
               <div onClick={this.onClickPinkDiv} id='1-dollar'>$1</div>

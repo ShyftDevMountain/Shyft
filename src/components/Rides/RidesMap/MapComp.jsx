@@ -78,12 +78,15 @@ class MapComp extends React.Component {
            <div className='map-page' ref="mapCanvas">
             </div>
 
+
             {this.state.showPickup ? <SetPickup address={this.props.initialCenter.address} changeToRequest={this.changeToRequest} /> : null}
             {this.state.showRequest ? <Request address={this.props.initialCenter} changeToCancel={this.changeToCancel} /> : null}
+
             {this.state.showCancel ? <Cancel changeToStart={this.changeToStart} /> : null}
             {this.state.showStart ? <StartRide changeToRate={this.changeToRate} /> : null}
             {this.state.showRate ? <RateRide changeToPayment={this.changeToPayment} /> : null}
             {this.state.showPayment ? <Payment /> : null}
+
 
 
 

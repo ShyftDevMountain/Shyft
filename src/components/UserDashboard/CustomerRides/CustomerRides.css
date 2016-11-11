@@ -12,3 +12,21 @@
     font-weight: bold;
 
 }
+.Ride-number{
+
+  font-size: 20px;
+  background-color: #F3F3F5;
+  border-bottom: 2px solid;
+  /* background-color: white; */
+  /* border-radius: 3px; */
+  color: #333;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 8px;
+  font-weight: 100;
+  /* padding-bottom: 0px; */
+  margin-bottom: 4px;
+  margin-top: 4px;
+  padding-top: 7px;
+
+}

@@ -6,7 +6,7 @@
   flex-direction: column;
   margin:auto;
   height:40vh;
-  width:40%;
+  width:350px;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 28px;
   top:58vh;
@@ -24,8 +24,8 @@
   }
 
 .car-img-cancel img {
-  height:50px;
-  width:70px;
+  height:auto;
+  width:220px;
 }
 
 
@@ -97,6 +97,7 @@
   justify-content: center;
   align-items: center;
   color:white;
+  font-size: 2rem;
 }
 
 

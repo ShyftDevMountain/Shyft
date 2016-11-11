@@ -1,6 +1,5 @@
 .payment-section {
   height:60vh;
-  width:60vw;
   background-color: rgba(0, 0, 0, 0.3);
   position:absolute;
   top:20vh;
@@ -112,4 +111,10 @@
   background-color: #FF00BF;
   color:white;
   border-radius: 15px;
+}
+
+@media (min-width:768px) {
+  .payment-section {
+    width:60vw;
+    }
 }
