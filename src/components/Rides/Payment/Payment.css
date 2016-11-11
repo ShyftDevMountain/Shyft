@@ -1,5 +1,5 @@
 .payment-section {
-  height:60vh;
+  height:75%;
   background-color: rgba(0, 0, 0, 0.3);
   position:absolute;
   top:20vh;
@@ -31,6 +31,8 @@
   font-size: 30px;
   margin-bottom: 20px;
   margin-top:20px;
+  margin-right: 10px;
+  margin-left: 39px;
 }
 
 .payment-title span{
@@ -52,7 +54,7 @@
   padding:5px;
   border-radius: 5px;
   margin-bottom:20px;
-  width:50%;
+  width:65%;
 
 }
 
@@ -110,6 +112,10 @@
 
 @media (min-width:768px) {
   .payment-section {
-    width:60vw;
+    width:55vw;
+    height:60vh;
+    }
+    .add-tip{
+    width: 50%;
     }
 }
